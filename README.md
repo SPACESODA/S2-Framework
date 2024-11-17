@@ -21,9 +21,9 @@ https://s2-framework.gitbook.io
 
 **CDN**
 
-S1 Attributes: <code>https://s2-framework.pages.dev/webflow/01-attributes.css
+S1 Attributes: <code>https://s2-framework.pages.dev/webflow/01-attributes.css</code>
 
-S2 Colors & Palettes: https://s2-framework.pages.dev/webflow/02-colors-palettes.css
+S2 Colors & Palettes: <code>https://s2-framework.pages.dev/webflow/02-colors-palettes.css</code>
 
 
 <br><br><br>
