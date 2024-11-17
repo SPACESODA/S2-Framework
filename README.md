@@ -10,19 +10,19 @@ Explore and clone: https://s2-framework.webflow.io
 <br><br>
 
 
-# Guide 📗
+# Guide
 
 **Get started by reading the guide!**
 
-https://s2-framework.gitbook.io
+📗 https://s2-framework.gitbook.io
 
-
-## Support & Community on Discord
+**Support & Community on Discord**
 
 💬 https://discord.gg/E6PyWm3q
 
 
 <br><br>
+
 
 **CDN**
 
