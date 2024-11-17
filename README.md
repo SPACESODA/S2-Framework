@@ -17,6 +17,14 @@ Explore and clone: https://s2-framework.webflow.io
 https://s2-framework.gitbook.io
 
 
+<br>
+
+**CDN**
+
+S1 Attributes: https://s2-framework.pages.dev/webflow/01-attributes.css
+
+S2 Colors & Palettes: https://s2-framework.pages.dev/webflow/02-colors-palettes.css
+
 
 <br><br><br>
 
