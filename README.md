@@ -16,8 +16,10 @@ https://s2-framework.gitbook.io
 
 
 
+<br><br><br>
 
-Built with 🤍 by [Anthony C.](https://x.com/anthonycxc) with SPACESODA and HYPE STUDIO for everyone using Webflow.
 
-S2 Framework is marked with Creative Commons CC0 1.0 Universal[.](https://creativecommons.org/publicdomain/zero/1.0) 
-For more information, visit: https://s2-framework.gitbook.io/docs/copyright-and-terms
+<span style="font-size: 0.8em;">Built with 🤍 by [Anthony C.](https://x.com/anthonycxc) with SPACESODA and HYPE STUDIO for everyone using Webflow.</span>
+
+<span style="font-size: 0.8em;">S2 Framework is marked with Creative Commons CC0 1.0 Universal.</span>
+<span style="font-size: 0.8em;">[Copyright and terms](https://s2-framework.gitbook.io/docs/copyright-and-terms)</span>
