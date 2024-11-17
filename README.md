@@ -12,9 +12,14 @@ Explore and clone: https://s2-framework.webflow.io
 
 # Guide 📗
 
-**Get started by reading the Guide!**
+**Get started by reading the guide!**
 
 https://s2-framework.gitbook.io
+
+
+## Support & Community on Discord
+
+💬 https://discord.gg/E6PyWm3q
 
 
 <br><br>
