@@ -1,10 +1,12 @@
 # S2 Framework
 
-https://s2-framework.webflow.io
-
 ### Flexible, Easy to master, and Straightforward.
 
 S2 is a modern Webflow-optimized framework designed for ease of use. It provides a robust foundation for any project, whether you're just getting started or already a seasoned pro.
+
+Explore and clone: https://s2-framework.webflow.io
+
+
 
 # Guide 📗
 
@@ -13,7 +15,7 @@ S2 is a modern Webflow-optimized framework designed for ease of use. It provides
 https://s2-framework.gitbook.io
 
 
----
+
 
 Built with 🤍 by [Anthony C.](https://x.com/anthonycxc) with SPACESODA and HYPE STUDIO for everyone using Webflow.
 
