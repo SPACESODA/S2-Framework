@@ -10,11 +10,11 @@ Explore and clone: https://s2-framework.webflow.io
 <br><br>
 
 
-# Guide
-
 **Get started by reading the guide!**
 
 📗 https://s2-framework.gitbook.io
+
+<br>
 
 **Support & Community on Discord**
 
