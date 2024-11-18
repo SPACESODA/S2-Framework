@@ -16,9 +16,9 @@ Explore and clone: https://s2-framework.webflow.io
 
 <br>
 
-**Support & Community on Discord**
+**Support & community on Discord**
 
-💬 https://discord.gg/E6PyWm3q
+💬 https://s2-framework.webflow.io/#discord
 
 
 <br><br>
