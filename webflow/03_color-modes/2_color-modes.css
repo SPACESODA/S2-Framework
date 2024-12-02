@@ -6,46 +6,46 @@
 /* "Dark" mode */
 [theme="dark"], .cc-dark-mode,
 .u-bg-dark, [bg="dark"] /* follow the dark mode */ {
-	--colors--text: 							var(--colors-dark--text);
-	--colors--text-dim: 					var(--colors-dark--text-dim);
-	--colors--text-dimmer: 				var(--colors-dark--text-dimmer);
-	--colors--text-muted: 				var(--colors-dark--text-muted);
-	--colors--stroke: 						var(--colors-dark--stroke);
-	--colors--stroke-subtle: 			var(--colors-dark--stroke-subtle);
-	--colors--stroke-emphasis: 		var(--colors-dark--stroke-emphasis);
-	--colors--brand: 							var(--colors-dark--brand);
-	--colors--brand-light: 				var(--colors-dark--brand-light);
-	--colors--brand-deep: 				var(--colors-dark--brand-deep);
-	--colors--brand-alt: 					var(--colors-dark--brand-alt);
-	--colors--accent: 						var(--colors-dark--accent);
-	--colors--surface: 						var(--colors-dark--surface);
-	--colors--surface-muted: 			var(--colors-dark--surface-muted);
-	--colors--surface-alt: 				var(--colors-dark--surface-alt);
-	--colors--surface-alt-muted: 	var(--colors-dark--surface-alt-muted);
-	--colors--focus: 							var(--colors-dark--focus);
-	--colors--focus-subtle: 			var(--colors-dark--focus-subtle);
+	--colors--text:              var(--colors-dark--text);
+	--colors--text-dim:          var(--colors-dark--text-dim);
+	--colors--text-dimmer:       var(--colors-dark--text-dimmer);
+	--colors--text-muted:        var(--colors-dark--text-muted);
+	--colors--stroke:            var(--colors-dark--stroke);
+	--colors--stroke-subtle:     var(--colors-dark--stroke-subtle);
+	--colors--stroke-emphasis:   var(--colors-dark--stroke-emphasis);
+	--colors--brand:             var(--colors-dark--brand);
+	--colors--brand-light:       var(--colors-dark--brand-light);
+	--colors--brand-deep:        var(--colors-dark--brand-deep);
+	--colors--brand-alt:         var(--colors-dark--brand-alt);
+	--colors--accent:            var(--colors-dark--accent);
+	--colors--surface:           var(--colors-dark--surface);
+	--colors--surface-muted:     var(--colors-dark--surface-muted);
+	--colors--surface-alt:       var(--colors-dark--surface-alt);
+	--colors--surface-alt-muted: var(--colors-dark--surface-alt-muted);
+	--colors--focus:             var(--colors-dark--focus);
+	--colors--focus-subtle:      var(--colors-dark--focus-subtle);
 }
 /* "Light" mode */
 [theme="light"], .cc-light-mode
 .u-bg-light, [bg="light"] /* follow the light mode */ {
-	--colors--text: 							var(--colors-light--text);
-	--colors--text-dim: 					var(--colors-light--text-dim);
-	--colors--text-dimmer: 				var(--colors-light--text-dimmer);
-	--colors--text-muted: 				var(--colors-light--text-muted);
-	--colors--stroke: 						var(--colors-light--stroke);
-	--colors--stroke-subtle: 			var(--colors-light--stroke-subtle);
-	--colors--stroke-emphasis: 		var(--colors-light--stroke-emphasis);
-	--colors--brand: 							var(--colors-light--brand);
-	--colors--brand-light: 				var(--colors-light--brand-light);
-	--colors--brand-deep: 				var(--colors-light--brand-deep);
-	--colors--brand-alt: 					var(--colors-light--brand-alt);
-	--colors--accent: 						var(--colors-light--accent);
-	--colors--surface: 						var(--colors-light--surface);
-	--colors--surface-muted: 			var(--colors-light--surface-muted);
-	--colors--surface-alt: 				var(--colors-light--surface-alt);
-	--colors--surface-alt-muted: 	var(--colors-light--surface-alt-muted);
-	--colors--focus: 							var(--colors-light--focus);
-	--colors--focus-subtle: 			var(--colors-light--focus-subtle);
+	--colors--text:              var(--colors-light--text);
+	--colors--text-dim:          var(--colors-light--text-dim);
+	--colors--text-dimmer:       var(--colors-light--text-dimmer);
+	--colors--text-muted:        var(--colors-light--text-muted);
+	--colors--stroke:            var(--colors-light--stroke);
+	--colors--stroke-subtle:     var(--colors-light--stroke-subtle);
+	--colors--stroke-emphasis:   var(--colors-light--stroke-emphasis);
+	--colors--brand:             var(--colors-light--brand);
+	--colors--brand-light:       var(--colors-light--brand-light);
+	--colors--brand-deep:        var(--colors-light--brand-deep);
+	--colors--brand-alt:         var(--colors-light--brand-alt);
+	--colors--accent:            var(--colors-light--accent);
+	--colors--surface:           var(--colors-light--surface);
+	--colors--surface-muted:     var(--colors-light--surface-muted);
+	--colors--surface-alt:       var(--colors-light--surface-alt);
+	--colors--surface-alt-muted: var(--colors-light--surface-alt-muted);
+	--colors--focus:             var(--colors-light--focus);
+	--colors--focus-subtle:      var(--colors-light--focus-subtle);
 }
 
 /* conversions of other variables */

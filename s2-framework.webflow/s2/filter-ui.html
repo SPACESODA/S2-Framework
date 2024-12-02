@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 08:36:22 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 15:31:36 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66202061f8a728275a122f8d" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -78,7 +78,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         });
       });
     </script>
-  <!--  Color Mode (Theme) Switching  -->
+  <!--  Color Modes Switching  -->
   <script>
       (function() {
         const THEME_KEY = 'theme';
@@ -148,6 +148,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         });
       })();
     </script>
+  <!--  Meta Tags for Style Guide only  -->
   <meta property="og:locale" content="en_US">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="format-detection" content="telephone=no">
@@ -3116,11 +3117,11 @@ Result: "https://example.com?key=value#section"
   <script>
       function updateAnchorHrefs() {
         const anchors = document.querySelectorAll("a[query], a[hash]");
-        if (anchors.length === 0) return; // exit if no elements with the attributes
+        if (anchors.length === 0) return; // exit if no element with such attributes
         anchors.forEach((anchor) => {
           try {
             const href = anchor.getAttribute("href");
-            const base = window.location.href; // use the current document's URL as the base
+            const base = window.location.href; // use the current URL as base
             const url = new URL(href, base);
             const query = anchor.getAttribute("query");
             if (query) {
@@ -3130,9 +3131,8 @@ Result: "https://example.com?key=value#section"
             if (hash) {
               url.hash = hash.startsWith("#") ? hash : `#${hash}`;
             }
-            anchor.href = url.href; // ipdate the href with the correct URL
+            anchor.href = url.href; // update the href
           } catch (error) {
-            // fail silently if the URL is malformed
             console.error(`Failed to update anchor href: ${error.message}`);
           }
         });
@@ -3171,9 +3171,10 @@ Result: "https://example.com?key=value#section"
     </script>
   <!--  Change Styles According to Color Mode  -->
   <!-- 
-This function applies only to elements with the mode-styles="true" attribute.
-It changes styles by adding the class .cc-style-on-dark in dark mode and .cc-style-on-light in light mode.
-In the Style Guide, this is only used on some of the "Filter UI" elements.
+This function applies only to elements with the mode-styles="true" attribute only.
+It facilitates style changes by adding the class .cc-style-on-dark in dark mode and .cc-style-on-light in light mode.
+| Currently, this function is only used on some of the "Filter UI" elements in the style guide.
+| You can remove this script if you do not need this function.
  -->
   <script>
       function updateStyles() {
