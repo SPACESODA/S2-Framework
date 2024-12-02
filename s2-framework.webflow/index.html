@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Nov 18 2024 02:29:07 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 07:34:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -182,6 +182,22 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
 CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH 
 THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
+  <!--  Redirects  -->
+  <script>
+      (function() {
+        const redirects = {
+          "#discord": "https://discord.gg/KqKk7kyxR2",
+          "#roadmap": "https://s2-framework.notion.site/1415e9ef57d7802e944eef6287093be9?v=1415e9ef57d781d3aeec000c851a1c01&pvs=4"
+        };
+        let hash = window.location.hash;
+        if (!hash && window.location.href.indexOf("#") !== -1) {
+          hash = "#" + window.location.href.split("#")[1];
+        }
+        if (redirects.hasOwnProperty(hash)) {
+          window.location.href = redirects[hash];
+        }
+      })();
+    </script>
 </head>
 <body theme="dark" theme-change="false" class="sg-body cc-dark-mode">
   <div id="top" class="page">
@@ -191,12 +207,12 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             /* ---------------- */
             /* -- Base Setup -- */
             /* ---------------- */
+            /* smoothing and fluid responsive */
             body {
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               text-rendering: optimizeLegibility;
             }
-            /* fluid responsive */
             html {
               font-size: 1.125rem;
             }
@@ -280,7 +296,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             .spacer * {
               padding: 0;
             }
-            /* advanced responsive container */
+            /* responsive containers */
             @media (min-width: 80rem) {
               .container.cc-10col {
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--container--base-padding) * 2)));
@@ -292,14 +308,12 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2)));
               }
             }
-            /* ------------------------- */
-            /* -- Accessibility Setup -- */
-            /* ------------------------- */
+            /* -- Accessibility -- */
             /* remove blue highlight on mobile */
             * {
               -webkit-tap-highlight-color: transparent;
             }
-            /* styles for keyboard navigation of focusable elements */
+            /* focusable elements */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
               outline: var(--thickness--outline) solid var(--colors--focus);
               outline-offset: 0.188rem;
@@ -351,9 +365,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               padding: 0;
               border: 0;
             }
-            /* ------------------- */
-            /* -- S2 Attributes -- */
-            /* ------------------- */
+            /* ----------------------- */
+            /* -- (1) S2 Attributes -- */
+            /* ----------------------- */
             /* basics */
             [direction="rtl"] {
               direction: rtl;
@@ -1397,9 +1411,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               width: 0px;
               height: 0px;
             }
-            /* -------------------------- */
-            /* -- S2 Colors & Palettes -- */
-            /* -------------------------- */
+            /* ------------------------------ */
+            /* -- (2) S2 Colors & Palettes -- */
+            /* ------------------------------ */
             /* inherit */
             [color="inherit"] {
               color: inherit;
@@ -1778,9 +1792,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             [bg="n-deep"] {
               background-color: var(--palette-neutral--700);
             }
-            /* ------------------------------ */
-            /* -- S2 Default Custom Styles -- */
-            /* ------------------------------ */
+            /* --------------------- */
+            /* -- (3) S2 Defaults -- */
+            /* --------------------- */
             /* light and dark elements */
             .u-bg-dark,
             [bg="dark"] {
@@ -1948,13 +1962,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               left: -1px;
               z-index: 997;
             }
-            /* other styles */
-            .richtext-list ul li::before {
-              position: absolute;
-              margin-left: -1.65em;
-              content: '\2713\0020';
-              color: var(--colors--brand);
-            }
           </style>
       </div>
       <div code="css" class="css_animation w-embed">
@@ -2095,9 +2102,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </div>
       <div code="css" class="css_mode w-embed">
         <style>
-            /* ------------ */
-            /* -- Toggle -- */
-            /* ------------ */
+            /* --------------------------- */
+            /* -- Mode Switching Toggle -- */
+            /* --------------------------- */
             [theme="dark"] .toggle {
               justify-content: flex-end;
               background-color: var(--palette-neutral--800);
@@ -2248,14 +2255,14 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               color: #fff;
             }
             body * {
-              text-underline-position: under;
-              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem) !important;
-              text-underline-offset: clamp(0px, 0.0375em, 0.25rem) !important;
+              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
-            @media screen and (max-width: 991px) {
-              body * {
-                text-underline-offset: -0.0325em !important;
-              }
+            /* other styles */
+            .richtext-list ul li::before {
+              position: absolute;
+              margin-left: -1.65em;
+              content: '\2713\0020';
+              color: var(--colors--brand);
             }
             /* styles for RTL lauout */
             [direction="rtl"] .main-nav_menu {
@@ -2312,7 +2319,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <header class="title-layout">
             <div class="title-wrapper cc-align-center">
               <div data-nosnippet="" class="tags-wrapper">
-                <div data-nosnippet="true" gradient="3" class="code-tag">v1.8.9 beta</div>
+                <div data-nosnippet="true" gradient="3" class="code-tag">v1.9.0 beta</div>
               </div>
               <div class="title-wrapper cc-xl">
                 <div text-uppercase="" color="text" font-size="sm" class="title-eyebrow">The best Webflow Framework</div>
@@ -2359,14 +2366,14 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           </div>
           <div gap="word" class="u-hflex-center-center">
             <div data-nosnippet="true" font-size="xs" flex-wrap="wrap-nice" gap="word" class="u-hflex-center-center w-embed"><span>
-                <a href="http://s2-framework.gitbook.io/docs" target="_blink">Guide and Roadmap</a>
+                <a href="http://s2-framework.gitbook.io/docs" target="_blink">Docs</a> and <a href="http://s2-framework.webflow.io/#roadmap" target="_blink">Roadmap</a>
               </span></div>
             <a aria-label="Github" href="https://github.com/realanthonyc/S2-Framework" target="_blank" class="w-inline-block">
               <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M50 3C23.48 3 2 24.48 2 51C2 72.24 15.74 90.18 34.82 96.54C37.22 96.96 38.12 95.52 38.12 94.26C38.12 93.12 38.06 89.34 38.06 85.32C26 87.54 22.88 82.38 21.92 79.68C21.38 78.3 19.04 74.04 17 72.9C15.32 72 12.92 69.78 16.94 69.72C20.72 69.66 23.42 73.2 24.32 74.64C28.64 81.9 35.54 79.86 38.3 78.6C38.72 75.48 39.98 73.38 41.36 72.18C30.68 70.98 19.52 66.84 19.52 48.48C19.52 43.26 21.38 38.94 24.44 35.58C23.96 34.38 22.28 29.46 24.92 22.86C24.92 22.86 28.94 21.6 38.12 27.78C41.96 26.7 46.04 26.16 50.12 26.16C54.2 26.16 58.28 26.7 62.12 27.78C71.3 21.54 75.32 22.86 75.32 22.86C77.96 29.46 76.28 34.38 75.8 35.58C78.86 38.94 80.72 43.2 80.72 48.48C80.72 66.9 69.5 70.98 58.82 72.18C60.56 73.68 62.06 76.56 62.06 81.06C62.06 87.48 62 92.64 62 94.26C62 95.52 62.9 97.02 65.3 96.54C84.26 90.18 98 72.18 98 51C98 24.48 76.52 3 50 3Z" fill="#ddd"></path>
                 </svg></div>
             </a>
-            <a aria-label="Join our Discord community." href="https://discord.gg/KqKk7kyxR2" target="_blank" class="w-inline-block">
+            <a aria-label="Join our Discord community." href="#discord" target="_blank" class="w-inline-block">
               <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M83.3211 19.2237C77.1069 16.3162 70.4623 14.2032 63.5156 13C62.6625 14.5424 61.6657 16.6171 60.9785 18.2674C53.594 17.1569 46.2774 17.1569 39.0286 18.2674C38.3416 16.6171 37.3222 14.5424 36.4614 13C29.5072 14.2032 22.855 16.324 16.6408 19.2391C4.10657 38.1799 0.708755 56.6503 2.40767 74.8584C10.721 81.0666 18.7776 84.8379 26.6983 87.3057C28.654 84.6142 30.3981 81.753 31.9007 78.7376C29.039 77.6502 26.2981 76.3083 23.7083 74.7505C24.3954 74.2415 25.0674 73.7093 25.7167 73.1617C41.5128 80.5499 58.6756 80.5499 74.2829 73.1617C74.9399 73.7093 75.6118 74.2415 76.2914 74.7505C73.6939 76.316 70.9455 77.6579 68.0838 78.7454C69.5864 81.753 71.3231 84.6219 73.2862 87.3133C81.2145 84.8455 89.2786 81.0744 97.592 74.8584C99.5854 53.7506 94.1867 35.4498 83.3211 19.2237ZM34.0527 63.6606C29.3109 63.6606 25.4222 59.2338 25.4222 53.8431C25.4222 48.4524 29.2279 44.018 34.0527 44.018C38.8777 44.018 42.7662 48.4446 42.6832 53.8431C42.6907 59.2338 38.8777 63.6606 34.0527 63.6606ZM65.947 63.6606C61.2052 63.6606 57.3165 59.2338 57.3165 53.8431C57.3165 48.4524 61.122 44.018 65.947 44.018C70.7718 44.018 74.6605 48.4446 74.5775 53.8431C74.5775 59.2338 70.7718 63.6606 65.947 63.6606Z" fill="#5865F2"></path>
                 </svg></div>

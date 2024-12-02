@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Nov 18 2024 02:29:07 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 07:34:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -284,12 +284,12 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             /* ---------------- */
             /* -- Base Setup -- */
             /* ---------------- */
+            /* smoothing and fluid responsive */
             body {
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               text-rendering: optimizeLegibility;
             }
-            /* fluid responsive */
             html {
               font-size: 1.125rem;
             }
@@ -373,7 +373,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .spacer * {
               padding: 0;
             }
-            /* advanced responsive container */
+            /* responsive containers */
             @media (min-width: 80rem) {
               .container.cc-10col {
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--container--base-padding) * 2)));
@@ -385,14 +385,12 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2)));
               }
             }
-            /* ------------------------- */
-            /* -- Accessibility Setup -- */
-            /* ------------------------- */
+            /* -- Accessibility -- */
             /* remove blue highlight on mobile */
             * {
               -webkit-tap-highlight-color: transparent;
             }
-            /* styles for keyboard navigation of focusable elements */
+            /* focusable elements */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
               outline: var(--thickness--outline) solid var(--colors--focus);
               outline-offset: 0.188rem;
@@ -444,9 +442,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               padding: 0;
               border: 0;
             }
-            /* ------------------- */
-            /* -- S2 Attributes -- */
-            /* ------------------- */
+            /* ----------------------- */
+            /* -- (1) S2 Attributes -- */
+            /* ----------------------- */
             /* basics */
             [direction="rtl"] {
               direction: rtl;
@@ -1490,9 +1488,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               width: 0px;
               height: 0px;
             }
-            /* -------------------------- */
-            /* -- S2 Colors & Palettes -- */
-            /* -------------------------- */
+            /* ------------------------------ */
+            /* -- (2) S2 Colors & Palettes -- */
+            /* ------------------------------ */
             /* inherit */
             [color="inherit"] {
               color: inherit;
@@ -1871,9 +1869,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [bg="n-deep"] {
               background-color: var(--palette-neutral--700);
             }
-            /* ------------------------------ */
-            /* -- S2 Default Custom Styles -- */
-            /* ------------------------------ */
+            /* --------------------- */
+            /* -- (3) S2 Defaults -- */
+            /* --------------------- */
             /* light and dark elements */
             .u-bg-dark,
             [bg="dark"] {
@@ -2041,13 +2039,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               left: -1px;
               z-index: 997;
             }
-            /* other styles */
-            .richtext-list ul li::before {
-              position: absolute;
-              margin-left: -1.65em;
-              content: '\2713\0020';
-              color: var(--colors--brand);
-            }
           </style>
       </div>
       <div code="css" class="css_animation w-embed">
@@ -2188,9 +2179,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="css_mode w-embed">
         <style>
-            /* ------------ */
-            /* -- Toggle -- */
-            /* ------------ */
+            /* --------------------------- */
+            /* -- Mode Switching Toggle -- */
+            /* --------------------------- */
             [theme="dark"] .toggle {
               justify-content: flex-end;
               background-color: var(--palette-neutral--800);
@@ -2341,14 +2332,14 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               color: #fff;
             }
             body * {
-              text-underline-position: under;
-              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem) !important;
-              text-underline-offset: clamp(0px, 0.0375em, 0.25rem) !important;
+              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
-            @media screen and (max-width: 991px) {
-              body * {
-                text-underline-offset: -0.0325em !important;
-              }
+            /* other styles */
+            .richtext-list ul li::before {
+              position: absolute;
+              margin-left: -1.65em;
+              content: '\2713\0020';
+              color: var(--colors--brand);
             }
             /* styles for RTL lauout */
             [direction="rtl"] .main-nav_menu {

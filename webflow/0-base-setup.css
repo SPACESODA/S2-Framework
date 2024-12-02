@@ -1,0 +1,64 @@
+/* ---------------- */
+/* -- Base Setup -- */
+/* ---------------- */
+
+/* smoothing and fluid responsive */
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+html { font-size: 1.125rem; }
+@media screen and (max-width:1920px) { html { font-size: 1.125rem; } }
+@media screen and (max-width:1440px) { html { font-size: calc(0.937695rem + 0.208vw); } }
+@media screen and (max-width:479px) { html { font-size: 1rem; } }
+@media screen and (max-width:319px) { html { font-size: calc(0.749607rem + 0.629vw); } }
+
+/* basics */
+h1, h2, h3 { text-wrap: balance; }
+a { color: inherit; }
+img, svg, video, audio, canvas, iframe, embed, object { display: block; vertical-align: middle; }
+img, video { height: auto; }
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
+.w-form { margin-bottom: 0; }
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child { margin-top: 0 !important; }
+.w-richtext > :last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child { margin-bottom: 0 !important; }
+.w-richtext figure div { display: block !important; }
+.w-richtext figure.w-richtext-align-floatleft, .w-richtext figure.w-richtext-align-floatright { margin-block: 0.35em 0.05em; }
+.w-lightbox-close:focus, .w-lightbox-close:focus-visible { outline: none; }
+.spacer * { padding: 0; }
+
+/* responsive containers */
+@media (min-width: 80rem) {
+	.container.cc-10col { width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--container--base-padding) * 2))); }
+	.container.cc-8col { width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--container--base-padding) * 2))); }
+	.container.cc-6col { width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2))); }
+}
+
+/* -- Accessibility -- */
+
+/* remove blue highlight on mobile */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* focusable elements */
+html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
+	outline: var(--thickness--outline) solid var(--colors--focus);
+	outline-offset: 0.188rem;
+}
+section:focus, .section:focus, .container:focus { outline: none; }
+[tabindex]:not([tabindex="-1"]):focus-visible, [aria-label]:not(input):not(textarea):not(select):focus-visible,
+input[type="submit"]:focus-visible, input[type="file"]:focus-visible { outline: var(--thickness--outline-bold) solid var(--colors--focus); outline-offset: 3px; }
+[focus-outline="bold"]:focus-visible { outline-width: var(--thickness--outline-bold) !important; }
+[focus-outline="offset-0"]:focus-visible { outline-offset: 0 !important; }
+[focus-outline="offset-far"]:focus-visible { outline-offset: 0.375rem !important; }
+[focus-outline="none"]:focus, [focus-outline="none"]:focus-visible { outline: none !important; }
+
+/* prevent highlighting of input elements */
+[input-highlight="none"] { -webkit-appearance: none; appearance: none; outline: none; }
+[input-highlight="none"]:focus { border: 0 rgba(0, 0, 0, 0) !important; }
+
+/* let screen readers to read, but hidden for regular users */
+[visually-hidden="true"], .visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden; height: 1px; width: 1px; padding: 0; border: 0;
+}

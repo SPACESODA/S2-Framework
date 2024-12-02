@@ -342,6 +342,12 @@ p {
   margin-bottom: 0;
 }
 
+a {
+  text-underline-offset: .275em;
+  text-underline-position: auto;
+  text-decoration: underline;
+}
+
 ul, ol {
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
@@ -4836,10 +4842,9 @@ figcaption {
   margin-bottom: var(--spacing--richtext);
   color: var(--colors--text-muted);
   font-size: var(--font-size--text-small);
+  text-underline-offset: .125em;
   line-height: 1.5;
   text-decoration: underline;
-  text-underline-offset: .125em !important;
-  text-decoration-thickness: 1px !important;
 }
 
 .richtext-list p {

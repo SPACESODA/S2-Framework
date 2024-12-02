@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Nov 18 2024 02:29:07 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 07:34:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66880b7f4e8ef6d9442926e3" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -165,12 +165,12 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             /* ---------------- */
             /* -- Base Setup -- */
             /* ---------------- */
+            /* smoothing and fluid responsive */
             body {
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               text-rendering: optimizeLegibility;
             }
-            /* fluid responsive */
             html {
               font-size: 1.125rem;
             }
@@ -254,7 +254,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .spacer * {
               padding: 0;
             }
-            /* advanced responsive container */
+            /* responsive containers */
             @media (min-width: 80rem) {
               .container.cc-10col {
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--container--base-padding) * 2)));
@@ -266,14 +266,12 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2)));
               }
             }
-            /* ------------------------- */
-            /* -- Accessibility Setup -- */
-            /* ------------------------- */
+            /* -- Accessibility -- */
             /* remove blue highlight on mobile */
             * {
               -webkit-tap-highlight-color: transparent;
             }
-            /* styles for keyboard navigation of focusable elements */
+            /* focusable elements */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
               outline: var(--thickness--outline) solid var(--colors--focus);
               outline-offset: 0.188rem;
@@ -325,9 +323,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               padding: 0;
               border: 0;
             }
-            /* ------------------- */
-            /* -- S2 Attributes -- */
-            /* ------------------- */
+            /* ----------------------- */
+            /* -- (1) S2 Attributes -- */
+            /* ----------------------- */
             /* basics */
             [direction="rtl"] {
               direction: rtl;
@@ -1371,9 +1369,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               width: 0px;
               height: 0px;
             }
-            /* -------------------------- */
-            /* -- S2 Colors & Palettes -- */
-            /* -------------------------- */
+            /* ------------------------------ */
+            /* -- (2) S2 Colors & Palettes -- */
+            /* ------------------------------ */
             /* inherit */
             [color="inherit"] {
               color: inherit;
@@ -1752,9 +1750,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [bg="n-deep"] {
               background-color: var(--palette-neutral--700);
             }
-            /* ------------------------------ */
-            /* -- S2 Default Custom Styles -- */
-            /* ------------------------------ */
+            /* --------------------- */
+            /* -- (3) S2 Defaults -- */
+            /* --------------------- */
             /* light and dark elements */
             .u-bg-dark,
             [bg="dark"] {
@@ -1922,13 +1920,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               left: -1px;
               z-index: 997;
             }
-            /* other styles */
-            .richtext-list ul li::before {
-              position: absolute;
-              margin-left: -1.65em;
-              content: '\2713\0020';
-              color: var(--colors--brand);
-            }
           </style>
       </div>
       <div code="css" class="css_animation w-embed">
@@ -2069,9 +2060,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="css_mode w-embed">
         <style>
-            /* ------------ */
-            /* -- Toggle -- */
-            /* ------------ */
+            /* --------------------------- */
+            /* -- Mode Switching Toggle -- */
+            /* --------------------------- */
             [theme="dark"] .toggle {
               justify-content: flex-end;
               background-color: var(--palette-neutral--800);
@@ -2222,14 +2213,14 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               color: #fff;
             }
             body * {
-              text-underline-position: under;
-              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem) !important;
-              text-underline-offset: clamp(0px, 0.0375em, 0.25rem) !important;
+              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
-            @media screen and (max-width: 991px) {
-              body * {
-                text-underline-offset: -0.0325em !important;
-              }
+            /* other styles */
+            .richtext-list ul li::before {
+              position: absolute;
+              margin-left: -1.65em;
+              content: '\2713\0020';
+              color: var(--colors--brand);
             }
             /* styles for RTL lauout */
             [direction="rtl"] .main-nav_menu {
@@ -2453,14 +2444,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   <div class="col cc-min-25rem">
                     <div class="sg-tags">
                       <div class="tags-wrapper">
-                        <div class="code-tag">w-richtext</div>
-                      </div>
-                      <div class="sg-note">base styles modified</div>
-                    </div>
-                  </div>
-                  <div class="col cc-min-25rem">
-                    <div class="sg-tags">
-                      <div class="tags-wrapper">
                         <div class="css-tag">richtext</div>
                       </div>
                     </div>
@@ -2493,112 +2476,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   </div>
                 </div>
                 <div flex="row" style="gap: 4rem;" class="block">
-                  <div class="col cc-min-25rem">
-                    <div class="w-richtext">
-                      <h1>Heading 1</h1>
-                      <h2>Heading 2</h2>
-                      <h3>Heading 3</h3>
-                      <h4>Heading 4</h4>
-                      <h5>Heading 5</h5>
-                      <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <code>varius</code> enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      <p>Styling lists:</p>
-                      <ul role="list">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                                  </ul>
-                                </li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <ol start="" role="list">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                      </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <h5>This is a heading with <sup>sup</sup> and <sub>sub</sub> for size checking.</h5>
-                      <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur <em>adipiscing</em> elit. Suspendisse varius enim in eros elementum tristique. Ut enim ad Minim Veniam<sup>TM</sup>, quis nostrud<sub>28</sub> exercitation<sup>ullamco laboris</sup> nisi<sub>ut aliquip</sub> ex ea commodo consequat. Duis<sub>aute</sub>, irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit <code>c</code> amet, <code>consectetur</code> adipiscing elit, sed do eiusmod tempor incididunt utabore. <code>This is &lt;code&gt; inside some content: Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p>‍<code>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                        <figcaption>This is a <strong>short</strong> caption.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                      </figure>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                        <figcaption>This is a caption.</figcaption>
-                      </figure>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                        <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-normal w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
-                        <div><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" alt="futuristic tunnel"></div>
-                        <figcaption>Align to right and also have a caption.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>‍</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">5</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">5</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
-</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <figure style="padding-bottom:56.206088992974244%" class="w-richtext-align-fullwidth w-richtext-figure-type-video">
-                        <div><iframe allowfullscreen="true" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/j2BdNDTlWbo" title="Starship | Fourth Flight Test"></iframe></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                  </div>
                   <div class="col cc-min-25rem">
                     <div class="richtext w-richtext">
                       <h1>Heading 1</h1>
@@ -2699,9 +2576,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <figure style="padding-bottom:56.206088992974244%" class="w-richtext-align-fullwidth w-richtext-figure-type-video">
-                        <div><iframe allowfullscreen="true" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/j2BdNDTlWbo" title="Starship | Fourth Flight Test"></iframe></div>
-                      </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
@@ -2805,9 +2679,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <figure style="padding-bottom:56.206088992974244%" class="w-richtext-align-fullwidth w-richtext-figure-type-video">
-                        <div><iframe allowfullscreen="true" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/j2BdNDTlWbo" title="Starship | Fourth Flight Test"></iframe></div>
-                      </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
@@ -2911,9 +2782,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <figure style="padding-bottom:56.206088992974244%" class="w-richtext-align-fullwidth w-richtext-figure-type-video">
-                        <div><iframe allowfullscreen="true" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/j2BdNDTlWbo" title="Starship | Fourth Flight Test"></iframe></div>
-                      </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
