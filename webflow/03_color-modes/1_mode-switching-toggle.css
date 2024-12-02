@@ -1,0 +1,9 @@
+/* --------------------------- */
+/* -- Mode Switching Toggle -- */
+/* --------------------------- */
+
+[theme="dark"] .toggle {
+	justify-content: flex-end;
+	background-color: var(--palette-neutral--800);
+	color: var(--plaette-neutral-300);
+}
