@@ -509,7 +509,7 @@ figcaption {
   grid-column: 3 / span 8;
 }
 
-.css, ._01_framework, ._02_css-animations, ._03_color-modes, ._04_custom, .css_page, .u-hide {
+.css, ._01_framework, ._02_css-animations, ._03_modes, ._04_custom, .css_page, .u-hide {
   display: none;
 }
 
@@ -716,7 +716,6 @@ figcaption {
   align-self: flex-start;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .image {
@@ -5652,6 +5651,38 @@ figcaption {
   inset: auto 0% 0%;
 }
 
+.mode-switch {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  border-radius: var(--radius--rounded);
+  background-color: var(--colors--surface-muted);
+  opacity: .8;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  padding: .25rem;
+  display: flex;
+}
+
+.mode-switch_button {
+  border-radius: var(--radius--rounded);
+  background-color: var(--colors-special--transparent);
+  color: var(--colors--stroke);
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  transition: all .4s;
+  display: flex;
+  overflow: clip;
+}
+
+.mode-switch_button:hover {
+  background-color: #00000014;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 4rem;
@@ -6857,6 +6888,11 @@ figcaption {
 
   .sg-padding.cc-container {
     width: var(--container--mobile-padding);
+  }
+
+  .mode-switch_button {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

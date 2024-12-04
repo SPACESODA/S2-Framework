@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 15:31:36 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Dec 04 2024 02:16:21 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -78,7 +78,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         });
       });
     </script>
-  <!--  Color Modes Switching  -->
+  <!--  Light / Dark Mode Switching  -->
   <script>
       (function() {
         const THEME_KEY = 'theme';
@@ -248,10 +248,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .w-richtext figure.w-richtext-align-floatright {
               margin-block: 0.35em 0.05em;
             }
-            .w-lightbox-close:focus,
-            .w-lightbox-close:focus-visible {
-              outline: none;
-            }
             .spacer * {
               padding: 0;
             }
@@ -267,12 +263,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2)));
               }
             }
-            /* -- Accessibility -- */
-            /* remove blue highlight on mobile */
-            * {
-              -webkit-tap-highlight-color: transparent;
-            }
-            /* focusable elements */
+            /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
               outline: var(--thickness--outline) solid var(--colors--focus);
               outline-offset: 0.188rem;
@@ -302,7 +293,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [focus-outline="none"]:focus-visible {
               outline: none !important;
             }
-            /* prevent highlighting of input elements */
             [input-highlight="none"] {
               -webkit-appearance: none;
               appearance: none;
@@ -311,7 +301,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [input-highlight="none"]:focus {
               border: 0 rgba(0, 0, 0, 0) !important;
             }
-            /* let screen readers to read, but hidden for regular users */
+            /* accessibility: hidden for visual users, readable for screen readers */
             [visually-hidden="true"],
             .visually-hidden {
               position: absolute;
@@ -323,6 +313,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               width: 1px;
               padding: 0;
               border: 0;
+            }
+            /* remove tab highlight on touch devices */
+            * {
+              -webkit-tap-highlight-color: transparent;
             }
             /* ----------------------- */
             /* -- (1) S2 Attributes -- */
@@ -1810,6 +1804,24 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               top: -0.5em;
               margin-right: -0.8em;
             }
+            /* lightbox and slider */
+            .w-lightbox-backdrop {
+              font-weight: normal;
+            }
+            .w-lightbox-strip {
+              padding: 0.5rem;
+            }
+            .w-lightbox-item {
+              padding: 0.25rem;
+              margin: 0.25rem;
+              outline-offset: 0;
+            }
+            .w-lightbox-control {
+              outline: none !important;
+            }
+            .w-slider-dot {
+              flex: 0 0 auto;
+            }
             /* code block */
             pre.code-block {
               margin: 1rem 0 1rem 0;
@@ -2059,19 +2071,30 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
           </style>
       </div>
-      <div code="css" class="_03_color-modes w-embed">
+      <div code="css" class="_03_modes w-embed">
         <style>
-            /* --------------------------- */
-            /* -- Mode Switching Toggle -- */
-            /* --------------------------- */
+            /* ----------------------- */
+            /* -- Mode Switching UI -- */
+            /* ----------------------- */
+            [theme="light"] .toggle {}
             [theme="dark"] .toggle {
               justify-content: flex-end;
               background-color: var(--palette-neutral--800);
               color: var(--plaette-neutral-300);
             }
-            /* ----------------- */
-            /* -- Color Modes -- */
-            /* ----------------- */
+            [theme="light"] .mode-switch>[data-button="color-mode-light"] {
+              background-color: #ffffff80;
+            }
+            [theme="dark"] .mode-switch>[data-button="color-mode-dark"] {
+              background-color: #00000060;
+            }
+            [theme="dark"] .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
+              background-color: #bbb;
+              color: #ddd;
+            }
+            /* ---------------------- */
+            /* -- Color Conversion -- */
+            /* ---------------------- */
             /* conversions of "Colors" variables */
             /* "Dark" mode */
             [theme="dark"],
@@ -2441,8 +2464,8 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="text-lg">UI Elements</div>
                   </a>
                   <div class="sg-side_sub">
-                    <a href="#color-mode" class="sg-side_sub-link w-inline-block">
-                      <div>Color Mode Toggle</div>
+                    <a href="#mode-switching" class="sg-side_sub-link w-inline-block">
+                      <div>Mode Switching</div>
                     </a>
                     <a href="#buttons" class="sg-side_sub-link w-inline-block">
                       <div>Buttons</div>
@@ -2471,10 +2494,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 <div class="title-wrapper">
                   <h2>UI Elements</h2>
                 </div>
-                <section id="color-mode" class="section">
+                <section id="mode-switching" class="section">
                   <div class="title-wrapper">
                     <div class="title-wrapper">
-                      <h3>Color Mode Toggle</h3>
+                      <h3>Light / Dark Mode Switching</h3>
                     </div>
                   </div>
                   <div class="sg-element">
@@ -2502,8 +2525,38 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         <div class="css-tag cc-attribute">data-button=&quot;&quot;</div>
                       </div>
                     </div>
-                    <div class="block">
-                      <div gap="1-1" class="flex-cols"><button data-button="color-mode-system" class="button cc-sm">Follow System</button><button data-button="color-mode-light" class="button cc-sm">Light</button><button data-button="color-mode-dark" class="button cc-sm">Dark</button></div>
+                    <div gap="1-1" flex="col" class="block">
+                      <div gap="1-1" class="flex-cols"><button data-button="color-mode-system" class="button cc-sm">Follow system</button><button data-button="color-mode-light" class="button cc-sm">Light</button><button data-button="color-mode-dark" class="button cc-sm">Dark</button></div>
+                      <div class="flex-cols">
+                        <div class="mode-switch"><button data-button="color-mode-system" aria-label="Follow system" class="mode-switch_button">
+                            <div class="icon cc-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1029 16.2934C13.2108 15.968 11.7857 15.5693 9.99949 15.5693C8.2133 15.5693 6.78822 15.968 5.8961 16.2934M15.0688 3.98242H4.93101C3.86455 3.98242 3 4.84696 3 5.91342V11.2237C3 12.2902 3.86455 13.1547 4.93101 13.1547H15.0688C16.1352 13.1547 16.9998 12.2902 16.9998 11.2237V5.91342C16.9998 4.84696 16.1352 3.98242 15.0688 3.98242Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </button><button data-button="color-mode-light" aria-label="Follow system" class="mode-switch_button">
+                            <div class="icon cc-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2V3.45456M15.6568 4.34379L14.628 5.37264M18 9.99892H16.5454M15.6568 15.6579L14.628 14.6291M10 17.9989V16.5443M4.34268 15.6579L5.37155 14.6291M2 9.99892H3.45455M4.34268 4.34379L5.37155 5.37264M10.0003 14.1215C12.2764 14.1215 14.1216 12.2764 14.1216 10.0003C14.1216 7.72421 12.2764 5.87907 10.0003 5.87907C7.72421 5.87907 5.87907 7.72421 5.87907 10.0003C5.87907 12.2764 7.72421 14.1215 10.0003 14.1215Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </button><button data-button="color-mode-dark" aria-label="Follow system" class="mode-switch_button">
+                            <div class="icon cc-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.2573 12.308C10.3522 12.308 7.99747 9.95328 7.99747 7.04817C7.99747 5.91037 8.36186 4.86093 8.97537 4C6.14433 4.52851 4 7.00862 4 9.99368C4 13.3633 6.73175 16.0951 10.1014 16.0951C12.9392 16.0951 15.3175 14.1544 16 11.5304C15.2005 12.021 14.2638 12.308 13.2573 12.308Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </button>
+                          <div class="css w-embed">
+                            <style>
+                                body[theme="light"] .mode-switch>[data-button="color-mode-light"] {
+                                  background-color: #ffffff80;
+                                }
+                                body[theme="dark"] .mode-switch>[data-button="color-mode-dark"] {
+                                  background-color: #00000060;
+                                }
+                                body[theme="dark"] .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
+                                  background-color: #bbb;
+                                  color: #ddd;
+                                }
+                              </style>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -4124,41 +4177,6 @@ Result: "https://example.com?key=value#section"
         };
         window.addEventListener("scroll", scrollFunc);
       }
-    </script>
-  <!--  Change Styles According to Color Mode  -->
-  <!-- 
-This function applies only to elements with the mode-styles="true" attribute only.
-It facilitates style changes by adding the class .cc-style-on-dark in dark mode and .cc-style-on-light in light mode.
-| Currently, this function is only used on some of the "Filter UI" elements in the style guide.
-| You can remove this script if you do not need this function.
- -->
-  <script>
-      function updateStyles() {
-        const body = document.body;
-        const elements = document.querySelectorAll('[mode-styles="true"]');
-        if (elements.length === 0) return; // exit if no elements with the attribute
-        if (body.getAttribute('theme') === 'dark' || body.classList.contains('cc-dark-mode')) {
-          elements.forEach(element => {
-            element.classList.add('cc-style-on-dark');
-            element.classList.remove('cc-style-on-light');
-          });
-        } else if (body.getAttribute('theme') === 'light') {
-          elements.forEach(element => {
-            element.classList.add('cc-style-on-light');
-            element.classList.remove('cc-style-on-dark');
-          });
-        } else {
-          elements.forEach(element => {
-            element.classList.remove('cc-style-on-dark', 'cc-style-on-light');
-          });
-        }
-      }
-      updateStyles();
-      const observer = new MutationObserver(updateStyles);
-      observer.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['theme', 'class']
-      });
     </script>
   <!--  Built with S2 Framework  -->
   <!--  https://s2-framework.webflow.io  -->

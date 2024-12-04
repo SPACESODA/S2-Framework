@@ -22,7 +22,6 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 .w-richtext > :last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child { margin-bottom: 0 !important; }
 .w-richtext figure div { display: block !important; }
 .w-richtext figure.w-richtext-align-floatleft, .w-richtext figure.w-richtext-align-floatright { margin-block: 0.35em 0.05em; }
-.w-lightbox-close:focus, .w-lightbox-close:focus-visible { outline: none; }
 .spacer * { padding: 0; }
 
 /* responsive containers */
@@ -32,12 +31,7 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 	.container.cc-6col { width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2))); }
 }
 
-/* -- Accessibility -- */
-
-/* remove blue highlight on mobile */
-* { -webkit-tap-highlight-color: transparent; }
-
-/* focusable elements */
+/* accessibility: focus styles */
 html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
 	outline: var(--thickness--outline) solid var(--colors--focus);
 	outline-offset: 0.188rem;
@@ -49,12 +43,9 @@ input[type="submit"]:focus-visible, input[type="file"]:focus-visible { outline: 
 [focus-outline="offset-0"]:focus-visible { outline-offset: 0 !important; }
 [focus-outline="offset-far"]:focus-visible { outline-offset: 0.375rem !important; }
 [focus-outline="none"]:focus, [focus-outline="none"]:focus-visible { outline: none !important; }
+[input-highlight="none"] { -webkit-appearance: none; appearance: none; outline: none; } [input-highlight="none"]:focus { border: 0 rgba(0, 0, 0, 0) !important; }
 
-/* prevent highlighting of input elements */
-[input-highlight="none"] { -webkit-appearance: none; appearance: none; outline: none; }
-[input-highlight="none"]:focus { border: 0 rgba(0, 0, 0, 0) !important; }
-
-/* let screen readers to read, but hidden for regular users */
+/* accessibility: hidden for visual users, readable for screen readers */
 [visually-hidden="true"], .visually-hidden {
 	position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -62,3 +53,6 @@ input[type="submit"]:focus-visible, input[type="file"]:focus-visible { outline: 
 	clip-path: inset(0px 0px 99.9% 99.9%);
 	overflow: hidden; height: 1px; width: 1px; padding: 0; border: 0;
 }
+
+/* remove tab highlight on touch devices */
+* { -webkit-tap-highlight-color: transparent; }

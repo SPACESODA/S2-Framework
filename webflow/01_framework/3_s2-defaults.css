@@ -39,6 +39,12 @@ h5 sub, h6 sub {
 	margin-right: -0.8em;
 }
 
+/* lightbox and slider */
+.w-lightbox-backdrop { font-weight: normal; }
+.w-lightbox-strip { padding: 0.5rem; } .w-lightbox-item { padding: 0.25rem; margin: 0.25rem; outline-offset: 0; }
+.w-lightbox-control { outline: none !important; }
+.w-slider-dot { flex: 0 0 auto; }
+
 /* code block */
 pre.code-block { margin: 1rem 0 1rem 0; }
 pre.code-block code {

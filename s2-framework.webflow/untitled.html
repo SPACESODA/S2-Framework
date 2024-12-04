@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Dec 02 2024 15:31:36 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Dec 04 2024 02:16:21 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="666251e9d1151496fe245f26" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -78,7 +78,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         });
       });
     </script>
-  <!--  Color Modes Switching  -->
+  <!--  Light / Dark Mode Switching  -->
   <script>
       (function() {
         const THEME_KEY = 'theme';
@@ -239,10 +239,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .w-richtext figure.w-richtext-align-floatright {
               margin-block: 0.35em 0.05em;
             }
-            .w-lightbox-close:focus,
-            .w-lightbox-close:focus-visible {
-              outline: none;
-            }
             .spacer * {
               padding: 0;
             }
@@ -258,12 +254,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2)));
               }
             }
-            /* -- Accessibility -- */
-            /* remove blue highlight on mobile */
-            * {
-              -webkit-tap-highlight-color: transparent;
-            }
-            /* focusable elements */
+            /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
               outline: var(--thickness--outline) solid var(--colors--focus);
               outline-offset: 0.188rem;
@@ -293,7 +284,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [focus-outline="none"]:focus-visible {
               outline: none !important;
             }
-            /* prevent highlighting of input elements */
             [input-highlight="none"] {
               -webkit-appearance: none;
               appearance: none;
@@ -302,7 +292,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [input-highlight="none"]:focus {
               border: 0 rgba(0, 0, 0, 0) !important;
             }
-            /* let screen readers to read, but hidden for regular users */
+            /* accessibility: hidden for visual users, readable for screen readers */
             [visually-hidden="true"],
             .visually-hidden {
               position: absolute;
@@ -314,6 +304,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               width: 1px;
               padding: 0;
               border: 0;
+            }
+            /* remove tab highlight on touch devices */
+            * {
+              -webkit-tap-highlight-color: transparent;
             }
             /* ----------------------- */
             /* -- (1) S2 Attributes -- */
@@ -1801,6 +1795,24 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               top: -0.5em;
               margin-right: -0.8em;
             }
+            /* lightbox and slider */
+            .w-lightbox-backdrop {
+              font-weight: normal;
+            }
+            .w-lightbox-strip {
+              padding: 0.5rem;
+            }
+            .w-lightbox-item {
+              padding: 0.25rem;
+              margin: 0.25rem;
+              outline-offset: 0;
+            }
+            .w-lightbox-control {
+              outline: none !important;
+            }
+            .w-slider-dot {
+              flex: 0 0 auto;
+            }
             /* code block */
             pre.code-block {
               margin: 1rem 0 1rem 0;
@@ -2050,19 +2062,30 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
           </style>
       </div>
-      <div code="css" class="_03_color-modes w-embed">
+      <div code="css" class="_03_modes w-embed">
         <style>
-            /* --------------------------- */
-            /* -- Mode Switching Toggle -- */
-            /* --------------------------- */
+            /* ----------------------- */
+            /* -- Mode Switching UI -- */
+            /* ----------------------- */
+            [theme="light"] .toggle {}
             [theme="dark"] .toggle {
               justify-content: flex-end;
               background-color: var(--palette-neutral--800);
               color: var(--plaette-neutral-300);
             }
-            /* ----------------- */
-            /* -- Color Modes -- */
-            /* ----------------- */
+            [theme="light"] .mode-switch>[data-button="color-mode-light"] {
+              background-color: #ffffff80;
+            }
+            [theme="dark"] .mode-switch>[data-button="color-mode-dark"] {
+              background-color: #00000060;
+            }
+            [theme="dark"] .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
+              background-color: #bbb;
+              color: #ddd;
+            }
+            /* ---------------------- */
+            /* -- Color Conversion -- */
+            /* ---------------------- */
             /* conversions of "Colors" variables */
             /* "Dark" mode */
             [theme="dark"],
@@ -2397,41 +2420,6 @@ Result: "https://example.com?key=value#section"
         };
         window.addEventListener("scroll", scrollFunc);
       }
-    </script>
-  <!--  Change Styles According to Color Mode  -->
-  <!-- 
-This function applies only to elements with the mode-styles="true" attribute only.
-It facilitates style changes by adding the class .cc-style-on-dark in dark mode and .cc-style-on-light in light mode.
-| Currently, this function is only used on some of the "Filter UI" elements in the style guide.
-| You can remove this script if you do not need this function.
- -->
-  <script>
-      function updateStyles() {
-        const body = document.body;
-        const elements = document.querySelectorAll('[mode-styles="true"]');
-        if (elements.length === 0) return; // exit if no elements with the attribute
-        if (body.getAttribute('theme') === 'dark' || body.classList.contains('cc-dark-mode')) {
-          elements.forEach(element => {
-            element.classList.add('cc-style-on-dark');
-            element.classList.remove('cc-style-on-light');
-          });
-        } else if (body.getAttribute('theme') === 'light') {
-          elements.forEach(element => {
-            element.classList.add('cc-style-on-light');
-            element.classList.remove('cc-style-on-dark');
-          });
-        } else {
-          elements.forEach(element => {
-            element.classList.remove('cc-style-on-dark', 'cc-style-on-light');
-          });
-        }
-      }
-      updateStyles();
-      const observer = new MutationObserver(updateStyles);
-      observer.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['theme', 'class']
-      });
     </script>
   <!--  Built with S2 Framework  -->
   <!--  https://s2-framework.webflow.io  -->
