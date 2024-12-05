@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Dec 04 2024 05:29:11 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Dec 05 2024 06:53:17 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -518,7 +518,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [white-space="nowrap"] {
               white-space: nowrap;
             }
-            [text-overflow="ellipsis"] {
+            [truncate] {
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
@@ -1780,7 +1780,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sup,
             h3 sup,
             h4 sup {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.65em;
               margin-right: -0.925em;
             }
@@ -1788,7 +1788,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sub,
             h3 sub,
             h4 sub {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.85em;
               margin-right: -0.925em;
             }
@@ -1884,7 +1884,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             /* scrollable html-table */
             .html-table[scrollable] {
-              overflow: auto !important;
+              overflow: auto;
             }
             .html-table[scrollable] table {
               display: block !important;
@@ -1917,9 +1917,25 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .html-table[scrollable]::-webkit-scrollbar-thumb {
               background-color: transparent;
             }
+            .html-table[scrollable="x"] {
+              overflow-x: auto;
+              overflow-y: hidden;
+            }
+            .html-table[scrollable="x"] table {
+              max-height: none;
+            }
+            .html-table[scrollable="y"] {
+              overflow-x: hidden;
+              overflow-y: auto;
+              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
+            }
+            .html-table[scrollable="y"] table {
+              display: table !important;
+            }
             /* th-sticky */
             .html-table[scrollable][th-sticky] thead th:first-child {
               position: sticky;
+              top: -1px;
               left: -1px;
               z-index: 999;
             }
@@ -2525,9 +2541,8 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         <div class="css-tag cc-attribute">data-button=&quot;&quot;</div>
                       </div>
                     </div>
-                    <div gap="2-2" flex="col" class="block">
-                      <div gap="1-1" class="flex-cols"><button data-button="color-mode-system" class="button cc-sm">Follow system</button><button data-button="color-mode-light" class="button cc-sm">Light</button><button data-button="color-mode-dark" class="button cc-sm">Dark</button></div>
-                      <div class="flex-cols">
+                    <div class="block">
+                      <div mt="0" class="button-wrapper">
                         <div class="mode-switch"><button data-button="color-mode-system" aria-label="Follow system" class="mode-switch_button">
                             <div class="icon cc-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.1029 16.2934C13.2108 15.968 11.7857 15.5693 9.99949 15.5693C8.2133 15.5693 6.78822 15.968 5.8961 16.2934M15.0688 3.98242H4.93101C3.86455 3.98242 3 4.84696 3 5.91342V11.2237C3 12.2902 3.86455 13.1547 4.93101 13.1547H15.0688C16.1352 13.1547 16.9998 12.2902 16.9998 11.2237V5.91342C16.9998 4.84696 16.1352 3.98242 15.0688 3.98242Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -2557,6 +2572,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           </div>
                         </div>
                       </div>
+                      <div class="button-wrapper"><button data-button="color-mode-system" class="button cc-sm">Follow system</button><button data-button="color-mode-light" class="button cc-sm">Light</button><button data-button="color-mode-dark" class="button cc-sm">Dark</button></div>
                     </div>
                   </div>
                 </section>
@@ -2878,7 +2894,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <h3>Icons</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>The base <span class="css-tag">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (unit in em, not in rem).</p>
+                      <p>The base <span class="css-tag">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (unit in <code>em</code>, not <code>rem</code>).</p>
                     </div>
                   </div>
                   <div class="sg-element">
@@ -3425,12 +3441,8 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="tag-wrapper">
                         <div class="css-tag">html-table</div>
                       </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">scrollable</div>
-                        <div class="css-tag cc-attribute">th-sticky</div>
-                      </div>
                     </div>
-                    <div width-is="100p" class="block">
+                    <div gap="1-1" width-is="100p" flex="col" class="block">
                       <div class="w-embed">
                         <div class="html-table" role="region" tabindex="0">
                           <table>
@@ -3539,299 +3551,16 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           </table>
                         </div>
                       </div>
-                      <div class="w-embed">
-                        <div class="html-table" scrollable="6" role="region" tabindex="0">
-                          <table>
-                            <thead>
-                              <tr>
-                                <th>matrix</th>
-                                <th>col 1</th>
-                                <th>col 2</th>
-                                <th>col 3</th>
-                                <th>col 4</th>
-                                <th>col 5</th>
-                                <th>col 6</th>
-                                <th>col 7</th>
-                                <th>col 8</th>
-                                <th>col 9</th>
-                                <th>col 10</th>
-                                <th>col 11</th>
-                                <th>col 12</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th>row 1</th>
-                                <td>cell 1 - 1</td>
-                                <td>cell 1 - 2</td>
-                                <td>cell 1 - 3</td>
-                                <td>cell 1 - 4</td>
-                                <td>cell 1 - 5</td>
-                                <td>cell 1 - 6</td>
-                                <td>cell 1 - 7</td>
-                                <td>cell 1 - 8</td>
-                                <td>cell 1 - 9</td>
-                                <td>cell 1 - 10</td>
-                                <td>cell 1 - 11</td>
-                                <td>cell 1 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 2</th>
-                                <td>cell 2 - 1</td>
-                                <td>cell 2 - 2</td>
-                                <td>cell 2 - 3</td>
-                                <td>cell 2 - 4</td>
-                                <td>cell 2 - 5</td>
-                                <td>cell 2 - 6</td>
-                                <td>cell 2 - 7</td>
-                                <td>cell 2 - 8</td>
-                                <td>cell 2 - 9</td>
-                                <td>cell 2 - 10</td>
-                                <td>cell 2 - 11</td>
-                                <td>cell 2 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 3</th>
-                                <td>cell 3 - 1</td>
-                                <td>cell 3 - 2</td>
-                                <td>cell 3 - 3</td>
-                                <td>cell 3 - 4</td>
-                                <td>cell 3 - 5</td>
-                                <td>cell 3 - 6</td>
-                                <td>cell 3 - 7</td>
-                                <td>cell 3 - 8</td>
-                                <td>cell 3 - 9</td>
-                                <td>cell 3 - 10</td>
-                                <td>cell 3 - 11</td>
-                                <td>cell 3 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 4</th>
-                                <td>cell 4 - 1</td>
-                                <td>cell 4 - 2</td>
-                                <td>cell 4 - 3</td>
-                                <td>cell 4 - 4</td>
-                                <td>cell 4 - 5</td>
-                                <td>cell 4 - 6</td>
-                                <td>cell 4 - 7</td>
-                                <td>cell 4 - 8</td>
-                                <td>cell 4 - 9</td>
-                                <td>cell 4 - 10</td>
-                                <td>cell 4 - 11</td>
-                                <td>cell 4 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 5</th>
-                                <td>cell 5 - 1</td>
-                                <td>cell 5 - 2</td>
-                                <td>cell 5 - 3</td>
-                                <td>cell 5 - 4</td>
-                                <td>cell 5 - 5</td>
-                                <td>cell 5 - 6</td>
-                                <td>cell 5 - 7</td>
-                                <td>cell 5 - 8</td>
-                                <td>cell 5 - 9</td>
-                                <td>cell 5 - 10</td>
-                                <td>cell 5 - 11</td>
-                                <td>cell 5 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 6</th>
-                                <td>cell 6 - 1</td>
-                                <td>cell 6 - 2</td>
-                                <td>cell 6 - 3</td>
-                                <td>cell 6 - 4</td>
-                                <td>cell 6 - 5</td>
-                                <td>cell 6 - 6</td>
-                                <td>cell 6 - 7</td>
-                                <td>cell 6 - 8</td>
-                                <td>cell 6 - 9</td>
-                                <td>cell 6 - 10</td>
-                                <td>cell 6 - 11</td>
-                                <td>cell 6 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 7</th>
-                                <td>cell 7 - 1</td>
-                                <td>cell 7 - 2</td>
-                                <td>cell 7 - 3</td>
-                                <td>cell 7 - 4</td>
-                                <td>cell 7 - 5</td>
-                                <td>cell 7 - 6</td>
-                                <td>cell 7 - 7</td>
-                                <td>cell 7 - 8</td>
-                                <td>cell 7 - 9</td>
-                                <td>cell 7 - 10</td>
-                                <td>cell 7 - 11</td>
-                                <td>cell 7 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 8</th>
-                                <td>cell 8 - 1</td>
-                                <td>cell 8 - 2</td>
-                                <td>cell 8 - 3</td>
-                                <td>cell 8 - 4</td>
-                                <td>cell 8 - 5</td>
-                                <td>cell 8 - 6</td>
-                                <td>cell 8 - 7</td>
-                                <td>cell 8 - 8</td>
-                                <td>cell 8 - 9</td>
-                                <td>cell 8 - 10</td>
-                                <td>cell 8 - 11</td>
-                                <td>cell 8 - 12</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="sg-element cc-grid">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="css-tag">html-table</div>
                       </div>
-                      <div class="w-embed">
-                        <div class="html-table" scrollable="" th-sticky="" role="region" tabindex="0">
-                          <table>
-                            <thead>
-                              <tr>
-                                <th>matrix</th>
-                                <th>col 1</th>
-                                <th>col 2</th>
-                                <th>col 3</th>
-                                <th>col 4</th>
-                                <th>col 5</th>
-                                <th>col 6</th>
-                                <th>col 7</th>
-                                <th>col 8</th>
-                                <th>col 9</th>
-                                <th>col 10</th>
-                                <th>col 11</th>
-                                <th>col 12</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th>row 1</th>
-                                <td>cell 1 - 1</td>
-                                <td>cell 1 - 2</td>
-                                <td>cell 1 - 3</td>
-                                <td>cell 1 - 4</td>
-                                <td>cell 1 - 5</td>
-                                <td>cell 1 - 6</td>
-                                <td>cell 1 - 7</td>
-                                <td>cell 1 - 8</td>
-                                <td>cell 1 - 9</td>
-                                <td>cell 1 - 10</td>
-                                <td>cell 1 - 11</td>
-                                <td>cell 1 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 2</th>
-                                <td>cell 2 - 1</td>
-                                <td>cell 2 - 2</td>
-                                <td>cell 2 - 3</td>
-                                <td>cell 2 - 4</td>
-                                <td>cell 2 - 5</td>
-                                <td>cell 2 - 6</td>
-                                <td>cell 2 - 7</td>
-                                <td>cell 2 - 8</td>
-                                <td>cell 2 - 9</td>
-                                <td>cell 2 - 10</td>
-                                <td>cell 2 - 11</td>
-                                <td>cell 2 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 3</th>
-                                <td>cell 3 - 1</td>
-                                <td>cell 3 - 2</td>
-                                <td>cell 3 - 3</td>
-                                <td>cell 3 - 4</td>
-                                <td>cell 3 - 5</td>
-                                <td>cell 3 - 6</td>
-                                <td>cell 3 - 7</td>
-                                <td>cell 3 - 8</td>
-                                <td>cell 3 - 9</td>
-                                <td>cell 3 - 10</td>
-                                <td>cell 3 - 11</td>
-                                <td>cell 3 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 4</th>
-                                <td>cell 4 - 1</td>
-                                <td>cell 4 - 2</td>
-                                <td>cell 4 - 3</td>
-                                <td>cell 4 - 4</td>
-                                <td>cell 4 - 5</td>
-                                <td>cell 4 - 6</td>
-                                <td>cell 4 - 7</td>
-                                <td>cell 4 - 8</td>
-                                <td>cell 4 - 9</td>
-                                <td>cell 4 - 10</td>
-                                <td>cell 4 - 11</td>
-                                <td>cell 4 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 5</th>
-                                <td>cell 5 - 1</td>
-                                <td>cell 5 - 2</td>
-                                <td>cell 5 - 3</td>
-                                <td>cell 5 - 4</td>
-                                <td>cell 5 - 5</td>
-                                <td>cell 5 - 6</td>
-                                <td>cell 5 - 7</td>
-                                <td>cell 5 - 8</td>
-                                <td>cell 5 - 9</td>
-                                <td>cell 5 - 10</td>
-                                <td>cell 5 - 11</td>
-                                <td>cell 5 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 6</th>
-                                <td>cell 6 - 1</td>
-                                <td>cell 6 - 2</td>
-                                <td>cell 6 - 3</td>
-                                <td>cell 6 - 4</td>
-                                <td>cell 6 - 5</td>
-                                <td>cell 6 - 6</td>
-                                <td>cell 6 - 7</td>
-                                <td>cell 6 - 8</td>
-                                <td>cell 6 - 9</td>
-                                <td>cell 6 - 10</td>
-                                <td>cell 6 - 11</td>
-                                <td>cell 6 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 7</th>
-                                <td>cell 7 - 1</td>
-                                <td>cell 7 - 2</td>
-                                <td>cell 7 - 3</td>
-                                <td>cell 7 - 4</td>
-                                <td>cell 7 - 5</td>
-                                <td>cell 7 - 6</td>
-                                <td>cell 7 - 7</td>
-                                <td>cell 7 - 8</td>
-                                <td>cell 7 - 9</td>
-                                <td>cell 7 - 10</td>
-                                <td>cell 7 - 11</td>
-                                <td>cell 7 - 12</td>
-                              </tr>
-                              <tr>
-                                <th>row 8</th>
-                                <td>cell 8 - 1</td>
-                                <td>cell 8 - 2</td>
-                                <td>cell 8 - 3</td>
-                                <td>cell 8 - 4</td>
-                                <td>cell 8 - 5</td>
-                                <td>cell 8 - 6</td>
-                                <td>cell 8 - 7</td>
-                                <td>cell 8 - 8</td>
-                                <td>cell 8 - 9</td>
-                                <td>cell 8 - 10</td>
-                                <td>cell 8 - 11</td>
-                                <td>cell 8 - 12</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div mt="1" class="title-wrapper cc-xs">
-                        <div class="h6">Compatible with the Finsweet Table App</div>
-                      </div>
+                      <div class="sg-note">Works perfectly with tables generated by the Finsweet Table App. Simply wrap the table with an <code class="css-tag">html-table</code> div.</div>
+                    </div>
+                    <div gap="1-1" width-is="100p" flex="col" class="block">
                       <div class="block">
                         <div tabindex="0" role="region" class="html-table">
                           <table class="table_component">
@@ -3877,7 +3606,557 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                                 <td class="table_cell">Footer</td>
                               </tr>
                             </tfoot>
-                            <caption class="table_caption">Example caption: This is a table generated by the app!</caption>
+                            <caption class="table_caption">Example caption: This is a table generated by the Finsweet Table App!</caption>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element cc-grid">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="css-tag">html-table</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag cc-attribute">scrollable</div>
+                      </div>
+                      <div class="sg-note">default max-height is 5 rows when using <code class="css-tag cc-attribute">scrollable</code> attribute without a value</div>
+                    </div>
+                    <div gap="1-1" width-is="100p" flex="col" class="block">
+                      <div class="w-embed">
+                        <div class="html-table" scrollable="" role="region" tabindex="0">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>matrix</th>
+                                <th>col 1</th>
+                                <th>col 2</th>
+                                <th>col 3</th>
+                                <th>col 4</th>
+                                <th>col 5</th>
+                                <th>col 6</th>
+                                <th>col 7</th>
+                                <th>col 8</th>
+                                <th>col 9</th>
+                                <th>col 10</th>
+                                <th>col 11</th>
+                                <th>col 12</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>row 1</th>
+                                <td>cell 1 - 1</td>
+                                <td>cell 1 - 2</td>
+                                <td>cell 1 - 3</td>
+                                <td>cell 1 - 4</td>
+                                <td>cell 1 - 5</td>
+                                <td>cell 1 - 6</td>
+                                <td>cell 1 - 7</td>
+                                <td>cell 1 - 8</td>
+                                <td>cell 1 - 9</td>
+                                <td>cell 1 - 10</td>
+                                <td>cell 1 - 11</td>
+                                <td>cell 1 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 2</th>
+                                <td>cell 2 - 1</td>
+                                <td>cell 2 - 2</td>
+                                <td>cell 2 - 3</td>
+                                <td>cell 2 - 4</td>
+                                <td>cell 2 - 5</td>
+                                <td>cell 2 - 6</td>
+                                <td>cell 2 - 7</td>
+                                <td>cell 2 - 8</td>
+                                <td>cell 2 - 9</td>
+                                <td>cell 2 - 10</td>
+                                <td>cell 2 - 11</td>
+                                <td>cell 2 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 3</th>
+                                <td>cell 3 - 1</td>
+                                <td>cell 3 - 2</td>
+                                <td>cell 3 - 3</td>
+                                <td>cell 3 - 4</td>
+                                <td>cell 3 - 5</td>
+                                <td>cell 3 - 6</td>
+                                <td>cell 3 - 7</td>
+                                <td>cell 3 - 8</td>
+                                <td>cell 3 - 9</td>
+                                <td>cell 3 - 10</td>
+                                <td>cell 3 - 11</td>
+                                <td>cell 3 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 4</th>
+                                <td>cell 4 - 1</td>
+                                <td>cell 4 - 2</td>
+                                <td>cell 4 - 3</td>
+                                <td>cell 4 - 4</td>
+                                <td>cell 4 - 5</td>
+                                <td>cell 4 - 6</td>
+                                <td>cell 4 - 7</td>
+                                <td>cell 4 - 8</td>
+                                <td>cell 4 - 9</td>
+                                <td>cell 4 - 10</td>
+                                <td>cell 4 - 11</td>
+                                <td>cell 4 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 5</th>
+                                <td>cell 5 - 1</td>
+                                <td>cell 5 - 2</td>
+                                <td>cell 5 - 3</td>
+                                <td>cell 5 - 4</td>
+                                <td>cell 5 - 5</td>
+                                <td>cell 5 - 6</td>
+                                <td>cell 5 - 7</td>
+                                <td>cell 5 - 8</td>
+                                <td>cell 5 - 9</td>
+                                <td>cell 5 - 10</td>
+                                <td>cell 5 - 11</td>
+                                <td>cell 5 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 6</th>
+                                <td>cell 6 - 1</td>
+                                <td>cell 6 - 2</td>
+                                <td>cell 6 - 3</td>
+                                <td>cell 6 - 4</td>
+                                <td>cell 6 - 5</td>
+                                <td>cell 6 - 6</td>
+                                <td>cell 6 - 7</td>
+                                <td>cell 6 - 8</td>
+                                <td>cell 6 - 9</td>
+                                <td>cell 6 - 10</td>
+                                <td>cell 6 - 11</td>
+                                <td>cell 6 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 7</th>
+                                <td>cell 7 - 1</td>
+                                <td>cell 7 - 2</td>
+                                <td>cell 7 - 3</td>
+                                <td>cell 7 - 4</td>
+                                <td>cell 7 - 5</td>
+                                <td>cell 7 - 6</td>
+                                <td>cell 7 - 7</td>
+                                <td>cell 7 - 8</td>
+                                <td>cell 7 - 9</td>
+                                <td>cell 7 - 10</td>
+                                <td>cell 7 - 11</td>
+                                <td>cell 7 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 8</th>
+                                <td>cell 8 - 1</td>
+                                <td>cell 8 - 2</td>
+                                <td>cell 8 - 3</td>
+                                <td>cell 8 - 4</td>
+                                <td>cell 8 - 5</td>
+                                <td>cell 8 - 6</td>
+                                <td>cell 8 - 7</td>
+                                <td>cell 8 - 8</td>
+                                <td>cell 8 - 9</td>
+                                <td>cell 8 - 10</td>
+                                <td>cell 8 - 11</td>
+                                <td>cell 8 - 12</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element cc-grid">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="css-tag">html-table</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag cc-attribute">scrollable=&quot;6&quot;</div>
+                        <div class="css-tag cc-attribute">th-sticky</div>
+                      </div>
+                    </div>
+                    <div gap="1-1" width-is="100p" flex="col" class="block">
+                      <div class="w-embed">
+                        <div class="html-table" scrollable="6" th-sticky="" role="region" tabindex="0">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>matrix</th>
+                                <th>col 1</th>
+                                <th>col 2</th>
+                                <th>col 3</th>
+                                <th>col 4</th>
+                                <th>col 5</th>
+                                <th>col 6</th>
+                                <th>col 7</th>
+                                <th>col 8</th>
+                                <th>col 9</th>
+                                <th>col 10</th>
+                                <th>col 11</th>
+                                <th>col 12</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>row 1</th>
+                                <td>cell 1 - 1</td>
+                                <td>cell 1 - 2</td>
+                                <td>cell 1 - 3</td>
+                                <td>cell 1 - 4</td>
+                                <td>cell 1 - 5</td>
+                                <td>cell 1 - 6</td>
+                                <td>cell 1 - 7</td>
+                                <td>cell 1 - 8</td>
+                                <td>cell 1 - 9</td>
+                                <td>cell 1 - 10</td>
+                                <td>cell 1 - 11</td>
+                                <td>cell 1 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 2</th>
+                                <td>cell 2 - 1</td>
+                                <td>cell 2 - 2</td>
+                                <td>cell 2 - 3</td>
+                                <td>cell 2 - 4</td>
+                                <td>cell 2 - 5</td>
+                                <td>cell 2 - 6</td>
+                                <td>cell 2 - 7</td>
+                                <td>cell 2 - 8</td>
+                                <td>cell 2 - 9</td>
+                                <td>cell 2 - 10</td>
+                                <td>cell 2 - 11</td>
+                                <td>cell 2 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 3</th>
+                                <td>cell 3 - 1</td>
+                                <td>cell 3 - 2</td>
+                                <td>cell 3 - 3</td>
+                                <td>cell 3 - 4</td>
+                                <td>cell 3 - 5</td>
+                                <td>cell 3 - 6</td>
+                                <td>cell 3 - 7</td>
+                                <td>cell 3 - 8</td>
+                                <td>cell 3 - 9</td>
+                                <td>cell 3 - 10</td>
+                                <td>cell 3 - 11</td>
+                                <td>cell 3 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 4</th>
+                                <td>cell 4 - 1</td>
+                                <td>cell 4 - 2</td>
+                                <td>cell 4 - 3</td>
+                                <td>cell 4 - 4</td>
+                                <td>cell 4 - 5</td>
+                                <td>cell 4 - 6</td>
+                                <td>cell 4 - 7</td>
+                                <td>cell 4 - 8</td>
+                                <td>cell 4 - 9</td>
+                                <td>cell 4 - 10</td>
+                                <td>cell 4 - 11</td>
+                                <td>cell 4 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 5</th>
+                                <td>cell 5 - 1</td>
+                                <td>cell 5 - 2</td>
+                                <td>cell 5 - 3</td>
+                                <td>cell 5 - 4</td>
+                                <td>cell 5 - 5</td>
+                                <td>cell 5 - 6</td>
+                                <td>cell 5 - 7</td>
+                                <td>cell 5 - 8</td>
+                                <td>cell 5 - 9</td>
+                                <td>cell 5 - 10</td>
+                                <td>cell 5 - 11</td>
+                                <td>cell 5 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 6</th>
+                                <td>cell 6 - 1</td>
+                                <td>cell 6 - 2</td>
+                                <td>cell 6 - 3</td>
+                                <td>cell 6 - 4</td>
+                                <td>cell 6 - 5</td>
+                                <td>cell 6 - 6</td>
+                                <td>cell 6 - 7</td>
+                                <td>cell 6 - 8</td>
+                                <td>cell 6 - 9</td>
+                                <td>cell 6 - 10</td>
+                                <td>cell 6 - 11</td>
+                                <td>cell 6 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 7</th>
+                                <td>cell 7 - 1</td>
+                                <td>cell 7 - 2</td>
+                                <td>cell 7 - 3</td>
+                                <td>cell 7 - 4</td>
+                                <td>cell 7 - 5</td>
+                                <td>cell 7 - 6</td>
+                                <td>cell 7 - 7</td>
+                                <td>cell 7 - 8</td>
+                                <td>cell 7 - 9</td>
+                                <td>cell 7 - 10</td>
+                                <td>cell 7 - 11</td>
+                                <td>cell 7 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 8</th>
+                                <td>cell 8 - 1</td>
+                                <td>cell 8 - 2</td>
+                                <td>cell 8 - 3</td>
+                                <td>cell 8 - 4</td>
+                                <td>cell 8 - 5</td>
+                                <td>cell 8 - 6</td>
+                                <td>cell 8 - 7</td>
+                                <td>cell 8 - 8</td>
+                                <td>cell 8 - 9</td>
+                                <td>cell 8 - 10</td>
+                                <td>cell 8 - 11</td>
+                                <td>cell 8 - 12</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element cc-grid">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="css-tag">html-table</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag cc-attribute">scrollable=&quot;x&quot;</div>
+                      </div>
+                    </div>
+                    <div gap="1-1" width-is="100p" flex="col" class="block">
+                      <div class="w-embed">
+                        <div class="html-table" scrollable="x" role="region" tabindex="0">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>matrix</th>
+                                <th>col 1</th>
+                                <th>col 2</th>
+                                <th>col 3</th>
+                                <th>col 4</th>
+                                <th>col 5</th>
+                                <th>col 6</th>
+                                <th>col 7</th>
+                                <th>col 8</th>
+                                <th>col 9</th>
+                                <th>col 10</th>
+                                <th>col 11</th>
+                                <th>col 12</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>row 1</th>
+                                <td>cell 1 - 1</td>
+                                <td>cell 1 - 2</td>
+                                <td>cell 1 - 3</td>
+                                <td>cell 1 - 4</td>
+                                <td>cell 1 - 5</td>
+                                <td>cell 1 - 6</td>
+                                <td>cell 1 - 7</td>
+                                <td>cell 1 - 8</td>
+                                <td>cell 1 - 9</td>
+                                <td>cell 1 - 10</td>
+                                <td>cell 1 - 11</td>
+                                <td>cell 1 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 2</th>
+                                <td>cell 2 - 1</td>
+                                <td>cell 2 - 2</td>
+                                <td>cell 2 - 3</td>
+                                <td>cell 2 - 4</td>
+                                <td>cell 2 - 5</td>
+                                <td>cell 2 - 6</td>
+                                <td>cell 2 - 7</td>
+                                <td>cell 2 - 8</td>
+                                <td>cell 2 - 9</td>
+                                <td>cell 2 - 10</td>
+                                <td>cell 2 - 11</td>
+                                <td>cell 2 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 3</th>
+                                <td>cell 3 - 1</td>
+                                <td>cell 3 - 2</td>
+                                <td>cell 3 - 3</td>
+                                <td>cell 3 - 4</td>
+                                <td>cell 3 - 5</td>
+                                <td>cell 3 - 6</td>
+                                <td>cell 3 - 7</td>
+                                <td>cell 3 - 8</td>
+                                <td>cell 3 - 9</td>
+                                <td>cell 3 - 10</td>
+                                <td>cell 3 - 11</td>
+                                <td>cell 3 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 4</th>
+                                <td>cell 4 - 1</td>
+                                <td>cell 4 - 2</td>
+                                <td>cell 4 - 3</td>
+                                <td>cell 4 - 4</td>
+                                <td>cell 4 - 5</td>
+                                <td>cell 4 - 6</td>
+                                <td>cell 4 - 7</td>
+                                <td>cell 4 - 8</td>
+                                <td>cell 4 - 9</td>
+                                <td>cell 4 - 10</td>
+                                <td>cell 4 - 11</td>
+                                <td>cell 4 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 5</th>
+                                <td>cell 5 - 1</td>
+                                <td>cell 5 - 2</td>
+                                <td>cell 5 - 3</td>
+                                <td>cell 5 - 4</td>
+                                <td>cell 5 - 5</td>
+                                <td>cell 5 - 6</td>
+                                <td>cell 5 - 7</td>
+                                <td>cell 5 - 8</td>
+                                <td>cell 5 - 9</td>
+                                <td>cell 5 - 10</td>
+                                <td>cell 5 - 11</td>
+                                <td>cell 5 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 6</th>
+                                <td>cell 6 - 1</td>
+                                <td>cell 6 - 2</td>
+                                <td>cell 6 - 3</td>
+                                <td>cell 6 - 4</td>
+                                <td>cell 6 - 5</td>
+                                <td>cell 6 - 6</td>
+                                <td>cell 6 - 7</td>
+                                <td>cell 6 - 8</td>
+                                <td>cell 6 - 9</td>
+                                <td>cell 6 - 10</td>
+                                <td>cell 6 - 11</td>
+                                <td>cell 6 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 7</th>
+                                <td>cell 7 - 1</td>
+                                <td>cell 7 - 2</td>
+                                <td>cell 7 - 3</td>
+                                <td>cell 7 - 4</td>
+                                <td>cell 7 - 5</td>
+                                <td>cell 7 - 6</td>
+                                <td>cell 7 - 7</td>
+                                <td>cell 7 - 8</td>
+                                <td>cell 7 - 9</td>
+                                <td>cell 7 - 10</td>
+                                <td>cell 7 - 11</td>
+                                <td>cell 7 - 12</td>
+                              </tr>
+                              <tr>
+                                <th>row 8</th>
+                                <td>cell 8 - 1</td>
+                                <td>cell 8 - 2</td>
+                                <td>cell 8 - 3</td>
+                                <td>cell 8 - 4</td>
+                                <td>cell 8 - 5</td>
+                                <td>cell 8 - 6</td>
+                                <td>cell 8 - 7</td>
+                                <td>cell 8 - 8</td>
+                                <td>cell 8 - 9</td>
+                                <td>cell 8 - 10</td>
+                                <td>cell 8 - 11</td>
+                                <td>cell 8 - 12</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element cc-grid">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="css-tag">html-table</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag cc-attribute">scrollable=&quot;y&quot;</div>
+                      </div>
+                      <div class="sg-note">default max-height is 5 rows when the value is <code>y</code></div>
+                    </div>
+                    <div gap="1-1" width-is="100p" flex="col" class="block">
+                      <div class="w-embed">
+                        <div class="html-table" scrollable="y" role="region" tabindex="0">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>matrix</th>
+                                <th>col 1</th>
+                                <th>col 2</th>
+                                <th>col 3</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>row 1</th>
+                                <td>cell 1 - 1</td>
+                                <td>cell 1 - 2</td>
+                                <td>cell 1 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 2</th>
+                                <td>cell 2 - 1</td>
+                                <td>cell 2 - 2</td>
+                                <td>cell 2 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 3</th>
+                                <td>cell 3 - 1</td>
+                                <td>cell 3 - 2</td>
+                                <td>cell 3 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 4</th>
+                                <td>cell 4 - 1</td>
+                                <td>cell 4 - 2</td>
+                                <td>cell 4 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 5</th>
+                                <td>cell 5 - 1</td>
+                                <td>cell 5 - 2</td>
+                                <td>cell 5 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 6</th>
+                                <td>cell 6 - 1</td>
+                                <td>cell 6 - 2</td>
+                                <td>cell 6 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 7</th>
+                                <td>cell 7 - 1</td>
+                                <td>cell 7 - 2</td>
+                                <td>cell 7 - 3</td>
+                              </tr>
+                              <tr>
+                                <th>row 8</th>
+                                <td>cell 8 - 1</td>
+                                <td>cell 8 - 2</td>
+                                <td>cell 8 - 3</td>
+                              </tr>
+                            </tbody>
                           </table>
                         </div>
                       </div>
@@ -4088,7 +4367,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                     <div class="block">
                       <div mb="1">
-                        <div inline="">Supercharge feature</div>
+                        <div inline="">New feature: Time-limited Coupons</div>
                         <div class="tag">Beta</div>
                       </div>
                     </div>

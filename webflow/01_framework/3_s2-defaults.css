@@ -19,12 +19,12 @@
 
 /* better sup and sub on headings */
 h1 sup, h2 sup, h3 sup, h4 sup {
-	left: -0.625em;
+	left: -0.725em;
 	top: -0.65em;
 	margin-right: -0.925em;
 }
 h1 sub, h2 sub, h3 sub, h4 sub {
-	left: -0.625em;
+	left: -0.725em;
 	top: -0.85em;
 	margin-right: -0.925em;
 }
@@ -84,7 +84,7 @@ pre.code-block code {
 }
 .html-table th {
 	background-color: var(--colors--surface-muted);
-  color: inherit;
+ 	color: inherit;
 	text-align: inherit;
 }
 .html-table thead th {}
@@ -96,7 +96,7 @@ pre.code-block code {
 	margin: 0 0 0.5rem 0;
 }
 /* scrollable html-table */
-.html-table[scrollable] { overflow: auto !important; }
+.html-table[scrollable] { overflow: auto; }
 .html-table[scrollable] table { display: block !important; }
 .html-table[scrollable] table, .html-table[scrollable="5"] table { max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px); }
 .html-table[scrollable="6"] table { max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 6 + 7px); }
@@ -106,19 +106,20 @@ pre.code-block code {
 .html-table[scrollable]::-webkit-scrollbar { display: none !important; }
 .html-table[scrollable] { -ms-overflow-style: none; scrollbar-width: none; overscroll-behavior: none; }
 .html-table[scrollable]::-webkit-scrollbar-thumb { background-color: transparent; }
+.html-table[scrollable="x"] { overflow-x: auto; overflow-y: hidden; }
+.html-table[scrollable="x"] table { max-height: none; }
+.html-table[scrollable="y"] { overflow-x: hidden; overflow-y: auto; max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px); }
+.html-table[scrollable="y"] table { display: table !important; }
 /* th-sticky */
 .html-table[scrollable][th-sticky] thead th:first-child {
-	position: sticky;
-	left: -1px;
+	position: sticky; top:-1px; left: -1px;
 	z-index: 999;
 }
 .html-table[scrollable][th-sticky] thead th {
-	position: sticky;
-	top: -1px;
+	position: sticky; top: -1px;
 	z-index: 998;
 }
 .html-table[scrollable][th-sticky] tbody th {
-	position: sticky;
-	left: -1px;
+	position: sticky; left: -1px;
 	z-index: 997;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Dec 04 2024 05:29:11 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Dec 05 2024 06:53:17 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -637,7 +637,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [white-space="nowrap"] {
               white-space: nowrap;
             }
-            [text-overflow="ellipsis"] {
+            [truncate] {
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
@@ -1899,7 +1899,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sup,
             h3 sup,
             h4 sup {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.65em;
               margin-right: -0.925em;
             }
@@ -1907,7 +1907,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sub,
             h3 sub,
             h4 sub {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.85em;
               margin-right: -0.925em;
             }
@@ -2003,7 +2003,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             /* scrollable html-table */
             .html-table[scrollable] {
-              overflow: auto !important;
+              overflow: auto;
             }
             .html-table[scrollable] table {
               display: block !important;
@@ -2036,9 +2036,25 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .html-table[scrollable]::-webkit-scrollbar-thumb {
               background-color: transparent;
             }
+            .html-table[scrollable="x"] {
+              overflow-x: auto;
+              overflow-y: hidden;
+            }
+            .html-table[scrollable="x"] table {
+              max-height: none;
+            }
+            .html-table[scrollable="y"] {
+              overflow-x: hidden;
+              overflow-y: auto;
+              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
+            }
+            .html-table[scrollable="y"] table {
+              display: table !important;
+            }
             /* th-sticky */
             .html-table[scrollable][th-sticky] thead th:first-child {
               position: sticky;
+              top: -1px;
               left: -1px;
               z-index: 999;
             }
@@ -2937,214 +2953,216 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 <div class="box-label">
                   <div>Title Layouts</div>
                 </div>
-                <div demo-expand="" overflow-y="auto" p-2="true" class="s2-demo-box cc-max-80svh">
-                  <div mb="2" gap="3-2" class="grid-cols">
-                    <header class="title-layout">
-                      <div class="title-wrapper">
-                        <div class="title-wrapper cc-sm">
-                          <h2 class="title-heading cc-xl">Our services and capabilities</h2>
-                        </div>
+                <div demo-expand="" overflow-y="auto" class="s2-demo-box cc-max-80svh">
+                  <div p-1="" class="block">
+                    <div mb="2" gap="3-2" class="grid-cols">
+                      <header class="title-layout">
                         <div class="title-wrapper">
-                          <div class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          <div class="title-wrapper cc-sm">
+                            <h2 class="title-heading cc-xl">Our services and capabilities</h2>
+                          </div>
+                          <div class="title-wrapper">
+                            <div class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper cc-sm">
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper cc-sm">
-                          <h2 class="title-heading cc-lg">Our services and capabilities</h2>
+                          <div class="title-wrapper cc-sm">
+                            <h2 class="title-heading cc-lg">Our services and capabilities</h2>
+                          </div>
+                          <div class="title-wrapper">
+                            <div class="title-message cc-sm">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          </div>
                         </div>
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper">
-                          <div class="title-message cc-sm">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          <div class="title-wrapper cc-sm">
+                            <div class="title-eyebrow">Unleash potentials</div>
+                          </div>
+                          <div class="title-wrapper">
+                            <h2 class="title-message cc-sm">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</h2>
+                          </div>
                         </div>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper">
-                        <div class="title-wrapper cc-sm">
-                          <div class="title-eyebrow">Unleash potentials</div>
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper">
-                          <h2 class="title-message cc-sm">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</h2>
+                          <div class="title-wrapper cc-sm">
+                            <div class="title-eyebrow">Unleash potentials</div>
+                          </div>
+                          <div class="title-wrapper">
+                            <h2 class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</h2>
+                          </div>
                         </div>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper">
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper cc-sm">
-                          <div class="title-eyebrow">Unleash potentials</div>
+                          <h2 class="title-heading">About our company</h2>
                         </div>
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper">
-                          <h2 class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</h2>
+                          <h2 class="title-heading cc-lg">Recruitment of IT professionals in the region</h2>
                         </div>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper cc-sm">
-                        <h2 class="title-heading">About our company</h2>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper">
-                        <h2 class="title-heading cc-lg">Recruitment of IT professionals in the region</h2>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper">
-                        <div class="title-wrapper cc-sm">
-                          <h2 class="title-heading cc-lg">Our Executives</h2>
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper">
-                          <div class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          <div class="title-wrapper cc-sm">
+                            <h2 class="title-heading cc-lg">Our Executives</h2>
+                          </div>
+                          <div class="title-wrapper">
+                            <div class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper cc-sm">
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        </div>
+                      </header>
+                      <header class="title-layout">
                         <div class="title-wrapper cc-sm">
-                          <h2 class="title-heading cc-lg">Our Management</h2>
+                          <div class="title-wrapper cc-sm">
+                            <h2 class="title-heading cc-lg">Our Management</h2>
+                          </div>
+                          <div class="title-wrapper">
+                            <div class="title-message cc-xs">The best team in the industry.</div>
+                          </div>
                         </div>
-                        <div class="title-wrapper">
-                          <div class="title-message cc-xs">The best team in the industry.</div>
+                        <div class="text-wrapper">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
-                      </div>
-                      <div class="text-wrapper">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper cc-align-center">
-                        <div class="title-wrapper cc-xs">
-                          <h2 class="title-heading cc-lg">Value</h2>
+                      </header>
+                      <header class="title-layout">
+                        <div class="title-wrapper cc-align-center">
+                          <div class="title-wrapper cc-xs">
+                            <h2 class="title-heading cc-lg">Value</h2>
+                          </div>
+                          <div class="title-wrapper cc-xs">
+                            <div class="title-message cc-xs">Our value guides our businesses</div>
+                          </div>
                         </div>
-                        <div class="title-wrapper cc-xs">
-                          <div class="title-message cc-xs">Our value guides our businesses</div>
+                        <div class="text-wrapper cc-align-center">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
-                      </div>
-                      <div class="text-wrapper cc-align-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                    <header class="title-layout">
-                      <div class="title-wrapper cc-align-center">
-                        <div class="title-wrapper cc-sm">
-                          <div color="text" class="title-eyebrow">Lorem ipsum dolor sit amet</div>
+                      </header>
+                      <header class="title-layout">
+                        <div class="title-wrapper cc-align-center">
+                          <div class="title-wrapper cc-sm">
+                            <div color="text" class="title-eyebrow">Lorem ipsum dolor sit amet</div>
+                          </div>
+                          <div class="title-wrapper cc-xs">
+                            <h2 class="title-heading cc-lg">Flexible workforce solutions for sustainable business success</h2>
+                          </div>
                         </div>
-                        <div class="title-wrapper cc-xs">
-                          <h2 class="title-heading cc-lg">Flexible workforce solutions for sustainable business success</h2>
+                        <div class="text-wrapper cc-align-center">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
-                      </div>
-                      <div class="text-wrapper cc-align-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
-                      </div>
-                    </header>
-                  </div>
-                  <div class="card">
-                    <div class="title-wrapper">
-                      <h3>Elements of Title Sets</h3>
+                      </header>
                     </div>
-                    <div gap="1-1" class="flex-cols">
-                      <div class="col cc-in-flex cc-p-0">
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-heading</div>
-                            </div>
-                          </div>
-                          <h2 class="title-heading">Flexible workforce solutions for sustainable business success</h2>
-                        </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-heading</div>
-                              <div class="css-tag">cc-lg</div>
-                            </div>
-                          </div>
-                          <h2 class="title-heading cc-lg">Flexible workforce solutions for sustainable business success</h2>
-                        </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-heading</div>
-                              <div class="css-tag">cc-xl</div>
-                            </div>
-                          </div>
-                          <h2 class="title-heading cc-xl">Flexible workforce solutions</h2>
-                        </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-heading</div>
-                              <div class="css-tag">cc-2xl</div>
-                            </div>
-                          </div>
-                          <h2 class="title-heading cc-2xl">Flexible workforce solutions</h2>
-                        </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-heading</div>
-                              <div class="css-tag">cc-3xl</div>
-                            </div>
-                          </div>
-                          <h2 class="title-heading cc-3xl">Flexible workforce solutions</h2>
-                        </div>
+                    <div class="card">
+                      <div class="title-wrapper">
+                        <h3>Elements of Title Sets</h3>
                       </div>
-                      <div class="col cc-in-flex cc-p-0">
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-message</div>
+                      <div gap="1-1" class="flex-cols">
+                        <div class="col cc-in-flex cc-p-0">
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-heading</div>
+                              </div>
                             </div>
+                            <h2 class="title-heading">Flexible workforce solutions for sustainable business success</h2>
                           </div>
-                          <div class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-heading</div>
+                                <div class="css-tag">cc-lg</div>
+                              </div>
+                            </div>
+                            <h2 class="title-heading cc-lg">Flexible workforce solutions for sustainable business success</h2>
+                          </div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-heading</div>
+                                <div class="css-tag">cc-xl</div>
+                              </div>
+                            </div>
+                            <h2 class="title-heading cc-xl">Flexible workforce solutions</h2>
+                          </div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-heading</div>
+                                <div class="css-tag">cc-2xl</div>
+                              </div>
+                            </div>
+                            <h2 class="title-heading cc-2xl">Flexible workforce solutions</h2>
+                          </div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-heading</div>
+                                <div class="css-tag">cc-3xl</div>
+                              </div>
+                            </div>
+                            <h2 class="title-heading cc-3xl">Flexible workforce solutions</h2>
+                          </div>
                         </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-message</div>
-                              <div class="css-tag">cc-sm</div>
+                        <div class="col cc-in-flex cc-p-0">
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-message</div>
+                              </div>
                             </div>
+                            <div class="title-message">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
                           </div>
-                          <div class="title-message cc-sm">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
-                        </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-message</div>
-                              <div class="css-tag">cc-xs</div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-message</div>
+                                <div class="css-tag">cc-sm</div>
+                              </div>
                             </div>
+                            <div class="title-message cc-sm">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
                           </div>
-                          <div class="title-message cc-xs">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
-                        </div>
-                        <div class="sg-element cc-block">
-                          <div class="sg-tags">
-                            <div class="tag-wrapper">
-                              <div class="css-tag">title-eyebrow</div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-message</div>
+                                <div class="css-tag">cc-xs</div>
+                              </div>
                             </div>
+                            <div class="title-message cc-xs">Lorem ipsum dolor sit elit adipiscing diam libero vitae erat.</div>
                           </div>
-                          <div class="title-eyebrow">Lorem ipsum dolor sit amet</div>
+                          <div class="sg-element cc-block">
+                            <div class="sg-tags">
+                              <div class="tag-wrapper">
+                                <div class="css-tag">title-eyebrow</div>
+                              </div>
+                            </div>
+                            <div class="title-eyebrow">Lorem ipsum dolor sit amet</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3168,7 +3186,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         <div class="hero-inner">
                           <div text-shadow="" class="title-layout">
                             <div class="title-wrapper cc-lg">
-                              <h1 color="white" class="title-heading cc-3xl">WritePad <sup>TM</sup></h1>
+                              <h1 color="white" class="title-heading cc-3xl">WritePal</h1>
                             </div>
                             <div class="text-wrapper">
                               <div class="title-message cc-sm">The last writing app you&#x27;ll ever need.</div>

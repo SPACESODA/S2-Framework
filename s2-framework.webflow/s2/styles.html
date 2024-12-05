@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Dec 04 2024 05:29:11 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Dec 05 2024 06:53:17 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -518,7 +518,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [white-space="nowrap"] {
               white-space: nowrap;
             }
-            [text-overflow="ellipsis"] {
+            [truncate] {
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
@@ -1780,7 +1780,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sup,
             h3 sup,
             h4 sup {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.65em;
               margin-right: -0.925em;
             }
@@ -1788,7 +1788,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sub,
             h3 sub,
             h4 sub {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.85em;
               margin-right: -0.925em;
             }
@@ -1884,7 +1884,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             /* scrollable html-table */
             .html-table[scrollable] {
-              overflow: auto !important;
+              overflow: auto;
             }
             .html-table[scrollable] table {
               display: block !important;
@@ -1917,9 +1917,25 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .html-table[scrollable]::-webkit-scrollbar-thumb {
               background-color: transparent;
             }
+            .html-table[scrollable="x"] {
+              overflow-x: auto;
+              overflow-y: hidden;
+            }
+            .html-table[scrollable="x"] table {
+              max-height: none;
+            }
+            .html-table[scrollable="y"] {
+              overflow-x: hidden;
+              overflow-y: auto;
+              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
+            }
+            .html-table[scrollable="y"] table {
+              display: table !important;
+            }
             /* th-sticky */
             .html-table[scrollable][th-sticky] thead th:first-child {
               position: sticky;
+              top: -1px;
               left: -1px;
               z-index: 999;
             }
@@ -3174,7 +3190,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         <h5>S2 <sup>version</sup> Framework <sub>version</sub> Title</h5>
                       </div>
                       <div class="text-wrapper">
-                        <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur adipiscing elit. Suspendisse<sup>varius enim</sup> in eros elementum tristique. Duis cursus, mi quis viverra<sub>ornare</sub>, eros dolor<sub>interdum nulla</sub>.</p>
+                        <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur adipiscing elit. Suspendisse<sup>varius enim</sup> in eros elementum tristique. Duis cursus, mi quis viverra<sub>ornare</sub>, eros dolor.</p>
                       </div>
                     </div>
                   </div>
@@ -3182,14 +3198,16 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="css-tag">code-block</div>
+                        <div class="sg-note">wrapped with <span class="css-tag">block</span> <span class="css-tag">cc-full</span> as it needs a wrapper with width value</div>
                       </div>
                     </div>
                     <div class="block">
-                      <div style="width: 30rem; max-width: 50vw;" class="block">
-                        <pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum eget dolor aenean massa.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
-</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
+                      <div class="block cc-full">
+                        <pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Aenean commodo ligula.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum eget dolor aenean massa.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+</span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">5</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum eget dolor massa.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
                       </div>
                     </div>
                   </div>
@@ -4430,12 +4448,15 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag cc-attribute">text-overflow=&quot;ellipsis&quot;</div>
+                          <div class="css-tag cc-attribute">truncate</div>
+                          <div class="sg-note">wrapped with <span class="css-tag">block</span> <span class="css-tag">cc-full</span> as it needs a wrapper with width value</div>
                         </div>
                       </div>
                       <div class="block">
-                        <div style="width: 30rem; max-width: 50vw;" class="card">
-                          <div text-overflow="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                        <div class="card">
+                          <div class="block cc-full">
+                            <div truncate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4666,17 +4687,17 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="flex-cols">
                         <div style="padding: 0 1rem;" class="col cc-in-flex">
                           <div stroke="" class="u-bg-pattern">
-                            <div class="u-height-100vh"></div>
+                            <div class="u-height-100vh">100vh</div>
                           </div>
                         </div>
                         <div style="padding: 0 1rem;" class="col cc-in-flex">
                           <div stroke="" class="u-bg-pattern">
-                            <div class="u-height-100dvh"></div>
+                            <div class="u-height-100dvh">100dvh</div>
                           </div>
                         </div>
                         <div style="padding: 0 1rem;" class="col cc-in-flex">
                           <div stroke="" class="u-bg-pattern">
-                            <div class="u-height-100svh"></div>
+                            <div class="u-height-100svh">100svh</div>
                           </div>
                         </div>
                       </div>

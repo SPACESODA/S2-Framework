@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Dec 04 2024 05:29:11 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Dec 05 2024 06:53:17 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -550,7 +550,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [white-space="nowrap"] {
               white-space: nowrap;
             }
-            [text-overflow="ellipsis"] {
+            [truncate] {
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
@@ -1812,7 +1812,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sup,
             h3 sup,
             h4 sup {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.65em;
               margin-right: -0.925em;
             }
@@ -1820,7 +1820,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             h2 sub,
             h3 sub,
             h4 sub {
-              left: -0.625em;
+              left: -0.725em;
               top: -0.85em;
               margin-right: -0.925em;
             }
@@ -1916,7 +1916,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             /* scrollable html-table */
             .html-table[scrollable] {
-              overflow: auto !important;
+              overflow: auto;
             }
             .html-table[scrollable] table {
               display: block !important;
@@ -1949,9 +1949,25 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .html-table[scrollable]::-webkit-scrollbar-thumb {
               background-color: transparent;
             }
+            .html-table[scrollable="x"] {
+              overflow-x: auto;
+              overflow-y: hidden;
+            }
+            .html-table[scrollable="x"] table {
+              max-height: none;
+            }
+            .html-table[scrollable="y"] {
+              overflow-x: hidden;
+              overflow-y: auto;
+              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
+            }
+            .html-table[scrollable="y"] table {
+              display: table !important;
+            }
             /* th-sticky */
             .html-table[scrollable][th-sticky] thead th:first-child {
               position: sticky;
+              top: -1px;
               left: -1px;
               z-index: 999;
             }
