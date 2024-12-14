@@ -517,7 +517,7 @@ figcaption {
   grid-column: 3 / span 8;
 }
 
-.css, ._01_framework, ._02_css-animations, ._03_modes, ._04_custom, .css_page, .u-hide {
+.css, .js, ._01_framework, ._02_css-animations, ._03_modes, ._04_custom, .css_page, .u-hide {
   display: none;
 }
 
@@ -890,6 +890,7 @@ figcaption {
   color: var(--palette-brand--on500);
   text-align: center;
   text-shadow: none;
+  flex: none;
   justify-content: center;
   align-items: center;
   min-width: 6rem;
@@ -967,7 +968,7 @@ figcaption {
   padding: 0;
 }
 
-.icon.cc-0_75em {
+.icon.cc-0-75em {
   width: .75em;
   height: .75em;
 }
@@ -977,7 +978,7 @@ figcaption {
   height: 1em;
 }
 
-.icon.cc-1_5em {
+.icon.cc-1-5em {
   width: 1.5em;
   height: 1.5em;
 }
@@ -997,7 +998,7 @@ figcaption {
   height: 4em;
 }
 
-.icon.cc-0_75rem {
+.icon.cc-0-75rem {
   width: .75rem;
   height: .75rem;
 }
@@ -1012,7 +1013,7 @@ figcaption {
   height: 1.125rem;
 }
 
-.icon.cc-1_5rem {
+.icon.cc-1-5rem {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -1032,7 +1033,7 @@ figcaption {
   height: 4rem;
 }
 
-.icon.cc-image-0_75rem {
+.icon.cc-image-0-75rem {
   aspect-ratio: auto;
   object-fit: contain;
   object-position: 50% 50%;
@@ -1056,7 +1057,7 @@ figcaption {
   height: 1.125rem;
 }
 
-.icon.cc-image-1_5rem {
+.icon.cc-image-1-5rem {
   aspect-ratio: auto;
   object-fit: contain;
   object-position: 50% 50%;
@@ -1424,6 +1425,10 @@ figcaption {
   padding: 2.5rem 2rem;
   display: flex;
   position: relative;
+}
+
+.card.cc-p-1 {
+  padding: 1rem;
 }
 
 .utility-page-wrapper {
@@ -3704,7 +3709,7 @@ figcaption {
 .sg-grid-scroll {
   padding-top: 0;
   padding-right: var(--container--base-padding);
-  padding-bottom: 1.25rem;
+  padding-bottom: 0;
   padding-left: var(--container--base-padding);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -4107,8 +4112,6 @@ figcaption {
   border: 1px solid #0000;
   outline-width: 0;
   outline-style: none;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
   padding: 1rem 1rem .875rem;
   line-height: 1.5;
 }
@@ -4621,7 +4624,7 @@ figcaption {
   transition-timing-function: ease;
   display: flex;
   position: fixed;
-  inset: auto 1.5rem 1.25rem auto;
+  inset: auto 1.25rem 1.25rem auto;
   overflow: hidden;
   box-shadow: 0 .125rem .5rem #00000026;
 }
@@ -4676,13 +4679,13 @@ figcaption {
   padding-bottom: .175rem;
   padding-right: .5rem;
   font-weight: 700;
-  line-height: 1.625;
+  line-height: 1.5;
   display: inline-flex;
 }
 
 .accordion_title.cc-style-01 {
   font-size: var(--font-size--text-extra-large);
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .accordion_content-row {
@@ -5154,13 +5157,12 @@ figcaption {
 }
 
 .info {
-  grid-column-gap: .75em;
+  grid-column-gap: 1ch;
   grid-row-gap: 0em;
   flex-flow: row;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 1.5rem;
   display: flex;
 }
 
@@ -5204,20 +5206,26 @@ figcaption {
 }
 
 .tag {
+  grid-column-gap: .35em;
+  grid-row-gap: .35em;
   border-radius: var(--radius--rounded);
   background-color: var(--colors--surface-muted);
   box-shadow: 0 0 0 1px var(--colors--stroke);
   font-size: var(--font-size--text-extra-small);
   text-align: center;
   white-space: nowrap;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
   min-width: 2em;
+  max-height: 1.725em;
   margin-left: .375em;
-  padding: .25em .4rem .225rem .375rem;
+  padding: .275em .45em .25em;
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
-  display: inline-block;
-  transform: translate(0, -.15em);
+  display: inline-flex;
 }
 
 .dot {
@@ -5373,9 +5381,8 @@ figcaption {
 }
 
 .sg-group {
-  margin-bottom: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .sg-element {
@@ -5686,7 +5693,6 @@ figcaption {
   grid-row-gap: .25rem;
   border-radius: var(--radius--rounded);
   background-color: var(--colors--surface-muted);
-  opacity: .8;
   flex: none;
   justify-content: center;
   align-items: center;
@@ -5745,6 +5751,12 @@ figcaption {
 
 .pill.cc-status {
   background-color: var(--colors--surface);
+}
+
+.sg-anchor {
+  max-height: 0;
+  position: absolute;
+  inset: -6.5rem 0% auto;
 }
 
 @media screen and (max-width: 991px) {
@@ -6183,6 +6195,10 @@ figcaption {
   .sg-padding.cc-container {
     width: var(--container--tablet-padding);
   }
+
+  .sg-anchor {
+    top: -6rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6358,13 +6374,16 @@ figcaption {
   }
 
   .col.cc-aside-col.cc-on-left {
+    padding-top: 0;
     padding-right: var(--container--landscape-padding);
-    padding-bottom: 0;
+    order: 1;
+    padding-bottom: 2rem;
   }
 
   .col.cc-aside-col.cc-on-right {
     padding-top: 0;
     padding-left: var(--container--landscape-padding);
+    order: 1;
   }
 
   .col.cc-aside-col.cc-on-left-lg {
@@ -6444,10 +6463,6 @@ figcaption {
 
   .grid-table_cell.cc-c, .grid-table_cell.cc-rth {
     padding-left: .5rem;
-  }
-
-  .message {
-    margin-bottom: 1.25rem;
   }
 
   .sg-bg-col {
@@ -6580,10 +6595,6 @@ figcaption {
     font-weight: 400;
   }
 
-  .info {
-    margin-bottom: 1.25rem;
-  }
-
   .block {
     width: 100%;
   }
@@ -6600,11 +6611,15 @@ figcaption {
     margin-left: 8vw;
     margin-right: 8vw;
   }
+
+  .sg-anchor {
+    top: -5.5rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
   h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 
   h2 {
@@ -6680,7 +6695,7 @@ figcaption {
   }
 
   .h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 
   .h2 {
@@ -6924,6 +6939,10 @@ figcaption {
     font-size: 1.13rem;
   }
 
+  .scroll-to-top {
+    right: var(--container--mobile-padding);
+  }
+
   .scroll-to-top_icon {
     width: 1rem;
     height: 1rem;
@@ -6977,6 +6996,10 @@ figcaption {
   .mode-switch_button {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sg-anchor {
+    top: -5rem;
   }
 }
 

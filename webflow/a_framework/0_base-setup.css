@@ -18,6 +18,7 @@ img, video { height: auto; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 .w-form { margin-bottom: 0; }
+.w-input, .w-select { color: inherit; font-size: inherit; }
 .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child { margin-top: 0 !important; }
 .w-richtext > :last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child { margin-bottom: 0 !important; }
 .w-richtext figure div { display: block !important; }

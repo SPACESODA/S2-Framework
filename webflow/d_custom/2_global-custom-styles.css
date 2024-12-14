@@ -6,6 +6,12 @@
 html:not(.wf-design-mode) ::selection { background: var(--colors--brand); color: #fff; }
 body * { text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem); }
 
+/* main-nav_button */
+.main-nav_button path { transition: transform 300ms ease; transform-origin: center; }
+.main-nav_button path { transform: translateY(-8%) rotate(-45deg); }
+.main-nav_button path:last-child { transform: translateY(11%) rotate(45deg); }
+.main-nav_button.w--open path { transform: translateY(0%) rotate(0deg); }
+
 /* other styles */
 .richtext-list ul li::before {
 	position: absolute;

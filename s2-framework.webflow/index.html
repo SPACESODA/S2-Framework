@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Dec 05 2024 06:53:17 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Dec 14 2024 15:18:00 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -273,6 +273,11 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
             .w-form {
               margin-bottom: 0;
+            }
+            .w-input,
+            .w-select {
+              color: inherit;
+              font-size: inherit;
             }
             .w-richtext> :not(div):first-child,
             .w-richtext>div:first-child> :first-child {
@@ -1066,65 +1071,35 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             [ml="word"] {
               margin-left: 0.35em;
             }
-            [m-block="0"] {
-              margin-block: 0;
+            [ms="0"] {
+              margin-inline-start: 0;
             }
-            [m-block="1-0"] {
-              margin-block: 1rem 0;
+            [ms="0.5"] {
+              margin-inline-start: 0.5rem;
             }
-            [m-block="0-1"] {
-              margin-block: 0 1rem;
+            [ms="1"] {
+              margin-inline-start: 1rem;
             }
-            [m-block="1"] {
-              margin-block: 1rem;
+            [ms="1ch"] {
+              margin-inline-start: 1ch;
             }
-            [m-block-s="sm"] {
-              margin-block-start: 0.75em;
-            }
-            [m-block-e="sm"] {
-              margin-block-end: 0.75em;
-            }
-            [m-block-s="auto"] {
-              margin-block-start: auto;
-            }
-            [m-block-e="auto"] {
-              margin-block-end: auto;
-            }
-            [m-block-s="100p"] {
-              margin-block-start: 100%;
-            }
-            [m-block-e="100p"] {
-              margin-block-end: 100%;
-            }
-            [m-inline="0"] {
-              margin-inline: 0;
-            }
-            [m-inline="1-0"] {
-              margin-inline: 1rem 0;
-            }
-            [m-inline="0-1"] {
-              margin-inline: 0 1rem;
-            }
-            [m-inline="1"] {
-              margin-inline: 1rem;
-            }
-            [m-inline-s="sm"] {
-              margin-inline-start: 0.75em;
-            }
-            [m-inline-e="sm"] {
-              margin-inline-end: 0.75em;
-            }
-            [m-inline-s="auto"] {
+            [ms="auto"] {
               margin-inline-start: auto;
             }
-            [m-inline-e="auto"] {
+            [me="0"] {
+              margin-inline-end: 0;
+            }
+            [me="0.5"] {
+              margin-inline-end: 0.5rem;
+            }
+            [me="1"] {
+              margin-inline-end: 1rem;
+            }
+            [me="1ch"] {
+              margin-inline-end: 1ch;
+            }
+            [me="auto"] {
               margin-inline-end: auto;
-            }
-            [m-inline-s="100p"] {
-              margin-inline-start: 100%;
-            }
-            [m-inline-e="100p"] {
-              margin-inline-end: 100%;
             }
             /* flex, grid, wrap, gap, place- related */
             [block] {
@@ -1790,33 +1765,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             /* --------------------- */
             /* -- (3) S2 Defaults -- */
             /* --------------------- */
-            /* light and dark elements */
-            .u-bg-dark,
-            [bg="dark"] {
-              background-color: var(--colors-dark--surface);
-              color: var(--colors-dark--text);
-            }
-            .u-bg-light,
-            [bg="light"] {
-              background-color: var(--colors-light--surface);
-              color: var(--colors-light--text);
-            }
-            /* main-nav_button */
-            .main-nav_button path {
-              transition-property: transform;
-              transition-duration: 300ms;
-              transition-timing-function: ease;
-              transform-origin: 50% 50%;
-            }
-            .main-nav_button path {
-              transform: translateY(-8%) rotate(-45deg);
-            }
-            .main-nav_button path:last-child {
-              transform: translateY(11%) rotate(45deg);
-            }
-            .main-nav_button.w--open path {
-              transform: translateY(0%) rotate(0deg);
-            }
             /* better sup and sub on headings */
             h1 sup,
             h2 sup,
@@ -2153,6 +2101,17 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             /* ---------------------- */
             /* -- Color Conversion -- */
             /* ---------------------- */
+            /* light and dark elements */
+            .u-bg-dark,
+            [bg="dark"] {
+              background-color: var(--colors-dark--surface);
+              color: var(--colors-dark--text);
+            }
+            .u-bg-light,
+            [bg="light"] {
+              background-color: var(--colors-light--surface);
+              color: var(--colors-light--text);
+            }
             /* conversions of "Colors" variables */
             /* "Dark" mode */
             [theme="dark"],
@@ -2297,6 +2256,20 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             body * {
               text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
+            /* main-nav_button */
+            .main-nav_button path {
+              transition: transform 300ms ease;
+              transform-origin: center;
+            }
+            .main-nav_button path {
+              transform: translateY(-8%) rotate(-45deg);
+            }
+            .main-nav_button path:last-child {
+              transform: translateY(11%) rotate(45deg);
+            }
+            .main-nav_button.w--open path {
+              transform: translateY(0%) rotate(0deg);
+            }
             /* other styles */
             .richtext-list ul li::before {
               position: absolute;
@@ -2359,7 +2332,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <header class="title-layout">
             <div class="title-wrapper cc-align-center">
               <div data-nosnippet="" class="tag-wrapper">
-                <div data-nosnippet="true" gradient="3" class="code-tag">v1.9.5 beta</div>
+                <div data-nosnippet="true" gradient="3" class="code-tag">v1.9.9 beta</div>
               </div>
               <div class="title-wrapper cc-xl">
                 <div text-uppercase="" color="text" font-size="sm" class="title-eyebrow">The best Webflow Framework</div>
@@ -2456,36 +2429,6 @@ Result: "https://example.com?key=value#section"
         });
       }
       document.addEventListener("DOMContentLoaded", updateAnchorHrefs);
-    </script>
-  <!--  Repeat Elements  -->
-  <!--  Example: [data-repeat="x6"]  -->
-  <script>
-      document.querySelectorAll("[data-repeat]").forEach(function(element) {
-        const repeatCount = parseInt(element.getAttribute("data-repeat")?.substring(1));
-        if (isNaN(repeatCount) || repeatCount < 1) return; // skip if repeat count is invalid
-        for (let i = 1; i < repeatCount; i++) {
-          const clone = element.cloneNode(true);
-          element.parentNode.insertBefore(clone, element.nextSibling);
-        }
-      });
-    </script>
-  <!--  Hiding and Showing of the .scroll-to-top Element  -->
-  <script>
-      var scrollTargets = document.getElementsByClassName("scroll-to-top");
-      if (scrollTargets.length > 0) { // only add scroll listener if elements exist
-        var scrollFunc = function() {
-          var y = window.scrollY;
-          var threshold = 1.25 * window.innerHeight;
-          for (var i = 0; i < scrollTargets.length; i++) {
-            if (y >= threshold) {
-              scrollTargets[i].setAttribute("opacity", "1");
-            } else {
-              scrollTargets[i].setAttribute("opacity", "0-events-none");
-            }
-          }
-        };
-        window.addEventListener("scroll", scrollFunc);
-      }
     </script>
   <!--  Built with S2 Framework  -->
   <!--  https://s2-framework.webflow.io  -->

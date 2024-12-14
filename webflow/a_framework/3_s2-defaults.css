@@ -2,21 +2,6 @@
 /* -- (3) S2 Defaults -- */
 /* --------------------- */
 
-/* light and dark elements */
-.u-bg-dark, [bg="dark"] { background-color: var(--colors-dark--surface); color: var(--colors-dark--text); }
-.u-bg-light, [bg="light"] { background-color: var(--colors-light--surface); color: var(--colors-light--text); }
-
-/* main-nav_button */
-.main-nav_button path {
-	transition-property: transform;
-	transition-duration: 300ms;
-	transition-timing-function: ease;
-	transform-origin: 50% 50%;
-}
-.main-nav_button path { transform: translateY(-8%) rotate(-45deg); }
-.main-nav_button path:last-child { transform: translateY(11%) rotate(45deg); }
-.main-nav_button.w--open path { transform: translateY(0%) rotate(0deg); }
-
 /* better sup and sub on headings */
 h1 sup, h2 sup, h3 sup, h4 sup {
 	left: -0.725em;

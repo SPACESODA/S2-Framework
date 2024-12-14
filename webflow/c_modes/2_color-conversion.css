@@ -2,6 +2,10 @@
 /* -- Color Conversion -- */
 /* ---------------------- */
 
+/* light and dark elements */
+.u-bg-dark, [bg="dark"] { background-color: var(--colors-dark--surface); color: var(--colors-dark--text); }
+.u-bg-light, [bg="light"] { background-color: var(--colors-light--surface); color: var(--colors-light--text); }
+
 /* conversions of "Colors" variables */
 /* "Dark" mode */
 [theme="dark"], .cc-dark-mode,
