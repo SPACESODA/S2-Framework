@@ -1,0 +1,128 @@
+/* ------------------------------ */
+/* -- (2) S2 Colors & Palettes -- */
+/* ------------------------------ */
+
+/* inherit */
+[color="inherit"] { color: inherit; }
+[color="inherit-all"] *, .inherit-color * { color: inherit; }
+[bg="inherit"] { background-color: inherit; }
+[bg="inherit-all"] *, .inherit-bg-color * { background-color: inherit; }
+
+/* transparent, none */
+[color="transparent"] { color: transparent; }
+[bg="transparent"] { background-color: transparent; }
+[bg="none"] { background-color: transparent; background-image: none; }
+[border="transparent"] { border-color: transparent; }
+[border="none"] { border: none; }
+[shadow="none"] { box-shadow: none; }
+[outline="none"] { outline: none; }
+
+/* -- Use of "Colors" Variables as Attributes -- */
+
+/* color */
+[color="text"] { color: var(--colors--text); }
+[color="text-mu"] { color: var(--colors--text-muted); }
+[color="brand"], [color="b"] { color: var(--colors--brand); }
+[color="brand-alt"], [color="ba"] { color: var(--colors--brand-alt); }
+[color="accent"], [color="a"] { color: var(--colors--accent); }
+[color="neutral"], [color="n"] { color: var(--_palettes---neutral--500); } /* neutral 500 */
+/* background-color */
+[bg="surface"] { background-color: var(--colors--surface); }
+[bg="surface-mu"] { background-color: var(--colors--surface-muted); }
+[bg="surface-alt"] { background-color: var(--colors--surface-alt); }
+[bg="surface-alt-mu"] { background-color: var(--colors--surface-alt-muted); }
+[bg="brand"], [bg="b"] { background-color: var(--colors--brand); }
+[bg="brand-alt"], [bg="ba"] { background-color: var(--colors--brand-alt); }
+[bg="accent"], [bg="a"] { background-color: var(--colors--accent); }
+[bg="neutral"], [bg="n"] { background-color: var(--_palettes---neutral--500); } /* neutral 500 */
+[bg="stroke"] { background-color: var(--colors--stroke); }
+/* border-color */
+[border="stroke"] { border-color: var(--colors--stroke); }
+[border="brand"], [border="b"] { border-color: var(--colors--brand); }
+[border="brand-alt"], [border="ba"] { border-color: var(--colors--brand-alt); }
+[border="accent"], [border="a"] { border-color: var(--colors--accent); }
+[border="neutral"], [border="n"] { border-color: var(--_palettes---neutral--500); } /* neutral 500 */
+
+/* -- Use of "Palette" Variables as Attributes -- */
+
+/* brand */
+[bg="b-50"] { background-color: var(--_palettes---brand--50); }
+[bg="b-100"] { background-color: var(--_palettes---brand--100); }
+[bg="b-200"] { background-color: var(--_palettes---brand--200); }
+[bg="b-300"] { background-color: var(--_palettes---brand--300); }
+[bg="b-400"] { background-color: var(--_palettes---brand--400); }
+[bg="b-500"] { background-color: var(--_palettes---brand--500); }
+[bg="b-600"] { background-color: var(--_palettes---brand--600); }
+[bg="b-700"] { background-color: var(--_palettes---brand--700); }
+[bg="b-800"] { background-color: var(--_palettes---brand--800); }
+[bg="b-900"] { background-color: var(--_palettes---brand--900); }
+[bg="b-950"] { background-color: var(--_palettes---brand--950); }
+[bg="b-on300"] { background-color: var(--_palettes---brand--on300); }  [color="b-on300"] { color: var(--_palettes---brand--on300); }
+[bg="b-on500"] { background-color: var(--_palettes---brand--on500); }  [color="b-on500"] { color: var(--_palettes---brand--on500); }
+[bg="b-on700"] { background-color: var(--_palettes---brand--on700); }  [color="b-on700"] { color: var(--_palettes---brand--on700); }
+[bg="b-subtle"] { background-color: var(--_palettes---brand--subtle); }
+/* brand: light, deep */
+[bg="b-light"] { background-color: var(--colors--brand-light); }
+[bg="b-deep"] { background-color: var(--colors--brand-deep); }
+
+/* brand alt */
+[bg="ba-50"] { background-color: var(--_palettes---brand-alt--50); }
+[bg="ba-100"] { background-color: var(--_palettes---brand-alt--100); }
+[bg="ba-200"] { background-color: var(--_palettes---brand-alt--200); }
+[bg="ba-300"] { background-color: var(--_palettes---brand-alt--300); }
+[bg="ba-400"] { background-color: var(--_palettes---brand-alt--400); }
+[bg="ba-500"] { background-color: var(--_palettes---brand-alt--500); }
+[bg="ba-600"] { background-color: var(--_palettes---brand-alt--600); }
+[bg="ba-700"] { background-color: var(--_palettes---brand-alt--700); }
+[bg="ba-800"] { background-color: var(--_palettes---brand-alt--800); }
+[bg="ba-900"] { background-color: var(--_palettes---brand-alt--900); }
+[bg="ba-950"] { background-color: var(--_palettes---brand-alt--950); }
+[bg="ba-on300"] { background-color: var(--_palettes---brand-alt--on300); }  [color="ba-on300"] { color: var(--_palettes---brand-alt--on300); }
+[bg="ba-on500"] { background-color: var(--_palettes---brand-alt--on500); }  [color="ba-on500"] { color: var(--_palettes---brand-alt--on500); }
+[bg="ba-on700"] { background-color: var(--_palettes---brand-alt--on700); }  [color="ba-on700"] { color: var(--_palettes---brand-alt--on700); }
+[bg="ba-subtle"] { background-color: var(--_palettes---brand-alt--subtle); }
+/* brand alt: light, deep */
+[bg="ba-light"] { background-color: var(--_palettes---brand-alt--300); }
+[bg="ba-deep"] { background-color: var(--_palettes---brand-alt--700); }
+
+/* accent */
+[bg="a-50"] { background-color: var(--_palettes---accent--50); }
+[bg="a-100"] { background-color: var(--_palettes---accent--100); }
+[bg="a-200"] { background-color: var(--_palettes---accent--200); }
+[bg="a-300"] { background-color: var(--_palettes---accent--300); }
+[bg="a-400"] { background-color: var(--_palettes---accent--400); }
+[bg="a-500"] { background-color: var(--_palettes---accent--500); }
+[bg="a-600"] { background-color: var(--_palettes---accent--600); }
+[bg="a-700"] { background-color: var(--_palettes---accent--700); }
+[bg="a-800"] { background-color: var(--_palettes---accent--800); }
+[bg="a-900"] { background-color: var(--_palettes---accent--900); }
+[bg="a-950"] { background-color: var(--_palettes---accent--950); }
+[bg="a-on300"] { background-color: var(--_palettes---accent--on300); }  [color="a-on300"] { color: var(--_palettes---accent--on300); }
+[bg="a-on500"] { background-color: var(--_palettes---accent--on500); }  [color="a-on500"] { color: var(--_palettes---accent--on500); }
+[bg="a-on700"] { background-color: var(--_palettes---accent--on700); }  [color="a-on700"] { color: var(--_palettes---accent--on700); }
+[bg="a-subtle"] { background-color: var(--_palettes---accent--subtle); }
+/* accent: light, deep */
+[bg="a-light"] { background-color: var(--_palettes---accent--300); }
+[bg="a-deep"] { background-color: var(--_palettes---accent--700); }
+
+/* neutral */
+[bg="n-50"] { background-color: var(--_palettes---neutral--50); }
+[bg="n-100"] { background-color: var(--_palettes---neutral--100); }
+[bg="n-200"] { background-color: var(--_palettes---neutral--200); }
+[bg="n-300"] { background-color: var(--_palettes---neutral--300); }
+[bg="n-400"] { background-color: var(--_palettes---neutral--400); }
+[bg="n-500"] { background-color: var(--_palettes---neutral--500); }
+[bg="n-600"] { background-color: var(--_palettes---neutral--600); }
+[bg="n-700"] { background-color: var(--_palettes---neutral--700); }
+[bg="n-800"] { background-color: var(--_palettes---neutral--800); }
+[bg="n-900"] { background-color: var(--_palettes---neutral--900); }
+[bg="n-950"] { background-color: var(--_palettes---neutral--950); }
+[bg="n-on300"] { background-color: var(--_palettes---neutral--on300); }  [color="n-on200"] { color: var(--_palettes---neutral--on300); }
+[bg="n-on500"] { background-color: var(--_palettes---neutral--on500); }  [color="n-on500"] { color: var(--_palettes---neutral--on500); }
+[bg="n-on700"] { background-color: var(--_palettes---neutral--on700); }  [color="n-on800"] { color: var(--_palettes---neutral--on700); }
+[bg="n-subtle"] { background-color: var(--_palettes---neutral--subtle); }
+[bg="white"] { background-color: var(--_palettes---neutral--white); }  [color="white"] { color: var(--_palettes---neutral--white); }
+[bg="black"] { background-color: var(--_palettes---neutral--black); }  [color="black"] { color: var(--_palettes---neutral--black); }
+/* neutral: light, deep */
+[bg="n-light"] { background-color: var(--_palettes---neutral--300); }
+[bg="n-deep"] { background-color: var(--_palettes---neutral--700); }

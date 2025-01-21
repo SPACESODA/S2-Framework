@@ -52,7 +52,7 @@ pre.code-block code {
 .html-table {
 	width: 100%;
 	position: relative;
-	margin: 0 0 var(--spacing--richtext) 0;
+	margin: 0 0 var(--_sizes---spacing--richtext) 0;
 }
 .html-table table {
 	width: 100%; height: 100%;

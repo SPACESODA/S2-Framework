@@ -26,9 +26,9 @@ Explore and clone: https://s2-framework.webflow.io
 
 **CDN**
 
-S1 Attributes: <code>https://s2-framework.pages.dev/webflow/a_framework/1_attributes.css</code>
+S1 Attributes: <code>https://s2-framework.pages.dev/webflow/01_framework/1_attributes.css</code>
 
-S2 Colors & Palettes: <code>https://s2-framework.pages.dev/webflow/a_framework/2_colors-palettes.css</code>
+S2 Colors & Palettes: <code>https://s2-framework.pages.dev/webflow/01_framework/2_colors-palettes.css</code>
 
 
 <br><br><br>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Dec 14 2024 15:18:00 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Jan 21 2025 06:28:48 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="666251e9d1151496fe245f26" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -78,80 +78,50 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         });
       });
     </script>
-  <!--  Light / Dark Mode Switching  -->
-  <script>
-      (function() {
-        const THEME_KEY = 'theme';
-        const SYSTEM_THEME = 'system';
-        function isThemeChangeAllowed() {
-          return document.body.getAttribute('theme-change') !== 'false';
-        }
-        function getSystemTheme() {
-          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        function applyTheme(theme, savePreference = true) {
-          if (!isThemeChangeAllowed()) return;
-          const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
-          document.body.setAttribute('theme', actualTheme);
-          if (savePreference) {
-            try {
-              localStorage.setItem(THEME_KEY, theme);
-            } catch (error) {
-              // fail silently if storage is unavailable
-            }
-          }
-        }
-        function getThemePreference() {
-          return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
-        }
-        function initializeTheme() {
-          if (isThemeChangeAllowed()) {
-            const themePreference = getThemePreference();
-            applyTheme(themePreference, false);
-          }
-        }
-        function setupEventListeners() {
-          const buttonSelectors = {
-            'color-mode-system': SYSTEM_THEME,
-            'color-mode-light': 'light',
-            'color-mode-dark': 'dark'
-          };
-          Object.entries(buttonSelectors).forEach(([selector, theme]) => {
-            document.querySelectorAll(`[data-button="${selector}"]`).forEach(button => {
-              button.addEventListener('click', () => applyTheme(theme));
-            });
-          });
-          document.querySelectorAll('[data-toggle="light-dark"]').forEach(function(toggleSwitch) {
-            toggleSwitch.addEventListener('click', function() {
-              const currentTheme = getThemePreference();
-              const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-              applyTheme(newTheme);
-            });
-          });
-        }
-        function onDOMReady() {
-          initializeTheme();
-          setupEventListeners();
-        }
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', onDOMReady);
-        } else {
-          onDOMReady();
-        }
-        if (document.body) {
-          initializeTheme();
-        }
-        window.matchMedia('(prefers-color-scheme: dark)').addListener(function() {
-          if (getThemePreference() === SYSTEM_THEME) {
-            applyTheme(SYSTEM_THEME, false);
-          }
-        });
-      })();
-    </script>
 </head>
-<body theme="">
+<body class="body">
   <div id="top" class="page">
-    <div class="css">
+    <div class="code">
+      <div class="js w-embed w-script"><!--  Inline script to apply Light / Dark Mode (Theme) ASAP  -->
+        <!--  The Mode Switching script is placed in custom "Footer code".  -->
+        <script>
+            (function() {
+              try {
+                const THEME_KEY = "theme";
+                const SYSTEM_THEME = "system";
+                const LIGHT_CLASS = "u-light-mode";
+                const DARK_CLASS = "u-dark-mode";
+                const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
+                // Get system's preferred color scheme
+                function getSystemTheme() {
+                  return window.matchMedia("(prefers-color-scheme: dark)").matches ?
+                    "dark" :
+                    "light";
+                }
+                // Check if theme changes are allowed
+                const themeChangeAllowed =
+                  document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
+                if (themeChangeAllowed) {
+                  // Get user's theme preference from localStorage
+                  const storedTheme = localStorage.getItem(THEME_KEY);
+                  let themePreference = storedTheme || SYSTEM_THEME;
+                  // To apply the theme
+                  const actualTheme =
+                    themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
+                  // Add theme class
+                  if (actualTheme === "dark") {
+                    document.body.classList.add(DARK_CLASS);
+                  } else {
+                    document.body.classList.add(LIGHT_CLASS);
+                  }
+                }
+              } catch (e) {
+                // Log any initialization errors
+                console.warn("Theme initialization error:", e);
+              }
+            })();
+          </script>
+      </div>
       <div code="css" class="_01_framework w-embed">
         <style>
             /* ---------------- */
@@ -250,18 +220,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             /* responsive containers */
             @media (min-width: 80rem) {
               .container.cc-10col {
-                width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--container--base-padding) * 2)));
+                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2)));
               }
               .container.cc-8col {
-                width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--container--base-padding) * 2)));
+                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2)));
               }
               .container.cc-6col {
-                width: min(100%, calc(((var(--container--max-width) - (var(--container--base-padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--container--base-padding) * 2)));
+                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2)));
               }
             }
             /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
-              outline: var(--thickness--outline) solid var(--colors--focus);
+              outline: var(--_sizes---thickness--outline) solid var(--colors--focus);
               outline-offset: 0.188rem;
             }
             section:focus,
@@ -273,11 +243,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [aria-label]:not(input):not(textarea):not(select):focus-visible,
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
-              outline: var(--thickness--outline-bold) solid var(--colors--focus);
+              outline: var(--_sizes---thickness--outline-bold) solid var(--colors--focus);
               outline-offset: 3px;
             }
             [focus-outline="bold"]:focus-visible {
-              outline-width: var(--thickness--outline-bold) !important;
+              outline-width: var(--_sizes---thickness--outline-bold) !important;
             }
             [focus-outline="offset-0"]:focus-visible {
               outline-offset: 0 !important;
@@ -402,56 +372,56 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             [radius="3"] {
               border-radius: 3rem;
             }
-            [radius="button"] {
-              border-radius: var(--radius--button);
-            }
-            [radius="subtle"] {
-              border-radius: var(--radius--subtle);
-            }
-            [radius="card"] {
-              border-radius: var(--radius--card);
+            [radius="xs"] {
+              border-radius: var(--_sizes---radius--extra-small);
             }
             [radius="sm"] {
-              border-radius: var(--radius--small);
+              border-radius: var(--_sizes---radius--small);
             }
-            [radius="md"] {
-              border-radius: var(--radius--medium);
+            [radius="base"] {
+              border-radius: var(--_sizes---radius--base);
             }
             [radius="lg"] {
-              border-radius: var(--radius--large);
+              border-radius: var(--_sizes---radius--large);
             }
             [radius="xl"] {
-              border-radius: var(--radius--extra-large);
+              border-radius: var(--_sizes---radius--extra-large);
             }
             [radius="rounded"] {
-              border-radius: var(--radius--rounded);
+              border-radius: var(--_sizes---radius--rounded);
+            }
+            [radius="card"] {
+              border-radius: var(--_sizes---radius--card);
+            }
+            [radius="button"] {
+              border-radius: var(--_sizes---button--radius);
             }
             [object-fit="cover"] {
               object-fit: cover;
             }
             /* typography */
             [font-size="xs"] {
-              font-size: var(--font-size--text-extra-small);
+              font-size: var(--_text---font-size--extra-small);
               line-height: 1.4;
             }
             /* same as .text-xs */
             [font-size="sm"] {
-              font-size: var(--font-size--text-small);
+              font-size: var(--_text---font-size--small);
               line-height: 1.4;
             }
             /* same as .text-sm */
             [font-size="base"] {
-              font-size: var(--font-size--text-base);
+              font-size: var(--_text---font-size--base);
               line-height: 1.5;
             }
             /* same as .text-base */
             [font-size="lg"] {
-              font-size: var(--font-size--text-large);
+              font-size: var(--_text---font-size--large);
               line-height: 1.5;
             }
             /* same as .text-lg */
             [font-size="xl"] {
-              font-size: var(--font-size--text-extra-large);
+              font-size: var(--_text---font-size--extra-large);
               line-height: 1.5;
             }
             /* same as .text-xl */
@@ -742,13 +712,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               padding-top: 3rem;
             }
             [pt="base"] {
-              padding-top: var(--spacing--base);
+              padding-top: var(--_sizes---spacing--base);
             }
             [pt="sm"] {
-              padding-top: var(--spacing--base-small);
+              padding-top: var(--_sizes---spacing--small);
             }
             [pt="lg"] {
-              padding-top: var(--spacing--base-large);
+              padding-top: var(--_sizes---spacing--large);
             }
             [pb="0"] {
               padding-bottom: 0;
@@ -766,13 +736,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               padding-bottom: 3rem;
             }
             [pb="base"] {
-              padding-bottom: var(--spacing--base);
+              padding-bottom: var(--_sizes---spacing--base);
             }
             [pb="sm"] {
-              padding-bottom: var(--spacing--base-small);
+              padding-bottom: var(--_sizes---spacing--small);
             }
             [pb="lg"] {
-              padding-bottom: var(--spacing--base-large);
+              padding-bottom: var(--_sizes---spacing--large);
             }
             [mt="0"] {
               margin-top: 0;
@@ -790,13 +760,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-top: 3rem;
             }
             [mt="base"] {
-              margin-top: var(--spacing--base);
+              margin-top: var(--_sizes---spacing--base);
             }
             [mt="sm"] {
-              margin-top: var(--spacing--base-small);
+              margin-top: var(--_sizes---spacing--small);
             }
             [mt="lg"] {
-              margin-top: var(--spacing--base-large);
+              margin-top: var(--_sizes---spacing--large);
             }
             [mt="auto"] {
               margin-top: auto;
@@ -817,13 +787,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-bottom: 3rem;
             }
             [mb="base"] {
-              margin-bottom: var(--spacing--base);
+              margin-bottom: var(--_sizes---spacing--base);
             }
             [mb="sm"] {
-              margin-bottom: var(--spacing--base-small);
+              margin-bottom: var(--_sizes---spacing--small);
             }
             [mb="lg"] {
-              margin-bottom: var(--spacing--base-large);
+              margin-bottom: var(--_sizes---spacing--large);
             }
             [mb="auto"] {
               margin-bottom: auto;
@@ -857,120 +827,20 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-bottom: 3rem;
             }
             [top-bottom="base"] {
-              margin-top: var(--spacing--base);
-              margin-bottom: var(--spacing--base);
+              margin-top: var(--_sizes---spacing--base);
+              margin-bottom: var(--_sizes---spacing--base);
             }
             [top-bottom="sm"] {
-              margin-top: var(--spacing--base-small);
-              margin-bottom: var(--spacing--base-small);
+              margin-top: var(--_sizes---spacing--small);
+              margin-bottom: var(--_sizes---spacing--small);
             }
             [top-bottom="lg"] {
-              margin-top: var(--spacing--base-large);
-              margin-bottom: var(--spacing--base-large);
+              margin-top: var(--_sizes---spacing--large);
+              margin-bottom: var(--_sizes---spacing--large);
             }
             [top-bottom="auto"] {
               margin-top: auto;
               margin-bottom: auto;
-            }
-            @media screen and (max-width: 991px) {
-              [pt="base"] {
-                padding-top: var(--spacing--tablet);
-              }
-              [pt="sm"] {
-                padding-top: var(--spacing--tablet-small);
-              }
-              [pt="lg"] {
-                padding-top: var(--spacing--tablet-large);
-              }
-              [pb="base"] {
-                padding-bottom: var(--spacing--tablet);
-              }
-              [pb="sm"] {
-                padding-bottom: var(--spacing--tablet-small);
-              }
-              [pb="lg"] {
-                padding-bottom: var(--spacing--tablet-large);
-              }
-              [mt="base"] {
-                margin-top: var(--spacing--tablet);
-              }
-              [mt="sm"] {
-                margin-top: var(--spacing--tablet-small);
-              }
-              [mt="lg"] {
-                margin-top: var(--spacing--tablet-large);
-              }
-              [mb="base"] {
-                margin-bottom: var(--spacing--tablet);
-              }
-              [mb="sm"] {
-                margin-bottom: var(--spacing--tablet-small);
-              }
-              [mb="lg"] {
-                margin-bottom: var(--spacing--tablet-large);
-              }
-              [top-bottom="base"] {
-                margin-top: var(--spacing--tablet);
-                margin-bottom: var(--spacing--tablet);
-              }
-              [top-bottom="sm"] {
-                margin-top: var(--spacing--tablet-small);
-                margin-bottom: var(--spacing--tablet-small);
-              }
-              [top-bottom="lg"] {
-                margin-top: var(--spacing--tablet-large);
-                margin-bottom: var(--spacing--tablet-large);
-              }
-            }
-            @media screen and (max-width: 479px) {
-              [pt="base"] {
-                padding-top: var(--spacing--mobile);
-              }
-              [pt="sm"] {
-                padding-top: var(--spacing--mobile-small);
-              }
-              [pt="lg"] {
-                padding-top: var(--spacing--mobile-large);
-              }
-              [pb="base"] {
-                padding-bottom: var(--spacing--mobile);
-              }
-              [pb="sm"] {
-                padding-bottom: var(--spacing--mobile-small);
-              }
-              [pb="lg"] {
-                padding-bottom: var(--spacing--mobile-large);
-              }
-              [mt="base"] {
-                margin-top: var(--spacing--mobile);
-              }
-              [mt="sm"] {
-                margin-top: var(--spacing--mobile-small);
-              }
-              [mt="lg"] {
-                margin-top: var(--spacing--mobile-large);
-              }
-              [mb="base"] {
-                margin-bottom: var(--spacing--mobile);
-              }
-              [mb="sm"] {
-                margin-bottom: var(--spacing--mobile-small);
-              }
-              [mb="lg"] {
-                margin-bottom: var(--spacing--mobile-large);
-              }
-              [top-bottom="base"] {
-                margin-top: var(--spacing--mobile);
-                margin-bottom: var(--spacing--mobile);
-              }
-              [top-bottom="sm"] {
-                margin-top: var(--spacing--mobile-small);
-                margin-bottom: var(--spacing--mobile-small);
-              }
-              [top-bottom="lg"] {
-                margin-top: var(--spacing--mobile-large);
-                margin-bottom: var(--spacing--mobile-large);
-              }
             }
             [px="0"] {
               padding-left: 0;
@@ -1049,6 +919,12 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [me="auto"] {
               margin-inline-end: auto;
+            }
+            [flip="h"] {
+              transform: scaleX(-1);
+            }
+            [flip="v"] {
+              transform: scaleY(-1);
             }
             /* flex, grid, wrap, gap, place- related */
             [block] {
@@ -1303,7 +1179,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               text-shadow: none;
             }
             [text-shadow] {
-              text-shadow: 0 0 1rem var(--palette-neutral--palette-black);
+              text-shadow: 0 0 1rem var(--_palettes---neutral--black);
             }
             /* no-scrollbar */
             [no-scrollbar]::-webkit-scrollbar {
@@ -1393,7 +1269,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [color="neutral"],
             [color="n"] {
-              color: var(--palette-neutral--500);
+              color: var(--_palettes---neutral--500);
             }
             /* neutral 500 */
             /* background-color */
@@ -1423,7 +1299,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [bg="neutral"],
             [bg="n"] {
-              background-color: var(--palette-neutral--500);
+              background-color: var(--_palettes---neutral--500);
             }
             /* neutral 500 */
             [bg="stroke"] {
@@ -1447,64 +1323,64 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [border="neutral"],
             [border="n"] {
-              border-color: var(--palette-neutral--500);
+              border-color: var(--_palettes---neutral--500);
             }
             /* neutral 500 */
             /* -- Use of "Palette" Variables as Attributes -- */
             /* brand */
             [bg="b-50"] {
-              background-color: var(--palette-brand--50);
+              background-color: var(--_palettes---brand--50);
             }
             [bg="b-100"] {
-              background-color: var(--palette-brand--100);
+              background-color: var(--_palettes---brand--100);
             }
             [bg="b-200"] {
-              background-color: var(--palette-brand--200);
+              background-color: var(--_palettes---brand--200);
             }
             [bg="b-300"] {
-              background-color: var(--palette-brand--300);
+              background-color: var(--_palettes---brand--300);
             }
             [bg="b-400"] {
-              background-color: var(--palette-brand--400);
+              background-color: var(--_palettes---brand--400);
             }
             [bg="b-500"] {
-              background-color: var(--palette-brand--500);
+              background-color: var(--_palettes---brand--500);
             }
             [bg="b-600"] {
-              background-color: var(--palette-brand--600);
+              background-color: var(--_palettes---brand--600);
             }
             [bg="b-700"] {
-              background-color: var(--palette-brand--700);
+              background-color: var(--_palettes---brand--700);
             }
             [bg="b-800"] {
-              background-color: var(--palette-brand--800);
+              background-color: var(--_palettes---brand--800);
             }
             [bg="b-900"] {
-              background-color: var(--palette-brand--900);
+              background-color: var(--_palettes---brand--900);
             }
             [bg="b-950"] {
-              background-color: var(--palette-brand--950);
+              background-color: var(--_palettes---brand--950);
             }
             [bg="b-on300"] {
-              background-color: var(--palette-brand--on300);
+              background-color: var(--_palettes---brand--on300);
             }
             [color="b-on300"] {
-              color: var(--palette-brand--on300);
+              color: var(--_palettes---brand--on300);
             }
             [bg="b-on500"] {
-              background-color: var(--palette-brand--on500);
+              background-color: var(--_palettes---brand--on500);
             }
             [color="b-on500"] {
-              color: var(--palette-brand--on500);
+              color: var(--_palettes---brand--on500);
             }
             [bg="b-on700"] {
-              background-color: var(--palette-brand--on700);
+              background-color: var(--_palettes---brand--on700);
             }
             [color="b-on700"] {
-              color: var(--palette-brand--on700);
+              color: var(--_palettes---brand--on700);
             }
             [bg="b-subtle"] {
-              background-color: var(--palette-brand--subtle);
+              background-color: var(--_palettes---brand--subtle);
             }
             /* brand: light, deep */
             [bg="b-light"] {
@@ -1515,201 +1391,201 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             /* brand alt */
             [bg="ba-50"] {
-              background-color: var(--palette-brand-alt--50);
+              background-color: var(--_palettes---brand-alt--50);
             }
             [bg="ba-100"] {
-              background-color: var(--palette-brand-alt--100);
+              background-color: var(--_palettes---brand-alt--100);
             }
             [bg="ba-200"] {
-              background-color: var(--palette-brand-alt--200);
+              background-color: var(--_palettes---brand-alt--200);
             }
             [bg="ba-300"] {
-              background-color: var(--palette-brand-alt--300);
+              background-color: var(--_palettes---brand-alt--300);
             }
             [bg="ba-400"] {
-              background-color: var(--palette-brand-alt--400);
+              background-color: var(--_palettes---brand-alt--400);
             }
             [bg="ba-500"] {
-              background-color: var(--palette-brand-alt--500);
+              background-color: var(--_palettes---brand-alt--500);
             }
             [bg="ba-600"] {
-              background-color: var(--palette-brand-alt--600);
+              background-color: var(--_palettes---brand-alt--600);
             }
             [bg="ba-700"] {
-              background-color: var(--palette-brand-alt--700);
+              background-color: var(--_palettes---brand-alt--700);
             }
             [bg="ba-800"] {
-              background-color: var(--palette-brand-alt--800);
+              background-color: var(--_palettes---brand-alt--800);
             }
             [bg="ba-900"] {
-              background-color: var(--palette-brand-alt--900);
+              background-color: var(--_palettes---brand-alt--900);
             }
             [bg="ba-950"] {
-              background-color: var(--palette-brand-alt--950);
+              background-color: var(--_palettes---brand-alt--950);
             }
             [bg="ba-on300"] {
-              background-color: var(--palette-brand-alt--on300);
+              background-color: var(--_palettes---brand-alt--on300);
             }
             [color="ba-on300"] {
-              color: var(--palette-brand-alt--on300);
+              color: var(--_palettes---brand-alt--on300);
             }
             [bg="ba-on500"] {
-              background-color: var(--palette-brand-alt--on500);
+              background-color: var(--_palettes---brand-alt--on500);
             }
             [color="ba-on500"] {
-              color: var(--palette-brand-alt--on500);
+              color: var(--_palettes---brand-alt--on500);
             }
             [bg="ba-on700"] {
-              background-color: var(--palette-brand-alt--on700);
+              background-color: var(--_palettes---brand-alt--on700);
             }
             [color="ba-on700"] {
-              color: var(--palette-brand-alt--on700);
+              color: var(--_palettes---brand-alt--on700);
             }
             [bg="ba-subtle"] {
-              background-color: var(--palette-brand-alt--subtle);
+              background-color: var(--_palettes---brand-alt--subtle);
             }
             /* brand alt: light, deep */
             [bg="ba-light"] {
-              background-color: var(--palette-brand-alt--300);
+              background-color: var(--_palettes---brand-alt--300);
             }
             [bg="ba-deep"] {
-              background-color: var(--palette-brand-alt--700);
+              background-color: var(--_palettes---brand-alt--700);
             }
             /* accent */
             [bg="a-50"] {
-              background-color: var(--palette-accent--50);
+              background-color: var(--_palettes---accent--50);
             }
             [bg="a-100"] {
-              background-color: var(--palette-accent--100);
+              background-color: var(--_palettes---accent--100);
             }
             [bg="a-200"] {
-              background-color: var(--palette-accent--200);
+              background-color: var(--_palettes---accent--200);
             }
             [bg="a-300"] {
-              background-color: var(--palette-accent--300);
+              background-color: var(--_palettes---accent--300);
             }
             [bg="a-400"] {
-              background-color: var(--palette-accent--400);
+              background-color: var(--_palettes---accent--400);
             }
             [bg="a-500"] {
-              background-color: var(--palette-accent--500);
+              background-color: var(--_palettes---accent--500);
             }
             [bg="a-600"] {
-              background-color: var(--palette-accent--600);
+              background-color: var(--_palettes---accent--600);
             }
             [bg="a-700"] {
-              background-color: var(--palette-accent--700);
+              background-color: var(--_palettes---accent--700);
             }
             [bg="a-800"] {
-              background-color: var(--palette-accent--800);
+              background-color: var(--_palettes---accent--800);
             }
             [bg="a-900"] {
-              background-color: var(--palette-accent--900);
+              background-color: var(--_palettes---accent--900);
             }
             [bg="a-950"] {
-              background-color: var(--palette-accent--950);
+              background-color: var(--_palettes---accent--950);
             }
             [bg="a-on300"] {
-              background-color: var(--palette-accent--on300);
+              background-color: var(--_palettes---accent--on300);
             }
             [color="a-on300"] {
-              color: var(--palette-accent--on300);
+              color: var(--_palettes---accent--on300);
             }
             [bg="a-on500"] {
-              background-color: var(--palette-accent--on500);
+              background-color: var(--_palettes---accent--on500);
             }
             [color="a-on500"] {
-              color: var(--palette-accent--on500);
+              color: var(--_palettes---accent--on500);
             }
             [bg="a-on700"] {
-              background-color: var(--palette-accent--on700);
+              background-color: var(--_palettes---accent--on700);
             }
             [color="a-on700"] {
-              color: var(--palette-accent--on700);
+              color: var(--_palettes---accent--on700);
             }
             [bg="a-subtle"] {
-              background-color: var(--palette-accent--subtle);
+              background-color: var(--_palettes---accent--subtle);
             }
             /* accent: light, deep */
             [bg="a-light"] {
-              background-color: var(--palette-accent--300);
+              background-color: var(--_palettes---accent--300);
             }
             [bg="a-deep"] {
-              background-color: var(--palette-accent--700);
+              background-color: var(--_palettes---accent--700);
             }
             /* neutral */
             [bg="n-50"] {
-              background-color: var(--palette-neutral--50);
+              background-color: var(--_palettes---neutral--50);
             }
             [bg="n-100"] {
-              background-color: var(--palette-neutral--100);
+              background-color: var(--_palettes---neutral--100);
             }
             [bg="n-200"] {
-              background-color: var(--palette-neutral--200);
+              background-color: var(--_palettes---neutral--200);
             }
             [bg="n-300"] {
-              background-color: var(--palette-neutral--300);
+              background-color: var(--_palettes---neutral--300);
             }
             [bg="n-400"] {
-              background-color: var(--palette-neutral--400);
+              background-color: var(--_palettes---neutral--400);
             }
             [bg="n-500"] {
-              background-color: var(--palette-neutral--500);
+              background-color: var(--_palettes---neutral--500);
             }
             [bg="n-600"] {
-              background-color: var(--palette-neutral--600);
+              background-color: var(--_palettes---neutral--600);
             }
             [bg="n-700"] {
-              background-color: var(--palette-neutral--700);
+              background-color: var(--_palettes---neutral--700);
             }
             [bg="n-800"] {
-              background-color: var(--palette-neutral--800);
+              background-color: var(--_palettes---neutral--800);
             }
             [bg="n-900"] {
-              background-color: var(--palette-neutral--900);
+              background-color: var(--_palettes---neutral--900);
             }
             [bg="n-950"] {
-              background-color: var(--palette-neutral--950);
+              background-color: var(--_palettes---neutral--950);
             }
             [bg="n-on300"] {
-              background-color: var(--palette-neutral--on300);
+              background-color: var(--_palettes---neutral--on300);
             }
             [color="n-on200"] {
-              color: var(--palette-neutral--on300);
+              color: var(--_palettes---neutral--on300);
             }
             [bg="n-on500"] {
-              background-color: var(--palette-neutral--on500);
+              background-color: var(--_palettes---neutral--on500);
             }
             [color="n-on500"] {
-              color: var(--palette-neutral--on500);
+              color: var(--_palettes---neutral--on500);
             }
             [bg="n-on700"] {
-              background-color: var(--palette-neutral--on700);
+              background-color: var(--_palettes---neutral--on700);
             }
             [color="n-on800"] {
-              color: var(--palette-neutral--on700);
+              color: var(--_palettes---neutral--on700);
             }
             [bg="n-subtle"] {
-              background-color: var(--palette-neutral--subtle);
+              background-color: var(--_palettes---neutral--subtle);
             }
             [bg="white"] {
-              background-color: var(--palette-neutral--white);
+              background-color: var(--_palettes---neutral--white);
             }
             [color="white"] {
-              color: var(--palette-neutral--white);
+              color: var(--_palettes---neutral--white);
             }
             [bg="black"] {
-              background-color: var(--palette-neutral--black);
+              background-color: var(--_palettes---neutral--black);
             }
             [color="black"] {
-              color: var(--palette-neutral--black);
+              color: var(--_palettes---neutral--black);
             }
             /* neutral: light, deep */
             [bg="n-light"] {
-              background-color: var(--palette-neutral--300);
+              background-color: var(--_palettes---neutral--300);
             }
             [bg="n-deep"] {
-              background-color: var(--palette-neutral--700);
+              background-color: var(--_palettes---neutral--700);
             }
             /* --------------------- */
             /* -- (3) S2 Defaults -- */
@@ -1791,7 +1667,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .html-table {
               width: 100%;
               position: relative;
-              margin: 0 0 var(--spacing--richtext) 0;
+              margin: 0 0 var(--_sizes---spacing--richtext) 0;
             }
             .html-table table {
               width: 100%;
@@ -2028,101 +1904,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="_03_modes w-embed">
         <style>
-            /* ----------------------- */
-            /* -- Mode Switching UI -- */
-            /* ----------------------- */
-            [theme="light"] .toggle {}
-            [theme="dark"] .toggle {
+            /* -------------------- */
+            /* -- Mode Switching -- */
+            /* -------------------- */
+            /* ui elements for mode switching */
+            .body.u-light-mode .toggle {}
+            .body.u-dark-mode .toggle {
               justify-content: flex-end;
-              background-color: var(--palette-neutral--800);
-              color: var(--plaette-neutral-300);
             }
-            [theme="light"] .mode-switch>[data-button="color-mode-light"] {
+            .body.u-light-mode .mode-switch>[data-button="color-mode-light"] {
               background-color: #ffffff80;
             }
-            [theme="dark"] .mode-switch>[data-button="color-mode-dark"] {
+            .body.u-dark-mode .mode-switch>[data-button="color-mode-dark"] {
               background-color: #00000060;
             }
-            [theme="dark"] .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
+            .body.u-dark-mode .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
               background-color: #bbb;
               color: #ddd;
-            }
-            /* ---------------------- */
-            /* -- Color Conversion -- */
-            /* ---------------------- */
-            /* light and dark elements */
-            .u-bg-dark,
-            [bg="dark"] {
-              background-color: var(--colors-dark--surface);
-              color: var(--colors-dark--text);
-            }
-            .u-bg-light,
-            [bg="light"] {
-              background-color: var(--colors-light--surface);
-              color: var(--colors-light--text);
-            }
-            /* conversions of "Colors" variables */
-            /* "Dark" mode */
-            [theme="dark"],
-            .cc-dark-mode,
-            .u-bg-dark,
-            [bg="dark"]
-            /* follow the dark mode */
-              {
-              --colors--text: var(--colors-dark--text);
-              --colors--text-dim: var(--colors-dark--text-dim);
-              --colors--text-dimmer: var(--colors-dark--text-dimmer);
-              --colors--text-muted: var(--colors-dark--text-muted);
-              --colors--stroke: var(--colors-dark--stroke);
-              --colors--stroke-subtle: var(--colors-dark--stroke-subtle);
-              --colors--stroke-emphasis: var(--colors-dark--stroke-emphasis);
-              --colors--brand: var(--colors-dark--brand);
-              --colors--brand-light: var(--colors-dark--brand-light);
-              --colors--brand-deep: var(--colors-dark--brand-deep);
-              --colors--brand-alt: var(--colors-dark--brand-alt);
-              --colors--accent: var(--colors-dark--accent);
-              --colors--surface: var(--colors-dark--surface);
-              --colors--surface-muted: var(--colors-dark--surface-muted);
-              --colors--surface-alt: var(--colors-dark--surface-alt);
-              --colors--surface-alt-muted: var(--colors-dark--surface-alt-muted);
-              --colors--focus: var(--colors-dark--focus);
-              --colors--focus-subtle: var(--colors-dark--focus-subtle);
-            }
-            /* "Light" mode */
-            [theme="light"],
-            .cc-light-mode .u-bg-light,
-            [bg="light"]
-            /* follow the light mode */
-              {
-              --colors--text: var(--colors-light--text);
-              --colors--text-dim: var(--colors-light--text-dim);
-              --colors--text-dimmer: var(--colors-light--text-dimmer);
-              --colors--text-muted: var(--colors-light--text-muted);
-              --colors--stroke: var(--colors-light--stroke);
-              --colors--stroke-subtle: var(--colors-light--stroke-subtle);
-              --colors--stroke-emphasis: var(--colors-light--stroke-emphasis);
-              --colors--brand: var(--colors-light--brand);
-              --colors--brand-light: var(--colors-light--brand-light);
-              --colors--brand-deep: var(--colors-light--brand-deep);
-              --colors--brand-alt: var(--colors-light--brand-alt);
-              --colors--accent: var(--colors-light--accent);
-              --colors--surface: var(--colors-light--surface);
-              --colors--surface-muted: var(--colors-light--surface-muted);
-              --colors--surface-alt: var(--colors-light--surface-alt);
-              --colors--surface-alt-muted: var(--colors-light--surface-alt-muted);
-              --colors--focus: var(--colors-light--focus);
-              --colors--focus-subtle: var(--colors-light--focus-subtle);
-            }
-            /* conversions of other variables */
-            /* "Dark" mode */
-            [theme="dark"],
-            .cc-dark-mode {
-              --main-nav--glass: var(--main-nav--glass-dark-mode);
-            }
-            /* "Light" mode */
-            [theme="light"],
-            .cc-light-mode {
-              --main-nav--glass: var(--main-nav--glass-light-mode);
             }
           </style>
       </div>
@@ -2319,7 +2117,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             </div>
           </header>
           <div class="text-wrapper cc-max-40rem">
-            <p>Tips: The <span class="css-tag">main</span> wrapper of the page SHOULD NOT include the <strong>nav</strong> and <strong>footer</strong>, and a page should always have a <span class="css-tag cc-html">Main</span> HTML tag.<br></p>
+            <p><strong>Tip:</strong> The <span class="css-tag">main</span> wrapper of the page SHOULD NOT include the <strong>nav</strong> and <strong>footer</strong>, and a page should always have a <span class="css-tag cc-html">Main</span> HTML tag.<br></p>
           </div>
         </div>
       </section>
@@ -2327,7 +2125,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         <div class="w-layout-blockcontainer container w-container">
           <div class="cols-layout cc-vflex-at-md">
             <div class="col cc-2col">
-              <div class="image-wrapper"><img src="images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" sizes="(max-width: 991px) 100vw, 45vw" srcset="images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" class="image"></div>
+              <div class="image-wrapper"><img src="images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 93vw, 45vw" srcset="images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" class="image"></div>
             </div>
             <div class="col cc-2col">
               <div class="title-wrapper">
@@ -2379,6 +2177,97 @@ Result: "https://example.com?key=value#section"
         });
       }
       document.addEventListener("DOMContentLoaded", updateAnchorHrefs);
+    </script>
+  <!--  Mode Switching Function  -->
+  <script>
+      (function() {
+        const THEME_KEY = "theme";
+        const SYSTEM_THEME = "system";
+        const LIGHT_CLASS = "u-light-mode";
+        const DARK_CLASS = "u-dark-mode";
+        const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
+        // Check if changing of Light / Dark Mode (Theme) is allowed
+        function isThemeChangeAllowed() {
+          return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
+        }
+        // Get the system's preferred color scheme
+        function getSystemTheme() {
+          return window.matchMedia("(prefers-color-scheme: dark)").matches ?
+            "dark" :
+            "light";
+        }
+        // Apply the specified theme
+        function applyTheme(theme, savePreference = true) {
+          if (!isThemeChangeAllowed()) return;
+          const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
+          document.body.classList.remove(LIGHT_CLASS, DARK_CLASS);
+          if (actualTheme === "light") {
+            document.body.classList.add(LIGHT_CLASS);
+          } else {
+            document.body.classList.add(DARK_CLASS);
+          }
+          if (savePreference) {
+            try {
+              localStorage.setItem(THEME_KEY, theme);
+            } catch (error) {
+              console.warn("Unable to save theme preference:", error);
+            }
+          }
+        }
+        // Get the user's theme preference
+        function getThemePreference() {
+          return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
+        }
+        // Initialize the theme on page load
+        function initializeTheme() {
+          if (isThemeChangeAllowed()) {
+            const themePreference = getThemePreference();
+            applyTheme(themePreference, false);
+          }
+        }
+        // Set up event listeners for buttons and toggles
+        function setupEventListeners() {
+          const buttonSelectors = {
+            "color-mode-system": SYSTEM_THEME,
+            "color-mode-light": "light",
+            "color-mode-dark": "dark"
+          };
+          Object.entries(buttonSelectors).forEach(([selector, theme]) => {
+            document
+              .querySelectorAll(`[data-button="${selector}"]`)
+              .forEach((button) => {
+                button.addEventListener("click", () => applyTheme(theme));
+              });
+          });
+          document
+            .querySelectorAll('[data-toggle="light-dark"]')
+            .forEach((toggleSwitch) => {
+              toggleSwitch.addEventListener("click", () => {
+                const currentTheme = getThemePreference();
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                applyTheme(newTheme);
+              });
+            });
+        }
+        // Run initialization when DOM is ready
+        function onDOMReady() {
+          initializeTheme();
+          setupEventListeners();
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", onDOMReady);
+        } else {
+          onDOMReady();
+        }
+        // Update theme when system preference changes
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", () => {
+            if (getThemePreference() === SYSTEM_THEME) {
+              applyTheme(SYSTEM_THEME, false);
+            }
+          });
+      })();
     </script>
   <!--  Built with S2 Framework  -->
   <!--  https://s2-framework.webflow.io  -->
