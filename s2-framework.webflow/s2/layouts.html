@@ -1,10 +1,10 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 22 2025 02:48:19 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
-  <title>Grid Layout | S2 Framework</title>
-  <meta content="Grid Layout | S2 Framework" property="og:title">
-  <meta content="Grid Layout | S2 Framework" property="twitter:title">
+  <title>Layouts | S2 Framework</title>
+  <meta content="Layouts | S2 Framework" property="og:title">
+  <meta content="Layouts | S2 Framework" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="../css/normalize.css" rel="stylesheet" type="text/css">
   <link href="../css/components.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
     </script>
   <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="../images/webclip.png" rel="apple-touch-icon">
-  <link href="https://s2-framework.webflow.io/s2/grid" rel="canonical">
+  <link href="https://s2-framework.webflow.io/s2/layouts" rel="canonical">
   <!--  CSS Animations Enhancement  -->
   <!-- 
 Usage example of 20px offset, 360ms delay, in a group "features":
@@ -123,7 +123,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
   </div>
   <div id="top" class="page">
     <div class="code">
-      <div class="js w-embed w-script"><!--  Inline script to apply Light / Dark Mode (Theme) ASAP  -->
+      <div class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
         <!--  The Mode Switching script is placed in custom "Footer code".  -->
         <script>
             (function() {
@@ -133,23 +133,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 const LIGHT_CLASS = "u-light-mode";
                 const DARK_CLASS = "u-dark-mode";
                 const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-                // Get system's preferred color scheme
+                // get system's preferred color scheme
                 function getSystemTheme() {
                   return window.matchMedia("(prefers-color-scheme: dark)").matches ?
                     "dark" :
                     "light";
                 }
-                // Check if theme changes are allowed
+                // check if theme changes are allowed
                 const themeChangeAllowed =
                   document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
                 if (themeChangeAllowed) {
-                  // Get user's theme preference from localStorage
+                  // get user's theme preference from localStorage
                   const storedTheme = localStorage.getItem(THEME_KEY);
                   let themePreference = storedTheme || SYSTEM_THEME;
-                  // To apply the theme
+                  // to apply the theme
                   const actualTheme =
                     themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                  // Add theme class
+                  // add theme class
                   if (actualTheme === "dark") {
                     document.body.classList.add(DARK_CLASS);
                   } else {
@@ -157,7 +157,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   }
                 }
               } catch (e) {
-                // Log any initialization errors
+                // log any initialization errors
                 console.warn("Theme initialization error:", e);
               }
             })();
@@ -198,13 +198,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               }
             }
             /* basics */
+            a {
+              color: inherit;
+            }
             h1,
             h2,
             h3 {
               text-wrap: balance;
-            }
-            a {
-              color: inherit;
             }
             img,
             svg,
@@ -257,18 +257,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             .spacer * {
               padding: 0;
-            }
-            /* responsive containers */
-            @media (min-width: 80rem) {
-              .container.cc-10col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-8col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-6col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2)));
-              }
             }
             /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
@@ -700,6 +688,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [z-index="0"] {
               z-index: 0;
+            }
+            [z-index="1"] {
+              z-index: 1;
             }
             [z-index="-1"] {
               z-index: -1;
@@ -1945,9 +1936,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="_03_modes w-embed">
         <style>
-            /* -------------------- */
-            /* -- Mode Switching -- */
-            /* -------------------- */
+            /* ---------------------- */
+            /* -- Styles for Modes -- */
+            /* ---------------------- */
             /* ui elements for mode switching */
             .body.u-light-mode .toggle {}
             .body.u-dark-mode .toggle {
@@ -1963,6 +1954,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               background-color: #bbb;
               color: #ddd;
             }
+            /* other styles related to modes and themes */
           </style>
       </div>
       <div code="css" class="_04_custom w-embed">
@@ -2070,15 +2062,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-left: 0rem !important;
               margin-right: auto;
             }
-            /* media queries template */
-            /*
-@media screen and (min-width: 1280px) {}
-@media screen and (min-width: 1440px) {}
-@media screen and (min-width: 1920px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 479px) {}
-*/
           </style>
       </div>
     </div>
@@ -2099,7 +2082,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             <a href="/s2/styles#basics" class="main-nav_link w-nav-link">Styles</a>
             <a href="/s2/styles#richtext" class="main-nav_link w-nav-link">Rich Text</a>
             <a href="../s2/elements.html" class="main-nav_link w-nav-link">UI Elements</a>
-            <a href="../s2/grid.html" aria-current="page" class="main-nav_link w-nav-link w--current">Grid Layout</a>
+            <a href="../s2/layouts.html" aria-current="page" class="main-nav_link w-nav-link w--current">Layouts</a>
             <a href="../s2/filter-ui.html" class="main-nav_link w-nav-link">Filter UI</a>
             <a href="../s2/components.html" class="main-nav_link w-nav-link">S2 Components</a>
             <div class="main-nav_link cc-last">
@@ -2148,12 +2131,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="css w-embed">
         <style>
-            /* -- Style Guide Custom Styles -- */
-            /* only used for the style guide, avoid mixing with global css */
-            body {
-              transition-property: color, background-color, border-color;
-              transition-duration: 220ms;
-              transition-timing-function: ease;
+            /* -- Style Guide: Custom Styles -- */
+            /* Only used for styling the style guide. */
+            /* DO NOT INCLUDE THIS ON OTHER WEB PAGES. */
+            [body="sg"] {
+              background-color: var(--s2--surface);
             }
             [text-deco="none"],
             [text-deco="none"] a {
@@ -2177,6 +2159,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               .cc-sg-main {
                 width: 100vw !important;
               }
+            }
+            .u-bg-pattern {
+              min-height: 3rem;
             }
             /* palette table */
             palette {
@@ -2229,13 +2214,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               font-weight: bold;
               opacity: 1;
             }
-            /* styles for color modes of the style guide */
-            [body="sg"] {
-              background-color: var(--s2--surface);
-            }
-            .u-dark-mode .s2-demo-box {
-              background-image: none;
-            }
             /* adjustment of .box-label elements that are inside .s2-demo */
             .s2-demo .box-label {
               margin-left: -2px;
@@ -2267,15 +2245,289 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
+            /* styles in dark mode */
+            .u-dark-mode .s2-demo-box {
+              background-image: none;
+            }
           </style>
       </div>
     </div>
     <main class="main">
-      <section id="grid" class="section">
+      <section class="section cc-top-sm">
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
             <div class="title-wrapper">
-              <h1 class="h1">Grid Layout Utilities</h1>
+              <div id="column" class="sg-anchor"></div>
+              <h1>Column Layouts</h1>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">cols-layout</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-aside</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-main</div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="cols-layout">
+                <aside class="col cc-aside cc-on-left-lg">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                </aside>
+                <div class="col cc-main cc-px-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                </div>
+              </div>
+              <div class="cols-layout">
+                <div class="col cc-main cc-px-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                </div>
+                <aside class="col cc-aside cc-on-right-lg">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                </aside>
+              </div>
+              <div class="cols-layout">
+                <aside class="col cc-aside cc-on-left">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                </aside>
+                <div class="col cc-main">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                </div>
+              </div>
+              <div class="cols-layout">
+                <div class="col cc-main">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                </div>
+                <aside class="col cc-aside cc-on-right">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                </aside>
+              </div>
+              <div class="cols-layout">
+                <aside class="col cc-aside cc-on-left-lg">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                </aside>
+                <div class="col cc-main cc-px-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                </div>
+              </div>
+              <div class="cols-layout">
+                <div class="col cc-main cc-px-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                </div>
+                <aside class="col cc-aside cc-on-right-lg">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                </aside>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">cols-layout</div>
+                <div class="css-tag">cc-vflex-at-md</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-45p</div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="cols-layout cc-vflex-at-md">
+                <div class="col cc-45p">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-45p">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element cc-block">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-1c</div>
+                <div>~</div>
+                <div class="css-tag">cc-12c</div>
+              </div>
+            </div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-1c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-2c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-3c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-4c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-5c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-6c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-7c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-8c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-9c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-10c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-11c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-12c">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">flex-wrap-cols</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-in-flex</div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="flex-wrap-cols">
+                <div class="col cc-in-flex">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-in-flex">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-in-flex">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">grid-cols</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-content</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-p-responsive</div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="grid-cols">
+                <div class="col cc-content">
+                  <div class="title-wrapper">
+                    <h4>Heading</h4>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+                <div class="col cc-p-responsive">
+                  <div style="min-height: 12rem;" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">grid-cols</div>
+                <div class="css-tag">cc-3col</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-p-0</div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="grid-cols cc-3col">
+                <div class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">grid-cols</div>
+                <div class="css-tag">cc-4col</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="css-tag">col</div>
+                <div class="css-tag">cc-p-0</div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="grid-cols cc-4col">
+                <div class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div id="w-node-_42b30e4f-8f4f-75b1-b54c-938093a80ce7-4c696af6" class="col cc-p-0">
+                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="css-tag">grid-cols</div>
+                <div class="css-tag">cc-h</div>
+              </div>
+              <div class="sg-note">note: <span class="css-tag">-h</span> for horizontal</div>
+            </div>
+            <div class="block">
+              <div class="grid-cols cc-h">
+                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
+                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
+                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
+                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section cc-top-sm">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="title-wrapper">
+            <div class="title-wrapper">
+              <div id="grid" class="sg-anchor"></div>
+              <h1>Grid Layout Utilities</h1>
             </div>
             <div class="text-wrapper cc-max-40rem">
               <p>This Grid Layout utilities system is a streamlined version of <a href="https://www.youtube.com/watch?v=J78BBoZbmG8" target="_blank">Lumos</a> by Timothy Ricks.<br>Grids can use values like <span class="code-tag">subgrid</span> or <span class="code-tag">autofit</span>.</p>
@@ -2431,17 +2683,17 @@ Result: "https://example.com?key=value#section"
         const LIGHT_CLASS = "u-light-mode";
         const DARK_CLASS = "u-dark-mode";
         const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // Check if changing of Light / Dark Mode (Theme) is allowed
+        // check if changing of Light / Dark Mode (Theme) is allowed
         function isThemeChangeAllowed() {
           return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
         }
-        // Get the system's preferred color scheme
+        // get the system's preferred color scheme
         function getSystemTheme() {
           return window.matchMedia("(prefers-color-scheme: dark)").matches ?
             "dark" :
             "light";
         }
-        // Apply the specified theme
+        // apply the specified theme
         function applyTheme(theme, savePreference = true) {
           if (!isThemeChangeAllowed()) return;
           const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
@@ -2459,18 +2711,18 @@ Result: "https://example.com?key=value#section"
             }
           }
         }
-        // Get the user's theme preference
+        // get the user's theme preference
         function getThemePreference() {
           return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
         }
-        // Initialize the theme on page load
+        // initialize the theme on page load
         function initializeTheme() {
           if (isThemeChangeAllowed()) {
             const themePreference = getThemePreference();
             applyTheme(themePreference, false);
           }
         }
-        // Set up event listeners for buttons and toggles
+        // set up event listeners for buttons and toggles
         function setupEventListeners() {
           const buttonSelectors = {
             "color-mode-system": SYSTEM_THEME,
@@ -2494,7 +2746,7 @@ Result: "https://example.com?key=value#section"
               });
             });
         }
-        // Run initialization when DOM is ready
+        // run initialization when DOM is ready
         function onDOMReady() {
           initializeTheme();
           setupEventListeners();
@@ -2504,7 +2756,7 @@ Result: "https://example.com?key=value#section"
         } else {
           onDOMReady();
         }
-        // Update theme when system preference changes
+        // update theme when system preference changes
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", () => {

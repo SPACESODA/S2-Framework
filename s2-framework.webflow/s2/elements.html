@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 22 2025 02:48:19 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -91,7 +91,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 <body direction="" body="sg" class="body">
   <div id="top" class="page">
     <div class="code">
-      <div class="js w-embed w-script"><!--  Inline script to apply Light / Dark Mode (Theme) ASAP  -->
+      <div class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
         <!--  The Mode Switching script is placed in custom "Footer code".  -->
         <script>
             (function() {
@@ -101,23 +101,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 const LIGHT_CLASS = "u-light-mode";
                 const DARK_CLASS = "u-dark-mode";
                 const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-                // Get system's preferred color scheme
+                // get system's preferred color scheme
                 function getSystemTheme() {
                   return window.matchMedia("(prefers-color-scheme: dark)").matches ?
                     "dark" :
                     "light";
                 }
-                // Check if theme changes are allowed
+                // check if theme changes are allowed
                 const themeChangeAllowed =
                   document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
                 if (themeChangeAllowed) {
-                  // Get user's theme preference from localStorage
+                  // get user's theme preference from localStorage
                   const storedTheme = localStorage.getItem(THEME_KEY);
                   let themePreference = storedTheme || SYSTEM_THEME;
-                  // To apply the theme
+                  // to apply the theme
                   const actualTheme =
                     themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                  // Add theme class
+                  // add theme class
                   if (actualTheme === "dark") {
                     document.body.classList.add(DARK_CLASS);
                   } else {
@@ -125,7 +125,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   }
                 }
               } catch (e) {
-                // Log any initialization errors
+                // log any initialization errors
                 console.warn("Theme initialization error:", e);
               }
             })();
@@ -166,13 +166,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               }
             }
             /* basics */
+            a {
+              color: inherit;
+            }
             h1,
             h2,
             h3 {
               text-wrap: balance;
-            }
-            a {
-              color: inherit;
             }
             img,
             svg,
@@ -225,18 +225,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             .spacer * {
               padding: 0;
-            }
-            /* responsive containers */
-            @media (min-width: 80rem) {
-              .container.cc-10col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-8col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-6col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2)));
-              }
             }
             /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
@@ -668,6 +656,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [z-index="0"] {
               z-index: 0;
+            }
+            [z-index="1"] {
+              z-index: 1;
             }
             [z-index="-1"] {
               z-index: -1;
@@ -1913,9 +1904,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="_03_modes w-embed">
         <style>
-            /* -------------------- */
-            /* -- Mode Switching -- */
-            /* -------------------- */
+            /* ---------------------- */
+            /* -- Styles for Modes -- */
+            /* ---------------------- */
             /* ui elements for mode switching */
             .body.u-light-mode .toggle {}
             .body.u-dark-mode .toggle {
@@ -1931,6 +1922,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               background-color: #bbb;
               color: #ddd;
             }
+            /* other styles related to modes and themes */
           </style>
       </div>
       <div code="css" class="_04_custom w-embed">
@@ -2038,15 +2030,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-left: 0rem !important;
               margin-right: auto;
             }
-            /* media queries template */
-            /*
-@media screen and (min-width: 1280px) {}
-@media screen and (min-width: 1440px) {}
-@media screen and (min-width: 1920px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 479px) {}
-*/
           </style>
       </div>
     </div>
@@ -2067,7 +2050,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             <a href="/s2/styles#basics" class="main-nav_link w-nav-link">Styles</a>
             <a href="/s2/styles#richtext" class="main-nav_link w-nav-link">Rich Text</a>
             <a href="../s2/elements.html" aria-current="page" class="main-nav_link w-nav-link w--current">UI Elements</a>
-            <a href="../s2/grid.html" class="main-nav_link w-nav-link">Grid Layout</a>
+            <a href="../s2/layouts.html" class="main-nav_link w-nav-link">Layouts</a>
             <a href="../s2/filter-ui.html" class="main-nav_link w-nav-link">Filter UI</a>
             <a href="../s2/components.html" class="main-nav_link w-nav-link">S2 Components</a>
             <div class="main-nav_link cc-last">
@@ -2116,12 +2099,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="css w-embed">
         <style>
-            /* -- Style Guide Custom Styles -- */
-            /* only used for the style guide, avoid mixing with global css */
-            body {
-              transition-property: color, background-color, border-color;
-              transition-duration: 220ms;
-              transition-timing-function: ease;
+            /* -- Style Guide: Custom Styles -- */
+            /* Only used for styling the style guide. */
+            /* DO NOT INCLUDE THIS ON OTHER WEB PAGES. */
+            [body="sg"] {
+              background-color: var(--s2--surface);
             }
             [text-deco="none"],
             [text-deco="none"] a {
@@ -2145,6 +2127,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               .cc-sg-main {
                 width: 100vw !important;
               }
+            }
+            .u-bg-pattern {
+              min-height: 3rem;
             }
             /* palette table */
             palette {
@@ -2197,13 +2182,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               font-weight: bold;
               opacity: 1;
             }
-            /* styles for color modes of the style guide */
-            [body="sg"] {
-              background-color: var(--s2--surface);
-            }
-            .u-dark-mode .s2-demo-box {
-              background-image: none;
-            }
             /* adjustment of .box-label elements that are inside .s2-demo */
             .s2-demo .box-label {
               margin-left: -2px;
@@ -2235,15 +2213,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
+            /* styles in dark mode */
+            .u-dark-mode .s2-demo-box {
+              background-image: none;
+            }
           </style>
       </div>
     </div>
     <main class="main">
-      <section class="section cc-top-sm">
+      <section id="ui-elements" class="section cc-top-sm">
         <figure class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
-            <div id="ui-elements" class="sg-anchor"></div>
-            <h1 class="h1">UI Elements</h1>
+            <h1>UI Elements</h1>
           </div>
           <div class="sg-wrapper">
             <aside class="sg-side">
@@ -2262,12 +2243,26 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <a href="#icons" class="sg-side_sub-link w-inline-block">
                       <div>Icons</div>
                     </a>
-                    <a href="#form" class="sg-side_sub-link w-inline-block">
-                      <div>Form</div>
-                    </a>
                     <a href="#message-info" class="sg-side_sub-link w-inline-block">
                       <div>Message &amp; Info</div>
                     </a>
+                  </div>
+                </div>
+                <div class="sg-side_group">
+                  <a href="#forms" class="sg-side_group-title w-inline-block">
+                    <div class="text-lg">Forms</div>
+                  </a>
+                  <div class="sg-side_sub">
+                    <a href="#contact-forms" class="sg-side_sub-link w-inline-block">
+                      <div>Contact Forms</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="sg-side_group">
+                  <a href="#others" class="sg-side_group-title w-inline-block">
+                    <div class="text-lg">Others</div>
+                  </a>
+                  <div class="sg-side_sub">
                     <a href="#tables" class="sg-side_sub-link w-inline-block">
                       <div>Tables</div>
                     </a>
@@ -2278,7 +2273,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 </div>
               </div>
             </aside>
-            <div>
+            <div class="block">
               <div id="elements" class="sg-group">
                 <div class="title-wrapper">
                   <h2>Elements</h2>
@@ -2442,16 +2437,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       </div>
                     </div>
                     <div class="block">
-                      <div p-1="" bg="brand" mt="0" class="button-wrapper cc-center">
-                        <a href="#" class="button cc-white w-inline-block">
-                          <div>Learn more</div>
-                        </a>
-                        <a href="#" class="button cc-sm cc-white w-inline-block">
-                          <div>Learn more</div>
-                        </a>
-                        <a href="#" class="button cc-xs cc-white w-inline-block">
-                          <div>Go</div>
-                        </a>
+                      <div style="padding: 1rem 0;" class="u-bg-brand">
+                        <div style="margin: 0;" class="button-wrapper cc-center">
+                          <a href="#" class="button cc-white w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-sm cc-white w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-xs cc-white w-inline-block">
+                            <div>Go</div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2520,16 +2517,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       </div>
                     </div>
                     <div class="block">
-                      <div p-1="" bg="brand" mt="0" class="button-wrapper cc-center">
-                        <a href="#" class="button cc-white-outline w-inline-block">
-                          <div>Learn more</div>
-                        </a>
-                        <a href="#" class="button cc-sm cc-white-outline w-inline-block">
-                          <div>Learn more</div>
-                        </a>
-                        <a href="#" class="button cc-xs cc-white-outline w-inline-block">
-                          <div>Go</div>
-                        </a>
+                      <div style="padding: 1rem 0;" class="u-bg-brand">
+                        <div style="margin: 0;" class="button-wrapper cc-center">
+                          <a href="#" class="button cc-white-outline w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-sm cc-white-outline w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-xs cc-white-outline w-inline-block">
+                            <div>Go</div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2958,176 +2957,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                   </div>
                 </section>
-                <section id="form" class="section">
-                  <div class="title-wrapper">
-                    <div class="title-wrapper">
-                      <h3>Form</h3>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">form-wrapper</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">form</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">form_row</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">input-field</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Label</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">input</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">input</div>
-                        <div class="css-tag">cc-select</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">input</div>
-                        <div class="css-tag">cc-textarea</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">checkbox-field</div>
-                        <div class="css-tag">checkbox</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">radio-field</div>
-                        <div class="css-tag">radio</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">option-field</div>
-                        <div class="css-tag">option</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="from-wrapper w-form">
-                        <div class="title-wrapper">
-                          <h2 class="h5">Form Demo A</h2>
-                        </div>
-                        <form id="wf-form-Form-Demo-A" name="wf-form-Form-Demo-A" data-name="Form Demo A" action="/" method="get" class="form" data-wf-page-id="66009eb8d493d5a53c375a10" data-wf-element-id="cce52d9c-9858-5606-54ab-b5ebc1d14936">
-                          <div class="form_row">
-                            <div class="input-field"><label for="Demo-A-Input" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-1" data-name="Demo A Input 1" placeholder="Input" type="text" id="Demo-A-Input"></div>
-                            <div class="input-field"><label for="Demo-A-Input-2" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-2" data-name="Demo A Input 2" placeholder="Input" type="text" id="Demo-A-Input-2"></div>
-                          </div>
-                          <div class="input-field"><label for="Demo-A-Options" class="text-sm">Select</label><select id="Demo-A-Options" name="Demo-A-Options" data-name="Demo A Options" class="input cc-select w-select">
-                              <option value="">Choose option</option>
-                              <option value="First">First choice</option>
-                              <option value="Second">Second choice</option>
-                              <option value="Third">Third choice</option>
-                            </select></div>
-                          <div class="input-field"><label for="Demo-A-Message" class="text-sm">Textarea</label><textarea id="Demo-A-Message" name="Demo-A-Message" maxlength="5000" data-name="Demo A Message" placeholder="Your message" required="" class="input cc-textarea w-input"></textarea></div>
-                          <div class="input-field">
-                            <legend class="text-sm">Checkboxes</legend>
-                            <div class="form_row"><label class="w-checkbox checkbox-field">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox w--redirected-checked"></div><input type="checkbox" name="Checkbox-01" id="Checkbox-01" data-name="Checkbox 01" style="opacity:0;position:absolute;z-index:-1" checked=""><span class="w-form-label" for="Checkbox-01">Label</span>
-                              </label><label class="w-checkbox checkbox-field">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" name="Checkbox-02" id="Checkbox-02" data-name="Checkbox 02" style="opacity:0;position:absolute;z-index:-1"><span class="w-form-label" for="Checkbox-02">Label</span>
-                              </label></div>
-                          </div>
-                          <div class="input-field">
-                            <legend class="text-sm">Checkboxes: Option style</legend>
-                            <div class="form_row cc-options"><label class="w-checkbox option-field">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom option w--redirected-checked"></div><input type="checkbox" name="Checkbox-03" id="Checkbox-03" data-name="Checkbox 03" style="opacity:0;position:absolute;z-index:-1" checked=""><span class="option_label w-form-label" for="Checkbox-03">Option</span>
-                              </label><label class="w-checkbox option-field">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom option"></div><input type="checkbox" name="Checkbox-04" id="Checkbox-04" data-name="Checkbox 04" style="opacity:0;position:absolute;z-index:-1"><span class="option_label w-form-label" for="Checkbox-04">Option</span>
-                              </label><label class="w-checkbox option-field">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom option"></div><input type="checkbox" name="Checkbox-05" id="Checkbox-05" data-name="Checkbox 05" style="opacity:0;position:absolute;z-index:-1">
-                                <div color="white" z-index="top" class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0148 2C47.7339 2 45.4934 2.60043 43.5181 3.74059L43.5095 3.74552L12.5168 21.4814L12.5008 21.4906C10.5253 22.6328 8.88525 24.2747 7.74452 26.251C6.60381 28.2273 6.00234 30.4688 6 32.7507L6 32.755V68.2451L6 68.2493C6.00234 70.5312 6.60381 72.7727 7.74452 74.749C8.88525 76.7253 10.5253 78.3673 12.5008 79.5095L12.5168 79.5187L43.5095 97.2545L43.5188 97.2599C45.494 98.3997 47.7342 99 50.0148 99C52.2953 99 54.5353 98.3998 56.5104 97.2601L56.5201 97.2545L87.5128 79.5187L87.5289 79.5095C89.5043 78.3673 91.1444 76.7253 92.2851 74.749C93.4259 72.7727 94.0273 70.5312 94.0297 68.2493L94.0297 68.2451V32.755L94.0297 32.7507C94.0273 30.4688 93.4259 28.2273 92.2851 26.251C91.1444 24.2747 89.5043 22.6328 87.5289 21.4906L87.5128 21.4814L56.5201 3.74552L56.5112 3.74033C54.5359 2.60034 52.2956 2 50.0148 2ZM47.6605 10.9248C48.3767 10.5107 49.1887 10.293 50.0148 10.293C50.841 10.293 51.653 10.5107 52.3691 10.9248L52.3852 10.934L81.5254 27.6098L69.6375 34.4865L38.1837 16.3481L47.6445 10.934L47.6605 10.9248ZM54.2207 52.9851L85.7367 34.7542V68.2408C85.7358 69.0708 85.5171 69.8855 85.1027 70.6033C84.6897 71.319 84.0969 71.9129 83.3842 72.3265L83.3779 72.3301L54.2207 89.0156V52.9851ZM46.136 52.9878L14.293 34.5677V68.2428C14.2942 69.072 14.5129 69.8861 14.9269 70.6033C15.34 71.319 15.9327 71.9129 16.6454 72.3264L16.6518 72.3301L46.136 89.2027V52.9878ZM50.176 45.7443L18.6663 27.5171L29.8515 21.1162L61.3501 39.2804L50.176 45.7443Z" fill="currentColor"></path>
-                                  </svg></div><span class="option_label w-form-label" for="Checkbox-05">Option</span>
-                              </label></div>
-                          </div>
-                          <div class="input-field">
-                            <legend class="text-sm">Radio buttons</legend>
-                            <div class="form_row"><label class="radio-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio w-radio-input w--redirected-checked"></div><input type="radio" name="Radio-Group" id="Radio-01" data-name="Radio Group" style="opacity:0;position:absolute;z-index:-1" checked="" value="Radio 01"><span class="w-form-label" for="Radio-01">Label</span>
-                              </label><label class="radio-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio w-radio-input"></div><input type="radio" name="Radio-Group" id="Radio-02" data-name="Radio Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 02"><span class="w-form-label" for="Radio-02">Label</span>
-                              </label></div>
-                          </div>
-                          <div class="input-field">
-                            <legend class="text-sm">Radio buttons: Checkmark style</legend>
-                            <div class="form_row"><label class="radio-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio cc-checkmark w-radio-input w--redirected-checked"></div><input type="radio" name="Radio-Checkmark-Group" id="Radio-03" data-name="Radio Checkmark Group" style="opacity:0;position:absolute;z-index:-1" checked="" value="Radio 03"><span class="w-form-label" for="Radio-03">Label</span>
-                              </label><label class="radio-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio cc-checkmark w-radio-input"></div><input type="radio" name="Radio-Checkmark-Group" id="Radio-04" data-name="Radio Checkmark Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 04"><span class="w-form-label" for="Radio-04">Label</span>
-                              </label></div>
-                          </div>
-                          <div class="input-field">
-                            <legend class="text-sm">Radio buttons: Option style</legend>
-                            <div class="form_row cc-options"><label class="option-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom option w-radio-input w--redirected-checked"></div><input type="radio" name="Radio-Options-Group" id="Radio-05" data-name="Radio Options Group" style="opacity:0;position:absolute;z-index:-1" checked="" value="Radio 05"><span class="option_label w-form-label" for="Radio-05">Option</span>
-                              </label><label class="option-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom option w-radio-input"></div><input type="radio" name="Radio-Options-Group" id="Radio-06" data-name="Radio Options Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 06"><span class="option_label w-form-label" for="Radio-06">Option</span>
-                              </label><label class="option-field w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom option w-radio-input"></div><input type="radio" name="Radio-Options-Group" id="Radio-07" data-name="Radio Options Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 07">
-                                <div color="white" z-index="top" class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0148 2C47.7339 2 45.4934 2.60043 43.5181 3.74059L43.5095 3.74552L12.5168 21.4814L12.5008 21.4906C10.5253 22.6328 8.88525 24.2747 7.74452 26.251C6.60381 28.2273 6.00234 30.4688 6 32.7507L6 32.755V68.2451L6 68.2493C6.00234 70.5312 6.60381 72.7727 7.74452 74.749C8.88525 76.7253 10.5253 78.3673 12.5008 79.5095L12.5168 79.5187L43.5095 97.2545L43.5188 97.2599C45.494 98.3997 47.7342 99 50.0148 99C52.2953 99 54.5353 98.3998 56.5104 97.2601L56.5201 97.2545L87.5128 79.5187L87.5289 79.5095C89.5043 78.3673 91.1444 76.7253 92.2851 74.749C93.4259 72.7727 94.0273 70.5312 94.0297 68.2493L94.0297 68.2451V32.755L94.0297 32.7507C94.0273 30.4688 93.4259 28.2273 92.2851 26.251C91.1444 24.2747 89.5043 22.6328 87.5289 21.4906L87.5128 21.4814L56.5201 3.74552L56.5112 3.74033C54.5359 2.60034 52.2956 2 50.0148 2ZM47.6605 10.9248C48.3767 10.5107 49.1887 10.293 50.0148 10.293C50.841 10.293 51.653 10.5107 52.3691 10.9248L52.3852 10.934L81.5254 27.6098L69.6375 34.4865L38.1837 16.3481L47.6445 10.934L47.6605 10.9248ZM54.2207 52.9851L85.7367 34.7542V68.2408C85.7358 69.0708 85.5171 69.8855 85.1027 70.6033C84.6897 71.319 84.0969 71.9129 83.3842 72.3265L83.3779 72.3301L54.2207 89.0156V52.9851ZM46.136 52.9878L14.293 34.5677V68.2428C14.2942 69.072 14.5129 69.8861 14.9269 70.6033C15.34 71.319 15.9327 71.9129 16.6454 72.3264L16.6518 72.3301L46.136 89.2027V52.9878ZM50.176 45.7443L18.6663 27.5171L29.8515 21.1162L61.3501 39.2804L50.176 45.7443Z" fill="currentColor"></path>
-                                  </svg></div><span class="option_label w-form-label" for="Radio-07">Option</span>
-                              </label></div>
-                          </div>
-                          <div mb="0.5" mt="0.5" class="input-field">
-                            <div class="form_row"><label class="w-checkbox checkbox-field">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" name="Terms-Agreed" id="Terms-Agreed" data-name="Terms Agreed" required="" style="opacity:0;position:absolute;z-index:-1"><span class="w-form-label" for="Terms-Agreed">I accept the <a href="#" target="_blank">terms</a> and <a href="#" target="_blank">privacy policy</a>.</span>
-                              </label></div>
-                          </div>
-                          <div><input type="submit" data-wait="Please wait..." class="button w-button" value="Submit"></div>
-                        </form>
-                        <div class="form-success-message w-form-done">
-                          <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div class="form-error-message w-form-fail">
-                          <div>Oops! Something went wrong while submitting the form.</div>
-                        </div>
-                      </div>
-                      <div class="spacer">
-                        <div style="height: 4rem" class="spacer-base"></div>
-                        <div style="height: 4rem" class="spacer-md"></div>
-                        <div style="height: 4rem" class="spacer-sm"></div>
-                        <div style="height: 4rem" class="spacer-xs"></div>
-                      </div>
-                      <div class="from-wrapper w-form">
-                        <div class="title-wrapper">
-                          <h2 class="h5">Form Demo B</h2>
-                        </div>
-                        <form id="wf-form-Form-Demo-B" name="wf-form-Form-Demo-B" data-name="Form Demo B" action="/" method="get" class="form" data-wf-page-id="66009eb8d493d5a53c375a10" data-wf-element-id="6ffc6830-44af-0210-b4cc-235d1f10c972">
-                          <div class="form_row">
-                            <div class="input-field cc-boxed">
-                              <div class="u-text-stroke"><label for="Demo-B-Input" class="text-xs">Text field</label></div><input class="input cc-boxed w-input" maxlength="256" name="Demo-B-Input-1" data-name="Demo B Input 1" placeholder="Input" type="text" id="Demo-B-Input">
-                            </div>
-                            <div class="input-field cc-boxed">
-                              <div class="u-text-stroke"><label for="Demo-B-Input-2" class="text-xs">Text field</label></div><input class="input cc-boxed w-input" maxlength="256" name="Demo-B-Input-2" data-name="Demo B Input 2" placeholder="Input" type="text" id="Demo-B-Input-2">
-                            </div>
-                          </div>
-                          <div class="input-field cc-boxed">
-                            <div class="u-text-stroke"><label for="Demo-B-Options" class="text-xs">Select</label></div><select id="Demo-B-Options" name="Demo-B-Options" data-name="Demo B Options" class="input cc-select cc-boxed w-select">
-                              <option value="">Choose option</option>
-                              <option value="First">First choice</option>
-                              <option value="Second">Second choice</option>
-                              <option value="Third">Third choice</option>
-                            </select>
-                          </div>
-                          <div class="input-field cc-boxed">
-                            <div class="u-text-stroke"><label for="Demo-B-Message" class="text-xs">Textarea</label></div><textarea id="Demo-B-Message" name="Demo-B-Message" maxlength="5000" data-name="Demo B Message" placeholder="Your message" required="" class="input cc-textarea cc-boxed w-input"></textarea>
-                          </div>
-                          <div><input type="submit" data-wait="Please wait..." class="button w-button" value="Submit"></div>
-                        </form>
-                        <div class="form-success-message w-form-done">
-                          <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div class="form-error-message w-form-fail">
-                          <div>Oops! Something went wrong while submitting the form.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
                 <section id="message-info" class="section">
                   <div class="title-wrapper">
                     <div class="title-wrapper">
@@ -3147,6 +2976,14 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19 37C28.9411 37 37 28.9411 37 19C37 9.05887 28.9411 1 19 1C9.05887 1 1 9.05887 1 19C1 28.9411 9.05887 37 19 37ZM17.7105 27.0301L29.079 13.7669L26.921 11.9173L16.6693 23.8776L12.057 18.1123L9.83772 19.8877L15.5219 26.9929L16.5939 28.3329L17.7105 27.0301Z" fill="currentColor"></path>
                           </svg></div>
                         <div>Message block that has an icon with <span class="css-tag cc-attribute">float=&quot;start&quot;</span> attribute. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
+                      </div>
+                      <div class="message">
+                        <div style="width: auto; float: inline-start; margin-inline-end: 1ch;" class="block">
+                          <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M19 37C28.9411 37 37 28.9411 37 19C37 9.05887 28.9411 1 19 1C9.05887 1 1 9.05887 1 19C1 28.9411 9.05887 37 19 37ZM17.7105 27.0301L29.079 13.7669L26.921 11.9173L16.6693 23.8776L12.057 18.1123L9.83772 19.8877L15.5219 26.9929L16.5939 28.3329L17.7105 27.0301Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <div>Message block that has an icon wrapped by a <strong>Custom Element</strong> with custom styles. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
                       </div>
                       <div class="message cc-callout">
                         <div class="tag-wrapper">
@@ -3220,6 +3057,189 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                   </div>
                 </section>
+              </div>
+              <div id="forms" class="sg-group">
+                <div class="title-wrapper">
+                  <h2>Forms</h2>
+                </div>
+                <section id="contact-forms" class="section">
+                  <div class="title-wrapper">
+                    <div class="title-wrapper">
+                      <h3>Contact Forms</h3>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="css-tag">form-wrapper</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">form</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">form_row</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">input-field</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag cc-html">Label</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">input</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">input</div>
+                        <div class="css-tag">cc-select</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">input</div>
+                        <div class="css-tag">cc-textarea</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">checkbox-field</div>
+                        <div class="css-tag">checkbox</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">radio-field</div>
+                        <div class="css-tag">radio</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="css-tag">option-field</div>
+                        <div class="css-tag">option</div>
+                      </div>
+                      <div class="sg-note">Grouped as Components to prevent Webflow from accidentally changing form settings during copy and paste.</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 3rem;" class="block">
+                      <div class="block">
+                        <div class="from-wrapper w-form">
+                          <div class="title-wrapper">
+                            <h2 class="h5">Form Demo A</h2>
+                          </div>
+                          <form id="wf-form-Form-Demo-A" name="wf-form-Form-Demo-A" data-name="Form Demo A" action="/" method="get" class="form" data-wf-page-id="66009eb8d493d5a53c375a10" data-wf-element-id="530e2d71-c9c4-e306-bee5-c9a33f0ecdde">
+                            <div class="form_row">
+                              <div class="input-field"><label for="Demo-A-Input-3" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-1" data-name="Demo A Input 1" placeholder="Input" type="text" id="Demo-A-Input"></div>
+                              <div class="input-field"><label for="Demo-A-Input-3" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-2" data-name="Demo A Input 2" placeholder="Input" type="text" id="Demo-A-Input-2"></div>
+                            </div>
+                            <div class="input-field"><label for="Demo-A-Options-2" class="text-sm">Select</label><select id="Demo-A-Options-2" name="Demo-A-Options-2" data-name="Demo A Options 2" class="input cc-select w-select">
+                                <option value="">Choose option</option>
+                                <option value="First">First choice</option>
+                                <option value="Second">Second choice</option>
+                                <option value="Third">Third choice</option>
+                              </select></div>
+                            <div class="input-field"><label for="Demo-A-Message-2" class="text-sm">Textarea</label><textarea id="Demo-A-Message-2" name="Demo-A-Message-2" maxlength="5000" data-name="Demo A Message 2" placeholder="Your message" required="" class="input cc-textarea w-input"></textarea></div>
+                            <div class="input-field">
+                              <legend class="text-sm">Checkboxes</legend>
+                              <div class="form_row"><label class="w-checkbox checkbox-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox w--redirected-checked"></div><input type="checkbox" name="Checkbox-01" id="Checkbox-01" data-name="Checkbox 01" style="opacity:0;position:absolute;z-index:-1" checked=""><span class="w-form-label" for="Checkbox-01">Label</span>
+                                </label><label class="w-checkbox checkbox-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" name="Checkbox-02" id="Checkbox-02" data-name="Checkbox 02" style="opacity:0;position:absolute;z-index:-1"><span class="w-form-label" for="Checkbox-02">Label</span>
+                                </label></div>
+                            </div>
+                            <div class="input-field">
+                              <legend class="text-sm">Checkboxes: Option style</legend>
+                              <div class="form_row cc-options"><label class="w-checkbox option-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom option w--redirected-checked"></div><input type="checkbox" name="Checkbox-03" id="Checkbox-03" data-name="Checkbox 03" style="opacity:0;position:absolute;z-index:-1" checked=""><span class="option_label w-form-label" for="Checkbox-03">Option</span>
+                                </label><label class="w-checkbox option-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom option"></div><input type="checkbox" name="Checkbox-04" id="Checkbox-04" data-name="Checkbox 04" style="opacity:0;position:absolute;z-index:-1"><span class="option_label w-form-label" for="Checkbox-04">Option</span>
+                                </label><label class="w-checkbox option-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom option"></div><input type="checkbox" name="Checkbox-05" id="Checkbox-05" data-name="Checkbox 05" style="opacity:0;position:absolute;z-index:-1">
+                                  <div style="color: var(--_palettes---neutral--white);">
+                                    <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0148 2C47.7339 2 45.4934 2.60043 43.5181 3.74059L43.5095 3.74552L12.5168 21.4814L12.5008 21.4906C10.5253 22.6328 8.88525 24.2747 7.74452 26.251C6.60381 28.2273 6.00234 30.4688 6 32.7507L6 32.755V68.2451L6 68.2493C6.00234 70.5312 6.60381 72.7727 7.74452 74.749C8.88525 76.7253 10.5253 78.3673 12.5008 79.5095L12.5168 79.5187L43.5095 97.2545L43.5188 97.2599C45.494 98.3997 47.7342 99 50.0148 99C52.2953 99 54.5353 98.3998 56.5104 97.2601L56.5201 97.2545L87.5128 79.5187L87.5289 79.5095C89.5043 78.3673 91.1444 76.7253 92.2851 74.749C93.4259 72.7727 94.0273 70.5312 94.0297 68.2493L94.0297 68.2451V32.755L94.0297 32.7507C94.0273 30.4688 93.4259 28.2273 92.2851 26.251C91.1444 24.2747 89.5043 22.6328 87.5289 21.4906L87.5128 21.4814L56.5201 3.74552L56.5112 3.74033C54.5359 2.60034 52.2956 2 50.0148 2ZM47.6605 10.9248C48.3767 10.5107 49.1887 10.293 50.0148 10.293C50.841 10.293 51.653 10.5107 52.3691 10.9248L52.3852 10.934L81.5254 27.6098L69.6375 34.4865L38.1837 16.3481L47.6445 10.934L47.6605 10.9248ZM54.2207 52.9851L85.7367 34.7542V68.2408C85.7358 69.0708 85.5171 69.8855 85.1027 70.6033C84.6897 71.319 84.0969 71.9129 83.3842 72.3265L83.3779 72.3301L54.2207 89.0156V52.9851ZM46.136 52.9878L14.293 34.5677V68.2428C14.2942 69.072 14.5129 69.8861 14.9269 70.6033C15.34 71.319 15.9327 71.9129 16.6454 72.3264L16.6518 72.3301L46.136 89.2027V52.9878ZM50.176 45.7443L18.6663 27.5171L29.8515 21.1162L61.3501 39.2804L50.176 45.7443Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </div><span class="option_label w-form-label" for="Checkbox-05">Option</span>
+                                </label></div>
+                            </div>
+                            <div class="input-field">
+                              <legend class="text-sm">Radio buttons</legend>
+                              <div class="form_row"><label class="radio-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio w-radio-input w--redirected-checked"></div><input type="radio" name="Radio-Group" id="Radio-01" data-name="Radio Group" style="opacity:0;position:absolute;z-index:-1" checked="" value="Radio 01"><span class="w-form-label" for="Radio-01">Label</span>
+                                </label><label class="radio-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio w-radio-input"></div><input type="radio" name="Radio-Group" id="Radio-02" data-name="Radio Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 02"><span class="w-form-label" for="Radio-02">Label</span>
+                                </label></div>
+                            </div>
+                            <div class="input-field">
+                              <legend class="text-sm">Radio buttons: Checkmark style</legend>
+                              <div class="form_row"><label class="radio-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio cc-checkmark w-radio-input w--redirected-checked"></div><input type="radio" name="Radio-Checkmark-Group" id="Radio-03" data-name="Radio Checkmark Group" style="opacity:0;position:absolute;z-index:-1" checked="" value="Radio 03"><span class="w-form-label" for="Radio-03">Label</span>
+                                </label><label class="radio-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio cc-checkmark w-radio-input"></div><input type="radio" name="Radio-Checkmark-Group" id="Radio-04" data-name="Radio Checkmark Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 04"><span class="w-form-label" for="Radio-04">Label</span>
+                                </label></div>
+                            </div>
+                            <div class="input-field">
+                              <legend class="text-sm">Radio buttons: Option style</legend>
+                              <div class="form_row cc-options"><label class="option-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom option w-radio-input w--redirected-checked"></div><input type="radio" name="Radio-Options-Group" id="Radio-05" data-name="Radio Options Group" style="opacity:0;position:absolute;z-index:-1" checked="" value="Radio 05"><span class="option_label w-form-label" for="Radio-05">Option</span>
+                                </label><label class="option-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom option w-radio-input"></div><input type="radio" name="Radio-Options-Group" id="Radio-06" data-name="Radio Options Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 06"><span class="option_label w-form-label" for="Radio-06">Option</span>
+                                </label><label class="option-field w-radio">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom option w-radio-input"></div><input type="radio" name="Radio-Options-Group" id="Radio-07" data-name="Radio Options Group" style="opacity:0;position:absolute;z-index:-1" value="Radio 07">
+                                  <div style="color: var(--_palettes---neutral--white);">
+                                    <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0148 2C47.7339 2 45.4934 2.60043 43.5181 3.74059L43.5095 3.74552L12.5168 21.4814L12.5008 21.4906C10.5253 22.6328 8.88525 24.2747 7.74452 26.251C6.60381 28.2273 6.00234 30.4688 6 32.7507L6 32.755V68.2451L6 68.2493C6.00234 70.5312 6.60381 72.7727 7.74452 74.749C8.88525 76.7253 10.5253 78.3673 12.5008 79.5095L12.5168 79.5187L43.5095 97.2545L43.5188 97.2599C45.494 98.3997 47.7342 99 50.0148 99C52.2953 99 54.5353 98.3998 56.5104 97.2601L56.5201 97.2545L87.5128 79.5187L87.5289 79.5095C89.5043 78.3673 91.1444 76.7253 92.2851 74.749C93.4259 72.7727 94.0273 70.5312 94.0297 68.2493L94.0297 68.2451V32.755L94.0297 32.7507C94.0273 30.4688 93.4259 28.2273 92.2851 26.251C91.1444 24.2747 89.5043 22.6328 87.5289 21.4906L87.5128 21.4814L56.5201 3.74552L56.5112 3.74033C54.5359 2.60034 52.2956 2 50.0148 2ZM47.6605 10.9248C48.3767 10.5107 49.1887 10.293 50.0148 10.293C50.841 10.293 51.653 10.5107 52.3691 10.9248L52.3852 10.934L81.5254 27.6098L69.6375 34.4865L38.1837 16.3481L47.6445 10.934L47.6605 10.9248ZM54.2207 52.9851L85.7367 34.7542V68.2408C85.7358 69.0708 85.5171 69.8855 85.1027 70.6033C84.6897 71.319 84.0969 71.9129 83.3842 72.3265L83.3779 72.3301L54.2207 89.0156V52.9851ZM46.136 52.9878L14.293 34.5677V68.2428C14.2942 69.072 14.5129 69.8861 14.9269 70.6033C15.34 71.319 15.9327 71.9129 16.6454 72.3264L16.6518 72.3301L46.136 89.2027V52.9878ZM50.176 45.7443L18.6663 27.5171L29.8515 21.1162L61.3501 39.2804L50.176 45.7443Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </div><span class="option_label w-form-label" for="Radio-07">Option</span>
+                                </label></div>
+                            </div>
+                            <div mb="0.5" mt="0.5" class="input-field">
+                              <div class="form_row"><label class="w-checkbox checkbox-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" name="Terms-Agreed-2" id="Terms-Agreed-2" data-name="Terms Agreed 2" required="" style="opacity:0;position:absolute;z-index:-1"><span class="w-form-label" for="Terms-Agreed-2">I accept the <a href="#" target="_blank">terms</a> and <a href="#" target="_blank">privacy policy</a>.</span>
+                                </label></div>
+                            </div>
+                            <div><input type="submit" data-wait="Please wait..." class="button w-button" value="Submit"></div>
+                          </form>
+                          <div class="form-success-message w-form-done">
+                            <div>Thank you! Your submission has been received!</div>
+                          </div>
+                          <div class="form-error-message w-form-fail">
+                            <div>Oops! Something went wrong while submitting the form.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <div class="from-wrapper w-form">
+                          <div class="title-wrapper">
+                            <h2 class="h5">Form Demo B</h2>
+                          </div>
+                          <form id="wf-form-Form-Demo-B" name="wf-form-Form-Demo-B" data-name="Form Demo B" action="/" method="get" class="form" data-wf-page-id="66009eb8d493d5a53c375a10" data-wf-element-id="96cdd2a1-0eca-96c4-bad1-811b8680cfc9">
+                            <div class="form_row">
+                              <div class="input-field cc-boxed">
+                                <div class="u-text-stroke"><label for="Demo-B-Input-3" class="text-xs">Text field</label></div><input class="input cc-boxed w-input" maxlength="256" name="Demo-B-Input-1" data-name="Demo B Input 1" placeholder="Input" type="text" id="Demo-B-Input">
+                              </div>
+                              <div class="input-field cc-boxed">
+                                <div class="u-text-stroke"><label for="Demo-B-Input-3" class="text-xs">Text field</label></div><input class="input cc-boxed w-input" maxlength="256" name="Demo-B-Input-2" data-name="Demo B Input 2" placeholder="Input" type="text" id="Demo-B-Input-2">
+                              </div>
+                            </div>
+                            <div class="input-field cc-boxed">
+                              <div class="u-text-stroke"><label for="Demo-B-Options-2" class="text-xs">Select</label></div><select id="Demo-B-Options-2" name="Demo-B-Options-2" data-name="Demo B Options 2" class="input cc-select cc-boxed w-select">
+                                <option value="">Choose option</option>
+                                <option value="First">First choice</option>
+                                <option value="Second">Second choice</option>
+                                <option value="Third">Third choice</option>
+                              </select>
+                            </div>
+                            <div class="input-field cc-boxed">
+                              <div class="u-text-stroke"><label for="Demo-B-Message-2" class="text-xs">Textarea</label></div><textarea id="Demo-B-Message-2" name="Demo-B-Message-2" maxlength="5000" data-name="Demo B Message 2" placeholder="Your message" required="" class="input cc-textarea cc-boxed w-input"></textarea>
+                            </div>
+                            <div><input type="submit" data-wait="Please wait..." class="button w-button" value="Submit"></div>
+                          </form>
+                          <div class="form-success-message w-form-done">
+                            <div>Thank you! Your submission has been received!</div>
+                          </div>
+                          <div class="form-error-message w-form-fail">
+                            <div>Oops! Something went wrong while submitting the form.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div id="others" class="sg-group">
+                <div class="title-wrapper">
+                  <h2>Others</h2>
+                </div>
                 <section id="tables" class="section">
                   <div class="title-wrapper">
                     <div class="title-wrapper">
@@ -4176,8 +4196,8 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         <div class="css-tag">cc-heavy</div>
                       </div>
                     </div>
-                    <div class="block">
-                      <div mb="1" gap="1-1" class="flex-cols">
+                    <div gap="1-1" flex="col" class="block">
+                      <div gap="1-1" class="flex-wrap-cols">
                         <div class="col cc-in-flex cc-p-0">
                           <div class="card">
                             <div class="title-wrapper">
@@ -4195,7 +4215,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           </div>
                         </div>
                       </div>
-                      <div gap="1-1" class="flex-cols">
+                      <div gap="1-1" class="flex-wrap-cols">
                         <div class="col cc-in-flex cc-p-0">
                           <div class="card cc-heavy">
                             <div class="title-wrapper">
@@ -4287,17 +4307,17 @@ Result: "https://example.com?key=value#section"
         const LIGHT_CLASS = "u-light-mode";
         const DARK_CLASS = "u-dark-mode";
         const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // Check if changing of Light / Dark Mode (Theme) is allowed
+        // check if changing of Light / Dark Mode (Theme) is allowed
         function isThemeChangeAllowed() {
           return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
         }
-        // Get the system's preferred color scheme
+        // get the system's preferred color scheme
         function getSystemTheme() {
           return window.matchMedia("(prefers-color-scheme: dark)").matches ?
             "dark" :
             "light";
         }
-        // Apply the specified theme
+        // apply the specified theme
         function applyTheme(theme, savePreference = true) {
           if (!isThemeChangeAllowed()) return;
           const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
@@ -4315,18 +4335,18 @@ Result: "https://example.com?key=value#section"
             }
           }
         }
-        // Get the user's theme preference
+        // get the user's theme preference
         function getThemePreference() {
           return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
         }
-        // Initialize the theme on page load
+        // initialize the theme on page load
         function initializeTheme() {
           if (isThemeChangeAllowed()) {
             const themePreference = getThemePreference();
             applyTheme(themePreference, false);
           }
         }
-        // Set up event listeners for buttons and toggles
+        // set up event listeners for buttons and toggles
         function setupEventListeners() {
           const buttonSelectors = {
             "color-mode-system": SYSTEM_THEME,
@@ -4350,7 +4370,7 @@ Result: "https://example.com?key=value#section"
               });
             });
         }
-        // Run initialization when DOM is ready
+        // run initialization when DOM is ready
         function onDOMReady() {
           initializeTheme();
           setupEventListeners();
@@ -4360,7 +4380,7 @@ Result: "https://example.com?key=value#section"
         } else {
           onDOMReady();
         }
-        // Update theme when system preference changes
+        // update theme when system preference changes
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", () => {

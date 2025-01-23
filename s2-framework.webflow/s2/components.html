@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 22 2025 02:48:19 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -210,7 +210,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 <body direction="" body="sg" class="body">
   <div id="top" class="page">
     <div class="code">
-      <div class="js w-embed w-script"><!--  Inline script to apply Light / Dark Mode (Theme) ASAP  -->
+      <div class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
         <!--  The Mode Switching script is placed in custom "Footer code".  -->
         <script>
             (function() {
@@ -220,23 +220,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 const LIGHT_CLASS = "u-light-mode";
                 const DARK_CLASS = "u-dark-mode";
                 const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-                // Get system's preferred color scheme
+                // get system's preferred color scheme
                 function getSystemTheme() {
                   return window.matchMedia("(prefers-color-scheme: dark)").matches ?
                     "dark" :
                     "light";
                 }
-                // Check if theme changes are allowed
+                // check if theme changes are allowed
                 const themeChangeAllowed =
                   document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
                 if (themeChangeAllowed) {
-                  // Get user's theme preference from localStorage
+                  // get user's theme preference from localStorage
                   const storedTheme = localStorage.getItem(THEME_KEY);
                   let themePreference = storedTheme || SYSTEM_THEME;
-                  // To apply the theme
+                  // to apply the theme
                   const actualTheme =
                     themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                  // Add theme class
+                  // add theme class
                   if (actualTheme === "dark") {
                     document.body.classList.add(DARK_CLASS);
                   } else {
@@ -244,7 +244,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   }
                 }
               } catch (e) {
-                // Log any initialization errors
+                // log any initialization errors
                 console.warn("Theme initialization error:", e);
               }
             })();
@@ -285,13 +285,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               }
             }
             /* basics */
+            a {
+              color: inherit;
+            }
             h1,
             h2,
             h3 {
               text-wrap: balance;
-            }
-            a {
-              color: inherit;
             }
             img,
             svg,
@@ -344,18 +344,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             .spacer * {
               padding: 0;
-            }
-            /* responsive containers */
-            @media (min-width: 80rem) {
-              .container.cc-10col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-8col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-6col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2)));
-              }
             }
             /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
@@ -787,6 +775,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [z-index="0"] {
               z-index: 0;
+            }
+            [z-index="1"] {
+              z-index: 1;
             }
             [z-index="-1"] {
               z-index: -1;
@@ -2032,9 +2023,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="_03_modes w-embed">
         <style>
-            /* -------------------- */
-            /* -- Mode Switching -- */
-            /* -------------------- */
+            /* ---------------------- */
+            /* -- Styles for Modes -- */
+            /* ---------------------- */
             /* ui elements for mode switching */
             .body.u-light-mode .toggle {}
             .body.u-dark-mode .toggle {
@@ -2050,6 +2041,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               background-color: #bbb;
               color: #ddd;
             }
+            /* other styles related to modes and themes */
           </style>
       </div>
       <div code="css" class="_04_custom w-embed">
@@ -2157,15 +2149,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-left: 0rem !important;
               margin-right: auto;
             }
-            /* media queries template */
-            /*
-@media screen and (min-width: 1280px) {}
-@media screen and (min-width: 1440px) {}
-@media screen and (min-width: 1920px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 479px) {}
-*/
           </style>
       </div>
     </div>
@@ -2186,7 +2169,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             <a href="/s2/styles#basics" class="main-nav_link w-nav-link">Styles</a>
             <a href="/s2/styles#richtext" class="main-nav_link w-nav-link">Rich Text</a>
             <a href="../s2/elements.html" class="main-nav_link w-nav-link">UI Elements</a>
-            <a href="../s2/grid.html" class="main-nav_link w-nav-link">Grid Layout</a>
+            <a href="../s2/layouts.html" class="main-nav_link w-nav-link">Layouts</a>
             <a href="../s2/filter-ui.html" class="main-nav_link w-nav-link">Filter UI</a>
             <a href="../s2/components.html" aria-current="page" class="main-nav_link w-nav-link w--current">S2 Components</a>
             <div class="main-nav_link cc-last">
@@ -2235,12 +2218,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="css w-embed">
         <style>
-            /* -- Style Guide Custom Styles -- */
-            /* only used for the style guide, avoid mixing with global css */
-            body {
-              transition-property: color, background-color, border-color;
-              transition-duration: 220ms;
-              transition-timing-function: ease;
+            /* -- Style Guide: Custom Styles -- */
+            /* Only used for styling the style guide. */
+            /* DO NOT INCLUDE THIS ON OTHER WEB PAGES. */
+            [body="sg"] {
+              background-color: var(--s2--surface);
             }
             [text-deco="none"],
             [text-deco="none"] a {
@@ -2264,6 +2246,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               .cc-sg-main {
                 width: 100vw !important;
               }
+            }
+            .u-bg-pattern {
+              min-height: 3rem;
             }
             /* palette table */
             palette {
@@ -2316,13 +2301,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               font-weight: bold;
               opacity: 1;
             }
-            /* styles for color modes of the style guide */
-            [body="sg"] {
-              background-color: var(--s2--surface);
-            }
-            .u-dark-mode .s2-demo-box {
-              background-image: none;
-            }
             /* adjustment of .box-label elements that are inside .s2-demo */
             .s2-demo .box-label {
               margin-left: -2px;
@@ -2354,15 +2332,19 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
+            /* styles in dark mode */
+            .u-dark-mode .s2-demo-box {
+              background-image: none;
+            }
           </style>
       </div>
     </div>
     <main class="main">
       <div class="cols-layout cc-max-120rem">
-        <aside class="col cc-aside-col cc-sg-aside">
+        <aside class="col cc-aside cc-sg-aside">
           <nav text-deco="none" no-scrollbar="" class="sg-side_nav cc-slim">
             <div class="sg-side_group">
-              <a href="#s2" class="sg-side_group-title w-inline-block">
+              <a href="#s2-components" class="sg-side_group-title w-inline-block">
                 <div class="text-lg">Components</div>
               </a>
               <div class="sg-side_sub">
@@ -2394,11 +2376,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             </div>
           </nav>
         </aside>
-        <div class="col cc-main-col cc-sg-main">
-          <div id="s2" class="sg-group">
+        <div class="col cc-main cc-sg-main">
+          <div id="s2-components" class="sg-group">
             <div class="title-wrapper">
               <div class="title-wrapper">
-                <h1 class="h1">S2 Components</h1>
+                <h1>S2 Components</h1>
               </div>
               <div position="relative" class="u-hide">
                 <div class="s2-demo-expand-button cc-clicked">
@@ -2854,7 +2836,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="title-wrapper">
                         <h3>Elements of Title Sets</h3>
                       </div>
-                      <div gap="1-1" class="flex-cols">
+                      <div gap="1-1" class="flex-wrap-cols">
                         <div class="col cc-in-flex cc-p-0">
                           <div class="sg-element cc-block">
                             <div class="sg-tags">
@@ -2993,7 +2975,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div events="none" z-index="auto" overflow="hidden" class="absolute-full-wrapper">
                       <div opacity="0.8" user-select="none" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-jU9VAZDGMzs-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 300" alt="" class="section_image-deco cc-left-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-M2oJ7Uq_0rc-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 600" alt="" class="section_image-deco cc-left-02"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-Wc8k-KryEPM-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 900" alt="" class="section_image-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-WikCrHmk7IU-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 1200" alt="" class="section_image-deco cc-right-02"></div>
                     </div>
-                    <div class="w-layout-blockcontainer container cc-6col w-container">
+                    <div class="w-layout-blockcontainer container cc-6c w-container">
                       <header class="title-layout">
                         <div class="title-wrapper cc-align-center">
                           <div class="title-wrapper">
@@ -3144,7 +3126,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <div gap="3-3" flex="col" class="section">
-                    <div class="container cc-10col">
+                    <div class="container cc-10c">
                       <div class="image-bs">
                         <div for-data="true" class="beer-slider">
                           <div class="beer-reveal"><img sizes="(max-width: 479px) 43vw, (max-width: 991px) 39vw, 100vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image-bs_reveal"></div><img sizes="(max-width: 479px) 86vw, (max-width: 767px) 78vw, (max-width: 991px) 77vw, 100vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" class="image-bs_base">
@@ -3152,7 +3134,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         </div>
                       </div>
                     </div>
-                    <div class="container cc-10col">
+                    <div class="container cc-10c">
                       <div class="image-bs cc-has-bar">
                         <div for-data="true" class="beer-slider">
                           <div class="beer-reveal"><img src="https://images.unsplash.com/photo-1484995978482-cf913162930c?q=80&amp;w=1805&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" beer-label="street" class="image-bs_reveal"></div><img src="https://images.unsplash.com/photo-1587278889768-11fbb1edbff1?q=80&amp;w=3348&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" beer-label="shop" class="image-bs_base">
@@ -3181,10 +3163,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   <section class="section">
                     <div class="w-layout-blockcontainer container w-container">
                       <div class="cols-layout cc-vflex-at-md">
-                        <div class="col cc-2col">
+                        <div class="col cc-45p">
                           <div class="image-wrapper"><img sizes="(max-width: 479px) 86vw, (max-width: 767px) 87vw, (max-width: 991px) 86vw, 45vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
-                        <div class="col cc-2col">
+                        <div class="col cc-45p">
                           <div class="title-wrapper">
                             <div class="title-wrapper">
                               <h1 class="h2">Title goes here</h1>
@@ -3220,7 +3202,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   <section class="section">
                     <div class="w-layout-blockcontainer container w-container">
                       <div class="cols-layout cc-vflex-at-md">
-                        <div class="col cc-2col">
+                        <div class="col cc-45p">
                           <div class="title-wrapper">
                             <div class="title-wrapper">
                               <h1 class="h2">Title goes here</h1>
@@ -3233,7 +3215,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                             <a href="#" class="button cc-outline w-button">Get started</a>
                           </div>
                         </div>
-                        <div class="col cc-2col">
+                        <div class="col cc-45p">
                           <div class="image-wrapper"><img sizes="(max-width: 479px) 86vw, (max-width: 767px) 87vw, (max-width: 991px) 86vw, 45vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                       </div>
@@ -3262,7 +3244,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section cc-top-sm">
-                    <div class="w-layout-blockcontainer container cc-8col w-container">
+                    <div class="w-layout-blockcontainer container cc-8c w-container">
                       <header text-align="center" class="title-layout">
                         <div class="title-wrapper">
                           <div class="title-wrapper">
@@ -3336,7 +3318,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         </div>
                       </header>
                       <div class="cols-layout">
-                        <div class="col cc-main-col cc-px-0">
+                        <div class="col cc-main cc-px-0">
                           <div class="accordion">
                             <div class="accordion_item cc-style-01">
                               <div class="accordion_title-row">
@@ -3385,7 +3367,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                             </div>
                           </div>
                         </div>
-                        <aside class="col cc-aside-col cc-on-right-xl"><img src="https://cnd-host.pages.dev/files/s2/questions-illustration.png" alt="questions illustration" style="width: 75%; max-width: 15rem; margin: 0 auto -10% auto;">
+                        <aside class="col cc-aside cc-on-right-lg"><img src="https://cnd-host.pages.dev/files/s2/questions-illustration.png" alt="questions illustration" style="width: 75%; max-width: 15rem; margin: 0 auto -10% auto;">
                           <div class="card cc-heavy">
                             <div class="text-wrapper">
                               <div line-height="2">Have other questions?<br>Check the <a href="#">help forum</a> or send us a message.</div>
@@ -3414,7 +3396,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section cc-top-sm">
-                    <div class="w-layout-blockcontainer container cc-8col w-container">
+                    <div class="w-layout-blockcontainer container cc-8c w-container">
                       <header text-align="center" class="title-layout">
                         <div class="title-wrapper">
                           <div class="title-wrapper">
@@ -4144,17 +4126,17 @@ Result: "https://example.com?key=value#section"
         const LIGHT_CLASS = "u-light-mode";
         const DARK_CLASS = "u-dark-mode";
         const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // Check if changing of Light / Dark Mode (Theme) is allowed
+        // check if changing of Light / Dark Mode (Theme) is allowed
         function isThemeChangeAllowed() {
           return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
         }
-        // Get the system's preferred color scheme
+        // get the system's preferred color scheme
         function getSystemTheme() {
           return window.matchMedia("(prefers-color-scheme: dark)").matches ?
             "dark" :
             "light";
         }
-        // Apply the specified theme
+        // apply the specified theme
         function applyTheme(theme, savePreference = true) {
           if (!isThemeChangeAllowed()) return;
           const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
@@ -4172,18 +4154,18 @@ Result: "https://example.com?key=value#section"
             }
           }
         }
-        // Get the user's theme preference
+        // get the user's theme preference
         function getThemePreference() {
           return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
         }
-        // Initialize the theme on page load
+        // initialize the theme on page load
         function initializeTheme() {
           if (isThemeChangeAllowed()) {
             const themePreference = getThemePreference();
             applyTheme(themePreference, false);
           }
         }
-        // Set up event listeners for buttons and toggles
+        // set up event listeners for buttons and toggles
         function setupEventListeners() {
           const buttonSelectors = {
             "color-mode-system": SYSTEM_THEME,
@@ -4207,7 +4189,7 @@ Result: "https://example.com?key=value#section"
               });
             });
         }
-        // Run initialization when DOM is ready
+        // run initialization when DOM is ready
         function onDOMReady() {
           initializeTheme();
           setupEventListeners();
@@ -4217,7 +4199,7 @@ Result: "https://example.com?key=value#section"
         } else {
           onDOMReady();
         }
-        // Update theme when system preference changes
+        // update theme when system preference changes
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", () => {

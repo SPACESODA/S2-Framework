@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 22 2025 02:48:19 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0d" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -81,7 +81,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 </head>
 <body class="body">
   <div class="code">
-    <div class="js w-embed w-script"><!--  Inline script to apply Light / Dark Mode (Theme) ASAP  -->
+    <div class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
       <!--  The Mode Switching script is placed in custom "Footer code".  -->
       <script>
           (function() {
@@ -91,23 +91,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               const LIGHT_CLASS = "u-light-mode";
               const DARK_CLASS = "u-dark-mode";
               const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-              // Get system's preferred color scheme
+              // get system's preferred color scheme
               function getSystemTheme() {
                 return window.matchMedia("(prefers-color-scheme: dark)").matches ?
                   "dark" :
                   "light";
               }
-              // Check if theme changes are allowed
+              // check if theme changes are allowed
               const themeChangeAllowed =
                 document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
               if (themeChangeAllowed) {
-                // Get user's theme preference from localStorage
+                // get user's theme preference from localStorage
                 const storedTheme = localStorage.getItem(THEME_KEY);
                 let themePreference = storedTheme || SYSTEM_THEME;
-                // To apply the theme
+                // to apply the theme
                 const actualTheme =
                   themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                // Add theme class
+                // add theme class
                 if (actualTheme === "dark") {
                   document.body.classList.add(DARK_CLASS);
                 } else {
@@ -115,7 +115,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 }
               }
             } catch (e) {
-              // Log any initialization errors
+              // log any initialization errors
               console.warn("Theme initialization error:", e);
             }
           })();
@@ -156,13 +156,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
           }
           /* basics */
+          a {
+            color: inherit;
+          }
           h1,
           h2,
           h3 {
             text-wrap: balance;
-          }
-          a {
-            color: inherit;
           }
           img,
           svg,
@@ -215,18 +215,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
           }
           .spacer * {
             padding: 0;
-          }
-          /* responsive containers */
-          @media (min-width: 80rem) {
-            .container.cc-10col {
-              width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2)));
-            }
-            .container.cc-8col {
-              width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2)));
-            }
-            .container.cc-6col {
-              width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2)));
-            }
           }
           /* accessibility: focus styles */
           html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
@@ -658,6 +646,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
           }
           [z-index="0"] {
             z-index: 0;
+          }
+          [z-index="1"] {
+            z-index: 1;
           }
           [z-index="-1"] {
             z-index: -1;
@@ -1903,9 +1894,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
     </div>
     <div code="css" class="_03_modes w-embed">
       <style>
-          /* -------------------- */
-          /* -- Mode Switching -- */
-          /* -------------------- */
+          /* ---------------------- */
+          /* -- Styles for Modes -- */
+          /* ---------------------- */
           /* ui elements for mode switching */
           .body.u-light-mode .toggle {}
           .body.u-dark-mode .toggle {
@@ -1921,6 +1912,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             background-color: #bbb;
             color: #ddd;
           }
+          /* other styles related to modes and themes */
         </style>
     </div>
     <div code="css" class="_04_custom w-embed">
@@ -2028,15 +2020,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             margin-left: 0rem !important;
             margin-right: auto;
           }
-          /* media queries template */
-          /*
-@media screen and (min-width: 1280px) {}
-@media screen and (min-width: 1440px) {}
-@media screen and (min-width: 1920px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 479px) {}
-*/
         </style>
     </div>
   </div>
@@ -2051,7 +2034,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         <div class="input-field cc-boxed">
           <div class="u-text-stroke"><label for="pass" class="text-xs w-password-page">Password</label></div><input class="input cc-boxed w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass">
         </div>
-        <div flex-align="center-center" flex="col" class="u-align-center"><input type="submit" data-wait="Please wait..." class="button cc-outline w-password-page w-button" value="Submit"></div>
+        <div style="margin: 0;" class="button-wrapper cc-center"><input type="submit" data-wait="Please wait..." class="button cc-outline w-password-page w-button" value="Submit"></div>
         <div class="form-error-message w-password-page w-form-fail">
           <div>Incorrect password. Please try again.</div>
         </div>
@@ -2114,17 +2097,17 @@ Result: "https://example.com?key=value#section"
         const LIGHT_CLASS = "u-light-mode";
         const DARK_CLASS = "u-dark-mode";
         const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // Check if changing of Light / Dark Mode (Theme) is allowed
+        // check if changing of Light / Dark Mode (Theme) is allowed
         function isThemeChangeAllowed() {
           return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
         }
-        // Get the system's preferred color scheme
+        // get the system's preferred color scheme
         function getSystemTheme() {
           return window.matchMedia("(prefers-color-scheme: dark)").matches ?
             "dark" :
             "light";
         }
-        // Apply the specified theme
+        // apply the specified theme
         function applyTheme(theme, savePreference = true) {
           if (!isThemeChangeAllowed()) return;
           const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
@@ -2142,18 +2125,18 @@ Result: "https://example.com?key=value#section"
             }
           }
         }
-        // Get the user's theme preference
+        // get the user's theme preference
         function getThemePreference() {
           return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
         }
-        // Initialize the theme on page load
+        // initialize the theme on page load
         function initializeTheme() {
           if (isThemeChangeAllowed()) {
             const themePreference = getThemePreference();
             applyTheme(themePreference, false);
           }
         }
-        // Set up event listeners for buttons and toggles
+        // set up event listeners for buttons and toggles
         function setupEventListeners() {
           const buttonSelectors = {
             "color-mode-system": SYSTEM_THEME,
@@ -2177,7 +2160,7 @@ Result: "https://example.com?key=value#section"
               });
             });
         }
-        // Run initialization when DOM is ready
+        // run initialization when DOM is ready
         function onDOMReady() {
           initializeTheme();
           setupEventListeners();
@@ -2187,7 +2170,7 @@ Result: "https://example.com?key=value#section"
         } else {
           onDOMReady();
         }
-        // Update theme when system preference changes
+        // update theme when system preference changes
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", () => {

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 22 2025 02:48:19 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -91,7 +91,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 <body direction="" body="sg" class="body">
   <div id="top" class="page">
     <div class="code">
-      <div class="js w-embed w-script"><!--  Inline script to apply Light / Dark Mode (Theme) ASAP  -->
+      <div class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
         <!--  The Mode Switching script is placed in custom "Footer code".  -->
         <script>
             (function() {
@@ -101,23 +101,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                 const LIGHT_CLASS = "u-light-mode";
                 const DARK_CLASS = "u-dark-mode";
                 const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-                // Get system's preferred color scheme
+                // get system's preferred color scheme
                 function getSystemTheme() {
                   return window.matchMedia("(prefers-color-scheme: dark)").matches ?
                     "dark" :
                     "light";
                 }
-                // Check if theme changes are allowed
+                // check if theme changes are allowed
                 const themeChangeAllowed =
                   document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
                 if (themeChangeAllowed) {
-                  // Get user's theme preference from localStorage
+                  // get user's theme preference from localStorage
                   const storedTheme = localStorage.getItem(THEME_KEY);
                   let themePreference = storedTheme || SYSTEM_THEME;
-                  // To apply the theme
+                  // to apply the theme
                   const actualTheme =
                     themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                  // Add theme class
+                  // add theme class
                   if (actualTheme === "dark") {
                     document.body.classList.add(DARK_CLASS);
                   } else {
@@ -125,7 +125,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   }
                 }
               } catch (e) {
-                // Log any initialization errors
+                // log any initialization errors
                 console.warn("Theme initialization error:", e);
               }
             })();
@@ -166,13 +166,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               }
             }
             /* basics */
+            a {
+              color: inherit;
+            }
             h1,
             h2,
             h3 {
               text-wrap: balance;
-            }
-            a {
-              color: inherit;
             }
             img,
             svg,
@@ -225,18 +225,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             .spacer * {
               padding: 0;
-            }
-            /* responsive containers */
-            @media (min-width: 80rem) {
-              .container.cc-10col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-8col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2)));
-              }
-              .container.cc-6col {
-                width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2)));
-              }
             }
             /* accessibility: focus styles */
             html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
@@ -668,6 +656,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             }
             [z-index="0"] {
               z-index: 0;
+            }
+            [z-index="1"] {
+              z-index: 1;
             }
             [z-index="-1"] {
               z-index: -1;
@@ -1913,9 +1904,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="_03_modes w-embed">
         <style>
-            /* -------------------- */
-            /* -- Mode Switching -- */
-            /* -------------------- */
+            /* ---------------------- */
+            /* -- Styles for Modes -- */
+            /* ---------------------- */
             /* ui elements for mode switching */
             .body.u-light-mode .toggle {}
             .body.u-dark-mode .toggle {
@@ -1931,6 +1922,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               background-color: #bbb;
               color: #ddd;
             }
+            /* other styles related to modes and themes */
           </style>
       </div>
       <div code="css" class="_04_custom w-embed">
@@ -2038,15 +2030,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               margin-left: 0rem !important;
               margin-right: auto;
             }
-            /* media queries template */
-            /*
-@media screen and (min-width: 1280px) {}
-@media screen and (min-width: 1440px) {}
-@media screen and (min-width: 1920px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 479px) {}
-*/
           </style>
       </div>
     </div>
@@ -2067,7 +2050,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             <a href="/s2/styles#basics" class="main-nav_link w-nav-link">Styles</a>
             <a href="/s2/styles#richtext" class="main-nav_link w-nav-link">Rich Text</a>
             <a href="../s2/elements.html" class="main-nav_link w-nav-link">UI Elements</a>
-            <a href="../s2/grid.html" class="main-nav_link w-nav-link">Grid Layout</a>
+            <a href="../s2/layouts.html" class="main-nav_link w-nav-link">Layouts</a>
             <a href="../s2/filter-ui.html" class="main-nav_link w-nav-link">Filter UI</a>
             <a href="../s2/components.html" class="main-nav_link w-nav-link">S2 Components</a>
             <div class="main-nav_link cc-last">
@@ -2116,12 +2099,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       </div>
       <div code="css" class="css w-embed">
         <style>
-            /* -- Style Guide Custom Styles -- */
-            /* only used for the style guide, avoid mixing with global css */
-            body {
-              transition-property: color, background-color, border-color;
-              transition-duration: 220ms;
-              transition-timing-function: ease;
+            /* -- Style Guide: Custom Styles -- */
+            /* Only used for styling the style guide. */
+            /* DO NOT INCLUDE THIS ON OTHER WEB PAGES. */
+            [body="sg"] {
+              background-color: var(--s2--surface);
             }
             [text-deco="none"],
             [text-deco="none"] a {
@@ -2145,6 +2127,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               .cc-sg-main {
                 width: 100vw !important;
               }
+            }
+            .u-bg-pattern {
+              min-height: 3rem;
             }
             /* palette table */
             palette {
@@ -2197,13 +2182,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               font-weight: bold;
               opacity: 1;
             }
-            /* styles for color modes of the style guide */
-            [body="sg"] {
-              background-color: var(--s2--surface);
-            }
-            .u-dark-mode .s2-demo-box {
-              background-image: none;
-            }
             /* adjustment of .box-label elements that are inside .s2-demo */
             .s2-demo .box-label {
               margin-left: -2px;
@@ -2235,6 +2213,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
+            /* styles in dark mode */
+            .u-dark-mode .s2-demo-box {
+              background-image: none;
+            }
           </style>
       </div>
     </div>
@@ -2243,7 +2225,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
             <div id="basics" class="sg-anchor"></div>
-            <h1 class="h1">Basic Styles</h1>
+            <h1>Basic Styles</h1>
           </div>
           <div class="sg-wrapper">
             <aside class="sg-side">
@@ -2299,9 +2281,6 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </a>
                     <a href="#wrappers" class="sg-side_sub-link w-inline-block">
                       <div>Wrappers</div>
-                    </a>
-                    <a href="#columns" class="sg-side_sub-link w-inline-block">
-                      <div>Columns</div>
                     </a>
                     <a href="#spacers" class="sg-side_sub-link w-inline-block">
                       <div>Spacer</div>
@@ -2849,7 +2828,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       </div>
                     </div>
                     <div class="block">
-                      <div gap="1-2" flex="row" flex-wrap="wrap" class="flex-cols">
+                      <div gap="1-2" flex="row" flex-wrap="wrap" class="flex-wrap-cols">
                         <div gap="base" flex="col" class="col cc-p-0">
                           <div class="tag-wrapper">
                             <div class="css-tag cc-html">Unordered Lists</div>
@@ -3001,19 +2980,15 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                   </div>
                   <palette>
-                    <div class="sg-square cc-palette_surface-mu">
-                      <div class="sg-square cc-palette_surface">
-                        <div class="sg-square cc-palette_b500">
-                          <div>brand<br>(500)</div>
-                        </div>
-                        <div class="u-hflex-center-top">
-                          <div class="sg-square cc-palette_ba500">
-                            <div>brand-alt<br>(500)</div>
-                          </div>
-                          <div class="sg-square cc-palette_a500">
-                            <div>accent<br>(500)</div>
-                          </div>
-                        </div>
+                    <div class="sg-square cc-palette_b500">
+                      <div>brand<br>(500)</div>
+                    </div>
+                    <div class="u-hflex-center-top">
+                      <div class="sg-square cc-palette_ba500">
+                        <div>brand-alt<br>(500)</div>
+                      </div>
+                      <div class="sg-square cc-palette_a500">
+                        <div>accent<br>(500)</div>
                       </div>
                     </div>
                   </palette>
@@ -3558,11 +3533,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="css-tag">container</div>
-                        <div class="css-tag">cc-10col</div>
+                        <div class="css-tag">cc-10c</div>
                       </div>
                     </div>
                     <div class="section cc-top-bottom-sm">
-                      <div class="w-layout-blockcontainer container cc-10col w-container">
+                      <div class="w-layout-blockcontainer container cc-10c w-container">
                         <div events="none">
                           <div class="title-wrapper cc-sm">
                             <h4 class="h4">Heading</h4>
@@ -3578,11 +3553,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="css-tag">container</div>
-                        <div class="css-tag">cc-8col</div>
+                        <div class="css-tag">cc-8c</div>
                       </div>
                     </div>
                     <div class="section cc-top-bottom-sm">
-                      <div class="w-layout-blockcontainer container cc-8col w-container">
+                      <div class="w-layout-blockcontainer container cc-8c w-container">
                         <div events="none">
                           <div class="title-wrapper cc-sm">
                             <h4 class="h4">Heading</h4>
@@ -3598,11 +3573,11 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="css-tag">container</div>
-                        <div class="css-tag">cc-6col</div>
+                        <div class="css-tag">cc-6c</div>
                       </div>
                     </div>
                     <div class="section cc-top-bottom-sm">
-                      <div class="w-layout-blockcontainer container cc-6col w-container">
+                      <div class="w-layout-blockcontainer container cc-6c w-container">
                         <div events="none">
                           <div class="title-wrapper cc-sm">
                             <h4 class="h4">Heading</h4>
@@ -3777,7 +3752,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="tag-wrapper"><span class="css-tag">image</span> <span class="css-tag">cc-1x1</span> / <span class="css-tag">cc-4x3</span> / <span class="css-tag">cc16x9</span></div>
                     </div>
                     <div class="block">
-                      <div gap="1-1" class="flex-cols">
+                      <div gap="1-1" class="flex-wrap-cols">
                         <div class="col cc-in-flex cc-p-0">
                           <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-1x1"></div>
                         </div>
@@ -3804,199 +3779,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                   </div>
                 </section>
-                <section id="columns" class="section">
-                  <div class="title-wrapper">
-                    <div class="title-wrapper">
-                      <h3>Columns</h3>
-                    </div>
-                    <div class="text-wrapper cc-max-40rem">
-                      <p>A few simple setups of column layout structures.</p>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">flex-cols</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">col</div>
-                        <div class="css-tag">cc-in-flex</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="flex-cols">
-                        <div class="col cc-in-flex">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                        <div class="col cc-in-flex">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                        <div class="col cc-in-flex">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">cols-layout</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">col</div>
-                        <div class="css-tag">cc-aside-col</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">col</div>
-                        <div class="css-tag">cc-main-col</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="cols-layout">
-                        <aside class="col cc-aside-col cc-on-left-xl">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                        </aside>
-                        <div class="col cc-main-col cc-px-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                        </div>
-                      </div>
-                      <div class="cols-layout">
-                        <div class="col cc-main-col cc-px-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                        </div>
-                        <aside class="col cc-aside-col cc-on-right-xl">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                        </aside>
-                      </div>
-                      <div class="cols-layout">
-                        <aside class="col cc-aside-col cc-on-left">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                        </aside>
-                        <div class="col cc-main-col">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                        </div>
-                      </div>
-                      <div class="cols-layout">
-                        <div class="col cc-main-col">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                        </div>
-                        <aside class="col cc-aside-col cc-on-right">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                        </aside>
-                      </div>
-                      <div class="cols-layout">
-                        <aside class="col cc-aside-col cc-on-left-lg">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                        </aside>
-                        <div class="col cc-main-col cc-px-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                        </div>
-                      </div>
-                      <div class="cols-layout">
-                        <div class="col cc-main-col cc-px-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                        </div>
-                        <aside class="col cc-aside-col cc-on-right-lg">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                        </aside>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">cols-layout</div>
-                        <div class="css-tag">cc-vflex-at-md</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">col</div>
-                        <div class="css-tag">cc-2col</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="cols-layout cc-vflex-at-md">
-                        <div class="col cc-2col">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                        <div class="col cc-2col">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">grid-cols</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">col</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="grid-cols">
-                        <div class="col cc-content">
-                          <div class="title-wrapper">
-                            <h4>Heading</h4>
-                          </div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                        <div class="col">
-                          <div style="min-height: 12rem;" class="u-bg-pattern cc-with-border"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">grid-cols</div>
-                        <div class="css-tag">cc-3col</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">col</div>
-                        <div class="css-tag">cc-p-0</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="grid-cols cc-3col">
-                        <div class="col cc-p-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                        <div class="col cc-p-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                        <div class="col cc-p-0">
-                          <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">grid-cols</div>
-                        <div class="css-tag">cc-h</div>
-                      </div>
-                      <div class="sg-note">note: <span class="css-tag">-h</span> for horizontal</div>
-                    </div>
-                    <div class="block">
-                      <div class="grid-cols cc-h">
-                        <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                        <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                        <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                        <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
                 <section id="spacers" class="section">
                   <div class="title-wrapper">
                     <div class="title-wrapper">
                       <h3>Spacer</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>Spacers are useful when you need some extra space in a layout but you don&#x27;t want to create a new wrapper or class for it. </p>
+                      <p>Spacers are useful when you need some extra space in a layout quickly.</p>
                     </div>
                   </div>
                   <div class="sg-element">
@@ -4004,10 +3793,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="tag-wrapper">
                         <div class="css-tag cc-component">Spacer</div>
                       </div>
-                      <div class="sg-note">enter height values in properties for different breakpoints</div>
+                      <div class="sg-note">input height values in properties for different breakpoints</div>
                     </div>
                     <div class="block">
-                      <div mb="2" class="u-bg-pattern">
+                      <div class="u-bg-pattern">
                         <div class="spacer">
                           <div style="height: 2rem" class="spacer-base"></div>
                           <div style="height: 2rem" class="spacer-md"></div>
@@ -4015,12 +3804,12 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           <div style="height: 2rem" class="spacer-xs"></div>
                         </div>
                       </div>
-                      <div class="u-bg-pattern">
+                      <div style="margin-top: 1rem;" class="u-bg-pattern">
                         <div class="spacer">
                           <div style="height: 6.5rem" class="spacer-base"></div>
-                          <div style="height: 4.5rem" class="spacer-md"></div>
-                          <div style="height: 3.5rem" class="spacer-sm"></div>
-                          <div style="height: 2.5rem" class="spacer-xs"></div>
+                          <div style="height: 5rem" class="spacer-md"></div>
+                          <div style="height: 4.5rem" class="spacer-sm"></div>
+                          <div style="height: 4rem" class="spacer-xs"></div>
                         </div>
                       </div>
                     </div>
@@ -4049,7 +3838,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           <div class="css-tag">u-text-base</div>
                         </div>
                       </div>
-                      <div bg="white" p-1="" class="block">
+                      <div style="padding: 1rem; background: #fff;" class="block">
                         <h5 class="u-text-base">Lorem ipsum dolor sit amet.</h5>
                       </div>
                     </div>
@@ -4059,7 +3848,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           <div class="css-tag">u-text-mu</div>
                         </div>
                       </div>
-                      <div bg="white" p-1="" class="block">
+                      <div style="padding: 1rem; background: #fff;" class="block">
                         <h5 class="u-text-mu">Lorem ipsum dolor sit amet.</h5>
                       </div>
                     </div>
@@ -4069,7 +3858,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           <div class="css-tag">u-text-brand</div>
                         </div>
                       </div>
-                      <div bg="white" p-1="" class="block">
+                      <div style="padding: 1rem; background: #fff;" class="block">
                         <h5 class="u-text-brand">Lorem ipsum dolor sit amet.</h5>
                       </div>
                     </div>
@@ -4079,7 +3868,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                           <div class="css-tag">u-text-stroke</div>
                         </div>
                       </div>
-                      <div bg="white" p-1="" class="block">
+                      <div style="padding: 1rem; background: #fff;" class="block">
                         <h5 class="u-text-stroke">Lorem ipsum dolor sit amet.</h5>
                       </div>
                     </div>
@@ -4278,7 +4067,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="sg-note">base styles of background and text are applied</div>
                     </div>
                     <div class="block">
-                      <div p-1="" class="u-bg-base">
+                      <div style="padding: 1rem; background: #fff;" class="u-bg-base">
                         <h5>Lorem ipsum dolor sit amet.</h5>
                         <div>This is some text inside of a div block.</div>
                       </div>
@@ -4291,13 +4080,13 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       </div>
                     </div>
                     <div gap="1-1" flex="col" class="block">
-                      <div class="u-bg-brand">
-                        <h5 m-1="">Lorem ipsum dolor sit amet.</h5>
-                      </div>
-                      <div p-1="" class="u-bg-brand">
+                      <div style="padding: 1rem;" class="u-bg-brand">
                         <h5>Lorem ipsum dolor sit amet.</h5>
-                        <p color="accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        <div p-1="" mt="1" class="u-bg-base">
+                      </div>
+                      <div style="padding: 1rem;" class="u-bg-brand">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p color="accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros <a href="#">elementum</a> tristique.</p>
+                        <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-base">
                           <h6>Lorem ipsum</h6>
                           <div>This is some text inside of a div block.</div>
                         </div>
@@ -4320,7 +4109,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                     <div class="block">
                       <div class="u-light-mode">
-                        <div events="none" p-1="" class="u-bg-base">
+                        <div style="padding: 1rem;" events="none" class="u-bg-base">
                           <h5>This one is special.</h5>
                           <div>This is some text inside of a div block.</div>
                         </div>
@@ -4336,7 +4125,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                     <div class="block">
                       <div class="u-dark-mode">
-                        <div events="none" p-1="" class="u-bg-base">
+                        <div style="padding: 1rem;" events="none" class="u-bg-base">
                           <h5>This one is special.</h5>
                           <div>This is some text inside of a div block.</div>
                         </div>
@@ -4770,18 +4559,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       </div>
                     </div>
                     <div class="block">
-                      <div class="flex-cols">
-                        <div style="padding: 0 1rem;" class="col cc-in-flex">
+                      <div class="grid-cols cc-3col">
+                        <div class="col cc-p-0">
                           <div stroke="" class="u-bg-pattern">
                             <div class="u-height-100vh">100vh</div>
                           </div>
                         </div>
-                        <div style="padding: 0 1rem;" class="col cc-in-flex">
+                        <div class="col cc-p-0">
                           <div stroke="" class="u-bg-pattern">
                             <div class="u-height-100dvh">100dvh</div>
                           </div>
                         </div>
-                        <div style="padding: 0 1rem;" class="col cc-in-flex">
+                        <div class="col cc-p-0">
                           <div stroke="" class="u-bg-pattern">
                             <div class="u-height-100svh">100svh</div>
                           </div>
@@ -4799,7 +4588,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
             <div id="richtext" class="sg-anchor"></div>
-            <h1 class="h1">Rich Text Element</h1>
+            <h1>Rich Text Element</h1>
           </div>
           <div class="sg-group">
             <div no-scrollbar="" class="sg-grid-scroll cc-1fr">
@@ -5151,17 +4940,17 @@ Result: "https://example.com?key=value#section"
         const LIGHT_CLASS = "u-light-mode";
         const DARK_CLASS = "u-dark-mode";
         const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // Check if changing of Light / Dark Mode (Theme) is allowed
+        // check if changing of Light / Dark Mode (Theme) is allowed
         function isThemeChangeAllowed() {
           return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
         }
-        // Get the system's preferred color scheme
+        // get the system's preferred color scheme
         function getSystemTheme() {
           return window.matchMedia("(prefers-color-scheme: dark)").matches ?
             "dark" :
             "light";
         }
-        // Apply the specified theme
+        // apply the specified theme
         function applyTheme(theme, savePreference = true) {
           if (!isThemeChangeAllowed()) return;
           const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
@@ -5179,18 +4968,18 @@ Result: "https://example.com?key=value#section"
             }
           }
         }
-        // Get the user's theme preference
+        // get the user's theme preference
         function getThemePreference() {
           return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
         }
-        // Initialize the theme on page load
+        // initialize the theme on page load
         function initializeTheme() {
           if (isThemeChangeAllowed()) {
             const themePreference = getThemePreference();
             applyTheme(themePreference, false);
           }
         }
-        // Set up event listeners for buttons and toggles
+        // set up event listeners for buttons and toggles
         function setupEventListeners() {
           const buttonSelectors = {
             "color-mode-system": SYSTEM_THEME,
@@ -5214,7 +5003,7 @@ Result: "https://example.com?key=value#section"
               });
             });
         }
-        // Run initialization when DOM is ready
+        // run initialization when DOM is ready
         function onDOMReady() {
           initializeTheme();
           setupEventListeners();
@@ -5224,7 +5013,7 @@ Result: "https://example.com?key=value#section"
         } else {
           onDOMReady();
         }
-        // Update theme when system preference changes
+        // update theme when system preference changes
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", () => {
