@@ -11,8 +11,8 @@ html { font-size: 1.125rem; }
 @media screen and (max-width:319px) { html { font-size: calc(0.749607rem + 0.629vw); } }
 
 /* basics */
-h1, h2, h3 { text-wrap: balance; }
 a { color: inherit; }
+h1, h2, h3 { text-wrap: balance; }
 img, svg, video, audio, canvas, iframe, embed, object { display: block; vertical-align: middle; }
 img, video { height: auto; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
@@ -24,13 +24,6 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 .w-richtext figure div { display: block !important; }
 .w-richtext figure.w-richtext-align-floatleft, .w-richtext figure.w-richtext-align-floatright { margin-block: 0.35em 0.05em; }
 .spacer * { padding: 0; }
-
-/* responsive containers */
-@media (min-width: 80rem) {
-	.container.cc-10col { width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 10) + 9rem + (var(--_sizes---container--padding) * 2))); }
-	.container.cc-8col { width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 8) + 7rem + (var(--_sizes---container--padding) * 2))); }
-	.container.cc-6col { width: min(100%, calc(((var(--_sizes---container--max-width) - (var(--_sizes---container--padding) * 2) - 11rem) / 12 * 6) + 5rem + (var(--_sizes---container--padding) * 2))); }
-}
 
 /* accessibility: focus styles */
 html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {

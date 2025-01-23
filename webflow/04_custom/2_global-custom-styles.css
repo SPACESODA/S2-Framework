@@ -22,13 +22,3 @@ body * { text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem); }
 
 /* styles for RTL lauout */
 [direction="rtl"] .main-nav_menu { margin-left: 0rem !important; margin-right: auto; }
-
-/* media queries template */
-/*
-@media screen and (min-width: 1280px) {}
-@media screen and (min-width: 1440px) {}
-@media screen and (min-width: 1920px) {}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 479px) {}
-*/

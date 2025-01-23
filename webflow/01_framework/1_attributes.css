@@ -71,7 +71,7 @@
 [position="static"] { position: static; }
 [position="relative"] { position: relative; }
 [position="absolute"] { position: absolute; }
-[z-index="0"] { z-index: 0; }  [z-index="-1"] { z-index: -1; }
+[z-index="0"] { z-index: 0; }  [z-index="1"] { z-index: 1; }  [z-index="-1"] { z-index: -1; }
 [z-index="top"] { z-index: 999999 !important; }  [z-index="bottom"] { z-index: -999999 !important; }  [z-index="auto"] { z-index: auto; }  
 [p-0] { padding: 0; }  [p-1] { padding: 1rem; }  [p-2] { padding: 2rem; }  [p-3] { padding: 3rem; }
 [m-0] { margin: 0; }  [m-1] { margin: 1rem; }  [m-2] { margin: 2rem; }  [m-3] { margin: 3rem; }

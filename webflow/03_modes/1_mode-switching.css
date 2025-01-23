@@ -1,6 +1,6 @@
-/* -------------------- */
-/* -- Mode Switching -- */
-/* -------------------- */
+/* ---------------------- */
+/* -- Styles for Modes -- */
+/* ---------------------- */
 
 /* ui elements for mode switching */
 .body.u-light-mode .toggle {}
@@ -11,3 +11,5 @@
 	background-color: #bbb;
 	color: #ddd;
 }
+
+/* other styles related to modes and themes */

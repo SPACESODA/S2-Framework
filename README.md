@@ -2,7 +2,7 @@
 
 ### Flexible, Easy to master, and Straightforward.
 
-S2 is a modern Webflow-optimized framework designed for ease of use. It provides a robust foundation for any project, whether you're just getting started or already a seasoned pro.
+The S2 Framework is a modern Webflow-optimized framework that provides a perfect foundation for projects of any size, whether you’re just starting out or an experienced pro.
 
 Explore and clone: https://s2-framework.webflow.io
 
