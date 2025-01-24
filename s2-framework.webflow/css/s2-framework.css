@@ -3565,17 +3565,7 @@ figcaption {
   flex: 1;
 }
 
-.col.cc-in-flex.cc-p-0 {
-  padding: 0;
-}
-
-.col.cc-min-25rem {
-  flex: none;
-  width: 25rem;
-  padding: 1rem 0;
-}
-
-.col.cc-p-0 {
+.col.cc-in-flex.cc-p-0, .col.cc-p-0 {
   padding: 0;
 }
 
@@ -3707,11 +3697,11 @@ figcaption {
 
 .col.cc-12c {
   max-width: var(--_sizes---container--max-width);
+  width: calc((min(100vw, var(--_sizes---container--max-width))  - (var(--_sizes---container--padding) * 2)  - 11rem)  + 11rem);
   flex-flow: column;
   flex: none;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
   padding: 0;
   display: block;
 }
@@ -5399,8 +5389,12 @@ figcaption {
 
 .sg-side_nav {
   grid-row-gap: 1.5rem;
-  border-radius: var(--_sizes---radius--card);
+  border-top-left-radius: var(--_sizes---radius--card);
+  border-top-right-radius: var(--_sizes---radius--card);
+  border-bottom-left-radius: var(--_sizes---radius--card);
+  border-bottom-right-radius: var(--_sizes---radius--card);
   background-color: var(--s2--surface-alt);
+  top: calc(var(--_sizes---main-nav--height)  + 1rem);
   flex-direction: column;
   max-height: 70vh;
   margin-top: 0;
@@ -5408,7 +5402,6 @@ figcaption {
   padding: 1.75rem 1.75rem 2.5rem;
   display: flex;
   position: sticky;
-  top: 4.5rem;
   overflow: auto;
 }
 
@@ -5877,7 +5870,7 @@ figcaption {
   padding: 0;
 }
 
-.u-base-setup {
+.u-base {
   font-size: clamp(1rem, .92525rem + .2497vw, 1.125rem);
 }
 
@@ -6467,10 +6460,6 @@ figcaption {
     padding-bottom: 0;
   }
 
-  .col.cc-min-25rem {
-    width: 22rem;
-  }
-
   .col.cc-p-responsive {
     padding: 1.5rem 0;
   }
@@ -6496,7 +6485,7 @@ figcaption {
   }
 
   .col.cc-6c, .col.cc-7c, .col.cc-8c, .col.cc-9c, .col.cc-10c, .col.cc-11c, .col.cc-12c {
-    width: 100%;
+    width: calc((min(100vw, var(--_sizes---container--max-width))  - (var(--_sizes---container--padding) * 2)  - 5rem)  + 5rem);
   }
 
   .title-heading.cc-lg {
@@ -6851,10 +6840,6 @@ figcaption {
     padding-top: 1rem;
   }
 
-  .col.cc-min-25rem {
-    width: calc(100vw - (var(--_sizes---container--padding) * 2));
-  }
-
   .col.cc-p-responsive {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -6990,6 +6975,10 @@ figcaption {
 
   .sg-note {
     font-size: .85rem;
+  }
+
+  .sg-grid-demo {
+    box-shadow: 0 0 0 8px var(--colors--surface), 0 0 0 9px var(--colors--stroke);
   }
 
   .sg-anchor {
