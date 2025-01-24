@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Jan 24 2025 02:02:05 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -112,7 +112,7 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
 THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
 </head>
-<body direction="" body="sg" theme-change="false" class="body">
+<body direction="" body="sg" theme-change="false" class="u-base-setup">
   <div class="sg-grid-guide">
     <div class="css w-embed">
       <style>
@@ -154,35 +154,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
           }
-          html {
-            font-size: 1.125rem;
-          }
-          @media screen and (max-width:1920px) {
-            html {
-              font-size: 1.125rem;
-            }
-          }
-          @media screen and (max-width:1440px) {
-            html {
-              font-size: calc(0.937695rem + 0.208vw);
-            }
-          }
-          @media screen and (max-width:479px) {
-            html {
-              font-size: 1rem;
-            }
-          }
-          @media screen and (max-width:319px) {
-            html {
-              font-size: calc(0.749607rem + 0.629vw);
-            }
-          }
-          a {
-            color: inherit;
-          }
         </style>
     </div>
-    <div class="css w-embed">
+    <div code="css" class="css w-embed">
       <style>
           /* -- Style Guide: Custom Styles -- */
           /* Only used for styling the style guide. */
@@ -344,12 +318,55 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <h1 class="sg-hero-heading">S2 Framework for Templates</h1>
             </div>
             <div class="text-wrapper cc-max-40rem">
-              <p>Are you a template creator? Since Webflow doesn’t allow custom code in templates, we built a streamlined one-page S2 Framework tailored for template creation.</p>
-              <p>Customize to make this page your style guide. <a href="https://s2-framework.gitbook.io/docs/guide-and-documentation/for-template-creators" target="_blank">Learn more</a>.</p>
+              <p>Are you a template creator? Since Webflow doesn’t allow custom code in templates, we built a streamlined one-page S2 Framework tailored for template creation. <strong>Customize to make this page your style guide.</strong></p>
+            </div>
+            <div class="button-wrapper">
+              <a href="https://s2-framework.gitbook.io/docs/guide-and-documentation/for-template-creators" target="_blank" class="button w-inline-block">
+                <div>Learn more</div>
+                <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                  </svg></div>
+              </a>
             </div>
           </div>
           <div class="text-wrapper">
-            <p class="text-xs">If you are not building a template, you can simply delete this page — 100% safe!</p>
+            <p class="text-sm">If you are not building a template, you can simply delete this page — 100% safe!</p>
+          </div>
+        </div>
+      </section>
+      <section id="basics" class="section cc-top-sm">
+        <div class="w-layout-blockcontainer container w-container">
+          <div id="typography" class="sg-group">
+            <div class="title-wrapper">
+              <h2>Base Setup</h2>
+            </div>
+            <section id="headings" class="section cc-top-bottom-sm">
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="css-tag">u-base-setup</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="u-base-setup">
+                    <p>Utility class for base styles. Additional styles can be applied.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="css-tag cc-html">Body</div>
+                    <div class="css-tag">body</div>
+                    <div class="css-tag">u-base-setup</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <p>Since custom code cannot be used to achieve Fluid Responsive typography when making Webflow Templates, it is not possible to set fluid values for the root font size. The closest alternative is to apply a class to <span class="css-tag cc-html">Body</span> with a font size value defined using the <code>clamp()</code> function. This approach applies a fluid responsive font size to text elements that do not have specific font size values set.</p>
+                  <p>Visit the <a href="https://s2-framework.gitbook.io/docs/guide-and-documentation/for-template-creators" target="_blank">docs</a> for more details.</p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>
@@ -947,10 +964,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-tags">
                   <div class="tag-wrapper">
                     <div class="css-tag">section</div>
-                    <div class="css-tag">cc-surface</div>
+                    <div class="css-tag">cc-bg-surface</div>
                   </div>
                 </div>
-                <div class="section cc-surface">
+                <div class="section cc-bg-surface">
                   <div events="none" class="w-layout-blockcontainer container w-container">
                     <div class="title-wrapper cc-sm">
                       <h4 class="h4">Heading</h4>
@@ -1612,12 +1629,12 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">u-bg-base</div>
+                    <div class="css-tag">u-bg-surface</div>
                   </div>
-                  <div class="sg-note">base styles of background and text are applied</div>
+                  <div class="sg-note">background and text styles are applied</div>
                 </div>
                 <div class="block">
-                  <div style="padding: 1rem; background: #fff;" class="u-bg-base">
+                  <div style="padding: 1rem; background: #fff;" class="u-bg-surface">
                     <h5>Lorem ipsum dolor sit amet.</h5>
                     <div>This is some text inside of a div block.</div>
                   </div>
@@ -1636,7 +1653,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <div style="padding: 1rem;" class="u-bg-brand">
                     <h5>Lorem ipsum dolor sit amet.</h5>
                     <p color="accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros <a href="#">elementum</a> tristique.</p>
-                    <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-base">
+                    <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-surface">
                       <h6>Lorem ipsum</h6>
                       <div>This is some text inside of a div block.</div>
                     </div>
@@ -2070,18 +2087,18 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   </div>
                 </div>
                 <div class="block">
-                  <div class="grid-cols cc-3col">
-                    <div class="col cc-p-0">
+                  <div class="cols-layout cc-non-responsive">
+                    <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
                       <div stroke="" class="u-bg-pattern">
                         <div class="u-height-100vh">100vh</div>
                       </div>
                     </div>
-                    <div class="col cc-p-0">
+                    <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
                       <div stroke="" class="u-bg-pattern">
                         <div class="u-height-100dvh">100dvh</div>
                       </div>
                     </div>
-                    <div class="col cc-p-0">
+                    <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
                       <div stroke="" class="u-bg-pattern">
                         <div class="u-height-100svh">100svh</div>
                       </div>
@@ -3772,16 +3789,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <div class="sg-note">Adding combo class to rich text elements is a bit tricky. You need to create and add styles to a combo class first.</div>
                     </div>
                   </div>
-                  <div class="col cc-min-25rem">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">richtext-list</div>
-                      </div>
-                      <div class="sg-note">
-                        <a href="https://atomiks.github.io/tippyjs/" target="_blank">tippy.js</a> is used for the tooltips function
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div flex="row" style="gap: 4rem;" class="block">
                   <div class="col cc-min-25rem">
@@ -3990,46 +3997,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
-                  <div class="col cc-min-25rem">
-                    <div class="richtext-list w-richtext">
-                      <h3>List of features</h3>
-                      <h4>List of features</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.</p>
-                      <h5>Lorem ipsum dolor sit</h5>
-                      <ul role="list">
-                        <li>Tippy Tooltips example: consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. <em data-tippy-content="This is a tippy tooltips content.">?</em></li>
-                        <li>Lorem ipsum dolor sit amet <em data-tippy-content="Lorem ipsum">?</em>‍</li>
-                        <li>Lorem ipsum dolor</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet, suspendisse tincidunt sagittis eros. Quisque quis euismod lorem.</p>
-                      <h5>Lorem ipsum dolor sit amet consectetur adipiscing elit suspendisse tincidunt sagittis erosorem</h5>
-                      <ul role="list">
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor</li>
-                      </ul>
-                      <h5>Lorem ipsum</h5>
-                      <ul role="list">
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros.</p>
-                      <ol start="1" role="list">
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor<ol role="list">
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum dolor</li>
-                          </ol>
-                        </li>
-                        <li>Lorem ipsum dolor<ul role="list">
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <li>Lorem ipsum dolor</li>
-                          </ul>
-                        </li>
-                        <li>Lorem ipsum</li>
-                      </ol>
-                      <p>Lorem ipsum quisque quis euismod lorem.</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -4040,40 +4007,14 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div style="padding: 0;" class="container cc-full">
           <div id="top" class="page">
             <div class="code">
-              <div class="js w-embed"></div>
-              <div class="css w-embed">
+              <div code="js" class="js w-embed"></div>
+              <div code="css" class="css w-embed">
                 <style>
                     /* -- Global Base Setup -- */
                     body {
                       -webkit-font-smoothing: antialiased;
                       -moz-osx-font-smoothing: grayscale;
                       text-rendering: optimizeLegibility;
-                    }
-                    html {
-                      font-size: 1.125rem;
-                    }
-                    @media screen and (max-width:1920px) {
-                      html {
-                        font-size: 1.125rem;
-                      }
-                    }
-                    @media screen and (max-width:1440px) {
-                      html {
-                        font-size: calc(0.937695rem + 0.208vw);
-                      }
-                    }
-                    @media screen and (max-width:479px) {
-                      html {
-                        font-size: 1rem;
-                      }
-                    }
-                    @media screen and (max-width:319px) {
-                      html {
-                        font-size: calc(0.749607rem + 0.629vw);
-                      }
-                    }
-                    a {
-                      color: inherit;
                     }
                   </style>
               </div>

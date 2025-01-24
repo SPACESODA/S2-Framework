@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Jan 23 2025 09:32:16 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Jan 24 2025 02:02:05 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -91,7 +91,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 <body direction="" body="sg" class="body">
   <div id="top" class="page">
     <div class="code">
-      <div class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
+      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
         <!--  The Mode Switching script is placed in custom "Footer code".  -->
         <script>
             (function() {
@@ -2188,7 +2188,8 @@ Usage example of 20px offset, 360ms delay, in a group "features":
               padding-bottom: calc(1.25rem + 0.125rem);
             }
             /* expand the demo element to full-screen */
-            [demo-expand="true"] {
+            [demo-expand="true"],
+            .cc-expand {
               position: fixed;
               top: 0rem;
               right: 0rem;
@@ -3362,10 +3363,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="css-tag">section</div>
-                        <div class="css-tag">cc-surface</div>
+                        <div class="css-tag">cc-bg-surface</div>
                       </div>
                     </div>
-                    <div class="section cc-surface">
+                    <div class="section cc-bg-surface">
                       <div events="none" class="w-layout-blockcontainer container w-container">
                         <div class="title-wrapper cc-sm">
                           <h4 class="h4">Heading</h4>
@@ -4064,10 +4065,10 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div class="tag-wrapper">
                         <div class="css-tag">u-bg-base</div>
                       </div>
-                      <div class="sg-note">base styles of background and text are applied</div>
+                      <div class="sg-note">background and text styles are applied</div>
                     </div>
                     <div class="block">
-                      <div style="padding: 1rem; background: #fff;" class="u-bg-base">
+                      <div style="padding: 1rem; background: #fff;" class="u-bg-surface">
                         <h5>Lorem ipsum dolor sit amet.</h5>
                         <div>This is some text inside of a div block.</div>
                       </div>
@@ -4086,7 +4087,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       <div style="padding: 1rem;" class="u-bg-brand">
                         <h5>Lorem ipsum dolor sit amet.</h5>
                         <p color="accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros <a href="#">elementum</a> tristique.</p>
-                        <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-base">
+                        <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-surface">
                           <h6>Lorem ipsum</h6>
                           <div>This is some text inside of a div block.</div>
                         </div>
@@ -4109,7 +4110,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                     <div class="block">
                       <div class="u-light-mode">
-                        <div style="padding: 1rem;" events="none" class="u-bg-base">
+                        <div style="padding: 1rem;" events="none" class="u-bg-surface">
                           <h5>This one is special.</h5>
                           <div>This is some text inside of a div block.</div>
                         </div>
@@ -4125,7 +4126,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                     </div>
                     <div class="block">
                       <div class="u-dark-mode">
-                        <div style="padding: 1rem;" events="none" class="u-bg-base">
+                        <div style="padding: 1rem;" events="none" class="u-bg-surface">
                           <h5>This one is special.</h5>
                           <div>This is some text inside of a div block.</div>
                         </div>
@@ -4559,18 +4560,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                       </div>
                     </div>
                     <div class="block">
-                      <div class="grid-cols cc-3col">
-                        <div class="col cc-p-0">
+                      <div class="cols-layout cc-non-responsive">
+                        <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
                           <div stroke="" class="u-bg-pattern">
                             <div class="u-height-100vh">100vh</div>
                           </div>
                         </div>
-                        <div class="col cc-p-0">
+                        <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
                           <div stroke="" class="u-bg-pattern">
                             <div class="u-height-100dvh">100dvh</div>
                           </div>
                         </div>
-                        <div class="col cc-p-0">
+                        <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
                           <div stroke="" class="u-bg-pattern">
                             <div class="u-height-100svh">100svh</div>
                           </div>
