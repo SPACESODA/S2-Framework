@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Jan 27 2025 06:38:59 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Jan 27 2025 15:30:25 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -97,7 +97,8 @@ Usage example of 20px offset, 360ms delay, in a group "features":
 </head>
 <body direction="" body="sg" class="body">
   <div style="position: fixed; left: 0.75rem; bottom: 0.75rem; z-index: 999999;">
-    <div code="js" class="js w-embed w-script"><!--  Microsoft Clarity  -->
+    <div code="js" class="js w-embed w-iframe w-script"><!--  Microsoft Clarity  -->
+      <!--  For Style Guide only, you don't need this for your site.  -->
       <script type="text/javascript">
           (function(c, l, a, r, i, t, y) {
             c[a] = c[a] || function() {
@@ -109,6 +110,18 @@ Usage example of 20px offset, 360ms delay, in a group "features":
             y = l.getElementsByTagName(r)[0];
             y.parentNode.insertBefore(t, y);
           })(window, document, "clarity", "script", "pz73j4n04o");
+        </script>
+      <!--  Hide Cookie Concent in iFrames  -->
+      <!--  For Style Guide only, you don't need this for your site.  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
         </script>
     </div>
     <div>

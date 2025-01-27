@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Jan 27 2025 06:38:59 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Jan 27 2025 15:30:25 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -134,7 +134,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </head>
 <body body="sg" theme-change="false" class="body u-dark-mode">
   <div style="position: fixed; left: 0.75rem; bottom: 0.75rem; z-index: 999999;">
-    <div code="js" class="js w-embed w-script"><!--  Microsoft Clarity  -->
+    <div code="js" class="js w-embed w-iframe w-script"><!--  Microsoft Clarity  -->
+      <!--  For Style Guide only, you don't need this for your site.  -->
       <script type="text/javascript">
           (function(c, l, a, r, i, t, y) {
             c[a] = c[a] || function() {
@@ -146,6 +147,18 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             y = l.getElementsByTagName(r)[0];
             y.parentNode.insertBefore(t, y);
           })(window, document, "clarity", "script", "pz73j4n04o");
+        </script>
+      <!--  Hide Cookie Concent in iFrames  -->
+      <!--  For Style Guide only, you don't need this for your site.  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
         </script>
     </div>
   </div>
@@ -2118,7 +2131,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div class="sg-bg-col"></div>
         <div class="sg-bg-col"></div>
       </div>
-      <section position="relative" height-is="min-100svh" flex="col" place-content="between" sg-section="hero" class="section cc-bottom-0">
+      <section position="relative" height-is="min-100svh" flex="col" place-content="between" sg-section="hero" style="padding: 3.5rem 0 2rem 0;" class="section">
         <div events="none" z-index="-1" overflow="hidden" class="absolute-full-wrapper"><img src="https://cnd-host.pages.dev/files/s2/bg-gradient.webp" loading="eager" class="section_bg-deco cc-s2">
           <div opacity="1" user-select="none" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/sc01.webp" loading="auto" animation="slideIn" animationplay="0px, 200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-left-01">
             <div loading="auto" animation="slideIn" animationplay="0px, 800" style="border: none !important;" class="sg-hero-deco cc-left-02"><img src="images/S2-C0C0C0-256.svg" alt="S2 Framework&#x27;s brand logo" opacity="0.2" class="image cc-contain"></div><img src="https://cnd-host.pages.dev/files/s2/sc02.webp" loading="auto" animation="slideIn" animationplay="0px, 1200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/sc03.webp" loading="auto" animation="slideIn" animationplay="0px, 400" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-02">
@@ -2161,7 +2174,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             <a href="s2/for-templates.html" class="text-sm">Template creators?</a>
           </div>
         </div>
-        <div style="padding: 1.5rem 0.25rem;" flex="col" gap="sm" mt="2" mb="2" class="text-wrapper cc-align-center">
+        <div style="padding: 1.5rem 0.25rem;" flex="col" gap="sm" mt="2" class="text-wrapper cc-align-center">
           <div text-deco="none" font-size="xs" flex-wrap="wrap-nice" gap="word" data-nosnippet="true" class="u-hflex-center-center w-embed"><span>
               <a href="https://s2-framework.gitbook.io/docs/copyright-and-terms" target="_blank" aria-label="Copyright and terms">&copy;</a>
             </span>
@@ -2200,18 +2213,19 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </section>
     </main>
   </div>
-  <div cookieconsent="true" cookieconsent-duration="5" class="cookie-consent cc-position cc-floating">
+  <div cookieconsent="true" cookieconsent-duration="180" data-nosnippet="true" class="cookie-consent cc-position cc-floating-style">
     <div class="cookie-consent_modal">
       <div class="cookie-consent_content">
         <div class="title-wrapper cc-xxs">
           <div class="h5">🍪 Okay with Cookies?</div>
         </div>
-        <div class="text-sm">We use <a href="http://clarity.microsoft.com" target="_blank">Microsoft Clarity</a> in the S2 Framework cloneable to help us improve. By continuing to use our site, you consent to the use of cookies. Btw, this is also a simple Cookie Consent component.</div>
+        <div class="text-sm">We use <a href="http://clarity.microsoft.com" target="_blank">Microsoft Clarity</a> in the S2 Framework cloneable to help us improve. No personal data is collected. By continuing to browse, you consent to the use of cookies. Clone to copy this Cookie Consent component to your site!</div>
       </div>
-      <div class="cookie-consent_actions">
-        <div cookieconsent-action="allow" class="button cc-sm">
-          <div>Allow cookies</div>
-        </div><button cookieconsent-action="decline" class="button cc-sm cc-outline"><span cookieconsent-message="decline">Decline</span><span cookieconsent-message="close" style="display: none;">Close this site</span></button>
+      <div user-select="none" class="cookie-consent_actions">
+        <div cookieconsent-action="allow" class="button">
+          <div>Alright 👌</div>
+        </div><button cookieconsent-action="decline" class="button cc-outline"><span cookieconsent-message="decline">Decline</span><span cookieconsent-message="close" style="display: none;">Close this site</span></button>
+        <div class="text-sm">Just a heads-up: This is a simple consent notice for transparency, not EU rules.</div>
       </div>
     </div>
     <div code="js" class="js w-embed w-script"><!--  Simple Cookie Consent  -->

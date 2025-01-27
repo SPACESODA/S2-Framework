@@ -5892,7 +5892,8 @@ figcaption {
 
 .cookie-consent {
   z-index: 9500;
-  max-width: 25rem;
+  color: var(--colors--text);
+  max-width: 26rem;
   height: auto;
   display: flex;
   overflow: hidden;
@@ -5900,18 +5901,20 @@ figcaption {
 
 .cookie-consent.cc-position {
   z-index: 999999;
+  margin: 0;
+  padding: 0;
   position: fixed;
   inset: auto 0% 0% auto;
 }
 
-.cookie-consent.cc-position.cc-floating {
+.cookie-consent.cc-position.cc-floating-style {
   border-radius: var(--_sizes---radius--card);
   outline-color: var(--colors--stroke-subtle);
   outline-offset: 0px;
   outline-width: 1px;
   outline-style: solid;
-  bottom: .5rem;
-  right: .5rem;
+  margin-bottom: .5rem;
+  margin-right: .5rem;
 }
 
 .cookie-consent_actions {
@@ -6958,8 +6961,8 @@ figcaption {
     inset: auto 0% 0%;
   }
 
-  .cookie-consent.cc-position.cc-floating {
-    max-width: calc(100% - 1rem);
+  .cookie-consent.cc-position.cc-floating-style {
+    margin-left: .5rem;
   }
 }
 
