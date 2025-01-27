@@ -238,7 +238,7 @@ h1 {
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 5rem;
+  font-size: clamp(3rem, 4vi + 1.803rem, 5rem);
   font-weight: 400;
   line-height: 1.125;
 }
@@ -247,7 +247,7 @@ h2 {
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 4rem;
+  font-size: clamp(2.409rem, 2.604vi + 1.629rem, 3.71rem);
   font-weight: 400;
   line-height: 1.175;
 }
@@ -256,7 +256,7 @@ h3 {
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 3rem;
+  font-size: clamp(1.933rem, 1.64vi + 1.442rem, 2.753rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -265,7 +265,7 @@ h4 {
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.5rem;
+  font-size: clamp(1.552rem, .982vi + 1.258rem, 2.043rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -274,7 +274,7 @@ h5 {
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2rem;
+  font-size: clamp(1.246rem, .541vi + 1.084rem, 1.516rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -283,7 +283,7 @@ h6 {
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, .25vi + .925rem, 1.125rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -646,37 +646,37 @@ figcaption {
 
 .h1 {
   font-family: var(--_text---font-family--headings);
-  font-size: 5rem;
+  font-size: clamp(3rem, 4vi + 1.803rem, 5rem);
   line-height: 1.125;
 }
 
 .h2 {
   font-family: var(--_text---font-family--headings);
-  font-size: 4rem;
+  font-size: clamp(2.409rem, 2.604vi + 1.629rem, 3.71rem);
   line-height: 1.175;
 }
 
 .h3 {
   font-family: var(--_text---font-family--headings);
-  font-size: 3rem;
+  font-size: clamp(1.933rem, 1.64vi + 1.442rem, 2.753rem);
   line-height: 1.2;
 }
 
 .h4 {
   font-family: var(--_text---font-family--headings);
-  font-size: 2.5rem;
+  font-size: clamp(1.552rem, .982vi + 1.258rem, 2.043rem);
   line-height: 1.2;
 }
 
 .h5 {
   font-family: var(--_text---font-family--headings);
-  font-size: 2rem;
+  font-size: clamp(1.246rem, .541vi + 1.084rem, 1.516rem);
   line-height: 1.2;
 }
 
 .h6 {
   font-family: var(--_text---font-family--headings);
-  font-size: 1.5rem;
+  font-size: clamp(1rem, .25vi + .925rem, 1.125rem);
   line-height: 1.2;
 }
 
@@ -851,6 +851,7 @@ figcaption {
   color: var(--_palettes---brand--on500);
   text-align: center;
   text-shadow: none;
+  cursor: pointer;
   flex: none;
   justify-content: center;
   align-items: center;
@@ -3756,7 +3757,7 @@ figcaption {
 .title-eyebrow {
   color: var(--colors--brand);
   margin-top: .5em;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.25;
 }
@@ -4336,6 +4337,7 @@ figcaption {
 
 .sg-hero-heading {
   letter-spacing: -.0175em;
+  font-size: 6rem;
 }
 
 .sg-hero-deco {
@@ -5871,7 +5873,67 @@ figcaption {
 }
 
 .u-base {
-  font-size: clamp(1rem, .92525rem + .2497vw, 1.125rem);
+  font-size: clamp(1rem, .25vi + .925rem, 1.125rem);
+}
+
+.cookie-consent_content {
+  padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.cookie-consent_modal {
+  background-color: var(--colors--surface);
+  flex-direction: column;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: relative;
+}
+
+.cookie-consent {
+  z-index: 9500;
+  max-width: 25rem;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.cookie-consent.cc-position {
+  z-index: 999999;
+  position: fixed;
+  inset: auto 0% 0% auto;
+}
+
+.cookie-consent.cc-position.cc-floating {
+  border-radius: var(--_sizes---radius--card);
+  outline-color: var(--colors--stroke-subtle);
+  outline-offset: 0px;
+  outline-width: 1px;
+  outline-style: solid;
+  bottom: .5rem;
+  right: .5rem;
+}
+
+.cookie-consent_actions {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1.5rem 1.25rem;
+  display: flex;
+}
+
+.h7 {
+  font-family: var(--_text---font-family--headings);
+  font-size: clamp(.875rem, .064vi + .784rem, .835rem);
+  line-height: 1.15;
+}
+
+.h8 {
+  font-family: var(--_text---font-family--headings);
+  font-size: clamp(.75rem, .659rem - .05vi, .619rem);
+  line-height: 1.15;
 }
 
 @media screen and (max-width: 991px) {
@@ -5906,30 +5968,6 @@ figcaption {
     --_sizes---icon--large: 2rem;
   }
 
-  h1 {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 3.5rem;
-  }
-
-  h3 {
-    font-size: 2.5rem;
-  }
-
-  h4 {
-    font-size: 2.25rem;
-  }
-
-  h5 {
-    font-size: 1.75rem;
-  }
-
-  h6 {
-    font-size: 1.5rem;
-  }
-
   .sg-demo-card.cc-col-adjusted {
     grid-column: 2 / span 10;
   }
@@ -5938,40 +5976,12 @@ figcaption {
     max-width: var(--_sizes---container--max-width);
   }
 
-  .h1 {
-    font-size: 4rem;
-  }
-
-  .h2 {
-    font-size: 3.5rem;
-  }
-
-  .h3 {
-    font-size: 2.5rem;
-  }
-
-  .h4 {
-    font-size: 2.25rem;
-  }
-
-  .h5 {
-    font-size: 1.75rem;
-  }
-
-  .h6 {
-    font-size: 1.5rem;
-  }
-
   .button-wrapper {
     margin-top: 1.25rem;
   }
 
   .u-hide_md {
     display: none;
-  }
-
-  .text-xl {
-    font-size: 1.25rem;
   }
 
   .card.cc-heavy {
@@ -6091,7 +6101,7 @@ figcaption {
   }
 
   .sg-hero-heading {
-    font-size: 9vw;
+    font-size: 10vw;
   }
 
   .sg-hero-deco.cc-left-01 {
@@ -6122,8 +6132,12 @@ figcaption {
     width: 8rem;
   }
 
-  .text-2xl, .text-3xl {
-    font-size: 1.25rem;
+  .text-2xl {
+    font-size: 1.35rem;
+  }
+
+  .text-3xl {
+    font-size: 1.45rem;
   }
 
   .section_bg-deco.cc-s2 {
@@ -6528,7 +6542,7 @@ figcaption {
   }
 
   .sg-hero-heading {
-    font-size: 12vw;
+    font-size: 13vw;
   }
 
   .sg-hero-deco.cc-left-01 {
@@ -6699,30 +6713,6 @@ figcaption {
     --_sizes---icon--large: 2rem;
   }
 
-  h1 {
-    font-size: 3.5rem;
-  }
-
-  h2 {
-    font-size: 3rem;
-  }
-
-  h3 {
-    font-size: 2.25rem;
-  }
-
-  h4 {
-    font-size: 1.75rem;
-  }
-
-  h5 {
-    font-size: 1.5rem;
-  }
-
-  h6 {
-    font-size: 1.25rem;
-  }
-
   code, .css-tag {
     font-size: .85em;
   }
@@ -6746,38 +6736,6 @@ figcaption {
 
   .grid-cols.cc-4col {
     grid-template-columns: 1fr;
-  }
-
-  .h1 {
-    font-size: 3.5rem;
-  }
-
-  .h2 {
-    font-size: 3rem;
-  }
-
-  .h3 {
-    font-size: 2.25rem;
-  }
-
-  .h4 {
-    font-size: 1.75rem;
-  }
-
-  .h5 {
-    font-size: 1.5rem;
-  }
-
-  .h6 {
-    font-size: 1.25rem;
-  }
-
-  .text-base {
-    font-size: 1rem;
-  }
-
-  .text-lg {
-    font-size: 1.13rem;
   }
 
   .code-tag {
@@ -6875,7 +6833,8 @@ figcaption {
   }
 
   .title-eyebrow {
-    font-size: 1.075rem;
+    font-size: 1rem;
+    line-height: 1.175;
   }
 
   .sg-50p {
@@ -6910,7 +6869,7 @@ figcaption {
   }
 
   .sg-hero-heading {
-    font-size: 13vw;
+    font-size: 13.5vw;
   }
 
   .main-logo.cc-full-logo {
@@ -6988,6 +6947,19 @@ figcaption {
   .mode-switch_button {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .cookie-consent_modal {
+    max-width: 100%;
+  }
+
+  .cookie-consent {
+    max-width: 100%;
+    inset: auto 0% 0%;
+  }
+
+  .cookie-consent.cc-position.cc-floating {
+    max-width: calc(100% - 1rem);
   }
 }
 

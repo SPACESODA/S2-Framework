@@ -11,7 +11,6 @@ html { font-size: 1.125rem; }
 @media screen and (max-width:319px) { html { font-size: calc(0.749607rem + 0.629vw); } }
 
 /* basics */
-a { color: inherit; }
 h1, h2, h3 { text-wrap: balance; }
 img, svg, video, audio, canvas, iframe, embed, object { display: block; vertical-align: middle; }
 img, video { height: auto; }
