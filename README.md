@@ -4,20 +4,18 @@
 
 The S2 Framework is a modern Webflow-optimized framework that provides a solid foundation for projects of any size, whether you're just starting out or an experienced pro. Build better, faster!
 
-Explore and clone: https://s2-framework.webflow.io
+**Explore and clone:** https://s2-framework.webflow.io
 
 
 <br><br>
 
 
-**Get started by reading the guide!**
-
-📗 https://s2-framework.gitbook.io
+**Full Docs (Japanese version coming soon):** <br>
+📘 https://s2-framework.gitbook.io
 
 <br>
 
-**Support & community on Discord**
-
+**Support & community on Discord:** <br>
 💬 https://s2-framework.webflow.io/#discord
 
 
@@ -26,7 +24,7 @@ Explore and clone: https://s2-framework.webflow.io
 
 **CDN**
 
-S1 Attributes: <code>https://s2-framework.pages.dev/webflow/01_framework/1_attributes.css</code>
+S2 Attributes: <code>https://s2-framework.pages.dev/webflow/01_framework/1_attributes.css</code>
 
 S2 Colors & Palettes: <code>https://s2-framework.pages.dev/webflow/01_framework/2_colors-palettes.css</code>
 
