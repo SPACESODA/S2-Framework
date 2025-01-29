@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 29 2025 04:34:59 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Jan 29 2025 09:49:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -3093,7 +3093,9 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   <h2 class="h4">Marquee / Carousel</h2>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>We use <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> for the JavaScript marquee. In the CSS marquee, you can use <span class="css-tag cc-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough to create a loop.</p>
+                  <p>
+                    <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> is used for the JavaScript version. And in the pure CSS version, you can use <span class="css-tag cc-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough for looping.
+                  </p>
                 </div>
               </div>
               <div class="s2-demo">
@@ -3129,7 +3131,7 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                   <div>Marquee (CSS)</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
-                  <div top-bottom="base" px="0" class="container cc-full">
+                  <div gap="3-3" px="0" top-bottom="base" flex="col" class="container cc-full">
                     <div class="css-marquee-wrapper">
                       <div style="animation-duration: 25s;" class="css-marquee">
                         <div data-repeat="x8" class="marquee_content">
@@ -3146,12 +3148,17 @@ Usage example of 20px offset, 360ms delay, in a group "features":
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div top-bottom="base" px="0" class="container cc-full">
                     <div class="css-marquee-wrapper">
-                      <div style="animation-duration: 25s;" class="css-marquee cc-from-right">
+                      <div style="animation-duration: 15s;" class="css-marquee cc-from-right">
                         <div class="marquee_content">
-                          <div>This is a CSS marquee animation. You can override the default speed (animation-duration) of each.</div>
+                          <div>This is a marquee animation using CSS. You can override the default speed by using the <code>animation-duration</code> property.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="css-marquee-wrapper">
+                      <div style="padding-left: 100%; white-space: nowrap;" animation="marquee200p">
+                        <div class="marquee_content">
+                          <div>This is also a marquee animation using CSS. This one is configured by adding the <span class="css-tag cc-attribute">animation=&quot;marquee&quot;</span> or <span class="css-tag cc-attribute">animation=&quot;marquee200p&quot;</span> attribute.</div>
                         </div>
                       </div>
                     </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 29 2025 04:34:59 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Jan 29 2025 09:49:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -2144,15 +2144,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div class="sg-bg-col"></div>
       </div>
       <section position="relative" height-is="min-100svh" flex="col" place-content="around" sg-section="hero" style="padding: 2rem 0 1rem 0;" class="section">
-        <div events="none" z-index="-1" overflow="hidden" class="absolute-full-wrapper"><img src="https://cnd-host.pages.dev/files/s2/bg-gradient.webp" loading="eager" class="bg-deco cc-s2"></div>
-        <div position="relative" class="w-layout-blockcontainer container cc-8c w-container">
+        <div events="none" z-index="-1" overflow="hidden" class="absolute-full-wrapper"><img src="https://cnd-host.pages.dev/files/s2/bg-gradient.webp" loading="eager" class="bg-deco cc-s2">
           <div opacity="1" user-select="none" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/sc01.webp" loading="auto" animation="slideIn" animationplay="0px, 200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-left-01">
             <div loading="auto" animation="slideIn" animationplay="0px, 800" style="border: none !important;" class="sg-hero-deco cc-left-02"><img src="images/S2-C0C0C0-256.svg" alt="S2 Framework&#x27;s brand logo" opacity="0.2" class="image cc-contain"></div><img src="https://cnd-host.pages.dev/files/s2/sc02.webp" loading="auto" animation="slideIn" animationplay="0px, 1200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/sc03.webp" loading="auto" animation="slideIn" animationplay="0px, 400" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-02">
           </div>
+        </div>
+        <div position="relative" class="w-layout-blockcontainer container cc-8c w-container">
           <header class="title-layout">
             <div class="title-wrapper cc-align-center">
               <div data-nosnippet="" class="tag-wrapper">
-                <div data-nosnippet="true" gradient="3" class="code-tag">v2.0.8</div>
+                <div data-nosnippet="true" gradient="3" class="code-tag">v2.0.9</div>
               </div>
               <div style="margin: 1.5rem 0;" class="title-wrapper cc-xl">
                 <h1 white-space="nowrap" class="sg-hero-heading">S2 Framework</h1>
@@ -2235,7 +2236,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       <div user-select="none" class="cookie-consent_actions">
         <div cookieconsent-action="allow" class="button">
           <div>Alright 👌</div>
-        </div><button cookieconsent-action="decline" class="button cc-outline"><span cookieconsent-message="decline">Decline</span><span cookieconsent-message="close" style="display: none;">Close this site</span></button>
+        </div><button cookieconsent-action="reject" class="button cc-outline"><span cookieconsent-message="reject">No thanks</span><span cookieconsent-message="close" style="display: none;">Close this site</span></button>
         <div class="text-sm">Just a heads-up: This is a simple consent notice for transparency, not to comply with EU rules.</div>
       </div>
     </div>
@@ -2290,28 +2291,28 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   consentBox.style.display = "none";
                 });
               }
-              // handle "decline"
-              const declineBtn = consentBox.querySelector(
-                '[cookieConsent-action="decline"]'
+              // handle "reject"
+              const rejectBtn = consentBox.querySelector(
+                '[cookieConsent-action="reject"]'
               );
-              if (declineBtn) {
-                declineBtn.addEventListener("click", function handleDecline() {
+              if (rejectBtn) {
+                rejectBtn.addEventListener("click", function handleReject() {
                   // toggle between messages
-                  const declineText = declineBtn.querySelector(
-                    'span[cookieConsent-message="decline"]'
+                  const rejectText = rejectBtn.querySelector(
+                    'span[cookieConsent-message="reject"]'
                   );
-                  const closeText = declineBtn.querySelector(
+                  const closeText = rejectBtn.querySelector(
                     'span[cookieConsent-message="close"]'
                   );
-                  if (declineText && closeText) {
-                    declineText.style.display = "none";
+                  if (rejectText && closeText) {
+                    rejectText.style.display = "none";
                     closeText.style.display = "block";
-                    declineBtn.setAttribute("cookieConsent-action", "close");
+                    rejectBtn.setAttribute("cookieConsent-action", "close");
                   }
                   // remove this event listener to prevent multiple bindings
-                  declineBtn.removeEventListener("click", handleDecline);
+                  rejectBtn.removeEventListener("click", handleReject);
                   // attach event listener for closing the site
-                  declineBtn.addEventListener("click", function handleClose() {
+                  rejectBtn.addEventListener("click", function handleClose() {
                     // attempt to close the window
                     window.close();
                     // note: window.close() may not work on mobile browsers or tabs not opened via window.open()
