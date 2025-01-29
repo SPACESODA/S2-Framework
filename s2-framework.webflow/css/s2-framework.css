@@ -40,6 +40,7 @@
   --colors--focus-subtle: var(--_palettes---brand--subtle);
   --colors--focus\<deleted\|variable-8ebc0ec8-0ff0-c0f0-6c27-f8e94882036a\>: var(--_palettes---brand--400);
   --_text---font-size--extra-large: 1.25rem;
+  --_sizes---radius--rounded: 999rem;
   --_sizes---radius--card: .625rem;
   --colors--stroke-emphasis: var(--_palettes---neutral--600);
   --colors-special--success: #c0e9ad;
@@ -47,7 +48,6 @@
   --colors-special--warning: #ffdada;
   --colors-special--warning-text: #c51313;
   --colors-special--glass: #fff9;
-  --_sizes---radius--rounded: 999rem;
   --_sizes---main-nav--height: 4.25rem;
   --colors--brand-light: var(--_palettes---brand--300);
   --_sizes---radius--extra-large: 1.25rem;
@@ -1350,9 +1350,9 @@ figcaption {
 }
 
 .burger-icon {
+  border-radius: var(--_sizes---radius--rounded);
   color: var(--_palettes---neutral--white);
   font-size: var(--_text---font-size--small);
-  border-radius: 100%;
   flex: none;
   justify-content: center;
   align-items: center;
@@ -3858,14 +3858,14 @@ figcaption {
 }
 
 .sg-nav_button {
-  background-color: var(--colors--brand);
+  background-color: var(--colors-special--transparent);
   flex: none;
   margin: 0 0 0 auto;
   padding: 0;
 }
 
 .sg-nav_button.w--open {
-  background-color: var(--colors--brand);
+  background-color: var(--colors-special--transparent);
 }
 
 .sg-flex-wrapper {
@@ -4350,28 +4350,28 @@ figcaption {
 
 .sg-hero-deco.cc-left-01 {
   min-width: 32rem;
-  top: 9.9rem;
+  top: 9rem;
   left: auto;
   right: 23.7rem;
 }
 
 .sg-hero-deco.cc-left-02 {
   min-width: 12rem;
-  top: 23rem;
+  top: 22rem;
   left: auto;
   right: 19rem;
 }
 
 .sg-hero-deco.cc-right-01 {
   min-width: 32rem;
-  top: 8.4rem;
+  top: 8rem;
   left: 25.9rem;
   right: auto;
 }
 
 .sg-hero-deco.cc-right-02 {
   min-width: 18rem;
-  top: 23.4rem;
+  top: 22rem;
   left: 22.9rem;
   right: auto;
 }
@@ -4463,7 +4463,7 @@ figcaption {
   line-height: 1.35;
 }
 
-.section_bg-deco {
+.bg-deco {
   object-fit: contain;
   object-position: 50% 0%;
   width: 100%;
@@ -4473,7 +4473,7 @@ figcaption {
   inset: 0%;
 }
 
-.section_bg-deco.cc-s2 {
+.bg-deco.cc-s2 {
   object-position: 50% 15%;
 }
 
@@ -4484,7 +4484,8 @@ figcaption {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: absolute;
+  inset: 0%;
   overflow: visible;
 }
 
@@ -4932,7 +4933,9 @@ figcaption {
 .hero-inner {
   flex-flow: column;
   justify-content: flex-end;
-  min-height: calc(100vh - 10rem);
+  height: 80svh;
+  min-height: 30rem;
+  max-height: 60rem;
   padding: 2rem 3.5rem 4rem;
   display: flex;
 }
@@ -5231,6 +5234,7 @@ figcaption {
   background-color: var(--colors--surface);
   opacity: 1;
   pointer-events: none;
+  color: var(--colors--text);
   cursor: pointer;
   width: 3rem;
   max-width: 3rem;
@@ -5761,7 +5765,7 @@ figcaption {
   position: absolute;
 }
 
-.delete-this {
+.delete-me {
   padding-top: var(--_sizes---spacing--base);
   padding-bottom: var(--_sizes---spacing--base);
   grid-column-gap: 2rem;
@@ -5773,7 +5777,7 @@ figcaption {
   display: flex;
 }
 
-.delete-this.cc-bottom-note {
+.delete-me.cc-bottom-note {
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
   border-radius: var(--_sizes---radius--rounded);
@@ -5784,12 +5788,20 @@ figcaption {
   align-items: center;
   width: auto;
   min-height: 2rem;
-  margin-bottom: .75rem;
-  margin-left: 12vw;
-  margin-right: 12vw;
+  margin: 0 12vw .75rem;
   padding: .5rem 2rem;
   position: fixed;
   inset: auto 0% 0%;
+}
+
+.delete-me.cc-clone-cta {
+  z-index: 999999;
+  background-color: var(--colors-special--transparent);
+  width: auto;
+  padding: 0;
+  display: block;
+  position: fixed;
+  inset: auto auto .85rem .85rem;
 }
 
 .mode-switch {
@@ -5954,8 +5966,8 @@ figcaption {
     --_sizes---radius--small: .35rem;
     --_sizes---richtext-spacing--base: .75rem;
     --_sizes---list-spacing--base: .5rem;
-    --_sizes---radius--card: .625rem;
     --_sizes---radius--rounded: 999rem;
+    --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4.25rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---radius--base: .5rem;
@@ -6143,7 +6155,7 @@ figcaption {
     font-size: 1.45rem;
   }
 
-  .section_bg-deco.cc-s2 {
+  .bg-deco.cc-s2 {
     min-width: 160vw;
     margin-left: -30vw;
   }
@@ -6206,6 +6218,7 @@ figcaption {
   }
 
   .hero-inner {
+    max-height: none;
     padding-left: 2vw;
     padding-right: 2vw;
   }
@@ -6268,8 +6281,8 @@ figcaption {
     --_sizes---radius--small: .35rem;
     --_sizes---richtext-spacing--base: .75rem;
     --_sizes---list-spacing--base: .5rem;
-    --_sizes---radius--card: .625rem;
     --_sizes---radius--rounded: 999rem;
+    --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4.25rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---radius--base: .5rem;
@@ -6357,11 +6370,8 @@ figcaption {
   .main-nav_menu {
     background-color: var(--colors--surface);
     width: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
     display: block;
     position: absolute;
   }
@@ -6521,12 +6531,20 @@ figcaption {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
+  .sg-nav {
+    background-color: var(--colors-special--glass);
+  }
+
   .sg-nav_container {
     padding-right: 0;
   }
 
   .sg-50p {
     padding-right: 30%;
+  }
+
+  .sg-nav_button {
+    margin-right: var(--_sizes---container--padding);
   }
 
   .grid-table_row.cc-header {
@@ -6575,7 +6593,7 @@ figcaption {
     height: 2.75rem;
   }
 
-  .section_bg-deco.cc-s2 {
+  .bg-deco.cc-s2 {
     object-position: 50% 10%;
     min-width: 200vw;
     margin-left: -50vw;
@@ -6656,6 +6674,10 @@ figcaption {
     border-radius: 2rem;
   }
 
+  .hero-inner {
+    height: 70svh;
+  }
+
   .richtext-list h5 {
     font-size: 12px;
     font-weight: 400;
@@ -6673,7 +6695,7 @@ figcaption {
     top: -5.5rem;
   }
 
-  .delete-this.cc-bottom-note {
+  .delete-me.cc-bottom-note {
     margin-left: 8vw;
     margin-right: 8vw;
   }
@@ -6699,8 +6721,8 @@ figcaption {
     --_sizes---radius--small: .35rem;
     --_sizes---richtext-spacing--base: .75rem;
     --_sizes---list-spacing--base: .5rem;
-    --_sizes---radius--card: .625rem;
     --_sizes---radius--rounded: 999rem;
+    --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4.25rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---radius--base: .5rem;
@@ -6915,7 +6937,7 @@ figcaption {
   }
 
   .hero-inner {
-    min-height: calc(100vh - 12rem);
+    height: 60svh;
     padding-left: 0;
     padding-right: 0;
   }
