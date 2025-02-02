@@ -15,8 +15,9 @@ The S2 Framework is a modern Webflow-optimized framework that provides a solid f
 
 <br>
 
-**Support & community on Discord:** <br>
-👾 https://s2-framework.webflow.io/#discord
+**Community & Support:** <br>
+Reddit: https://www.reddit.com/r/S2Framework
+Discord: https://s2-framework.webflow.io/#discord
 
 
 <br><br>
