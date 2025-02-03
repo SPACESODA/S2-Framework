@@ -12,6 +12,13 @@ body * { text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem); }
 .main-nav_button path:last-child { transform: translateY(11%) rotate(45deg); }
 .main-nav_button.w--open path { transform: translateY(0%) rotate(0deg); }
 
+/* better sup and sub on headings */
+h1 sup, .h1 sup, h1 sub, .h1 sup,
+h2 sup, .h2 sup, h2 sub, .h2 sup,
+h3 sup, .h3 sup, h3 sub, .h3 sup { margin: 0 -0.25ch; font-size: calc(0.4em + 5px); }
+h1 sup, .h1 sup, h2 sup, .h2 sup, h3 sup, .h3 sup { top: calc(-1.01em + 5.03px); }
+h1 sub, .h1 sub, h2 sub, .h2 sub, h3 sub, .h3 sub { top: calc(0.16em - 0.78px); }
+
 /* other styles */
 .richtext-list ul li::before {
 	position: absolute;
@@ -21,4 +28,4 @@ body * { text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem); }
 }
 
 /* styles for RTL lauout */
-[direction="rtl"] .main-nav_menu { margin-left: 0rem !important; margin-right: auto; }
+[dir="rtl"] .main-nav_menu { margin-left: 0rem !important; margin-right: auto; }

@@ -1,28 +1,6 @@
-/* --------------------- */
-/* -- (3) S2 Defaults -- */
-/* --------------------- */
-
-/* better sup and sub on headings */
-h1 sup, h2 sup, h3 sup, h4 sup {
-	left: -0.725em;
-	top: -0.65em;
-	margin-right: -0.925em;
-}
-h1 sub, h2 sub, h3 sub, h4 sub {
-	left: -0.725em;
-	top: -0.85em;
-	margin-right: -0.925em;
-}
-h5 sup, h6 sup {
-	left: -0.4em;
-	top: -0.3em;
-	margin-right: -0.8em;
-}
-h5 sub, h6 sub {
-	left: -0.4em;
-	top: -0.5em;
-	margin-right: -0.8em;
-}
+/* ----------------- */
+/* -- S2 Defaults -- */
+/* ----------------- */
 
 /* lightbox and slider */
 .w-lightbox-backdrop { font-weight: normal; }
@@ -107,4 +85,14 @@ pre.code-block code {
 .html-table[scrollable][th-sticky] tbody th {
 	position: sticky; left: -1px;
 	z-index: 997;
+}
+
+/* styles for mode switching ui */
+body.u-light-mode .toggle {}
+body.u-dark-mode .toggle { justify-content: flex-end; }
+body.u-light-mode .mode-switch > [data-button="color-mode-light"] { background-color: #ffffff80; }
+body.u-dark-mode .mode-switch > [data-button="color-mode-dark"] { background-color: #00000060; }
+body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode-dark"]):hover {
+	background-color: #bbb;
+	color: #ddd;
 }

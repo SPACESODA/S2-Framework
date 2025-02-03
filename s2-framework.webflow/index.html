@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Jan 29 2025 09:49:02 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Feb 03 2025 02:57:53 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -25,67 +25,7 @@
     </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-  <link href="https://s2-framework.webflow.io/" rel="canonical">
-  <!--  CSS Animations Enhancement  -->
-  <!-- 
-Usage example of 20px offset, 360ms delay, in a group "features":
-[animationPlay="20px, 360"]
-[stack="features"]
- -->
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const elements = document.querySelectorAll('[animationPlay]');
-        if (elements.length === 0) return; // exit if no elements with the attribute
-        const groups = {};
-        elements.forEach(element => {
-          const stack = element.getAttribute('stack');
-          if (stack) {
-            if (!groups[stack]) {
-              groups[stack] = [];
-            }
-            groups[stack].push(element);
-          }
-        });
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target;
-              const [offset, delay] = element.getAttribute('animationPlay')?.split(',').map(value => value.trim()) || [];
-              if (!offset || !delay) return; // skip if attributes are missing or malformed
-              element.style.transform = `translateY(${offset})`;
-              const stack = element.getAttribute('stack');
-              if (stack && stack.trim() && groups[stack]) {
-                const group = groups[stack];
-                const index = group.indexOf(element);
-                const animateElement = (el, idx) => {
-                  setTimeout(() => {
-                    el.style.animationPlayState = 'running';
-                    if (idx < group.length - 1) {
-                      setTimeout(() => {
-                        animateElement(group[idx + 1], idx + 1);
-                      }, 180);
-                    }
-                  }, parseFloat(delay));
-                };
-                if (index === 0) {
-                  animateElement(element, index);
-                }
-              } else {
-                setTimeout(() => {
-                  element.style.animationPlayState = 'running';
-                }, parseFloat(delay));
-              }
-              observer.unobserve(element);
-            }
-          });
-        });
-        elements.forEach(element => {
-          element.style.animationPlayState = 'paused';
-          observer.observe(element);
-        });
-      });
-    </script>
-  <!--  Meta Tags for Style Guide only  -->
+  <link href="https://s2-framework.webflow.io/" rel="canonical"><!--  Meta Tags for Style Guide only  -->
   <meta property="og:locale" content="en_US">
   <meta name="robots" content="noarchive">
   <meta name="keywords" content="S2, S2 Framework, Webflow, Webflow Framework, Style Guide, S2 Attributes, Attributes Library, Layouts, UI Kit, Template, Components">
@@ -107,6 +47,23 @@ Usage example of 20px offset, 360ms delay, in a group "features":
       gtag('js', new Date());
       gtag('config', 'G-PX2FCCPV82');
     </script>
+  <!--  Redirects  -->
+  <script>
+      (function() {
+        const redirects = {
+          "#clone": "https://webflow.com/made-in-webflow/website/s2-framework",
+          "#preview": "https://preview.webflow.com/preview/s2-framework?preview=95b823ebaf98f93ed2b465c792a12703",
+          "#discord": "https://discord.gg/KqKk7kyxR2",
+          "#reddit": "https://www.reddit.com/r/S2Framework/",
+          "#roadmap": "https://s2-framework.notion.site/1415e9ef57d7802e944eef6287093be9?v=1415e9ef57d781d3aeec000c851a1c01&pvs=4"
+        };
+        const hash =
+          window.location.hash || "#" + window.location.href.split("#")[1] || "";
+        if (redirects[hash]) {
+          window.location.replace(redirects[hash]);
+        }
+      })();
+    </script>
   <!-- 
 S2 Framework (https://s2-framework.webflow.io)
 - - -
@@ -124,24 +81,6 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
 CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH 
 THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
-  <!--  Redirects  -->
-  <script>
-      (function() {
-        const redirects = {
-          "#clone": "https://webflow.com/made-in-webflow/website/s2-framework",
-          "#preview": "https://preview.webflow.com/preview/s2-framework?preview=95b823ebaf98f93ed2b465c792a12703",
-          "#discord": "https://discord.gg/KqKk7kyxR2",
-          "#roadmap": "https://s2-framework.notion.site/1415e9ef57d7802e944eef6287093be9?v=1415e9ef57d781d3aeec000c851a1c01&pvs=4"
-        };
-        let hash = window.location.hash;
-        if (!hash && window.location.href.indexOf("#") !== -1) {
-          hash = "#" + window.location.href.split("#")[1];
-        }
-        if (redirects.hasOwnProperty(hash)) {
-          window.location.href = redirects[hash];
-        }
-      })();
-    </script>
 </head>
 <body body="sg" theme-change="false" class="body u-dark-mode">
   <div data-nosnippet="true" class="delete-me cc-clone-cta">
@@ -160,8 +99,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           })(window, document, "clarity", "script", "pz73j4n04o");
         </script>
     </div>
-    <div code="js" class="js w-embed w-iframe w-script"><!--  Hide Cookie Concent in iFrames  -->
-      <!--  For Style Guide only, you don't need this for your site.  -->
+    <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+      <!--  For Style Guide only, you don't need such scripts for your site.  -->
+      <!--  Hide Cookie Concent in iFrames  -->
       <script>
           if (window.self !== window.top) {
             document.addEventListener("DOMContentLoaded", function() {
@@ -172,10 +112,36 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             });
           }
         </script>
+      <!--  Force Eager Loading  -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // force all standard <img> elements to load immediately
+            document.querySelectorAll("img").forEach((img) => {
+              img.setAttribute("loading", "eager");
+              // handle Webflow-specific lazy-loaded images
+              const dataSrc =
+                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+              if (dataSrc) {
+                img.setAttribute("src", dataSrc);
+              } else {
+                img.src = img.src; // trigger reload if necessary
+              }
+            });
+            // force all background images to load immediately
+            document.querySelectorAll("*").forEach((el) => {
+              const bgImage = window.getComputedStyle(el).backgroundImage;
+              if (bgImage && bgImage.startsWith('url("')) {
+                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                const img = new Image();
+                img.src = url; // preload background image
+              }
+            });
+          });
+        </script>
     </div>
   </div>
   <div id="top" class="page">
-    <div class="code">
+    <div class="global-code">
       <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
         <!--  The Mode Switching script is placed in custom "Footer code".  -->
         <script>
@@ -216,7 +182,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             })();
           </script>
       </div>
-      <div code="css" class="_01_framework w-embed">
+      <div code="css" class="framework w-embed">
         <style>
             /* ---------------- */
             /* -- Base Setup -- */
@@ -363,13 +329,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             * {
               -webkit-tap-highlight-color: transparent;
             }
-            /* ----------------------- */
-            /* -- (1) S2 Attributes -- */
-            /* ----------------------- */
+            /* ------------------- */
+            /* -- S2 Attributes -- */
+            /* ------------------- */
             /* basics */
-            [direction="rtl"] {
-              direction: rtl;
-            }
             [hidden],
             [hide],
             .u-hide {
@@ -1073,60 +1036,46 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               grid-row-gap: 0;
             }
             [gap="1-1"] {
-              grid-column-gap: 1rem;
-              grid-row-gap: 1rem;
+              gap: 1rem 1rem;
             }
             [gap="1-2"] {
-              grid-column-gap: 1rem;
-              grid-row-gap: 2rem;
+              gap: 1rem 2rem;
             }
             [gap="1-3"] {
-              grid-column-gap: 1rem;
-              grid-row-gap: 3rem;
+              gap: 1rem 3rem;
             }
             [gap="2-1"] {
-              grid-column-gap: 2rem;
-              grid-row-gap: 1rem;
+              gap: 2rem 1rem;
             }
             [gap="2-2"] {
-              grid-column-gap: 2rem;
-              grid-row-gap: 2rem;
+              gap: 2rem 2rem;
             }
             [gap="2-3"] {
-              grid-column-gap: 2rem;
-              grid-row-gap: 3rem;
+              gap: 2rem 3rem;
             }
             [gap="3-1"] {
-              grid-column-gap: 3rem;
-              grid-row-gap: 1rem;
+              gap: 3rem 1rem;
             }
             [gap="3-2"] {
-              grid-column-gap: 3rem;
-              grid-row-gap: 2rem;
+              gap: 3rem 2rem;
             }
             [gap="3-3"] {
-              grid-column-gap: 3rem;
-              grid-row-gap: 3rem;
+              gap: 3rem 3rem;
             }
             [gap="base"] {
-              grid-column-gap: 1.5rem;
-              grid-row-gap: 1.5rem;
+              gap: var(--_sizes---gap--base);
             }
             [gap="sm"] {
-              grid-column-gap: 0.5rem;
-              grid-row-gap: 0.5rem;
+              gap: var(--_sizes---gap--small);
             }
             [gap="lg"] {
-              grid-column-gap: 4rem;
-              grid-row-gap: 4rem;
+              gap: var(--_sizes---gap--large);
             }
             [gap="1ch"] {
-              grid-column-gap: 1ch;
-              grid-row-gap: 0em;
+              gap: 1ch;
             }
             [gap="word"] {
-              grid-column-gap: 0.35em;
-              grid-row-gap: 0em;
+              gap: 0.35em;
               word-spacing: 0em;
               letter-spacing: normal;
             }
@@ -1193,30 +1142,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             [place-self="stretch"] {
               place-self: stretch;
             }
-            /* lists */
-            [list-type] li {
-              list-style-position: outside;
-            }
-            [list-type] li::before {
-              content: none !important;
-              /* reset */
-            }
-            [list-type] {
-              list-style: none !important;
-              /* reset */
-            }
-            [list-icon] li {
-              position: relative;
-              margin-left: 1.8em;
-            }
-            [list-icon] li::before {
-              position: absolute;
-              top: -0.095em;
-              left: -1.325em;
-              font-size: 1.125em;
-              content: '\25CF\0020';
-              color: var(--colors--brand);
-            }
             /* overflow properties */
             [overflow="visible"] {
               overflow: visible !important;
@@ -1245,6 +1170,34 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             [overflow-y="auto"] {
               overflow-y: auto;
             }
+            /* color, bg, border, outline  */
+            [color="inherit"] {
+              color: inherit;
+            }
+            [color="transparent"] {
+              color: transparent;
+            }
+            [bg="inherit"] {
+              background-color: inherit;
+            }
+            [bg="transparent"] {
+              background-color: transparent;
+            }
+            [bg="none"] {
+              background: none;
+            }
+            [border="inherit"] {
+              border-color: inherit;
+            }
+            [border="transparent"] {
+              border-color: transparent;
+            }
+            [border="none"] {
+              border: none;
+            }
+            [outline="none"] {
+              outline: none;
+            }
             /* gradient */
             [gradient] {
               background-image: linear-gradient(135deg, var(--colors--brand) 0%, var(--colors--accent) 100%);
@@ -1262,6 +1215,30 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
             [text-shadow] {
               text-shadow: 0 0 1rem var(--_palettes---neutral--black);
+            }
+            /* lists */
+            [list-type] li {
+              list-style-position: outside;
+            }
+            [list-type] li::before {
+              content: none !important;
+              /* reset */
+            }
+            [list-type] {
+              list-style: none !important;
+              /* reset */
+            }
+            [list-icon] li {
+              position: relative;
+              margin-left: 1.8em;
+            }
+            [list-icon] li::before {
+              position: absolute;
+              top: -0.095em;
+              left: -1.325em;
+              font-size: 1.125em;
+              content: '\25CF\0020';
+              color: var(--colors--brand);
             }
             /* no-scrollbar */
             [no-scrollbar]::-webkit-scrollbar {
@@ -1288,419 +1265,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               width: 0px;
               height: 0px;
             }
-            /* ------------------------------ */
-            /* -- (2) S2 Colors & Palettes -- */
-            /* ------------------------------ */
-            /* inherit */
-            [color="inherit"] {
-              color: inherit;
-            }
-            [color="inherit-all"] *,
-            .inherit-color * {
-              color: inherit;
-            }
-            [bg="inherit"] {
-              background-color: inherit;
-            }
-            [bg="inherit-all"] *,
-            .inherit-bg-color * {
-              background-color: inherit;
-            }
-            /* transparent, none */
-            [color="transparent"] {
-              color: transparent;
-            }
-            [bg="transparent"] {
-              background-color: transparent;
-            }
-            [bg="none"] {
-              background-color: transparent;
-              background-image: none;
-            }
-            [border="transparent"] {
-              border-color: transparent;
-            }
-            [border="none"] {
-              border: none;
-            }
-            [shadow="none"] {
-              box-shadow: none;
-            }
-            [outline="none"] {
-              outline: none;
-            }
-            /* -- Use of "Colors" Variables as Attributes -- */
-            /* color */
-            [color="text"] {
-              color: var(--colors--text);
-            }
-            [color="text-mu"] {
-              color: var(--colors--text-muted);
-            }
-            [color="brand"],
-            [color="b"] {
-              color: var(--colors--brand);
-            }
-            [color="brand-alt"],
-            [color="ba"] {
-              color: var(--colors--brand-alt);
-            }
-            [color="accent"],
-            [color="a"] {
-              color: var(--colors--accent);
-            }
-            [color="neutral"],
-            [color="n"] {
-              color: var(--_palettes---neutral--500);
-            }
-            /* neutral 500 */
-            /* background-color */
-            [bg="surface"] {
-              background-color: var(--colors--surface);
-            }
-            [bg="surface-mu"] {
-              background-color: var(--colors--surface-muted);
-            }
-            [bg="surface-alt"] {
-              background-color: var(--colors--surface-alt);
-            }
-            [bg="surface-alt-mu"] {
-              background-color: var(--colors--surface-alt-muted);
-            }
-            [bg="brand"],
-            [bg="b"] {
-              background-color: var(--colors--brand);
-            }
-            [bg="brand-alt"],
-            [bg="ba"] {
-              background-color: var(--colors--brand-alt);
-            }
-            [bg="accent"],
-            [bg="a"] {
-              background-color: var(--colors--accent);
-            }
-            [bg="neutral"],
-            [bg="n"] {
-              background-color: var(--_palettes---neutral--500);
-            }
-            /* neutral 500 */
-            [bg="stroke"] {
-              background-color: var(--colors--stroke);
-            }
-            /* border-color */
-            [border="stroke"] {
-              border-color: var(--colors--stroke);
-            }
-            [border="brand"],
-            [border="b"] {
-              border-color: var(--colors--brand);
-            }
-            [border="brand-alt"],
-            [border="ba"] {
-              border-color: var(--colors--brand-alt);
-            }
-            [border="accent"],
-            [border="a"] {
-              border-color: var(--colors--accent);
-            }
-            [border="neutral"],
-            [border="n"] {
-              border-color: var(--_palettes---neutral--500);
-            }
-            /* neutral 500 */
-            /* -- Use of "Palette" Variables as Attributes -- */
-            /* brand */
-            [bg="b-50"] {
-              background-color: var(--_palettes---brand--50);
-            }
-            [bg="b-100"] {
-              background-color: var(--_palettes---brand--100);
-            }
-            [bg="b-200"] {
-              background-color: var(--_palettes---brand--200);
-            }
-            [bg="b-300"] {
-              background-color: var(--_palettes---brand--300);
-            }
-            [bg="b-400"] {
-              background-color: var(--_palettes---brand--400);
-            }
-            [bg="b-500"] {
-              background-color: var(--_palettes---brand--500);
-            }
-            [bg="b-600"] {
-              background-color: var(--_palettes---brand--600);
-            }
-            [bg="b-700"] {
-              background-color: var(--_palettes---brand--700);
-            }
-            [bg="b-800"] {
-              background-color: var(--_palettes---brand--800);
-            }
-            [bg="b-900"] {
-              background-color: var(--_palettes---brand--900);
-            }
-            [bg="b-950"] {
-              background-color: var(--_palettes---brand--950);
-            }
-            [bg="b-on300"] {
-              background-color: var(--_palettes---brand--on300);
-            }
-            [color="b-on300"] {
-              color: var(--_palettes---brand--on300);
-            }
-            [bg="b-on500"] {
-              background-color: var(--_palettes---brand--on500);
-            }
-            [color="b-on500"] {
-              color: var(--_palettes---brand--on500);
-            }
-            [bg="b-on700"] {
-              background-color: var(--_palettes---brand--on700);
-            }
-            [color="b-on700"] {
-              color: var(--_palettes---brand--on700);
-            }
-            [bg="b-subtle"] {
-              background-color: var(--_palettes---brand--subtle);
-            }
-            /* brand: light, deep */
-            [bg="b-light"] {
-              background-color: var(--colors--brand-light);
-            }
-            [bg="b-deep"] {
-              background-color: var(--colors--brand-deep);
-            }
-            /* brand alt */
-            [bg="ba-50"] {
-              background-color: var(--_palettes---brand-alt--50);
-            }
-            [bg="ba-100"] {
-              background-color: var(--_palettes---brand-alt--100);
-            }
-            [bg="ba-200"] {
-              background-color: var(--_palettes---brand-alt--200);
-            }
-            [bg="ba-300"] {
-              background-color: var(--_palettes---brand-alt--300);
-            }
-            [bg="ba-400"] {
-              background-color: var(--_palettes---brand-alt--400);
-            }
-            [bg="ba-500"] {
-              background-color: var(--_palettes---brand-alt--500);
-            }
-            [bg="ba-600"] {
-              background-color: var(--_palettes---brand-alt--600);
-            }
-            [bg="ba-700"] {
-              background-color: var(--_palettes---brand-alt--700);
-            }
-            [bg="ba-800"] {
-              background-color: var(--_palettes---brand-alt--800);
-            }
-            [bg="ba-900"] {
-              background-color: var(--_palettes---brand-alt--900);
-            }
-            [bg="ba-950"] {
-              background-color: var(--_palettes---brand-alt--950);
-            }
-            [bg="ba-on300"] {
-              background-color: var(--_palettes---brand-alt--on300);
-            }
-            [color="ba-on300"] {
-              color: var(--_palettes---brand-alt--on300);
-            }
-            [bg="ba-on500"] {
-              background-color: var(--_palettes---brand-alt--on500);
-            }
-            [color="ba-on500"] {
-              color: var(--_palettes---brand-alt--on500);
-            }
-            [bg="ba-on700"] {
-              background-color: var(--_palettes---brand-alt--on700);
-            }
-            [color="ba-on700"] {
-              color: var(--_palettes---brand-alt--on700);
-            }
-            [bg="ba-subtle"] {
-              background-color: var(--_palettes---brand-alt--subtle);
-            }
-            /* brand alt: light, deep */
-            [bg="ba-light"] {
-              background-color: var(--_palettes---brand-alt--300);
-            }
-            [bg="ba-deep"] {
-              background-color: var(--_palettes---brand-alt--700);
-            }
-            /* accent */
-            [bg="a-50"] {
-              background-color: var(--_palettes---accent--50);
-            }
-            [bg="a-100"] {
-              background-color: var(--_palettes---accent--100);
-            }
-            [bg="a-200"] {
-              background-color: var(--_palettes---accent--200);
-            }
-            [bg="a-300"] {
-              background-color: var(--_palettes---accent--300);
-            }
-            [bg="a-400"] {
-              background-color: var(--_palettes---accent--400);
-            }
-            [bg="a-500"] {
-              background-color: var(--_palettes---accent--500);
-            }
-            [bg="a-600"] {
-              background-color: var(--_palettes---accent--600);
-            }
-            [bg="a-700"] {
-              background-color: var(--_palettes---accent--700);
-            }
-            [bg="a-800"] {
-              background-color: var(--_palettes---accent--800);
-            }
-            [bg="a-900"] {
-              background-color: var(--_palettes---accent--900);
-            }
-            [bg="a-950"] {
-              background-color: var(--_palettes---accent--950);
-            }
-            [bg="a-on300"] {
-              background-color: var(--_palettes---accent--on300);
-            }
-            [color="a-on300"] {
-              color: var(--_palettes---accent--on300);
-            }
-            [bg="a-on500"] {
-              background-color: var(--_palettes---accent--on500);
-            }
-            [color="a-on500"] {
-              color: var(--_palettes---accent--on500);
-            }
-            [bg="a-on700"] {
-              background-color: var(--_palettes---accent--on700);
-            }
-            [color="a-on700"] {
-              color: var(--_palettes---accent--on700);
-            }
-            [bg="a-subtle"] {
-              background-color: var(--_palettes---accent--subtle);
-            }
-            /* accent: light, deep */
-            [bg="a-light"] {
-              background-color: var(--_palettes---accent--300);
-            }
-            [bg="a-deep"] {
-              background-color: var(--_palettes---accent--700);
-            }
-            /* neutral */
-            [bg="n-50"] {
-              background-color: var(--_palettes---neutral--50);
-            }
-            [bg="n-100"] {
-              background-color: var(--_palettes---neutral--100);
-            }
-            [bg="n-200"] {
-              background-color: var(--_palettes---neutral--200);
-            }
-            [bg="n-300"] {
-              background-color: var(--_palettes---neutral--300);
-            }
-            [bg="n-400"] {
-              background-color: var(--_palettes---neutral--400);
-            }
-            [bg="n-500"] {
-              background-color: var(--_palettes---neutral--500);
-            }
-            [bg="n-600"] {
-              background-color: var(--_palettes---neutral--600);
-            }
-            [bg="n-700"] {
-              background-color: var(--_palettes---neutral--700);
-            }
-            [bg="n-800"] {
-              background-color: var(--_palettes---neutral--800);
-            }
-            [bg="n-900"] {
-              background-color: var(--_palettes---neutral--900);
-            }
-            [bg="n-950"] {
-              background-color: var(--_palettes---neutral--950);
-            }
-            [bg="n-on300"] {
-              background-color: var(--_palettes---neutral--on300);
-            }
-            [color="n-on200"] {
-              color: var(--_palettes---neutral--on300);
-            }
-            [bg="n-on500"] {
-              background-color: var(--_palettes---neutral--on500);
-            }
-            [color="n-on500"] {
-              color: var(--_palettes---neutral--on500);
-            }
-            [bg="n-on700"] {
-              background-color: var(--_palettes---neutral--on700);
-            }
-            [color="n-on800"] {
-              color: var(--_palettes---neutral--on700);
-            }
-            [bg="n-subtle"] {
-              background-color: var(--_palettes---neutral--subtle);
-            }
-            [bg="white"] {
-              background-color: var(--_palettes---neutral--white);
-            }
-            [color="white"] {
-              color: var(--_palettes---neutral--white);
-            }
-            [bg="black"] {
-              background-color: var(--_palettes---neutral--black);
-            }
-            [color="black"] {
-              color: var(--_palettes---neutral--black);
-            }
-            /* neutral: light, deep */
-            [bg="n-light"] {
-              background-color: var(--_palettes---neutral--300);
-            }
-            [bg="n-deep"] {
-              background-color: var(--_palettes---neutral--700);
-            }
-            /* --------------------- */
-            /* -- (3) S2 Defaults -- */
-            /* --------------------- */
-            /* better sup and sub on headings */
-            h1 sup,
-            h2 sup,
-            h3 sup,
-            h4 sup {
-              left: -0.725em;
-              top: -0.65em;
-              margin-right: -0.925em;
-            }
-            h1 sub,
-            h2 sub,
-            h3 sub,
-            h4 sub {
-              left: -0.725em;
-              top: -0.85em;
-              margin-right: -0.925em;
-            }
-            h5 sup,
-            h6 sup {
-              left: -0.4em;
-              top: -0.3em;
-              margin-right: -0.8em;
-            }
-            h5 sub,
-            h6 sub {
-              left: -0.4em;
-              top: -0.5em;
-              margin-right: -0.8em;
-            }
+            /* ----------------- */
+            /* -- S2 Defaults -- */
+            /* ----------------- */
             /* lightbox and slider */
             .w-lightbox-backdrop {
               font-weight: normal;
@@ -1846,9 +1413,24 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               left: -1px;
               z-index: 997;
             }
+            /* styles for mode switching ui */
+            body.u-light-mode .toggle {}
+            body.u-dark-mode .toggle {
+              justify-content: flex-end;
+            }
+            body.u-light-mode .mode-switch>[data-button="color-mode-light"] {
+              background-color: #ffffff80;
+            }
+            body.u-dark-mode .mode-switch>[data-button="color-mode-dark"] {
+              background-color: #00000060;
+            }
+            body.u-dark-mode .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
+              background-color: #bbb;
+              color: #ddd;
+            }
           </style>
       </div>
-      <div code="css" class="_02_css-animations w-embed">
+      <div code="css" class="css-animations w-embed">
         <style>
             /* -------------------- */
             /* -- CSS Animations -- */
@@ -1984,30 +1566,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
           </style>
       </div>
-      <div code="css" class="_03_modes w-embed">
-        <style>
-            /* ---------------------- */
-            /* -- Styles for Modes -- */
-            /* ---------------------- */
-            /* ui elements for mode switching */
-            .body.u-light-mode .toggle {}
-            .body.u-dark-mode .toggle {
-              justify-content: flex-end;
-            }
-            .body.u-light-mode .mode-switch>[data-button="color-mode-light"] {
-              background-color: #ffffff80;
-            }
-            .body.u-dark-mode .mode-switch>[data-button="color-mode-dark"] {
-              background-color: #00000060;
-            }
-            .body.u-dark-mode .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
-              background-color: #bbb;
-              color: #ddd;
-            }
-            /* other styles related to modes and themes */
-          </style>
-      </div>
-      <div code="css" class="_04_custom w-embed">
+      <div code="css" class="custom w-embed">
         <style>
             /* ------------------------------ */
             /* -- Global Custom Attributes -- */
@@ -2100,6 +1659,38 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             .main-nav_button.w--open path {
               transform: translateY(0%) rotate(0deg);
             }
+            /* better sup and sub on headings */
+            h1 sup,
+            .h1 sup,
+            h1 sub,
+            .h1 sup,
+            h2 sup,
+            .h2 sup,
+            h2 sub,
+            .h2 sup,
+            h3 sup,
+            .h3 sup,
+            h3 sub,
+            .h3 sup {
+              margin: 0 -0.25ch;
+              font-size: calc(0.4em + 5px);
+            }
+            h1 sup,
+            .h1 sup,
+            h2 sup,
+            .h2 sup,
+            h3 sup,
+            .h3 sup {
+              top: calc(-1.01em + 5.03px);
+            }
+            h1 sub,
+            .h1 sub,
+            h2 sub,
+            .h2 sub,
+            h3 sub,
+            .h3 sub {
+              top: calc(0.16em - 0.78px);
+            }
             /* other styles */
             .richtext-list ul li::before {
               position: absolute;
@@ -2108,7 +1699,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               color: var(--colors--brand);
             }
             /* styles for RTL lauout */
-            [direction="rtl"] .main-nav_menu {
+            [dir="rtl"] .main-nav_menu {
               margin-left: 0rem !important;
               margin-right: auto;
             }
@@ -2143,7 +1734,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div class="sg-bg-col"></div>
         <div class="sg-bg-col"></div>
       </div>
-      <section position="relative" height-is="min-100svh" flex="col" place-content="around" sg-section="hero" style="padding: 2rem 0 1rem 0;" class="section">
+      <section position="relative" height-is="min-100svh" flex="col" place-content="around" sg-section="hero" style="padding: 2.25rem 0 1rem 0;" class="section">
         <div events="none" z-index="-1" overflow="hidden" class="absolute-full-wrapper"><img src="https://cnd-host.pages.dev/files/s2/bg-gradient.webp" loading="eager" class="bg-deco cc-s2">
           <div opacity="1" user-select="none" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/sc01.webp" loading="auto" animation="slideIn" animationplay="0px, 200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-left-01">
             <div loading="auto" animation="slideIn" animationplay="0px, 800" style="border: none !important;" class="sg-hero-deco cc-left-02"><img src="images/S2-C0C0C0-256.svg" alt="S2 Framework&#x27;s brand logo" opacity="0.2" class="image cc-contain"></div><img src="https://cnd-host.pages.dev/files/s2/sc02.webp" loading="auto" animation="slideIn" animationplay="0px, 1200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/sc03.webp" loading="auto" animation="slideIn" animationplay="0px, 400" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-02">
@@ -2153,7 +1744,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <header class="title-layout">
             <div class="title-wrapper cc-align-center">
               <div data-nosnippet="" class="tag-wrapper">
-                <div data-nosnippet="true" gradient="3" class="code-tag">v2.0.9</div>
+                <div data-nosnippet="true" gradient="3" class="code-tag">v2.1.1</div>
               </div>
               <div style="margin: 1.5rem 0;" class="title-wrapper cc-xl">
                 <h1 white-space="nowrap" class="sg-hero-heading">S2 Framework</h1>
@@ -2169,7 +1760,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </div>
           </div>
           <div style="margin: 3.5rem 0 1.75rem 0;" gap="sm" class="button-wrapper cc-center">
-            <a href="s2/styles.html" query="utm_source=S2-cover-page" aria-label="Browse S2" class="button cc-outline w-inline-block">
+            <a href="s2/styles.html" aria-label="Browse S2" class="button cc-outline w-inline-block">
               <div class="text-sm">Browse S2</div>
               <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
@@ -2183,10 +1774,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </a>
           </div>
           <div class="text-wrapper cc-align-center">
-            <a href="s2/for-templates.html" class="text-sm">Template creators?</a>
+            <a href="s2/for-templates.html" class="text-sm">S2 for Templates</a>
           </div>
         </div>
-        <div style="padding: 1.5rem 0.25rem;" flex="col" gap="sm" mt="2" mb="1" class="text-wrapper cc-align-center">
+        <div style="padding: 1.5rem 0.25rem;" flex="col" gap="sm" mt="3" mb="1" class="text-wrapper cc-align-center">
           <div text-deco="none" font-size="xs" flex-wrap="wrap-nice" gap="word" data-nosnippet="true" class="u-hflex-center-center w-embed"><span>
               <a href="https://s2-framework.gitbook.io/docs/copyright-and-terms" target="_blank" aria-label="Copyright and terms">&copy;</a>
             </span>
@@ -2207,12 +1798,18 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </span>
           </div>
           <div gap="sm" class="u-hflex-center-center">
-            <div data-nosnippet="true" font-size="xs" flex-wrap="wrap-nice" gap="word" class="u-hflex-center-center w-embed"><span>
+            <div gap="word" font-size="xs" flex-wrap="wrap-nice" class="u-hflex-center-center w-embed"><span>
                 <a href="http://s2-framework.gitbook.io/docs" target="_blink">Docs</a> and <a href="http://s2-framework.webflow.io/#roadmap" target="_blink">Roadmap</a>
               </span></div>
             <a aria-label="Github" href="https://github.com/realanthonyc/S2-Framework" target="_blank" class="w-inline-block">
               <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M50 3C23.48 3 2 24.48 2 51C2 72.24 15.74 90.18 34.82 96.54C37.22 96.96 38.12 95.52 38.12 94.26C38.12 93.12 38.06 89.34 38.06 85.32C26 87.54 22.88 82.38 21.92 79.68C21.38 78.3 19.04 74.04 17 72.9C15.32 72 12.92 69.78 16.94 69.72C20.72 69.66 23.42 73.2 24.32 74.64C28.64 81.9 35.54 79.86 38.3 78.6C38.72 75.48 39.98 73.38 41.36 72.18C30.68 70.98 19.52 66.84 19.52 48.48C19.52 43.26 21.38 38.94 24.44 35.58C23.96 34.38 22.28 29.46 24.92 22.86C24.92 22.86 28.94 21.6 38.12 27.78C41.96 26.7 46.04 26.16 50.12 26.16C54.2 26.16 58.28 26.7 62.12 27.78C71.3 21.54 75.32 22.86 75.32 22.86C77.96 29.46 76.28 34.38 75.8 35.58C78.86 38.94 80.72 43.2 80.72 48.48C80.72 66.9 69.5 70.98 58.82 72.18C60.56 73.68 62.06 76.56 62.06 81.06C62.06 87.48 62 92.64 62 94.26C62 95.52 62.9 97.02 65.3 96.54C84.26 90.18 98 72.18 98 51C98 24.48 76.52 3 50 3Z" fill="#ddd"></path>
+                </svg></div>
+            </a>
+            <a aria-label="Join our Discord community." href="https://www.reddit.com/r/S2Framework/" target="_blank" class="w-inline-block">
+              <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M49.6337 97.9997C76.3455 97.9997 97.9997 76.3455 97.9997 49.6337C97.9997 22.9218 76.3455 1.26758 49.6337 1.26758C22.9218 1.26758 1.26758 22.9218 1.26758 49.6337C1.26758 76.3455 22.9218 97.9997 49.6337 97.9997Z" fill="#FF4500"></path>
+                  <path d="M81.8895 49.6327C81.7455 45.7376 78.4749 42.6959 74.5679 42.8281C72.8364 42.8883 71.1898 43.5977 69.9399 44.7875C64.4336 41.0364 57.9655 38.9803 51.3168 38.8363L54.4541 23.7482L64.8055 25.9247C65.0936 28.5816 67.4743 30.5055 70.1312 30.2164C72.7881 29.9283 74.712 27.5477 74.4229 24.8907C74.1337 22.2338 71.7541 20.3099 69.0972 20.5991C67.5699 20.7549 66.1995 21.6448 65.4429 22.9679L53.5889 20.5991C52.7839 20.4185 51.9778 20.9237 51.7972 21.7416C51.7972 21.7534 51.7972 21.7534 51.7972 21.7652L48.2267 38.5482C41.4942 38.6568 34.9422 40.7247 29.3639 44.4994C26.5265 41.8307 22.0542 41.9629 19.3855 44.8122C16.7167 47.6497 16.8489 52.1219 19.6982 54.7907C20.2518 55.3076 20.8881 55.7526 21.5974 56.0654C21.5491 56.7747 21.5491 57.4841 21.5974 58.1935C21.5974 69.0253 34.221 77.8376 49.7895 77.8376C65.358 77.8376 77.9815 69.0371 77.9815 58.1935C78.0299 57.4841 78.0299 56.7747 77.9815 56.0654C80.4106 54.8508 81.9379 52.3498 81.8895 49.6327ZM33.5234 54.4779C33.5234 51.8092 35.6999 49.6327 38.3686 49.6327C41.0374 49.6327 43.2138 51.8092 43.2138 54.4779C43.2138 57.1466 41.0374 59.3231 38.3686 59.3231C35.6881 59.2984 33.5234 57.1466 33.5234 54.4779ZM61.6198 67.9666V67.7743C58.1815 70.3592 53.9737 71.6812 49.6691 71.5017C45.3645 71.6822 41.1577 70.3592 37.7184 67.7743C37.2616 67.2207 37.3454 66.3921 37.8989 65.9353C38.3794 65.5387 39.0651 65.5387 39.5584 65.9353C42.4679 68.0634 46.0148 69.1457 49.6207 68.977C53.2278 69.1693 56.7864 68.1354 59.7314 66.032C60.2602 65.515 61.1254 65.5268 61.6435 66.0556C62.1604 66.5844 62.1486 67.4497 61.6198 67.9666ZM60.9588 59.6713C60.875 59.6713 60.803 59.6713 60.7181 59.6713L60.7546 59.4908C58.0859 59.4908 55.9094 57.3143 55.9094 54.6456C55.9094 51.9768 58.0859 49.8003 60.7546 49.8003C63.4233 49.8003 65.5998 51.9768 65.5998 54.6456C65.7073 57.3154 63.6275 59.5628 60.9588 59.6713Z" fill="white"></path>
                 </svg></div>
             </a>
             <a aria-label="Join our Discord community." href="#discord" target="_blank" class="w-inline-block">
@@ -2231,16 +1828,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div class="title-wrapper cc-xxs">
           <div class="h5">🍪 Okay with Cookies?</div>
         </div>
-        <div class="text-sm">We use <a href="https://analytics.google.com/" target="_blank">Google Analytics</a> and <a href="http://clarity.microsoft.com" target="_blank">Microsoft Clarity</a> in the S2 Framework cloneable to understand how you interact with the site. No personal data is collected. By continuing to browse, you consent to the use of cookies. <strong>Clone to copy this Cookie Consent component to your site!</strong></div>
+        <div class="text-sm">We use <a href="https://analytics.google.com/" target="_blank">Google Analytics</a> and <a href="http://clarity.microsoft.com" target="_blank">Microsoft Clarity</a> in the S2 Framework cloneable to understand how you interact with the site. No personal data is collected. By continuing to browse, you consent to the use of cookies.</div>
+        <div opacity="0.6" class="text-xs">This is a very simple consent notice for transparency, not to comply with EU rules. <strong>Clone to copy this Cookie Consent component to your site!</strong></div>
       </div>
       <div user-select="none" class="cookie-consent_actions">
         <div cookieconsent-action="allow" class="button">
-          <div>Alright 👌</div>
-        </div><button cookieconsent-action="reject" class="button cc-outline"><span cookieconsent-message="reject">No thanks</span><span cookieconsent-message="close" style="display: none;">Close this site</span></button>
-        <div class="text-sm">Just a heads-up: This is a simple consent notice for transparency, not to comply with EU rules.</div>
+          <div>Got it, thanks for tell me 👌</div>
+        </div>
       </div>
     </div>
-    <div code="js" class="js w-embed w-script"><!--  Simple Cookie Consent  -->
+    <div code="js" class="js w-embed w-script"><!--  Simple Cookie Consent Notice  -->
       <script>
           (function() {
             "use strict";
@@ -2291,35 +1888,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   consentBox.style.display = "none";
                 });
               }
-              // handle "reject"
-              const rejectBtn = consentBox.querySelector(
-                '[cookieConsent-action="reject"]'
-              );
-              if (rejectBtn) {
-                rejectBtn.addEventListener("click", function handleReject() {
-                  // toggle between messages
-                  const rejectText = rejectBtn.querySelector(
-                    'span[cookieConsent-message="reject"]'
-                  );
-                  const closeText = rejectBtn.querySelector(
-                    'span[cookieConsent-message="close"]'
-                  );
-                  if (rejectText && closeText) {
-                    rejectText.style.display = "none";
-                    closeText.style.display = "block";
-                    rejectBtn.setAttribute("cookieConsent-action", "close");
-                  }
-                  // remove this event listener to prevent multiple bindings
-                  rejectBtn.removeEventListener("click", handleReject);
-                  // attach event listener for closing the site
-                  rejectBtn.addEventListener("click", function handleClose() {
-                    // attempt to close the window
-                    window.close();
-                    // note: window.close() may not work on mobile browsers or tabs not opened via window.open()
-                    // since the fallback message is removed, nothing else happens if it fails
-                  });
-                });
-              }
             }
             // initialize the consent check when the DOM is fully loaded
             if (
@@ -2350,35 +1918,72 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66009eb8d493d5a53c3759bf" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/s2-framework.js" type="text/javascript"></script>
-  <!--  Update href with [query] and [hash] Attributes  -->
+  <!--  CSS Animations Enhancement -->
   <!-- 
-Add attributes: [query="key=value"] and [hash="#section"]
-Result: "https://example.com?key=value#section"
+Usage example of 20px offset, 360ms delay, in a stagger group "features":
+[animationPlay="20px, 360"]
+[staggerGroup="features"]
  -->
   <script>
-      function updateAnchorHrefs() {
-        const anchors = document.querySelectorAll("a[query], a[hash]");
-        if (anchors.length === 0) return; // exit if no element with such attributes
-        anchors.forEach((anchor) => {
-          try {
-            const href = anchor.getAttribute("href");
-            const base = window.location.href; // use the current URL as base
-            const url = new URL(href, base);
-            const query = anchor.getAttribute("query");
-            if (query) {
-              url.search = new URLSearchParams(query).toString();
-            }
-            const hash = anchor.getAttribute("hash");
-            if (hash) {
-              url.hash = hash.startsWith("#") ? hash : `#${hash}`;
-            }
-            anchor.href = url.href; // update the href
-          } catch (error) {
-            console.error(`Failed to update anchor href: ${error.message}`);
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll("[animationPlay]");
+        if (!elements.length) return; // exit if no elements with the attribute
+        // group elements by staggerGroup
+        const groups = Array.from(elements).reduce((acc, el) => {
+          const group = el.getAttribute("staggerGroup");
+          if (group) {
+            acc[group] = acc[group] || [];
+            acc[group].push(el);
           }
+          return acc;
+        }, {});
+        const DEFAULT_STAGGER_DELAY = 180; // default stagger delay in ms
+        // initialize IntersectionObserver
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return; // skip if not intersecting
+              const el = entry.target;
+              const [offset, delayStr] = el
+                .getAttribute("animationPlay")
+                .split(",")
+                .map((v) => v.trim());
+              const delay = parseFloat(delayStr);
+              // validate animationPlay attributes
+              if (!offset || isNaN(delay)) {
+                console.warn("Invalid animationPlay attribute on element:", el);
+                observer.unobserve(el); // stop observing invalid elements
+                return;
+              }
+              // apply initial offset
+              el.style.transform = `translateY(${offset})`;
+              const group = el.getAttribute("staggerGroup");
+              if (group && groups[group][0] === el) {
+                // trigger staggered animations for the entire group
+                groups[group].forEach((groupEl, idx) => {
+                  setTimeout(() => {
+                    groupEl.style.animationPlayState = "running";
+                  }, delay + DEFAULT_STAGGER_DELAY * idx);
+                });
+              } else {
+                // trigger animation for ungrouped elements
+                setTimeout(() => {
+                  el.style.animationPlayState = "running";
+                }, delay);
+              }
+              // stop observing the element after triggering animation
+              observer.unobserve(el);
+            });
+          }, {
+            threshold: 0.1 // trigger when 10% of the element is visible
+          }
+        );
+        // initialize all elements
+        elements.forEach((el) => {
+          el.style.animationPlayState = "paused"; // pause animations initially
+          observer.observe(el); // start observing each element
         });
-      }
-      document.addEventListener("DOMContentLoaded", updateAnchorHrefs);
+      });
     </script>
   <!--  Mode Switching Function  -->
   <script>

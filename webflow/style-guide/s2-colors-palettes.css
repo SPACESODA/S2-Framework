@@ -1,23 +1,8 @@
-/* ------------------------------ */
-/* -- (2) S2 Colors & Palettes -- */
-/* ------------------------------ */
+/* -------------------------- */
+/* -- S2 Colors & Palettes -- */
+/* -------------------------- */
 
-/* inherit */
-[color="inherit"] { color: inherit; }
-[color="inherit-all"] *, .inherit-color * { color: inherit; }
-[bg="inherit"] { background-color: inherit; }
-[bg="inherit-all"] *, .inherit-bg-color * { background-color: inherit; }
-
-/* transparent, none */
-[color="transparent"] { color: transparent; }
-[bg="transparent"] { background-color: transparent; }
-[bg="none"] { background-color: transparent; background-image: none; }
-[border="transparent"] { border-color: transparent; }
-[border="none"] { border: none; }
-[shadow="none"] { box-shadow: none; }
-[outline="none"] { outline: none; }
-
-/* -- Use of "Colors" Variables as Attributes -- */
+/* -- "Colors" Variables as Attributes -- */
 
 /* color */
 [color="text"] { color: var(--colors--text); }
@@ -43,7 +28,7 @@
 [border="accent"], [border="a"] { border-color: var(--colors--accent); }
 [border="neutral"], [border="n"] { border-color: var(--_palettes---neutral--500); } /* neutral 500 */
 
-/* -- Use of "Palette" Variables as Attributes -- */
+/* -- "Palette" Variables as Attributes -- */
 
 /* brand */
 [bg="b-50"] { background-color: var(--_palettes---brand--50); }
@@ -57,9 +42,9 @@
 [bg="b-800"] { background-color: var(--_palettes---brand--800); }
 [bg="b-900"] { background-color: var(--_palettes---brand--900); }
 [bg="b-950"] { background-color: var(--_palettes---brand--950); }
-[bg="b-on300"] { background-color: var(--_palettes---brand--on300); }  [color="b-on300"] { color: var(--_palettes---brand--on300); }
-[bg="b-on500"] { background-color: var(--_palettes---brand--on500); }  [color="b-on500"] { color: var(--_palettes---brand--on500); }
-[bg="b-on700"] { background-color: var(--_palettes---brand--on700); }  [color="b-on700"] { color: var(--_palettes---brand--on700); }
+[bg="b-on-light"] { background-color: var(--_palettes---brand--on-light); }  [color="b-on-light"] { color: var(--_palettes---brand--on-light); }
+[bg="b-on-base"] { background-color: var(--_palettes---brand--on-base); }  [color="b-on-base"] { color: var(--_palettes---brand--on-base); }
+[bg="b-on-deep"] { background-color: var(--_palettes---brand--on-deep); }  [color="b-on-deep"] { color: var(--_palettes---brand--on-deep); }
 [bg="b-subtle"] { background-color: var(--_palettes---brand--subtle); }
 /* brand: light, deep */
 [bg="b-light"] { background-color: var(--colors--brand-light); }
@@ -77,9 +62,9 @@
 [bg="ba-800"] { background-color: var(--_palettes---brand-alt--800); }
 [bg="ba-900"] { background-color: var(--_palettes---brand-alt--900); }
 [bg="ba-950"] { background-color: var(--_palettes---brand-alt--950); }
-[bg="ba-on300"] { background-color: var(--_palettes---brand-alt--on300); }  [color="ba-on300"] { color: var(--_palettes---brand-alt--on300); }
-[bg="ba-on500"] { background-color: var(--_palettes---brand-alt--on500); }  [color="ba-on500"] { color: var(--_palettes---brand-alt--on500); }
-[bg="ba-on700"] { background-color: var(--_palettes---brand-alt--on700); }  [color="ba-on700"] { color: var(--_palettes---brand-alt--on700); }
+[bg="ba-on-light"] { background-color: var(--_palettes---brand-alt--on-light); }  [color="ba-on-light"] { color: var(--_palettes---brand-alt--on-light); }
+[bg="ba-on-base"] { background-color: var(--_palettes---brand-alt--on-base); }  [color="ba-on-base"] { color: var(--_palettes---brand-alt--on-base); }
+[bg="ba-on-deep"] { background-color: var(--_palettes---brand-alt--on-deep); }  [color="ba-on-deep"] { color: var(--_palettes---brand-alt--on-deep); }
 [bg="ba-subtle"] { background-color: var(--_palettes---brand-alt--subtle); }
 /* brand alt: light, deep */
 [bg="ba-light"] { background-color: var(--_palettes---brand-alt--300); }
@@ -97,9 +82,9 @@
 [bg="a-800"] { background-color: var(--_palettes---accent--800); }
 [bg="a-900"] { background-color: var(--_palettes---accent--900); }
 [bg="a-950"] { background-color: var(--_palettes---accent--950); }
-[bg="a-on300"] { background-color: var(--_palettes---accent--on300); }  [color="a-on300"] { color: var(--_palettes---accent--on300); }
-[bg="a-on500"] { background-color: var(--_palettes---accent--on500); }  [color="a-on500"] { color: var(--_palettes---accent--on500); }
-[bg="a-on700"] { background-color: var(--_palettes---accent--on700); }  [color="a-on700"] { color: var(--_palettes---accent--on700); }
+[bg="a-on-light"] { background-color: var(--_palettes---accent--on-light); }  [color="a-on-light"] { color: var(--_palettes---accent--on-light); }
+[bg="a-on-base"] { background-color: var(--_palettes---accent--on-base); }  [color="a-on-base"] { color: var(--_palettes---accent--on-base); }
+[bg="a-on-deep"] { background-color: var(--_palettes---accent--on-deep); }  [color="a-on-deep"] { color: var(--_palettes---accent--on-deep); }
 [bg="a-subtle"] { background-color: var(--_palettes---accent--subtle); }
 /* accent: light, deep */
 [bg="a-light"] { background-color: var(--_palettes---accent--300); }
@@ -117,9 +102,9 @@
 [bg="n-800"] { background-color: var(--_palettes---neutral--800); }
 [bg="n-900"] { background-color: var(--_palettes---neutral--900); }
 [bg="n-950"] { background-color: var(--_palettes---neutral--950); }
-[bg="n-on300"] { background-color: var(--_palettes---neutral--on300); }  [color="n-on200"] { color: var(--_palettes---neutral--on300); }
-[bg="n-on500"] { background-color: var(--_palettes---neutral--on500); }  [color="n-on500"] { color: var(--_palettes---neutral--on500); }
-[bg="n-on700"] { background-color: var(--_palettes---neutral--on700); }  [color="n-on800"] { color: var(--_palettes---neutral--on700); }
+[bg="n-on-light"] { background-color: var(--_palettes---neutral--on-light); }  [color="n-on-light"] { color: var(--_palettes---neutral--on-light); }
+[bg="n-on-base"] { background-color: var(--_palettes---neutral--on-base); }  [color="n-on-base"] { color: var(--_palettes---neutral--on-base); }
+[bg="n-on-deep"] { background-color: var(--_palettes---neutral--on-deep); }  [color="n-on-deep"] { color: var(--_palettes---neutral--on-deep); }
 [bg="n-subtle"] { background-color: var(--_palettes---neutral--subtle); }
 [bg="white"] { background-color: var(--_palettes---neutral--white); }  [color="white"] { color: var(--_palettes---neutral--white); }
 [bg="black"] { background-color: var(--_palettes---neutral--black); }  [color="black"] { color: var(--_palettes---neutral--black); }

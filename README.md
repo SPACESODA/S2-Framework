@@ -26,12 +26,12 @@ Discord: https://s2-framework.webflow.io/#discord
 **CDN**
 
 S2 Attributes:<br>
-https://s2-framework.pages.dev/webflow/01_framework/1_attributes.css
+https://s2-framework.pages.dev/webflow/framework/s2-attributes.css
 
 <br>
 
 Colors & Palettes Attributes:<br>
-https://s2-framework.pages.dev/webflow/01_framework/2_colors-palettes.css
+https://s2-framework.pages.dev/webflow/style-guide/s2-colors-palettes.css
 
 
 <br><br><br>
