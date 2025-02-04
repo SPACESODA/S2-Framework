@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Feb 03 2025 07:22:25 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Feb 04 2025 05:27:11 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -1698,6 +1698,11 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               content: '\2713\0020';
               color: var(--colors--brand);
             }
+            .breadcrumb-item a.w--current {
+              opacity: 0.6;
+              cursor: default;
+              pointer-events: none;
+            }
             /* styles for RTL lauout */
             [dir="rtl"] .main-nav_menu {
               margin-left: 0rem !important;
@@ -1735,7 +1740,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div class="sg-bg-col"></div>
       </div>
       <section position="relative" height-is="min-100svh" flex="col" place-content="around" sg-section="hero" style="padding: 2.25rem 0 1rem 0;" class="section">
-        <div events="none" z-index="-1" overflow="hidden" class="absolute-full-wrapper"><img src="https://cnd-host.pages.dev/files/s2/bg-gradient.webp" loading="eager" class="bg-deco cc-s2">
+        <div events="none" z-index="-1" overflow="hidden" class="absolute-full-wrapper"><img src="https://cnd-host.pages.dev/files/s2/bg-gradient.webp" loading="eager" class="absolute-cover-image cc-s2">
           <div opacity="1" user-select="none" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/sc01.webp" loading="auto" animation="slideIn" animationplay="0px, 200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-left-01">
             <div loading="auto" animation="slideIn" animationplay="0px, 800" style="border: none !important;" class="sg-hero-deco cc-left-02"><img src="images/S2-C0C0C0-256.svg" alt="S2 Framework&#x27;s brand logo" opacity="0.2" class="image cc-contain"></div><img src="https://cnd-host.pages.dev/files/s2/sc02.webp" loading="auto" animation="slideIn" animationplay="0px, 1200" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/sc03.webp" loading="auto" animation="slideIn" animationplay="0px, 400" alt="Screenshot of S2 Framework on Webflow" class="sg-hero-deco cc-right-02">
           </div>
@@ -1801,7 +1806,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             <div gap="word" font-size="xs" flex-wrap="wrap-nice" class="u-hflex-center-center w-embed"><span>
                 <a href="http://s2-framework.gitbook.io/docs" target="_blink">Docs</a> and <a href="http://s2-framework.webflow.io/#roadmap" target="_blink">Roadmap</a>
               </span></div>
-            <a aria-label="Github" href="https://github.com/realanthonyc/S2-Framework" target="_blank" class="w-inline-block">
+            <a aria-label="Github" href="https://github.com/SPACESODA/S2-Framework" target="_blank" class="w-inline-block">
               <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M50 3C23.48 3 2 24.48 2 51C2 72.24 15.74 90.18 34.82 96.54C37.22 96.96 38.12 95.52 38.12 94.26C38.12 93.12 38.06 89.34 38.06 85.32C26 87.54 22.88 82.38 21.92 79.68C21.38 78.3 19.04 74.04 17 72.9C15.32 72 12.92 69.78 16.94 69.72C20.72 69.66 23.42 73.2 24.32 74.64C28.64 81.9 35.54 79.86 38.3 78.6C38.72 75.48 39.98 73.38 41.36 72.18C30.68 70.98 19.52 66.84 19.52 48.48C19.52 43.26 21.38 38.94 24.44 35.58C23.96 34.38 22.28 29.46 24.92 22.86C24.92 22.86 28.94 21.6 38.12 27.78C41.96 26.7 46.04 26.16 50.12 26.16C54.2 26.16 58.28 26.7 62.12 27.78C71.3 21.54 75.32 22.86 75.32 22.86C77.96 29.46 76.28 34.38 75.8 35.58C78.86 38.94 80.72 43.2 80.72 48.48C80.72 66.9 69.5 70.98 58.82 72.18C60.56 73.68 62.06 76.56 62.06 81.06C62.06 87.48 62 92.64 62 94.26C62 95.52 62.9 97.02 65.3 96.54C84.26 90.18 98 72.18 98 51C98 24.48 76.52 3 50 3Z" fill="#ddd"></path>
                 </svg></div>

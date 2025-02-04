@@ -337,6 +337,7 @@ strong {
 }
 
 sup {
+  letter-spacing: 0;
   white-space: nowrap;
   vertical-align: baseline;
   text-wrap: wrap;
@@ -352,6 +353,7 @@ sup {
 }
 
 sub {
+  letter-spacing: 0;
   white-space: nowrap;
   vertical-align: baseline;
   text-wrap: wrap;
@@ -386,7 +388,7 @@ code {
 }
 
 blockquote {
-  border-left: .4rem solid var(--colors--brand);
+  border-left: .3em solid var(--colors--brand);
   margin-bottom: 0;
   padding: .75rem .5em .75rem .75em;
   font-size: 1.125rem;
@@ -580,7 +582,7 @@ figcaption {
   justify-content: center;
   align-items: center;
   height: auto;
-  min-height: 3.125rem;
+  min-height: 3rem;
   padding-top: .25rem;
   padding-bottom: .25rem;
   display: flex;
@@ -3781,7 +3783,7 @@ figcaption {
   line-height: 1.25;
 }
 
-.title-eyebrow {
+.eyebrow {
   color: var(--colors--brand);
   margin-top: .5em;
   font-size: 1.15rem;
@@ -4490,9 +4492,10 @@ figcaption {
   line-height: 1.35;
 }
 
-.bg-deco {
-  object-fit: contain;
-  object-position: 50% 0%;
+.absolute-cover-image {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
   width: 100%;
   height: 100%;
   display: block;
@@ -4500,8 +4503,9 @@ figcaption {
   inset: 0%;
 }
 
-.bg-deco.cc-s2 {
-  object-position: 50% 15%;
+.absolute-cover-image.cc-s2 {
+  object-fit: contain;
+  object-position: 50% 0%;
 }
 
 .deco-positioner {
@@ -4950,8 +4954,8 @@ figcaption {
   overflow: clip;
 }
 
-.container-wrapper.cc-with-bg-image {
-  background-image: url('../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif');
+.container-wrapper.cc-with-bg {
+  background-image: url('../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4963,7 +4967,7 @@ figcaption {
   height: 80svh;
   min-height: 30rem;
   max-height: 60rem;
-  padding: 2rem 3.5rem 4rem;
+  padding: 2rem 3rem 4rem;
   display: flex;
 }
 
@@ -6090,6 +6094,56 @@ figcaption {
   --s2--surface: #f8f8f8;
 }
 
+.breadcrumb {
+  line-height: 1;
+}
+
+.breadcrumb-list {
+  grid-column-gap: .5em;
+  grid-row-gap: .25em;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumb-item {
+  grid-column-gap: .5em;
+  grid-row-gap: 0em;
+  white-space: normal;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  display: flex;
+}
+
+.card-cover {
+  background-color: var(--colors--brand);
+  width: 100%;
+  height: 8rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body {
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  padding: 0;
+  position: relative;
+}
+
+.card-inner {
+  z-index: 1;
+  padding: 1.5rem;
+  position: relative;
+}
+
 @media screen and (max-width: 991px) {
   body {
     --_sizes---radius--extra-small: .275rem;
@@ -6240,7 +6294,7 @@ figcaption {
     font-size: 1.575rem;
   }
 
-  .title-eyebrow {
+  .eyebrow {
     font-size: 1.125rem;
   }
 
@@ -6297,7 +6351,7 @@ figcaption {
     font-size: 1.45rem;
   }
 
-  .bg-deco.cc-s2 {
+  .absolute-cover-image.cc-s2 {
     min-width: 160vw;
     margin-left: -30vw;
   }
@@ -6738,7 +6792,7 @@ figcaption {
     height: 2.75rem;
   }
 
-  .bg-deco.cc-s2 {
+  .absolute-cover-image.cc-s2 {
     object-position: 50% 10%;
     min-width: 200vw;
     margin-left: -50vw;
@@ -6821,6 +6875,8 @@ figcaption {
 
   .hero-inner {
     height: 70svh;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .richtext-list h5 {
@@ -7005,7 +7061,7 @@ figcaption {
     font-size: 1.25rem;
   }
 
-  .title-eyebrow {
+  .eyebrow {
     font-size: 1rem;
     line-height: 1.175;
   }
@@ -7086,8 +7142,6 @@ figcaption {
 
   .hero-inner {
     height: 60svh;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .richtext-list {
@@ -7106,6 +7160,7 @@ figcaption {
   }
 
   .sg-note {
+    max-width: 85vw;
     font-size: .85rem;
   }
 

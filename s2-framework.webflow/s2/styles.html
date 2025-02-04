@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Feb 03 2025 07:22:25 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Feb 04 2025 05:27:11 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -1671,6 +1671,11 @@
               content: '\2713\0020';
               color: var(--colors--brand);
             }
+            .breadcrumb-item a.w--current {
+              opacity: 0.6;
+              cursor: default;
+              pointer-events: none;
+            }
             /* styles for RTL lauout */
             [dir="rtl"] .main-nav_menu {
               margin-left: 0rem !important;
@@ -2290,7 +2295,7 @@
                         <div>Alignment</div>
                       </a>
                       <a href="#other-text-utilities" class="sg-side_sub-link cc-sub w-inline-block">
-                        <div>Other</div>
+                        <div>Other Utilities</div>
                       </a>
                     </div>
                     <a href="#bg-utilities" class="sg-side_sub-link w-inline-block">
@@ -2302,8 +2307,8 @@
                     <a href="#flex-utilities" class="sg-side_sub-link w-inline-block">
                       <div>Flex</div>
                     </a>
-                    <a href="#other-utilities" class="sg-side_sub-link w-inline-block">
-                      <div>Other</div>
+                    <a href="#utilities-misc" class="sg-side_sub-link w-inline-block">
+                      <div>Misc</div>
                     </a>
                   </div>
                 </div>
@@ -2320,7 +2325,7 @@
                       <h3>Headings</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="css-tag">h3</span> to style a <span class="css-tag cc-html">Heading 1</span> element if it is too large for the design.</p>
+                      <p>Styles are applied to both tags and classes. Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="css-tag">h3</span> class to style a <span class="css-tag cc-html">Heading 1</span> element if it is too large for the design.</p>
                     </div>
                   </div>
                   <div class="sg-element">
@@ -2434,6 +2439,22 @@
                       </div>
                       <div class="block">
                         <div class="h8">.h8 is an arbitrary class invented to style small headings</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                    <div class="sg-element">
+                      <div class="sg-tags">
+                        <div class="tag-wrapper">
+                          <div class="css-tag">eyebrow</div>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <div class="title-wrapper cc-sm">
+                          <div class="title-wrapper cc-sm">
+                            <div class="eyebrow">Eyebrow</div>
+                          </div>
+                          <h4>This is a H4 title for demo</h4>
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </div>
@@ -4573,10 +4594,10 @@
                     </div>
                   </div>
                 </section>
-                <section id="other-utilities" class="section">
+                <section id="utilities-misc" class="section">
                   <div class="title-wrapper">
                     <div class="title-wrapper">
-                      <h3>Other Utilities</h3>
+                      <h3>Miscellaneous Utilities</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
                       <p>Some other useful utilities.</p>
