@@ -24,9 +24,7 @@ Discord: https://s2-framework.webflow.io/#discord
 
 S2 Attributes:<br>
 https://s2-framework.pages.dev/webflow/framework/s2-attributes.css
-
 <br>
-
 Colors & Palettes Attributes:<br>
 https://s2-framework.pages.dev/webflow/style-guide/s2-colors-palettes.css
 
