@@ -2,8 +2,8 @@
 /* -- Global Custom Styles -- */
 /* -------------------------- */
 
-/* html and body tags */
-html:not(.wf-design-mode) ::selection { background: var(--colors--brand); color: #fff; }
+/* html and body */
+html:not(.wf-design-mode) ::selection { background: var(--colors--primary); color: #fff; }
 body * { text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem); }
 
 /* main-nav_button */
@@ -15,16 +15,30 @@ body * { text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem); }
 /* better sup and sub on headings */
 h1 sup, .h1 sup, h1 sub, .h1 sup,
 h2 sup, .h2 sup, h2 sub, .h2 sup,
-h3 sup, .h3 sup, h3 sub, .h3 sup { margin: 0 -0.25ch; font-size: calc(0.4em + 5px); }
-h1 sup, .h1 sup, h2 sup, .h2 sup, h3 sup, .h3 sup { top: calc(-1.01em + 5.03px); }
-h1 sub, .h1 sub, h2 sub, .h2 sub, h3 sub, .h3 sub { top: calc(0.16em - 0.78px); }
+h3 sup, .h3 sup, h3 sub, .h3 sup { margin: 0 -0.275ch; }
+
+/* better modal */
+dialog.modal[open] { animation: fadeIn 480ms ease-out forwards; }
+dialog.modal::backdrop {
+	background: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+@supports (-webkit-touch-callout: none) {
+	button:focus, button:focus-visible { outline: none !important; box-shadow: none !important; }
+}
+.modal.cc-open { display: block; position: fixed; inset: 0; }
 
 /* other styles */
 .richtext-list ul li::before {
 	position: absolute;
 	margin-left: -1.65em;
 	content: '\2713\0020';
-	color: var(--colors--brand);
+	color: var(--colors--primary);
+}
+.breadcrumb-item a.w--current {
+	opacity: 0.6;
+	cursor: default;
+	pointer-events: none;
 }
 
 /* styles for RTL lauout */
