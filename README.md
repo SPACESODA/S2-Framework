@@ -22,13 +22,10 @@ Discord: https://s2-framework.webflow.io/#discord
 
 **CDN**
 
-S2 Attributes:<br>
-https://s2-framework.pages.dev/webflow/framework/s2-attributes.css
-
+S2 Framework: Base CSS <br>
+https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.css
 <br>
-
-Colors & Palettes Attributes:<br>
-https://s2-framework.pages.dev/webflow/style-guide/s2-colors-palettes.css
+Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.min.css
 
 <br><br><br>
 

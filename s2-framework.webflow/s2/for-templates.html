@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 04 2025 09:54:28 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Feb 09 2025 05:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -34,25 +34,47 @@
         document.documentElement.setAttribute("lang", "en-US");
       });
     </script>
-  <!-- 
-S2 Framework (https://s2-framework.webflow.io)
-- - -
-S2 Framework (and its official Cloneable on Webflow and GitHub) by The S2 Framework Team, Anthony C, SPACESODA, HYPE STUDIO is marked with CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/). 
-You can copy (clone) it, edit it, and use it freely for personal or commercial work, 
-without the need for attribution or notification to the authors or contributors.
-No user may claim authorship or representation as the original creator or publisher 
-of the S2 Framework, either in whole or in part.
-- - -
-S2 FRAMEWORK, THE SOFTWARE, IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
-ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS, CONTRIBUTORS OR COPYRIGHT HOLDERS BE 
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
-CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH 
-THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- -->
 </head>
-<body dir="" theme-change="false" class="body u-base">
+<body dir="" theme-change="false" class="body">
+  <div class="sg-grid-guide">
+    <div class="css w-embed">
+      <style>
+          /* -- styles for the grid guide -- */
+          .sg-grid-guide_list {
+            counter-reset: gridguides;
+          }
+          .sg-grid-guide_list>div::before {
+            counter-increment: gridguides;
+            content: counter(gridguides);
+          }
+          .sg-grid-guide_col {
+            box-shadow: -1px 0 0 0 #cccccc85, 1px 0 0 0 #cccccc85;
+          }
+        </style>
+    </div>
+    <div style="position: relative;" class="container">
+      <div class="sg-grid-guide_list u-grid-global">
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+        <div class="sg-grid-guide_col"></div>
+      </div>
+    </div>
+  </div>
   <div data-nosnippet="true" class="delete-me cc-clone-cta">
     <div code="js" class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this for your site.  -->
@@ -86,7 +108,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     </div>
     <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
       <!--  For Style Guide only, you don't need such scripts for your site.  -->
-      <!--  Hide Cookie Concent in iFrames  -->
+      <!--  Hide Cookie Consent in iFrames  -->
       <script>
           if (window.self !== window.top) {
             document.addEventListener("DOMContentLoaded", function() {
@@ -133,50 +155,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </a>
     </div>
   </div>
-  <div class="sg-grid-guide">
-    <div class="css w-embed">
-      <style>
-          /* -- styles for the grid guide -- */
-          html:not(.wf-design-mode) .sg-grid-guide {
-            display: none;
-          }
-          .sg-grid-guide_list {
-            counter-reset: gridguides;
-          }
-          .sg-grid-guide_list>div::before {
-            counter-increment: gridguides;
-            content: counter(gridguides);
-          }
-        </style>
-    </div>
-    <div class="w-layout-blockcontainer container w-container">
-      <div class="sg-grid-guide_list u-grid-custom">
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-        <div class="sg-grid-guide_col u-vflex-center-bottom"></div>
-      </div>
-    </div>
-  </div>
   <div id="top" style="background: var(--s2--surface);" class="page">
-    <div code="css" class="css w-embed">
-      <style>
-          /* -- Global Base Setup -- */
-          body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-          }
-        </style>
-    </div>
     <main class="main">
       <section class="section cc-bottom-sm">
         <div class="w-layout-blockcontainer container w-container">
@@ -185,7 +164,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <h1 class="sg-hero-heading">S2 Framework for Templates</h1>
             </div>
             <div class="text-wrapper cc-max-40rem">
-              <p>Are you building Webflow Templates? Since Webflow doesn&#x27;t allow custom code in templates, we created a streamlined one-page version of the <a href="https://s2-framework.webflow.io">S2 Framework</a> tailored for template creation. <strong>Customize to make this page your style guide.</strong></p>
+              <p>Are you making Webflow Templates? Since Webflow doesn&#x27;t allow custom code in templates, we created a streamlined one-page version of the <a href="https://s2-framework.webflow.io">S2 Framework</a> tailored for template creation. <strong>Customize to make this page your style guide.</strong></p>
             </div>
             <div class="button-wrapper">
               <a aria-label="Learn more" href="https://s2-framework.gitbook.io/docs/guide-and-documentation/for-template-creators" target="_blank" class="button w-inline-block">
@@ -202,44 +181,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </div>
           </div>
           <div class="text-wrapper">
-            <p class="text-sm">If you&#x27;re not building a template, you can <strong>delete this page</strong> — 100% safe!<br>But if all you need is a minimal <strong><em>one-page</em> Style Guide</strong> for your next project, this page is perfect for you to customize for your design.</p>
-          </div>
-        </div>
-      </section>
-      <section id="base-setup" class="section cc-top-sm">
-        <div class="w-layout-blockcontainer container w-container">
-          <div class="sg-group">
-            <div class="title-wrapper">
-              <h2>Base Setup</h2>
-            </div>
-            <section class="section cc-top-bottom-sm">
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">u-base</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="u-base">
-                    <div style="padding: 1rem; border: 1px solid #ccc; pointer-events: none;" class="block">
-                      <p>Utility class for base styles setup. Additional styles can be applied according to your design.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Body</div>
-                    <div class="css-tag">body</div>
-                    <div class="css-tag">u-base</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <p>Since custom code is not allowed in Webflow Templates, it is not possible to set fluid values for the root font size to achieve Fluid Responsive typography. The closest alternative is to apply a class <span class="css-tag">u-base</span> to <span class="css-tag cc-html">Body</span> <span class="css-tag">body</span> with font-size value defined using the <code>clamp()</code> function. This approach applies a fluid responsive font size to any text elements that do not have specific font size values set. Visit the <a href="https://s2-framework.gitbook.io/docs/guide-and-documentation/for-template-creators" target="_blank">docs</a> for more details.</p>
-                </div>
-              </div>
-            </section>
+            <p class="text-sm">If you&#x27;re not making a template, you can <strong>delete this page</strong> — 100% safe!<br>If all you need is a minimal <strong><em>one-page</em> Style Guide</strong> for your next project, this page is perfect for you to customize for your design.</p>
           </div>
         </div>
       </section>
@@ -255,16 +197,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <h3>Headings</h3>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>Styles are applied to both tags and classes. Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="css-tag">h3</span> class to style a <span class="css-tag cc-html">Heading 1</span> element if it is too large for the design.</p>
+                  <p>Styles are applied to both tags and classes. Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="tag-label">h3</span> class to style a <span class="tag-label cc-html">Heading 1</span> element if it is too large for the design.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Heading 1</div>
+                    <div class="tag-label cc-html">Heading 1</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">h1</div>
+                    <div class="tag-label">h1</div>
                   </div>
                 </div>
                 <div class="block">
@@ -276,10 +218,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Heading 2</div>
+                    <div class="tag-label cc-html">Heading 2</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">h2</div>
+                    <div class="tag-label">h2</div>
                   </div>
                 </div>
                 <div class="block">
@@ -291,10 +233,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Heading 3</div>
+                    <div class="tag-label cc-html">Heading 3</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">h3</div>
+                    <div class="tag-label">h3</div>
                   </div>
                 </div>
                 <div class="block">
@@ -306,10 +248,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Heading 4</div>
+                    <div class="tag-label cc-html">Heading 4</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">h4</div>
+                    <div class="tag-label">h4</div>
                   </div>
                 </div>
                 <div class="block">
@@ -321,10 +263,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Heading 5</div>
+                    <div class="tag-label cc-html">Heading 5</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">h5</div>
+                    <div class="tag-label">h5</div>
                   </div>
                 </div>
                 <div class="block">
@@ -336,10 +278,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Heading 6</div>
+                    <div class="tag-label cc-html">Heading 6</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">h6</div>
+                    <div class="tag-label">h6</div>
                   </div>
                 </div>
                 <div class="block">
@@ -353,7 +295,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">h7</div>
+                      <div class="tag-label">h7</div>
                     </div>
                   </div>
                   <div class="block">
@@ -364,7 +306,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">h8</div>
+                      <div class="tag-label">h8</div>
                     </div>
                   </div>
                   <div class="block">
@@ -372,21 +314,21 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
                 </div>
-                <div class="sg-element">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="css-tag">eyebrow</div>
-                    </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">eyebrow</div>
                   </div>
-                  <div class="block">
+                </div>
+                <div class="block">
+                  <div class="title-wrapper cc-sm">
                     <div class="title-wrapper cc-sm">
-                      <div class="title-wrapper cc-sm">
-                        <div class="eyebrow">Eyebrow</div>
-                      </div>
-                      <h4>This is a H4 title for demo</h4>
+                      <div class="eyebrow">Eyebrow</div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h4>This is a H4 title for demo</h4>
                   </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
             </section>
@@ -399,103 +341,113 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-3xl</div>
+                    <div class="tag-label">text-3xl</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                  <p class="text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-2xl</div>
+                    <div class="tag-label">text-2xl</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                  <p class="text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-xl</div>
+                    <div class="tag-label">text-xl</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-lg</div>
+                    <div class="tag-label">text-lg</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-base</div>
+                    <div class="tag-label">text-base</div>
                   </div>
-                  <div class="sg-note">font-size: 1rem<br>line-height: 1.5<br>(same as body by default)</div>
+                  <div class="sg-note">font-size: same as Body<br>line-height: same as Body</div>
                 </div>
                 <div class="block">
-                  <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-sm</div>
+                    <div class="tag-label">text-sm</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-xs</div>
+                    <div class="tag-label">text-xs</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-2xs</div>
+                    <div class="tag-label">text-2xs</div>
                   </div>
                 </div>
                 <div class="block">
-                  <p class="text-2xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p class="text-2xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare. Consectetur adipiscing elit elementum tristique.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Paragraph</div>
+                    <div class="tag-label">text-3xs</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <p class="text-3xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare. Consectetur adipiscing elit elementum tristique.</p>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label cc-html">Paragraph</div>
                   </div>
                   <div class="sg-note">font-size: not set<br>line-height: not set</div>
                 </div>
                 <div class="block">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Body</div>
+                    <div class="tag-label cc-html">Body</div>
                   </div>
                 </div>
                 <div class="block">
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</div>
                 </div>
               </div>
             </section>
@@ -508,7 +460,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Unordered Lists</div>
+                    <div class="tag-label cc-html">Unordered Lists</div>
                   </div>
                 </div>
                 <div class="block">
@@ -528,7 +480,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Ordered Lists</div>
+                    <div class="tag-label cc-html">Ordered Lists</div>
                   </div>
                 </div>
                 <div class="block">
@@ -548,7 +500,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">list</div>
+                    <div class="tag-label">list</div>
                   </div>
                   <div class="sg-note">spaced list items</div>
                 </div>
@@ -582,7 +534,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">list-item_image-icon<br></div>
+                    <div class="tag-label">list-item_image-icon<br></div>
                   </div>
                   <div class="sg-note">use a combo class to change the background-image for the bullets</div>
                 </div>
@@ -603,10 +555,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Unordered Lists</div>
+                    <div class="tag-label cc-html">Unordered Lists</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div><span class="css-tag">list-none</span> / <span class="css-tag">list-h</span></div>
+                    <div><span class="tag-label">list-none</span> / <span class="tag-label">list-h</span></div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
@@ -676,15 +628,15 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">list-custom</div>
+                    <div class="tag-label">list-custom</div>
                   </div>
                 </div>
                 <div class="block">
                   <div style="gap: 1.5rem;" class="flex-wrap-cols">
                     <div class="col cc-p-0">
                       <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                        <div class="css-tag cc-html">Unordered Lists</div>
-                        <div class="css-tag">list-custom</div>
+                        <div class="tag-label cc-html">Unordered Lists</div>
+                        <div class="tag-label">list-custom</div>
                       </div>
                       <ul role="list" class="list-custom">
                         <li class="list-custom_item">Sed posuere consectetur est at lobortis.</li>
@@ -694,8 +646,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                     <div class="col cc-p-0">
                       <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                        <div class="css-tag cc-html">Ordered Lists</div>
-                        <div class="css-tag">list-custom</div>
+                        <div class="tag-label cc-html">Ordered Lists</div>
+                        <div class="tag-label">list-custom</div>
                       </div>
                       <ol role="list" class="list-custom">
                         <li class="list-custom_item cc-ua">Sed posuere consectetur est at lobortis.</li>
@@ -705,8 +657,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                     <div class="col cc-p-0">
                       <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                        <div class="css-tag">list-custom</div>
-                        <div class="css-tag">cc-p-0</div>
+                        <div class="tag-label">list-custom</div>
+                        <div class="tag-label">cc-p-0</div>
                       </div>
                       <div class="list-custom cc-p-0">
                         <div class="list-custom_item cc-with-icon">
@@ -756,7 +708,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Block Quote</div>
+                    <div class="tag-label cc-html">Block Quote</div>
                   </div>
                 </div>
                 <div class="block">
@@ -766,7 +718,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Links</div>
+                    <div class="tag-label cc-html">Links</div>
                   </div>
                 </div>
                 <div class="block">
@@ -783,10 +735,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Superscript</div>
+                    <div class="tag-label cc-html">Superscript</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Subscript</div>
+                    <div class="tag-label cc-html">Subscript</div>
                   </div>
                 </div>
                 <div class="block">
@@ -806,8 +758,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">code-block</div>
-                    <div class="sg-note">wrapped with <span class="css-tag">block</span> <span class="css-tag">cc-full</span> in the example as it needs a wrapper with width value</div>
+                    <div class="tag-label">code-block</div>
+                    <div class="sg-note">wrapped with <span class="tag-label">block</span> <span class="tag-label">cc-full</span> in the example as it needs a wrapper with width value</div>
                   </div>
                 </div>
                 <div class="block">
@@ -837,19 +789,19 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               </div>
               <palette style="display: block; width: 100%; margin-bottom: 1rem;">
                 <div class="u-hflex-center-top">
-                  <div class="sg-square cc-demo_colors_brand-light">
-                    <div>Brand<br>Light</div>
+                  <div class="sg-square cc-demo_colors_primary-light">
+                    <div>Primary<br>Light</div>
                   </div>
-                  <div class="sg-square cc-demo_colors_brand">
-                    <div>Brand<br></div>
+                  <div class="sg-square cc-demo_colors_primary">
+                    <div>Primary</div>
                   </div>
-                  <div class="sg-square cc-demo_colors_brand-deep">
-                    <div>Brand<br>Deep</div>
+                  <div class="sg-square cc-demo_colors_primary-deep">
+                    <div>Primary<br>Deep</div>
                   </div>
                 </div>
                 <div class="u-hflex-center-top">
-                  <div class="sg-square cc-demo_colors_brand-alt">
-                    <div>Brand Alt</div>
+                  <div class="sg-square cc-demo_colors_secondary">
+                    <div>Secondary</div>
                   </div>
                   <div class="sg-square cc-demo_colors_accent">
                     <div>Accent</div>
@@ -917,13 +869,13 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <h3>Sections</h3>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>Use the <span class="css-tag">section</span> class with its combo classes for all your sections to maintain consistency.</p>
+                  <p>Use the <span class="tag-label">section</span> class with its combo classes for all your sections to maintain consistency.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
+                    <div class="tag-label">section</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -942,8 +894,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-bg-surface</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-bg-surface</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -960,8 +912,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-top-0</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-top-0</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -980,8 +932,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-bottom-0</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-bottom-0</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -1000,8 +952,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-top-sm</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-top-sm</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -1020,8 +972,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-bottom-sm</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-bottom-sm</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -1040,8 +992,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-top-bottom-sm</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-top-bottom-sm</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -1060,8 +1012,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-top-lg</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-top-lg</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -1080,8 +1032,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">section</div>
-                    <div class="css-tag">cc-bottom-lg</div>
+                    <div class="tag-label">section</div>
+                    <div class="tag-label">cc-bottom-lg</div>
                   </div>
                 </div>
                 <div class="card cc-p-0">
@@ -1104,13 +1056,13 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <h3>Containers</h3>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>Sections usually need a <span class="css-tag">container</span> to keep layouts from becoming too wide. Containers also control the horizontal padding in order to maintain the same spacing throughout your project.</p>
+                  <p>Sections usually need a <span class="tag-label">container</span> to keep layouts from becoming too wide. Containers also control the horizontal padding in order to maintain the same spacing throughout your project.</p>
                 </div>
               </div>
               <div class="sg-element cc-block">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">container</div>
+                    <div class="tag-label">container</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -1131,8 +1083,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element cc-block">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">container</div>
-                    <div class="css-tag">cc-10c</div>
+                    <div class="tag-label">container</div>
+                    <div class="tag-label">cc-10c</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -1153,8 +1105,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element cc-block">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">container</div>
-                    <div class="css-tag">cc-8c</div>
+                    <div class="tag-label">container</div>
+                    <div class="tag-label">cc-8c</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -1175,8 +1127,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element cc-block">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">container</div>
-                    <div class="css-tag">cc-6c</div>
+                    <div class="tag-label">container</div>
+                    <div class="tag-label">cc-6c</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -1197,8 +1149,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element cc-block">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">container</div>
-                    <div class="css-tag">cc-full</div>
+                    <div class="tag-label">container</div>
+                    <div class="tag-label">cc-full</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -1223,46 +1175,46 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <h3>Wrappers</h3>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p><strong>Heading</strong> and <strong>Paragraph</strong> elements are typically wrapped with <span class="css-tag">title-wrapper</span> or <span class="css-tag">text-wrapper</span> to access combo classes for styling.</p>
+                  <p><strong>Heading</strong> and <strong>Paragraph</strong> elements are typically wrapped with <span class="tag-label">title-wrapper</span> or <span class="tag-label">text-wrapper</span> to access combo classes for styling.</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">title-wrapper</div>
+                    <div class="tag-label">title-wrapper</div>
                   </div>
                 </div>
                 <div class="block">
                   <div class="title-wrapper cc-xl">
-                    <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-xl</span></h6>
+                    <h6>Heading inside a title-wrapper <span class="tag-label">cc-xl</span></h6>
                   </div>
                   <div class="title-wrapper cc-lg">
-                    <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-lg</span></h6>
+                    <h6>Heading inside a title-wrapper <span class="tag-label">cc-lg</span></h6>
                   </div>
                   <div class="title-wrapper">
                     <h6>Heading inside a title-wrapper</h6>
                   </div>
                   <div class="title-wrapper cc-sm">
-                    <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-sm</span></h6>
+                    <h6>Heading inside a title-wrapper <span class="tag-label">cc-sm</span></h6>
                   </div>
                   <div class="title-wrapper cc-xs">
-                    <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-xs</span></h6>
+                    <h6>Heading inside a title-wrapper <span class="tag-label">cc-xs</span></h6>
                   </div>
                   <div class="title-wrapper cc-xxs">
-                    <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-2xs</span></h6>
+                    <h6>Heading inside a title-wrapper <span class="tag-label">cc-2xs</span></h6>
                   </div>
                   <div class="title-wrapper cc-0">
-                    <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-0</span></h6>
+                    <h6>Heading inside a title-wrapper <span class="tag-label">cc-0</span></h6>
                   </div>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">title-wrapper</div>
+                    <div class="tag-label">title-wrapper</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">cc-align-center</div>
+                    <div class="tag-label">cc-align-center</div>
                   </div>
                 </div>
                 <div class="block">
@@ -1282,11 +1234,11 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-wrapper</div>
+                    <div class="tag-label">text-wrapper</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">cc-max-40rem</div>
-                    <div class="css-tag">cc-max-20rem</div>
+                    <div class="tag-label">cc-max-40rem</div>
+                    <div class="tag-label">cc-max-20rem</div>
                   </div>
                 </div>
                 <div class="block">
@@ -1311,10 +1263,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">text-wrapper</div>
+                    <div class="tag-label">text-wrapper</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">cc-align-center</div>
+                    <div class="tag-label">cc-align-center</div>
                   </div>
                 </div>
                 <div class="block">
@@ -1326,10 +1278,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">button-wrapper</div>
+                    <div class="tag-label">button-wrapper</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">cc-center</div>
+                    <div class="tag-label">cc-center</div>
                   </div>
                 </div>
                 <div class="block">
@@ -1354,19 +1306,19 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">image-wrapper</div>
+                    <div class="tag-label">image-wrapper</div>
                   </div>
-                  <div class="tag-wrapper"><span class="css-tag">image</span> <span class="css-tag">cc-1x1</span> / <span class="css-tag">cc-4x3</span> / <span class="css-tag">cc16x9</span></div>
+                  <div class="tag-wrapper"><span class="tag-label">image</span> <span class="tag-label">cc-1x1</span> / <span class="tag-label">cc-4x3</span> / <span class="tag-label">cc16x9</span></div>
                 </div>
                 <div class="block">
                   <div style="gap: 1rem;" class="flex-wrap-cols">
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-1x1"></div>
                     </div>
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-4x3"></div>
                     </div>
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-16x9"></div>
                     </div>
                   </div>
@@ -1375,13 +1327,26 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">image-wrapper</div>
+                    <div class="tag-label">image-wrapper</div>
                   </div>
-                  <div class="tag-wrapper"><span class="css-tag">image</span> <span class="css-tag">cc-contain</span></div>
+                  <div class="tag-wrapper"><span class="tag-label">image</span> <span class="tag-label">cc-contain</span></div>
                 </div>
                 <div class="block">
-                  <div class="sg-50p">
+                  <div class="col cc-span-4">
                     <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-contain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">absolute-full-wrapper</div>
+                    <div class="tag-label">absolute-cover-image</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div style="position: relative; height: 10rem;" class="card cc-p-0">
+                    <div class="absolute-full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 96vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" class="absolute-cover-image"></div>
                   </div>
                 </div>
               </div>
@@ -1398,7 +1363,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-component">Spacer</div>
+                    <div class="tag-label cc-component">Spacer</div>
                   </div>
                   <div class="sg-note">input height values in properties for different breakpoints</div>
                 </div>
@@ -1429,7 +1394,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <h2>Utilities</h2>
               </div>
               <div class="text-wrapper cc-max-40rem">
-                <p><span class="css-tag">u-</span> prefix to separate them from base styles. They can work on their own, but usually you use them to modify a base element, like a <span class="css-tag">title-wrapper</span>.</p>
+                <p><span class="tag-label">u-</span> prefix to separate them from base styles. They can work on their own, but usually you use them to modify a base element, like a <span class="tag-label">title-wrapper</span>.</p>
               </div>
             </div>
             <div id="text-utilities" class="block">
@@ -1442,7 +1407,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-base</div>
+                      <div class="tag-label">u-text-base</div>
                     </div>
                   </div>
                   <div style="padding: 1rem; background: #fff;" class="block">
@@ -1452,7 +1417,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-mu</div>
+                      <div class="tag-label">u-text-mu</div>
                     </div>
                   </div>
                   <div style="padding: 1rem; background: #fff;" class="block">
@@ -1462,17 +1427,17 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-brand</div>
+                      <div class="tag-label">u-text-primary</div>
                     </div>
                   </div>
                   <div style="padding: 1rem; background: #fff;" class="block">
-                    <h5 class="u-text-brand">Lorem ipsum dolor sit amet.</h5>
+                    <h5 class="u-text-primary">Lorem ipsum dolor sit amet.</h5>
                   </div>
                 </div>
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-stroke</div>
+                      <div class="tag-label">u-text-stroke</div>
                     </div>
                   </div>
                   <div style="padding: 1rem; background: #fff;" class="block">
@@ -1492,7 +1457,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-font-regular</div>
+                      <div class="tag-label">u-font-regular</div>
                     </div>
                   </div>
                   <h4 class="u-font-regular">Lorem ipsum dolor sit amet.</h4>
@@ -1500,7 +1465,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-font-bold</div>
+                      <div class="tag-label">u-font-bold</div>
                     </div>
                   </div>
                   <h4 class="u-font-bold">Lorem ipsum dolor sit amet.</h4>
@@ -1508,7 +1473,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-font-italic</div>
+                      <div class="tag-label">u-font-italic</div>
                     </div>
                   </div>
                   <h4 class="u-font-italic">Lorem ipsum dolor sit amet.</h4>
@@ -1526,7 +1491,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-left</div>
+                      <div class="tag-label">u-text-left</div>
                     </div>
                   </div>
                   <div class="block">
@@ -1536,7 +1501,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-center</div>
+                      <div class="tag-label">u-text-center</div>
                     </div>
                   </div>
                   <div class="block">
@@ -1546,7 +1511,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">u-text-right</div>
+                      <div class="tag-label">u-text-right</div>
                     </div>
                   </div>
                   <div class="block">
@@ -1566,9 +1531,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">
-                        <div>u-text-underline</div>
-                      </div>
+                      <div class="tag-label">u-text-underline</div>
                     </div>
                   </div>
                   <h5 class="u-text-underline">Lorem ipsum dolor sit amet.</h5>
@@ -1576,9 +1539,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">
-                        <div>u-text-strike</div>
-                      </div>
+                      <div class="tag-label">u-text-strike</div>
                     </div>
                   </div>
                   <h5 class="u-text-strike">Lorem ipsum dolor sit amet.</h5>
@@ -1586,39 +1547,17 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">
-                        <div>u-text-uppercase</div>
-                      </div>
+                      <div class="tag-label">u-text-no-deco</div>
                     </div>
                   </div>
-                  <h5 class="u-text-uppercase">Lorem ipsum dolor sit amet.</h5>
+                  <h5>
+                    <a href="#" class="u-text-no-deco">This is a link</a> dolor sit amet.
+                  </h5>
                 </div>
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="css-tag">
-                        <div>u-text-lowercase</div>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="u-text-lowercase">Lorem ipsum dolor sit amet.</h5>
-                </div>
-                <div class="sg-element">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="css-tag">
-                        <div>u-text-capitalize</div>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="u-text-capitalize">Lorem ipsum dolor sit amet.</h5>
-                </div>
-                <div class="sg-element">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="css-tag">
-                        <div>u-text-nowrap</div>
-                      </div>
+                      <div class="tag-label">u-text-nowrap<br></div>
                     </div>
                   </div>
                   <h5 class="u-text-nowrap">Lorem ipsum</h5>
@@ -1634,7 +1573,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">u-bg-surface</div>
+                    <div class="tag-label">u-bg-surface</div>
                   </div>
                   <div class="sg-note">background and text styles are applied</div>
                 </div>
@@ -1648,14 +1587,14 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">u-bg-brand</div>
+                    <div class="tag-label">u-bg-primary</div>
                   </div>
                 </div>
                 <div class="block">
-                  <div style="padding: 1rem; margin-bottom: 1rem;" class="u-bg-brand">
+                  <div style="padding: 1rem; margin-bottom: 1rem;" class="u-bg-primary">
                     <h5>Lorem ipsum dolor sit amet.</h5>
                   </div>
-                  <div style="padding: 1rem;" class="u-bg-brand">
+                  <div style="padding: 1rem;" class="u-bg-primary">
                     <h5>Lorem ipsum dolor sit amet.</h5>
                     <p style="color: var(--colors--accent);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros elementum tristique.</p>
                     <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-surface">
@@ -1682,7 +1621,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   </div>
                   <div no-scrollbar="" class="sg-grid-scroll">
                     <div class="card">
-                      <div class="css-tag">u-hflex-left-top</div>
+                      <div class="tag-label">u-hflex-left-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-top">
                           <div class="sg-flex-dot"></div>
@@ -1690,7 +1629,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-left-center</div>
+                      <div class="tag-label">u-hflex-left-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-center">
                           <div class="sg-flex-dot"></div>
@@ -1698,7 +1637,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-left-bottom</div>
+                      <div class="tag-label">u-hflex-left-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1706,7 +1645,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-left-stretch</div>
+                      <div class="tag-label">u-hflex-left-stretch</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-stretch">
                           <div class="sg-flex-dot"></div>
@@ -1714,7 +1653,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-center-top</div>
+                      <div class="tag-label">u-hflex-center-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-top">
                           <div class="sg-flex-dot"></div>
@@ -1722,7 +1661,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-center-center</div>
+                      <div class="tag-label">u-hflex-center-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-center">
                           <div class="sg-flex-dot"></div>
@@ -1730,7 +1669,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-center-bottom</div>
+                      <div class="tag-label">u-hflex-center-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1738,7 +1677,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-center-stretch</div>
+                      <div class="tag-label">u-hflex-center-stretch</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-stretch">
                           <div class="sg-flex-dot"></div>
@@ -1746,7 +1685,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-right-top</div>
+                      <div class="tag-label">u-hflex-right-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-top">
                           <div class="sg-flex-dot"></div>
@@ -1754,7 +1693,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-right-center</div>
+                      <div class="tag-label">u-hflex-right-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-center">
                           <div class="sg-flex-dot"></div>
@@ -1762,7 +1701,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-right-bottom</div>
+                      <div class="tag-label">u-hflex-right-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1770,7 +1709,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-right-stretch</div>
+                      <div class="tag-label">u-hflex-right-stretch</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-stretch">
                           <div class="sg-flex-dot"></div>
@@ -1778,7 +1717,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="css">
-                      <div class="css-tag">u-hflex-between-top</div>
+                      <div class="tag-label">u-hflex-between-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-top">
                           <div class="sg-flex-dot"></div>
@@ -1787,7 +1726,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-between-center</div>
+                      <div class="tag-label">u-hflex-between-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-center">
                           <div class="sg-flex-dot"></div>
@@ -1796,7 +1735,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-between-bottom</div>
+                      <div class="tag-label">u-hflex-between-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1805,7 +1744,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-hflex-between-stretch</div>
+                      <div class="tag-label">u-hflex-between-stretch</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-stretch">
                           <div class="sg-flex-dot"></div>
@@ -1821,7 +1760,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   </div>
                   <div no-scrollbar="" class="sg-grid-scroll">
                     <div class="card">
-                      <div class="css-tag">u-vflex-left-top</div>
+                      <div class="tag-label">u-vflex-left-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-top">
                           <div class="sg-flex-dot"></div>
@@ -1829,7 +1768,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-left-center</div>
+                      <div class="tag-label">u-vflex-left-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-center">
                           <div class="sg-flex-dot"></div>
@@ -1837,7 +1776,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-left-bottom</div>
+                      <div class="tag-label">u-vflex-left-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1845,7 +1784,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-left-between</div>
+                      <div class="tag-label">u-vflex-left-between</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-between">
                           <div class="sg-flex-dot"></div>
@@ -1854,7 +1793,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-center-top</div>
+                      <div class="tag-label">u-vflex-center-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-top">
                           <div class="sg-flex-dot"></div>
@@ -1862,7 +1801,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-center-center</div>
+                      <div class="tag-label">u-vflex-center-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-center">
                           <div class="sg-flex-dot"></div>
@@ -1870,7 +1809,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-center-bottom</div>
+                      <div class="tag-label">u-vflex-center-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1878,7 +1817,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-center-between</div>
+                      <div class="tag-label">u-vflex-center-between</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-between">
                           <div class="sg-flex-dot"></div>
@@ -1887,7 +1826,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-right-top</div>
+                      <div class="tag-label">u-vflex-right-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-top">
                           <div class="sg-flex-dot"></div>
@@ -1895,7 +1834,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-right-center</div>
+                      <div class="tag-label">u-vflex-right-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-center">
                           <div class="sg-flex-dot"></div>
@@ -1903,7 +1842,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-right-bottom</div>
+                      <div class="tag-label">u-vflex-right-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1911,7 +1850,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-right-between</div>
+                      <div class="tag-label">u-vflex-right-between</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-between">
                           <div class="sg-flex-dot"></div>
@@ -1920,7 +1859,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-stretch-top</div>
+                      <div class="tag-label">u-vflex-stretch-top</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-top">
                           <div class="sg-flex-dot"></div>
@@ -1928,7 +1867,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-stretch-center</div>
+                      <div class="tag-label">u-vflex-stretch-center</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-center">
                           <div class="sg-flex-dot"></div>
@@ -1936,7 +1875,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-stretch-bottom</div>
+                      <div class="tag-label">u-vflex-stretch-bottom</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-bottom">
                           <div class="sg-flex-dot"></div>
@@ -1944,7 +1883,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-stretch-between</div>
+                      <div class="tag-label">u-vflex-stretch-between</div>
                       <div class="sg-flex-wrapper">
                         <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-between">
                           <div class="sg-flex-dot"></div>
@@ -1960,7 +1899,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   </div>
                   <div no-scrollbar="" class="sg-grid-scroll">
                     <div class="card">
-                      <div class="css-tag">u-hflex-wrap</div>
+                      <div class="tag-label">u-hflex-wrap</div>
                       <div class="sg-flex-wrapper">
                         <div style="display: flex; gap: 26cqw; height: 100%;" class="u-hflex-wrap">
                           <div class="sg-flex-dot"></div>
@@ -1971,7 +1910,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-vflex-wrap</div>
+                      <div class="tag-label">u-vflex-wrap</div>
                       <div class="sg-flex-wrapper">
                         <div style="display: flex; gap: 26cqw; height: 100%;" class="u-vflex-wrap">
                           <div class="sg-flex-dot"></div>
@@ -1981,19 +1920,19 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-flex-shrink</div>
+                      <div class="tag-label">u-flex-shrink</div>
                       <div class="sg-flex-wrapper">
                         <div style="display: flex; gap: 26cqw; height: 100%;" class="u-flex-shrink"></div>
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-flex-grow</div>
+                      <div class="tag-label">u-flex-grow</div>
                       <div class="sg-flex-wrapper">
                         <div style="display: flex; gap: 26cqw; height: 100%;" class="u-flex-grow"></div>
                       </div>
                     </div>
                     <div class="card">
-                      <div class="css-tag">u-flex-noshrink</div>
+                      <div class="tag-label">u-flex-noshrink</div>
                       <div class="sg-flex-wrapper">
                         <div style="display: flex; gap: 26cqw; height: 100%;" class="u-flex-noshrink"></div>
                       </div>
@@ -2014,7 +1953,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">
+                    <div class="tag-label">
                       <div>u-hide</div>
                     </div>
                   </div>
@@ -2026,7 +1965,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">
+                    <div class="tag-label">
                       <div>u-hide_md<br></div>
                     </div>
                   </div>
@@ -2040,7 +1979,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">
+                    <div class="tag-label">
                       <div>u-hide_sm</div>
                     </div>
                   </div>
@@ -2054,7 +1993,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">
+                    <div class="tag-label">
                       <div>u-hide_xs</div>
                     </div>
                   </div>
@@ -2068,7 +2007,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">
+                    <div class="tag-label">
                       <div>u-align-center</div>
                     </div>
                   </div>
@@ -2076,38 +2015,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <div flex="row" class="block">
                   <div class="u-align-center">
                     <div events="none" class="sg-square"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">u-height-100vh</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">u-height-100dvh</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">u-height-100svh</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="cols-layout cc-non-responsive">
-                    <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
-                      <div stroke="" class="u-bg-pattern">
-                        <div class="u-height-100vh">100vh</div>
-                      </div>
-                    </div>
-                    <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
-                      <div stroke="" class="u-bg-pattern">
-                        <div class="u-height-100dvh">100dvh</div>
-                      </div>
-                    </div>
-                    <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
-                      <div stroke="" class="u-bg-pattern">
-                        <div class="u-height-100svh">100svh</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -2133,164 +2040,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="button-wrapper cc-center">
-                    <a href="#" class="button w-inline-block">
-                      <div>Learn more</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                    <div class="css-tag">cc-sm</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="button-wrapper cc-center">
-                    <a href="#" class="button cc-sm w-inline-block">
-                      <div>Learn more</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                    <div class="css-tag">cc-xs</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="button-wrapper cc-center">
-                    <a href="#" class="button cc-xs w-inline-block">
-                      <div>Go</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cc-white</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cc-sm</div>
-                    <div class="css-tag">cc-white</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cc-xs</div>
-                    <div class="css-tag">cc-white</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div style="padding: 1rem 0;" class="u-bg-brand">
-                    <div style="margin: 0;" class="button-wrapper cc-center">
-                      <a href="#" class="button cc-white w-inline-block">
-                        <div>Learn more</div>
-                      </a>
-                      <a href="#" class="button cc-sm cc-white w-inline-block">
-                        <div>Learn more</div>
-                      </a>
-                      <a href="#" class="button cc-xs cc-white w-inline-block">
-                        <div>Go</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                    <div class="css-tag">cc-outline</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="button-wrapper cc-center">
-                    <a href="#" class="button cc-outline w-inline-block">
-                      <div>Learn more</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                    <div class="css-tag">cc-sm</div>
-                    <div class="css-tag">cc-outline</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="button-wrapper cc-center">
-                    <a href="#" class="button cc-sm cc-outline w-inline-block">
-                      <div>Learn more</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                    <div class="css-tag">cc-xs</div>
-                    <div class="css-tag">cc-outline</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div class="button-wrapper cc-center">
-                    <a href="#" class="button cc-xs cc-outline w-inline-block">
-                      <div>Learn more</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">button</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cc-white-outline</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cc-sm</div>
-                    <div class="css-tag">cc-white-outline</div>
-                  </div>
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cc-xs</div>
-                    <div class="css-tag">cc-white-outline</div>
-                  </div>
-                </div>
-                <div class="block">
-                  <div style="padding: 1rem 0;" class="u-bg-brand">
-                    <div style="margin: 0;" class="button-wrapper cc-center">
-                      <a href="#" class="button cc-white-outline w-inline-block">
-                        <div>Learn more</div>
-                      </a>
-                      <a href="#" class="button cc-sm cc-white-outline w-inline-block">
-                        <div>Learn more</div>
-                      </a>
-                      <a href="#" class="button cc-xs cc-white-outline w-inline-block">
-                        <div>Go</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element">
-                <div class="sg-tags">
-                  <div class="tag-wrapper">
-                    <div class="css-tag">cta-wrapper</div>
+                    <div class="tag-label">button</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2307,7 +2057,153 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-component">Button</div>
+                    <div class="tag-label">button</div>
+                    <div class="tag-label">cc-sm</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="button-wrapper cc-center">
+                    <a href="#" class="button cc-sm w-inline-block">
+                      <div>Learn more</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">button</div>
+                    <div class="tag-label">cc-xs</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="button-wrapper cc-center">
+                    <a href="#" class="button cc-xs w-inline-block">
+                      <div>Go</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">button</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cc-white</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cc-sm</div>
+                    <div class="tag-label">cc-white</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cc-xs</div>
+                    <div class="tag-label">cc-white</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div style="padding: 1rem 0;" class="u-bg-primary">
+                    <div style="margin: 0;" class="button-wrapper cc-center">
+                      <a href="#" class="button cc-white w-inline-block">
+                        <div>Learn more</div>
+                      </a>
+                      <a href="#" class="button cc-sm cc-white w-inline-block">
+                        <div>Explore</div>
+                      </a>
+                      <a href="#" class="button cc-xs cc-white w-inline-block">
+                        <div>Go</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">button</div>
+                    <div class="tag-label">cc-outline</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="button-wrapper cc-center">
+                    <a href="#" class="button cc-outline w-inline-block">
+                      <div>Learn more</div>
+                      <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">button</div>
+                    <div class="tag-label">cc-sm</div>
+                    <div class="tag-label">cc-outline</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="button-wrapper cc-center">
+                    <a href="#" class="button cc-sm cc-outline w-inline-block">
+                      <div>Learn more</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">button</div>
+                    <div class="tag-label">cc-xs</div>
+                    <div class="tag-label">cc-outline</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="button-wrapper cc-center">
+                    <a href="#" class="button cc-xs cc-outline w-inline-block">
+                      <div>Learn more</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">button</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cc-white-outline</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cc-sm</div>
+                    <div class="tag-label">cc-white-outline</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cc-xs</div>
+                    <div class="tag-label">cc-white-outline</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div style="padding: 1rem 0;" class="u-bg-primary">
+                    <div style="margin: 0;" class="button-wrapper cc-center">
+                      <a href="#" class="button cc-white-outline w-inline-block">
+                        <div>Learn more</div>
+                      </a>
+                      <a href="#" class="button cc-sm cc-white-outline w-inline-block">
+                        <div>Explore</div>
+                      </a>
+                      <a href="#" class="button cc-xs cc-white-outline w-inline-block">
+                        <div>Go</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label cc-component">Button</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2329,7 +2225,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-component">Button-Outline</div>
+                    <div class="tag-label cc-component">Button-Outline</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2351,7 +2247,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-component">Button-Text</div>
+                    <div class="tag-label cc-component">Button-Text</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2373,7 +2269,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-component">Button-Link</div>
+                    <div class="tag-label cc-component">Button-Link</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2395,7 +2291,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">pill</div>
+                    <div class="tag-label">pill</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2426,7 +2322,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         </svg></div>
                       <div>Special Offer</div>
                     </a>
-                    <a href="#" class="pill cc-brand w-inline-block">
+                    <a href="#" class="pill cc-primary w-inline-block">
                       <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="50" cy="50" r="30" fill="#fff"></circle>
                           <circle cx="50" cy="50" r="38" stroke="#fff" stroke-opacity="0.25" stroke-width="16"></circle>
@@ -2443,13 +2339,13 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <h3>Icons</h3>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>The base <span class="css-tag">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (units in <code>em</code>, not <code>rem</code>).</p>
+                  <p>The base <span class="tag-label">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (units in <code>em</code>, not <code>rem</code>).</p>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
+                    <div class="tag-label">icon</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2558,11 +2454,11 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
+                    <div class="tag-label">icon</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
-                    <div class="css-tag">cc-1em</div>
+                    <div class="tag-label">icon</div>
+                    <div class="tag-label">cc-1em</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;" class="block">
@@ -2598,12 +2494,12 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
-                    <div class="css-tag">cc-rem</div>
+                    <div class="tag-label">icon</div>
+                    <div class="tag-label">cc-rem</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
-                    <div class="css-tag">cc-1rem</div>
+                    <div class="tag-label">icon</div>
+                    <div class="tag-label">cc-1rem</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;" class="block">
@@ -2639,12 +2535,12 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
-                    <div class="css-tag">cc-image</div>
+                    <div class="tag-label">icon</div>
+                    <div class="tag-label">cc-image</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
-                    <div class="css-tag">cc-image-1rem</div>
+                    <div class="tag-label">icon</div>
+                    <div class="tag-label">cc-image-1rem</div>
                   </div>
                   <div class="sg-note">width is auto (suitable for images)</div>
                   <div class="sg-note">for SVG, you should wrap it with an element that has a width value</div>
@@ -2668,8 +2564,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon</div>
-                    <div class="css-tag">cc-mini</div>
+                    <div class="tag-label">icon</div>
+                    <div class="tag-label">cc-mini</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2681,9 +2577,9 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">icon-wrapper</div>
+                    <div class="tag-label">icon-wrapper</div>
                   </div>
-                  <div class="sg-note">for flexibility, wrap an icon with <span class="css-tag">icon-wrapper</span> before converting to component</div>
+                  <div class="sg-note">for flexibility, wrap an icon with <span class="tag-label">icon-wrapper</span> before converting to component</div>
                 </div>
                 <div class="block">
                   <div style="gap: 1rem; margin-bottom: 1.5rem;" class="u-hflex-left-center">
@@ -2722,7 +2618,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">breadcrumb</div>
+                    <div class="tag-label">breadcrumb</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2775,7 +2671,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">message</div>
+                    <div class="tag-label">message</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
@@ -2790,31 +2686,31 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   </div>
                   <div class="message cc-callout">
                     <div class="tag-wrapper">
-                      <div class="css-tag">cc-callout</div>
+                      <div class="tag-label">cc-callout</div>
                     </div>
                     <div>This is a &quot;Callout&quot; block.</div>
                   </div>
                   <div class="message cc-success">
                     <div class="tag-wrapper">
-                      <div class="css-tag">cc-success</div>
+                      <div class="tag-label">cc-success</div>
                     </div>
                     <div>This is a &quot;Success&quot; message block.</div>
                   </div>
                   <div class="message cc-highlight">
                     <div class="tag-wrapper">
-                      <div class="css-tag">cc-highlight</div>
+                      <div class="tag-label">cc-highlight</div>
                     </div>
                     <div>This is a &quot;Highlight&quot; message block.</div>
                   </div>
                   <div class="message cc-warning">
                     <div class="tag-wrapper">
-                      <div class="css-tag">cc-warning</div>
+                      <div class="tag-label">cc-warning</div>
                     </div>
                     <div>This is a &quot;Warning&quot; message block.</div>
                   </div>
                   <div class="message cc-note">
                     <div class="tag-wrapper">
-                      <div class="css-tag">cc-note</div>
+                      <div class="tag-label">cc-note</div>
                     </div>
                     <div>This is a &quot;Note&quot; message block.</div>
                   </div>
@@ -2823,7 +2719,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">info</div>
+                    <div class="tag-label">info</div>
                   </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
@@ -2861,20 +2757,20 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">card</div>
+                    <div class="tag-label">card</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">card</div>
-                    <div class="css-tag">cc-heavy</div>
+                    <div class="tag-label">card</div>
+                    <div class="tag-label">cc-heavy</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">card</div>
-                    <div class="css-tag">cc-p-0</div>
+                    <div class="tag-label">card</div>
+                    <div class="tag-label">cc-p-0</div>
                   </div>
                 </div>
                 <div class="block">
                   <div style="gap: 1rem; margin-bottom: 1rem;" class="flex-wrap-cols">
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="card">
                         <div class="title-wrapper">
                           <h3 class="h4">Card heading</h3>
@@ -2882,7 +2778,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                       </div>
                     </div>
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="card">
                         <div class="card-title">
                           <h3 class="h6">This is a card title.</h3>
@@ -2892,7 +2788,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                   </div>
                   <div style="gap: 1rem; margin-bottom: 1rem;" class="flex-wrap-cols">
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="card cc-heavy">
                         <div class="title-wrapper">
                           <h3 class="h4">Card heading</h3>
@@ -2900,7 +2796,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                       </div>
                     </div>
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="box-label">
                         <div>box-label</div>
                       </div>
@@ -2910,10 +2806,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                   </div>
                   <div style="gap: 1rem; margin-bottom: 1rem;" class="flex-wrap-cols">
-                    <div style="margin: 1rem auto;" class="col cc-6c">
+                    <div style="margin: 1rem auto;" class="col cc-9c">
                       <div class="card cc-p-0">
                         <div class="card-cover">
-                          <div class="absolute-full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, 94vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" class="absolute-cover-image"></div>
+                          <div class="absolute-full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 69vw, (max-width: 991px) 70vw, 86vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" class="absolute-cover-image"></div>
                         </div>
                         <div class="card-body">
                           <div class="card-inner">
@@ -2927,7 +2823,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                   </div>
                   <div style="gap: 1rem;" class="flex-wrap-cols">
-                    <div class="col cc-in-flex cc-p-0">
+                    <div class="col cc-grow cc-p-0">
                       <div class="card cc-p-0">
                         <div class="u-bg-pattern"></div>
                       </div>
@@ -2948,7 +2844,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">title-layout</div>
+                    <div class="tag-label">title-layout</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2964,16 +2860,13 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     <div class="text-wrapper">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
                     </div>
-                    <div class="button-wrapper">
-                      <a hash="title-layouts" href="../s2/components.html" class="button cc-outline w-button">See all Title Layouts →</a>
-                    </div>
                   </header>
                 </div>
               </div>
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">tag</div>
+                    <div class="tag-label">tag</div>
                   </div>
                 </div>
                 <div class="block"><span>New feature</span>
@@ -2986,7 +2879,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">dot</div>
+                    <div class="tag-label">dot</div>
                   </div>
                 </div>
                 <div class="block">
@@ -3015,44 +2908,44 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="css-tag">form-wrapper</div>
+                    <div class="tag-label">form-wrapper</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">form</div>
+                    <div class="tag-label">form</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">form_row</div>
+                    <div class="tag-label">form_row</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">input-field</div>
+                    <div class="tag-label">input-field</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag cc-html">Label</div>
+                    <div class="tag-label cc-html">Label</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">input</div>
+                    <div class="tag-label">input</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">input</div>
-                    <div class="css-tag">cc-select</div>
+                    <div class="tag-label">input</div>
+                    <div class="tag-label">cc-select</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">input</div>
-                    <div class="css-tag">cc-textarea</div>
+                    <div class="tag-label">input</div>
+                    <div class="tag-label">cc-textarea</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">checkbox-field</div>
-                    <div class="css-tag">checkbox</div>
+                    <div class="tag-label">checkbox-field</div>
+                    <div class="tag-label">checkbox</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">radio-field</div>
-                    <div class="css-tag">radio</div>
+                    <div class="tag-label">radio-field</div>
+                    <div class="tag-label">radio</div>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="css-tag">option-field</div>
-                    <div class="css-tag">option</div>
+                    <div class="tag-label">option-field</div>
+                    <div class="tag-label">option</div>
                   </div>
-                  <div class="sg-note">Grouped as Components to prevent Webflow from accidentally changing form settings during copy and paste.</div>
+                  <div class="sg-note">The forms are grouped as Components to prevent Webflow from accidentally changing their settings during copy and paste.</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 3rem;" class="block">
                   <div class="block">
@@ -3065,12 +2958,18 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                           <div class="input-field"><label for="Demo-A-Input-1" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-1" data-name="Demo A Input 1" placeholder="Input" type="text" id="Demo-A-Input-1"></div>
                           <div class="input-field"><label for="Demo-A-Input-2" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-2" data-name="Demo A Input 2" placeholder="Input" type="text" id="Demo-A-Input-2"></div>
                         </div>
-                        <div class="input-field"><label for="Demo-A-Options" class="text-sm">Select</label><select id="Demo-A-Options" name="Demo-A-Options" data-name="Demo A Options" class="input cc-select w-select">
-                            <option value="">Choose option</option>
-                            <option value="First">First choice</option>
-                            <option value="Second">Second choice</option>
-                            <option value="Third">Third choice</option>
-                          </select></div>
+                        <div class="input-field"><label for="Demo-A-Options" class="text-sm">Select</label>
+                          <div class="select-wrapper"><select id="Demo-A-Options" name="Demo-A-Options" data-name="Demo A Options" class="input w-select">
+                              <option value="">Choose option</option>
+                              <option value="First">First choice</option>
+                              <option value="Second">Second choice</option>
+                              <option value="Third">Third choice</option>
+                            </select>
+                            <div class="icon cc-select-arrow w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
                         <div class="input-field"><label for="Demo-A-Message" class="text-sm">Textarea</label><textarea id="Demo-A-Message" name="Demo-A-Message" maxlength="5000" data-name="Demo A Message" placeholder="Your message" required="" class="input cc-textarea w-input"></textarea></div>
                         <div class="input-field">
                           <legend class="text-sm">Checkboxes</legend>
@@ -3156,12 +3055,17 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                           </div>
                         </div>
                         <div class="input-field cc-boxed">
-                          <div class="u-text-stroke"><label for="Demo-B-Options" class="text-xs">Select</label></div><select id="Demo-B-Options" name="Demo-B-Options" data-name="Demo B Options" class="input cc-select cc-boxed w-select">
-                            <option value="">Choose option</option>
-                            <option value="First">First choice</option>
-                            <option value="Second">Second choice</option>
-                            <option value="Third">Third choice</option>
-                          </select>
+                          <div class="u-text-stroke"><label for="Demo-B-Options" class="text-xs">Select</label></div>
+                          <div class="select-wrapper"><select id="Demo-B-Options" name="Demo-B-Options" data-name="Demo B Options" class="input cc-boxed w-select">
+                              <option value="">Choose option</option>
+                              <option value="First">First choice</option>
+                              <option value="Second">Second choice</option>
+                              <option value="Third">Third choice</option>
+                            </select>
+                            <div class="icon cc-select-arrow cc-pl-0 w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
                         </div>
                         <div class="input-field cc-boxed">
                           <div class="u-text-stroke"><label for="Demo-B-Message" class="text-xs">Textarea</label></div><textarea id="Demo-B-Message" name="Demo-B-Message" maxlength="5000" data-name="Demo B Message" placeholder="Your message" required="" class="input cc-textarea cc-boxed w-input"></textarea>
@@ -3186,92 +3090,77 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
             <div class="title-wrapper">
+              <div id="column" class="sg-anchor"></div>
               <h1>Column Layouts</h1>
             </div>
           </div>
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">cols-layout</div>
+                <div class="tag-label">cols-layout</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-aside</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-aside</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-main</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-main</div>
               </div>
             </div>
             <div class="block">
               <div class="cols-layout">
-                <aside class="col cc-aside cc-on-left-lg">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                </aside>
                 <div class="col cc-main cc-px-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                  <div class="u-bg-pattern cc-with-border">main</div>
                 </div>
-              </div>
-              <div class="cols-layout">
-                <div class="col cc-main cc-px-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                </div>
-                <aside class="col cc-aside cc-on-right-lg">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                <aside class="col cc-aside cc-on-right">
+                  <div class="u-bg-pattern cc-with-border">aside</div>
                 </aside>
               </div>
               <div class="cols-layout">
                 <aside class="col cc-aside cc-on-left">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                  <div class="u-bg-pattern cc-with-border">aside</div>
                 </aside>
-                <div class="col cc-main">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                <div class="col cc-main cc-px-0">
+                  <div class="u-bg-pattern cc-with-border">main</div>
                 </div>
               </div>
               <div class="cols-layout">
-                <div class="col cc-main">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                <div class="col cc-main cc-px-0">
+                  <div class="u-bg-pattern cc-with-border">main</div>
                 </div>
-                <aside class="col cc-aside cc-on-right">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                <aside class="col cc-aside cc-on-right-lg">
+                  <div class="u-bg-pattern cc-with-border">aside</div>
                 </aside>
               </div>
               <div class="cols-layout">
                 <aside class="col cc-aside cc-on-left-lg">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
+                  <div class="u-bg-pattern cc-with-border">aside</div>
                 </aside>
                 <div class="col cc-main cc-px-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
+                  <div class="u-bg-pattern cc-with-border">main</div>
                 </div>
-              </div>
-              <div class="cols-layout">
-                <div class="col cc-main cc-px-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">main</div>
-                </div>
-                <aside class="col cc-aside cc-on-right-lg">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">aside</div>
-                </aside>
               </div>
             </div>
           </div>
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">cols-layout</div>
-                <div class="css-tag">cc-vflex-at-md</div>
+                <div class="tag-label">cols-layout</div>
+                <div class="tag-label">cc-vflex-at-md</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-45p</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-45p</div>
               </div>
             </div>
             <div class="block">
               <div class="cols-layout cc-vflex-at-md">
                 <div class="col cc-45p">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-45p">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
               </div>
             </div>
@@ -3279,49 +3168,103 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <div class="sg-element cc-block">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-1c</div>
+                <div class="tag-label">col</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="tag-label">cc-1c</div>
                 <div>~</div>
-                <div class="css-tag">cc-12c</div>
+                <div class="tag-label">cc-12c</div>
               </div>
             </div>
             <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
               <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
                 <div class="col cc-1c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-2c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-3c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-4c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-5c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-6c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-7c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-8c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-9c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-10c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-11c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-12c">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-element cc-block">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="tag-label">col</div>
+              </div>
+              <div class="tag-wrapper">
+                <div class="tag-label">cc-span-1</div>
+                <div>~</div>
+                <div class="tag-label">cc-span-12</div>
+              </div>
+            </div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-span-1">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-2">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-3">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-4">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-5">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-6">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-7">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-8">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-9">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-10">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-11">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-12">
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
               </div>
             </div>
@@ -3329,23 +3272,23 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">flex-wrap-cols</div>
+                <div class="tag-label">flex-wrap-cols</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-in-flex</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-grow</div>
               </div>
             </div>
             <div class="block">
               <div class="flex-wrap-cols">
-                <div class="col cc-in-flex">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                <div class="col cc-grow">
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
-                <div class="col cc-in-flex">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                <div class="col cc-grow">
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
-                <div class="col cc-in-flex">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                <div class="col cc-grow">
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
               </div>
             </div>
@@ -3353,15 +3296,15 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">grid-cols</div>
+                <div class="tag-label">grid-cols</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-content</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-content</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-p-responsive</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-p-responsive</div>
               </div>
             </div>
             <div class="block">
@@ -3370,7 +3313,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                   <div class="title-wrapper">
                     <h4>Heading</h4>
                   </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                 </div>
                 <div class="col cc-p-responsive">
                   <div style="min-height: 12rem;" class="u-bg-pattern cc-with-border">col</div>
@@ -3381,24 +3324,24 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">grid-cols</div>
-                <div class="css-tag">cc-3col</div>
+                <div class="tag-label">grid-cols</div>
+                <div class="tag-label">cc-3col</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-p-0</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-p-0</div>
               </div>
             </div>
             <div class="block">
               <div class="grid-cols cc-3col">
                 <div class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
               </div>
             </div>
@@ -3406,27 +3349,27 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">grid-cols</div>
-                <div class="css-tag">cc-4col</div>
+                <div class="tag-label">grid-cols</div>
+                <div class="tag-label">cc-4col</div>
               </div>
               <div class="tag-wrapper">
-                <div class="css-tag">col</div>
-                <div class="css-tag">cc-p-0</div>
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-p-0</div>
               </div>
             </div>
             <div class="block">
               <div class="grid-cols cc-4col">
                 <div class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
                 <div class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
-                <div id="w-node-_2d3d17ee-b3ce-741e-e6ca-e2977977f572-d97352de" class="col cc-p-0">
-                  <div height-is="min-4" class="u-bg-pattern cc-with-border">col</div>
+                <div id="w-node-d2e3eee6-5534-22ea-52d9-4ea4d4c9f7e5-d97352de" class="col cc-p-0">
+                  <div class="u-bg-pattern cc-with-border">col</div>
                 </div>
               </div>
             </div>
@@ -3434,17 +3377,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <div class="sg-element">
             <div class="sg-tags">
               <div class="tag-wrapper">
-                <div class="css-tag">grid-cols</div>
-                <div class="css-tag">cc-h</div>
+                <div class="tag-label">grid-cols</div>
+                <div class="tag-label">cc-row</div>
               </div>
-              <div class="sg-note">note: <span class="css-tag">-h</span> for horizontal</div>
             </div>
             <div class="block">
-              <div class="grid-cols cc-h">
-                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
-                <div height-is="min-4" class="u-bg-pattern cc-with-border"></div>
+              <div class="grid-cols cc-row">
+                <div class="u-bg-pattern cc-with-border"></div>
+                <div class="u-bg-pattern cc-with-border"></div>
+                <div class="u-bg-pattern cc-with-border"></div>
+                <div class="u-bg-pattern cc-with-border"></div>
               </div>
             </div>
           </div>
@@ -3457,27 +3399,28 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           </div>
           <div class="sg-group">
             <div no-scrollbar="" class="sg-grid-scroll cc-1fr">
-              <div class="u-vflex-left-top">
-                <div style="display: flex; flex-direction: row; gap: 4rem;" class="block">
-                  <div class="col cc-6c">
+              <div id="w-node-dfc23c23-6635-5794-549e-69f66c7d7eaf-d97352de" class="u-vflex-left-top">
+                <div style="gap: 4rem;" class="u-hflex-left-top">
+                  <div class="sg-richtext-demo">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">richtext</div>
+                        <div class="tag-label">richtext</div>
                       </div>
+                      <div class="sg-note">default class to style rich text<br></div>
                     </div>
                   </div>
-                  <div class="col cc-6c">
+                  <div class="sg-richtext-demo">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">richtext</div>
-                        <div class="css-tag">cc-richtext-lg</div>
+                        <div class="tag-label">richtext</div>
+                        <div class="tag-label">cc-richtext-lg</div>
                       </div>
-                      <div class="sg-note">Adding combo class to rich text elements is a bit tricky. You need to create and add styles to a combo class first.</div>
+                      <div class="sg-note">Adding combo class to rich text elements can be tricky. You have to create and add styles to a combo class first.</div>
                     </div>
                   </div>
                 </div>
-                <div style="display: flex; flex-direction: row; gap: 4rem;" class="block">
-                  <div class="col cc-6c">
+                <div style="gap: 4rem;" class="u-hflex-left-top">
+                  <div class="sg-richtext-demo cc-scrollable">
                     <div class="richtext w-richtext">
                       <h1>Heading 1</h1>
                       <h2>Heading 2</h2>
@@ -3485,13 +3428,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <h4>Heading 4</h4>
                       <h5>Heading 5</h5>
                       <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <code>varius</code> enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                      <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
+                      <p>
+                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
+                      </p>
                       <p>Styling lists:</p>
                       <ul role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
+                        <li>Lorem ipsum dolor sit amet. <ul role="list">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
@@ -3507,18 +3453,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <ol start="" role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
                       </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <h5>This is a heading with <sup>sup</sup> and <sub>sub</sub> for size checking.</h5>
-                      <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur <em>adipiscing</em> elit. Suspendisse varius enim in eros elementum tristique. Ut enim ad Minim Veniam<sup>TM</sup>, quis nostrud<sub>28</sub> exercitation<sup>ullamco laboris</sup> nisi<sub>ut aliquip</sub> ex ea commodo consequat. Duis<sub>aute</sub>, irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit <code>c</code> amet, <code>consectetur</code> adipiscing elit, sed do eiusmod tempor incididunt utabore. <code>This is &lt;code&gt; inside some content: Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p>‍<code>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                      <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                      <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
+                      <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
+                      <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                         <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel"></div>
                       </figure>
@@ -3557,9 +3501,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <figcaption>Align to right and also have a caption.</figcaption>
                       </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>‍</p>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -3568,7 +3511,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
+                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
@@ -3580,7 +3523,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
-                  <div class="col cc-6c">
+                  <div class="sg-richtext-demo cc-scrollable">
                     <div class="richtext cc-richtext-lg w-richtext">
                       <h1>Heading 1</h1>
                       <h2>Heading 2</h2>
@@ -3588,13 +3531,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <h4>Heading 4</h4>
                       <h5>Heading 5</h5>
                       <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <code>varius</code> enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                      <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
+                      <p>
+                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
+                      </p>
                       <p>Styling lists:</p>
                       <ul role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
+                        <li>Lorem ipsum dolor sit amet. <ul role="list">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
@@ -3610,18 +3556,16 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                       <ol start="" role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
                       </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <h5>This is a heading with <sup>sup</sup> and <sub>sub</sub> for size checking.</h5>
-                      <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur <em>adipiscing</em> elit. Suspendisse varius enim in eros elementum tristique. Ut enim ad Minim Veniam<sup>TM</sup>, quis nostrud<sub>28</sub> exercitation<sup>ullamco laboris</sup> nisi<sub>ut aliquip</sub> ex ea commodo consequat. Duis<sub>aute</sub>, irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit <code>c</code> amet, <code>consectetur</code> adipiscing elit, sed do eiusmod tempor incididunt utabore. <code>This is &lt;code&gt; inside some content: Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p>‍<code>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                      <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                      <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
+                      <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
+                      <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                         <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel"></div>
                       </figure>
@@ -3660,9 +3604,8 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <figcaption>Align to right and also have a caption.</figcaption>
                       </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>‍</p>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -3671,7 +3614,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
+                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
@@ -3693,11 +3636,11 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   </div>
   <section id="starter" style="border-top: 1px solid #ccc;" class="section">
     <div id="top" class="page">
-      <div class="global-code">
+      <div class="code">
         <div code="js" class="js w-embed"></div>
         <div code="css" class="css w-embed">
           <style>
-              /* -- Global Base Setup -- */
+              /* -- Global CSS -- */
               body {
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
@@ -3721,7 +3664,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               <a href="#" class="main-nav_link w-nav-link">Home</a>
               <a href="#" class="main-nav_link w-nav-link">About</a>
             </nav>
-            <div class="main-nav_button cc-brand w-nav-button">
+            <div class="main-nav_button cc-primary w-nav-button">
               <div class="burger-wrapper">
                 <div class="burger-icon w-embed">Menu</div>
               </div>
@@ -3743,7 +3686,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <section class="section cc-top-sm">
           <div class="w-layout-blockcontainer container w-container">
             <div class="text-wrapper cc-max-40rem">
-              <p><strong>Tip:</strong> The <span class="css-tag">main</span> wrapper of the page SHOULD NOT include the <strong>nav</strong> and <strong>footer</strong>, and a page should always have a <span class="css-tag cc-html">Main</span> HTML tag.<br></p>
+              <p><strong>Tip:</strong> The <span class="tag-label">main</span> wrapper of the page SHOULD NOT include the <strong>nav</strong> and <strong>footer</strong>, and a page should always have a <span class="tag-label cc-html">Main</span> HTML tag.<br></p>
             </div>
           </div>
         </section>
@@ -3924,5 +3867,22 @@ Usage example of 20px offset, 360ms delay, in a stagger group "features":
         event.preventDefault()
       })
     </script>
+  <!-- 
+S2 Framework (https://s2-framework.webflow.io)
+- - -
+S2 Framework (and its official Cloneable on Webflow and GitHub) by The S2 Framework Team, Anthony C, SPACESODA, HYPE STUDIO is marked with CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/). 
+You can copy (clone) it, edit it, and use it freely for personal or commercial work, 
+without the need for attribution or notification to the authors or contributors.
+No user may claim authorship or representation as the original creator or publisher 
+of the S2 Framework, either in whole or in part.
+- - -
+S2 FRAMEWORK, THE SOFTWARE, IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS, CONTRIBUTORS OR COPYRIGHT HOLDERS BE 
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH 
+THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
 </body>
 </html>

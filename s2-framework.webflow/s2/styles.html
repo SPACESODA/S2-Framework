@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 04 2025 09:54:28 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Feb 09 2025 05:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -69,7 +69,7 @@
     </div>
     <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
       <!--  For Style Guide only, you don't need such scripts for your site.  -->
-      <!--  Hide Cookie Concent in iFrames  -->
+      <!--  Hide Cookie Consent in iFrames  -->
       <script>
           if (window.self !== window.top) {
             document.addEventListener("DOMContentLoaded", function() {
@@ -117,9 +117,9 @@
     </div>
   </div>
   <div id="top" class="page">
-    <div class="global-code">
-      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
-        <!--  The Mode Switching script is placed in custom "Footer code".  -->
+    <div class="code">
+      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme)  -->
+        <!--  The Mode Switching script is placed in global custom "Footer code".  -->
         <script>
             (function() {
               try {
@@ -158,1389 +158,10 @@
             })();
           </script>
       </div>
-      <div code="css" class="framework w-embed">
-        <style>
-            /* ---------------- */
-            /* -- Base Setup -- */
-            /* ---------------- */
-            /* smoothing and fluid responsive */
-            body {
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              text-rendering: optimizeLegibility;
-            }
-            html {
-              font-size: 1.125rem;
-            }
-            @media screen and (max-width:1920px) {
-              html {
-                font-size: 1.125rem;
-              }
-            }
-            @media screen and (max-width:1440px) {
-              html {
-                font-size: calc(0.937695rem + 0.208vw);
-              }
-            }
-            @media screen and (max-width:479px) {
-              html {
-                font-size: 1rem;
-              }
-            }
-            @media screen and (max-width:319px) {
-              html {
-                font-size: calc(0.749607rem + 0.629vw);
-              }
-            }
-            /* basics */
-            h1,
-            h2,
-            h3 {
-              text-wrap: balance;
-            }
-            img,
-            svg,
-            video,
-            audio,
-            canvas,
-            iframe,
-            embed,
-            object {
-              display: block;
-              vertical-align: middle;
-            }
-            img,
-            video {
-              height: auto;
-            }
-            select {
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              appearance: none;
-            }
-            nav a:not(p a),
-            footer nav li a,
-            .footer nav li a {
-              text-decoration: none;
-            }
-            .w-form {
-              margin-bottom: 0;
-            }
-            .w-input,
-            .w-select {
-              color: inherit;
-              font-size: inherit;
-            }
-            .w-richtext> :not(div):first-child,
-            .w-richtext>div:first-child> :first-child {
-              margin-top: 0 !important;
-            }
-            .w-richtext> :last-child,
-            .w-richtext ol li:last-child,
-            .w-richtext ul li:last-child {
-              margin-bottom: 0 !important;
-            }
-            .w-richtext figure div {
-              display: block !important;
-            }
-            .w-richtext figure.w-richtext-align-floatleft,
-            .w-richtext figure.w-richtext-align-floatright {
-              margin-block: 0.35em 0.05em;
-            }
-            .spacer * {
-              padding: 0;
-            }
-            /* accessibility: focus styles */
-            html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
-              outline: var(--_sizes---thickness--outline) solid var(--colors--focus);
-              outline-offset: 0.188rem;
-            }
-            section:focus,
-            .section:focus,
-            .container:focus {
-              outline: none;
-            }
-            [tabindex]:not([tabindex="-1"]):focus-visible,
-            [aria-label]:not(input):not(textarea):not(select):focus-visible,
-            input[type="submit"]:focus-visible,
-            input[type="file"]:focus-visible {
-              outline: var(--_sizes---thickness--outline-bold) solid var(--colors--focus);
-              outline-offset: 3px;
-            }
-            [focus-outline="bold"]:focus-visible {
-              outline-width: var(--_sizes---thickness--outline-bold) !important;
-            }
-            [focus-outline="offset-0"]:focus-visible {
-              outline-offset: 0 !important;
-            }
-            [focus-outline="offset-far"]:focus-visible {
-              outline-offset: 0.375rem !important;
-            }
-            [focus-outline="none"]:focus,
-            [focus-outline="none"]:focus-visible {
-              outline: none !important;
-            }
-            [input-highlight="none"] {
-              -webkit-appearance: none;
-              appearance: none;
-              outline: none;
-            }
-            [input-highlight="none"]:focus {
-              border: 0 rgba(0, 0, 0, 0) !important;
-            }
-            /* accessibility: hidden for visual users, readable for screen readers */
-            [visually-hidden="true"],
-            .visually-hidden {
-              position: absolute;
-              clip: rect(1px, 1px, 1px, 1px);
-              -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-              clip-path: inset(0px 0px 99.9% 99.9%);
-              overflow: hidden;
-              height: 1px;
-              width: 1px;
-              padding: 0;
-              border: 0;
-            }
-            /* remove tab highlight on touch devices */
-            * {
-              -webkit-tap-highlight-color: transparent;
-            }
-            /* ------------------- */
-            /* -- S2 Attributes -- */
-            /* ------------------- */
-            /* basics */
-            [hidden],
-            [hide],
-            .u-hide {
-              display: none;
-            }
-            [disabled] {
-              filter: saturate(0%);
-              cursor: default;
-              pointer-events: none;
-            }
-            [code],
-            .css,
-            .js {
-              display: none !important;
-            }
-            [user-select="none"] {
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-            }
-            [events="none"] {
-              pointer-events: none;
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-            }
-            [opacity="1"] {
-              opacity: 1;
-            }
-            [opacity="0.9"] {
-              opacity: 0.9;
-            }
-            [opacity="0.8"] {
-              opacity: 0.8;
-            }
-            [opacity="0.7"] {
-              opacity: 0.7;
-            }
-            [opacity="0.6"] {
-              opacity: 0.6;
-            }
-            [opacity="0.5"] {
-              opacity: 0.5;
-            }
-            [opacity="0.4"] {
-              opacity: 0.4;
-            }
-            [opacity="0.3"] {
-              opacity: 0.3;
-            }
-            [opacity="0.2"] {
-              opacity: 0.2;
-            }
-            [opacity="0.1"] {
-              opacity: 0.1;
-            }
-            [opacity="0"] {
-              opacity: 0;
-            }
-            [opacity="0-events-none"] {
-              opacity: 0;
-              pointer-events: none;
-              -webkit-user-select: none;
-              user-select: none;
-            }
-            [radius="0"] {
-              border-radius: 0;
-            }
-            [radius="1"] {
-              border-radius: 1rem;
-            }
-            [radius="2"] {
-              border-radius: 2rem;
-            }
-            [radius="3"] {
-              border-radius: 3rem;
-            }
-            [radius="xs"] {
-              border-radius: var(--_sizes---radius--extra-small);
-            }
-            [radius="sm"] {
-              border-radius: var(--_sizes---radius--small);
-            }
-            [radius="base"] {
-              border-radius: var(--_sizes---radius--base);
-            }
-            [radius="lg"] {
-              border-radius: var(--_sizes---radius--large);
-            }
-            [radius="xl"] {
-              border-radius: var(--_sizes---radius--extra-large);
-            }
-            [radius="rounded"] {
-              border-radius: var(--_sizes---radius--rounded);
-            }
-            [radius="card"] {
-              border-radius: var(--_sizes---radius--card);
-            }
-            [radius="button"] {
-              border-radius: var(--_sizes---button--radius);
-            }
-            [object-fit="cover"] {
-              object-fit: cover;
-            }
-            /* typography */
-            [font-size="xs"] {
-              font-size: var(--_text---font-size--extra-small);
-              line-height: 1.4;
-            }
-            /* same as .text-xs */
-            [font-size="sm"] {
-              font-size: var(--_text---font-size--small);
-              line-height: 1.4;
-            }
-            /* same as .text-sm */
-            [font-size="base"] {
-              font-size: var(--_text---font-size--base);
-              line-height: 1.5;
-            }
-            /* same as .text-base */
-            [font-size="lg"] {
-              font-size: var(--_text---font-size--large);
-              line-height: 1.5;
-            }
-            /* same as .text-lg */
-            [font-size="xl"] {
-              font-size: var(--_text---font-size--extra-large);
-              line-height: 1.5;
-            }
-            /* same as .text-xl */
-            [font="normal"] {
-              font-weight: 400;
-            }
-            [font="strong"] {
-              font-weight: 700;
-            }
-            [line-height="0"] {
-              line-height: 0;
-            }
-            [line-height="0.25"] {
-              line-height: 0.25;
-            }
-            [line-height="0.5"] {
-              line-height: 0.5;
-            }
-            [line-height="0.75"] {
-              line-height: 0.75;
-            }
-            [line-height="1"] {
-              line-height: 1;
-            }
-            [line-height="1.25"] {
-              line-height: 1.25;
-            }
-            [line-height="1.5"] {
-              line-height: 1.5;
-            }
-            [line-height="1.75"] {
-              line-height: 1.75;
-            }
-            [line-height="2"] {
-              line-height: 2;
-            }
-            [text-deco="underline"] {
-              text-decoration: underline;
-            }
-            [text-deco="none"],
-            [text-deco="none"] a,
-            a[text-deco="none"] {
-              text-decoration: none;
-            }
-            [text-align="center"] {
-              text-align: center;
-            }
-            [text-align="left"] {
-              text-align: left;
-            }
-            [text-align="right"] {
-              text-align: right;
-            }
-            [text-uppercase] {
-              text-transform: uppercase;
-            }
-            [text-capitalize] {
-              text-transform: capitalize;
-            }
-            [white-space="nowrap"] {
-              white-space: nowrap;
-            }
-            [truncate] {
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              overflow: hidden;
-            }
-            [line-clamp] {
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
-            }
-            [line-clamp],
-            [line-clamp="1"] {
-              -webkit-line-clamp: 1;
-            }
-            [line-clamp="2"] {
-              -webkit-line-clamp: 2;
-            }
-            [line-clamp="3"] {
-              -webkit-line-clamp: 3;
-            }
-            [line-clamp="4"] {
-              -webkit-line-clamp: 4;
-            }
-            [line-clamp="5"] {
-              -webkit-line-clamp: 5;
-            }
-            [line-clamp="6"] {
-              -webkit-line-clamp: 6;
-            }
-            [box-deco="clone"] {
-              box-decoration-break: clone;
-            }
-            [box-deco="slice"] {
-              box-decoration-break: slice;
-            }
-            [float="start"] {
-              float: inline-start;
-            }
-            [float="end"] {
-              float: inline-end;
-            }
-            [float="left"] {
-              float: left;
-              margin-right: 0.5ch;
-            }
-            [float="right"] {
-              float: right;
-              margin-left: 0.5ch;
-            }
-            [float="none"] {
-              float: none;
-            }
-            /* sizes, position, spacing related */
-            [width-is="auto"] {
-              width: auto;
-              min-width: auto;
-              max-width: none;
-            }
-            [width-is="100p"] {
-              width: 100%;
-              min-width: 100%;
-              max-width: 100%;
-            }
-            [width-is="100vw"] {
-              width: 100vw;
-              min-width: 100vw;
-              max-width: 100vw;
-            }
-            [width-is^="min"] {
-              width: auto;
-              max-width: none;
-            }
-            [width-is="min-1"] {
-              min-width: 1rem;
-            }
-            [width-is="min-2"] {
-              min-width: 2rem;
-            }
-            [width-is="min-3"] {
-              min-width: 3rem;
-            }
-            [width-is="min-4"] {
-              min-width: 4rem;
-            }
-            [width-is="min-5"] {
-              min-width: 5rem;
-            }
-            [width-is="min-6"] {
-              min-width: 6rem;
-            }
-            [height-is="auto"] {
-              height: auto;
-              min-height: auto;
-              max-height: none;
-            }
-            [height-is="100p"] {
-              height: 100%;
-              min-height: 100%;
-              max-height: 100%;
-            }
-            [height-is="100vh"] {
-              height: 100vh;
-              min-height: 100vh;
-              max-height: 100vh;
-            }
-            [height-is="100svh"] {
-              height: 100svh;
-              min-height: 100svh;
-              max-height: 100svh;
-            }
-            [height-is="100dvh"] {
-              height: 100vh;
-              min-height: 100vh;
-              max-height: 100vh;
-            }
-            @supports (height: 100dvh) {
-              [height-is="100dvh"] {
-                height: 100dvh;
-                min-height: 100dvh;
-                max-height: 100dvh;
-              }
-            }
-            [height-is="min-100p"] {
-              height: auto;
-              min-height: 100%;
-              max-height: none;
-            }
-            [height-is="min-100vh"] {
-              height: auto;
-              min-height: 100vh;
-              max-height: none;
-            }
-            [height-is="min-100svh"] {
-              height: auto;
-              min-height: 100vh;
-              max-height: none;
-            }
-            @supports (height: 100svh) {
-              [height-is="min-100svh"] {
-                min-height: 100svh;
-              }
-            }
-            [height-is^="min"] {
-              height: auto;
-              max-height: none;
-            }
-            [height-is="min-1"] {
-              min-height: 1rem;
-            }
-            [height-is="min-2"] {
-              min-height: 2rem;
-            }
-            [height-is="min-3"] {
-              min-height: 3rem;
-            }
-            [height-is="min-4"] {
-              min-height: 4rem;
-            }
-            [height-is="min-5"] {
-              min-height: 5rem;
-            }
-            [height-is="min-6"] {
-              min-height: 6rem;
-            }
-            [position="static"] {
-              position: static;
-            }
-            [position="relative"] {
-              position: relative;
-            }
-            [position="absolute"] {
-              position: absolute;
-            }
-            [z-index="0"] {
-              z-index: 0;
-            }
-            [z-index="1"] {
-              z-index: 1;
-            }
-            [z-index="-1"] {
-              z-index: -1;
-            }
-            [z-index="top"] {
-              z-index: 999999 !important;
-            }
-            [z-index="bottom"] {
-              z-index: -999999 !important;
-            }
-            [z-index="auto"] {
-              z-index: auto;
-            }
-            [p-0] {
-              padding: 0;
-            }
-            [p-1] {
-              padding: 1rem;
-            }
-            [p-2] {
-              padding: 2rem;
-            }
-            [p-3] {
-              padding: 3rem;
-            }
-            [m-0] {
-              margin: 0;
-            }
-            [m-1] {
-              margin: 1rem;
-            }
-            [m-2] {
-              margin: 2rem;
-            }
-            [m-3] {
-              margin: 3rem;
-            }
-            [pt="0"] {
-              padding-top: 0;
-            }
-            [pt="0.5"] {
-              padding-top: 0.5rem;
-            }
-            [pt="1"] {
-              padding-top: 1rem;
-            }
-            [pt="2"] {
-              padding-top: 2rem;
-            }
-            [pt="3"] {
-              padding-top: 3rem;
-            }
-            [pt="base"] {
-              padding-top: var(--_sizes---spacing--base);
-            }
-            [pt="sm"] {
-              padding-top: var(--_sizes---spacing--small);
-            }
-            [pt="lg"] {
-              padding-top: var(--_sizes---spacing--large);
-            }
-            [pb="0"] {
-              padding-bottom: 0;
-            }
-            [pb="0.5"] {
-              padding-bottom: 0.5rem;
-            }
-            [pb="1"] {
-              padding-bottom: 1rem;
-            }
-            [pb="2"] {
-              padding-bottom: 2rem;
-            }
-            [pb="3"] {
-              padding-bottom: 3rem;
-            }
-            [pb="base"] {
-              padding-bottom: var(--_sizes---spacing--base);
-            }
-            [pb="sm"] {
-              padding-bottom: var(--_sizes---spacing--small);
-            }
-            [pb="lg"] {
-              padding-bottom: var(--_sizes---spacing--large);
-            }
-            [mt="0"] {
-              margin-top: 0;
-            }
-            [mt="0.5"] {
-              margin-top: 0.5rem;
-            }
-            [mt="1"] {
-              margin-top: 1rem;
-            }
-            [mt="2"] {
-              margin-top: 2rem;
-            }
-            [mt="3"] {
-              margin-top: 3rem;
-            }
-            [mt="base"] {
-              margin-top: var(--_sizes---spacing--base);
-            }
-            [mt="sm"] {
-              margin-top: var(--_sizes---spacing--small);
-            }
-            [mt="lg"] {
-              margin-top: var(--_sizes---spacing--large);
-            }
-            [mt="auto"] {
-              margin-top: auto;
-            }
-            [mb="0"] {
-              margin-bottom: 0;
-            }
-            [mb="0.5"] {
-              margin-bottom: 0.5rem;
-            }
-            [mb="1"] {
-              margin-bottom: 1rem;
-            }
-            [mb="2"] {
-              margin-bottom: 2rem;
-            }
-            [mb="3"] {
-              margin-bottom: 3rem;
-            }
-            [mb="base"] {
-              margin-bottom: var(--_sizes---spacing--base);
-            }
-            [mb="sm"] {
-              margin-bottom: var(--_sizes---spacing--small);
-            }
-            [mb="lg"] {
-              margin-bottom: var(--_sizes---spacing--large);
-            }
-            [mb="auto"] {
-              margin-bottom: auto;
-            }
-            [top-bottom] {
-              padding-top: 0;
-              padding-bottom: 0;
-            }
-            [top-bottom="0"] {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-            [top-bottom="0.5"] {
-              margin-top: 0.5rem;
-              margin-bottom: 0.5rem;
-            }
-            [top-bottom="1.5"] {
-              margin-top: 1.5rem;
-              margin-bottom: 1.5rem;
-            }
-            [top-bottom="1"] {
-              margin-top: 1rem;
-              margin-bottom: 1rem;
-            }
-            [top-bottom="2"] {
-              margin-top: 2rem;
-              margin-bottom: 2rem;
-            }
-            [top-bottom="3"] {
-              margin-top: 3rem;
-              margin-bottom: 3rem;
-            }
-            [top-bottom="base"] {
-              margin-top: var(--_sizes---spacing--base);
-              margin-bottom: var(--_sizes---spacing--base);
-            }
-            [top-bottom="sm"] {
-              margin-top: var(--_sizes---spacing--small);
-              margin-bottom: var(--_sizes---spacing--small);
-            }
-            [top-bottom="lg"] {
-              margin-top: var(--_sizes---spacing--large);
-              margin-bottom: var(--_sizes---spacing--large);
-            }
-            [top-bottom="auto"] {
-              margin-top: auto;
-              margin-bottom: auto;
-            }
-            [px="0"] {
-              padding-left: 0;
-              padding-right: 0;
-            }
-            [py="0"] {
-              padding-top: 0;
-              padding-bottom: 0;
-            }
-            [mx="0"] {
-              margin-left: 0;
-              margin-right: 0;
-            }
-            [mx="auto"] {
-              margin-left: auto;
-              margin-right: auto;
-            }
-            [my="0"] {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-            [my="auto"] {
-              margin-top: auto;
-              margin-bottom: auto;
-            }
-            [mr="0"] {
-              margin-right: 0;
-            }
-            [mr="1"] {
-              margin-right: 1rem;
-            }
-            [mr="1ch"] {
-              margin-right: 1ch;
-            }
-            [mr="word"] {
-              margin-right: 0.35em;
-            }
-            [ml="0"] {
-              margin-left: 0;
-            }
-            [ml="1"] {
-              margin-left: 1rem;
-            }
-            [mr="1ch"] {
-              margin-right: 1ch;
-            }
-            [ml="word"] {
-              margin-left: 0.35em;
-            }
-            [ms="0"] {
-              margin-inline-start: 0;
-            }
-            [ms="0.5"] {
-              margin-inline-start: 0.5rem;
-            }
-            [ms="1"] {
-              margin-inline-start: 1rem;
-            }
-            [ms="1ch"] {
-              margin-inline-start: 1ch;
-            }
-            [ms="auto"] {
-              margin-inline-start: auto;
-            }
-            [me="0"] {
-              margin-inline-end: 0;
-            }
-            [me="0.5"] {
-              margin-inline-end: 0.5rem;
-            }
-            [me="1"] {
-              margin-inline-end: 1rem;
-            }
-            [me="1ch"] {
-              margin-inline-end: 1ch;
-            }
-            [me="auto"] {
-              margin-inline-end: auto;
-            }
-            [flip="h"] {
-              transform: scaleX(-1);
-            }
-            [flip="v"] {
-              transform: scaleY(-1);
-            }
-            /* flex, grid, wrap, gap, place- related */
-            [block] {
-              display: block;
-            }
-            [inline] {
-              display: inline;
-            }
-            [inline-block] {
-              display: inline-block;
-            }
-            [grid] {
-              display: grid;
-            }
-            [flex],
-            [flex="row"] {
-              display: flex;
-              flex-direction: row;
-            }
-            [flex="col"] {
-              display: flex;
-              flex-direction: column;
-            }
-            [inner-flex],
-            [inner-flex="row"] {
-              display: inline-flex;
-              flex-direction: row;
-            }
-            [inner-flex="col"] {
-              display: inline-flex;
-              flex-direction: column;
-            }
-            [flex-wrap],
-            [flex-wrap="wrap"] {
-              flex-wrap: wrap;
-            }
-            [flex-wrap="wrap-nice"] {
-              flex-wrap: wrap;
-              white-space: normal;
-              word-break: keep-all;
-              overflow-wrap: anywhere;
-              text-wrap: balance;
-            }
-            [flex-wrap="nowrap"] {
-              flex-wrap: nowrap;
-            }
-            [flex-shrink] {
-              flex-grow: 0;
-              flex-shrink: 1;
-              flex-basis: auto;
-            }
-            [flex-noshrink] {
-              flex-grow: 0;
-              flex-shrink: 0;
-              flex-basis: auto;
-            }
-            [flex-grow] {
-              flex-grow: 1;
-              flex-shrink: 1;
-              flex-basis: 0%;
-            }
-            [gap="0"] {
-              grid-column-gap: 0;
-              grid-row-gap: 0;
-            }
-            [gap="1-1"] {
-              gap: 1rem 1rem;
-            }
-            [gap="1-2"] {
-              gap: 1rem 2rem;
-            }
-            [gap="1-3"] {
-              gap: 1rem 3rem;
-            }
-            [gap="2-1"] {
-              gap: 2rem 1rem;
-            }
-            [gap="2-2"] {
-              gap: 2rem 2rem;
-            }
-            [gap="2-3"] {
-              gap: 2rem 3rem;
-            }
-            [gap="3-1"] {
-              gap: 3rem 1rem;
-            }
-            [gap="3-2"] {
-              gap: 3rem 2rem;
-            }
-            [gap="3-3"] {
-              gap: 3rem 3rem;
-            }
-            [gap="base"] {
-              gap: var(--_sizes---gap--base);
-            }
-            [gap="sm"] {
-              gap: var(--_sizes---gap--small);
-            }
-            [gap="lg"] {
-              gap: var(--_sizes---gap--large);
-            }
-            [gap="1ch"] {
-              gap: 1ch;
-            }
-            [gap="word"] {
-              gap: 0.35em;
-              word-spacing: 0em;
-              letter-spacing: normal;
-            }
-            [order="first"] {
-              order: -999;
-            }
-            [order="last"] {
-              order: 999;
-            }
-            /* place-content */
-            [place-content="center"] {
-              place-content: center;
-            }
-            [place-content="start"] {
-              place-content: start;
-            }
-            [place-content="end"] {
-              place-content: end;
-            }
-            [place-content="between"] {
-              place-content: space-between;
-            }
-            [place-content="around"] {
-              place-content: space-around;
-            }
-            [place-content="evenly"] {
-              place-content: space-evenly;
-            }
-            [place-content="baseline"] {
-              place-content: baseline;
-            }
-            [place-content="stretch"] {
-              place-content: stretch;
-            }
-            /* place-items */
-            [place-items="start"] {
-              place-items: start;
-            }
-            [place-items="end"] {
-              place-items: end;
-            }
-            [place-items="center"] {
-              place-items: center;
-            }
-            [place-items="baseline"] {
-              place-items: baseline;
-            }
-            [place-items="stretch"] {
-              place-items: stretch;
-            }
-            /* place-self */
-            [place-self="auto"] {
-              place-self: auto;
-            }
-            [place-self="start"] {
-              place-self: start;
-            }
-            [place-self="end"] {
-              place-self: end;
-            }
-            [place-self="center"] {
-              place-self: center;
-            }
-            [place-self="stretch"] {
-              place-self: stretch;
-            }
-            /* overflow properties */
-            [overflow="visible"] {
-              overflow: visible !important;
-            }
-            [overflow="hidden"] {
-              overflow: hidden !important;
-            }
-            [overflow="clip"] {
-              overflow: clip !important;
-            }
-            [overflow="scroll"] {
-              overflow: scroll;
-            }
-            [overflow="auto"] {
-              overflow: auto;
-            }
-            [overflow-x="scroll"] {
-              overflow-x: scroll;
-            }
-            [overflow-x="auto"] {
-              overflow-x: auto;
-            }
-            [overflow-y="scroll"] {
-              overflow-y: scroll;
-            }
-            [overflow-y="auto"] {
-              overflow-y: auto;
-            }
-            /* color, bg, border, outline  */
-            [color="inherit"] {
-              color: inherit;
-            }
-            [color="transparent"] {
-              color: transparent;
-            }
-            [bg="inherit"] {
-              background-color: inherit;
-            }
-            [bg="transparent"] {
-              background-color: transparent;
-            }
-            [bg="none"] {
-              background: none;
-            }
-            [border="inherit"] {
-              border-color: inherit;
-            }
-            [border="transparent"] {
-              border-color: transparent;
-            }
-            [border="none"] {
-              border: none;
-            }
-            [outline="none"] {
-              outline: none;
-            }
-            /* gradient */
-            [gradient] {
-              background-image: linear-gradient(135deg, var(--colors--brand) 0%, var(--colors--accent) 100%);
-            }
-            /* shadow */
-            [shadow="none"] {
-              box-shadow: none;
-            }
-            [shadow] {
-              box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            }
-            /* text-shadow */
-            [text-shadow="none"] {
-              text-shadow: none;
-            }
-            [text-shadow] {
-              text-shadow: 0 0 1rem var(--_palettes---neutral--black);
-            }
-            /* lists */
-            [list-type] li {
-              list-style-position: outside;
-            }
-            [list-type] li::before {
-              content: none !important;
-              /* reset */
-            }
-            [list-type] {
-              list-style: none !important;
-              /* reset */
-            }
-            [list-icon] li {
-              position: relative;
-              margin-left: 1.8em;
-            }
-            [list-icon] li::before {
-              position: absolute;
-              top: -0.095em;
-              left: -1.325em;
-              font-size: 1.125em;
-              content: '\25CF\0020';
-              color: var(--colors--brand);
-            }
-            /* no-scrollbar */
-            [no-scrollbar]::-webkit-scrollbar {
-              display: none !important;
-              width: 0px;
-              height: 0px;
-            }
-            [no-scrollbar] {
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-            }
-            [no-scrollbar]::-webkit-scrollbar-thumb {
-              background-color: transparent;
-            }
-            /* no-overscroll */
-            [no-overscroll] {
-              overscroll-behavior: none;
-              -webkit-overflow-scrolling: touch;
-              touch-action: none;
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-            }
-            [no-overscroll]::-webkit-scrollbar {
-              width: 0px;
-              height: 0px;
-            }
-            /* ----------------- */
-            /* -- S2 Defaults -- */
-            /* ----------------- */
-            /* lightbox and slider */
-            .w-lightbox-backdrop {
-              font-weight: normal;
-            }
-            .w-lightbox-strip {
-              padding: 0.5rem;
-            }
-            .w-lightbox-item {
-              padding: 0.25rem;
-              margin: 0.25rem;
-              outline-offset: 0;
-            }
-            .w-lightbox-control {
-              outline: none !important;
-            }
-            .w-slider-dot {
-              flex: 0 0 auto;
-            }
-            /* code block */
-            pre.code-block {
-              margin: 1rem 0 1rem 0;
-            }
-            pre.code-block code {
-              margin: 0.25rem 0 0.25rem 0;
-              padding-top: 0.75rem;
-              padding-bottom: 0.75rem;
-            }
-            .w-richtext pre.w-code-block {
-              margin: 1rem 0 1rem 0;
-              font-size: .825rem;
-              /* same as .code-block */
-              line-height: 1.725;
-            }
-            .w-richtext pre.w-code-block code {
-              margin: 0.35rem 0 0.35rem 0;
-              padding-top: 0.75rem;
-              padding-bottom: 0.75rem;
-            }
-            @media screen and (max-width: 479px) {
-              .w-richtext pre.w-code-block {
-                font-size: .85rem;
-              }
-            }
-            /* styles for html-table */
-            /* html-table */
-            .html-table {
-              width: 100%;
-              position: relative;
-              margin: 0 0 var(--_sizes---spacing--richtext) 0;
-            }
-            .html-table table {
-              width: 100%;
-              height: 100%;
-              table-layout: fixed;
-              border-collapse: collapse;
-              border-spacing: 0;
-              text-align: inherit;
-            }
-            .html-table th,
-            .html-table td {
-              border: 1px solid var(--colors--stroke);
-              padding: 0.65rem 0.45rem;
-              font-size: 1rem;
-              line-height: 1.25;
-            }
-            .html-table th {
-              background-color: var(--colors--surface-muted);
-              color: inherit;
-              text-align: inherit;
-            }
-            .html-table thead th {}
-            .html-table tfoot td {}
-            .html-table caption {
-              caption-side: top;
-              font-weight: normal;
-              text-align: inherit;
-              margin: 0 0 0.5rem 0;
-            }
-            /* scrollable html-table */
-            .html-table[scrollable] {
-              overflow: auto;
-            }
-            .html-table[scrollable] table {
-              display: block !important;
-            }
-            .html-table[scrollable] table,
-            .html-table[scrollable="5"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
-            }
-            .html-table[scrollable="6"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 6 + 7px);
-            }
-            .html-table[scrollable="7"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 7 + 8px);
-            }
-            .html-table[scrollable="8"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 8 + 9px);
-            }
-            .html-table[scrollable] table th,
-            .html-table[scrollable] table td {
-              white-space: nowrap !important;
-            }
-            .html-table[scrollable]::-webkit-scrollbar {
-              display: none !important;
-            }
-            .html-table[scrollable] {
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-              overscroll-behavior: none;
-            }
-            .html-table[scrollable]::-webkit-scrollbar-thumb {
-              background-color: transparent;
-            }
-            .html-table[scrollable="x"] {
-              overflow-x: auto;
-              overflow-y: hidden;
-            }
-            .html-table[scrollable="x"] table {
-              max-height: none;
-            }
-            .html-table[scrollable="y"] {
-              overflow-x: hidden;
-              overflow-y: auto;
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
-            }
-            .html-table[scrollable="y"] table {
-              display: table !important;
-            }
-            /* th-sticky */
-            .html-table[scrollable][th-sticky] thead th:first-child {
-              position: sticky;
-              top: -1px;
-              left: -1px;
-              z-index: 999;
-            }
-            .html-table[scrollable][th-sticky] thead th {
-              position: sticky;
-              top: -1px;
-              z-index: 998;
-            }
-            .html-table[scrollable][th-sticky] tbody th {
-              position: sticky;
-              left: -1px;
-              z-index: 997;
-            }
-            /* styles for mode switching ui */
-            body.u-light-mode .toggle {}
-            body.u-dark-mode .toggle {
-              justify-content: flex-end;
-            }
-            body.u-light-mode .mode-switch>[data-button="color-mode-light"] {
-              background-color: #ffffff80;
-            }
-            body.u-dark-mode .mode-switch>[data-button="color-mode-dark"] {
-              background-color: #00000060;
-            }
-            body.u-dark-mode .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
-              background-color: #bbb;
-              color: #ddd;
-            }
-          </style>
-      </div>
-      <div code="css" class="css-animations w-embed">
-        <style>
-            /* -------------------- */
-            /* -- CSS Animations -- */
-            /* -------------------- */
-            /* fadeIn */
-            @keyframes fadeIn {
-              from {
-                opacity: 0;
-              }
-              to {
-                opacity: 1;
-              }
-            }
-            [animation="fadeIn"] {
-              opacity: 0;
-              animation: fadeIn 1.2s ease forwards;
-            }
-            /* slideIn */
-            @keyframes slideIn {
-              from {
-                opacity: 0;
-                transform: translateY(80px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-            [animation="slideIn"] {
-              opacity: 0;
-              animation: slideIn 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-            }
-            /* marquee */
-            @keyframes marquee {
-              from {
-                transform: translateX(0%);
-              }
-              to {
-                transform: translateX(-100%);
-              }
-            }
-            @keyframes marquee200p {
-              from {
-                transform: translateX(0%);
-              }
-              to {
-                transform: translateX(-200%);
-              }
-            }
-            [animation="marquee"] {
-              animation: marquee 20s linear infinite;
-            }
-            [animation="marquee200p"] {
-              animation: marquee200p 20s linear infinite;
-            }
-            /* spin */
-            @keyframes spin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-            [animation="spin"] {
-              animation: spin 1s linear infinite;
-            }
-            /* ping */
-            @keyframes ping {
-              75%,
-              100% {
-                transform: scale(2);
-                opacity: 0;
-              }
-            }
-            [animation="ping"] {
-              animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-            }
-            /* bounce */
-            @keyframes bounce {
-              0%,
-              100% {
-                transform: translateY(-25%);
-                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-              }
-              50% {
-                transform: translateY(0);
-                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-              }
-            }
-            [animation="bounce"] {
-              animation: bounce 1s infinite;
-            }
-            /* pulse */
-            @keyframes pulse {
-              0%,
-              100% {
-                opacity: 1;
-              }
-              50% {
-                opacity: .5;
-              }
-            }
-            [animation="pulse"] {
-              animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            }
-            /* pulse-bg */
-            @keyframes pulse-bg {
-              0%,
-              100% {
-                background-color: var(--bg-s, #aaa);
-              }
-              50% {
-                background-color: var(--bg-e, #ddd);
-              }
-            }
-            [animation^="pulse-bg"] {
-              animation: pulse-bg 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            }
-            [animation="pulse-bg"] {
-              --bg-s: var(--colors--brand);
-              --bg-e: var(--colors--brand-light);
-            }
-            /* controls */
-            [animation-play="pause"] {
-              animation-play-state: paused !important;
-            }
-            [animation-play="run"] {
-              animation-play-state: running !important;
-            }
-            [animation="none"] {
-              animation: none;
-            }
-          </style>
+      <div class="code">
+        <div class="css w-embed">/* S2 Framework: Base CSS */
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.min.css">
+        </div>
       </div>
       <div code="css" class="custom w-embed">
         <style>
@@ -1573,7 +194,7 @@
             /* pulse-bg animation */
             [animation="pulse-bg-1"] {
               --bg-s: var(--colors--accent);
-              --bg-e: var(--colors--brand-alt);
+              --bg-e: var(--colors--secondary);
             }
             [animation="pulse-bg-2"] {
               --bg-s: #FFB6B6;
@@ -1600,7 +221,7 @@
             /* css entities: https://www.w3schools.com/cssref/css_entities.php */
             [list-icon="spark"] li::before {
               content: '\2726\0020' !important;
-              color: var(--colors--brand) !important;
+              color: var(--colors--primary) !important;
             }
             [list-icon="star"] li::before {
               content: '\2605\0020' !important;
@@ -1608,14 +229,14 @@
             }
             [list-icon="asterisk"] li::before {
               content: '\2731\0020' !important;
-              color: var(--colors--brand-alt) !important;
+              color: var(--colors--secondary) !important;
             }
             /* -------------------------- */
             /* -- Global Custom Styles -- */
             /* -------------------------- */
-            /* html and body tags */
+            /* html and body */
             html:not(.wf-design-mode) ::selection {
-              background: var(--colors--brand);
+              background: var(--colors--primary);
               color: #fff;
             }
             body * {
@@ -1648,31 +269,34 @@
             .h3 sup,
             h3 sub,
             .h3 sup {
-              margin: 0 -0.25ch;
-              font-size: calc(0.4em + 5px);
+              margin: 0 -0.275ch;
             }
-            h1 sup,
-            .h1 sup,
-            h2 sup,
-            .h2 sup,
-            h3 sup,
-            .h3 sup {
-              top: calc(-1.01em + 5.03px);
+            /* better modal */
+            dialog.modal[open] {
+              animation: fadeIn 480ms ease-out forwards;
             }
-            h1 sub,
-            .h1 sub,
-            h2 sub,
-            .h2 sub,
-            h3 sub,
-            .h3 sub {
-              top: calc(0.16em - 0.78px);
+            dialog.modal::backdrop {
+              background: rgba(0, 0, 0, 0.8);
+              cursor: pointer;
+            }
+            @supports (-webkit-touch-callout: none) {
+              button:focus,
+              button:focus-visible {
+                outline: none !important;
+                box-shadow: none !important;
+              }
+            }
+            .modal.cc-open {
+              display: block;
+              position: fixed;
+              inset: 0;
             }
             /* other styles */
             .richtext-list ul li::before {
               position: absolute;
               margin-left: -1.65em;
               content: '\2713\0020';
-              color: var(--colors--brand);
+              color: var(--colors--primary);
             }
             .breadcrumb-item a.w--current {
               opacity: 0.6;
@@ -1767,13 +391,13 @@
             [color="text-mu"] {
               color: var(--colors--text-muted);
             }
-            [color="brand"],
-            [color="b"] {
-              color: var(--colors--brand);
+            [color="primary"],
+            [color="p"] {
+              color: var(--colors--primary);
             }
-            [color="brand-alt"],
-            [color="ba"] {
-              color: var(--colors--brand-alt);
+            [color="secondary"],
+            [color="s"] {
+              color: var(--colors--secondary);
             }
             [color="accent"],
             [color="a"] {
@@ -1797,13 +421,13 @@
             [bg="surface-alt-mu"] {
               background-color: var(--colors--surface-alt-muted);
             }
-            [bg="brand"],
-            [bg="b"] {
-              background-color: var(--colors--brand);
+            [bg="primary"],
+            [bg="p"] {
+              background-color: var(--colors--primary);
             }
-            [bg="brand-alt"],
-            [bg="ba"] {
-              background-color: var(--colors--brand-alt);
+            [bg="secondary"],
+            [bg="s"] {
+              background-color: var(--colors--secondary);
             }
             [bg="accent"],
             [bg="a"] {
@@ -1821,13 +445,13 @@
             [border="stroke"] {
               border-color: var(--colors--stroke);
             }
-            [border="brand"],
-            [border="b"] {
-              border-color: var(--colors--brand);
+            [border="primary"],
+            [border="p"] {
+              border-color: var(--colors--primary);
             }
-            [border="brand-alt"],
-            [border="ba"] {
-              border-color: var(--colors--brand-alt);
+            [border="secondary"],
+            [border="s"] {
+              border-color: var(--colors--secondary);
             }
             [border="accent"],
             [border="a"] {
@@ -1839,129 +463,129 @@
             }
             /* neutral 500 */
             /* -- "Palette" Variables as Attributes -- */
-            /* brand */
-            [bg="b-50"] {
-              background-color: var(--_palettes---brand--50);
+            /* primary */
+            [bg="p-50"] {
+              background-color: var(--_palettes---primary--50);
             }
-            [bg="b-100"] {
-              background-color: var(--_palettes---brand--100);
+            [bg="p-100"] {
+              background-color: var(--_palettes---primary--100);
             }
-            [bg="b-200"] {
-              background-color: var(--_palettes---brand--200);
+            [bg="p-200"] {
+              background-color: var(--_palettes---primary--200);
             }
-            [bg="b-300"] {
-              background-color: var(--_palettes---brand--300);
+            [bg="p-300"] {
+              background-color: var(--_palettes---primary--300);
             }
-            [bg="b-400"] {
-              background-color: var(--_palettes---brand--400);
+            [bg="p-400"] {
+              background-color: var(--_palettes---primary--400);
             }
-            [bg="b-500"] {
-              background-color: var(--_palettes---brand--500);
+            [bg="p-500"] {
+              background-color: var(--_palettes---primary--500);
             }
-            [bg="b-600"] {
-              background-color: var(--_palettes---brand--600);
+            [bg="p-600"] {
+              background-color: var(--_palettes---primary--600);
             }
-            [bg="b-700"] {
-              background-color: var(--_palettes---brand--700);
+            [bg="p-700"] {
+              background-color: var(--_palettes---primary--700);
             }
-            [bg="b-800"] {
-              background-color: var(--_palettes---brand--800);
+            [bg="p-800"] {
+              background-color: var(--_palettes---primary--800);
             }
-            [bg="b-900"] {
-              background-color: var(--_palettes---brand--900);
+            [bg="p-900"] {
+              background-color: var(--_palettes---primary--900);
             }
-            [bg="b-950"] {
-              background-color: var(--_palettes---brand--950);
+            [bg="p-950"] {
+              background-color: var(--_palettes---primary--950);
             }
-            [bg="b-on-light"] {
-              background-color: var(--_palettes---brand--on-light);
+            [bg="p-on-light"] {
+              background-color: var(--_palettes---primary--on-light);
             }
-            [color="b-on-light"] {
-              color: var(--_palettes---brand--on-light);
+            [color="p-on-light"] {
+              color: var(--_palettes---primary--on-light);
             }
-            [bg="b-on-base"] {
-              background-color: var(--_palettes---brand--on-base);
+            [bg="p-on-base"] {
+              background-color: var(--_palettes---primary--on-base);
             }
-            [color="b-on-base"] {
-              color: var(--_palettes---brand--on-base);
+            [color="p-on-base"] {
+              color: var(--_palettes---primary--on-base);
             }
-            [bg="b-on-deep"] {
-              background-color: var(--_palettes---brand--on-deep);
+            [bg="p-on-deep"] {
+              background-color: var(--_palettes---primary--on-deep);
             }
-            [color="b-on-deep"] {
-              color: var(--_palettes---brand--on-deep);
+            [color="p-on-deep"] {
+              color: var(--_palettes---primary--on-deep);
             }
-            [bg="b-subtle"] {
-              background-color: var(--_palettes---brand--subtle);
+            [bg="p-subtle"] {
+              background-color: var(--_palettes---primary--subtle);
             }
-            /* brand: light, deep */
-            [bg="b-light"] {
-              background-color: var(--colors--brand-light);
+            /* primary: light, deep */
+            [bg="p-light"] {
+              background-color: var(--colors--primary-light);
             }
-            [bg="b-deep"] {
-              background-color: var(--colors--brand-deep);
+            [bg="p-deep"] {
+              background-color: var(--colors--primary-deep);
             }
-            /* brand alt */
-            [bg="ba-50"] {
-              background-color: var(--_palettes---brand-alt--50);
+            /* secondary */
+            [bg="s-50"] {
+              background-color: var(--_palettes---secondary--50);
             }
-            [bg="ba-100"] {
-              background-color: var(--_palettes---brand-alt--100);
+            [bg="s-100"] {
+              background-color: var(--_palettes---secondary--100);
             }
-            [bg="ba-200"] {
-              background-color: var(--_palettes---brand-alt--200);
+            [bg="s-200"] {
+              background-color: var(--_palettes---secondary--200);
             }
-            [bg="ba-300"] {
-              background-color: var(--_palettes---brand-alt--300);
+            [bg="s-300"] {
+              background-color: var(--_palettes---secondary--300);
             }
-            [bg="ba-400"] {
-              background-color: var(--_palettes---brand-alt--400);
+            [bg="s-400"] {
+              background-color: var(--_palettes---secondary--400);
             }
-            [bg="ba-500"] {
-              background-color: var(--_palettes---brand-alt--500);
+            [bg="s-500"] {
+              background-color: var(--_palettes---secondary--500);
             }
-            [bg="ba-600"] {
-              background-color: var(--_palettes---brand-alt--600);
+            [bg="s-600"] {
+              background-color: var(--_palettes---secondary--600);
             }
-            [bg="ba-700"] {
-              background-color: var(--_palettes---brand-alt--700);
+            [bg="s-700"] {
+              background-color: var(--_palettes---secondary--700);
             }
-            [bg="ba-800"] {
-              background-color: var(--_palettes---brand-alt--800);
+            [bg="s-800"] {
+              background-color: var(--_palettes---secondary--800);
             }
-            [bg="ba-900"] {
-              background-color: var(--_palettes---brand-alt--900);
+            [bg="s-900"] {
+              background-color: var(--_palettes---secondary--900);
             }
-            [bg="ba-950"] {
-              background-color: var(--_palettes---brand-alt--950);
+            [bg="s-950"] {
+              background-color: var(--_palettes---secondary--950);
             }
-            [bg="ba-on-light"] {
-              background-color: var(--_palettes---brand-alt--on-light);
+            [bg="s-on-light"] {
+              background-color: var(--_palettes---secondary--on-light);
             }
-            [color="ba-on-light"] {
-              color: var(--_palettes---brand-alt--on-light);
+            [color="s-on-light"] {
+              color: var(--_palettes---secondary--on-light);
             }
-            [bg="ba-on-base"] {
-              background-color: var(--_palettes---brand-alt--on-base);
+            [bg="s-on-base"] {
+              background-color: var(--_palettes---secondary--on-base);
             }
-            [color="ba-on-base"] {
-              color: var(--_palettes---brand-alt--on-base);
+            [color="s-on-base"] {
+              color: var(--_palettes---secondary--on-base);
             }
-            [bg="ba-on-deep"] {
-              background-color: var(--_palettes---brand-alt--on-deep);
+            [bg="s-on-deep"] {
+              background-color: var(--_palettes---secondary--on-deep);
             }
-            [color="ba-on-deep"] {
-              color: var(--_palettes---brand-alt--on-deep);
+            [color="s-on-deep"] {
+              color: var(--_palettes---secondary--on-deep);
             }
-            [bg="ba-subtle"] {
-              background-color: var(--_palettes---brand-alt--subtle);
+            [bg="s-subtle"] {
+              background-color: var(--_palettes---secondary--subtle);
             }
-            /* brand alt: light, deep */
-            [bg="ba-light"] {
-              background-color: var(--_palettes---brand-alt--300);
+            /* seconady: light, deep */
+            [bg="s-light"] {
+              background-color: var(--_palettes---secondary--300);
             }
-            [bg="ba-deep"] {
-              background-color: var(--_palettes---brand-alt--700);
+            [bg="s-deep"] {
+              background-color: var(--_palettes---secondary--700);
             }
             /* accent */
             [bg="a-50"] {
@@ -2086,10 +710,10 @@
             [color="white"] {
               color: var(--_palettes---neutral--white);
             }
-            [bg="black"] {
+            [bg="plack"] {
               background-color: var(--_palettes---neutral--black);
             }
-            [color="black"] {
+            [color="plack"] {
               color: var(--_palettes---neutral--black);
             }
             /* neutral: light, deep */
@@ -2204,7 +828,7 @@
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
-            /* styles in dark mode */
+            /* styles for dark mode */
             .u-dark-mode .s2-demo-box {
               background-image: none;
               background-color: #0A0A0A;
@@ -2328,16 +952,16 @@
                       <h3>Headings</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>Styles are applied to both tags and classes. Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="css-tag">h3</span> class to style a <span class="css-tag cc-html">Heading 1</span> element if it is too large for the design.</p>
+                      <p>Styles are applied to both tags and classes. Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="tag-label">h3</span> class to style a <span class="tag-label cc-html">Heading 1</span> element if it is too large for the design.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Heading 1</div>
+                        <div class="tag-label cc-html">Heading 1</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">h1</div>
+                        <div class="tag-label">h1</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2349,10 +973,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Heading 2</div>
+                        <div class="tag-label cc-html">Heading 2</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">h2</div>
+                        <div class="tag-label">h2</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2364,10 +988,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Heading 3</div>
+                        <div class="tag-label cc-html">Heading 3</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">h3</div>
+                        <div class="tag-label">h3</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2379,10 +1003,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Heading 4</div>
+                        <div class="tag-label cc-html">Heading 4</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">h4</div>
+                        <div class="tag-label">h4</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2394,10 +1018,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Heading 5</div>
+                        <div class="tag-label cc-html">Heading 5</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">h5</div>
+                        <div class="tag-label">h5</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2409,10 +1033,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Heading 6</div>
+                        <div class="tag-label cc-html">Heading 6</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">h6</div>
+                        <div class="tag-label">h6</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2426,7 +1050,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">h7</div>
+                          <div class="tag-label">h7</div>
                         </div>
                       </div>
                       <div class="block">
@@ -2437,7 +1061,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">h8</div>
+                          <div class="tag-label">h8</div>
                         </div>
                       </div>
                       <div class="block">
@@ -2445,21 +1069,21 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </div>
-                    <div class="sg-element">
-                      <div class="sg-tags">
-                        <div class="tag-wrapper">
-                          <div class="css-tag">eyebrow</div>
-                        </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">eyebrow</div>
                       </div>
-                      <div class="block">
+                    </div>
+                    <div class="block">
+                      <div class="title-wrapper cc-sm">
                         <div class="title-wrapper cc-sm">
-                          <div class="title-wrapper cc-sm">
-                            <div class="eyebrow">Eyebrow</div>
-                          </div>
-                          <h4>This is a H4 title for demo</h4>
+                          <div class="eyebrow">Eyebrow</div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4>This is a H4 title for demo</h4>
                       </div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                   </div>
                 </section>
@@ -2472,103 +1096,113 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-3xl</div>
+                        <div class="tag-label">text-3xl</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                      <p class="text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-2xl</div>
+                        <div class="tag-label">text-2xl</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                      <p class="text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-xl</div>
+                        <div class="tag-label">text-xl</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-lg</div>
+                        <div class="tag-label">text-lg</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-base</div>
+                        <div class="tag-label">text-base</div>
                       </div>
-                      <div class="sg-note">font-size: 1rem<br>line-height: 1.5<br>(same as body by default)</div>
+                      <div class="sg-note">font-size: same as Body<br>line-height: same as Body</div>
                     </div>
                     <div class="block">
-                      <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-sm</div>
+                        <div class="tag-label">text-sm</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-xs</div>
+                        <div class="tag-label">text-xs</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-2xs</div>
+                        <div class="tag-label">text-2xs</div>
                       </div>
                     </div>
                     <div class="block">
-                      <p class="text-2xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p class="text-2xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare. Consectetur adipiscing elit elementum tristique.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Paragraph</div>
+                        <div class="tag-label">text-3xs</div>
+                      </div>
+                    </div>
+                    <div class="block">
+                      <p class="text-3xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare. Consectetur adipiscing elit elementum tristique.</p>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label cc-html">Paragraph</div>
                       </div>
                       <div class="sg-note">font-size: not set<br>line-height: not set</div>
                     </div>
                     <div class="block">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Body</div>
+                        <div class="tag-label cc-html">Body</div>
                       </div>
                     </div>
                     <div class="block">
-                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</div>
+                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</div>
                     </div>
                   </div>
                 </section>
@@ -2581,7 +1215,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Unordered Lists</div>
+                        <div class="tag-label cc-html">Unordered Lists</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2601,7 +1235,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Ordered Lists</div>
+                        <div class="tag-label cc-html">Ordered Lists</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2621,7 +1255,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">list-type=&quot;disc&quot;</div>
+                        <div class="tag-label cc-attribute">list-type=&quot;disc&quot;</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2676,7 +1310,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">list</div>
+                        <div class="tag-label">list</div>
                       </div>
                       <div class="sg-note">spaced list items</div>
                     </div>
@@ -2710,9 +1344,9 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">list-icon</div>
+                        <div class="tag-label cc-attribute">list-icon</div>
                         <div>/</div>
-                        <div class="css-tag cc-attribute">list-icon=&quot;spark&quot;</div>
+                        <div class="tag-label cc-attribute">list-icon=&quot;spark&quot;</div>
                       </div>
                     </div>
                     <div gap="base" flex="col" class="block">
@@ -2769,7 +1403,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">list-item_image-icon<br></div>
+                        <div class="tag-label">list-item_image-icon<br></div>
                       </div>
                       <div class="sg-note">use a combo class to change the background-image for the bullets</div>
                     </div>
@@ -2790,10 +1424,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Unordered Lists</div>
+                        <div class="tag-label cc-html">Unordered Lists</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div><span class="css-tag">list-none</span> / <span class="css-tag">list-h</span></div>
+                        <div><span class="tag-label">list-none</span> / <span class="tag-label">list-h</span></div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
@@ -2863,15 +1497,15 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">list-custom</div>
+                        <div class="tag-label">list-custom</div>
                       </div>
                     </div>
                     <div class="block">
                       <div style="gap: 1.5rem;" class="flex-wrap-cols">
                         <div class="col cc-p-0">
                           <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                            <div class="css-tag cc-html">Unordered Lists</div>
-                            <div class="css-tag">list-custom</div>
+                            <div class="tag-label cc-html">Unordered Lists</div>
+                            <div class="tag-label">list-custom</div>
                           </div>
                           <ul role="list" class="list-custom">
                             <li class="list-custom_item">Sed posuere consectetur est at lobortis.</li>
@@ -2881,8 +1515,8 @@
                         </div>
                         <div class="col cc-p-0">
                           <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                            <div class="css-tag cc-html">Ordered Lists</div>
-                            <div class="css-tag">list-custom</div>
+                            <div class="tag-label cc-html">Ordered Lists</div>
+                            <div class="tag-label">list-custom</div>
                           </div>
                           <ol role="list" class="list-custom">
                             <li class="list-custom_item cc-ua">Sed posuere consectetur est at lobortis.</li>
@@ -2892,8 +1526,8 @@
                         </div>
                         <div class="col cc-p-0">
                           <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                            <div class="css-tag">list-custom</div>
-                            <div class="css-tag">cc-p-0</div>
+                            <div class="tag-label">list-custom</div>
+                            <div class="tag-label">cc-p-0</div>
                           </div>
                           <div class="list-custom cc-p-0">
                             <div class="list-custom_item cc-with-icon">
@@ -2943,7 +1577,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Block Quote</div>
+                        <div class="tag-label cc-html">Block Quote</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2953,7 +1587,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Links</div>
+                        <div class="tag-label cc-html">Links</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2970,10 +1604,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Superscript</div>
+                        <div class="tag-label cc-html">Superscript</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Subscript</div>
+                        <div class="tag-label cc-html">Subscript</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2993,8 +1627,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">code-block</div>
-                        <div class="sg-note">wrapped with <span class="css-tag">block</span> <span class="css-tag">cc-full</span> in the example as it needs a wrapper with width value</div>
+                        <div class="tag-label">code-block</div>
+                        <div class="sg-note">wrapped with <span class="tag-label">block</span> <span class="tag-label">cc-full</span> in the example as it needs a wrapper with width value</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3024,19 +1658,19 @@
                   </div>
                   <palette style="display: block; width: 100%; margin-bottom: 1rem;">
                     <div class="u-hflex-center-top">
-                      <div class="sg-square cc-demo_colors_brand-light">
-                        <div>Brand<br>Light</div>
+                      <div class="sg-square cc-demo_colors_primary-light">
+                        <div>Primary<br>Light</div>
                       </div>
-                      <div class="sg-square cc-demo_colors_brand">
-                        <div>Brand<br></div>
+                      <div class="sg-square cc-demo_colors_primary">
+                        <div>Primary</div>
                       </div>
-                      <div class="sg-square cc-demo_colors_brand-deep">
-                        <div>Brand<br>Deep</div>
+                      <div class="sg-square cc-demo_colors_primary-deep">
+                        <div>Primary<br>Deep</div>
                       </div>
                     </div>
                     <div class="u-hflex-center-top">
-                      <div class="sg-square cc-demo_colors_brand-alt">
-                        <div>Brand Alt</div>
+                      <div class="sg-square cc-demo_colors_secondary">
+                        <div>Secondary</div>
                       </div>
                       <div class="sg-square cc-demo_colors_accent">
                         <div>Accent</div>
@@ -3103,112 +1737,112 @@
                     </div>
                   </div>
                   <div position="relative" width-is="100p">
-                    <div color="brand" mb="0.5" class="text-sm">Brand</div>
+                    <div color="primary" mb="0.5" class="text-sm">Primary</div>
                     <palette style="margin-bottom: 1rem;">
                       <div class="u-hflex-center-top">
-                        <div size-is="lg" bg="b-300" class="sg-square">
-                          <div demo="disc" bg="b-on-light"></div>
-                          <div color="b-on-light">300</div>
+                        <div size-is="lg" bg="p-300" class="sg-square">
+                          <div demo="disc" bg="p-on-light"></div>
+                          <div color="p-on-light">300</div>
                         </div>
-                        <div size-is="lg" bg="b" class="sg-square">
-                          <div demo="disc" bg="b-on-base"></div>
-                          <div color="b-on-base">base</div>
+                        <div size-is="lg" bg="p" class="sg-square">
+                          <div demo="disc" bg="p-on-base"></div>
+                          <div color="p-on-base">base</div>
                         </div>
-                        <div size-is="lg" bg="b-700" class="sg-square">
-                          <div demo="disc" bg="b-on-deep"></div>
-                          <div color="b-on-deep">700</div>
+                        <div size-is="lg" bg="p-700" class="sg-square">
+                          <div demo="disc" bg="p-on-deep"></div>
+                          <div color="p-on-deep">700</div>
                         </div>
-                        <div size-is="lg" bg="b-subtle" class="sg-square">
+                        <div size-is="lg" bg="p-subtle" class="sg-square">
                           <div color="text-mu">subtle</div>
                         </div>
                       </div>
                       <div pb="1" class="u-hflex-center-top">
-                        <div bg="b-50" class="sg-square">
+                        <div bg="p-50" class="sg-square">
                           <div color-g="">50</div>
                         </div>
-                        <div bg="b-100" class="sg-square">
+                        <div bg="p-100" class="sg-square">
                           <div color-g="">100</div>
                         </div>
-                        <div bg="b-200" class="sg-square">
+                        <div bg="p-200" class="sg-square">
                           <div color-g="">200</div>
                         </div>
-                        <div bg="b-300" class="sg-square">
+                        <div bg="p-300" class="sg-square">
                           <div color-g="">300</div>
                         </div>
-                        <div bg="b-400" class="sg-square">
+                        <div bg="p-400" class="sg-square">
                           <div color-g="">400</div>
                         </div>
-                        <div bg="b-500" class="sg-square">
+                        <div bg="p-500" class="sg-square">
                           <div color-g="500">500</div>
                         </div>
-                        <div bg="b-600" class="sg-square">
+                        <div bg="p-600" class="sg-square">
                           <div color-g="">600</div>
                         </div>
-                        <div bg="b-700" class="sg-square">
+                        <div bg="p-700" class="sg-square">
                           <div color-g="">700</div>
                         </div>
-                        <div bg="b-800" class="sg-square">
+                        <div bg="p-800" class="sg-square">
                           <div color-g="">800</div>
                         </div>
-                        <div bg="b-900" class="sg-square">
+                        <div bg="p-900" class="sg-square">
                           <div color-g="">900</div>
                         </div>
-                        <div bg="b-950" class="sg-square">
+                        <div bg="p-950" class="sg-square">
                           <div color-g="">950</div>
                         </div>
                       </div>
                     </palette>
-                    <div color="brand-alt" mb="0.5" class="text-sm">Brand Alt</div>
+                    <div color="secondary" mb="0.5" class="text-sm">Secondary</div>
                     <palette style="margin-bottom: 1rem;">
                       <div class="u-hflex-center-top">
-                        <div size-is="lg" bg="ba-300" class="sg-square">
-                          <div demo="disc" bg="ba-on-light"></div>
-                          <div color="ba-on-light">300</div>
+                        <div size-is="lg" bg="s-300" class="sg-square">
+                          <div demo="disc" bg="s-on-light"></div>
+                          <div color="s-on-light">300</div>
                         </div>
-                        <div size-is="lg" bg="ba" class="sg-square">
-                          <div demo="disc" bg="ba-on-base"></div>
-                          <div color="ba-on-base">base</div>
+                        <div size-is="lg" bg="s" class="sg-square">
+                          <div demo="disc" bg="s-on-base"></div>
+                          <div color="s-on-base">base</div>
                         </div>
-                        <div size-is="lg" bg="ba-700" class="sg-square">
-                          <div demo="disc" bg="ba-on-deep"></div>
-                          <div color="ba-on-deep">700</div>
+                        <div size-is="lg" bg="s-700" class="sg-square">
+                          <div demo="disc" bg="s-on-deep"></div>
+                          <div color="s-on-deep">700</div>
                         </div>
-                        <div size-is="lg" bg="ba-subtle" class="sg-square">
+                        <div size-is="lg" bg="s-subtle" class="sg-square">
                           <div color="text-mu">subtle</div>
                         </div>
                       </div>
                       <div pb="1" class="u-hflex-center-top">
-                        <div bg="ba-50" class="sg-square">
+                        <div bg="s-50" class="sg-square">
                           <div color-g="">50</div>
                         </div>
-                        <div bg="ba-100" class="sg-square">
+                        <div bg="s-100" class="sg-square">
                           <div color-g="">100</div>
                         </div>
-                        <div bg="ba-200" class="sg-square">
+                        <div bg="s-200" class="sg-square">
                           <div color-g="">200</div>
                         </div>
-                        <div bg="ba-300" class="sg-square">
+                        <div bg="s-300" class="sg-square">
                           <div color-g="">300</div>
                         </div>
-                        <div bg="ba-400" class="sg-square">
+                        <div bg="s-400" class="sg-square">
                           <div color-g="">400</div>
                         </div>
-                        <div bg="ba-500" class="sg-square">
+                        <div bg="s-500" class="sg-square">
                           <div color-g="500">500</div>
                         </div>
-                        <div bg="ba-600" class="sg-square">
+                        <div bg="s-600" class="sg-square">
                           <div color-g="">600</div>
                         </div>
-                        <div bg="ba-700" class="sg-square">
+                        <div bg="s-700" class="sg-square">
                           <div color-g="">700</div>
                         </div>
-                        <div bg="ba-800" class="sg-square">
+                        <div bg="s-800" class="sg-square">
                           <div color-g="">800</div>
                         </div>
-                        <div bg="ba-900" class="sg-square">
+                        <div bg="s-900" class="sg-square">
                           <div color-g="">900</div>
                         </div>
-                        <div bg="ba-950" class="sg-square">
+                        <div bg="s-950" class="sg-square">
                           <div color-g="">950</div>
                         </div>
                       </div>
@@ -3353,12 +1987,12 @@
                       <h3>Gradients</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>You can setup <span class="css-tag cc-attribute">gradient</span> attributes in custom styles inside <span class="css-tag cc-component">Global-Code</span> for time-saving and advanced gradients. Use <span class="code-tag">background-image</span> for property if you want the gradient to work on clipping text as well.</p>
+                      <p>You can setup <span class="tag-label cc-attribute">gradient</span> attributes in custom styles inside <span class="tag-label cc-component">Global Code</span> for time-saving and advanced gradients. Use <span class="code-label">background-image</span> for property if you want the gradient to work on clipping text as well.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
-                      <div class="css-tag cc-attribute">gradient</div>
+                      <div class="tag-label cc-attribute">gradient</div>
                     </div>
                     <div class="block">
                       <div gradient="" class="sg-square"></div>
@@ -3369,7 +2003,7 @@
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
-                      <div class="css-tag cc-attribute">gradient=&quot;1&quot;</div>
+                      <div class="tag-label cc-attribute">gradient=&quot;1&quot;</div>
                     </div>
                     <div class="block">
                       <div gradient="1" class="sg-square"></div>
@@ -3380,7 +2014,7 @@
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
-                      <div class="css-tag cc-attribute">gradient=&quot;1&quot;</div>
+                      <div class="tag-label cc-attribute">gradient=&quot;1&quot;</div>
                     </div>
                     <div class="block">
                       <div gradient="2" class="sg-square"></div>
@@ -3391,7 +2025,7 @@
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
-                      <div class="css-tag cc-attribute">gradient=&quot;3&quot;</div>
+                      <div class="tag-label cc-attribute">gradient=&quot;3&quot;</div>
                     </div>
                     <div class="block">
                       <div gradient="3" class="sg-square"></div>
@@ -3407,13 +2041,13 @@
                       <h3>Shadows</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>The <span class="css-tag cc-attribute">shadow</span> attributes are set up in the custom styles inside <span class="css-tag cc-component">Global-Code</span> by using shadow generators or codes from Figma.<br></p>
+                      <p>The <span class="tag-label cc-attribute">shadow</span> attributes are set up in the custom styles inside <span class="tag-label cc-component">Global Code</span> by using shadow generators or codes from tools like Figma.<br></p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">shadow</div>
+                        <div class="tag-label cc-attribute">shadow</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3438,13 +2072,13 @@
                       <h3>Sections</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>Use the <span class="css-tag">section</span> class with its combo classes for all your sections to maintain consistency.</p>
+                      <p>Use the <span class="tag-label">section</span> class with its combo classes for all your sections to maintain consistency.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
+                        <div class="tag-label">section</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3463,8 +2097,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-bg-surface</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-bg-surface</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3481,8 +2115,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-top-0</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-top-0</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3501,8 +2135,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-bottom-0</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-bottom-0</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3521,8 +2155,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-top-sm</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-top-sm</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3541,8 +2175,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-bottom-sm</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-bottom-sm</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3561,8 +2195,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-top-bottom-sm</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-top-bottom-sm</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3581,8 +2215,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-top-lg</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-top-lg</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3601,8 +2235,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">section</div>
-                        <div class="css-tag">cc-bottom-lg</div>
+                        <div class="tag-label">section</div>
+                        <div class="tag-label">cc-bottom-lg</div>
                       </div>
                     </div>
                     <div class="card cc-p-0">
@@ -3625,13 +2259,13 @@
                       <h3>Containers</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>Sections usually need a <span class="css-tag">container</span> to keep layouts from becoming too wide. Containers also control the horizontal padding in order to maintain the same spacing throughout your project.</p>
+                      <p>Sections usually need a <span class="tag-label">container</span> to keep layouts from becoming too wide. Containers also control the horizontal padding in order to maintain the same spacing throughout your project.</p>
                     </div>
                   </div>
                   <div class="sg-element cc-block">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">container</div>
+                        <div class="tag-label">container</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -3652,8 +2286,8 @@
                   <div class="sg-element cc-block">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">container</div>
-                        <div class="css-tag">cc-10c</div>
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-10c</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -3674,8 +2308,8 @@
                   <div class="sg-element cc-block">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">container</div>
-                        <div class="css-tag">cc-8c</div>
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-8c</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -3696,8 +2330,8 @@
                   <div class="sg-element cc-block">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">container</div>
-                        <div class="css-tag">cc-6c</div>
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-6c</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -3718,8 +2352,8 @@
                   <div class="sg-element cc-block">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">container</div>
-                        <div class="css-tag">cc-full</div>
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-full</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
@@ -3744,46 +2378,46 @@
                       <h3>Wrappers</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p><strong>Heading</strong> and <strong>Paragraph</strong> elements are typically wrapped with <span class="css-tag">title-wrapper</span> or <span class="css-tag">text-wrapper</span> to access combo classes for styling.</p>
+                      <p><strong>Heading</strong> and <strong>Paragraph</strong> elements are typically wrapped with <span class="tag-label">title-wrapper</span> or <span class="tag-label">text-wrapper</span> to access combo classes for styling.</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">title-wrapper</div>
+                        <div class="tag-label">title-wrapper</div>
                       </div>
                     </div>
                     <div class="block">
                       <div class="title-wrapper cc-xl">
-                        <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-xl</span></h6>
+                        <h6>Heading inside a title-wrapper <span class="tag-label">cc-xl</span></h6>
                       </div>
                       <div class="title-wrapper cc-lg">
-                        <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-lg</span></h6>
+                        <h6>Heading inside a title-wrapper <span class="tag-label">cc-lg</span></h6>
                       </div>
                       <div class="title-wrapper">
                         <h6>Heading inside a title-wrapper</h6>
                       </div>
                       <div class="title-wrapper cc-sm">
-                        <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-sm</span></h6>
+                        <h6>Heading inside a title-wrapper <span class="tag-label">cc-sm</span></h6>
                       </div>
                       <div class="title-wrapper cc-xs">
-                        <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-xs</span></h6>
+                        <h6>Heading inside a title-wrapper <span class="tag-label">cc-xs</span></h6>
                       </div>
                       <div class="title-wrapper cc-xxs">
-                        <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-2xs</span></h6>
+                        <h6>Heading inside a title-wrapper <span class="tag-label">cc-2xs</span></h6>
                       </div>
                       <div class="title-wrapper cc-0">
-                        <h6>Heading inside a title-wrapper <span font-size="sm" class="css-tag">cc-0</span></h6>
+                        <h6>Heading inside a title-wrapper <span class="tag-label">cc-0</span></h6>
                       </div>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">title-wrapper</div>
+                        <div class="tag-label">title-wrapper</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-align-center</div>
+                        <div class="tag-label">cc-align-center</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3803,11 +2437,11 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-wrapper</div>
+                        <div class="tag-label">text-wrapper</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-max-40rem</div>
-                        <div class="css-tag">cc-max-20rem</div>
+                        <div class="tag-label">cc-max-40rem</div>
+                        <div class="tag-label">cc-max-20rem</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3832,10 +2466,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">text-wrapper</div>
+                        <div class="tag-label">text-wrapper</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-align-center</div>
+                        <div class="tag-label">cc-align-center</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3847,10 +2481,10 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button-wrapper</div>
+                        <div class="tag-label">button-wrapper</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-center</div>
+                        <div class="tag-label">cc-center</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3875,19 +2509,19 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">image-wrapper</div>
+                        <div class="tag-label">image-wrapper</div>
                       </div>
-                      <div class="tag-wrapper"><span class="css-tag">image</span> <span class="css-tag">cc-1x1</span> / <span class="css-tag">cc-4x3</span> / <span class="css-tag">cc16x9</span></div>
+                      <div class="tag-wrapper"><span class="tag-label">image</span> <span class="tag-label">cc-1x1</span> / <span class="tag-label">cc-4x3</span> / <span class="tag-label">cc16x9</span></div>
                     </div>
                     <div class="block">
                       <div style="gap: 1rem;" class="flex-wrap-cols">
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-1x1"></div>
                         </div>
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-4x3"></div>
                         </div>
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-16x9"></div>
                         </div>
                       </div>
@@ -3896,13 +2530,26 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">image-wrapper</div>
+                        <div class="tag-label">image-wrapper</div>
                       </div>
-                      <div class="tag-wrapper"><span class="css-tag">image</span> <span class="css-tag">cc-contain</span></div>
+                      <div class="tag-wrapper"><span class="tag-label">image</span> <span class="tag-label">cc-contain</span></div>
                     </div>
                     <div class="block">
-                      <div class="sg-50p">
+                      <div class="col cc-span-4">
                         <div class="image-wrapper"><img src="https://cnd-host.pages.dev/files/s2/UBqvbEUbEPM-unsplash.webp" loading="lazy" alt="image" class="image cc-contain"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">absolute-full-wrapper</div>
+                        <div class="tag-label">absolute-cover-image</div>
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div style="position: relative; height: 10rem;" class="card cc-p-0">
+                        <div class="absolute-full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, 94vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" class="absolute-cover-image"></div>
                       </div>
                     </div>
                   </div>
@@ -3919,7 +2566,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-component">Spacer</div>
+                        <div class="tag-label cc-component">Spacer</div>
                       </div>
                       <div class="sg-note">input height values in properties for different breakpoints</div>
                     </div>
@@ -3950,7 +2597,7 @@
                     <h2>Utilities</h2>
                   </div>
                   <div class="text-wrapper cc-max-40rem">
-                    <p><span class="css-tag">u-</span> prefix to separate them from base styles. They can work on their own, but usually you use them to modify a base element, like a <span class="css-tag">title-wrapper</span>.</p>
+                    <p><span class="tag-label">u-</span> prefix to separate them from base styles. They can work on their own, but usually you use them to modify a base element, like a <span class="tag-label">title-wrapper</span>.</p>
                   </div>
                 </div>
                 <div id="text-utilities" class="block">
@@ -3963,7 +2610,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-base</div>
+                          <div class="tag-label">u-text-base</div>
                         </div>
                       </div>
                       <div style="padding: 1rem; background: #fff;" class="block">
@@ -3973,7 +2620,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-mu</div>
+                          <div class="tag-label">u-text-mu</div>
                         </div>
                       </div>
                       <div style="padding: 1rem; background: #fff;" class="block">
@@ -3983,17 +2630,17 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-brand</div>
+                          <div class="tag-label">u-text-primary</div>
                         </div>
                       </div>
                       <div style="padding: 1rem; background: #fff;" class="block">
-                        <h5 class="u-text-brand">Lorem ipsum dolor sit amet.</h5>
+                        <h5 class="u-text-primary">Lorem ipsum dolor sit amet.</h5>
                       </div>
                     </div>
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-stroke</div>
+                          <div class="tag-label">u-text-stroke</div>
                         </div>
                       </div>
                       <div style="padding: 1rem; background: #fff;" class="block">
@@ -4013,7 +2660,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-font-regular</div>
+                          <div class="tag-label">u-font-regular</div>
                         </div>
                       </div>
                       <h4 class="u-font-regular">Lorem ipsum dolor sit amet.</h4>
@@ -4021,7 +2668,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-font-bold</div>
+                          <div class="tag-label">u-font-bold</div>
                         </div>
                       </div>
                       <h4 class="u-font-bold">Lorem ipsum dolor sit amet.</h4>
@@ -4029,7 +2676,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-font-italic</div>
+                          <div class="tag-label">u-font-italic</div>
                         </div>
                       </div>
                       <h4 class="u-font-italic">Lorem ipsum dolor sit amet.</h4>
@@ -4047,7 +2694,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-left</div>
+                          <div class="tag-label">u-text-left</div>
                         </div>
                       </div>
                       <div class="block">
@@ -4057,7 +2704,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-center</div>
+                          <div class="tag-label">u-text-center</div>
                         </div>
                       </div>
                       <div class="block">
@@ -4067,7 +2714,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">u-text-right</div>
+                          <div class="tag-label">u-text-right</div>
                         </div>
                       </div>
                       <div class="block">
@@ -4087,9 +2734,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">
-                            <div>u-text-underline</div>
-                          </div>
+                          <div class="tag-label">u-text-underline</div>
                         </div>
                       </div>
                       <h5 class="u-text-underline">Lorem ipsum dolor sit amet.</h5>
@@ -4097,9 +2742,7 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">
-                            <div>u-text-strike</div>
-                          </div>
+                          <div class="tag-label">u-text-strike</div>
                         </div>
                       </div>
                       <h5 class="u-text-strike">Lorem ipsum dolor sit amet.</h5>
@@ -4107,39 +2750,17 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">
-                            <div>u-text-uppercase</div>
-                          </div>
+                          <div class="tag-label">u-text-no-deco</div>
                         </div>
                       </div>
-                      <h5 class="u-text-uppercase">Lorem ipsum dolor sit amet.</h5>
+                      <h5>
+                        <a href="#" class="u-text-no-deco">This is a link</a> dolor sit amet.
+                      </h5>
                     </div>
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag">
-                            <div>u-text-lowercase</div>
-                          </div>
-                        </div>
-                      </div>
-                      <h5 class="u-text-lowercase">Lorem ipsum dolor sit amet.</h5>
-                    </div>
-                    <div class="sg-element">
-                      <div class="sg-tags">
-                        <div class="tag-wrapper">
-                          <div class="css-tag">
-                            <div>u-text-capitalize</div>
-                          </div>
-                        </div>
-                      </div>
-                      <h5 class="u-text-capitalize">Lorem ipsum dolor sit amet.</h5>
-                    </div>
-                    <div class="sg-element">
-                      <div class="sg-tags">
-                        <div class="tag-wrapper">
-                          <div class="css-tag">
-                            <div>u-text-nowrap</div>
-                          </div>
+                          <div class="tag-label">u-text-nowrap<br></div>
                         </div>
                       </div>
                       <h5 class="u-text-nowrap">Lorem ipsum</h5>
@@ -4147,8 +2768,8 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag cc-attribute">truncate</div>
-                          <div class="sg-note">wrapped with <span class="css-tag">block</span> <span class="css-tag">cc-full</span> in the example as it needs a wrapper with width value</div>
+                          <div class="tag-label cc-attribute">truncate</div>
+                          <div class="sg-note">wrapped with <span class="tag-label">block</span> <span class="tag-label">cc-full</span> in the example as it needs a wrapper with width value</div>
                         </div>
                       </div>
                       <div class="block">
@@ -4162,10 +2783,10 @@
                     <div class="sg-element">
                       <div class="sg-tags">
                         <div class="tag-wrapper">
-                          <div class="css-tag cc-attribute">line-clamp</div>
+                          <div class="tag-label cc-attribute">line-clamp</div>
                         </div>
                         <div class="tag-wrapper">
-                          <div class="css-tag cc-attribute">line-clamp=&quot;3&quot;</div>
+                          <div class="tag-label cc-attribute">line-clamp=&quot;3&quot;</div>
                         </div>
                         <div class="sg-note">more about <a href="https://css-tricks.com/line-clampin/" target="_blank">truncating</a>
                         </div>
@@ -4190,7 +2811,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">u-bg-base</div>
+                        <div class="tag-label">u-bg-base</div>
                       </div>
                       <div class="sg-note">background and text styles are applied</div>
                     </div>
@@ -4204,14 +2825,14 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">u-bg-brand</div>
+                        <div class="tag-label">u-bg-primary</div>
                       </div>
                     </div>
                     <div gap="1-1" flex="col" class="block">
-                      <div style="padding: 1rem;" class="u-bg-brand">
+                      <div style="padding: 1rem;" class="u-bg-primary">
                         <h5>Lorem ipsum dolor sit amet.</h5>
                       </div>
-                      <div style="padding: 1rem;" class="u-bg-brand">
+                      <div style="padding: 1rem;" class="u-bg-primary">
                         <h5>Lorem ipsum dolor sit amet.</h5>
                         <p style="color: var(--colors--accent);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros elementum tristique.</p>
                         <div style="padding: 1rem; margin-top: 1rem;" class="u-bg-surface">
@@ -4231,14 +2852,14 @@
                   <div pb="1" pt="1" class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">u-light-mode</div>
+                        <div class="tag-label">u-light-mode</div>
                       </div>
                       <div class="sg-note">&quot;Light mode (Base mode)&quot; styles will be applied.</div>
                     </div>
                     <div class="block">
                       <div class="u-light-mode">
                         <div style="padding: 1rem;" events="none" class="u-bg-surface">
-                          <h5>This one is special.</h5>
+                          <h5>Applying Light mode (Base mode)</h5>
                           <div>This is some text inside of a div block.</div>
                         </div>
                       </div>
@@ -4247,14 +2868,14 @@
                   <div pb="1" pt="1" class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">u-dark-mode</div>
+                        <div class="tag-label">u-dark-mode</div>
                       </div>
                       <div class="sg-note">&quot;Dark mode&quot; styles will be applied.</div>
                     </div>
                     <div class="block">
                       <div class="u-dark-mode">
                         <div style="padding: 1rem;" events="none" class="u-bg-surface">
-                          <h5>This one is special.</h5>
+                          <h5>Applying Dark mode</h5>
                           <div>This is some text inside of a div block.</div>
                         </div>
                       </div>
@@ -4277,7 +2898,7 @@
                       </div>
                       <div no-scrollbar="" class="sg-grid-scroll">
                         <div class="card">
-                          <div class="css-tag">u-hflex-left-top</div>
+                          <div class="tag-label">u-hflex-left-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-top">
                               <div class="sg-flex-dot"></div>
@@ -4285,7 +2906,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-left-center</div>
+                          <div class="tag-label">u-hflex-left-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-center">
                               <div class="sg-flex-dot"></div>
@@ -4293,7 +2914,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-left-bottom</div>
+                          <div class="tag-label">u-hflex-left-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4301,7 +2922,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-left-stretch</div>
+                          <div class="tag-label">u-hflex-left-stretch</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-left-stretch">
                               <div class="sg-flex-dot"></div>
@@ -4309,7 +2930,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-center-top</div>
+                          <div class="tag-label">u-hflex-center-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-top">
                               <div class="sg-flex-dot"></div>
@@ -4317,7 +2938,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-center-center</div>
+                          <div class="tag-label">u-hflex-center-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-center">
                               <div class="sg-flex-dot"></div>
@@ -4325,7 +2946,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-center-bottom</div>
+                          <div class="tag-label">u-hflex-center-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4333,7 +2954,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-center-stretch</div>
+                          <div class="tag-label">u-hflex-center-stretch</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-center-stretch">
                               <div class="sg-flex-dot"></div>
@@ -4341,7 +2962,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-right-top</div>
+                          <div class="tag-label">u-hflex-right-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-top">
                               <div class="sg-flex-dot"></div>
@@ -4349,7 +2970,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-right-center</div>
+                          <div class="tag-label">u-hflex-right-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-center">
                               <div class="sg-flex-dot"></div>
@@ -4357,7 +2978,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-right-bottom</div>
+                          <div class="tag-label">u-hflex-right-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4365,7 +2986,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-right-stretch</div>
+                          <div class="tag-label">u-hflex-right-stretch</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-right-stretch">
                               <div class="sg-flex-dot"></div>
@@ -4373,7 +2994,7 @@
                           </div>
                         </div>
                         <div class="css">
-                          <div class="css-tag">u-hflex-between-top</div>
+                          <div class="tag-label">u-hflex-between-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-top">
                               <div class="sg-flex-dot"></div>
@@ -4382,7 +3003,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-between-center</div>
+                          <div class="tag-label">u-hflex-between-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-center">
                               <div class="sg-flex-dot"></div>
@@ -4391,7 +3012,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-between-bottom</div>
+                          <div class="tag-label">u-hflex-between-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4400,7 +3021,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-hflex-between-stretch</div>
+                          <div class="tag-label">u-hflex-between-stretch</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-hflex-between-stretch">
                               <div class="sg-flex-dot"></div>
@@ -4416,7 +3037,7 @@
                       </div>
                       <div no-scrollbar="" class="sg-grid-scroll">
                         <div class="card">
-                          <div class="css-tag">u-vflex-left-top</div>
+                          <div class="tag-label">u-vflex-left-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-top">
                               <div class="sg-flex-dot"></div>
@@ -4424,7 +3045,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-left-center</div>
+                          <div class="tag-label">u-vflex-left-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-center">
                               <div class="sg-flex-dot"></div>
@@ -4432,7 +3053,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-left-bottom</div>
+                          <div class="tag-label">u-vflex-left-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4440,7 +3061,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-left-between</div>
+                          <div class="tag-label">u-vflex-left-between</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-left-between">
                               <div class="sg-flex-dot"></div>
@@ -4449,7 +3070,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-center-top</div>
+                          <div class="tag-label">u-vflex-center-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-top">
                               <div class="sg-flex-dot"></div>
@@ -4457,7 +3078,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-center-center</div>
+                          <div class="tag-label">u-vflex-center-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-center">
                               <div class="sg-flex-dot"></div>
@@ -4465,7 +3086,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-center-bottom</div>
+                          <div class="tag-label">u-vflex-center-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4473,7 +3094,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-center-between</div>
+                          <div class="tag-label">u-vflex-center-between</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-center-between">
                               <div class="sg-flex-dot"></div>
@@ -4482,7 +3103,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-right-top</div>
+                          <div class="tag-label">u-vflex-right-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-top">
                               <div class="sg-flex-dot"></div>
@@ -4490,7 +3111,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-right-center</div>
+                          <div class="tag-label">u-vflex-right-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-center">
                               <div class="sg-flex-dot"></div>
@@ -4498,7 +3119,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-right-bottom</div>
+                          <div class="tag-label">u-vflex-right-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4506,7 +3127,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-right-between</div>
+                          <div class="tag-label">u-vflex-right-between</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-right-between">
                               <div class="sg-flex-dot"></div>
@@ -4515,7 +3136,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-stretch-top</div>
+                          <div class="tag-label">u-vflex-stretch-top</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-top">
                               <div class="sg-flex-dot"></div>
@@ -4523,7 +3144,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-stretch-center</div>
+                          <div class="tag-label">u-vflex-stretch-center</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-center">
                               <div class="sg-flex-dot"></div>
@@ -4531,7 +3152,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-stretch-bottom</div>
+                          <div class="tag-label">u-vflex-stretch-bottom</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-bottom">
                               <div class="sg-flex-dot"></div>
@@ -4539,7 +3160,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-stretch-between</div>
+                          <div class="tag-label">u-vflex-stretch-between</div>
                           <div class="sg-flex-wrapper">
                             <div style="gap: 26cqw; height: 100%;" class="u-vflex-stretch-between">
                               <div class="sg-flex-dot"></div>
@@ -4555,7 +3176,7 @@
                       </div>
                       <div no-scrollbar="" class="sg-grid-scroll">
                         <div class="card">
-                          <div class="css-tag">u-hflex-wrap</div>
+                          <div class="tag-label">u-hflex-wrap</div>
                           <div class="sg-flex-wrapper">
                             <div style="display: flex; gap: 26cqw; height: 100%;" class="u-hflex-wrap">
                               <div class="sg-flex-dot"></div>
@@ -4566,7 +3187,7 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-vflex-wrap</div>
+                          <div class="tag-label">u-vflex-wrap</div>
                           <div class="sg-flex-wrapper">
                             <div style="display: flex; gap: 26cqw; height: 100%;" class="u-vflex-wrap">
                               <div class="sg-flex-dot"></div>
@@ -4576,19 +3197,19 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-flex-shrink</div>
+                          <div class="tag-label">u-flex-shrink</div>
                           <div class="sg-flex-wrapper">
                             <div style="display: flex; gap: 26cqw; height: 100%;" class="u-flex-shrink"></div>
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-flex-grow</div>
+                          <div class="tag-label">u-flex-grow</div>
                           <div class="sg-flex-wrapper">
                             <div style="display: flex; gap: 26cqw; height: 100%;" class="u-flex-grow"></div>
                           </div>
                         </div>
                         <div class="card">
-                          <div class="css-tag">u-flex-noshrink</div>
+                          <div class="tag-label">u-flex-noshrink</div>
                           <div class="sg-flex-wrapper">
                             <div style="display: flex; gap: 26cqw; height: 100%;" class="u-flex-noshrink"></div>
                           </div>
@@ -4609,7 +3230,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">
+                        <div class="tag-label">
                           <div>u-hide</div>
                         </div>
                       </div>
@@ -4621,7 +3242,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">
+                        <div class="tag-label">
                           <div>u-hide_md<br></div>
                         </div>
                       </div>
@@ -4635,7 +3256,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">
+                        <div class="tag-label">
                           <div>u-hide_sm</div>
                         </div>
                       </div>
@@ -4649,7 +3270,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">
+                        <div class="tag-label">
                           <div>u-hide_xs</div>
                         </div>
                       </div>
@@ -4663,7 +3284,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">
+                        <div class="tag-label">
                           <div>u-align-center</div>
                         </div>
                       </div>
@@ -4671,38 +3292,6 @@
                     <div flex="row" class="block">
                       <div class="u-align-center">
                         <div events="none" class="sg-square"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="css-tag">u-height-100vh</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">u-height-100dvh</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="css-tag">u-height-100svh</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div class="cols-layout cc-non-responsive">
-                        <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
-                          <div stroke="" class="u-bg-pattern">
-                            <div class="u-height-100vh">100vh</div>
-                          </div>
-                        </div>
-                        <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
-                          <div stroke="" class="u-bg-pattern">
-                            <div class="u-height-100dvh">100dvh</div>
-                          </div>
-                        </div>
-                        <div style="width: calc((100% - 2rem) / 3);" class="col cc-p-0">
-                          <div stroke="" class="u-bg-pattern">
-                            <div class="u-height-100svh">100svh</div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -4721,27 +3310,28 @@
           <div class="sg-group">
             <div no-scrollbar="" class="sg-grid-scroll cc-1fr">
               <div class="u-vflex-left-top">
-                <div style="display: flex; flex-direction: row; gap: 4rem;" class="block">
-                  <div class="col cc-6c">
+                <div style="gap: 4rem;" class="u-hflex-left-top">
+                  <div class="sg-richtext-demo">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">richtext</div>
+                        <div class="tag-label">richtext</div>
                       </div>
+                      <div class="sg-note">default class to style rich text<br></div>
                     </div>
                   </div>
-                  <div class="col cc-6c">
+                  <div class="sg-richtext-demo">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">richtext</div>
-                        <div class="css-tag">cc-richtext-lg</div>
+                        <div class="tag-label">richtext</div>
+                        <div class="tag-label">cc-richtext-lg</div>
                       </div>
-                      <div class="sg-note">Adding combo class to rich text elements is a bit tricky. You need to create and add styles to a combo class first.</div>
+                      <div class="sg-note">Adding combo class to rich text elements can be tricky. You have to create and add styles to a combo class first.</div>
                     </div>
                   </div>
-                  <div class="col cc-6c">
+                  <div class="sg-richtext-demo">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">richtext-list</div>
+                        <div class="tag-label">richtext-list</div>
                       </div>
                       <div class="sg-note">
                         <a href="https://atomiks.github.io/tippyjs/" target="_blank">tippy.js</a> is used for the tooltips function
@@ -4749,8 +3339,8 @@
                     </div>
                   </div>
                 </div>
-                <div style="display: flex; flex-direction: row; gap: 4rem;" class="block">
-                  <div class="col cc-6c">
+                <div style="gap: 4rem;" class="u-hflex-left-top">
+                  <div class="sg-richtext-demo cc-scrollable">
                     <div class="richtext w-richtext">
                       <h1>Heading 1</h1>
                       <h2>Heading 2</h2>
@@ -4758,13 +3348,16 @@
                       <h4>Heading 4</h4>
                       <h5>Heading 5</h5>
                       <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <code>varius</code> enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                      <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
+                      <p>
+                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
+                      </p>
                       <p>Styling lists:</p>
                       <ul role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
+                        <li>Lorem ipsum dolor sit amet. <ul role="list">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
@@ -4780,18 +3373,16 @@
                       <ol start="" role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
                       </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <h5>This is a heading with <sup>sup</sup> and <sub>sub</sub> for size checking.</h5>
-                      <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur <em>adipiscing</em> elit. Suspendisse varius enim in eros elementum tristique. Ut enim ad Minim Veniam<sup>TM</sup>, quis nostrud<sub>28</sub> exercitation<sup>ullamco laboris</sup> nisi<sub>ut aliquip</sub> ex ea commodo consequat. Duis<sub>aute</sub>, irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit <code>c</code> amet, <code>consectetur</code> adipiscing elit, sed do eiusmod tempor incididunt utabore. <code>This is &lt;code&gt; inside some content: Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p>‍<code>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                      <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                      <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
+                      <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
+                      <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                         <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel"></div>
                       </figure>
@@ -4830,7 +3421,6 @@
                         <figcaption>Align to right and also have a caption.</figcaption>
                       </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>‍</p>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -4853,7 +3443,7 @@
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
-                  <div class="col cc-6c">
+                  <div class="sg-richtext-demo cc-scrollable">
                     <div class="richtext cc-richtext-lg w-richtext">
                       <h1>Heading 1</h1>
                       <h2>Heading 2</h2>
@@ -4861,13 +3451,16 @@
                       <h4>Heading 4</h4>
                       <h5>Heading 5</h5>
                       <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <code>varius</code> enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                      <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
+                      <p>
+                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
+                      </p>
                       <p>Styling lists:</p>
                       <ul role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
+                        <li>Lorem ipsum dolor sit amet. <ul role="list">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
@@ -4883,18 +3476,16 @@
                       <ol start="" role="list">
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
                       </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <h5>This is a heading with <sup>sup</sup> and <sub>sub</sub> for size checking.</h5>
-                      <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur <em>adipiscing</em> elit. Suspendisse varius enim in eros elementum tristique. Ut enim ad Minim Veniam<sup>TM</sup>, quis nostrud<sub>28</sub> exercitation<sup>ullamco laboris</sup> nisi<sub>ut aliquip</sub> ex ea commodo consequat. Duis<sub>aute</sub>, irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit <code>c</code> amet, <code>consectetur</code> adipiscing elit, sed do eiusmod tempor incididunt utabore. <code>This is &lt;code&gt; inside some content: Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p>‍<code>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                      <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                      <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
+                      <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
+                      <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                         <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel"></div>
                       </figure>
@@ -4933,7 +3524,6 @@
                         <figcaption>Align to right and also have a caption.</figcaption>
                       </figure>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>‍</p>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -4956,7 +3546,7 @@
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
-                  <div class="col cc-6c">
+                  <div class="sg-richtext-demo cc-scrollable">
                     <div class="richtext-list w-richtext">
                       <h3>List of features</h3>
                       <h4>List of features</h4>
@@ -5004,22 +3594,25 @@
       </section>
     </main>
   </div>
-  <a href="#top" opacity="0-events-none" aria-label="" class="scroll-to-top">
+  <a href="#top" style="opacity: 0;" aria-label="Scroll to top" class="scroll-to-top">
     <div class="scroll-to-top_icon w-embed"><svg width="100%" height="100%" viewbox="0 0 90 45" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M45.0002 0.335449L87.7337 34.3031C90.3278 36.365 90.7591 40.1394 88.6972 42.7335C86.6352 45.3275 82.8608 45.7589 80.2668 43.697L45.0002 15.6646L9.7337 43.697C7.13965 45.7589 3.36523 45.3275 1.30329 42.7335C-0.758642 40.1394 -0.32728 36.365 2.26677 34.3031L45.0002 0.335449Z" fill="currentColor"></path>
       </svg></div>
     <div class="js w-embed w-script"><!--  Hiding and Showing of the .scroll-to-top Element  -->
       <script>
           var scrollTargets = document.getElementsByClassName("scroll-to-top");
-          if (scrollTargets.length > 0) { // only add scroll listener if elements exist
+          // only add scroll listener if elements exist
+          if (scrollTargets.length > 0) {
             var scrollFunc = function() {
               var y = window.scrollY;
               var threshold = 1.25 * window.innerHeight;
               for (var i = 0; i < scrollTargets.length; i++) {
                 if (y >= threshold) {
-                  scrollTargets[i].setAttribute("opacity", "1");
+                  scrollTargets[i].style.opacity = "1";
+                  scrollTargets[i].style.pointerEvents = "auto";
                 } else {
-                  scrollTargets[i].setAttribute("opacity", "0-events-none");
+                  scrollTargets[i].style.opacity = "0";
+                  scrollTargets[i].style.pointerEvents = "none";
                 }
               }
             };

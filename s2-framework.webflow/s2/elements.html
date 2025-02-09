@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 04 2025 09:54:28 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Feb 09 2025 05:32:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -69,7 +69,7 @@
     </div>
     <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
       <!--  For Style Guide only, you don't need such scripts for your site.  -->
-      <!--  Hide Cookie Concent in iFrames  -->
+      <!--  Hide Cookie Consent in iFrames  -->
       <script>
           if (window.self !== window.top) {
             document.addEventListener("DOMContentLoaded", function() {
@@ -117,9 +117,9 @@
     </div>
   </div>
   <div id="top" class="page">
-    <div class="global-code">
-      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme) ASAP  -->
-        <!--  The Mode Switching script is placed in custom "Footer code".  -->
+    <div class="code">
+      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme)  -->
+        <!--  The Mode Switching script is placed in global custom "Footer code".  -->
         <script>
             (function() {
               try {
@@ -158,1389 +158,10 @@
             })();
           </script>
       </div>
-      <div code="css" class="framework w-embed">
-        <style>
-            /* ---------------- */
-            /* -- Base Setup -- */
-            /* ---------------- */
-            /* smoothing and fluid responsive */
-            body {
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              text-rendering: optimizeLegibility;
-            }
-            html {
-              font-size: 1.125rem;
-            }
-            @media screen and (max-width:1920px) {
-              html {
-                font-size: 1.125rem;
-              }
-            }
-            @media screen and (max-width:1440px) {
-              html {
-                font-size: calc(0.937695rem + 0.208vw);
-              }
-            }
-            @media screen and (max-width:479px) {
-              html {
-                font-size: 1rem;
-              }
-            }
-            @media screen and (max-width:319px) {
-              html {
-                font-size: calc(0.749607rem + 0.629vw);
-              }
-            }
-            /* basics */
-            h1,
-            h2,
-            h3 {
-              text-wrap: balance;
-            }
-            img,
-            svg,
-            video,
-            audio,
-            canvas,
-            iframe,
-            embed,
-            object {
-              display: block;
-              vertical-align: middle;
-            }
-            img,
-            video {
-              height: auto;
-            }
-            select {
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              appearance: none;
-            }
-            nav a:not(p a),
-            footer nav li a,
-            .footer nav li a {
-              text-decoration: none;
-            }
-            .w-form {
-              margin-bottom: 0;
-            }
-            .w-input,
-            .w-select {
-              color: inherit;
-              font-size: inherit;
-            }
-            .w-richtext> :not(div):first-child,
-            .w-richtext>div:first-child> :first-child {
-              margin-top: 0 !important;
-            }
-            .w-richtext> :last-child,
-            .w-richtext ol li:last-child,
-            .w-richtext ul li:last-child {
-              margin-bottom: 0 !important;
-            }
-            .w-richtext figure div {
-              display: block !important;
-            }
-            .w-richtext figure.w-richtext-align-floatleft,
-            .w-richtext figure.w-richtext-align-floatright {
-              margin-block: 0.35em 0.05em;
-            }
-            .spacer * {
-              padding: 0;
-            }
-            /* accessibility: focus styles */
-            html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
-              outline: var(--_sizes---thickness--outline) solid var(--colors--focus);
-              outline-offset: 0.188rem;
-            }
-            section:focus,
-            .section:focus,
-            .container:focus {
-              outline: none;
-            }
-            [tabindex]:not([tabindex="-1"]):focus-visible,
-            [aria-label]:not(input):not(textarea):not(select):focus-visible,
-            input[type="submit"]:focus-visible,
-            input[type="file"]:focus-visible {
-              outline: var(--_sizes---thickness--outline-bold) solid var(--colors--focus);
-              outline-offset: 3px;
-            }
-            [focus-outline="bold"]:focus-visible {
-              outline-width: var(--_sizes---thickness--outline-bold) !important;
-            }
-            [focus-outline="offset-0"]:focus-visible {
-              outline-offset: 0 !important;
-            }
-            [focus-outline="offset-far"]:focus-visible {
-              outline-offset: 0.375rem !important;
-            }
-            [focus-outline="none"]:focus,
-            [focus-outline="none"]:focus-visible {
-              outline: none !important;
-            }
-            [input-highlight="none"] {
-              -webkit-appearance: none;
-              appearance: none;
-              outline: none;
-            }
-            [input-highlight="none"]:focus {
-              border: 0 rgba(0, 0, 0, 0) !important;
-            }
-            /* accessibility: hidden for visual users, readable for screen readers */
-            [visually-hidden="true"],
-            .visually-hidden {
-              position: absolute;
-              clip: rect(1px, 1px, 1px, 1px);
-              -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-              clip-path: inset(0px 0px 99.9% 99.9%);
-              overflow: hidden;
-              height: 1px;
-              width: 1px;
-              padding: 0;
-              border: 0;
-            }
-            /* remove tab highlight on touch devices */
-            * {
-              -webkit-tap-highlight-color: transparent;
-            }
-            /* ------------------- */
-            /* -- S2 Attributes -- */
-            /* ------------------- */
-            /* basics */
-            [hidden],
-            [hide],
-            .u-hide {
-              display: none;
-            }
-            [disabled] {
-              filter: saturate(0%);
-              cursor: default;
-              pointer-events: none;
-            }
-            [code],
-            .css,
-            .js {
-              display: none !important;
-            }
-            [user-select="none"] {
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-            }
-            [events="none"] {
-              pointer-events: none;
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-            }
-            [opacity="1"] {
-              opacity: 1;
-            }
-            [opacity="0.9"] {
-              opacity: 0.9;
-            }
-            [opacity="0.8"] {
-              opacity: 0.8;
-            }
-            [opacity="0.7"] {
-              opacity: 0.7;
-            }
-            [opacity="0.6"] {
-              opacity: 0.6;
-            }
-            [opacity="0.5"] {
-              opacity: 0.5;
-            }
-            [opacity="0.4"] {
-              opacity: 0.4;
-            }
-            [opacity="0.3"] {
-              opacity: 0.3;
-            }
-            [opacity="0.2"] {
-              opacity: 0.2;
-            }
-            [opacity="0.1"] {
-              opacity: 0.1;
-            }
-            [opacity="0"] {
-              opacity: 0;
-            }
-            [opacity="0-events-none"] {
-              opacity: 0;
-              pointer-events: none;
-              -webkit-user-select: none;
-              user-select: none;
-            }
-            [radius="0"] {
-              border-radius: 0;
-            }
-            [radius="1"] {
-              border-radius: 1rem;
-            }
-            [radius="2"] {
-              border-radius: 2rem;
-            }
-            [radius="3"] {
-              border-radius: 3rem;
-            }
-            [radius="xs"] {
-              border-radius: var(--_sizes---radius--extra-small);
-            }
-            [radius="sm"] {
-              border-radius: var(--_sizes---radius--small);
-            }
-            [radius="base"] {
-              border-radius: var(--_sizes---radius--base);
-            }
-            [radius="lg"] {
-              border-radius: var(--_sizes---radius--large);
-            }
-            [radius="xl"] {
-              border-radius: var(--_sizes---radius--extra-large);
-            }
-            [radius="rounded"] {
-              border-radius: var(--_sizes---radius--rounded);
-            }
-            [radius="card"] {
-              border-radius: var(--_sizes---radius--card);
-            }
-            [radius="button"] {
-              border-radius: var(--_sizes---button--radius);
-            }
-            [object-fit="cover"] {
-              object-fit: cover;
-            }
-            /* typography */
-            [font-size="xs"] {
-              font-size: var(--_text---font-size--extra-small);
-              line-height: 1.4;
-            }
-            /* same as .text-xs */
-            [font-size="sm"] {
-              font-size: var(--_text---font-size--small);
-              line-height: 1.4;
-            }
-            /* same as .text-sm */
-            [font-size="base"] {
-              font-size: var(--_text---font-size--base);
-              line-height: 1.5;
-            }
-            /* same as .text-base */
-            [font-size="lg"] {
-              font-size: var(--_text---font-size--large);
-              line-height: 1.5;
-            }
-            /* same as .text-lg */
-            [font-size="xl"] {
-              font-size: var(--_text---font-size--extra-large);
-              line-height: 1.5;
-            }
-            /* same as .text-xl */
-            [font="normal"] {
-              font-weight: 400;
-            }
-            [font="strong"] {
-              font-weight: 700;
-            }
-            [line-height="0"] {
-              line-height: 0;
-            }
-            [line-height="0.25"] {
-              line-height: 0.25;
-            }
-            [line-height="0.5"] {
-              line-height: 0.5;
-            }
-            [line-height="0.75"] {
-              line-height: 0.75;
-            }
-            [line-height="1"] {
-              line-height: 1;
-            }
-            [line-height="1.25"] {
-              line-height: 1.25;
-            }
-            [line-height="1.5"] {
-              line-height: 1.5;
-            }
-            [line-height="1.75"] {
-              line-height: 1.75;
-            }
-            [line-height="2"] {
-              line-height: 2;
-            }
-            [text-deco="underline"] {
-              text-decoration: underline;
-            }
-            [text-deco="none"],
-            [text-deco="none"] a,
-            a[text-deco="none"] {
-              text-decoration: none;
-            }
-            [text-align="center"] {
-              text-align: center;
-            }
-            [text-align="left"] {
-              text-align: left;
-            }
-            [text-align="right"] {
-              text-align: right;
-            }
-            [text-uppercase] {
-              text-transform: uppercase;
-            }
-            [text-capitalize] {
-              text-transform: capitalize;
-            }
-            [white-space="nowrap"] {
-              white-space: nowrap;
-            }
-            [truncate] {
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              overflow: hidden;
-            }
-            [line-clamp] {
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
-            }
-            [line-clamp],
-            [line-clamp="1"] {
-              -webkit-line-clamp: 1;
-            }
-            [line-clamp="2"] {
-              -webkit-line-clamp: 2;
-            }
-            [line-clamp="3"] {
-              -webkit-line-clamp: 3;
-            }
-            [line-clamp="4"] {
-              -webkit-line-clamp: 4;
-            }
-            [line-clamp="5"] {
-              -webkit-line-clamp: 5;
-            }
-            [line-clamp="6"] {
-              -webkit-line-clamp: 6;
-            }
-            [box-deco="clone"] {
-              box-decoration-break: clone;
-            }
-            [box-deco="slice"] {
-              box-decoration-break: slice;
-            }
-            [float="start"] {
-              float: inline-start;
-            }
-            [float="end"] {
-              float: inline-end;
-            }
-            [float="left"] {
-              float: left;
-              margin-right: 0.5ch;
-            }
-            [float="right"] {
-              float: right;
-              margin-left: 0.5ch;
-            }
-            [float="none"] {
-              float: none;
-            }
-            /* sizes, position, spacing related */
-            [width-is="auto"] {
-              width: auto;
-              min-width: auto;
-              max-width: none;
-            }
-            [width-is="100p"] {
-              width: 100%;
-              min-width: 100%;
-              max-width: 100%;
-            }
-            [width-is="100vw"] {
-              width: 100vw;
-              min-width: 100vw;
-              max-width: 100vw;
-            }
-            [width-is^="min"] {
-              width: auto;
-              max-width: none;
-            }
-            [width-is="min-1"] {
-              min-width: 1rem;
-            }
-            [width-is="min-2"] {
-              min-width: 2rem;
-            }
-            [width-is="min-3"] {
-              min-width: 3rem;
-            }
-            [width-is="min-4"] {
-              min-width: 4rem;
-            }
-            [width-is="min-5"] {
-              min-width: 5rem;
-            }
-            [width-is="min-6"] {
-              min-width: 6rem;
-            }
-            [height-is="auto"] {
-              height: auto;
-              min-height: auto;
-              max-height: none;
-            }
-            [height-is="100p"] {
-              height: 100%;
-              min-height: 100%;
-              max-height: 100%;
-            }
-            [height-is="100vh"] {
-              height: 100vh;
-              min-height: 100vh;
-              max-height: 100vh;
-            }
-            [height-is="100svh"] {
-              height: 100svh;
-              min-height: 100svh;
-              max-height: 100svh;
-            }
-            [height-is="100dvh"] {
-              height: 100vh;
-              min-height: 100vh;
-              max-height: 100vh;
-            }
-            @supports (height: 100dvh) {
-              [height-is="100dvh"] {
-                height: 100dvh;
-                min-height: 100dvh;
-                max-height: 100dvh;
-              }
-            }
-            [height-is="min-100p"] {
-              height: auto;
-              min-height: 100%;
-              max-height: none;
-            }
-            [height-is="min-100vh"] {
-              height: auto;
-              min-height: 100vh;
-              max-height: none;
-            }
-            [height-is="min-100svh"] {
-              height: auto;
-              min-height: 100vh;
-              max-height: none;
-            }
-            @supports (height: 100svh) {
-              [height-is="min-100svh"] {
-                min-height: 100svh;
-              }
-            }
-            [height-is^="min"] {
-              height: auto;
-              max-height: none;
-            }
-            [height-is="min-1"] {
-              min-height: 1rem;
-            }
-            [height-is="min-2"] {
-              min-height: 2rem;
-            }
-            [height-is="min-3"] {
-              min-height: 3rem;
-            }
-            [height-is="min-4"] {
-              min-height: 4rem;
-            }
-            [height-is="min-5"] {
-              min-height: 5rem;
-            }
-            [height-is="min-6"] {
-              min-height: 6rem;
-            }
-            [position="static"] {
-              position: static;
-            }
-            [position="relative"] {
-              position: relative;
-            }
-            [position="absolute"] {
-              position: absolute;
-            }
-            [z-index="0"] {
-              z-index: 0;
-            }
-            [z-index="1"] {
-              z-index: 1;
-            }
-            [z-index="-1"] {
-              z-index: -1;
-            }
-            [z-index="top"] {
-              z-index: 999999 !important;
-            }
-            [z-index="bottom"] {
-              z-index: -999999 !important;
-            }
-            [z-index="auto"] {
-              z-index: auto;
-            }
-            [p-0] {
-              padding: 0;
-            }
-            [p-1] {
-              padding: 1rem;
-            }
-            [p-2] {
-              padding: 2rem;
-            }
-            [p-3] {
-              padding: 3rem;
-            }
-            [m-0] {
-              margin: 0;
-            }
-            [m-1] {
-              margin: 1rem;
-            }
-            [m-2] {
-              margin: 2rem;
-            }
-            [m-3] {
-              margin: 3rem;
-            }
-            [pt="0"] {
-              padding-top: 0;
-            }
-            [pt="0.5"] {
-              padding-top: 0.5rem;
-            }
-            [pt="1"] {
-              padding-top: 1rem;
-            }
-            [pt="2"] {
-              padding-top: 2rem;
-            }
-            [pt="3"] {
-              padding-top: 3rem;
-            }
-            [pt="base"] {
-              padding-top: var(--_sizes---spacing--base);
-            }
-            [pt="sm"] {
-              padding-top: var(--_sizes---spacing--small);
-            }
-            [pt="lg"] {
-              padding-top: var(--_sizes---spacing--large);
-            }
-            [pb="0"] {
-              padding-bottom: 0;
-            }
-            [pb="0.5"] {
-              padding-bottom: 0.5rem;
-            }
-            [pb="1"] {
-              padding-bottom: 1rem;
-            }
-            [pb="2"] {
-              padding-bottom: 2rem;
-            }
-            [pb="3"] {
-              padding-bottom: 3rem;
-            }
-            [pb="base"] {
-              padding-bottom: var(--_sizes---spacing--base);
-            }
-            [pb="sm"] {
-              padding-bottom: var(--_sizes---spacing--small);
-            }
-            [pb="lg"] {
-              padding-bottom: var(--_sizes---spacing--large);
-            }
-            [mt="0"] {
-              margin-top: 0;
-            }
-            [mt="0.5"] {
-              margin-top: 0.5rem;
-            }
-            [mt="1"] {
-              margin-top: 1rem;
-            }
-            [mt="2"] {
-              margin-top: 2rem;
-            }
-            [mt="3"] {
-              margin-top: 3rem;
-            }
-            [mt="base"] {
-              margin-top: var(--_sizes---spacing--base);
-            }
-            [mt="sm"] {
-              margin-top: var(--_sizes---spacing--small);
-            }
-            [mt="lg"] {
-              margin-top: var(--_sizes---spacing--large);
-            }
-            [mt="auto"] {
-              margin-top: auto;
-            }
-            [mb="0"] {
-              margin-bottom: 0;
-            }
-            [mb="0.5"] {
-              margin-bottom: 0.5rem;
-            }
-            [mb="1"] {
-              margin-bottom: 1rem;
-            }
-            [mb="2"] {
-              margin-bottom: 2rem;
-            }
-            [mb="3"] {
-              margin-bottom: 3rem;
-            }
-            [mb="base"] {
-              margin-bottom: var(--_sizes---spacing--base);
-            }
-            [mb="sm"] {
-              margin-bottom: var(--_sizes---spacing--small);
-            }
-            [mb="lg"] {
-              margin-bottom: var(--_sizes---spacing--large);
-            }
-            [mb="auto"] {
-              margin-bottom: auto;
-            }
-            [top-bottom] {
-              padding-top: 0;
-              padding-bottom: 0;
-            }
-            [top-bottom="0"] {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-            [top-bottom="0.5"] {
-              margin-top: 0.5rem;
-              margin-bottom: 0.5rem;
-            }
-            [top-bottom="1.5"] {
-              margin-top: 1.5rem;
-              margin-bottom: 1.5rem;
-            }
-            [top-bottom="1"] {
-              margin-top: 1rem;
-              margin-bottom: 1rem;
-            }
-            [top-bottom="2"] {
-              margin-top: 2rem;
-              margin-bottom: 2rem;
-            }
-            [top-bottom="3"] {
-              margin-top: 3rem;
-              margin-bottom: 3rem;
-            }
-            [top-bottom="base"] {
-              margin-top: var(--_sizes---spacing--base);
-              margin-bottom: var(--_sizes---spacing--base);
-            }
-            [top-bottom="sm"] {
-              margin-top: var(--_sizes---spacing--small);
-              margin-bottom: var(--_sizes---spacing--small);
-            }
-            [top-bottom="lg"] {
-              margin-top: var(--_sizes---spacing--large);
-              margin-bottom: var(--_sizes---spacing--large);
-            }
-            [top-bottom="auto"] {
-              margin-top: auto;
-              margin-bottom: auto;
-            }
-            [px="0"] {
-              padding-left: 0;
-              padding-right: 0;
-            }
-            [py="0"] {
-              padding-top: 0;
-              padding-bottom: 0;
-            }
-            [mx="0"] {
-              margin-left: 0;
-              margin-right: 0;
-            }
-            [mx="auto"] {
-              margin-left: auto;
-              margin-right: auto;
-            }
-            [my="0"] {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-            [my="auto"] {
-              margin-top: auto;
-              margin-bottom: auto;
-            }
-            [mr="0"] {
-              margin-right: 0;
-            }
-            [mr="1"] {
-              margin-right: 1rem;
-            }
-            [mr="1ch"] {
-              margin-right: 1ch;
-            }
-            [mr="word"] {
-              margin-right: 0.35em;
-            }
-            [ml="0"] {
-              margin-left: 0;
-            }
-            [ml="1"] {
-              margin-left: 1rem;
-            }
-            [mr="1ch"] {
-              margin-right: 1ch;
-            }
-            [ml="word"] {
-              margin-left: 0.35em;
-            }
-            [ms="0"] {
-              margin-inline-start: 0;
-            }
-            [ms="0.5"] {
-              margin-inline-start: 0.5rem;
-            }
-            [ms="1"] {
-              margin-inline-start: 1rem;
-            }
-            [ms="1ch"] {
-              margin-inline-start: 1ch;
-            }
-            [ms="auto"] {
-              margin-inline-start: auto;
-            }
-            [me="0"] {
-              margin-inline-end: 0;
-            }
-            [me="0.5"] {
-              margin-inline-end: 0.5rem;
-            }
-            [me="1"] {
-              margin-inline-end: 1rem;
-            }
-            [me="1ch"] {
-              margin-inline-end: 1ch;
-            }
-            [me="auto"] {
-              margin-inline-end: auto;
-            }
-            [flip="h"] {
-              transform: scaleX(-1);
-            }
-            [flip="v"] {
-              transform: scaleY(-1);
-            }
-            /* flex, grid, wrap, gap, place- related */
-            [block] {
-              display: block;
-            }
-            [inline] {
-              display: inline;
-            }
-            [inline-block] {
-              display: inline-block;
-            }
-            [grid] {
-              display: grid;
-            }
-            [flex],
-            [flex="row"] {
-              display: flex;
-              flex-direction: row;
-            }
-            [flex="col"] {
-              display: flex;
-              flex-direction: column;
-            }
-            [inner-flex],
-            [inner-flex="row"] {
-              display: inline-flex;
-              flex-direction: row;
-            }
-            [inner-flex="col"] {
-              display: inline-flex;
-              flex-direction: column;
-            }
-            [flex-wrap],
-            [flex-wrap="wrap"] {
-              flex-wrap: wrap;
-            }
-            [flex-wrap="wrap-nice"] {
-              flex-wrap: wrap;
-              white-space: normal;
-              word-break: keep-all;
-              overflow-wrap: anywhere;
-              text-wrap: balance;
-            }
-            [flex-wrap="nowrap"] {
-              flex-wrap: nowrap;
-            }
-            [flex-shrink] {
-              flex-grow: 0;
-              flex-shrink: 1;
-              flex-basis: auto;
-            }
-            [flex-noshrink] {
-              flex-grow: 0;
-              flex-shrink: 0;
-              flex-basis: auto;
-            }
-            [flex-grow] {
-              flex-grow: 1;
-              flex-shrink: 1;
-              flex-basis: 0%;
-            }
-            [gap="0"] {
-              grid-column-gap: 0;
-              grid-row-gap: 0;
-            }
-            [gap="1-1"] {
-              gap: 1rem 1rem;
-            }
-            [gap="1-2"] {
-              gap: 1rem 2rem;
-            }
-            [gap="1-3"] {
-              gap: 1rem 3rem;
-            }
-            [gap="2-1"] {
-              gap: 2rem 1rem;
-            }
-            [gap="2-2"] {
-              gap: 2rem 2rem;
-            }
-            [gap="2-3"] {
-              gap: 2rem 3rem;
-            }
-            [gap="3-1"] {
-              gap: 3rem 1rem;
-            }
-            [gap="3-2"] {
-              gap: 3rem 2rem;
-            }
-            [gap="3-3"] {
-              gap: 3rem 3rem;
-            }
-            [gap="base"] {
-              gap: var(--_sizes---gap--base);
-            }
-            [gap="sm"] {
-              gap: var(--_sizes---gap--small);
-            }
-            [gap="lg"] {
-              gap: var(--_sizes---gap--large);
-            }
-            [gap="1ch"] {
-              gap: 1ch;
-            }
-            [gap="word"] {
-              gap: 0.35em;
-              word-spacing: 0em;
-              letter-spacing: normal;
-            }
-            [order="first"] {
-              order: -999;
-            }
-            [order="last"] {
-              order: 999;
-            }
-            /* place-content */
-            [place-content="center"] {
-              place-content: center;
-            }
-            [place-content="start"] {
-              place-content: start;
-            }
-            [place-content="end"] {
-              place-content: end;
-            }
-            [place-content="between"] {
-              place-content: space-between;
-            }
-            [place-content="around"] {
-              place-content: space-around;
-            }
-            [place-content="evenly"] {
-              place-content: space-evenly;
-            }
-            [place-content="baseline"] {
-              place-content: baseline;
-            }
-            [place-content="stretch"] {
-              place-content: stretch;
-            }
-            /* place-items */
-            [place-items="start"] {
-              place-items: start;
-            }
-            [place-items="end"] {
-              place-items: end;
-            }
-            [place-items="center"] {
-              place-items: center;
-            }
-            [place-items="baseline"] {
-              place-items: baseline;
-            }
-            [place-items="stretch"] {
-              place-items: stretch;
-            }
-            /* place-self */
-            [place-self="auto"] {
-              place-self: auto;
-            }
-            [place-self="start"] {
-              place-self: start;
-            }
-            [place-self="end"] {
-              place-self: end;
-            }
-            [place-self="center"] {
-              place-self: center;
-            }
-            [place-self="stretch"] {
-              place-self: stretch;
-            }
-            /* overflow properties */
-            [overflow="visible"] {
-              overflow: visible !important;
-            }
-            [overflow="hidden"] {
-              overflow: hidden !important;
-            }
-            [overflow="clip"] {
-              overflow: clip !important;
-            }
-            [overflow="scroll"] {
-              overflow: scroll;
-            }
-            [overflow="auto"] {
-              overflow: auto;
-            }
-            [overflow-x="scroll"] {
-              overflow-x: scroll;
-            }
-            [overflow-x="auto"] {
-              overflow-x: auto;
-            }
-            [overflow-y="scroll"] {
-              overflow-y: scroll;
-            }
-            [overflow-y="auto"] {
-              overflow-y: auto;
-            }
-            /* color, bg, border, outline  */
-            [color="inherit"] {
-              color: inherit;
-            }
-            [color="transparent"] {
-              color: transparent;
-            }
-            [bg="inherit"] {
-              background-color: inherit;
-            }
-            [bg="transparent"] {
-              background-color: transparent;
-            }
-            [bg="none"] {
-              background: none;
-            }
-            [border="inherit"] {
-              border-color: inherit;
-            }
-            [border="transparent"] {
-              border-color: transparent;
-            }
-            [border="none"] {
-              border: none;
-            }
-            [outline="none"] {
-              outline: none;
-            }
-            /* gradient */
-            [gradient] {
-              background-image: linear-gradient(135deg, var(--colors--brand) 0%, var(--colors--accent) 100%);
-            }
-            /* shadow */
-            [shadow="none"] {
-              box-shadow: none;
-            }
-            [shadow] {
-              box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            }
-            /* text-shadow */
-            [text-shadow="none"] {
-              text-shadow: none;
-            }
-            [text-shadow] {
-              text-shadow: 0 0 1rem var(--_palettes---neutral--black);
-            }
-            /* lists */
-            [list-type] li {
-              list-style-position: outside;
-            }
-            [list-type] li::before {
-              content: none !important;
-              /* reset */
-            }
-            [list-type] {
-              list-style: none !important;
-              /* reset */
-            }
-            [list-icon] li {
-              position: relative;
-              margin-left: 1.8em;
-            }
-            [list-icon] li::before {
-              position: absolute;
-              top: -0.095em;
-              left: -1.325em;
-              font-size: 1.125em;
-              content: '\25CF\0020';
-              color: var(--colors--brand);
-            }
-            /* no-scrollbar */
-            [no-scrollbar]::-webkit-scrollbar {
-              display: none !important;
-              width: 0px;
-              height: 0px;
-            }
-            [no-scrollbar] {
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-            }
-            [no-scrollbar]::-webkit-scrollbar-thumb {
-              background-color: transparent;
-            }
-            /* no-overscroll */
-            [no-overscroll] {
-              overscroll-behavior: none;
-              -webkit-overflow-scrolling: touch;
-              touch-action: none;
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-            }
-            [no-overscroll]::-webkit-scrollbar {
-              width: 0px;
-              height: 0px;
-            }
-            /* ----------------- */
-            /* -- S2 Defaults -- */
-            /* ----------------- */
-            /* lightbox and slider */
-            .w-lightbox-backdrop {
-              font-weight: normal;
-            }
-            .w-lightbox-strip {
-              padding: 0.5rem;
-            }
-            .w-lightbox-item {
-              padding: 0.25rem;
-              margin: 0.25rem;
-              outline-offset: 0;
-            }
-            .w-lightbox-control {
-              outline: none !important;
-            }
-            .w-slider-dot {
-              flex: 0 0 auto;
-            }
-            /* code block */
-            pre.code-block {
-              margin: 1rem 0 1rem 0;
-            }
-            pre.code-block code {
-              margin: 0.25rem 0 0.25rem 0;
-              padding-top: 0.75rem;
-              padding-bottom: 0.75rem;
-            }
-            .w-richtext pre.w-code-block {
-              margin: 1rem 0 1rem 0;
-              font-size: .825rem;
-              /* same as .code-block */
-              line-height: 1.725;
-            }
-            .w-richtext pre.w-code-block code {
-              margin: 0.35rem 0 0.35rem 0;
-              padding-top: 0.75rem;
-              padding-bottom: 0.75rem;
-            }
-            @media screen and (max-width: 479px) {
-              .w-richtext pre.w-code-block {
-                font-size: .85rem;
-              }
-            }
-            /* styles for html-table */
-            /* html-table */
-            .html-table {
-              width: 100%;
-              position: relative;
-              margin: 0 0 var(--_sizes---spacing--richtext) 0;
-            }
-            .html-table table {
-              width: 100%;
-              height: 100%;
-              table-layout: fixed;
-              border-collapse: collapse;
-              border-spacing: 0;
-              text-align: inherit;
-            }
-            .html-table th,
-            .html-table td {
-              border: 1px solid var(--colors--stroke);
-              padding: 0.65rem 0.45rem;
-              font-size: 1rem;
-              line-height: 1.25;
-            }
-            .html-table th {
-              background-color: var(--colors--surface-muted);
-              color: inherit;
-              text-align: inherit;
-            }
-            .html-table thead th {}
-            .html-table tfoot td {}
-            .html-table caption {
-              caption-side: top;
-              font-weight: normal;
-              text-align: inherit;
-              margin: 0 0 0.5rem 0;
-            }
-            /* scrollable html-table */
-            .html-table[scrollable] {
-              overflow: auto;
-            }
-            .html-table[scrollable] table {
-              display: block !important;
-            }
-            .html-table[scrollable] table,
-            .html-table[scrollable="5"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
-            }
-            .html-table[scrollable="6"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 6 + 7px);
-            }
-            .html-table[scrollable="7"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 7 + 8px);
-            }
-            .html-table[scrollable="8"] table {
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 8 + 9px);
-            }
-            .html-table[scrollable] table th,
-            .html-table[scrollable] table td {
-              white-space: nowrap !important;
-            }
-            .html-table[scrollable]::-webkit-scrollbar {
-              display: none !important;
-            }
-            .html-table[scrollable] {
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-              overscroll-behavior: none;
-            }
-            .html-table[scrollable]::-webkit-scrollbar-thumb {
-              background-color: transparent;
-            }
-            .html-table[scrollable="x"] {
-              overflow-x: auto;
-              overflow-y: hidden;
-            }
-            .html-table[scrollable="x"] table {
-              max-height: none;
-            }
-            .html-table[scrollable="y"] {
-              overflow-x: hidden;
-              overflow-y: auto;
-              max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px);
-            }
-            .html-table[scrollable="y"] table {
-              display: table !important;
-            }
-            /* th-sticky */
-            .html-table[scrollable][th-sticky] thead th:first-child {
-              position: sticky;
-              top: -1px;
-              left: -1px;
-              z-index: 999;
-            }
-            .html-table[scrollable][th-sticky] thead th {
-              position: sticky;
-              top: -1px;
-              z-index: 998;
-            }
-            .html-table[scrollable][th-sticky] tbody th {
-              position: sticky;
-              left: -1px;
-              z-index: 997;
-            }
-            /* styles for mode switching ui */
-            body.u-light-mode .toggle {}
-            body.u-dark-mode .toggle {
-              justify-content: flex-end;
-            }
-            body.u-light-mode .mode-switch>[data-button="color-mode-light"] {
-              background-color: #ffffff80;
-            }
-            body.u-dark-mode .mode-switch>[data-button="color-mode-dark"] {
-              background-color: #00000060;
-            }
-            body.u-dark-mode .mode-switch>.mode-switch_button:not([data-button="color-mode-dark"]):hover {
-              background-color: #bbb;
-              color: #ddd;
-            }
-          </style>
-      </div>
-      <div code="css" class="css-animations w-embed">
-        <style>
-            /* -------------------- */
-            /* -- CSS Animations -- */
-            /* -------------------- */
-            /* fadeIn */
-            @keyframes fadeIn {
-              from {
-                opacity: 0;
-              }
-              to {
-                opacity: 1;
-              }
-            }
-            [animation="fadeIn"] {
-              opacity: 0;
-              animation: fadeIn 1.2s ease forwards;
-            }
-            /* slideIn */
-            @keyframes slideIn {
-              from {
-                opacity: 0;
-                transform: translateY(80px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-            [animation="slideIn"] {
-              opacity: 0;
-              animation: slideIn 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-            }
-            /* marquee */
-            @keyframes marquee {
-              from {
-                transform: translateX(0%);
-              }
-              to {
-                transform: translateX(-100%);
-              }
-            }
-            @keyframes marquee200p {
-              from {
-                transform: translateX(0%);
-              }
-              to {
-                transform: translateX(-200%);
-              }
-            }
-            [animation="marquee"] {
-              animation: marquee 20s linear infinite;
-            }
-            [animation="marquee200p"] {
-              animation: marquee200p 20s linear infinite;
-            }
-            /* spin */
-            @keyframes spin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-            [animation="spin"] {
-              animation: spin 1s linear infinite;
-            }
-            /* ping */
-            @keyframes ping {
-              75%,
-              100% {
-                transform: scale(2);
-                opacity: 0;
-              }
-            }
-            [animation="ping"] {
-              animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-            }
-            /* bounce */
-            @keyframes bounce {
-              0%,
-              100% {
-                transform: translateY(-25%);
-                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-              }
-              50% {
-                transform: translateY(0);
-                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-              }
-            }
-            [animation="bounce"] {
-              animation: bounce 1s infinite;
-            }
-            /* pulse */
-            @keyframes pulse {
-              0%,
-              100% {
-                opacity: 1;
-              }
-              50% {
-                opacity: .5;
-              }
-            }
-            [animation="pulse"] {
-              animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            }
-            /* pulse-bg */
-            @keyframes pulse-bg {
-              0%,
-              100% {
-                background-color: var(--bg-s, #aaa);
-              }
-              50% {
-                background-color: var(--bg-e, #ddd);
-              }
-            }
-            [animation^="pulse-bg"] {
-              animation: pulse-bg 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            }
-            [animation="pulse-bg"] {
-              --bg-s: var(--colors--brand);
-              --bg-e: var(--colors--brand-light);
-            }
-            /* controls */
-            [animation-play="pause"] {
-              animation-play-state: paused !important;
-            }
-            [animation-play="run"] {
-              animation-play-state: running !important;
-            }
-            [animation="none"] {
-              animation: none;
-            }
-          </style>
+      <div class="code">
+        <div class="css w-embed">/* S2 Framework: Base CSS */
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.min.css">
+        </div>
       </div>
       <div code="css" class="custom w-embed">
         <style>
@@ -1573,7 +194,7 @@
             /* pulse-bg animation */
             [animation="pulse-bg-1"] {
               --bg-s: var(--colors--accent);
-              --bg-e: var(--colors--brand-alt);
+              --bg-e: var(--colors--secondary);
             }
             [animation="pulse-bg-2"] {
               --bg-s: #FFB6B6;
@@ -1600,7 +221,7 @@
             /* css entities: https://www.w3schools.com/cssref/css_entities.php */
             [list-icon="spark"] li::before {
               content: '\2726\0020' !important;
-              color: var(--colors--brand) !important;
+              color: var(--colors--primary) !important;
             }
             [list-icon="star"] li::before {
               content: '\2605\0020' !important;
@@ -1608,14 +229,14 @@
             }
             [list-icon="asterisk"] li::before {
               content: '\2731\0020' !important;
-              color: var(--colors--brand-alt) !important;
+              color: var(--colors--secondary) !important;
             }
             /* -------------------------- */
             /* -- Global Custom Styles -- */
             /* -------------------------- */
-            /* html and body tags */
+            /* html and body */
             html:not(.wf-design-mode) ::selection {
-              background: var(--colors--brand);
+              background: var(--colors--primary);
               color: #fff;
             }
             body * {
@@ -1648,31 +269,34 @@
             .h3 sup,
             h3 sub,
             .h3 sup {
-              margin: 0 -0.25ch;
-              font-size: calc(0.4em + 5px);
+              margin: 0 -0.275ch;
             }
-            h1 sup,
-            .h1 sup,
-            h2 sup,
-            .h2 sup,
-            h3 sup,
-            .h3 sup {
-              top: calc(-1.01em + 5.03px);
+            /* better modal */
+            dialog.modal[open] {
+              animation: fadeIn 480ms ease-out forwards;
             }
-            h1 sub,
-            .h1 sub,
-            h2 sub,
-            .h2 sub,
-            h3 sub,
-            .h3 sub {
-              top: calc(0.16em - 0.78px);
+            dialog.modal::backdrop {
+              background: rgba(0, 0, 0, 0.8);
+              cursor: pointer;
+            }
+            @supports (-webkit-touch-callout: none) {
+              button:focus,
+              button:focus-visible {
+                outline: none !important;
+                box-shadow: none !important;
+              }
+            }
+            .modal.cc-open {
+              display: block;
+              position: fixed;
+              inset: 0;
             }
             /* other styles */
             .richtext-list ul li::before {
               position: absolute;
               margin-left: -1.65em;
               content: '\2713\0020';
-              color: var(--colors--brand);
+              color: var(--colors--primary);
             }
             .breadcrumb-item a.w--current {
               opacity: 0.6;
@@ -1767,13 +391,13 @@
             [color="text-mu"] {
               color: var(--colors--text-muted);
             }
-            [color="brand"],
-            [color="b"] {
-              color: var(--colors--brand);
+            [color="primary"],
+            [color="p"] {
+              color: var(--colors--primary);
             }
-            [color="brand-alt"],
-            [color="ba"] {
-              color: var(--colors--brand-alt);
+            [color="secondary"],
+            [color="s"] {
+              color: var(--colors--secondary);
             }
             [color="accent"],
             [color="a"] {
@@ -1797,13 +421,13 @@
             [bg="surface-alt-mu"] {
               background-color: var(--colors--surface-alt-muted);
             }
-            [bg="brand"],
-            [bg="b"] {
-              background-color: var(--colors--brand);
+            [bg="primary"],
+            [bg="p"] {
+              background-color: var(--colors--primary);
             }
-            [bg="brand-alt"],
-            [bg="ba"] {
-              background-color: var(--colors--brand-alt);
+            [bg="secondary"],
+            [bg="s"] {
+              background-color: var(--colors--secondary);
             }
             [bg="accent"],
             [bg="a"] {
@@ -1821,13 +445,13 @@
             [border="stroke"] {
               border-color: var(--colors--stroke);
             }
-            [border="brand"],
-            [border="b"] {
-              border-color: var(--colors--brand);
+            [border="primary"],
+            [border="p"] {
+              border-color: var(--colors--primary);
             }
-            [border="brand-alt"],
-            [border="ba"] {
-              border-color: var(--colors--brand-alt);
+            [border="secondary"],
+            [border="s"] {
+              border-color: var(--colors--secondary);
             }
             [border="accent"],
             [border="a"] {
@@ -1839,129 +463,129 @@
             }
             /* neutral 500 */
             /* -- "Palette" Variables as Attributes -- */
-            /* brand */
-            [bg="b-50"] {
-              background-color: var(--_palettes---brand--50);
+            /* primary */
+            [bg="p-50"] {
+              background-color: var(--_palettes---primary--50);
             }
-            [bg="b-100"] {
-              background-color: var(--_palettes---brand--100);
+            [bg="p-100"] {
+              background-color: var(--_palettes---primary--100);
             }
-            [bg="b-200"] {
-              background-color: var(--_palettes---brand--200);
+            [bg="p-200"] {
+              background-color: var(--_palettes---primary--200);
             }
-            [bg="b-300"] {
-              background-color: var(--_palettes---brand--300);
+            [bg="p-300"] {
+              background-color: var(--_palettes---primary--300);
             }
-            [bg="b-400"] {
-              background-color: var(--_palettes---brand--400);
+            [bg="p-400"] {
+              background-color: var(--_palettes---primary--400);
             }
-            [bg="b-500"] {
-              background-color: var(--_palettes---brand--500);
+            [bg="p-500"] {
+              background-color: var(--_palettes---primary--500);
             }
-            [bg="b-600"] {
-              background-color: var(--_palettes---brand--600);
+            [bg="p-600"] {
+              background-color: var(--_palettes---primary--600);
             }
-            [bg="b-700"] {
-              background-color: var(--_palettes---brand--700);
+            [bg="p-700"] {
+              background-color: var(--_palettes---primary--700);
             }
-            [bg="b-800"] {
-              background-color: var(--_palettes---brand--800);
+            [bg="p-800"] {
+              background-color: var(--_palettes---primary--800);
             }
-            [bg="b-900"] {
-              background-color: var(--_palettes---brand--900);
+            [bg="p-900"] {
+              background-color: var(--_palettes---primary--900);
             }
-            [bg="b-950"] {
-              background-color: var(--_palettes---brand--950);
+            [bg="p-950"] {
+              background-color: var(--_palettes---primary--950);
             }
-            [bg="b-on-light"] {
-              background-color: var(--_palettes---brand--on-light);
+            [bg="p-on-light"] {
+              background-color: var(--_palettes---primary--on-light);
             }
-            [color="b-on-light"] {
-              color: var(--_palettes---brand--on-light);
+            [color="p-on-light"] {
+              color: var(--_palettes---primary--on-light);
             }
-            [bg="b-on-base"] {
-              background-color: var(--_palettes---brand--on-base);
+            [bg="p-on-base"] {
+              background-color: var(--_palettes---primary--on-base);
             }
-            [color="b-on-base"] {
-              color: var(--_palettes---brand--on-base);
+            [color="p-on-base"] {
+              color: var(--_palettes---primary--on-base);
             }
-            [bg="b-on-deep"] {
-              background-color: var(--_palettes---brand--on-deep);
+            [bg="p-on-deep"] {
+              background-color: var(--_palettes---primary--on-deep);
             }
-            [color="b-on-deep"] {
-              color: var(--_palettes---brand--on-deep);
+            [color="p-on-deep"] {
+              color: var(--_palettes---primary--on-deep);
             }
-            [bg="b-subtle"] {
-              background-color: var(--_palettes---brand--subtle);
+            [bg="p-subtle"] {
+              background-color: var(--_palettes---primary--subtle);
             }
-            /* brand: light, deep */
-            [bg="b-light"] {
-              background-color: var(--colors--brand-light);
+            /* primary: light, deep */
+            [bg="p-light"] {
+              background-color: var(--colors--primary-light);
             }
-            [bg="b-deep"] {
-              background-color: var(--colors--brand-deep);
+            [bg="p-deep"] {
+              background-color: var(--colors--primary-deep);
             }
-            /* brand alt */
-            [bg="ba-50"] {
-              background-color: var(--_palettes---brand-alt--50);
+            /* secondary */
+            [bg="s-50"] {
+              background-color: var(--_palettes---secondary--50);
             }
-            [bg="ba-100"] {
-              background-color: var(--_palettes---brand-alt--100);
+            [bg="s-100"] {
+              background-color: var(--_palettes---secondary--100);
             }
-            [bg="ba-200"] {
-              background-color: var(--_palettes---brand-alt--200);
+            [bg="s-200"] {
+              background-color: var(--_palettes---secondary--200);
             }
-            [bg="ba-300"] {
-              background-color: var(--_palettes---brand-alt--300);
+            [bg="s-300"] {
+              background-color: var(--_palettes---secondary--300);
             }
-            [bg="ba-400"] {
-              background-color: var(--_palettes---brand-alt--400);
+            [bg="s-400"] {
+              background-color: var(--_palettes---secondary--400);
             }
-            [bg="ba-500"] {
-              background-color: var(--_palettes---brand-alt--500);
+            [bg="s-500"] {
+              background-color: var(--_palettes---secondary--500);
             }
-            [bg="ba-600"] {
-              background-color: var(--_palettes---brand-alt--600);
+            [bg="s-600"] {
+              background-color: var(--_palettes---secondary--600);
             }
-            [bg="ba-700"] {
-              background-color: var(--_palettes---brand-alt--700);
+            [bg="s-700"] {
+              background-color: var(--_palettes---secondary--700);
             }
-            [bg="ba-800"] {
-              background-color: var(--_palettes---brand-alt--800);
+            [bg="s-800"] {
+              background-color: var(--_palettes---secondary--800);
             }
-            [bg="ba-900"] {
-              background-color: var(--_palettes---brand-alt--900);
+            [bg="s-900"] {
+              background-color: var(--_palettes---secondary--900);
             }
-            [bg="ba-950"] {
-              background-color: var(--_palettes---brand-alt--950);
+            [bg="s-950"] {
+              background-color: var(--_palettes---secondary--950);
             }
-            [bg="ba-on-light"] {
-              background-color: var(--_palettes---brand-alt--on-light);
+            [bg="s-on-light"] {
+              background-color: var(--_palettes---secondary--on-light);
             }
-            [color="ba-on-light"] {
-              color: var(--_palettes---brand-alt--on-light);
+            [color="s-on-light"] {
+              color: var(--_palettes---secondary--on-light);
             }
-            [bg="ba-on-base"] {
-              background-color: var(--_palettes---brand-alt--on-base);
+            [bg="s-on-base"] {
+              background-color: var(--_palettes---secondary--on-base);
             }
-            [color="ba-on-base"] {
-              color: var(--_palettes---brand-alt--on-base);
+            [color="s-on-base"] {
+              color: var(--_palettes---secondary--on-base);
             }
-            [bg="ba-on-deep"] {
-              background-color: var(--_palettes---brand-alt--on-deep);
+            [bg="s-on-deep"] {
+              background-color: var(--_palettes---secondary--on-deep);
             }
-            [color="ba-on-deep"] {
-              color: var(--_palettes---brand-alt--on-deep);
+            [color="s-on-deep"] {
+              color: var(--_palettes---secondary--on-deep);
             }
-            [bg="ba-subtle"] {
-              background-color: var(--_palettes---brand-alt--subtle);
+            [bg="s-subtle"] {
+              background-color: var(--_palettes---secondary--subtle);
             }
-            /* brand alt: light, deep */
-            [bg="ba-light"] {
-              background-color: var(--_palettes---brand-alt--300);
+            /* seconady: light, deep */
+            [bg="s-light"] {
+              background-color: var(--_palettes---secondary--300);
             }
-            [bg="ba-deep"] {
-              background-color: var(--_palettes---brand-alt--700);
+            [bg="s-deep"] {
+              background-color: var(--_palettes---secondary--700);
             }
             /* accent */
             [bg="a-50"] {
@@ -2086,10 +710,10 @@
             [color="white"] {
               color: var(--_palettes---neutral--white);
             }
-            [bg="black"] {
+            [bg="plack"] {
               background-color: var(--_palettes---neutral--black);
             }
-            [color="black"] {
+            [color="plack"] {
               color: var(--_palettes---neutral--black);
             }
             /* neutral: light, deep */
@@ -2204,7 +828,7 @@
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
-            /* styles in dark mode */
+            /* styles for dark mode */
             .u-dark-mode .s2-demo-box {
               background-image: none;
               background-color: #0A0A0A;
@@ -2288,8 +912,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">toggle</div>
-                        <div class="css-tag cc-attribute">data-toggle=&quot;&quot;</div>
+                        <div class="tag-label">toggle</div>
+                        <div class="tag-label cc-attribute">data-toggle=&quot;&quot;</div>
                       </div>
                     </div>
                     <div gap="1-1" flex="col" class="block"><button data-toggle="light-dark" aria-label="Toggle light and dark mode" class="toggle">
@@ -2317,7 +941,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">data-button=&quot;&quot;</div>
+                        <div class="tag-label cc-attribute">data-button=&quot;&quot;</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2342,12 +966,12 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">body</div>
-                        <div class="css-tag">u-light-mode</div>
+                        <div class="tag-label">body</div>
+                        <div class="tag-label">u-light-mode</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">body</div>
-                        <div class="css-tag">u-dark-mode</div>
+                        <div class="tag-label">body</div>
+                        <div class="tag-label">u-dark-mode</div>
                       </div>
                       <div class="sg-note">forcing a page to have mode styles applied</div>
                     </div>
@@ -2377,13 +1001,16 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
+                        <div class="tag-label">button</div>
                       </div>
                     </div>
                     <div class="block">
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button w-inline-block">
                           <div>Learn more</div>
+                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                            </svg></div>
                         </a>
                       </div>
                     </div>
@@ -2391,8 +1018,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
-                        <div class="css-tag">cc-sm</div>
+                        <div class="tag-label">button</div>
+                        <div class="tag-label">cc-sm</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2406,8 +1033,8 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
-                        <div class="css-tag">cc-xs</div>
+                        <div class="tag-label">button</div>
+                        <div class="tag-label">cc-xs</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2421,22 +1048,22 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
+                        <div class="tag-label">button</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-white</div>
+                        <div class="tag-label">cc-white</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-sm</div>
-                        <div class="css-tag">cc-white</div>
+                        <div class="tag-label">cc-sm</div>
+                        <div class="tag-label">cc-white</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-xs</div>
-                        <div class="css-tag">cc-white</div>
+                        <div class="tag-label">cc-xs</div>
+                        <div class="tag-label">cc-white</div>
                       </div>
                     </div>
                     <div class="block">
-                      <div style="padding: 1rem 0;" class="u-bg-brand">
+                      <div style="padding: 1rem 0;" class="u-bg-primary">
                         <div style="margin: 0;" class="button-wrapper cc-center">
                           <a href="#" class="button cc-white w-inline-block">
                             <div>Learn more</div>
@@ -2454,14 +1081,50 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
-                        <div class="css-tag">cc-outline</div>
+                        <div class="tag-label">button</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-inverted</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-sm</div>
+                        <div class="tag-label">cc-inverted</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-xs</div>
+                        <div class="tag-label">cc-inverted</div>
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div style="padding: 1rem 0;" bg="surface-alt" class="u-bg-primary">
+                        <div style="margin: 0;" class="button-wrapper cc-center">
+                          <a href="#" class="button cc-inverted w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-sm cc-inverted w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-xs cc-inverted w-inline-block">
+                            <div>Go</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">button</div>
+                        <div class="tag-label">cc-outline</div>
                       </div>
                     </div>
                     <div class="block">
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button cc-outline w-inline-block">
                           <div>Learn more</div>
+                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                            </svg></div>
                         </a>
                       </div>
                     </div>
@@ -2469,9 +1132,9 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
-                        <div class="css-tag">cc-sm</div>
-                        <div class="css-tag">cc-outline</div>
+                        <div class="tag-label">button</div>
+                        <div class="tag-label">cc-sm</div>
+                        <div class="tag-label">cc-outline</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2485,9 +1148,9 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
-                        <div class="css-tag">cc-xs</div>
-                        <div class="css-tag">cc-outline</div>
+                        <div class="tag-label">button</div>
+                        <div class="tag-label">cc-xs</div>
+                        <div class="tag-label">cc-outline</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2501,28 +1164,28 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">button</div>
+                        <div class="tag-label">button</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-white-outline</div>
+                        <div class="tag-label">cc-white-outline</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-sm</div>
-                        <div class="css-tag">cc-white-outline</div>
+                        <div class="tag-label">cc-sm</div>
+                        <div class="tag-label">cc-white-outline</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">cc-xs</div>
-                        <div class="css-tag">cc-white-outline</div>
+                        <div class="tag-label">cc-xs</div>
+                        <div class="tag-label">cc-white-outline</div>
                       </div>
                     </div>
                     <div class="block">
-                      <div style="padding: 1rem 0;" class="u-bg-brand">
+                      <div style="padding: 1rem 0;" class="u-bg-primary">
                         <div style="margin: 0;" class="button-wrapper cc-center">
                           <a href="#" class="button cc-white-outline w-inline-block">
                             <div>Learn more</div>
                           </a>
                           <a href="#" class="button cc-sm cc-white-outline w-inline-block">
-                            <div>Learn more</div>
+                            <div>Explore</div>
                           </a>
                           <a href="#" class="button cc-xs cc-white-outline w-inline-block">
                             <div>Go</div>
@@ -2534,24 +1197,40 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">cta-wrapper</div>
+                        <div class="tag-label">button</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-inverted-outline</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-sm</div>
+                        <div class="tag-label">cc-inverted-outline</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-xs</div>
+                        <div class="tag-label">cc-inverted-outline</div>
                       </div>
                     </div>
                     <div class="block">
-                      <div class="button-wrapper cc-center">
-                        <a href="#" class="button w-inline-block">
-                          <div>Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                            </svg></div>
-                        </a>
+                      <div style="padding: 1rem 0;" bg="surface-alt" class="u-bg-primary">
+                        <div style="margin: 0;" class="button-wrapper cc-center">
+                          <a href="#" class="button cc-inverted-outline w-inline-block">
+                            <div>Learn more</div>
+                          </a>
+                          <a href="#" class="button cc-sm cc-inverted-outline w-inline-block">
+                            <div>Explore</div>
+                          </a>
+                          <a href="#" class="button cc-xs cc-inverted-outline w-inline-block">
+                            <div>Go</div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-component">Button</div>
+                        <div class="tag-label cc-component">Button</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2573,7 +1252,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-component">Button-Outline</div>
+                        <div class="tag-label cc-component">Button-Outline</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2595,7 +1274,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-component">Button-Text</div>
+                        <div class="tag-label cc-component">Button-Text</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2617,7 +1296,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-component">Button-Link</div>
+                        <div class="tag-label cc-component">Button-Link</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2639,7 +1318,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">pill</div>
+                        <div class="tag-label">pill</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2670,7 +1349,7 @@
                             </svg></div>
                           <div>Special Offer</div>
                         </a>
-                        <a href="#" class="pill cc-brand w-inline-block">
+                        <a href="#" class="pill cc-primary w-inline-block">
                           <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#fff"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#fff" stroke-opacity="0.25" stroke-width="16"></circle>
@@ -2687,13 +1366,13 @@
                       <h3>Icons</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>The base <span class="css-tag">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (units in <code>em</code>, not <code>rem</code>).</p>
+                      <p>The base <span class="tag-label">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (units in <code>em</code>, not <code>rem</code>).</p>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
+                        <div class="tag-label">icon</div>
                       </div>
                     </div>
                     <div class="block">
@@ -2802,11 +1481,11 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
+                        <div class="tag-label">icon</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
-                        <div class="css-tag">cc-1em</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-1em</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;" class="block">
@@ -2842,12 +1521,12 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
-                        <div class="css-tag">cc-rem</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-rem</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
-                        <div class="css-tag">cc-1rem</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-1rem</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;" class="block">
@@ -2883,12 +1562,12 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
-                        <div class="css-tag">cc-image</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-image</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
-                        <div class="css-tag">cc-image-1rem</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-image-1rem</div>
                       </div>
                       <div class="sg-note">width is auto (suitable for images)</div>
                       <div class="sg-note">for SVG, you should wrap it with an element that has a width value</div>
@@ -2912,22 +1591,22 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon</div>
-                        <div class="css-tag">cc-mini</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-mini</div>
                       </div>
                     </div>
                     <div class="block">
                       <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M50 96C75.4051 96 96 75.4051 96 50C96 24.5949 75.4051 4 50 4C24.5949 4 4 24.5949 4 50C4 75.4051 24.5949 96 50 96ZM46.7047 70.5213L75.7573 36.6266L70.2427 31.8997L44.0437 62.465L32.2568 47.7315L26.5853 52.2685L41.1116 70.4264L43.851 73.8508L46.7047 70.5213Z" fill="currentColor"></path>
                         </svg></div>
                     </div>
                   </div>
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">icon-wrapper</div>
+                        <div class="tag-label">icon-wrapper</div>
                       </div>
-                      <div class="sg-note">for flexibility, wrap an icon with <span class="css-tag">icon-wrapper</span> before converting to component</div>
+                      <div class="sg-note">for flexibility, wrap an icon with <span class="tag-label">icon-wrapper</span> before converting to component</div>
                     </div>
                     <div class="block">
                       <div style="gap: 1rem; margin-bottom: 1.5rem;" class="u-hflex-left-center">
@@ -2966,7 +1645,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">breadcrumb</div>
+                        <div class="tag-label">breadcrumb</div>
                       </div>
                     </div>
                     <div class="block">
@@ -3019,7 +1698,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">message</div>
+                        <div class="tag-label">message</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
@@ -3028,7 +1707,7 @@
                         <div me="1ch" float="start" class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19 37C28.9411 37 37 28.9411 37 19C37 9.05887 28.9411 1 19 1C9.05887 1 1 9.05887 1 19C1 28.9411 9.05887 37 19 37ZM17.7105 27.0301L29.079 13.7669L26.921 11.9173L16.6693 23.8776L12.057 18.1123L9.83772 19.8877L15.5219 26.9929L16.5939 28.3329L17.7105 27.0301Z" fill="currentColor"></path>
                           </svg></div>
-                        <div>Message block that has an icon with <span class="css-tag cc-attribute">float=&quot;start&quot;</span> attribute. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
+                        <div>Message block that has an icon with <span class="tag-label cc-attribute">float=&quot;start&quot;</span> attribute. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
                       </div>
                       <div class="message">
                         <div style="width: auto; float: inline-start; margin-inline-end: 1ch;" class="block">
@@ -3040,31 +1719,31 @@
                       </div>
                       <div class="message cc-callout">
                         <div class="tag-wrapper">
-                          <div class="css-tag">cc-callout</div>
+                          <div class="tag-label">cc-callout</div>
                         </div>
                         <div>This is a &quot;Callout&quot; block.</div>
                       </div>
                       <div class="message cc-success">
                         <div class="tag-wrapper">
-                          <div class="css-tag">cc-success</div>
+                          <div class="tag-label">cc-success</div>
                         </div>
                         <div>This is a &quot;Success&quot; message block.</div>
                       </div>
                       <div class="message cc-highlight">
                         <div class="tag-wrapper">
-                          <div class="css-tag">cc-highlight</div>
+                          <div class="tag-label">cc-highlight</div>
                         </div>
                         <div>This is a &quot;Highlight&quot; message block.</div>
                       </div>
                       <div class="message cc-warning">
                         <div class="tag-wrapper">
-                          <div class="css-tag">cc-warning</div>
+                          <div class="tag-label">cc-warning</div>
                         </div>
                         <div>This is a &quot;Warning&quot; message block.</div>
                       </div>
                       <div class="message cc-note">
                         <div class="tag-wrapper">
-                          <div class="css-tag">cc-note</div>
+                          <div class="tag-label">cc-note</div>
                         </div>
                         <div>This is a &quot;Note&quot; message block.</div>
                       </div>
@@ -3073,7 +1752,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">info</div>
+                        <div class="tag-label">info</div>
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
@@ -3119,20 +1798,20 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">card</div>
+                        <div class="tag-label">card</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">card</div>
-                        <div class="css-tag">cc-heavy</div>
+                        <div class="tag-label">card</div>
+                        <div class="tag-label">cc-heavy</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">card</div>
-                        <div class="css-tag">cc-p-0</div>
+                        <div class="tag-label">card</div>
+                        <div class="tag-label">cc-p-0</div>
                       </div>
                     </div>
                     <div class="block">
                       <div style="gap: 1rem; margin-bottom: 1rem;" class="flex-wrap-cols">
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="card">
                             <div class="title-wrapper">
                               <h3 class="h4">Card heading</h3>
@@ -3140,7 +1819,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                           </div>
                         </div>
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="card">
                             <div class="card-title">
                               <h3 class="h6">This is a card title.</h3>
@@ -3150,7 +1829,7 @@
                         </div>
                       </div>
                       <div style="gap: 1rem; margin-bottom: 1rem;" class="flex-wrap-cols">
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="card cc-heavy">
                             <div class="title-wrapper">
                               <h3 class="h4">Card heading</h3>
@@ -3158,7 +1837,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                           </div>
                         </div>
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="box-label">
                             <div>box-label</div>
                           </div>
@@ -3168,10 +1847,10 @@
                         </div>
                       </div>
                       <div style="gap: 1rem; margin-bottom: 1rem;" class="flex-wrap-cols">
-                        <div style="margin: 1rem auto;" class="col cc-6c">
+                        <div style="margin: 1rem auto;" class="col cc-9c">
                           <div class="card cc-p-0">
                             <div class="card-cover">
-                              <div class="absolute-full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, 93vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" class="absolute-cover-image"></div>
+                              <div class="absolute-full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 69vw, (max-width: 991px) 70vw, 63vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" class="absolute-cover-image"></div>
                             </div>
                             <div class="card-body">
                               <div class="card-inner">
@@ -3185,7 +1864,7 @@
                         </div>
                       </div>
                       <div style="gap: 1rem;" class="flex-wrap-cols">
-                        <div class="col cc-in-flex cc-p-0">
+                        <div class="col cc-grow cc-p-0">
                           <div class="card cc-p-0">
                             <div class="u-bg-pattern"></div>
                           </div>
@@ -3208,44 +1887,44 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">form-wrapper</div>
+                        <div class="tag-label">form-wrapper</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">form</div>
+                        <div class="tag-label">form</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">form_row</div>
+                        <div class="tag-label">form_row</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">input-field</div>
+                        <div class="tag-label">input-field</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-html">Label</div>
+                        <div class="tag-label cc-html">Label</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">input</div>
+                        <div class="tag-label">input</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">input</div>
-                        <div class="css-tag">cc-select</div>
+                        <div class="tag-label">input</div>
+                        <div class="tag-label">cc-select</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">input</div>
-                        <div class="css-tag">cc-textarea</div>
+                        <div class="tag-label">input</div>
+                        <div class="tag-label">cc-textarea</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">checkbox-field</div>
-                        <div class="css-tag">checkbox</div>
+                        <div class="tag-label">checkbox-field</div>
+                        <div class="tag-label">checkbox</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">radio-field</div>
-                        <div class="css-tag">radio</div>
+                        <div class="tag-label">radio-field</div>
+                        <div class="tag-label">radio</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">option-field</div>
-                        <div class="css-tag">option</div>
+                        <div class="tag-label">option-field</div>
+                        <div class="tag-label">option</div>
                       </div>
-                      <div class="sg-note">Grouped as Components to prevent Webflow from accidentally changing form settings during copy and paste.</div>
+                      <div class="sg-note">The forms are grouped as Components to prevent Webflow from accidentally changing their settings during copy and paste.</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 3rem;" class="block">
                       <div class="block">
@@ -3258,12 +1937,18 @@
                               <div class="input-field"><label for="Demo-A-Input-1" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-1" data-name="Demo A Input 1" placeholder="Input" type="text" id="Demo-A-Input-1"></div>
                               <div class="input-field"><label for="Demo-A-Input-2" class="text-sm">Text field</label><input class="input w-input" maxlength="256" name="Demo-A-Input-2" data-name="Demo A Input 2" placeholder="Input" type="text" id="Demo-A-Input-2"></div>
                             </div>
-                            <div class="input-field"><label for="Demo-A-Options" class="text-sm">Select</label><select id="Demo-A-Options" name="Demo-A-Options" data-name="Demo A Options" class="input cc-select w-select">
-                                <option value="">Choose option</option>
-                                <option value="First">First choice</option>
-                                <option value="Second">Second choice</option>
-                                <option value="Third">Third choice</option>
-                              </select></div>
+                            <div class="input-field"><label for="Demo-A-Options" class="text-sm">Select</label>
+                              <div class="select-wrapper"><select id="Demo-A-Options" name="Demo-A-Options" data-name="Demo A Options" class="input w-select">
+                                  <option value="">Choose option</option>
+                                  <option value="First">First choice</option>
+                                  <option value="Second">Second choice</option>
+                                  <option value="Third">Third choice</option>
+                                </select>
+                                <div class="icon cc-select-arrow w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
                             <div class="input-field"><label for="Demo-A-Message" class="text-sm">Textarea</label><textarea id="Demo-A-Message" name="Demo-A-Message" maxlength="5000" data-name="Demo A Message" placeholder="Your message" required="" class="input cc-textarea w-input"></textarea></div>
                             <div class="input-field">
                               <legend class="text-sm">Checkboxes</legend>
@@ -3349,12 +2034,17 @@
                               </div>
                             </div>
                             <div class="input-field cc-boxed">
-                              <div class="u-text-stroke"><label for="Demo-B-Options" class="text-xs">Select</label></div><select id="Demo-B-Options" name="Demo-B-Options" data-name="Demo B Options" class="input cc-select cc-boxed w-select">
-                                <option value="">Choose option</option>
-                                <option value="First">First choice</option>
-                                <option value="Second">Second choice</option>
-                                <option value="Third">Third choice</option>
-                              </select>
+                              <div class="u-text-stroke"><label for="Demo-B-Options" class="text-xs">Select</label></div>
+                              <div class="select-wrapper"><select id="Demo-B-Options" name="Demo-B-Options" data-name="Demo B Options" class="input cc-boxed w-select">
+                                  <option value="">Choose option</option>
+                                  <option value="First">First choice</option>
+                                  <option value="Second">Second choice</option>
+                                  <option value="Third">Third choice</option>
+                                </select>
+                                <div class="icon cc-select-arrow cc-pl-0 w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg></div>
+                              </div>
                             </div>
                             <div class="input-field cc-boxed">
                               <div class="u-text-stroke"><label for="Demo-B-Message" class="text-xs">Textarea</label></div><textarea id="Demo-B-Message" name="Demo-B-Message" maxlength="5000" data-name="Demo B Message" placeholder="Your message" required="" class="input cc-textarea cc-boxed w-input"></textarea>
@@ -3389,7 +2079,7 @@
                   <div class="sg-element cc-grid">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">html-table</div>
+                        <div class="tag-label">html-table</div>
                       </div>
                     </div>
                     <div gap="1-1" width-is="100p" flex="col" class="block">
@@ -3506,9 +2196,9 @@
                   <div class="sg-element cc-grid">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">html-table</div>
+                        <div class="tag-label">html-table</div>
                       </div>
-                      <div class="sg-note">Works perfectly with tables generated by the Finsweet Table App. Simply wrap the table with an <code class="css-tag">html-table</code> div.</div>
+                      <div class="sg-note">Works perfectly with tables generated by the Finsweet Table App. Simply wrap the table with an <code class="tag-label">html-table</code> div.</div>
                     </div>
                     <div gap="1-1" width-is="100p" flex="col" class="block">
                       <div class="block">
@@ -3565,12 +2255,12 @@
                   <div class="sg-element cc-grid">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">html-table</div>
+                        <div class="tag-label">html-table</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">scrollable</div>
+                        <div class="tag-label cc-attribute">scrollable</div>
                       </div>
-                      <div class="sg-note">default max-height is 5 rows when using <code class="css-tag cc-attribute">scrollable</code> attribute without a value</div>
+                      <div class="sg-note">default max-height is 5 rows when using <code class="tag-label cc-attribute">scrollable</code> attribute without a value</div>
                     </div>
                     <div gap="1-1" width-is="100p" flex="col" class="block">
                       <div class="w-embed">
@@ -3723,11 +2413,11 @@
                   <div class="sg-element cc-grid">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">html-table</div>
+                        <div class="tag-label">html-table</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">scrollable=&quot;6&quot;</div>
-                        <div class="css-tag cc-attribute">th-sticky</div>
+                        <div class="tag-label cc-attribute">scrollable=&quot;6&quot;</div>
+                        <div class="tag-label cc-attribute">th-sticky</div>
                       </div>
                     </div>
                     <div gap="1-1" width-is="100p" flex="col" class="block">
@@ -3881,10 +2571,10 @@
                   <div class="sg-element cc-grid">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">html-table</div>
+                        <div class="tag-label">html-table</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">scrollable=&quot;x&quot;</div>
+                        <div class="tag-label cc-attribute">scrollable=&quot;x&quot;</div>
                       </div>
                     </div>
                     <div gap="1-1" width-is="100p" flex="col" class="block">
@@ -4038,10 +2728,10 @@
                   <div class="sg-element cc-grid">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">html-table</div>
+                        <div class="tag-label">html-table</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">scrollable=&quot;y&quot;</div>
+                        <div class="tag-label cc-attribute">scrollable=&quot;y&quot;</div>
                       </div>
                       <div class="sg-note">default max-height is 5 rows when the value is <code>y</code></div>
                     </div>
@@ -4115,17 +2805,17 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">grid-table</div>
+                        <div class="tag-label">grid-table</div>
                       </div>
                     </div>
                     <div class="block">
                       <div class="grid-table">
                         <div class="w-layout-grid grid-table_row cc-header">
                           <div class="grid-table_cell cc-c">
-                            <div class="css-tag">cc-c</div>
+                            <div class="tag-label">cc-c</div>
                           </div>
                           <div class="grid-table_cell cc-th">
-                            <div class="css-tag">cc-th</div>
+                            <div class="tag-label">cc-th</div>
                           </div>
                           <div class="grid-table_cell cc-th">
                             <div>Header Cell</div>
@@ -4142,7 +2832,7 @@
                         </div>
                         <div class="w-layout-grid grid-table_row">
                           <div class="grid-table_cell cc-rth">
-                            <div class="css-tag">cc-rth</div>
+                            <div class="tag-label">cc-rth</div>
                           </div>
                           <div class="grid-table_cell">
                             <div>Cell</div>
@@ -4216,7 +2906,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">title-layout</div>
+                        <div class="tag-label">title-layout</div>
                       </div>
                     </div>
                     <div class="block">
@@ -4241,7 +2931,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">tag</div>
+                        <div class="tag-label">tag</div>
                       </div>
                     </div>
                     <div class="block"><span>New feature</span>
@@ -4254,7 +2944,7 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag">dot</div>
+                        <div class="tag-label">dot</div>
                       </div>
                     </div>
                     <div class="block">
@@ -4266,7 +2956,7 @@
                           <p ml="word" inline="">Lorem ipsum dolor sit amet.</p>
                         </div>
                         <div>
-                          <div bg="b-400" class="dot">
+                          <div bg="p-400" class="dot">
                             <div class="dot_core"></div>
                           </div>
                           <p ml="word" inline="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
@@ -4279,10 +2969,10 @@
                         </div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag">dot</div>
-                        <div class="css-tag cc-attribute">pulse-bg</div>
+                        <div class="tag-label">dot</div>
+                        <div class="tag-label cc-attribute">pulse-bg</div>
                         <div>/</div>
-                        <div class="css-tag cc-attribute">pulse-bg-</div>
+                        <div class="tag-label cc-attribute">pulse-bg-</div>
                       </div>
                       <div mb="2" mt="1">
                         <div animation="pulse-bg-2" class="dot cc-important">
@@ -4295,31 +2985,48 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">animation=&quot;pulse&quot;</div>
+                        <div class="tag-label cc-attribute">animation=&quot;pulse&quot;</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">animation=&quot;pulse-bg&quot;</div>
+                        <div class="tag-label cc-attribute">animation=&quot;pulse-bg&quot;</div>
                       </div>
                     </div>
                     <div class="block">
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">pulse</div>
+                        <div class="tag-label cc-attribute">pulse</div>
                       </div>
                       <div mb="2" mt="1" class="button-wrapper">
                         <a animation="pulse" href="#" class="button w-button">pulse</a>
                         <a animation="pulse" bg="accent" color="a-on-base" href="#" class="button w-button">pulse</a>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="css-tag cc-attribute">pulse-bg</div>
+                        <div class="tag-label cc-attribute">pulse-bg</div>
                         <div>/</div>
-                        <div class="css-tag cc-attribute">pulse-bg-</div>
+                        <div class="tag-label cc-attribute">pulse-bg-</div>
                       </div>
                       <div mb="2" mt="1" class="button-wrapper">
                         <a animation="pulse-bg" href="#" class="button w-button">pulse-bg</a>
                         <a animation="pulse-bg-1" color="white" href="#" class="button w-button">pulse-bg-1</a>
-                        <a animation="pulse-bg-2" color="ba-on-light" href="#" class="button w-button">pulse-bg-2</a>
+                        <a animation="pulse-bg-2" color="s-on-light" href="#" class="button w-button">pulse-bg-2</a>
                         <a animation="pulse-bg-3" color="white" href="#" class="button w-button">pulse-bg-3</a>
                       </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label cc-html">Code</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">code-label</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">tag-label</div>
+                      </div>
+                    </div>
+                    <div flex="col" gap="1-1" class="block">
+                      <p>Tags: <code>code tag</code> <span class="code-label">code label</span> <span class="tag-label">class label</span> <span class="tag-label cc-attribute">attribute label</span> <span class="tag-label cc-component">component label</span> <span class="tag-label cc-html">html label</span></p>
+                      <p><span class="tag-label cc-primary">Primary</span> <span class="tag-label cc-secondary">Secondary</span> <span class="tag-label cc-accent">Accent</span></p>
                     </div>
                   </div>
                 </section>
@@ -4330,22 +3037,25 @@
       </section>
     </main>
   </div>
-  <a href="#top" opacity="0-events-none" aria-label="" class="scroll-to-top">
+  <a href="#top" style="opacity: 0;" aria-label="Scroll to top" class="scroll-to-top">
     <div class="scroll-to-top_icon w-embed"><svg width="100%" height="100%" viewbox="0 0 90 45" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M45.0002 0.335449L87.7337 34.3031C90.3278 36.365 90.7591 40.1394 88.6972 42.7335C86.6352 45.3275 82.8608 45.7589 80.2668 43.697L45.0002 15.6646L9.7337 43.697C7.13965 45.7589 3.36523 45.3275 1.30329 42.7335C-0.758642 40.1394 -0.32728 36.365 2.26677 34.3031L45.0002 0.335449Z" fill="currentColor"></path>
       </svg></div>
     <div class="js w-embed w-script"><!--  Hiding and Showing of the .scroll-to-top Element  -->
       <script>
           var scrollTargets = document.getElementsByClassName("scroll-to-top");
-          if (scrollTargets.length > 0) { // only add scroll listener if elements exist
+          // only add scroll listener if elements exist
+          if (scrollTargets.length > 0) {
             var scrollFunc = function() {
               var y = window.scrollY;
               var threshold = 1.25 * window.innerHeight;
               for (var i = 0; i < scrollTargets.length; i++) {
                 if (y >= threshold) {
-                  scrollTargets[i].setAttribute("opacity", "1");
+                  scrollTargets[i].style.opacity = "1";
+                  scrollTargets[i].style.pointerEvents = "auto";
                 } else {
-                  scrollTargets[i].setAttribute("opacity", "0-events-none");
+                  scrollTargets[i].style.opacity = "0";
+                  scrollTargets[i].style.pointerEvents = "none";
                 }
               }
             };
