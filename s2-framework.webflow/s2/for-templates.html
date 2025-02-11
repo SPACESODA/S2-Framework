@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Feb 10 2025 05:47:07 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Feb 11 2025 14:11:57 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -117,6 +117,27 @@
     </div>
   </div>
   <div class="sg-grid-guide">
+    <div class="css w-embed">
+      <style>
+          /* -- styles for the grid guide -- */
+          /* -- default visibility -- */
+          .sg-grid-guide {
+            display: none;
+          }
+          html.wf-design-mode .sg-grid-guide {
+            display: block !important;
+          }
+        </style>
+    </div>
+    <div class="css w-embed">
+      <style>
+          /* -- styles for the grid guide -- */
+          /* -- visibility option -- */
+          .sg-grid-guide {
+            display: block !important;
+          }
+        </style>
+    </div>
     <div class="css w-embed">
       <style>
           /* -- styles for the grid guide -- */
@@ -803,76 +824,637 @@
                 <p>Colors under the &quot;<strong>Colors</strong>&quot; variable group.<br></p>
               </div>
             </div>
-            <palette style="display: block; width: 100%; margin-bottom: 1rem;">
-              <div class="u-hflex-center-top">
-                <div class="sg-square cc-demo_colors_primary-light">
-                  <div>Primary<br>Light</div>
+            <div class="block">
+              <div class="palette">
+                <div class="u-hflex-center-top">
+                  <div class="sg-square cc-for-palette cc-not-square">
+                    <div class="palette_text cc-p-on-light">Primary<br>Light</div>
+                    <div class="u-bg-color cc-p-light"></div>
+                  </div>
+                  <div class="sg-square cc-for-palette cc-not-square cc-50p">
+                    <div class="palette_text cc-p-on-base">Primary</div>
+                    <div class="u-bg-color cc-p"></div>
+                  </div>
+                  <div class="sg-square cc-for-palette cc-not-square">
+                    <div class="palette_text cc-p-on-deep">Primary<br>Deep</div>
+                    <div class="u-bg-color cc-p-deep"></div>
+                  </div>
                 </div>
-                <div class="sg-square cc-demo_colors_primary">
-                  <div>Primary</div>
-                </div>
-                <div class="sg-square cc-demo_colors_primary-deep">
-                  <div>Primary<br>Deep</div>
-                </div>
-              </div>
-              <div class="u-hflex-center-top">
-                <div class="sg-square cc-demo_colors_secondary">
-                  <div>Secondary</div>
-                </div>
-                <div class="sg-square cc-demo_colors_accent">
-                  <div>Accent</div>
-                </div>
-              </div>
-            </palette>
-            <palette style="display: flex; flex-direction: column; gap: 0.75rem;">
-              <div style="flex-wrap: wrap; gap: 0.75rem;" class="u-hflex-left-top">
-                <div class="sg-square cc-demo-tile cc-colors_text">
-                  <div>Text</div>
-                </div>
-                <div class="sg-square cc-demo-tile cc-colors_text-dim">
-                  <div>Text Dim</div>
-                </div>
-                <div class="sg-square cc-demo-tile cc-colors_text-dimmer">
-                  <div>Text Dimmer</div>
-                </div>
-                <div class="sg-square cc-demo-tile cc-colors_text-muted">
-                  <div>Text Muted</div>
+                <div class="u-hflex-center-top">
+                  <div class="sg-square cc-for-palette cc-not-square cc-50p">
+                    <div class="palette_text cc-s-on-base">Secondary</div>
+                    <div class="u-bg-color cc-s"></div>
+                  </div>
+                  <div class="sg-square cc-for-palette cc-not-square cc-50p">
+                    <div class="palette_text cc-a-on-base">Accent</div>
+                    <div class="u-bg-color cc-a"></div>
+                  </div>
                 </div>
               </div>
-              <div style="flex-wrap: wrap; gap: 0.75rem;" class="u-hflex-left-top">
-                <div class="sg-square cc-demo-tile cc-colors_stroke">
-                  <div>Stroke</div>
+              <palette style="display: flex; flex-direction: column; gap: 0.75rem;" class="palette cc-colors">
+                <div style="gap: 1rem;" class="flex-wrap-cols">
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-text">
+                          <div class="palette_text_overflow cc-colors"><span>Text</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-text-mu">
+                          <div class="palette_text_overflow cc-colors"><span>Text Muted</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-text-dim">
+                          <div class="palette_text_overflow cc-colors"><span>Text Dim</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-text-dimmer">
+                          <div class="palette_text_overflow cc-colors"><span>Text Dimmer</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="sg-square cc-demo-tile cc-colors_stroke-subtle">
-                  <div>Stroke Subtle</div>
+                <div style="gap: 1rem;" class="flex-wrap-cols">
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-stroke">
+                          <div class="palette_text_overflow cc-colors"><span>Stroke</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-stroke-subtle">
+                          <div class="palette_text_overflow cc-colors"><span>Stroke Subtle</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-stroke-emphasis">
+                          <div class="palette_text_overflow cc-colors"><span>Stroke Emphasis</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="sg-square cc-demo-tile cc-colors_emphasis">
-                  <div>Stroke Emphasis</div>
+                <div style="gap: 1rem;" class="flex-wrap-cols">
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-surface">
+                          <div class="palette_text_overflow cc-colors"><span>Surface</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-surface-mu">
+                          <div class="palette_text_overflow cc-colors"><span>Surface Muted</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-surface-alt">
+                          <div class="palette_text_overflow cc-colors"><span>Surface Alt</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-surface-alt-mu">
+                          <div class="palette_text_overflow cc-colors"><span>Surface Alt Muted</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="gap: 1rem;" class="flex-wrap-cols">
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-focus">
+                          <div class="palette_text_overflow cc-colors"><span>Focus</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col cc-span-2 cc-span-3-sm cc-span-2-xs">
+                    <div class="col cc-6c">
+                      <div class="sg-square cc-100p">
+                        <div class="colors-demo cc-colors-focus-subtle">
+                          <div class="palette_text_overflow cc-colors"><span>Focus Subtle</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </palette>
+            </div>
+          </section>
+          <section id="palettes" class="section">
+            <div class="title-wrapper">
+              <div class="title-wrapper">
+                <h3>Palettes</h3>
+              </div>
+              <div class="text-wrapper cc-max-40rem">
+                <p>Use a <a href="https://s2-framework.gitbook.io/docs/more/useful-tools#color-tools" target="_blank">generator</a> to easily create color variations. Edit them here or in the Variables panel. The base of a color is usually &quot;500&quot;.</p>
+              </div>
+            </div>
+            <div class="block">
+              <div style="color: var(--colors--primary);" class="text-sm">Primary</div>
+              <div class="palette">
+                <div class="u-hflex-center-top">
+                  <div bg="p-300" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-p-on-light">
+                        <div class="palette_text_overflow">
+                          <div color="p-on-light" class="palette_text cc-p-on-light">300</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-p-300"></div>
+                  </div>
+                  <div bg="p" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-base" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-p-on-base">
+                        <div class="palette_text_overflow">
+                          <div color="p-on-base" class="palette_text cc-p-on-base">on base</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-p"></div>
+                  </div>
+                  <div bg="p-700" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-deep" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-p-on-deep">
+                        <div class="palette_text_overflow">
+                          <div color="p-on-deep" class="palette_text cc-p-on-deep">700</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-p-700"></div>
+                  </div>
+                  <div bg="p-subtle" class="sg-square cc-for-palette cc-not-square">
+                    <div class="palette_text">subtle</div>
+                    <div class="u-bg-color cc-p-subtle"></div>
+                  </div>
+                </div>
+                <div style="border-radius: 0 0 var(--_sizes---radius--base) var(--_sizes---radius--base); overflow: clip;" class="u-hflex-center-top">
+                  <div bg="p-50" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-50"></div>
+                  </div>
+                  <div bg="p-100" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-100"></div>
+                  </div>
+                  <div bg="p-200" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-200"></div>
+                  </div>
+                  <div bg="p-300" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-300"></div>
+                  </div>
+                  <div bg="p-400" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-400"></div>
+                  </div>
+                  <div bg="p-500" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-500"></div>
+                  </div>
+                  <div bg="p-600" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-600"></div>
+                  </div>
+                  <div bg="p-700" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-700"></div>
+                  </div>
+                  <div bg="p-800" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-800"></div>
+                  </div>
+                  <div bg="p-900" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-900"></div>
+                  </div>
+                  <div bg="p-950" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-p-950"></div>
+                  </div>
+                </div>
+                <div style="padding-bottom: 1rem;" class="u-hflex-center-top">
+                  <div bg="n-50" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">50</div>
+                  </div>
+                  <div bg="n-100" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">100</div>
+                  </div>
+                  <div bg="n-200" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">200</div>
+                  </div>
+                  <div bg="n-300" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">300</div>
+                  </div>
+                  <div bg="n-400" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">400</div>
+                  </div>
+                  <div bg="n-500" class="sg-square cc-for-palette cc-text cc-500">
+                    <div class="palette_text">500</div>
+                  </div>
+                  <div bg="n-600" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">600</div>
+                  </div>
+                  <div bg="n-700" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">700</div>
+                  </div>
+                  <div bg="n-800" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">800</div>
+                  </div>
+                  <div bg="n-900" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">900</div>
+                  </div>
+                  <div bg="n-950" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">950</div>
+                  </div>
                 </div>
               </div>
-              <div style="flex-wrap: wrap; gap: 0.75rem;" class="u-hflex-left-top">
-                <div class="sg-square cc-demo-tile cc-colors_surface">
-                  <div>Surface</div>
+              <div style="color: var(--colors--secondary);" class="text-sm">Secondary</div>
+              <div class="palette">
+                <div class="u-hflex-center-top">
+                  <div bg="s-300" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-s-on-light">
+                        <div class="palette_text_overflow">
+                          <div color="s-on-light" class="palette_text cc-s-on-light">300</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-s-300"></div>
+                  </div>
+                  <div bg="s" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-s-on-base">
+                        <div class="palette_text_overflow">
+                          <div color="s-on-base" class="palette_text cc-s-on-base">base</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-s"></div>
+                  </div>
+                  <div bg="s-700" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-s-on-deep">
+                        <div class="palette_text_overflow">
+                          <div color="s-on-deep" class="palette_text cc-s-on-deep">700</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-s-700"></div>
+                  </div>
+                  <div bg="s-subtle" class="sg-square cc-for-palette cc-not-square">
+                    <div class="palette_text">subtle</div>
+                    <div class="u-bg-color cc-s-subtle"></div>
+                  </div>
                 </div>
-                <div class="sg-square cc-demo-tile cc-colors_surface-muted">
-                  <div>Surface Muted</div>
+                <div style="border-radius: 0 0 var(--_sizes---radius--base) var(--_sizes---radius--base); overflow: clip;" class="u-hflex-center-top">
+                  <div bg="s-50" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-50"></div>
+                  </div>
+                  <div bg="s-100" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-100"></div>
+                  </div>
+                  <div bg="s-200" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-200"></div>
+                  </div>
+                  <div bg="s-300" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-300"></div>
+                  </div>
+                  <div bg="s-400" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-400"></div>
+                  </div>
+                  <div bg="s-500" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-500"></div>
+                  </div>
+                  <div bg="s-600" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-600"></div>
+                  </div>
+                  <div bg="s-700" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-700"></div>
+                  </div>
+                  <div bg="s-800" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-800"></div>
+                  </div>
+                  <div bg="s-900" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-900"></div>
+                  </div>
+                  <div bg="s-950" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-s-950"></div>
+                  </div>
                 </div>
-                <div class="sg-square cc-demo-tile cc-colors_surface-alt">
-                  <div>Surface Alt</div>
-                </div>
-                <div class="sg-square cc-demo-tile cc-colors_surface-alt-muted">
-                  <div>Surface Alt Muted</div>
+                <div style="padding-bottom: 1rem;" class="u-hflex-center-top">
+                  <div bg="n-50" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">50</div>
+                  </div>
+                  <div bg="n-100" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">100</div>
+                  </div>
+                  <div bg="n-200" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">200</div>
+                  </div>
+                  <div bg="n-300" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">300</div>
+                  </div>
+                  <div bg="n-400" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">400</div>
+                  </div>
+                  <div bg="n-500" class="sg-square cc-for-palette cc-text cc-500">
+                    <div class="palette_text cc-500">500</div>
+                  </div>
+                  <div bg="n-600" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">600</div>
+                  </div>
+                  <div bg="n-700" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">700</div>
+                  </div>
+                  <div bg="n-800" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">800</div>
+                  </div>
+                  <div bg="n-900" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">900</div>
+                  </div>
+                  <div bg="n-950" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">950</div>
+                  </div>
                 </div>
               </div>
-              <div style="flex-wrap: wrap; gap: 0.75rem;" class="u-hflex-left-top">
-                <div class="sg-square cc-demo-tile cc-colors_focus">
-                  <div>Focus</div>
+              <div style="color: var(--colors--accent);" class="text-sm">Accent</div>
+              <div class="palette">
+                <div class="u-hflex-center-top">
+                  <div bg="a-300" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-a-on-light">
+                        <div class="palette_text_overflow">
+                          <div color="a-on-light" class="palette_text cc-a-on-light">300</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-a-50"></div>
+                  </div>
+                  <div bg="a" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-a-on-base">
+                        <div class="palette_text_overflow">
+                          <div color="a-on-light" class="palette_text cc-a-on-base">base</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-a"></div>
+                  </div>
+                  <div bg="a-700" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-a-on-deep">
+                        <div class="palette_text_overflow">
+                          <div color="a-on-deep" class="palette_text cc-a-on-deep">700</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-a-700"></div>
+                  </div>
+                  <div bg="a-subtle" class="sg-square cc-for-palette cc-not-square">
+                    <div class="palette_text">subtle</div>
+                    <div class="u-bg-color cc-a-subtle"></div>
+                  </div>
                 </div>
-                <div class="sg-square cc-demo-tile cc-colors_focus-subtle">
-                  <div>Focus Subtle</div>
+                <div style="border-radius: 0 0 var(--_sizes---radius--base) var(--_sizes---radius--base); overflow: clip;" class="u-hflex-center-top">
+                  <div bg="a-50" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-50"></div>
+                  </div>
+                  <div bg="a-100" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-100"></div>
+                  </div>
+                  <div bg="a-200" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-200"></div>
+                  </div>
+                  <div bg="a-300" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-300"></div>
+                  </div>
+                  <div bg="a-400" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-400"></div>
+                  </div>
+                  <div bg="a-500" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-500"></div>
+                  </div>
+                  <div bg="a-600" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-600"></div>
+                  </div>
+                  <div bg="a-700" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-700"></div>
+                  </div>
+                  <div bg="a-800" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-800"></div>
+                  </div>
+                  <div bg="a-900" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-900"></div>
+                  </div>
+                  <div bg="a-950" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-a-950"></div>
+                  </div>
+                </div>
+                <div style="padding-bottom: 1rem;" class="u-hflex-center-top">
+                  <div bg="n-50" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">50</div>
+                  </div>
+                  <div bg="n-100" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">100</div>
+                  </div>
+                  <div bg="n-200" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">200</div>
+                  </div>
+                  <div bg="n-300" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">300</div>
+                  </div>
+                  <div bg="n-400" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">400</div>
+                  </div>
+                  <div bg="n-500" class="sg-square cc-for-palette cc-text cc-500">
+                    <div class="palette_text cc-500">500</div>
+                  </div>
+                  <div bg="n-600" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">600</div>
+                  </div>
+                  <div bg="n-700" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">700</div>
+                  </div>
+                  <div bg="n-800" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">800</div>
+                  </div>
+                  <div bg="n-900" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">900</div>
+                  </div>
+                  <div bg="n-950" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">950</div>
+                  </div>
                 </div>
               </div>
-            </palette>
+              <div style="color: var(--_palettes---neutral--500);" class="text-sm">Neutral</div>
+              <div class="palette">
+                <div class="u-hflex-center-top">
+                  <div bg="n-300" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-n-on-light">
+                        <div class="palette_text_overflow">
+                          <div color="p-on-light" class="palette_text cc-n-on-light">300</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-n-300"></div>
+                  </div>
+                  <div bg="n" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-n-on-base">
+                        <div class="palette_text_overflow">
+                          <div color="p-on-light" class="palette_text cc-n-on-base">base</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-n"></div>
+                  </div>
+                  <div bg="n-700" class="sg-square cc-for-palette cc-not-square">
+                    <div bg="p-on-light" class="sg-square cc-on-color">
+                      <div style="border-radius: 100%;" class="u-bg-color cc-n-on-deep">
+                        <div class="palette_text_overflow">
+                          <div color="p-on-light" class="palette_text cc-n-on-deep">700</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-bg-color cc-n-700"></div>
+                  </div>
+                  <div bg="n-subtle" class="sg-square cc-for-palette cc-not-square">
+                    <div class="palette_text">subtle</div>
+                    <div class="u-bg-color cc-n-subtle"></div>
+                  </div>
+                </div>
+                <div class="u-hflex-center-top">
+                  <div bg="surface" class="sg-square cc-for-palette cc-not-square">
+                    <div color="text-mu" class="palette_text">surface</div>
+                    <div class="u-bg-color cc-surface"></div>
+                  </div>
+                  <div bg="surface-mu" class="sg-square cc-for-palette cc-not-square">
+                    <div color="text-mu" class="palette_text">surface-muted</div>
+                    <div class="u-bg-color cc-surface-mu"></div>
+                  </div>
+                  <div bg="surface-alt" class="sg-square cc-for-palette cc-not-square">
+                    <div color="text-mu" class="palette_text">surface-alt</div>
+                    <div class="u-bg-color cc-surface-alt"></div>
+                  </div>
+                  <div bg="surface-alt-mu" class="sg-square cc-for-palette cc-not-square">
+                    <div color="text-mu" class="palette_text">surface-alt-muted</div>
+                    <div class="u-bg-color cc-surface-alt-mu"></div>
+                  </div>
+                </div>
+                <div class="u-hflex-center-top">
+                  <div bg="white" class="sg-square cc-for-palette cc-not-square">
+                    <div color="text-mu" class="palette_text">white (Palette)</div>
+                    <div class="u-bg-color cc-white"></div>
+                  </div>
+                  <div bg="black" class="sg-square cc-for-palette cc-not-square">
+                    <div color="text-mu" class="palette_text">black (Palette)</div>
+                    <div class="u-bg-color cc-black"></div>
+                  </div>
+                </div>
+                <div style="border-radius: 0 0 var(--_sizes---radius--base) var(--_sizes---radius--base); overflow: clip;" class="u-hflex-center-top">
+                  <div bg="n-50" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-50"></div>
+                  </div>
+                  <div bg="n-100" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-100"></div>
+                  </div>
+                  <div bg="n-200" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-200"></div>
+                  </div>
+                  <div bg="n-300" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-300"></div>
+                  </div>
+                  <div bg="n-400" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-400"></div>
+                  </div>
+                  <div bg="n-500" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-500"></div>
+                  </div>
+                  <div bg="n-600" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-600"></div>
+                  </div>
+                  <div bg="n-700" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-700"></div>
+                  </div>
+                  <div bg="n-800" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-800"></div>
+                  </div>
+                  <div bg="n-900" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-900"></div>
+                  </div>
+                  <div bg="n-950" class="sg-square cc-for-palette">
+                    <div class="u-bg-color cc-n-950"></div>
+                  </div>
+                </div>
+                <div style="padding-bottom: 1rem;" class="u-hflex-center-top">
+                  <div bg="n-50" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">50</div>
+                  </div>
+                  <div bg="n-100" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">100</div>
+                  </div>
+                  <div bg="n-200" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">200</div>
+                  </div>
+                  <div bg="n-300" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">300</div>
+                  </div>
+                  <div bg="n-400" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">400</div>
+                  </div>
+                  <div bg="n-500" class="sg-square cc-for-palette cc-text cc-500">
+                    <div class="palette_text cc-500">500</div>
+                  </div>
+                  <div bg="n-600" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">600</div>
+                  </div>
+                  <div bg="n-700" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">700</div>
+                  </div>
+                  <div bg="n-800" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">800</div>
+                  </div>
+                  <div bg="n-900" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">900</div>
+                  </div>
+                  <div bg="n-950" class="sg-square cc-for-palette cc-text">
+                    <div class="palette_text">950</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
         <div id="structure" class="sg-group">
@@ -3181,106 +3763,204 @@
             </div>
           </div>
         </div>
-        <div class="sg-element cc-block">
-          <div class="sg-tags">
-            <div class="tag-wrapper">
-              <div class="tag-label">col</div>
-            </div>
-            <div class="tag-wrapper">
-              <div class="tag-label">cc-1c</div>
-              <div>~</div>
-              <div class="tag-label">cc-12c</div>
-            </div>
-          </div>
-          <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-              <div class="col cc-1c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-2c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-3c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-4c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-5c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-6c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-7c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-8c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-9c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-10c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-11c">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-12c">
-                <div class="u-bg-pattern cc-with-border">col</div>
+        <div class="block">
+          <div class="sg-element cc-block">
+            <div class="sg-tags cc-width-auto">
+              <div class="tag-wrapper">
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-span-1</div>
+                <div>~</div>
+                <div class="tag-label">cc-span-12</div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="sg-element cc-block">
-          <div class="sg-tags">
-            <div class="tag-wrapper">
-              <div class="tag-label">col</div>
-            </div>
-            <div class="tag-wrapper">
-              <div class="tag-label">cc-span-1</div>
-              <div>~</div>
-              <div class="tag-label">cc-span-12</div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-span-1">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-2">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-3">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-4">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-5">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-6">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-7">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-8">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-9">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-10">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-11">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-12">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-              <div class="col cc-span-1">
-                <div class="u-bg-pattern cc-with-border">col</div>
+          <div class="sg-element cc-block">
+            <div class="sg-tags cc-width-auto">
+              <div class="tag-wrapper">
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-span-1-md</div>
+                <div>~</div>
+                <div class="tag-label">cc-span-8-md</div>
               </div>
-              <div class="col cc-span-2">
-                <div class="u-bg-pattern cc-with-border">col</div>
+              <div class="sg-note cc-width-auto">tablet: 8-cols</div>
+            </div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-span-1-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-2-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-3-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-4-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-5-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-6-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-7-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-8-md">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
               </div>
-              <div class="col cc-span-3">
-                <div class="u-bg-pattern cc-with-border">col</div>
+            </div>
+          </div>
+          <div class="sg-element cc-block">
+            <div class="sg-tags cc-width-auto">
+              <div class="tag-wrapper">
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-span-1-sm</div>
+                <div>~</div>
+                <div class="tag-label">cc-span-6-sm</div>
               </div>
-              <div class="col cc-span-4">
-                <div class="u-bg-pattern cc-with-border">col</div>
+              <div class="sg-note cc-width-auto">landscape: 6-cols</div>
+            </div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-span-1-sm">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-2-sm">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-3-sm">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-4-sm">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-5-sm">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-6-sm">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
               </div>
-              <div class="col cc-span-5">
-                <div class="u-bg-pattern cc-with-border">col</div>
+            </div>
+          </div>
+          <div class="sg-element cc-block">
+            <div class="sg-tags cc-width-auto">
+              <div class="tag-wrapper">
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-span-1-xs</div>
+                <div>~</div>
+                <div class="tag-label">cc-span-4-xs</div>
               </div>
-              <div class="col cc-span-6">
-                <div class="u-bg-pattern cc-with-border">col</div>
+              <div class="sg-note cc-width-auto">mobile: 4-cols</div>
+            </div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-span-1-xs">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-2-xs">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-3-xs">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-span-4-xs">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
               </div>
-              <div class="col cc-span-7">
-                <div class="u-bg-pattern cc-with-border">col</div>
+            </div>
+          </div>
+          <div class="sg-element cc-block">
+            <div class="sg-tags">
+              <div class="tag-wrapper">
+                <div class="tag-label">col</div>
+                <div class="tag-label">cc-1c</div>
+                <div>~</div>
+                <div class="tag-label">cc-12c</div>
               </div>
-              <div class="col cc-span-8">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-span-9">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-span-10">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-span-11">
-                <div class="u-bg-pattern cc-with-border">col</div>
-              </div>
-              <div class="col cc-span-12">
-                <div class="u-bg-pattern cc-with-border">col</div>
+              <div class="sg-note cc-width-auto">12-cols at any width</div>
+            </div>
+            <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                <div class="col cc-1c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-2c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-3c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-4c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-5c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-6c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-7c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-8c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-9c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-10c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-11c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
+                <div class="col cc-12c">
+                  <div class="u-bg-pattern cc-with-border">col</div>
+                </div>
               </div>
             </div>
           </div>
