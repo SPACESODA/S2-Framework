@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 11 2025 14:11:57 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Feb 12 2025 09:14:33 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0d" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -18,12 +18,14 @@
     </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-  <link href="https://s2-framework.webflow.io/401" rel="canonical">
+  <link href="https://s2-framework.webflow.io/401" rel="canonical"><!--  Mode Switching Function  -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/js/mode-switching.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/js/mode-switching.min.js" defer=""></script>
 </head>
 <body class="body">
   <div class="code">
     <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme)  -->
-      <!--  The Mode Switching script is placed in global custom "Footer code".  -->
+      <!--  The Mode Switching script is placed in the site's global custom code.  -->
       <script>
           (function() {
             try {
@@ -64,7 +66,7 @@
     </div>
     <div class="code">
       <div class="css w-embed"><!--  S2 Framework: Base CSS  -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.min.css">
       </div>
     </div>
     <div code="css" class="custom w-embed">
@@ -105,8 +107,8 @@
             --bg-e: #FFF0F0;
           }
           [animation="pulse-bg-3"] {
-            --bg-s: #666;
-            --bg-e: #ccc;
+            --bg-s: #222;
+            --bg-e: #888;
           }
           /* list-type */
           [list-type="disc"] {
@@ -251,164 +253,6 @@
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66009eb8d493d5a53c3759bf" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/s2-framework.js" type="text/javascript"></script>
-  <!--  CSS Animations Enhancement -->
-  <!-- 
-Usage example of 20px offset, 360ms delay, in a stagger group "features":
-[animationPlay="20px, 360"]
-[staggerGroup="features"]
- -->
-  <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll("[animationPlay]");
-        if (!elements.length) return; // exit if no elements with the attribute
-        // group elements by staggerGroup
-        const groups = Array.from(elements).reduce((acc, el) => {
-          const group = el.getAttribute("staggerGroup");
-          if (group) {
-            acc[group] = acc[group] || [];
-            acc[group].push(el);
-          }
-          return acc;
-        }, {});
-        const DEFAULT_STAGGER_DELAY = 180; // default stagger delay in ms
-        // initialize IntersectionObserver
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return; // skip if not intersecting
-              const el = entry.target;
-              const [offset, delayStr] = el
-                .getAttribute("animationPlay")
-                .split(",")
-                .map((v) => v.trim());
-              const delay = parseFloat(delayStr);
-              // validate animationPlay attributes
-              if (!offset || isNaN(delay)) {
-                console.warn("Invalid animationPlay attribute on element:", el);
-                observer.unobserve(el); // stop observing invalid elements
-                return;
-              }
-              // apply initial offset
-              el.style.transform = `translateY(${offset})`;
-              const group = el.getAttribute("staggerGroup");
-              if (group && groups[group][0] === el) {
-                // trigger staggered animations for the entire group
-                groups[group].forEach((groupEl, idx) => {
-                  setTimeout(() => {
-                    groupEl.style.animationPlayState = "running";
-                  }, delay + DEFAULT_STAGGER_DELAY * idx);
-                });
-              } else {
-                // trigger animation for ungrouped elements
-                setTimeout(() => {
-                  el.style.animationPlayState = "running";
-                }, delay);
-              }
-              // stop observing the element after triggering animation
-              observer.unobserve(el);
-            });
-          }, {
-            threshold: 0.1 // trigger when 10% of the element is visible
-          }
-        );
-        // initialize all elements
-        elements.forEach((el) => {
-          el.style.animationPlayState = "paused"; // pause animations initially
-          observer.observe(el); // start observing each element
-        });
-      });
-    </script>
-  <!--  Mode Switching Function  -->
-  <script>
-      (function() {
-        const THEME_KEY = "theme";
-        const SYSTEM_THEME = "system";
-        const LIGHT_CLASS = "u-light-mode";
-        const DARK_CLASS = "u-dark-mode";
-        const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // check if changing of Light / Dark Mode (Theme) is allowed
-        function isThemeChangeAllowed() {
-          return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
-        }
-        // get the system's preferred color scheme
-        function getSystemTheme() {
-          return window.matchMedia("(prefers-color-scheme: dark)").matches ?
-            "dark" :
-            "light";
-        }
-        // apply the specified theme
-        function applyTheme(theme, savePreference = true) {
-          if (!isThemeChangeAllowed()) return;
-          const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
-          document.body.classList.remove(LIGHT_CLASS, DARK_CLASS);
-          if (actualTheme === "light") {
-            document.body.classList.add(LIGHT_CLASS);
-          } else {
-            document.body.classList.add(DARK_CLASS);
-          }
-          if (savePreference) {
-            try {
-              localStorage.setItem(THEME_KEY, theme);
-            } catch (error) {
-              console.warn("Unable to save theme preference:", error);
-            }
-          }
-        }
-        // get the user's theme preference
-        function getThemePreference() {
-          return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
-        }
-        // initialize the theme on page load
-        function initializeTheme() {
-          if (isThemeChangeAllowed()) {
-            const themePreference = getThemePreference();
-            applyTheme(themePreference, false);
-          }
-        }
-        // set up event listeners for buttons and toggles
-        function setupEventListeners() {
-          const buttonSelectors = {
-            "color-mode-system": SYSTEM_THEME,
-            "color-mode-light": "light",
-            "color-mode-dark": "dark"
-          };
-          Object.entries(buttonSelectors).forEach(([selector, theme]) => {
-            document
-              .querySelectorAll(`[data-button="${selector}"]`)
-              .forEach((button) => {
-                button.addEventListener("click", () => applyTheme(theme));
-              });
-          });
-          document
-            .querySelectorAll('[data-toggle="light-dark"]')
-            .forEach((toggleSwitch) => {
-              toggleSwitch.addEventListener("click", () => {
-                const currentTheme = getThemePreference();
-                const newTheme = currentTheme === "dark" ? "light" : "dark";
-                applyTheme(newTheme);
-              });
-            });
-        }
-        // run initialization when DOM is ready
-        function onDOMReady() {
-          initializeTheme();
-          setupEventListeners();
-        }
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", onDOMReady);
-        } else {
-          onDOMReady();
-        }
-        // update theme when system preference changes
-        window
-          .matchMedia("(prefers-color-scheme: dark)")
-          .addEventListener("change", () => {
-            if (getThemePreference() === SYSTEM_THEME) {
-              applyTheme(SYSTEM_THEME, false);
-            }
-          });
-      })();
-    </script>
   <!--  Built with S2 Framework  -->
   <!--  https://s2-framework.webflow.io  -->
 </body>

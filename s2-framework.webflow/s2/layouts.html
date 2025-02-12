@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 11 2025 14:11:57 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Feb 12 2025 09:14:33 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -25,7 +25,10 @@
     </script>
   <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="../images/webclip.png" rel="apple-touch-icon">
-  <link href="https://s2-framework.webflow.io/s2/layouts" rel="canonical"><!--  Meta Tags for Style Guide only  -->
+  <link href="https://s2-framework.webflow.io/s2/layouts" rel="canonical"><!--  Mode Switching Function  -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/js/mode-switching.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/js/mode-switching.min.js" defer=""></script>
+  <!--  Meta Tags for Style Guide only  -->
   <meta property="og:locale" content="en_US">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="format-detection" content="telephone=no">
@@ -38,7 +41,7 @@
 <body dir="" body="sg" class="body">
   <div data-nosnippet="true" class="delete-me cc-clone-cta">
     <div code="js" class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
-      <!--  For Style Guide only, you don't need this for your site.  -->
+      <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
       <script>
           window.dataLayer = window.dataLayer || [];
@@ -50,7 +53,7 @@
         </script>
     </div>
     <div code="js" class="js w-embed w-script"><!--  Microsoft Clarity  -->
-      <!--  For Style Guide only, you don't need this for your site.  -->
+      <!--  For Style Guide only, you don't need this.  -->
       <script type="text/javascript">
           (function(c, l, a, r, i, t, y) {
             c[a] = c[a] || function() {
@@ -64,11 +67,12 @@
           })(window, document, "clarity", "script", "pz73j4n04o");
         </script>
     </div>
-    <div code="js" class="js w-embed w-script">
+    <div code="js" class="js w-embed w-script"><!--  Umami  -->
+      <!--  For Style Guide only, you don't need this.  -->
       <script defer="" src="https://cloud.umami.is/script.js" data-website-id="d01ab616-cead-4f79-b338-266617396737"></script>
     </div>
     <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
-      <!--  For Style Guide only, you don't need such scripts for your site.  -->
+      <!--  For Style Guide only, you don't need such scripts.  -->
       <!--  Hide Cookie Consent in iFrames  -->
       <script>
           if (window.self !== window.top) {
@@ -179,7 +183,7 @@
   <div id="top" class="page">
     <div class="code">
       <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme)  -->
-        <!--  The Mode Switching script is placed in global custom "Footer code".  -->
+        <!--  The Mode Switching script is placed in the site's global custom code.  -->
         <script>
             (function() {
               try {
@@ -220,7 +224,7 @@
       </div>
       <div class="code">
         <div class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.min.css">
         </div>
       </div>
       <div code="css" class="custom w-embed">
@@ -261,8 +265,8 @@
               --bg-e: #FFF0F0;
             }
             [animation="pulse-bg-3"] {
-              --bg-s: #666;
-              --bg-e: #ccc;
+              --bg-s: #222;
+              --bg-e: #888;
             }
             /* list-type */
             [list-type="disc"] {
@@ -440,353 +444,6 @@
       </div>
       <div code="css" class="css w-embed">
         <style>
-            /* -------------------------- */
-            /* -- S2 Colors & Palettes -- */
-            /* -------------------------- */
-            /* -- "Colors" Variables as Attributes -- */
-            /* color */
-            [color="text"] {
-              color: var(--colors--text);
-            }
-            [color="text-mu"] {
-              color: var(--colors--text-muted);
-            }
-            [color="primary"],
-            [color="p"] {
-              color: var(--colors--primary);
-            }
-            [color="secondary"],
-            [color="s"] {
-              color: var(--colors--secondary);
-            }
-            [color="accent"],
-            [color="a"] {
-              color: var(--colors--accent);
-            }
-            [color="neutral"],
-            [color="n"] {
-              color: var(--_palettes---neutral--500);
-            }
-            /* neutral 500 */
-            /* background-color */
-            [bg="surface"] {
-              background-color: var(--colors--surface);
-            }
-            [bg="surface-mu"] {
-              background-color: var(--colors--surface-muted);
-            }
-            [bg="surface-alt"] {
-              background-color: var(--colors--surface-alt);
-            }
-            [bg="surface-alt-mu"] {
-              background-color: var(--colors--surface-alt-muted);
-            }
-            [bg="primary"],
-            [bg="p"] {
-              background-color: var(--colors--primary);
-            }
-            [bg="secondary"],
-            [bg="s"] {
-              background-color: var(--colors--secondary);
-            }
-            [bg="accent"],
-            [bg="a"] {
-              background-color: var(--colors--accent);
-            }
-            [bg="neutral"],
-            [bg="n"] {
-              background-color: var(--_palettes---neutral--500);
-            }
-            /* neutral 500 */
-            [bg="stroke"] {
-              background-color: var(--colors--stroke);
-            }
-            /* border-color */
-            [border="stroke"] {
-              border-color: var(--colors--stroke);
-            }
-            [border="primary"],
-            [border="p"] {
-              border-color: var(--colors--primary);
-            }
-            [border="secondary"],
-            [border="s"] {
-              border-color: var(--colors--secondary);
-            }
-            [border="accent"],
-            [border="a"] {
-              border-color: var(--colors--accent);
-            }
-            [border="neutral"],
-            [border="n"] {
-              border-color: var(--_palettes---neutral--500);
-            }
-            /* neutral 500 */
-            /* -- "Palette" Variables as Attributes -- */
-            /* primary */
-            [bg="p-50"] {
-              background-color: var(--_palettes---primary--50);
-            }
-            [bg="p-100"] {
-              background-color: var(--_palettes---primary--100);
-            }
-            [bg="p-200"] {
-              background-color: var(--_palettes---primary--200);
-            }
-            [bg="p-300"] {
-              background-color: var(--_palettes---primary--300);
-            }
-            [bg="p-400"] {
-              background-color: var(--_palettes---primary--400);
-            }
-            [bg="p-500"] {
-              background-color: var(--_palettes---primary--500);
-            }
-            [bg="p-600"] {
-              background-color: var(--_palettes---primary--600);
-            }
-            [bg="p-700"] {
-              background-color: var(--_palettes---primary--700);
-            }
-            [bg="p-800"] {
-              background-color: var(--_palettes---primary--800);
-            }
-            [bg="p-900"] {
-              background-color: var(--_palettes---primary--900);
-            }
-            [bg="p-950"] {
-              background-color: var(--_palettes---primary--950);
-            }
-            [bg="p-on-light"] {
-              background-color: var(--_palettes---primary--on-light);
-            }
-            [color="p-on-light"] {
-              color: var(--_palettes---primary--on-light);
-            }
-            [bg="p-on-base"] {
-              background-color: var(--_palettes---primary--on-base);
-            }
-            [color="p-on-base"] {
-              color: var(--_palettes---primary--on-base);
-            }
-            [bg="p-on-deep"] {
-              background-color: var(--_palettes---primary--on-deep);
-            }
-            [color="p-on-deep"] {
-              color: var(--_palettes---primary--on-deep);
-            }
-            [bg="p-subtle"] {
-              background-color: var(--_palettes---primary--subtle);
-            }
-            /* primary: light, deep */
-            [bg="p-light"] {
-              background-color: var(--colors--primary-light);
-            }
-            [bg="p-deep"] {
-              background-color: var(--colors--primary-deep);
-            }
-            /* secondary */
-            [bg="s-50"] {
-              background-color: var(--_palettes---secondary--50);
-            }
-            [bg="s-100"] {
-              background-color: var(--_palettes---secondary--100);
-            }
-            [bg="s-200"] {
-              background-color: var(--_palettes---secondary--200);
-            }
-            [bg="s-300"] {
-              background-color: var(--_palettes---secondary--300);
-            }
-            [bg="s-400"] {
-              background-color: var(--_palettes---secondary--400);
-            }
-            [bg="s-500"] {
-              background-color: var(--_palettes---secondary--500);
-            }
-            [bg="s-600"] {
-              background-color: var(--_palettes---secondary--600);
-            }
-            [bg="s-700"] {
-              background-color: var(--_palettes---secondary--700);
-            }
-            [bg="s-800"] {
-              background-color: var(--_palettes---secondary--800);
-            }
-            [bg="s-900"] {
-              background-color: var(--_palettes---secondary--900);
-            }
-            [bg="s-950"] {
-              background-color: var(--_palettes---secondary--950);
-            }
-            [bg="s-on-light"] {
-              background-color: var(--_palettes---secondary--on-light);
-            }
-            [color="s-on-light"] {
-              color: var(--_palettes---secondary--on-light);
-            }
-            [bg="s-on-base"] {
-              background-color: var(--_palettes---secondary--on-base);
-            }
-            [color="s-on-base"] {
-              color: var(--_palettes---secondary--on-base);
-            }
-            [bg="s-on-deep"] {
-              background-color: var(--_palettes---secondary--on-deep);
-            }
-            [color="s-on-deep"] {
-              color: var(--_palettes---secondary--on-deep);
-            }
-            [bg="s-subtle"] {
-              background-color: var(--_palettes---secondary--subtle);
-            }
-            /* seconady: light, deep */
-            [bg="s-light"] {
-              background-color: var(--_palettes---secondary--300);
-            }
-            [bg="s-deep"] {
-              background-color: var(--_palettes---secondary--700);
-            }
-            /* accent */
-            [bg="a-50"] {
-              background-color: var(--_palettes---accent--50);
-            }
-            [bg="a-100"] {
-              background-color: var(--_palettes---accent--100);
-            }
-            [bg="a-200"] {
-              background-color: var(--_palettes---accent--200);
-            }
-            [bg="a-300"] {
-              background-color: var(--_palettes---accent--300);
-            }
-            [bg="a-400"] {
-              background-color: var(--_palettes---accent--400);
-            }
-            [bg="a-500"] {
-              background-color: var(--_palettes---accent--500);
-            }
-            [bg="a-600"] {
-              background-color: var(--_palettes---accent--600);
-            }
-            [bg="a-700"] {
-              background-color: var(--_palettes---accent--700);
-            }
-            [bg="a-800"] {
-              background-color: var(--_palettes---accent--800);
-            }
-            [bg="a-900"] {
-              background-color: var(--_palettes---accent--900);
-            }
-            [bg="a-950"] {
-              background-color: var(--_palettes---accent--950);
-            }
-            [bg="a-on-light"] {
-              background-color: var(--_palettes---accent--on-light);
-            }
-            [color="a-on-light"] {
-              color: var(--_palettes---accent--on-light);
-            }
-            [bg="a-on-base"] {
-              background-color: var(--_palettes---accent--on-base);
-            }
-            [color="a-on-base"] {
-              color: var(--_palettes---accent--on-base);
-            }
-            [bg="a-on-deep"] {
-              background-color: var(--_palettes---accent--on-deep);
-            }
-            [color="a-on-deep"] {
-              color: var(--_palettes---accent--on-deep);
-            }
-            [bg="a-subtle"] {
-              background-color: var(--_palettes---accent--subtle);
-            }
-            /* accent: light, deep */
-            [bg="a-light"] {
-              background-color: var(--_palettes---accent--300);
-            }
-            [bg="a-deep"] {
-              background-color: var(--_palettes---accent--700);
-            }
-            /* neutral */
-            [bg="n-50"] {
-              background-color: var(--_palettes---neutral--50);
-            }
-            [bg="n-100"] {
-              background-color: var(--_palettes---neutral--100);
-            }
-            [bg="n-200"] {
-              background-color: var(--_palettes---neutral--200);
-            }
-            [bg="n-300"] {
-              background-color: var(--_palettes---neutral--300);
-            }
-            [bg="n-400"] {
-              background-color: var(--_palettes---neutral--400);
-            }
-            [bg="n-500"] {
-              background-color: var(--_palettes---neutral--500);
-            }
-            [bg="n-600"] {
-              background-color: var(--_palettes---neutral--600);
-            }
-            [bg="n-700"] {
-              background-color: var(--_palettes---neutral--700);
-            }
-            [bg="n-800"] {
-              background-color: var(--_palettes---neutral--800);
-            }
-            [bg="n-900"] {
-              background-color: var(--_palettes---neutral--900);
-            }
-            [bg="n-950"] {
-              background-color: var(--_palettes---neutral--950);
-            }
-            [bg="n-on-light"] {
-              background-color: var(--_palettes---neutral--on-light);
-            }
-            [color="n-on-light"] {
-              color: var(--_palettes---neutral--on-light);
-            }
-            [bg="n-on-base"] {
-              background-color: var(--_palettes---neutral--on-base);
-            }
-            [color="n-on-base"] {
-              color: var(--_palettes---neutral--on-base);
-            }
-            [bg="n-on-deep"] {
-              background-color: var(--_palettes---neutral--on-deep);
-            }
-            [color="n-on-deep"] {
-              color: var(--_palettes---neutral--on-deep);
-            }
-            [bg="n-subtle"] {
-              background-color: var(--_palettes---neutral--subtle);
-            }
-            [bg="white"] {
-              background-color: var(--_palettes---neutral--white);
-            }
-            [color="white"] {
-              color: var(--_palettes---neutral--white);
-            }
-            [bg="plack"] {
-              background-color: var(--_palettes---neutral--black);
-            }
-            [color="plack"] {
-              color: var(--_palettes---neutral--black);
-            }
-            /* neutral: light, deep */
-            [bg="n-light"] {
-              background-color: var(--_palettes---neutral--300);
-            }
-            [bg="n-deep"] {
-              background-color: var(--_palettes---neutral--700);
-            }
-          </style>
-      </div>
-      <div code="css" class="css w-embed">
-        <style>
             /* -- Style Guide: Custom Styles -- */
             /* Only used for styling the style guide. */
             /* DO NOT INCLUDE THESE STYLES ON OTHER WEB PAGES. */
@@ -808,53 +465,6 @@
               .cc-sg-main {
                 width: 100vw !important;
               }
-            }
-            /* palette table */
-            palette {
-              display: block;
-              width: 100%;
-              text-align: center;
-              text-decoration: none !important;
-            }
-            palette [class*="u-hflex"] {
-              width: 100%;
-            }
-            palette .sg-square {
-              width: 100%;
-              height: auto;
-              flex-grow: 1;
-              flex-shrink: 1;
-              flex-basis: 0%;
-              aspect-ratio: 1 / 1;
-              padding: 0.25rem;
-              margin-bottom: 0rem;
-            }
-            palette .sg-square[size-is="lg"] {
-              height: 7.5rem;
-              font-weight: bold;
-              aspect-ratio: auto;
-            }
-            palette [demo="disc"] {
-              width: 2.5rem;
-              height: 2.5rem;
-              padding: 0;
-              border-radius: var(--_sizes---radius--rounded);
-              flex-shrink: 0;
-            }
-            palette [color-g] {
-              position: absolute;
-              top: auto;
-              right: 0%;
-              bottom: 0%;
-              left: 0%;
-              margin-bottom: -1rem;
-              color: var(--colors--text-muted);
-              text-align: center;
-              opacity: 0.8;
-            }
-            palette [color-g="500"] {
-              font-weight: bold;
-              opacity: 1;
             }
             /* adjustment of .box-label elements that are inside .s2-demo */
             .s2-demo .box-label {
@@ -1403,7 +1013,7 @@
       </section>
     </main>
   </div>
-  <a href="#top" style="opacity: 0;" aria-label="Scroll to top" class="scroll-to-top">
+  <a href="#top" aria-label="Scroll to top" style="opacity: 0;" class="scroll-to-top">
     <div class="scroll-to-top_icon w-embed"><svg width="100%" height="100%" viewbox="0 0 90 45" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M45.0002 0.335449L87.7337 34.3031C90.3278 36.365 90.7591 40.1394 88.6972 42.7335C86.6352 45.3275 82.8608 45.7589 80.2668 43.697L45.0002 15.6646L9.7337 43.697C7.13965 45.7589 3.36523 45.3275 1.30329 42.7335C-0.758642 40.1394 -0.32728 36.365 2.26677 34.3031L45.0002 0.335449Z" fill="currentColor"></path>
       </svg></div>
@@ -1432,164 +1042,6 @@
   </a>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66009eb8d493d5a53c3759bf" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="../js/s2-framework.js" type="text/javascript"></script>
-  <!--  CSS Animations Enhancement -->
-  <!-- 
-Usage example of 20px offset, 360ms delay, in a stagger group "features":
-[animationPlay="20px, 360"]
-[staggerGroup="features"]
- -->
-  <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll("[animationPlay]");
-        if (!elements.length) return; // exit if no elements with the attribute
-        // group elements by staggerGroup
-        const groups = Array.from(elements).reduce((acc, el) => {
-          const group = el.getAttribute("staggerGroup");
-          if (group) {
-            acc[group] = acc[group] || [];
-            acc[group].push(el);
-          }
-          return acc;
-        }, {});
-        const DEFAULT_STAGGER_DELAY = 180; // default stagger delay in ms
-        // initialize IntersectionObserver
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return; // skip if not intersecting
-              const el = entry.target;
-              const [offset, delayStr] = el
-                .getAttribute("animationPlay")
-                .split(",")
-                .map((v) => v.trim());
-              const delay = parseFloat(delayStr);
-              // validate animationPlay attributes
-              if (!offset || isNaN(delay)) {
-                console.warn("Invalid animationPlay attribute on element:", el);
-                observer.unobserve(el); // stop observing invalid elements
-                return;
-              }
-              // apply initial offset
-              el.style.transform = `translateY(${offset})`;
-              const group = el.getAttribute("staggerGroup");
-              if (group && groups[group][0] === el) {
-                // trigger staggered animations for the entire group
-                groups[group].forEach((groupEl, idx) => {
-                  setTimeout(() => {
-                    groupEl.style.animationPlayState = "running";
-                  }, delay + DEFAULT_STAGGER_DELAY * idx);
-                });
-              } else {
-                // trigger animation for ungrouped elements
-                setTimeout(() => {
-                  el.style.animationPlayState = "running";
-                }, delay);
-              }
-              // stop observing the element after triggering animation
-              observer.unobserve(el);
-            });
-          }, {
-            threshold: 0.1 // trigger when 10% of the element is visible
-          }
-        );
-        // initialize all elements
-        elements.forEach((el) => {
-          el.style.animationPlayState = "paused"; // pause animations initially
-          observer.observe(el); // start observing each element
-        });
-      });
-    </script>
-  <!--  Mode Switching Function  -->
-  <script>
-      (function() {
-        const THEME_KEY = "theme";
-        const SYSTEM_THEME = "system";
-        const LIGHT_CLASS = "u-light-mode";
-        const DARK_CLASS = "u-dark-mode";
-        const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-        // check if changing of Light / Dark Mode (Theme) is allowed
-        function isThemeChangeAllowed() {
-          return document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
-        }
-        // get the system's preferred color scheme
-        function getSystemTheme() {
-          return window.matchMedia("(prefers-color-scheme: dark)").matches ?
-            "dark" :
-            "light";
-        }
-        // apply the specified theme
-        function applyTheme(theme, savePreference = true) {
-          if (!isThemeChangeAllowed()) return;
-          const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
-          document.body.classList.remove(LIGHT_CLASS, DARK_CLASS);
-          if (actualTheme === "light") {
-            document.body.classList.add(LIGHT_CLASS);
-          } else {
-            document.body.classList.add(DARK_CLASS);
-          }
-          if (savePreference) {
-            try {
-              localStorage.setItem(THEME_KEY, theme);
-            } catch (error) {
-              console.warn("Unable to save theme preference:", error);
-            }
-          }
-        }
-        // get the user's theme preference
-        function getThemePreference() {
-          return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
-        }
-        // initialize the theme on page load
-        function initializeTheme() {
-          if (isThemeChangeAllowed()) {
-            const themePreference = getThemePreference();
-            applyTheme(themePreference, false);
-          }
-        }
-        // set up event listeners for buttons and toggles
-        function setupEventListeners() {
-          const buttonSelectors = {
-            "color-mode-system": SYSTEM_THEME,
-            "color-mode-light": "light",
-            "color-mode-dark": "dark"
-          };
-          Object.entries(buttonSelectors).forEach(([selector, theme]) => {
-            document
-              .querySelectorAll(`[data-button="${selector}"]`)
-              .forEach((button) => {
-                button.addEventListener("click", () => applyTheme(theme));
-              });
-          });
-          document
-            .querySelectorAll('[data-toggle="light-dark"]')
-            .forEach((toggleSwitch) => {
-              toggleSwitch.addEventListener("click", () => {
-                const currentTheme = getThemePreference();
-                const newTheme = currentTheme === "dark" ? "light" : "dark";
-                applyTheme(newTheme);
-              });
-            });
-        }
-        // run initialization when DOM is ready
-        function onDOMReady() {
-          initializeTheme();
-          setupEventListeners();
-        }
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", onDOMReady);
-        } else {
-          onDOMReady();
-        }
-        // update theme when system preference changes
-        window
-          .matchMedia("(prefers-color-scheme: dark)")
-          .addEventListener("change", () => {
-            if (getThemePreference() === SYSTEM_THEME) {
-              applyTheme(SYSTEM_THEME, false);
-            }
-          });
-      })();
-    </script>
   <!--  Built with S2 Framework  -->
   <!--  https://s2-framework.webflow.io  -->
 </body>
