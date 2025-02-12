@@ -11,7 +11,6 @@
 [opacity="1"] { opacity: 1; }  [opacity="0.9"] { opacity: 0.9; }  [opacity="0.8"] { opacity: 0.8; }  [opacity="0.7"] { opacity: 0.7; }  [opacity="0.6"] { opacity: 0.6; }
 [opacity="0.5"] { opacity: 0.5; }  [opacity="0.4"] { opacity: 0.4; }  [opacity="0.3"] { opacity: 0.3; }  [opacity="0.2"] { opacity: 0.2; }  [opacity="0.1"] { opacity: 0.1; }
 [opacity="0"] { opacity: 0; }
-[opacity="0-events-none"] { opacity: 0; pointer-events: none; -webkit-user-select: none; user-select: none; }
 [radius="0"] { border-radius: 0; }  [radius="1"] { border-radius: 1rem; }  [radius="2"] { border-radius: 2rem; }  [radius="3"] { border-radius: 3rem; }
 [radius="xs"] { border-radius: var(--_sizes---radius--extra-small); }  [radius="sm"] { border-radius: var(--_sizes---radius--small); }  [radius="base"] { border-radius: var(--_sizes---radius--base); }  [radius="lg"] { border-radius: var(--_sizes---radius--large); }  [radius="xl"] { border-radius: var(--_sizes---radius--extra-large); }
 [radius="rounded"] { border-radius: var(--_sizes---radius--rounded); }
@@ -145,7 +144,7 @@
 [overflow-x="scroll"] { overflow-x: scroll; }  [overflow-x="auto"] { overflow-x: auto; }
 [overflow-y="scroll"] { overflow-y: scroll; }  [overflow-y="auto"] { overflow-y: auto; }
 
-/* color, bg, border, outline  */
+/* color, bg, border, outline */
 [color="inherit"] { color: inherit; }
 [color="transparent"] { color: transparent; }
 [bg="inherit"] { background-color: inherit; }
