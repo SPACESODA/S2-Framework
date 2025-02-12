@@ -23,9 +23,9 @@ Discord: https://s2-framework.webflow.io/#discord
 **CDN**
 
 S2 Framework: Base CSS <br>
-https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.css
+https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.css
 <br>
-Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/s2.min.css
+Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.min.css
 
 <br><br><br>
 
