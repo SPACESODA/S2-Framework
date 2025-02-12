@@ -3536,7 +3536,7 @@ figcaption {
   position: static;
 }
 
-.flex-wrap-cols {
+.flex-wrap {
   flex-flow: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -4054,7 +4054,7 @@ figcaption {
   background-color: var(--colors-special--transparent);
 }
 
-.sg-flex-wrapper {
+.sg-flex-demo {
   aspect-ratio: 1;
   background-image: url('../images/dots.svg');
   background-position: 50%;
@@ -5459,7 +5459,8 @@ figcaption {
 
 .u-bg-pattern {
   pointer-events: none;
-  color: var(--s2--border-highlight);
+  color: #79b800;
+  text-align: center;
   background-image: url('../images/padding-bg-pattern.svg');
   background-position: 0 0;
   background-repeat: repeat;
@@ -5470,6 +5471,7 @@ figcaption {
   min-height: 3rem;
   margin: 0;
   padding: 0;
+  line-height: 1;
   display: flex;
 }
 
@@ -6825,6 +6827,17 @@ figcaption {
 
 .colors-demo.cc-colors-focus-subtle {
   background-color: var(--colors--focus-subtle);
+}
+
+.col-wrapper {
+  grid-column-gap: var(--_sizes---grid--gutter);
+  grid-row-gap: 1rem;
+  flex-flow: wrap;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
