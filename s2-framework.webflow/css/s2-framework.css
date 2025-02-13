@@ -5459,7 +5459,7 @@ figcaption {
 
 .u-bg-pattern {
   pointer-events: none;
-  color: #79b800;
+  color: #76b300;
   text-align: center;
   background-image: url('../images/padding-bg-pattern.svg');
   background-position: 0 0;
@@ -6840,6 +6840,75 @@ figcaption {
   display: flex;
 }
 
+.sg-main-nav-inner {
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+}
+
+.sg-main-logo-wrapper {
+  max-height: var(--_sizes---main-nav--height);
+  flex-flow: row;
+  flex: none;
+  place-content: center flex-start;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1px;
+  padding-right: 1px;
+  display: flex;
+  overflow: visible;
+}
+
+.sg-main-nav_menu {
+  background-color: #0000;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  position: static;
+}
+
+.sg-main-nav_link {
+  min-height: var(--_sizes---main-nav--height);
+  color: var(--colors--text);
+  text-align: center;
+  flex-flow: row;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin: 0;
+  padding: .5rem 1rem;
+  line-height: 1.125em;
+  text-decoration: none;
+  display: flex;
+}
+
+.sg-main-nav_link:hover {
+  color: var(--colors--primary-light);
+}
+
+.sg-main-nav_link.w--current {
+  color: var(--colors--text);
+}
+
+.sg-main-nav_link.w--current:hover {
+  color: var(--colors--primary-light);
+}
+
+.sg-main-nav_link.cc-last {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
 @media screen and (max-width: 991px) {
   body {
     --_sizes---radius--extra-small: .275rem;
@@ -7236,6 +7305,12 @@ figcaption {
 
   .sg-richtext-demo {
     width: 60vw;
+  }
+
+  .sg-main-nav_link {
+    padding-left: clamp(.5rem, 1.25vw, 1rem);
+    padding-right: clamp(.5rem, 1.25vw, 1rem);
+    font-size: .925rem;
   }
 }
 
@@ -7743,6 +7818,27 @@ figcaption {
 
   .sg-richtext-demo {
     width: calc(100vw - var(--_sizes---container--padding) * 2);
+  }
+
+  .sg-main-nav_menu {
+    background-color: var(--colors--surface);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+  }
+
+  .sg-main-nav_link {
+    padding: 1.35rem var(--_sizes---container--padding);
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    font-size: 1.125rem;
+  }
+
+  .sg-main-nav_link.cc-last {
+    padding-right: var(--_sizes---container--padding);
   }
 }
 
