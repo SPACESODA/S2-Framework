@@ -424,8 +424,8 @@ figcaption {
 }
 
 .tag-wrapper {
-  grid-column-gap: .25rem;
-  grid-row-gap: .225rem;
+  grid-column-gap: .2125rem;
+  grid-row-gap: .2125rem;
   flex-wrap: wrap;
   flex: none;
   justify-content: flex-start;
@@ -3536,7 +3536,7 @@ figcaption {
   position: static;
 }
 
-.flex-wrap {
+.sg-flex-wrap {
   flex-flow: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -3633,11 +3633,7 @@ figcaption {
   display: flex;
 }
 
-.col.cc-grow {
-  flex: 1;
-}
-
-.col.cc-grow.cc-p-0, .col.cc-p-0 {
+.col.cc-p-0 {
   padding: 0;
 }
 
@@ -3895,6 +3891,11 @@ figcaption {
   display: block;
 }
 
+.col.cc-grow {
+  flex: 1;
+  padding: 0;
+}
+
 .title-layout {
   margin-bottom: var(--_sizes---spacing--small);
   position: relative;
@@ -3968,7 +3969,7 @@ figcaption {
 .sg-grid-guide_col {
   opacity: .2;
   color: var(--colors--text);
-  background-color: #88888826;
+  background-color: #8888881a;
   justify-content: center;
   align-items: flex-end;
   height: 100lvh;
@@ -5656,7 +5657,7 @@ figcaption {
 }
 
 .sg-element {
-  grid-column-gap: 1rem;
+  grid-column-gap: var(--_sizes---grid--gutter);
   grid-row-gap: 1rem;
   flex-flow: row;
   justify-content: flex-start;
@@ -5684,9 +5685,9 @@ figcaption {
 }
 
 .sg-tags {
-  grid-column-gap: .275rem;
+  grid-column-gap: .2125rem;
   grid-row-gap: .275rem;
-  width: calc((min(100vw, var(--_sizes---container--max-width))  - (var(--_sizes---container--padding) * 2)  - 11rem) * (2 / 12)  + 1rem);
+  width: calc(2 * ((100% - 11 * var(--_sizes---grid--gutter)) / 12)  + 1 * var(--_sizes---grid--gutter));
   flex-flow: column wrap;
   align-items: flex-start;
   margin-bottom: 0;
@@ -5708,9 +5709,9 @@ figcaption {
   flex: 1;
   width: 100%;
   max-width: 30rem;
-  padding: .5rem .5rem .575rem;
+  padding: .5rem .5rem .525rem;
   font-size: .825rem;
-  line-height: 1.375;
+  line-height: 1.45;
   display: block;
 }
 

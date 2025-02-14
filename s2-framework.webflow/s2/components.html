@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Feb 13 2025 02:59:22 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Feb 14 2025 08:34:31 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -6,10 +6,10 @@
   <meta content="S2 Framework" name="description">
   <meta content="S2 Components | S2 Framework" property="og:title">
   <meta content="S2 Framework" property="og:description">
-  <meta content="https://cnd-host.pages.dev/files/s2/S2-og-cover-v2.0.6@2x.jpg" property="og:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@main/assets/S2-og-cover.jpg" property="og:image">
   <meta content="S2 Components | S2 Framework" property="twitter:title">
   <meta content="S2 Framework" property="twitter:description">
-  <meta content="https://cnd-host.pages.dev/files/s2/S2-og-cover-v2.0.6@2x.jpg" property="twitter:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@main/assets/S2-og-cover.jpg" property="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -37,10 +37,6 @@
         document.documentElement.setAttribute("lang", "en-US");
       });
     </script>
-  <!--  CSS Animations Enhancement  -->
-  <!--  "Hero Section / Style 02" uses this to enhance animation  -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/js/animationPlay.min.js" as="script">
-  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/js/animationPlay.min.js" defer=""></script>
   <!--  BeerSlider CSS  -->
   <!--  Move to global custom "Head code" if it is useful for the whole site.  -->
   <style>
@@ -162,7 +158,7 @@
     </style>
 </head>
 <body dir="" body="sg" class="body">
-  <div data-nosnippet="true" class="delete-me cc-clone-cta">
+  <div data-nosnippet="true" s2="style-guide-only" class="delete-me cc-clone-cta">
     <div code="js" class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -233,8 +229,19 @@
             });
           });
         </script>
+      <!--  Remove any s2="style-guide-only" element when the hostname is not S2  -->
+      <script>
+          (function() {
+            if (window.location.hostname !== "s2-framework.webflow.io") {
+              var elements = document.querySelectorAll('[s2="style-guide-only"]');
+              elements.forEach(function(el) {
+                el.parentNode.removeChild(el);
+              });
+            }
+          })();
+        </script>
     </div>
-    <div>
+    <div s2="style-guide-only">
       <a href="https://webflow.com/made-in-webflow/website/s2-framework" aria-label="Clone Now" target="_blank" class="button w-inline-block">
         <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M82.6152 5H34.725C28.1731 5 22.7931 10.1139 22.3668 16.5597H30.6794C31.063 14.6776 32.7312 13.257 34.725 13.257H82.6152C84.8916 13.257 86.7436 15.109 86.7436 17.3854V65.2757C86.7436 66.9654 85.7234 68.4212 84.2666 69.0595V77.5515C90.318 76.7417 95.0006 71.5453 95.0006 65.2757V17.3854C95.0006 10.5561 89.4445 5 82.6152 5ZM17.3854 22.3398H65.2758C72.1051 22.3398 77.6612 27.8959 77.6612 34.7252V82.6155C77.6612 89.4449 72.1051 95.001 65.2758 95.001H17.3854C10.5561 95.001 5 89.4449 5 82.6155V34.7252C5 27.8959 10.5561 22.3398 17.3854 22.3398ZM65.2758 86.744C67.5522 86.744 69.4042 84.892 69.4042 82.6155V34.7252C69.4042 32.4488 67.5522 30.5967 65.2758 30.5967H17.3854C15.109 30.5967 13.257 32.4488 13.257 34.7252V82.6155C13.257 84.892 15.109 86.744 17.3854 86.744H65.2758ZM37.2021 46.285H45.4591V54.5419H53.716V62.7989H45.4591V71.0558H37.2021V62.7989H28.9452V54.5419H37.2021V46.285Z" fill="currentColor"></path>
@@ -565,6 +572,9 @@
             .u-dark-mode .s2-demo-box {
               background-image: none;
               background-color: #0A0A0A;
+            }
+            .u-dark-mode .u-bg-pattern {
+              color: #ddeac5;
             }
           </style>
       </div>
@@ -1069,8 +1079,8 @@
                       <div class="title-wrapper">
                         <h3>Elements of Title Sets</h3>
                       </div>
-                      <div gap="1-1" class="flex-wrap">
-                        <div class="col cc-grow cc-p-0">
+                      <div gap="1-1" class="sg-flex-wrap">
+                        <div class="col cc-grow">
                           <div class="sg-element cc-block">
                             <div class="sg-tags">
                               <div class="tag-wrapper">
@@ -1116,7 +1126,7 @@
                             <h2 class="title-heading cc-3xl">Flexible workforce solutions</h2>
                           </div>
                         </div>
-                        <div class="col cc-grow cc-p-0">
+                        <div class="col cc-grow">
                           <div class="sg-element cc-block">
                             <div class="sg-tags">
                               <div class="tag-wrapper">
@@ -1206,7 +1216,7 @@
                 <div demo-expand="" class="s2-demo-box">
                   <section flex="col" position="relative" class="section cc-top-bottom-sm">
                     <div events="none" z-index="auto" overflow="hidden" class="absolute-full-wrapper">
-                      <div user-select="none" opacity="" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-jU9VAZDGMzs-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 300" alt="" class="section_image-deco cc-left-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-M2oJ7Uq_0rc-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 600" alt="" class="section_image-deco cc-left-02"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-Wc8k-KryEPM-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 900" alt="" class="section_image-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-WikCrHmk7IU-unsplash.webp" loading="auto" animation="slideIn" animationplay="0px, 1200" alt="" class="section_image-deco cc-right-02"></div>
+                      <div user-select="none" opacity="" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-jU9VAZDGMzs-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-left-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-M2oJ7Uq_0rc-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-left-02"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-Wc8k-KryEPM-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-WikCrHmk7IU-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-right-02"></div>
                     </div>
                     <div class="w-layout-blockcontainer container cc-8c w-container">
                       <header class="title-layout">

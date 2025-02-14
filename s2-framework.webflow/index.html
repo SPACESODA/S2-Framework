@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Feb 13 2025 02:59:22 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Feb 14 2025 08:34:31 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -6,10 +6,10 @@
   <meta content="The S2 Framework is a modern Webflow-optimized framework that provides a solid foundation for projects of any size, whether you&#x27;re just starting out or an experienced pro. Build faster, smarter!" name="description">
   <meta content="S2 Framework for Webflow – Build faster, smarter" property="og:title">
   <meta content="The S2 Framework is a modern Webflow-optimized framework that provides a solid foundation for projects of any size, whether you&#x27;re just starting out or an experienced pro. Build faster, smarter!" property="og:description">
-  <meta content="https://cnd-host.pages.dev/files/s2/S2-og-cover-v2.0.6@2x.jpg" property="og:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@main/assets/S2-og-cover.jpg" property="og:image">
   <meta content="S2 Framework for Webflow – Build faster, smarter" property="twitter:title">
   <meta content="The S2 Framework is a modern Webflow-optimized framework that provides a solid foundation for projects of any size, whether you&#x27;re just starting out or an experienced pro. Build faster, smarter!" property="twitter:description">
-  <meta content="https://cnd-host.pages.dev/files/s2/S2-og-cover-v2.0.6@2x.jpg" property="twitter:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@main/assets/S2-og-cover.jpg" property="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -91,7 +91,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
 </head>
 <body body="sg" theme-change="false" class="body u-dark-mode">
-  <div data-nosnippet="true" class="delete-me cc-clone-cta">
+  <div data-nosnippet="true" s2="style-guide-only" class="delete-me cc-clone-cta">
     <div code="js" class="js w-embed w-script"><!--  Microsoft Clarity  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script type="text/javascript">
@@ -149,6 +149,17 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               }
             });
           });
+        </script>
+      <!--  Remove any s2="style-guide-only" element when the hostname is not S2  -->
+      <script>
+          (function() {
+            if (window.location.hostname !== "s2-framework.webflow.io") {
+              var elements = document.querySelectorAll('[s2="style-guide-only"]');
+              elements.forEach(function(el) {
+                el.parentNode.removeChild(el);
+              });
+            }
+          })();
         </script>
     </div>
   </div>
@@ -415,7 +426,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </a>
           </div>
           <div class="text-wrapper cc-align-center">
-            <div style="margin: 1.25em 0 0.35em 0;" opacity="0.8" class="text-3xs">One-page Style Guide for making Webflow Templates</div>
+            <div style="margin: 1.25em 0 0.75em 0;" opacity="0.8" class="text-3xs">One-page Style Guide for making Webflow Templates</div>
             <div gap="word" class="u-hflex-center-center">
               <div style="position: relative; top: -0.125em;" class="text-sm">
                 <a href="s2/for-templates.html">S2 for Templates</a>
