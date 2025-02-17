@@ -454,8 +454,8 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 
 /* marquee */
 @keyframes marquee { from { transform: translateX(0%); } to { transform: translateX(-100%); } }
-@keyframes marquee200p { from { transform: translateX(0%); } to { transform: translateX(-200%); } }
 [animation="marquee"] { animation: marquee 20s linear infinite; }
+@keyframes marquee200p { from { transform: translateX(0%); } to { transform: translateX(-200%); } }
 [animation="marquee200p"] { animation: marquee200p 20s linear infinite; }
 
 /* spin */
