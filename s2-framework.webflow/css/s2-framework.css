@@ -507,7 +507,7 @@ figcaption {
   grid-column: 4 / span 6;
 }
 
-.css, .js, .framework, .css-animations, .custom, .css_page, .u-hide {
+.css, .js, .framework, .css_animations, .css_custom, .css_page, .u-hide {
   display: none;
 }
 
@@ -5979,7 +5979,7 @@ figcaption {
   position: absolute;
 }
 
-.css-colors {
+.css_colors {
   display: none;
 }
 
