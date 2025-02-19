@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Feb 17 2025 04:54:16 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Feb 19 2025 21:47:14 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -326,12 +326,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               background: rgba(0, 0, 0, 0.8);
               cursor: pointer;
             }
-            @supports (-webkit-touch-callout: none) {
-              button:focus,
-              button:focus-visible {
-                outline: none !important;
-                box-shadow: none !important;
-              }
+            dialog button:focus,
+            dialog button:focus-visible {
+              outline: none !important;
+              box-shadow: none;
             }
             .modal.cc-open {
               display: block;
@@ -419,7 +417,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 </svg></div>
             </a>
             <a href="https://webflow.com/made-in-webflow/website/s2-framework" aria-label="Clone me" target="_blank" class="button cc-text w-inline-block">
-              <div class="text-sm">Clone</div>
+              <div class="text-sm">Clone <span class="u-hide_md">/ Open in Designer</span></div>
               <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M82.6152 5H34.725C28.1731 5 22.7931 10.1139 22.3668 16.5597H30.6794C31.063 14.6776 32.7312 13.257 34.725 13.257H82.6152C84.8916 13.257 86.7436 15.109 86.7436 17.3854V65.2757C86.7436 66.9654 85.7234 68.4212 84.2666 69.0595V77.5515C90.318 76.7417 95.0006 71.5453 95.0006 65.2757V17.3854C95.0006 10.5561 89.4445 5 82.6152 5ZM17.3854 22.3398H65.2758C72.1051 22.3398 77.6612 27.8959 77.6612 34.7252V82.6155C77.6612 89.4449 72.1051 95.001 65.2758 95.001H17.3854C10.5561 95.001 5 89.4449 5 82.6155V34.7252C5 27.8959 10.5561 22.3398 17.3854 22.3398ZM65.2758 86.744C67.5522 86.744 69.4042 84.892 69.4042 82.6155V34.7252C69.4042 32.4488 67.5522 30.5967 65.2758 30.5967H17.3854C15.109 30.5967 13.257 32.4488 13.257 34.7252V82.6155C13.257 84.892 15.109 86.744 17.3854 86.744H65.2758ZM37.2021 46.285H45.4591V54.5419H53.716V62.7989H45.4591V71.0558H37.2021V62.7989H28.9452V54.5419H37.2021V46.285Z" fill="currentColor"></path>
                 </svg></div>

@@ -439,6 +439,7 @@ figcaption {
 .tag-label {
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--s2--webflow-official);
+  filter: brightness();
   outline-color: var(--colors-special--transparent);
   outline-offset: 0px;
   color: #fff;

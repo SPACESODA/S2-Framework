@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Feb 17 2025 04:54:16 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Feb 19 2025 21:47:14 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -294,12 +294,10 @@
               background: rgba(0, 0, 0, 0.8);
               cursor: pointer;
             }
-            @supports (-webkit-touch-callout: none) {
-              button:focus,
-              button:focus-visible {
-                outline: none !important;
-                box-shadow: none !important;
-              }
+            dialog button:focus,
+            dialog button:focus-visible {
+              outline: none !important;
+              box-shadow: none;
             }
             .modal.cc-open {
               display: block;
@@ -348,7 +346,7 @@
             <a href="../s2/elements.html" aria-current="page" class="sg-main-nav_link w-nav-link w--current">UI Elements</a>
             <a href="../s2/layouts.html" class="sg-main-nav_link w-nav-link">Layouts</a>
             <a href="../s2/filter-ui.html" class="sg-main-nav_link w-nav-link">Filter UI</a>
-            <a href="../s2/components.html" class="sg-main-nav_link w-nav-link">S2 Components</a>
+            <a href="../s2/components.html" class="sg-main-nav_link w-nav-link">Components</a>
             <div class="sg-main-nav_link cc-last">
               <div class="menu-button-wrapper"><button data-toggle="light-dark" aria-label="Toggle light and dark mode" class="toggle">
                   <div class="toggle-bg">
@@ -1490,7 +1488,7 @@
                       <div style="gap: 1rem;" class="sg-flex-wrap">
                         <div class="col cc-grow">
                           <div class="card cc-p-0">
-                            <div class="u-bg-pattern"></div>
+                            <div class="u-bg-pattern">no padding</div>
                           </div>
                         </div>
                       </div>

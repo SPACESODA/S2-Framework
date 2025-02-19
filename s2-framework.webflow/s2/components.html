@@ -1,13 +1,13 @@
-<!DOCTYPE html><!--  Last Published: Mon Feb 17 2025 04:54:16 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Feb 19 2025 21:47:14 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
-  <title>S2 Components | S2 Framework</title>
+  <title>Components | S2 Framework</title>
   <meta content="S2 Framework" name="description">
-  <meta content="S2 Components | S2 Framework" property="og:title">
+  <meta content="Components | S2 Framework" property="og:title">
   <meta content="S2 Framework" property="og:description">
   <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@main/assets/S2-og-cover.jpg" property="og:image">
-  <meta content="S2 Components | S2 Framework" property="twitter:title">
+  <meta content="Components | S2 Framework" property="twitter:title">
   <meta content="S2 Framework" property="twitter:description">
   <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@main/assets/S2-og-cover.jpg" property="twitter:image">
   <meta property="og:type" content="website">
@@ -413,12 +413,10 @@
               background: rgba(0, 0, 0, 0.8);
               cursor: pointer;
             }
-            @supports (-webkit-touch-callout: none) {
-              button:focus,
-              button:focus-visible {
-                outline: none !important;
-                box-shadow: none !important;
-              }
+            dialog button:focus,
+            dialog button:focus-visible {
+              outline: none !important;
+              box-shadow: none;
             }
             .modal.cc-open {
               display: block;
@@ -467,7 +465,7 @@
             <a href="../s2/elements.html" class="sg-main-nav_link w-nav-link">UI Elements</a>
             <a href="../s2/layouts.html" class="sg-main-nav_link w-nav-link">Layouts</a>
             <a href="../s2/filter-ui.html" class="sg-main-nav_link w-nav-link">Filter UI</a>
-            <a href="../s2/components.html" aria-current="page" class="sg-main-nav_link w-nav-link w--current">S2 Components</a>
+            <a href="../s2/components.html" aria-current="page" class="sg-main-nav_link w-nav-link w--current">Components</a>
             <div class="sg-main-nav_link cc-last">
               <div class="menu-button-wrapper"><button data-toggle="light-dark" aria-label="Toggle light and dark mode" class="toggle">
                   <div class="toggle-bg">
@@ -1156,7 +1154,7 @@
                           <div class="sg-element cc-block">
                             <div class="sg-tags">
                               <div class="tag-wrapper">
-                                <div class="tag-label">title-eyebrow</div>
+                                <div class="tag-label">eyebrow</div>
                               </div>
                             </div>
                             <div class="eyebrow">Lorem ipsum dolor sit amet</div>
@@ -1277,7 +1275,12 @@
                 <h2 class="h4">Modal (Pop-up Dialog)</h2>
               </div>
               <div class="text-wrapper">
-                <p><strong>Flexible:</strong> Place the <span class="tag-label cc-html">dialog</span> <span class="tag-label">modal</span> modals anywhere on a page.<br><strong>Attributes:</strong> Modal open by matching <span class="tag-label cc-attribute">data-modal=&quot;modal-id&quot;</span> attributes.<br><strong>Simple:</strong> Add <span class="tag-label">cc-open</span> class to open up <span class="tag-label">modal</span> dialog for editing.<br><strong>Accessible:</strong> Leverage accessibility features of native <span class="tag-label cc-html">dialog</span>.</p>
+                <div class="w-richtext">
+                  <p><strong>Flexible:</strong> Place the <span class="tag-label cc-html">dialog</span> <span class="tag-label">modal</span> modals anywhere on a page.<strong>‍</strong></p>
+                  <p><strong>Attributes:</strong> Corresponding modal open by matching the <span class="tag-label cc-attribute">data-modal=&quot;modal-id&quot;</span> attributes.<strong>‍</strong></p>
+                  <p><strong>Simple:</strong> Add a <span class="tag-label">cc-open</span> class to open up the dialog for easy editing.<strong>‍</strong></p>
+                  <p><strong>Accessible:</strong> Leverage accessibility features of native <span class="tag-label cc-html">dialog</span>.</p>
+                </div>
               </div>
               <div class="s2-demo">
                 <div class="box-label">
@@ -1286,7 +1289,7 @@
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section cc-top-bottom-sm">
                     <div class="button-wrapper cc-center"><button data-modal="demo" aria-label="Open" class="button">Open demo modal</button></div>
-                    <dialog data-modal="demo" class="modal"><button data-modal-action="close" aria-label="Close" class="modal_close"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 14 14" fill="none" class="close-icon">
+                    <dialog data-modal="demo" data-modal-open="" class="modal"><button data-modal-action="close" aria-label="Close" class="modal_close"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 14 14" fill="none" class="close-icon">
                           <title>Close</title>
                           <path d="M12.673 0.67334L0.67319 12.6731" stroke="currentColor" stroke-width="1.5"></path>
                           <path d="M0.673462 0.67334L12.6732 12.6731" stroke="currentColor" stroke-width="1.5"></path>
@@ -1313,6 +1316,18 @@
               <div mt="1" class="message cc-note">
                 <div class="text-sm">💡 Custom code required. You can find the script in the footer code of this page.</div>
               </div>
+              <div mt="1" class="message">
+                <div class="text-sm">
+                  <div class="w-richtext">
+                    <p>💡 Unlock advanced features by adding the below attributes to any <span class="tag-label cc-html">dialog</span> <span class="tag-label">modal</span> modal:</p>
+                    <ul role="list">
+                      <li><span class="tag-label">data-modal-open=&quot;2500ms&quot;</span>: trigger to open after certain &quot;s&quot; or &quot;ms&quot;</li>
+                      <li><span class="tag-label">data-modal-open=&quot;800px&quot;</span>: trigger to open after scrolling down certain &quot;px&quot;</li>
+                      <li><span class="tag-label">data-modal-reopen=&quot;3&quot;</span>: the trigger will function again X days after closing a modal</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </section>
             <section id="marquee" class="section cc-bottom-sm">
               <div class="title-wrapper">
@@ -1321,7 +1336,7 @@
                 </div>
                 <div class="text-wrapper cc-max-40rem">
                   <p>
-                    <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> is used for the JavaScript version. And in the pure CSS version, you can use <span class="tag-label cc-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough for looping.
+                    <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> is used in the JavaScript version.<br>In the pure CSS version, you can use <span class="tag-label cc-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough for looping.
                   </p>
                 </div>
               </div>
@@ -2436,15 +2451,13 @@
   <!--  Move to global custom "Footer code" if it is useful for the whole site.  -->
   <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // delegate click events for opening and closing modals.
+        // delegate click events for opening and closing modals
         document.addEventListener("click", (e) => {
           // if a close button (or its child) is clicked, close the modal
           const closeTrigger = e.target.closest('[data-modal-action="close"]');
           if (closeTrigger) {
             const modal = closeTrigger.closest("dialog");
-            if (modal) {
-              modal.close();
-            }
+            if (modal) modal.close();
             return;
           }
           // if a modal-open button is clicked, show the corresponding modal
@@ -2452,19 +2465,76 @@
           if (openTrigger) {
             const modalId = openTrigger.getAttribute("data-modal");
             const modal = document.querySelector(`dialog[data-modal="${modalId}"]`);
-            if (modal) {
-              modal.showModal();
-            }
+            if (modal) modal.showModal();
             return;
           }
         });
         // close the modal if the user clicks on its backdrop
         document.querySelectorAll("dialog").forEach((modal) => {
           modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-              modal.close();
+            if (e.target === modal) modal.close();
+          });
+        });
+        // when a modal is closed, update local storage for auto-open suppression
+        document.querySelectorAll("dialog").forEach((modal) => {
+          modal.addEventListener("close", () => {
+            // check if the modal has a data-modal-reopen attribute
+            if (modal.hasAttribute("data-modal-reopen")) {
+              const daysStr = modal.getAttribute("data-modal-reopen").trim();
+              const days = parseInt(daysStr, 10);
+              if (!isNaN(days) && days > 0) {
+                // use the modal's data-modal value as the unique key
+                const modalId = modal.getAttribute("data-modal");
+                const storageKey = "modalAutoOpen_" + modalId;
+                // calculate the future timestamp (in ms) when the modal can auto-open again
+                const reopenTime = Date.now() + days * 24 * 3600 * 1000;
+                localStorage.setItem(storageKey, reopenTime.toString());
+              }
             }
           });
+        });
+        // process dialogs with the optional data-modal-open attribute
+        document.querySelectorAll("dialog[data-modal-open]").forEach((modal) => {
+          const openValue = modal.getAttribute("data-modal-open").trim();
+          // if the value is empty or "false", do nothing
+          if (!openValue || openValue.toLowerCase() === "false") {
+            return;
+          }
+          // use the modal's unique data-modal value for local storage
+          const modalId = modal.getAttribute("data-modal");
+          const storageKey = "modalAutoOpen_" + modalId;
+          const storedTime = localStorage.getItem(storageKey);
+          if (storedTime && Date.now() < parseInt(storedTime, 10)) {
+            // auto-opening is suppressed because the stored time is in the future
+            return;
+          }
+          // check for a time-based trigger
+          // only accept if the unit is valid: e.g. "3s", "2800ms", "0s", "0ms"
+          const timeMatch = openValue.match(/^(\d+(?:\.\d+)?)(ms|s)$/);
+          if (timeMatch) {
+            let delay = parseFloat(timeMatch[1]);
+            if (timeMatch[2] === "s") {
+              delay *= 1000;
+            }
+            setTimeout(() => {
+              modal.showModal();
+            }, delay);
+            return;
+          }
+          // check for a scroll-based trigger: e.g. "600px"
+          const scrollMatch = openValue.match(/^(\d+)(px)$/);
+          if (scrollMatch) {
+            const scrollOffset = parseInt(scrollMatch[1], 10);
+            const onScroll = () => {
+              if (window.pageYOffset >= scrollOffset) {
+                modal.showModal();
+                window.removeEventListener("scroll", onScroll);
+              }
+            };
+            window.addEventListener("scroll", onScroll);
+            return;
+          }
+          // if the value doesn't match any accepted pattern, ignore
         });
       });
     </script>
