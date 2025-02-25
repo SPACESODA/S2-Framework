@@ -480,6 +480,6 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 [animation="pulse-bg"] { --bg-s: var(--colors--primary); --bg-e: var(--colors--primary-light); }
 
 /* controls */
-[animation-play="pause"] { animation-play-state: paused !important; }
-[animation-play="run"] { animation-play-state: running !important; }
-[animation="none"] { animation: none; }
+[animation-state="paused"] { animation-play-state: paused; }
+[animation-state="running"] { animation-play-state: running; }
+[animation-state="none"], [animation="none"] { animation: none; }
