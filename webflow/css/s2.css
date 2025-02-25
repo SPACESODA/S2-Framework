@@ -453,10 +453,9 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 [animation="slideIn"] { opacity: 0; animation: slideIn 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
 
 /* marquee */
-@keyframes marquee { from { transform: translateX(0%); } to { transform: translateX(-100%); } }
-[animation="marquee"] { animation: marquee 20s linear infinite; }
-@keyframes marquee200p { from { transform: translateX(0%); } to { transform: translateX(-200%); } }
-[animation="marquee200p"] { animation: marquee200p 20s linear infinite; }
+@keyframes marquee { to { transform: var(--translate-distance); } }
+[animation="marquee"] { --translate-distance: translateX(-100%); animation: marquee 20s linear infinite; }
+[animation="marquee-50p"] { --translate-distance: translateX(-50%); animation: marquee 10s linear infinite; }
 
 /* spin */
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -480,6 +479,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 [animation="pulse-bg"] { --bg-s: var(--colors--primary); --bg-e: var(--colors--primary-light); }
 
 /* controls */
+[animation-direction="reverse"] { animation-direction: reverse; }
 [animation-state="paused"] { animation-play-state: paused; }
 [animation-state="running"] { animation-play-state: running; }
 [animation-state="none"], [animation="none"] { animation: none; }
