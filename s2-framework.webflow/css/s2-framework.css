@@ -3956,8 +3956,10 @@ figcaption {
   z-index: 2001;
   pointer-events: none;
   font-size: var(--_text---font-size--xs);
+  flex: none;
+  width: 100%;
   position: fixed;
-  inset: 0% 0% auto;
+  inset: 0%;
   overflow: clip;
 }
 
@@ -3981,12 +3983,13 @@ figcaption {
 .sg-h-scroll {
   padding-top: 2px;
   padding-right: var(--_sizes---container--padding);
-  padding-bottom: 2px;
+  padding-bottom: 1.75rem;
   padding-left: var(--_sizes---container--padding);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   margin-left: calc(var(--_sizes---container--padding) * -1);
   margin-right: calc(var(--_sizes---container--padding) * -1);
+  scroll-behavior: smooth;
   grid-template-rows: auto;
   grid-template-columns: minmax(16rem, 1fr);
   grid-auto-columns: minmax(16rem, 1fr);
@@ -5239,37 +5242,43 @@ figcaption {
   white-space: nowrap;
   vertical-align: middle;
   flex-flow: row;
-  justify-content: flex-start;
+  flex: none;
+  justify-content: center;
   align-items: center;
-  width: auto;
+  width: max-content;
+  min-width: 100%;
   padding-left: 0%;
-  animation: 20s linear infinite marquee;
+  animation: 10s linear infinite marquee;
   display: flex;
+  transform: translate(100%);
 }
 
-.css-marquee:hover {
+.css-marquee.cc-hover-pause:hover {
   animation-play-state: paused;
 }
 
-.css-marquee.cc-from-right {
-  padding-left: 100%;
-  display: inline-flex;
-}
-
-.css-marquee.cc-from-right:hover {
-  animation-play-state: paused;
+.css-marquee.cc-from-left {
+  padding-left: 0%;
+  transform: translate(0%);
 }
 
 .marquee_content {
-  grid-column-gap: 4rem;
-  grid-row-gap: 4rem;
+  grid-column-gap: 1ch;
+  grid-row-gap: 1ch;
   flex-flow: row;
   flex: none;
   justify-content: flex-start;
   align-items: center;
+  width: auto;
   padding-left: 0;
-  padding-right: 4rem;
+  padding-right: 0;
   display: flex;
+}
+
+.marquee_content.cc-gap-lg {
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+  padding-right: 4rem;
 }
 
 .toggle {
@@ -5561,8 +5570,8 @@ figcaption {
 }
 
 .sg-wrapper {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-column-gap: var(--_sizes---container--padding);
+  grid-row-gap: var(--_sizes---container--padding);
   grid-template-rows: auto;
   grid-template-columns: minmax(max-content, 12.5rem) 1fr;
   grid-auto-columns: 1fr;
@@ -5855,7 +5864,7 @@ figcaption {
   width: 100%;
 }
 
-.sg-keep-and-hide-this {
+.sg-keep-this {
   grid-column-gap: 2rem;
   grid-row-gap: .75rem;
   border: 1px dashed var(--colors--stroke);
@@ -6136,7 +6145,7 @@ figcaption {
   line-height: 1.15;
 }
 
-.u-light-mode, .u-dark-mode {
+.u-light-mode {
   --colors--surface: var(--_palettes---neutral--white);
   --colors--text: var(--_palettes---neutral--900);
   --colors--surface-muted: var(--_palettes---neutral--100);
@@ -6176,6 +6185,48 @@ figcaption {
   --colors--text-dim: var(--_palettes---neutral--300);
   --colors-special--transparent-white: #fff0;
   --s2--surface: #f8f8f8;
+}
+
+.u-dark-mode {
+  --colors--surface: var(--_palettes---neutral--900);
+  --colors--text: var(--_palettes---neutral--100);
+  --colors--surface-muted: var(--_palettes---neutral--800);
+  --colors--stroke-subtle: var(--_palettes---neutral--800);
+  --colors--text-muted: var(--_palettes---neutral--500);
+  --colors--primary: var(--_palettes---primary--500);
+  --s2--webflow-official: #006acc;
+  --colors-special--transparent: #0000;
+  --s2--html-tag: #be4aa5;
+  --s2--attribute-tag: #413e3e;
+  --s2--component-tag: #00a65a;
+  --colors--secondary: var(--_palettes---secondary--500);
+  --colors--accent: var(--_palettes---accent--500);
+  --s2--border-highlight: #8fd900;
+  --s2--code-tag: #7e7e7e;
+  --colors--primary-deep: var(--_palettes---primary--700);
+  --colors-special--inverted: var(--_palettes---neutral--900);
+  --colors--focus: var(--_palettes---primary--400);
+  --colors--stroke: var(--_palettes---neutral--600);
+  --colors--focus-subtle: var(--_palettes---primary--950);
+  --colors--focus\<deleted\|variable-8ebc0ec8-0ff0-c0f0-6c27-f8e94882036a\>: var(--_palettes---primary--400);
+  --colors--stroke-emphasis: var(--_palettes---neutral--400);
+  --colors-special--success: #c0e9ad;
+  --colors-special--success-text: #226d02;
+  --colors-special--warning: #ffdada;
+  --colors-special--warning-text: #c51313;
+  --colors-special--glass: #0009;
+  --colors--primary-light: var(--_palettes---primary--300);
+  --colors-special--highlight: #ffe8aa;
+  --colors-special--highlight-text: #965c00;
+  --colors-special--info: #cceff7;
+  --colors-special--info-text: #00728b;
+  --colors--text-dimmer: var(--_palettes---neutral--700);
+  --s2--surface-alt: #161922;
+  --colors--surface-alt-muted: var(--_palettes---neutral--100);
+  --colors--surface-alt: var(--_palettes---neutral--white);
+  --colors--text-dim: var(--_palettes---neutral--600);
+  --colors-special--transparent-white: #fff0;
+  --s2--surface: #0f1118;
 }
 
 .breadcrumb {
@@ -6339,7 +6390,6 @@ figcaption {
   outline-style: solid;
   max-height: 60svh;
   margin-top: 2rem;
-  margin-bottom: 2rem;
   padding: 1px 1px 3rem;
   overflow-y: auto;
 }
@@ -6915,11 +6965,11 @@ figcaption {
   body {
     --_sizes---radius--extra-small: .275rem;
     --_sizes---radius--base: .5rem;
-    --_sizes---spacing--base: 5rem;
-    --_sizes---spacing--small: 2.5rem;
-    --_sizes---spacing--large: 7.5rem;
+    --_sizes---spacing--base: 4rem;
+    --_sizes---spacing--small: 2rem;
+    --_sizes---spacing--large: 6rem;
     --_sizes---container--max-width: 80rem;
-    --_sizes---container--padding: 2.25rem;
+    --_sizes---container--padding: 2rem;
     --_sizes---grid--gutter: 1rem;
     --_sizes---button--base: 3.25rem;
     --_sizes---button--radius: 4rem;
@@ -6945,19 +6995,19 @@ figcaption {
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
     --_sizes---icon--large: 2rem;
-    --_sizes---grid--column: 12;
+    --_sizes---grid--column: 8;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--2xs: .772rem;
-    --_text---font-size--sm: .992rem;
-    --_text---font-size--xs: .875rem;
+    --_text---font-size--2xs: .759rem;
+    --_text---font-size--sm: .964rem;
+    --_text---font-size--xs: .855rem;
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--3xs: .681rem;
-    --_text---font-size--base: 1.125rem;
-    --_text---font-size--lg: 1.299rem;
-    --_text---font-size--xl: 1.5rem;
-    --_text---font-size--2xl: 1.732rem;
-    --_text---font-size--3xl: 2rem;
+    --_text---font-size--3xs: .674rem;
+    --_text---font-size--base: 1.086rem;
+    --_text---font-size--lg: 1.223rem;
+    --_text---font-size--xl: 1.38rem;
+    --_text---font-size--2xl: 1.56rem;
+    --_text---font-size--3xl: 1.765rem;
   }
 
   .sg-demo-card.cc-demo {
@@ -7320,11 +7370,11 @@ figcaption {
   body {
     --_sizes---radius--extra-small: .275rem;
     --_sizes---radius--base: .5rem;
-    --_sizes---spacing--base: 5rem;
-    --_sizes---spacing--small: 2.5rem;
-    --_sizes---spacing--large: 7.5rem;
+    --_sizes---spacing--base: 3.5rem;
+    --_sizes---spacing--small: 1.5rem;
+    --_sizes---spacing--large: 5.5rem;
     --_sizes---container--max-width: 80rem;
-    --_sizes---container--padding: 2.25rem;
+    --_sizes---container--padding: 1.5rem;
     --_sizes---grid--gutter: 1rem;
     --_sizes---button--base: 3.25rem;
     --_sizes---button--radius: 4rem;
@@ -7335,7 +7385,7 @@ figcaption {
     --_sizes---list-spacing--base: .5rem;
     --_sizes---radius--rounded: 999rem;
     --_sizes---radius--card: .625rem;
-    --_sizes---main-nav--height: 4.25rem;
+    --_sizes---main-nav--height: 4rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---richtext-spacing--large: 1rem;
     --_sizes---list-spacing--large: .85rem;
@@ -7350,19 +7400,19 @@ figcaption {
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
     --_sizes---icon--large: 2rem;
-    --_sizes---grid--column: 12;
+    --_sizes---grid--column: 6;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--2xs: .772rem;
-    --_text---font-size--sm: .992rem;
-    --_text---font-size--xs: .875rem;
+    --_text---font-size--2xs: .75rem;
+    --_text---font-size--sm: .942rem;
+    --_text---font-size--xs: .84rem;
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--3xs: .681rem;
-    --_text---font-size--base: 1.125rem;
-    --_text---font-size--lg: 1.299rem;
-    --_text---font-size--xl: 1.5rem;
-    --_text---font-size--2xl: 1.732rem;
-    --_text---font-size--3xl: 2rem;
+    --_text---font-size--3xs: .669rem;
+    --_text---font-size--base: 1.055rem;
+    --_text---font-size--lg: 1.164rem;
+    --_text---font-size--xl: 1.287rem;
+    --_text---font-size--2xl: 1.426rem;
+    --_text---font-size--3xl: 1.582rem;
   }
 
   .sg-demo-card.cc-demo {
@@ -7848,11 +7898,11 @@ figcaption {
   body {
     --_sizes---radius--extra-small: .275rem;
     --_sizes---radius--base: .5rem;
-    --_sizes---spacing--base: 5rem;
-    --_sizes---spacing--small: 2.5rem;
-    --_sizes---spacing--large: 7.5rem;
+    --_sizes---spacing--base: 3.5rem;
+    --_sizes---spacing--small: 1.5rem;
+    --_sizes---spacing--large: 5.5rem;
     --_sizes---container--max-width: 80rem;
-    --_sizes---container--padding: 2.25rem;
+    --_sizes---container--padding: 1rem;
     --_sizes---grid--gutter: 1rem;
     --_sizes---button--base: 3.25rem;
     --_sizes---button--radius: 4rem;
@@ -7863,7 +7913,7 @@ figcaption {
     --_sizes---list-spacing--base: .5rem;
     --_sizes---radius--rounded: 999rem;
     --_sizes---radius--card: .625rem;
-    --_sizes---main-nav--height: 4.25rem;
+    --_sizes---main-nav--height: 4rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---richtext-spacing--large: 1rem;
     --_sizes---list-spacing--large: .85rem;
@@ -7878,19 +7928,19 @@ figcaption {
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
     --_sizes---icon--large: 2rem;
-    --_sizes---grid--column: 12;
+    --_sizes---grid--column: 4;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--2xs: .772rem;
-    --_text---font-size--sm: .992rem;
-    --_text---font-size--xs: .875rem;
+    --_text---font-size--2xs: .737rem;
+    --_text---font-size--sm: .913rem;
+    --_text---font-size--xs: .821rem;
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-size--3xs: .681rem;
-    --_text---font-size--base: 1.125rem;
-    --_text---font-size--lg: 1.299rem;
-    --_text---font-size--xl: 1.5rem;
-    --_text---font-size--2xl: 1.732rem;
-    --_text---font-size--3xl: 2rem;
+    --_text---font-size--base: 1.016rem;
+    --_text---font-size--lg: 1.089rem;
+    --_text---font-size--xl: 1.168rem;
+    --_text---font-size--2xl: 1.254rem;
+    --_text---font-size--3xl: 1.347rem;
   }
 
   code, .tag-label {

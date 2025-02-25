@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Feb 19 2025 21:47:14 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Feb 25 2025 09:28:29 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -1348,7 +1348,7 @@
                   <div top-bottom="base" px="0" class="container cc-full">
                     <div class="marquee-wrapper marquee3k" data-speed="1.2" data-pausable="true">
                       <div class="marquee">
-                        <div class="marquee_content">
+                        <div class="marquee_content cc-gap-lg">
                           <div style="background: #05445E; border-radius: 100%;" class="icon cc-4rem"></div>
                           <div style="background: #189AB4; border-radius: 100%;" class="icon cc-4rem"></div>
                           <div style="background: #75E6DA; border-radius: 100%;" class="icon cc-4rem"></div>
@@ -1378,8 +1378,8 @@
                 <div demo-expand="" class="s2-demo-box">
                   <div gap="3-3" px="0" top-bottom="base" flex="col" class="container cc-full">
                     <div class="css-marquee-wrapper">
-                      <div style="animation-duration: 25s;" class="css-marquee">
-                        <div data-repeat="x8" class="marquee_content">
+                      <div animation="marquee-50p" style="animation-duration: 30s;" class="css-marquee cc-from-left cc-hover-pause">
+                        <div data-repeat="x6" class="marquee_content cc-gap-lg">
                           <div style="background: #05445E; border-radius: 100%;" class="icon cc-4rem"></div>
                           <div style="background: #189AB4; border-radius: 100%;" class="icon cc-4rem"></div>
                           <div style="background: #75E6DA; border-radius: 100%;" class="icon cc-4rem"></div>
@@ -1393,16 +1393,24 @@
                       </div>
                     </div>
                     <div class="css-marquee-wrapper">
-                      <div style="animation-duration: 15s;" class="css-marquee cc-from-right">
+                      <div animation="marquee" style="animation-duration: 12s;" class="css-marquee cc-hover-pause">
                         <div class="marquee_content">
                           <div>This is a marquee animation using CSS. You can override the default speed by using the <code>animation-duration</code> property.</div>
                         </div>
                       </div>
                     </div>
                     <div class="css-marquee-wrapper">
-                      <div style="padding-left: 100%; white-space: nowrap;" animation="marquee200p">
+                      <div animation="marquee" class="css-marquee">
                         <div class="marquee_content">
-                          <div>This is also a marquee animation using CSS. This one is configured by adding the <span class="tag-label cc-attribute">animation=&quot;marquee&quot;</span> or <span class="tag-label cc-attribute">animation=&quot;marquee200p&quot;</span> attribute. Pause on hover is not added.</div>
+                          <div>This is another a marquee animation using CSS. It can be configured by using the <span class="tag-label cc-attribute">animation=&quot;marquee&quot;</span> (default) or <span class="tag-label cc-attribute">animation=&quot;marquee-50p&quot;</span> attribute.</div>
+                          <div>No hover and pause in this example.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="css-marquee-wrapper">
+                      <div animation="marquee" animation-direction="reverse" class="css-marquee cc-hover-pause">
+                        <div class="marquee_content">
+                          <div>Apply the attribute <span class="tag-label cc-attribute">animation-direction=&quot;reverse&quot;</span> to change the direction of the marquee.</div>
                         </div>
                       </div>
                     </div>
@@ -1438,7 +1446,7 @@
                     <div gap="3-3" flex="col" class="container cc-10c">
                       <div class="image-bs">
                         <div for-data="true" class="beer-slider">
-                          <div class="beer-reveal"><img sizes="(max-width: 479px) 43vw, (max-width: 991px) 36vw, 50vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image-bs_reveal"></div><img sizes="(max-width: 479px) 86vw, (max-width: 767px) 72vw, (max-width: 991px) 71vw, 100vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern" src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" class="image-bs_base">
+                          <div class="beer-reveal"><img sizes="(max-width: 479px) 43vw, (max-width: 991px) 36vw, 50vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image-bs_reveal"></div><img sizes="(max-width: 479px) 86vw, (max-width: 767px) 72vw, (max-width: 991px) 71vw, 100vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" class="image-bs_base">
                           <div class="beer-range"></div><span class="beer-handle"></span>
                         </div>
                       </div>
@@ -1474,7 +1482,7 @@
                     <div class="w-layout-blockcontainer container w-container">
                       <div class="cols-layout cc-vflex-at-md">
                         <div class="col cc-45p">
-                          <div class="image-wrapper"><img sizes="(max-width: 479px) 86vw, (max-width: 991px) 87vw, 45vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
+                          <div class="image-wrapper"><img sizes="(max-width: 479px) 86vw, (max-width: 991px) 87vw, 45vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                         <div class="col cc-45p">
                           <div class="title-wrapper">
@@ -1526,7 +1534,7 @@
                           </div>
                         </div>
                         <div class="col cc-45p">
-                          <div class="image-wrapper"><img sizes="(max-width: 479px) 86vw, (max-width: 991px) 87vw, 45vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
+                          <div class="image-wrapper"><img sizes="(max-width: 479px) 86vw, (max-width: 991px) 87vw, 45vw" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                       </div>
                     </div>
@@ -2542,12 +2550,17 @@
   <!--  Example: [data-repeat="x6"]  -->
   <!--  Move to global custom "Footer code" if it is useful for the whole site.  -->
   <script>
-      document.querySelectorAll("[data-repeat]").forEach(function(element) {
-        const repeatCount = parseInt(element.getAttribute("data-repeat")?.substring(1));
-        if (isNaN(repeatCount) || repeatCount < 1) return; // skip if repeat count is invalid
+      document.querySelectorAll("[data-repeat]").forEach((element) => {
+        const repeatValue = element.dataset.repeat;
+        const repeatCount = parseInt(repeatValue?.substring(1));
+        if (isNaN(repeatCount) || repeatCount < 1) return;
+        const parent = element.parentNode;
+        let referenceNode = element; // start inserting
         for (let i = 1; i < repeatCount; i++) {
           const clone = element.cloneNode(true);
-          element.parentNode.insertBefore(clone, element.nextSibling);
+          clone.setAttribute("aria-hidden", "true");
+          parent.insertBefore(clone, referenceNode.nextSibling);
+          referenceNode = clone; // update ref for proper ordering
         }
       });
     </script>
