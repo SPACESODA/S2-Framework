@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 25 2025 09:28:29 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Feb 26 2025 01:26:24 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -32,11 +32,6 @@
   <meta property="og:locale" content="en_US">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="format-detection" content="telephone=no">
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.documentElement.setAttribute("lang", "en-US");
-      });
-    </script>
 </head>
 <body dir="" theme-change="false" class="body">
   <div data-nosnippet="true" s2="style-guide-only" class="delete-me cc-clone-cta">
@@ -194,6 +189,16 @@
   <div class="delete-me cc-dark">
     <section class="section cc-bottom-sm">
       <div class="w-layout-blockcontainer container w-container">
+        <div style="display: inline-block; position: relative; top: calc(-1 * var(--_sizes---spacing--base));">
+          <a aria-label="Back to Cover Page" href="../index.html" class="button-link w-inline-block">
+            <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                <rect width="100%" height="100%" fill="none"></rect>
+                <polyline points="80 120 32 168 80 216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                <path d="M80,56h88a56,56,0,0,1,56,56h0a56,56,0,0,1-56,56H32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+              </svg></div>
+            <div>Back</div>
+          </a>
+        </div>
         <div class="title-wrapper">
           <div class="title-wrapper">
             <h1 class="sg-hero-heading">S2 Framework for Templates</h1>
@@ -212,8 +217,10 @@
             </a>
             <a aria-label="Starter Page Structure" href="#starter" class="button cc-inverted w-inline-block">
               <div>Starter Page Structure</div>
-              <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 11.702L16.6755 9.38827L11.3378 14.751L11.3153 -3.35908e-07L8.03559 0.00329578L8.05789 14.6931L2.7608 9.42074L0.447111 11.7453L9.74532 21L19 11.702Z" fill="currentColor"></path>
+              <div class="icon cc-1em w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                  <rect width="100%" height="100%" fill="none"></rect>
+                  <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <polyline points="56 144 128 216 200 144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
                 </svg></div>
             </a>
           </div>
@@ -223,8 +230,33 @@
         </div>
       </div>
     </section>
+    <a href="#style-guide" aria-label="Continue" class="sg-continue w-inline-block">
+      <div class="icon cc-image-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 98 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M97.8007 1.12868C98.2819 2.12293 97.866 3.31901 96.8717 3.80021L48.4685 27.2266L1.1134 3.79249C0.123412 3.30259 -0.281984 2.1029 0.20792 1.11292C0.697824 0.122936 1.89751 -0.282459 2.88749 0.207445L48.488 22.7733L95.1292 0.199731C96.1234 -0.281468 97.3195 0.134438 97.8007 1.12868Z" fill="currentColor"></path>
+        </svg></div>
+    </a>
   </div>
   <div id="top" style="background: var(--s2--surface);" data-nosnippet="true" class="page">
+    <div class="code w-embed w-script"><!--  
+  Replace Webflow's JS smooth scroll with native CSS smooth scrolling,
+  so that the scroll-margin-top property works as intended.
+ -->
+      <!--  This is optional and applies to this page only.  -->
+      <script>
+          var Webflow = Webflow || [];
+          Webflow.push(function() {
+            $(document).off("click.wf-scroll");
+          });
+        </script>
+      <style>
+          html {
+            scroll-behavior: smooth;
+          }
+        </style>
+    </div>
+    <div class="u-hide">
+      <div class="u-scroll-margin-top"></div>
+    </div>
     <section id="style-guide" class="section cc-bottom-sm">
       <div class="w-layout-blockcontainer container w-container">
         <div class="title-wrapper">
@@ -232,15 +264,37 @@
             <h1 class="sg-hero-heading">Style Guide</h1>
           </div>
           <div class="text-wrapper">
-            <p>Style guide and elements for the website.<br>Based on the <a href="https://s2-framework.webflow.io" target="_blank">S2 Framework</a>.</p>
+            <p>Style guide and elements for the website.</p>
+            <p>Powered by the <a href="https://s2-framework.webflow.io" target="_blank">S2 Framework</a>.</p>
           </div>
         </div>
       </div>
     </section>
+    <div data-animation="default" class="sg-nav cc-page-nav w-nav" data-easing2="ease" data-easing="ease" data-collapse="small" role="banner" data-duration="400" data-doc-height="1" z-index="top">
+      <div class="sg-nav_container w-container">
+        <div class="sg-main-nav-inner">
+          <nav role="navigation" class="sg-main-nav_menu cc-to-left w-nav-menu">
+            <a href="#typography" class="sg-main-nav_link cc-page-nav w-nav-link">Typography</a>
+            <a href="#presets" class="sg-main-nav_link cc-page-nav w-nav-link">Presets</a>
+            <a href="#structure" class="sg-main-nav_link cc-page-nav w-nav-link">Structure</a>
+            <a href="#utilities" class="sg-main-nav_link cc-page-nav w-nav-link">Utilities</a>
+            <a href="#elements" class="sg-main-nav_link cc-page-nav w-nav-link">UI Elements</a>
+            <a href="#forms" class="sg-main-nav_link cc-page-nav w-nav-link">Forms</a>
+            <a href="#column" class="sg-main-nav_link cc-page-nav w-nav-link">Column Layouts</a>
+            <a href="#richtext" class="sg-main-nav_link cc-page-nav w-nav-link">Rich Text</a>
+          </nav>
+          <div class="sg-nav_button w-nav-button">
+            <div class="burger-wrapper">
+              <div class="burger-icon cc-text w-embed">Menu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="block">
       <section id="basics" class="section cc-top-sm">
         <div class="w-layout-blockcontainer container w-container">
-          <div id="typography" class="sg-group">
+          <div id="typography" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
               <h2>Typography</h2>
             </div>
@@ -827,7 +881,7 @@
               </div>
             </section>
           </div>
-          <div id="presets" class="sg-group">
+          <div id="presets" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
               <h2>Presets</h2>
             </div>
@@ -1002,7 +1056,7 @@
                   <h3>Palettes</h3>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>Use a <a href="https://www.tints.dev/?neutral=7E7E7E&amp;brand=0145AB&amp;brandsub=D8009A&amp;accent=F3BB09&amp;primary=0145AB&amp;secondary=00B499" target="_blank">generator</a> to easily create color steps. Edit here or on the Variables panel. The base of a color is usually &quot;500&quot;.</p>
+                  <p>Use a <a href="https://www.tints.dev/?neutral=7E7E7E&amp;brand=0145AB&amp;brandsub=D8009A&amp;accent=F3BB09&amp;primary=0145AB&amp;secondary=00B499" target="_blank">generator</a> to easily create color steps, then edit here or on the Variables panel. The base color is usually &quot;500&quot;.</p>
                 </div>
               </div>
               <div class="block">
@@ -1473,7 +1527,7 @@
               </div>
             </section>
           </div>
-          <div id="structure" class="sg-group">
+          <div id="structure" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
               <h2>Structure</h2>
             </div>
@@ -2002,7 +2056,7 @@
               </div>
             </section>
           </div>
-          <div id="utilities" class="sg-group">
+          <div id="utilities" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
               <div class="title-wrapper">
                 <h2>Utilities</h2>
@@ -2638,9 +2692,9 @@
       </section>
       <section id="ui-elements" class="section cc-top-sm">
         <div class="w-layout-blockcontainer container w-container">
-          <div id="elements" class="sg-group">
+          <div id="elements" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
-              <h2>Elements</h2>
+              <h2>UI Elements</h2>
             </div>
             <section id="buttons" class="section">
               <div class="title-wrapper">
@@ -2678,7 +2732,7 @@
                 <div class="block">
                   <div class="button-wrapper cc-center">
                     <a href="#" class="button cc-sm w-inline-block">
-                      <div>Learn more</div>
+                      <div>Explore</div>
                     </a>
                   </div>
                 </div>
@@ -2760,7 +2814,7 @@
                 <div class="block">
                   <div class="button-wrapper cc-center">
                     <a href="#" class="button cc-sm cc-outline w-inline-block">
-                      <div>Learn more</div>
+                      <div>Explore</div>
                     </a>
                   </div>
                 </div>
@@ -2776,7 +2830,7 @@
                 <div class="block">
                   <div class="button-wrapper cc-center">
                     <a href="#" class="button cc-xs cc-outline w-inline-block">
-                      <div>Learn more</div>
+                      <div>Go</div>
                     </a>
                   </div>
                 </div>
@@ -2839,7 +2893,7 @@
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="tag-label cc-component">Button-Outline</div>
+                    <div class="tag-label cc-component">Button: Outline</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2861,7 +2915,7 @@
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="tag-label cc-component">Button-Text</div>
+                    <div class="tag-label cc-component">Button: Text</div>
                   </div>
                 </div>
                 <div class="block">
@@ -2883,7 +2937,7 @@
               <div class="sg-element">
                 <div class="sg-tags">
                   <div class="tag-wrapper">
-                    <div class="tag-label cc-component">Button-Link</div>
+                    <div class="tag-label cc-component">Button: Link</div>
                   </div>
                 </div>
                 <div class="block">
@@ -3509,7 +3563,7 @@
               </div>
             </section>
           </div>
-          <div id="forms" class="sg-group">
+          <div id="forms" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
               <h2>Forms</h2>
             </div>
@@ -3700,566 +3754,568 @@
           </div>
         </div>
       </section>
-      <section id="column" class="section cc-top-sm">
+      <section class="section cc-top-sm">
         <div class="w-layout-blockcontainer container w-container">
-          <div class="title-wrapper">
+          <div id="column" class="sg-group u-scroll-margin-top">
             <div class="title-wrapper">
-              <div id="column" class="sg-anchor"></div>
-              <h1>Column Layouts</h1>
-            </div>
-          </div>
-          <div id="col-wrapper" class="section cc-bottom-sm">
-            <div class="title-wrapper">
-              <h2 class="h4">col-wrapper</h2>
-            </div>
-            <div class="sg-element cc-block">
-              <div class="sg-tags cc-width-auto">
-                <div class="tag-wrapper">
-                  <div class="tag-label">col-wrapper</div>
-                </div>
-                <div class="sg-note cc-width-auto">The <span class="tag-label">col-wrapper</span> is designed for wrapping <span class="tag-label">col</span> <span class="tag-label">cc-span-1</span> to <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-1c</span> to <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span>. Here are a few examples:</div>
-              </div>
-              <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
-                  <div class="col-wrapper">
-                    <div class="col cc-span-2">
-                      <div class="u-bg-pattern cc-with-border">-span-2</div>
-                    </div>
-                    <div class="col cc-span-3">
-                      <div class="u-bg-pattern cc-with-border">-span-3</div>
-                    </div>
-                  </div>
-                  <div class="col-wrapper">
-                    <div class="col cc-span-1">
-                      <div class="u-bg-pattern cc-with-border">-span-1</div>
-                    </div>
-                    <div class="col cc-span-2">
-                      <div class="u-bg-pattern cc-with-border">-span-2</div>
-                    </div>
-                    <div class="col cc-span-4">
-                      <div class="u-bg-pattern cc-with-border">-span-4</div>
-                    </div>
-                  </div>
-                  <div class="col-wrapper">
-                    <div class="col cc-4c">
-                      <div class="u-bg-pattern cc-with-border">-4c</div>
-                    </div>
-                    <div class="col cc-6c">
-                      <div class="u-bg-pattern cc-with-border">-6c</div>
-                    </div>
-                    <div class="col cc-2c">
-                      <div class="u-bg-pattern cc-with-border">-2c</div>
-                    </div>
-                  </div>
-                  <div class="col-wrapper">
-                    <div class="col cc-grow">
-                      <div class="u-bg-pattern cc-with-border">-grow</div>
-                    </div>
-                    <div class="col cc-grow">
-                      <div class="u-bg-pattern cc-with-border">-grow</div>
-                    </div>
-                    <div class="col cc-grow">
-                      <div class="u-bg-pattern cc-with-border">-grow</div>
-                    </div>
-                  </div>
-                </div>
+              <div class="title-wrapper">
+                <h2>Column Layouts</h2>
               </div>
             </div>
-            <div class="block">
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
-                  <div class="tag-wrapper">
-                    <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-12</div>
-                  </div>
-                  <div class="sg-note cc-width-auto">for base: 12 cols</div>
-                </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-2">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-3">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-4">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-5">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-6">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-7">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-8">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-9">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-10">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-11">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-12">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                  </div>
-                </div>
+            <div id="col-wrapper" class="section cc-bottom-sm">
+              <div class="title-wrapper">
+                <h2 class="h4">col-wrapper</h2>
               </div>
               <div class="sg-element cc-block">
                 <div class="sg-tags cc-width-auto">
                   <div class="tag-wrapper">
-                    <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1-md</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-8-md</div>
+                    <div class="tag-label">col-wrapper</div>
                   </div>
-                  <div class="sg-note cc-width-auto">for tablet: 8 cols</div>
+                  <div class="sg-note cc-width-auto">The <span class="tag-label">col-wrapper</span> is designed for wrapping <span class="tag-label">col</span> <span class="tag-label">cc-span-1</span> to <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-1c</span> to <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span>. Here are a few examples:</div>
                 </div>
                 <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                  <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                    <div class="col-wrapper">
+                      <div class="col cc-span-2">
+                        <div class="u-bg-pattern cc-with-border">-span-2</div>
+                      </div>
+                      <div class="col cc-span-3">
+                        <div class="u-bg-pattern cc-with-border">-span-3</div>
+                      </div>
                     </div>
-                    <div class="col cc-span-2-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                    <div class="col-wrapper">
+                      <div class="col cc-span-1">
+                        <div class="u-bg-pattern cc-with-border">-span-1</div>
+                      </div>
+                      <div class="col cc-span-2">
+                        <div class="u-bg-pattern cc-with-border">-span-2</div>
+                      </div>
+                      <div class="col cc-span-4">
+                        <div class="u-bg-pattern cc-with-border">-span-4</div>
+                      </div>
                     </div>
-                    <div class="col cc-span-3-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                    <div class="col-wrapper">
+                      <div class="col cc-4c">
+                        <div class="u-bg-pattern cc-with-border">-4c</div>
+                      </div>
+                      <div class="col cc-6c">
+                        <div class="u-bg-pattern cc-with-border">-6c</div>
+                      </div>
+                      <div class="col cc-2c">
+                        <div class="u-bg-pattern cc-with-border">-2c</div>
+                      </div>
                     </div>
-                    <div class="col cc-span-4-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-5-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-6-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-7-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-8-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                    <div class="col-wrapper">
+                      <div class="col cc-grow">
+                        <div class="u-bg-pattern cc-with-border">-grow</div>
+                      </div>
+                      <div class="col cc-grow">
+                        <div class="u-bg-pattern cc-with-border">-grow</div>
+                      </div>
+                      <div class="col cc-grow">
+                        <div class="u-bg-pattern cc-with-border">-grow</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
+              <div class="block">
+                <div class="sg-element cc-block">
+                  <div class="sg-tags cc-width-auto">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">col</div>
+                      <div class="tag-label">cc-span-1</div>
+                      <div>~</div>
+                      <div class="tag-label">cc-span-12</div>
+                    </div>
+                    <div class="sg-note cc-width-auto">for base: 12 cols</div>
+                  </div>
+                  <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                      <div class="col cc-span-1">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-2">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-3">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-4">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-5">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-6">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-7">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-8">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-9">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-10">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-11">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-12">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element cc-block">
+                  <div class="sg-tags cc-width-auto">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">col</div>
+                      <div class="tag-label">cc-span-1-md</div>
+                      <div>~</div>
+                      <div class="tag-label">cc-span-8-md</div>
+                    </div>
+                    <div class="sg-note cc-width-auto">for tablet: 8 cols</div>
+                  </div>
+                  <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                      <div class="col cc-span-1-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-2-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-3-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-4-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-5-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-6-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-7-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-8-md">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element cc-block">
+                  <div class="sg-tags cc-width-auto">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">col</div>
+                      <div class="tag-label">cc-span-1-sm</div>
+                      <div>~</div>
+                      <div class="tag-label">cc-span-6-sm</div>
+                    </div>
+                    <div class="sg-note cc-width-auto">for landscape: 6 cols</div>
+                  </div>
+                  <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                      <div class="col cc-span-1-sm">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-2-sm">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-3-sm">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-4-sm">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-5-sm">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-6-sm">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element cc-block">
+                  <div class="sg-tags cc-width-auto">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">col</div>
+                      <div class="tag-label">cc-span-1-xs</div>
+                      <div>~</div>
+                      <div class="tag-label">cc-span-4-xs</div>
+                    </div>
+                    <div class="sg-note cc-width-auto">for mobile: 4 cols</div>
+                  </div>
+                  <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                      <div class="col cc-span-1-xs">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-2-xs">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-3-xs">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-span-4-xs">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element cc-block">
+                  <div class="sg-tags cc-width-auto">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">col</div>
+                      <div class="tag-label">cc-1c</div>
+                      <div>~</div>
+                      <div class="tag-label">cc-12c</div>
+                    </div>
+                    <div class="sg-note cc-width-auto">12 cols at any width</div>
+                  </div>
+                  <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                      <div class="col cc-1c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-2c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-3c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-4c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-5c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-6c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-7c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-8c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-9c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-10c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-11c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                      <div class="col cc-12c">
+                        <div class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cols-layout" class="section cc-bottom-sm">
+              <div class="title-wrapper">
+                <h2 class="h4">cols-layout</h2>
+              </div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cols-layout</div>
+                  </div>
                   <div class="tag-wrapper">
                     <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1-sm</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-6-sm</div>
+                    <div class="tag-label">cc-aside</div>
                   </div>
-                  <div class="sg-note cc-width-auto">for landscape: 6 cols</div>
-                </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-2-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-3-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-4-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-5-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-6-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
                   <div class="tag-wrapper">
                     <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1-xs</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-4-xs</div>
+                    <div class="tag-label">cc-main</div>
                   </div>
-                  <div class="sg-note cc-width-auto">for mobile: 4 cols</div>
                 </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                <div class="block">
+                  <div class="cols-layout">
+                    <div class="col cc-main cc-px-0">
+                      <div class="u-bg-pattern cc-with-border">main</div>
                     </div>
-                    <div class="col cc-span-2-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                    <aside class="col cc-aside cc-on-right">
+                      <div class="u-bg-pattern cc-with-border">aside</div>
+                    </aside>
+                  </div>
+                  <div class="cols-layout">
+                    <aside class="col cc-aside cc-on-left">
+                      <div class="u-bg-pattern cc-with-border">aside</div>
+                    </aside>
+                    <div class="col cc-main cc-px-0">
+                      <div class="u-bg-pattern cc-with-border">main</div>
                     </div>
-                    <div class="col cc-span-3-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                  </div>
+                  <div class="cols-layout">
+                    <div class="col cc-main cc-px-0">
+                      <div class="u-bg-pattern cc-with-border">main</div>
                     </div>
-                    <div class="col cc-span-4-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                    <aside class="col cc-aside cc-on-right-lg">
+                      <div class="u-bg-pattern cc-with-border">aside</div>
+                    </aside>
+                  </div>
+                  <div class="cols-layout">
+                    <aside class="col cc-aside cc-on-left-lg">
+                      <div class="u-bg-pattern cc-with-border">aside</div>
+                    </aside>
+                    <div class="col cc-main cc-px-0">
+                      <div class="u-bg-pattern cc-with-border">main</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">cols-layout</div>
+                    <div class="tag-label">cc-vflex-at-md</div>
+                  </div>
                   <div class="tag-wrapper">
                     <div class="tag-label">col</div>
-                    <div class="tag-label">cc-1c</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-12c</div>
+                    <div class="tag-label">cc-45p</div>
                   </div>
-                  <div class="sg-note cc-width-auto">12 cols at any width</div>
                 </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-1c">
+                <div class="block">
+                  <div class="cols-layout cc-vflex-at-md">
+                    <div class="col cc-45p">
                       <div class="u-bg-pattern cc-with-border">col</div>
                     </div>
-                    <div class="col cc-2c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-3c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-4c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-5c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-6c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-7c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-8c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-9c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-10c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-11c">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-12c">
+                    <div class="col cc-45p">
                       <div class="u-bg-pattern cc-with-border">col</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div id="cols-layout" class="section cc-bottom-sm">
-            <div class="title-wrapper">
-              <h2 class="h4">cols-layout</h2>
-            </div>
-            <div class="sg-element">
-              <div class="sg-tags">
-                <div class="tag-wrapper">
-                  <div class="tag-label">cols-layout</div>
-                </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-aside</div>
-                </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-main</div>
-                </div>
+            <div id="grid-cols" class="section cc-bottom-sm">
+              <div class="title-wrapper">
+                <h2 class="h4">grid-cols</h2>
               </div>
-              <div class="block">
-                <div class="cols-layout">
-                  <div class="col cc-main cc-px-0">
-                    <div class="u-bg-pattern cc-with-border">main</div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">grid-cols</div>
                   </div>
-                  <aside class="col cc-aside cc-on-right">
-                    <div class="u-bg-pattern cc-with-border">aside</div>
-                  </aside>
-                </div>
-                <div class="cols-layout">
-                  <aside class="col cc-aside cc-on-left">
-                    <div class="u-bg-pattern cc-with-border">aside</div>
-                  </aside>
-                  <div class="col cc-main cc-px-0">
-                    <div class="u-bg-pattern cc-with-border">main</div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">col</div>
+                    <div class="tag-label">cc-content</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">col</div>
+                    <div class="tag-label">cc-p-responsive</div>
                   </div>
                 </div>
-                <div class="cols-layout">
-                  <div class="col cc-main cc-px-0">
-                    <div class="u-bg-pattern cc-with-border">main</div>
-                  </div>
-                  <aside class="col cc-aside cc-on-right-lg">
-                    <div class="u-bg-pattern cc-with-border">aside</div>
-                  </aside>
-                </div>
-                <div class="cols-layout">
-                  <aside class="col cc-aside cc-on-left-lg">
-                    <div class="u-bg-pattern cc-with-border">aside</div>
-                  </aside>
-                  <div class="col cc-main cc-px-0">
-                    <div class="u-bg-pattern cc-with-border">main</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sg-element">
-              <div class="sg-tags">
-                <div class="tag-wrapper">
-                  <div class="tag-label">cols-layout</div>
-                  <div class="tag-label">cc-vflex-at-md</div>
-                </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-45p</div>
-                </div>
-              </div>
-              <div class="block">
-                <div class="cols-layout cc-vflex-at-md">
-                  <div class="col cc-45p">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                  <div class="col cc-45p">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="grid-cols" class="section cc-bottom-sm">
-            <div class="title-wrapper">
-              <h2 class="h4">grid-cols</h2>
-            </div>
-            <div class="sg-element">
-              <div class="sg-tags">
-                <div class="tag-wrapper">
-                  <div class="tag-label">grid-cols</div>
-                </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-content</div>
-                </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-p-responsive</div>
-                </div>
-              </div>
-              <div class="block">
-                <div class="grid-cols">
-                  <div class="col cc-content">
-                    <div class="title-wrapper">
-                      <h4>Heading</h4>
+                <div class="block">
+                  <div class="grid-cols">
+                    <div class="col cc-content">
+                      <div class="title-wrapper">
+                        <h4>Heading</h4>
+                      </div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique.</p>
-                  </div>
-                  <div class="col cc-p-responsive">
-                    <div style="min-height: 12rem;" class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sg-element">
-              <div class="sg-tags">
-                <div class="tag-wrapper">
-                  <div class="tag-label">grid-cols</div>
-                  <div class="tag-label">cc-3col</div>
-                </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-p-0</div>
-                </div>
-              </div>
-              <div class="block">
-                <div class="grid-cols cc-3col">
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
+                    <div class="col cc-p-responsive">
+                      <div style="min-height: 12rem;" class="u-bg-pattern cc-with-border">col</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="sg-element">
-              <div class="sg-tags">
-                <div class="tag-wrapper">
-                  <div class="tag-label">grid-cols</div>
-                  <div class="tag-label">cc-4col</div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">grid-cols</div>
+                    <div class="tag-label">cc-3col</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">col</div>
+                    <div class="tag-label">cc-p-0</div>
+                  </div>
                 </div>
-                <div class="tag-wrapper">
-                  <div class="tag-label">col</div>
-                  <div class="tag-label">cc-p-0</div>
-                </div>
-              </div>
-              <div class="block">
-                <div class="grid-cols cc-4col">
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
-                  </div>
-                  <div class="col cc-p-0">
-                    <div class="u-bg-pattern cc-with-border">col</div>
+                <div class="block">
+                  <div class="grid-cols cc-3col">
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="sg-element">
-              <div class="sg-tags">
-                <div class="tag-wrapper">
-                  <div class="tag-label">grid-cols</div>
-                  <div class="tag-label">cc-row</div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">grid-cols</div>
+                    <div class="tag-label">cc-4col</div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <div class="tag-label">col</div>
+                    <div class="tag-label">cc-p-0</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="grid-cols cc-4col">
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
+                    <div class="col cc-p-0">
+                      <div class="u-bg-pattern cc-with-border">col</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="block">
-                <div class="grid-cols cc-row">
-                  <div class="u-bg-pattern cc-with-border"></div>
-                  <div class="u-bg-pattern cc-with-border"></div>
-                  <div class="u-bg-pattern cc-with-border"></div>
-                  <div class="u-bg-pattern cc-with-border"></div>
+              <div class="sg-element">
+                <div class="sg-tags">
+                  <div class="tag-wrapper">
+                    <div class="tag-label">grid-cols</div>
+                    <div class="tag-label">cc-row</div>
+                  </div>
+                </div>
+                <div class="block">
+                  <div class="grid-cols cc-row">
+                    <div class="u-bg-pattern cc-with-border"></div>
+                    <div class="u-bg-pattern cc-with-border"></div>
+                    <div class="u-bg-pattern cc-with-border"></div>
+                    <div class="u-bg-pattern cc-with-border"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="richtext" class="section cc-top-sm">
+      <section class="section cc-top-sm">
         <div class="w-layout-blockcontainer container w-container">
-          <div class="title-wrapper">
-            <h2>Rich Text Element</h2>
-          </div>
-          <div class="sg-group">
-            <div no-scrollbar="" class="sg-h-scroll cc-1fr">
-              <div class="u-vflex-left-top">
-                <div style="gap: 4rem;" class="u-hflex-left-top">
-                  <div class="sg-richtext-demo">
-                    <div class="sg-tags cc-width-auto">
-                      <div class="tag-wrapper">
-                        <div class="tag-label">richtext</div>
+          <div id="richtext" class="sg-group u-scroll-margin-top">
+            <div class="title-wrapper">
+              <h2>Rich Text Element</h2>
+            </div>
+            <div class="section cc-top-bottom-sm">
+              <div no-scrollbar="" class="sg-h-scroll cc-1fr">
+                <div class="u-vflex-left-top">
+                  <div style="gap: 4rem;" class="u-hflex-left-top">
+                    <div class="sg-richtext-demo">
+                      <div class="sg-tags cc-width-auto">
+                        <div class="tag-wrapper">
+                          <div class="tag-label">richtext</div>
+                        </div>
+                        <div class="sg-note">default class to style rich text<br></div>
                       </div>
-                      <div class="sg-note">default class to style rich text<br></div>
+                    </div>
+                    <div class="sg-richtext-demo">
+                      <div class="sg-tags cc-width-auto">
+                        <div class="tag-wrapper">
+                          <div class="tag-label">richtext</div>
+                          <div class="tag-label">cc-richtext-lg</div>
+                        </div>
+                        <div class="sg-note">Adding combo class to rich text elements can be tricky. You have to create and add styles to a combo class first.</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="sg-richtext-demo">
-                    <div class="sg-tags cc-width-auto">
-                      <div class="tag-wrapper">
-                        <div class="tag-label">richtext</div>
-                        <div class="tag-label">cc-richtext-lg</div>
-                      </div>
-                      <div class="sg-note">Adding combo class to rich text elements can be tricky. You have to create and add styles to a combo class first.</div>
-                    </div>
-                  </div>
-                </div>
-                <div style="gap: 4rem;" class="u-hflex-left-top">
-                  <div class="sg-richtext-demo cc-scrollable">
-                    <div class="richtext w-richtext">
-                      <h1>Heading 1</h1>
-                      <h2>Heading 2</h2>
-                      <h3>Heading 3</h3>
-                      <h4>Heading 4</h4>
-                      <h5>Heading 5</h5>
-                      <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
-                      </p>
-                      <p>Styling lists:</p>
-                      <ul role="list">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet. <ul role="list">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                                  </ul>
-                                </li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <ol start="" role="list">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                      </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
-                      <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
-                      <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
-                      <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>This is a <strong>short</strong> caption.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>This is a caption.</figcaption>
-                      </figure>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-normal w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>Align to right and also have a caption.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+                  <div style="gap: 4rem;" class="u-hflex-left-top">
+                    <div no-scrollbar="" class="sg-richtext-demo cc-scrollable">
+                      <div class="richtext w-richtext">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                        <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                        <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
+                        <p>
+                          <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
+                        </p>
+                        <p>Styling lists:</p>
+                        <ul role="list">
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                          <li>Lorem ipsum dolor sit amet. <ul role="list">
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
+                                      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                                    </ul>
+                                  </li>
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <ol start="" role="list">
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          <li>Lorem ipsum dolor sit amet.</li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
+                        <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                        <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                        <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
+                        <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
+                        <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>This is a <strong>short</strong> caption.</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>This is a caption.</figcaption>
+                        </figure>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-normal w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>Align to right and also have a caption.</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -4267,8 +4323,8 @@
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
@@ -4276,93 +4332,93 @@
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="sg-richtext-demo cc-scrollable">
-                    <div class="richtext cc-richtext-lg w-richtext">
-                      <h1>Heading 1</h1>
-                      <h2>Heading 2</h2>
-                      <h3>Heading 3</h3>
-                      <h4>Heading 4</h4>
-                      <h5>Heading 5</h5>
-                      <h6>Heading 6</h6>
-                      <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
-                      <p>
-                        <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
-                      </p>
-                      <p>Styling lists:</p>
-                      <ul role="list">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet. <ul role="list">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                                  </ul>
-                                </li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <ol start="" role="list">
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                      </ol>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
-                      <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
-                      <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
-                      <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
-                      <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
-                      <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>This is a <strong>short</strong> caption.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>This is a caption.</figcaption>
-                      </figure>
-                      <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-normal w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                      <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
-                        <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
-                        <figcaption>Align to right and also have a caption.</figcaption>
-                      </figure>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
+                    <div no-scrollbar="" class="sg-richtext-demo cc-scrollable">
+                      <div class="richtext cc-richtext-lg w-richtext">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                        <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vain eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                        <p><strong>Bold style</strong>, <em>italic style</em> and <strong><em>bold italic style</em></strong>.</p>
+                        <p>
+                          <a href="#">Link</a> inside rich text element. <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod.
+                        </p>
+                        <p>Styling lists:</p>
+                        <ul role="list">
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                          <li>Lorem ipsum dolor sit amet. <ul role="list">
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <ul role="list">
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<ul role="list">
+                                      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                                    </ul>
+                                  </li>
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <ol start="" role="list">
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          <li>Lorem ipsum dolor sit amet.</li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristiqulla.</blockquote>
+                        <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                        <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                        <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
+                        <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
+                        <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>This is a <strong>short</strong> caption.</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>This is a caption.</figcaption>
+                        </figure>
+                        <figure class="w-richtext-align-center w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-normal w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
+                          <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                          <figcaption>Align to right and also have a caption.</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -4370,8 +4426,8 @@
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">li</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span></code></pre>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#fefefe;color:#545454;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">h3</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">4</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
@@ -4379,8 +4435,9 @@
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4422,7 +4479,7 @@
             </nav>
             <div class="main-nav_button cc-primary w-nav-button">
               <div class="burger-wrapper">
-                <div class="burger-icon w-embed">Menu</div>
+                <div class="burger-icon cc-text w-embed">Menu</div>
               </div>
             </div>
           </div>
