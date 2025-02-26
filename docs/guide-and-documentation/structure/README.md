@@ -1,6 +1,0 @@
----
-icon: list-tree
----
-
-# Structure
-
