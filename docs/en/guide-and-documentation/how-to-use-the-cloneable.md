@@ -12,7 +12,7 @@ After [cloning](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=
    1. Make the page **Home** your homepage.
    2. Delete the `DELETE-ME` section on your new homepage.
    3. Add the <mark style="color:green;">**Page Template**</mark> component and click **Unlink instance** to make it editable.
-   4. Change the **S2 Framework Cover** page to "draft" or remove it.
+   4. Change the **S2 Framework Cover** page into "Draft", or simply delete it.
 2. **Configure the Variables**
    * Set up the colors of your Palettes in the Variables panel.
    * Configure your Font Family variables.

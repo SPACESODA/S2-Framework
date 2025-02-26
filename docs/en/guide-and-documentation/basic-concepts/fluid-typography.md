@@ -1,8 +1,8 @@
 ---
+icon: dolphin
 description: >-
   Fluid Typography (or Fluid Responsive) is an idea that font size changes
   fluidly with the screen's width, not just changes at breakpoints.
-icon: dolphin
 ---
 
 # Fluid Typography
@@ -13,13 +13,15 @@ The fluid behavior can be achieved nicely using `clamp()` in the font-size prope
 
 To take advantage of both, we can use the open-source tool [Fluid Type Scale](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
 
-Below are the default configurations in the S2 Framework. Once you understand the concept, you can use the tool to adjust the values to fit your design needs easily.
+{% hint style="info" %}
+If you think the default font size in the S2 Cloneable is fine, you can skip this chapter.
+{% endhint %}
 
 
 
 ## Concept
 
-This diagram explains the basic concept of [an Example of a 2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280).
+Once you understand the concept, you can use the tool to adjust the values to fit your design needs easily. This diagram explains the basic concept of [an Example of a 2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280).
 
 <figure><img src="../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
 
@@ -29,7 +31,9 @@ This diagram explains the basic concept of [an Example of a 2-step Fluid Type Sc
 --_text---hero-title--lg: clamp(3.125rem, 10.217vi + 0.826rem, 9rem);
 ```
 
-Here is another example, which is a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). It will be helpful if you want to set up fluid typography for a particular class.
+Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280).
+
+It will be helpful if you want to set up fluid typography for a particular class.
 
 {% hint style="info" %}
 **How to update `clamp()` values according to my design needs?**
@@ -42,6 +46,8 @@ In most cases, all you have to change are the "Base font sizes" in the Fluid Typ
 
 
 ## Text
+
+Below are the default configurations in the S2 Framework.
 
 <mark style="color:purple;">**`Body`**</mark>, **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 

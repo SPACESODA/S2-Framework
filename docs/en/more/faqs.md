@@ -99,3 +99,25 @@ Besides, S2 is a framework by nature. This approach ensures it remains simple an
 
 </details>
 
+<details>
+
+<summary>Is using the S2 framework compatible with other frameworks, especially Client-First?</summary>
+
+Yes, there won't be any conflict when you add or copy and paste components, layouts, scripts and community stuff that use other practices or frameworks into a site built with S2.
+
+In fact, the main difference is in class naming conventions. You can leave the names of such classes as they are, or rename them according to S2's conventions.
+
+</details>
+
+<details>
+
+<summary>There are things I do not need for my website. Can I remove them?</summary>
+
+Yes, absolutely.
+
+While you can remove unnecessary stuff from the cloned S2 framework (and clean up the styles) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around. Keeping them in the styles guild has very, very minimal impact on your site's performance.
+
+</details>
+
+
+

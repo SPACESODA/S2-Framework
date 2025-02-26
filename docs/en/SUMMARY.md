@@ -13,7 +13,6 @@
   * [Use Utility Classes Wisely](guide-and-documentation/basic-concepts/use-utility-classes-wisely.md)
   * [Units](guide-and-documentation/basic-concepts/units.md)
   * [Fluid Typography](guide-and-documentation/basic-concepts/fluid-typography.md)
-  * [Fluid Typography \[OLD\]](guide-and-documentation/basic-concepts/fluid-typography-old.md)
 * [Variables](guide-and-documentation/variables/README.md)
   * [Colors vs Palettes](guide-and-documentation/variables/colors-vs-palettes.md)
   * [Colors in S2](guide-and-documentation/variables/colors-in-s2.md)
