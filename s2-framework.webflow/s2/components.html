@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Feb 26 2025 01:26:24 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Feb 27 2025 04:00:50 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -294,7 +294,7 @@
       </div>
       <div class="code">
         <div code="css" class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.5.6/webflow/css/s2.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.6.2/webflow/css/s2.min.css">
         </div>
       </div>
       <div code="css" class="css_custom w-embed">
@@ -376,6 +376,12 @@
             body * {
               text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
+            /* custom accessibility styles */
+            input[type="submit"]:focus-visible,
+            input[type="file"]:focus-visible {
+              outline: var(--_sizes---outline--bold) solid var(--colors--focus);
+              outline-offset: var(--_sizes---outline--offset);
+            }
             /* main-nav_button */
             .main-nav_button path {
               transition: transform 300ms ease;
@@ -424,6 +430,10 @@
               inset: 0;
             }
             /* other styles */
+            .input-field.cc-boxed:focus-within {
+              border-color: var(--colors--primary);
+              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
+            }
             .richtext-list ul li::before {
               position: absolute;
               margin-left: -1.65em;
@@ -913,7 +923,7 @@
                           </nav>
                           <div class="main-nav_button w-nav-button">
                             <div class="burger-wrapper">
-                              <div class="burger-icon cc-circle cc-lines w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <div class="burger-icon cc-circle cc-transparent w-embed"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path class="burger-icon_top-line" d="M11 11L21 21" stroke="currentColor" stroke-width="1.4"></path>
                                   <path class="burger-icon_bottom-line" d="M11 21L21 11" stroke="currentColor" stroke-width="1.4"></path>
                                 </svg></div>
@@ -1246,16 +1256,16 @@
                         <div style="height: 4rem" class="spacer-xs"></div>
                       </div>
                     </div>
-                    <div flex="col" gap="1-1" place-items="center" class="u-align-center">
-                      <div opacity="0.5" class="text-sm">Explore all features</div>
-                      <a aria-label="Scroll down" block="" href="#" class="w-inline-block">
-                        <div style="width: 3rem;">
-                          <div opacity="0.5" class="icon cc-image-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 84 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2 2L42 22L82 2" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
-                            </svg></div>
-                        </div>
-                      </a>
-                    </div>
+                    <a aria-label="Continue" href="#" class="continue w-inline-block">
+                      <div position="absolute" style="top: -1rem;" class="u-align-center">
+                        <div line-height="1.25" class="text-sm">Explore all features</div>
+                      </div>
+                      <div style="width: 3rem;">
+                        <div opacity="0.5" class="icon cc-image-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 84 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L42 22L82 2" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+                          </svg></div>
+                      </div>
+                    </a>
                   </section>
                   <div class="s2-demo-expand-button w-embed">
                     <div class="icon" events="none" icon="expand"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1336,8 +1346,9 @@
                 </div>
                 <div class="text-wrapper cc-max-40rem">
                   <p>
-                    <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> is used in the JavaScript version.<br>In the pure CSS version, you can use <span class="tag-label cc-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough for looping.
+                    <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> is used in the JavaScript version.
                   </p>
+                  <p mt="0.5">In the pure CSS version, you can use <span class="tag-label cc-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough for looping.</p>
                 </div>
               </div>
               <div class="s2-demo">
@@ -1379,13 +1390,7 @@
                   <div gap="3-3" px="0" top-bottom="base" flex="col" class="container cc-full">
                     <div class="css-marquee-wrapper">
                       <div animation="marquee-50p" style="animation-duration: 30s;" class="css-marquee cc-from-left cc-hover-pause">
-                        <div data-repeat="x6" class="marquee_content cc-gap-lg">
-                          <div style="background: #05445E; border-radius: 100%;" class="icon cc-4rem"></div>
-                          <div style="background: #189AB4; border-radius: 100%;" class="icon cc-4rem"></div>
-                          <div style="background: #75E6DA; border-radius: 100%;" class="icon cc-4rem"></div>
-                          <div style="background: #05445E; border-radius: 100%;" class="icon cc-4rem"></div>
-                          <div style="background: #189AB4; border-radius: 100%;" class="icon cc-4rem"></div>
-                          <div style="background: #75E6DA; border-radius: 100%;" class="icon cc-4rem"></div>
+                        <div data-repeat="x9" class="marquee_content cc-gap-lg">
                           <div style="background: #05445E; border-radius: 100%;" class="icon cc-4rem"></div>
                           <div style="background: #189AB4; border-radius: 100%;" class="icon cc-4rem"></div>
                           <div style="background: #75E6DA; border-radius: 100%;" class="icon cc-4rem"></div>
@@ -1402,7 +1407,7 @@
                     <div class="css-marquee-wrapper">
                       <div animation="marquee" class="css-marquee">
                         <div class="marquee_content">
-                          <div>This is another a marquee animation using CSS. It can be configured by using the <span class="tag-label cc-attribute">animation=&quot;marquee&quot;</span> (default) or <span class="tag-label cc-attribute">animation=&quot;marquee-50p&quot;</span> attribute.</div>
+                          <div>This is another marquee animation using CSS. It can be configured by using the <span class="tag-label cc-attribute">animation=&quot;marquee&quot;</span> (default) or <span class="tag-label cc-attribute">animation=&quot;marquee-50p&quot;</span> attribute.</div>
                           <div>No hover and pause in this example.</div>
                         </div>
                       </div>
@@ -1426,6 +1431,12 @@
                       </svg></div>
                   </div>
                 </div>
+              </div>
+              <div mt="1" class="message cc-note">
+                <div class="text-sm">💡 Some simple custom CSS is required in the pure CSS version. It is already included in the Global Code.</div>
+              </div>
+              <div mt="1" class="message cc-note">
+                <div class="text-sm">💡 The script required for the Repeat Elements function can be found in the footer code of this page.</div>
               </div>
             </section>
             <section id="before-after" class="section cc-bottom-sm">

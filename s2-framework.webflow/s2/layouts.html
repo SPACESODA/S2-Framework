@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Feb 26 2025 01:26:24 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Feb 27 2025 04:00:50 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -235,7 +235,7 @@
       </div>
       <div class="code">
         <div code="css" class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.5.6/webflow/css/s2.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.6.2/webflow/css/s2.min.css">
         </div>
       </div>
       <div code="css" class="css_custom w-embed">
@@ -317,6 +317,12 @@
             body * {
               text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
+            /* custom accessibility styles */
+            input[type="submit"]:focus-visible,
+            input[type="file"]:focus-visible {
+              outline: var(--_sizes---outline--bold) solid var(--colors--focus);
+              outline-offset: var(--_sizes---outline--offset);
+            }
             /* main-nav_button */
             .main-nav_button path {
               transition: transform 300ms ease;
@@ -365,6 +371,10 @@
               inset: 0;
             }
             /* other styles */
+            .input-field.cc-boxed:focus-within {
+              border-color: var(--colors--primary);
+              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
+            }
             .richtext-list ul li::before {
               position: absolute;
               margin-left: -1.65em;

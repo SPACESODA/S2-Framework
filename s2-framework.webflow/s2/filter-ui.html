@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Feb 26 2025 01:26:24 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Feb 27 2025 04:00:50 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66202061f8a728275a122f8d" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -183,7 +183,7 @@
       </div>
       <div class="code">
         <div code="css" class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.5.6/webflow/css/s2.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.6.2/webflow/css/s2.min.css">
         </div>
       </div>
       <div code="css" class="css_custom w-embed">
@@ -265,6 +265,12 @@
             body * {
               text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
+            /* custom accessibility styles */
+            input[type="submit"]:focus-visible,
+            input[type="file"]:focus-visible {
+              outline: var(--_sizes---outline--bold) solid var(--colors--focus);
+              outline-offset: var(--_sizes---outline--offset);
+            }
             /* main-nav_button */
             .main-nav_button path {
               transition: transform 300ms ease;
@@ -313,6 +319,10 @@
               inset: 0;
             }
             /* other styles */
+            .input-field.cc-boxed:focus-within {
+              border-color: var(--colors--primary);
+              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
+            }
             .richtext-list ul li::before {
               position: absolute;
               margin-left: -1.65em;
@@ -656,7 +666,7 @@
                         <div class="text-xs">Webflow interactions</div>
                       </div>
                     </div><label class="w-checkbox fs-checkbox_toggle-7">
-                      <div class="fs-checkbox_toggle-dot-7"></div><input class="w-checkbox-input fs-checkbox_button-7" name="Checkbox-7" focus-outline="bold" fs-cmsfilter-field="featured" data-name="Checkbox 7" aria-label="description-here" input-highlight="none" type="checkbox" id="Checkbox-7">
+                      <div class="fs-checkbox_toggle-dot-7"></div><input class="w-checkbox-input fs-checkbox_button-7" appearance="none" name="Checkbox-7" fs-cmsfilter-field="featured" data-name="Checkbox 7" aria-label="description-here" type="checkbox" id="Checkbox-7">
                       <div class="fs-checkbox_mask-7"></div><span class="fs-checkbox_label-7 w-form-label" for="Checkbox-7">Switch</span>
                     </label>
                   </div>
@@ -667,7 +677,7 @@
                         <div class="text-xs">Webflow interactions</div>
                       </div>
                     </div><label class="w-checkbox fs-checkbox_toggle-8">
-                      <div class="fs-checkbox_toggle-dot-8"></div><input class="w-checkbox-input fs-checkbox_button-8" name="Checkbox-8" focus-outline="bold" fs-cmsfilter-field="featured" data-name="Checkbox 8" aria-label="description-here" input-highlight="none" type="checkbox" id="Checkbox-8">
+                      <div class="fs-checkbox_toggle-dot-8"></div><input class="w-checkbox-input fs-checkbox_button-8" appearance="none" name="Checkbox-8" fs-cmsfilter-field="featured" data-name="Checkbox 8" aria-label="description-here" type="checkbox" id="Checkbox-8">
                       <div class="fs-checkbox_mask-8"></div><span class="fs-checkbox_label-8 w-form-label" for="Checkbox-8">Switch</span>
                     </label>
                   </div>
@@ -681,7 +691,7 @@
                     <div class="fs-row"><label class="w-checkbox fs-checkbox_toggle-9">
                         <div class="fs-checkbox_text-on-9">ON</div>
                         <div class="fs-checkbox_text-off-9">OFF</div>
-                        <div class="fs-checkbox_toggle-dot-9"></div><input class="w-checkbox-input fs-checkbox_button-9" name="Checkbox-9" focus-outline="bold" fs-cmsfilter-field="featured" data-name="Checkbox 9" aria-label="description-here" input-highlight="none" type="checkbox" id="Checkbox-9">
+                        <div class="fs-checkbox_toggle-dot-9"></div><input class="w-checkbox-input fs-checkbox_button-9" appearance="none" name="Checkbox-9" fs-cmsfilter-field="featured" data-name="Checkbox 9" aria-label="description-here" type="checkbox" id="Checkbox-9">
                         <div class="fs-checkbox_mask-9"></div><span class="fs-checkbox_label-9 w-form-label" for="Checkbox-9">Switch</span>
                       </label></div>
                   </div>
@@ -705,7 +715,7 @@
                   <div class="card">
                     <div class="card-title">
                       <div>Search input #1</div>
-                    </div><input class="fs-search_field-1 w-input" outline-highlight="none" maxlength="256" name="Search-1" mode-styles="true" fs-cmsfilter-field="*" data-name="Search 1" aria-label="description-here" placeholder="Search here" type="text" id="Search-1" required="">
+                    </div><input class="fs-search_field-1 w-input" maxlength="256" name="Search-1" mode-styles="true" fs-cmsfilter-field="*" data-name="Search 1" aria-label="description-here" placeholder="Search here" type="text" id="Search-1" required="">
                     <div class="sg-keep-this">
                       <div width-is="100p" class="fs-search_field-1 cc-style-on-light"></div>
                     </div>
@@ -716,7 +726,7 @@
                   <div class="card">
                     <div class="card-title">
                       <div>Search input #2</div>
-                    </div><input class="fs-search_field-2 w-input" outline-highlight="none" maxlength="256" name="Search-2" mode-styles="true" fs-cmsfilter-field="*" data-name="Search 2" aria-label="description-here" placeholder="Search here" type="text" id="Search-2" required="">
+                    </div><input class="fs-search_field-2 w-input" maxlength="256" name="Search-2" mode-styles="true" fs-cmsfilter-field="*" data-name="Search 2" aria-label="description-here" placeholder="Search here" type="text" id="Search-2" required="">
                     <div class="sg-keep-this">
                       <div width-is="100p" class="fs-search_field-2 cc-style-on-light"></div>
                     </div>
@@ -867,7 +877,7 @@
                     </div>
                     <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper" fs-rangeslider-min="0" fs-rangeslider-max="100" fs-rangeslider-step="10" class="fs-rangeslider-wrapper-1">
                       <div fs-rangeslider-element="track" class="fs-rangeslider_track-1">
-                        <div focus-outline="none" fs-rangeslider-element="handle" fs-rangeslider-start="50" aria-label="description-here" class="fs-rangeslider_handle-1">
+                        <div aria-label="description-here" fs-rangeslider-element="handle" fs-rangeslider-start="50" class="fs-rangeslider_handle-1">
                           <div user-select="none" class="fs-rangeslider_handle-text-1">$<span fs-rangeslider-element="display-value" class="fs-rangeslider_handle-value-1">0</span></div>
                         </div>
                         <div fs-rangeslider-element="fill" class="fs-rangeslider_fill-1"></div>
@@ -880,8 +890,8 @@
                     </div>
                     <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper" fs-rangeslider-min="0" fs-rangeslider-max="100000" class="fs-rangeslider-wrapper-2">
                       <div fs-rangeslider-element="track" class="fs-rangeslider_track-2">
-                        <div focus-outline="none" fs-rangeslider-element="handle" aria-label="minimum price" class="fs-rangeslider_handle-left-2"></div>
-                        <div focus-outline="none" fs-rangeslider-element="handle" aria-label="maximum price" class="fs-rangeslider_handle-right-2"></div>
+                        <div aria-label="minimum price" fs-rangeslider-element="handle" class="fs-rangeslider_handle-left-2"></div>
+                        <div aria-label="maximum price" fs-rangeslider-element="handle" class="fs-rangeslider_handle-right-2"></div>
                         <div fs-rangeslider-element="fill" class="fs-rangeslider_fill-2"></div>
                       </div><input class="fs-rangeslider_input-2 w-input" maxlength="256" name="Range-2-From-Value" fs-cmsfilter-field="price" data-name="Range 2 From Value" fs-cmsfilter-range="from" placeholder="From" type="text" id="Range-2-From-Value"><input class="fs-rangeslider_input-2 w-input" maxlength="256" name="Range-2-To-Value" fs-cmsfilter-field="price" data-name="Range 2 To Value" fs-cmsfilter-range="to" placeholder="To" type="text" id="Range-2-To-Value">
                       <div class="fs-range_values-2">
@@ -896,10 +906,10 @@
                     </div>
                     <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper" fs-rangeslider-min="0" fs-rangeslider-max="100" class="fs-rangeslider-wrapper-3">
                       <div fs-rangeslider-element="track" class="fs-rangeslider_track-3">
-                        <div focus-outline="none" fs-rangeslider-element="handle" aria-label="minimum number" class="fs-rangeslider_handle-left-3">
+                        <div aria-label="minimum number" fs-rangeslider-element="handle" class="fs-rangeslider_handle-left-3">
                           <div fs-rangeslider-element="display-value" class="fs-rangeslider_handle-text-3">0</div>
                         </div>
-                        <div focus-outline="none" fs-rangeslider-element="handle" aria-label="maximum number" class="fs-rangeslider_handle-right-3">
+                        <div aria-label="maximum number" fs-rangeslider-element="handle" class="fs-rangeslider_handle-right-3">
                           <div fs-rangeslider-element="display-value" class="fs-rangeslider_handle-text-3">100</div>
                         </div>
                         <div fs-rangeslider-element="fill" class="fs-rangeslider_fill-3"></div>
@@ -912,23 +922,23 @@
                     </div>
                     <div fs-rangeslider-formatdisplay="true" fs-rangeslider-element="wrapper" fs-rangeslider-min="0" fs-rangeslider-max="100" class="fs-rangeslider-wrapper-4">
                       <div fs-rangeslider-element="track" class="fs-rangeslider_track-4">
-                        <div focus-outline="none" fs-rangeslider-element="handle" aria-label="minimum value" class="fs-rangeslider_handle-left-4">
+                        <div aria-label="minimum value" fs-rangeslider-element="handle" class="fs-rangeslider_handle-left-4">
                           <div fs-rangeslider-element="display-value" class="fs-rangeslider_handle-text-4">0</div>
                         </div>
-                        <div focus-outline="none" fs-rangeslider-element="handle" aria-label="maximum value" class="fs-rangeslider_handle-right-4">
+                        <div aria-label="maximum value" fs-rangeslider-element="handle" class="fs-rangeslider_handle-right-4">
                           <div fs-rangeslider-element="display-value" class="fs-rangeslider_handle-text-4">100</div>
                         </div>
                         <div mode-styles="true" fs-rangeslider-element="fill" class="fs-rangeslider_fill-4"></div>
                       </div><input class="fs-rangeslider_input-4 w-input" maxlength="256" name="Range-4-From-Value" fs-cmsfilter-field="price" data-name="Range 4 From Value" fs-cmsfilter-range="from" placeholder="From" type="text" id="Range-4-From-Value"><input class="fs-rangeslider_input-4 w-input" maxlength="256" name="Range-4-To-Value" fs-cmsfilter-field="price" data-name="Range 4 To Value" fs-cmsfilter-range="to" placeholder="To" type="text" id="Range-4-To-Value">
                     </div>
                     <div class="sg-keep-this">
-                      <div width-is="100p" position="relative" height-is="min-1">
+                      <div position="relative" style="height: 0.5rem;" class="block">
                         <div class="fs-rangeslider_fill-4"></div>
                       </div>
-                      <div width-is="100p" position="relative" height-is="min-1">
+                      <div position="relative" style="height: 0.5rem;" class="block">
                         <div class="fs-rangeslider_fill-4 cc-style-on-light"></div>
                       </div>
-                      <div width-is="100p" position="relative" height-is="min-1">
+                      <div position="relative" style="height: 0.5rem;" class="block">
                         <div class="fs-rangeslider_fill-4 cc-style-on-dark"></div>
                       </div>
                     </div>
@@ -1043,7 +1053,7 @@
                       <div>Reset button #3</div>
                     </div>
                     <div class="fs-row">
-                      <a aria-label="reset" fs-cmsfilter-element="reset" focus-outline="offset-far" href="#" class="fs-reset-3 w-inline-block">
+                      <a aria-label="reset" fs-cmsfilter-element="reset" href="#" class="fs-reset-3 w-inline-block">
                         <div user-select="none" class="fs-reset_text">Reset All</div>
                         <div order="first" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M37.4202 23.4806C36.4073 23.2636 35.4306 23.8424 35.1051 24.819C34.3816 26.9532 33.1517 28.9066 31.524 30.5344C25.7001 36.3582 16.1866 36.3582 10.3266 30.5344C4.17715 24.385 4.5027 14.2203 11.2671 8.505C13.7992 6.33462 17.0547 5.10474 20.3827 4.99622C24.3979 4.85153 28.2322 6.29845 31.1622 9.01143L28.4854 11.6882C27.8705 12.3032 28.3046 13.316 29.1727 13.316H37.4202C37.9266 13.316 38.3607 12.8819 38.3607 12.3755V4.09189C38.3607 3.25992 37.3478 2.82584 36.7329 3.40461L33.9475 6.18993C30.2579 2.64497 25.3384 0.80015 20.1295 1.01719C15.9696 1.19805 11.9905 2.71732 8.80729 5.39412C0.16194 12.6287 -0.235964 25.5787 7.54124 33.3559C11.2309 37.0455 16.0781 38.8903 20.9614 38.8903C25.8086 38.8903 30.6558 37.0455 34.3816 33.3559C36.4435 31.294 37.9627 28.8342 38.9032 26.1213C39.265 24.9637 38.5777 23.7339 37.4202 23.4806Z" fill="currentcolor"></path>
@@ -1085,7 +1095,7 @@
                     <div class="card cc-heavy">
                       <div class="h5">No results found.</div>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
-                      <a focus-outline="offset-far" fs-cmsfilter-element="reset" href="#" class="fs-reset-3 w-inline-block">
+                      <a fs-cmsfilter-element="reset" href="#" class="fs-reset-3 w-inline-block">
                         <div user-select="none" class="fs-reset_text">Clear filters</div>
                         <div order="first" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M37.4202 23.4806C36.4073 23.2636 35.4306 23.8424 35.1051 24.819C34.3816 26.9532 33.1517 28.9066 31.524 30.5344C25.7001 36.3582 16.1866 36.3582 10.3266 30.5344C4.17715 24.385 4.5027 14.2203 11.2671 8.505C13.7992 6.33462 17.0547 5.10474 20.3827 4.99622C24.3979 4.85153 28.2322 6.29845 31.1622 9.01143L28.4854 11.6882C27.8705 12.3032 28.3046 13.316 29.1727 13.316H37.4202C37.9266 13.316 38.3607 12.8819 38.3607 12.3755V4.09189C38.3607 3.25992 37.3478 2.82584 36.7329 3.40461L33.9475 6.18993C30.2579 2.64497 25.3384 0.80015 20.1295 1.01719C15.9696 1.19805 11.9905 2.71732 8.80729 5.39412C0.16194 12.6287 -0.235964 25.5787 7.54124 33.3559C11.2309 37.0455 16.0781 38.8903 20.9614 38.8903C25.8086 38.8903 30.6558 37.0455 34.3816 33.3559C36.4435 31.294 37.9627 28.8342 38.9032 26.1213C39.265 24.9637 38.5777 23.7339 37.4202 23.4806Z" fill="currentcolor"></path>

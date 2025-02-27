@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Feb 26 2025 01:26:24 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Feb 27 2025 04:00:50 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -207,7 +207,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </div>
       <div class="code">
         <div code="css" class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.5.6/webflow/css/s2.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.6.2/webflow/css/s2.min.css">
         </div>
       </div>
       <div code="css" class="css_custom w-embed">
@@ -289,6 +289,12 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             body * {
               text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
+            /* custom accessibility styles */
+            input[type="submit"]:focus-visible,
+            input[type="file"]:focus-visible {
+              outline: var(--_sizes---outline--bold) solid var(--colors--focus);
+              outline-offset: var(--_sizes---outline--offset);
+            }
             /* main-nav_button */
             .main-nav_button path {
               transition: transform 300ms ease;
@@ -337,6 +343,10 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               inset: 0;
             }
             /* other styles */
+            .input-field.cc-boxed:focus-within {
+              border-color: var(--colors--primary);
+              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
+            }
             .richtext-list ul li::before {
               position: absolute;
               margin-left: -1.65em;
@@ -394,7 +404,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           <header class="title-layout">
             <div class="title-wrapper cc-align-center">
               <div data-nosnippet="" class="tag-wrapper">
-                <div data-nosnippet="true" gradient="3" class="code-label">v2.1.5</div>
+                <div data-nosnippet="true" gradient="3" class="code-label">v2.1.6</div>
               </div>
               <div style="margin: 1.15rem 0 0.5rem 0;" class="title-wrapper cc-xl">
                 <h1 white-space="nowrap" class="sg-hero-heading">S2 Framework</h1>

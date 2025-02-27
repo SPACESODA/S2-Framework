@@ -2,7 +2,7 @@
 /* -- S2 Attributes -- */
 /* ------------------- */
 
-/* Last updated with: S2 Framework v2.1.4.7 */
+/* Last updated with: S2 Framework v2.1.6.2 */
 
 /* basics */
 [hidden], [hide], .u-hide { display: none; }
@@ -146,7 +146,7 @@
 [overflow-x="scroll"] { overflow-x: scroll; }  [overflow-x="auto"] { overflow-x: auto; }
 [overflow-y="scroll"] { overflow-y: scroll; }  [overflow-y="auto"] { overflow-y: auto; }
 
-/* color, bg, border, outline */
+/* color, bg, border, outline, appearance */
 [color="inherit"] { color: inherit; }
 [color="transparent"] { color: transparent; }
 [bg="inherit"] { background-color: inherit; }
@@ -156,6 +156,7 @@
 [border="transparent"] { border-color: transparent; }
 [border="none"] { border: none; }
 [outline="none"] { outline: none; }
+[appearance="none"] { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 
 /* gradient */
 [gradient] { background-image: linear-gradient(135deg, var(--colors--primary) 0%, var(--colors--secondary) 100%); }

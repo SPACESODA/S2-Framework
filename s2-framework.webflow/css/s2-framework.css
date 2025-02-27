@@ -3,6 +3,7 @@
   --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --colors--text: var(--_palettes---neutral--900);
   --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --colors--focus: var(--_palettes---primary--400);
   --_sizes---radius--extra-small: .275rem;
   --colors--surface-muted: var(--_palettes---neutral--100);
   --colors--stroke-subtle: var(--_palettes---neutral--200);
@@ -37,10 +38,9 @@
   --_sizes---richtext-spacing--base: .75rem;
   --_sizes---list-spacing--base: .5rem;
   --_text---font-size--2xs: .772rem;
-  --colors--focus: var(--_palettes---primary--400);
   --colors--stroke: var(--_palettes---neutral--400);
+  --_sizes---outline--bold: .1875rem;
   --colors--focus-subtle: var(--_palettes---primary--subtle);
-  --colors--focus\<deleted\|variable-8ebc0ec8-0ff0-c0f0-6c27-f8e94882036a\>: var(--_palettes---primary--400);
   --_text---font-size--sm: .992rem;
   --_sizes---radius--card: .625rem;
   --colors--stroke-emphasis: var(--_palettes---neutral--600);
@@ -52,6 +52,7 @@
   --_sizes---main-nav--height: 4.25rem;
   --colors--primary-light: var(--_palettes---primary--300);
   --_sizes---radius--extra-large: 1.25rem;
+  --_sizes---thickness--line: 2px;
   --_text---font-size--xs: .875rem;
   --colors-special--highlight: #ffe8aa;
   --colors-special--highlight-text: #965c00;
@@ -135,14 +136,15 @@
   --_text---font-size--3xl: 2rem;
   --_sizes---gap--small: .5rem;
   --_sizes---gap--large: 2.5rem;
-  --_sizes---richtext-spacing--small: .5rem;
   --_sizes---list-spacing--small: .25rem;
+  --_sizes---richtext-spacing--small: .5rem;
   --_sizes---radius--large: .85rem;
-  --_sizes---thickness--outline: .125rem;
-  --_sizes---thickness--outline-bold: .188rem;
   --_sizes---icon--small: 1rem;
   --_sizes---icon--medium: 1.5rem;
   --_sizes---icon--large: 2rem;
+  --_sizes---outline--base: .125rem;
+  --_sizes---outline--offset: 3px;
+  --_sizes---outline--offset-far: 5px;
   --_sizes---grid--column: 12;
   --s2--surface: #f8f8f8;
 }
@@ -307,6 +309,13 @@ a {
   text-underline-position: auto;
   color: inherit;
   text-decoration: underline;
+}
+
+a:focus-visible, a[data-wf-focus-visible] {
+  outline-color: var(--colors--focus);
+  outline-offset: var(--_sizes---outline--offset);
+  outline-style: solid;
+  outline-width: var(--_sizes---outline--base);
 }
 
 ul, ol {
@@ -895,6 +904,13 @@ figcaption {
   display: flex;
 }
 
+.button:focus-visible, .button[data-wf-focus-visible] {
+  outline-color: var(--colors--focus);
+  outline-offset: var(--_sizes---outline--offset);
+  outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+}
+
 .button.cc-outline {
   box-shadow: inset 0 0 0 2px var(--colors--text);
   color: var(--colors--text);
@@ -1224,20 +1240,6 @@ figcaption {
   display: flex;
 }
 
-.button-link:focus-visible {
-  outline-color: var(--colors--focus);
-  outline-offset: 2px;
-  outline-width: .25rem;
-  outline-style: solid;
-}
-
-.button-link[data-wf-focus-visible] {
-  outline-color: var(--colors--focus);
-  outline-offset: 2px;
-  outline-width: .25rem;
-  outline-style: solid;
-}
-
 .from-wrapper {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -1275,14 +1277,14 @@ figcaption {
   margin-bottom: 0;
   padding: .5rem .75rem;
   font-size: 1rem;
-  transition-property: background-color, border, box-shadow;
-  transition-duration: .2s, .2s, .3s;
-  transition-timing-function: ease, ease, ease;
+  transition-property: border, box-shadow;
+  transition-duration: .2s, .3s;
+  transition-timing-function: ease, ease;
 }
 
 .input:focus {
   border: 1px solid var(--colors--primary);
-  box-shadow: 0 0 0 .188rem var(--colors--focus-subtle);
+  box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
 }
 
 .input::placeholder {
@@ -1318,6 +1320,7 @@ figcaption {
   border-radius: var(--_sizes---radius--extra-small);
   text-align: left;
   padding: .5rem .75rem;
+  transition: border .2s, box-shadow .3s;
 }
 
 .checkbox-field {
@@ -1441,6 +1444,7 @@ figcaption {
 
 .burger-icon {
   border-radius: var(--_sizes---radius--rounded);
+  color: var(--_palettes---primary--on-base);
   font-size: var(--_text---font-size--sm);
   flex: none;
   justify-content: center;
@@ -1451,10 +1455,21 @@ figcaption {
 }
 
 .burger-icon.cc-circle {
+  border-radius: var(--_sizes---radius--rounded);
   background-color: var(--colors--primary);
+  color: var(--_palettes---primary--on-base);
   width: 2.75rem;
   height: 2.75rem;
   margin-left: auto;
+}
+
+.burger-icon.cc-circle.cc-transparent {
+  background-color: var(--colors-special--transparent);
+  color: var(--colors--text);
+}
+
+.burger-icon.cc-text {
+  color: var(--colors--text);
 }
 
 .card {
@@ -1674,12 +1689,7 @@ figcaption {
   background-color: var(--colors-special--transparent);
 }
 
-.main-nav_button.cc-primary {
-  background-color: var(--colors--primary);
-  color: var(--_palettes---primary--on-base);
-}
-
-.main-nav_button.cc-primary.w--open {
+.main-nav_button.cc-primary, .main-nav_button.cc-primary.w--open {
   background-color: var(--colors--primary);
 }
 
@@ -1725,7 +1735,7 @@ figcaption {
 .fs-checkbox_field-4 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -1795,7 +1805,7 @@ figcaption {
 .fs-checkbox_field-3 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -1830,7 +1840,7 @@ figcaption {
 .fs-reset-1 {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--rounded);
   cursor: pointer;
   flex-direction: row;
@@ -1844,7 +1854,7 @@ figcaption {
 }
 
 .fs-reset-2 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--rounded);
   cursor: pointer;
   flex-direction: row;
@@ -1857,7 +1867,7 @@ figcaption {
 }
 
 .fs-radio_button-6 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 1rem;
@@ -1869,7 +1879,7 @@ figcaption {
 }
 
 .fs-radio_button-6.w--redirected-checked {
-  border-width: 5px;
+  border-width: 0;
   border-color: var(--colors--primary);
   background-color: var(--colors--primary);
   background-image: url('../images/check-icon_24px.svg');
@@ -1886,9 +1896,9 @@ figcaption {
 
 .fs-radio_button-6.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-reset_text, .fs-tag_text {
@@ -1910,14 +1920,14 @@ figcaption {
 }
 
 .fs-radio_button-1.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-radio_button-1.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 6px;
   outline-style: solid;
-  outline-width: var(--thickness--focus-ring-bold);
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset-far);
 }
 
 .fs-row {
@@ -1954,6 +1964,13 @@ figcaption {
   padding: .5rem 1.5rem .5rem 1px;
   line-height: 1.25;
   display: flex;
+}
+
+.fs-sort_button-2:focus-visible, .fs-sort_button-2[data-wf-focus-visible] {
+  outline-color: var(--colors--focus);
+  outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-sort_button-2.is-s_desc {
@@ -2031,6 +2048,14 @@ figcaption {
 .fs-rangeslider_handle-1:focus {
   border-color: var(--colors--primary);
   background-color: var(--colors--primary);
+  outline-width: 0;
+  outline-style: none;
+  box-shadow: 0 0 #0000;
+}
+
+.fs-rangeslider_handle-1:focus-visible, .fs-rangeslider_handle-1[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_input-1 {
@@ -2089,6 +2114,14 @@ figcaption {
 
 .fs-rangeslider_handle-left-2:focus {
   background-color: var(--colors--primary);
+  outline-width: 0;
+  outline-style: none;
+  box-shadow: 0 0 #0000;
+}
+
+.fs-rangeslider_handle-left-2:focus-visible, .fs-rangeslider_handle-left-2[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_handle-right-2 {
@@ -2103,10 +2136,18 @@ figcaption {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
+  box-shadow: 0 0 #0000;
 }
 
 .fs-rangeslider_handle-right-2:focus {
   background-color: var(--colors--primary);
+  outline-width: 0;
+  outline-style: none;
+}
+
+.fs-rangeslider_handle-right-2:focus-visible, .fs-rangeslider_handle-right-2[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_handle-text-2 {
@@ -2190,11 +2231,19 @@ figcaption {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 #0000;
 }
 
 .fs-rangeslider_handle-left-3:focus {
   background-color: var(--colors--primary);
   color: var(--_palettes---primary--on-base);
+  outline-width: 0;
+  outline-style: none;
+}
+
+.fs-rangeslider_handle-left-3:focus-visible, .fs-rangeslider_handle-left-3[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_handle-right-3 {
@@ -2218,11 +2267,19 @@ figcaption {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 #0000;
 }
 
 .fs-rangeslider_handle-right-3:focus {
   background-color: var(--colors--primary);
   color: var(--_palettes---primary--on-base);
+  outline-width: 0;
+  outline-style: none;
+}
+
+.fs-rangeslider_handle-right-3:focus-visible, .fs-rangeslider_handle-right-3[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_handle-text-3 {
@@ -2290,6 +2347,13 @@ figcaption {
 .fs-rangeslider_handle-left-4:focus {
   background-color: var(--colors--primary);
   color: var(--_palettes---primary--on-base);
+  outline-width: 0;
+  outline-style: none;
+}
+
+.fs-rangeslider_handle-left-4:focus-visible, .fs-rangeslider_handle-left-4[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_handle-right-4 {
@@ -2310,11 +2374,19 @@ figcaption {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 #0000;
 }
 
 .fs-rangeslider_handle-right-4:focus {
   background-color: var(--colors--primary);
   color: var(--_palettes---primary--on-base);
+  outline-width: 0;
+  outline-style: none;
+}
+
+.fs-rangeslider_handle-right-4:focus-visible, .fs-rangeslider_handle-right-4[data-wf-focus-visible] {
+  outline-width: 0;
+  outline-style: none;
 }
 
 .fs-rangeslider_handle-text-4 {
@@ -2323,8 +2395,7 @@ figcaption {
 }
 
 .fs-checkbox_button-2 {
-  border-width: 2px;
-  border-color: var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   flex: none;
   width: 1.25rem;
@@ -2346,21 +2417,21 @@ figcaption {
 }
 
 .fs-checkbox_button-2.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-checkbox_button-2.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-dropdown_toggle-2 {
+  border: var(--_sizes---thickness--line) solid transparent;
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface-muted);
   color: var(--colors--text);
-  border: 2px solid #0000;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -2369,6 +2440,13 @@ figcaption {
   padding: 0 1.25rem;
   line-height: 1;
   display: flex;
+}
+
+.fs-dropdown_toggle-2:focus-visible, .fs-dropdown_toggle-2[data-wf-focus-visible] {
+  outline-color: var(--colors--focus);
+  outline-offset: var(--_sizes---outline--offset);
+  outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
 }
 
 .fs-dropdown_toggle-2.w--open {
@@ -2404,7 +2482,7 @@ figcaption {
 .fs-reset-4 {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--base);
   cursor: pointer;
   flex-direction: row;
@@ -2446,7 +2524,7 @@ figcaption {
 }
 
 .fs-dropdown_toggle-1 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   color: var(--colors--text);
@@ -2456,7 +2534,12 @@ figcaption {
   margin: 0;
   padding: 0 4rem 0 1.25rem;
   line-height: 1;
+  transition: box-shadow .3s;
   display: flex;
+}
+
+.fs-dropdown_toggle-1:focus-visible, .fs-dropdown_toggle-1[data-wf-focus-visible] {
+  box-shadow: 0 0 0 .25rem var(--colors--focus-subtle);
 }
 
 .fs-dropdown_icon-block-2 {
@@ -2474,7 +2557,7 @@ figcaption {
 .fs-checkbox_field-2 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -2496,7 +2579,7 @@ figcaption {
 }
 
 .fs-checkbox_field-6 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -2524,7 +2607,7 @@ figcaption {
 }
 
 .fs-dropdown_list-1.w--open {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   margin-top: .5rem;
@@ -2542,7 +2625,7 @@ figcaption {
 .fs-tag_template-1 {
   grid-column-gap: .5em;
   grid-row-gap: .5em;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--rounded);
   text-align: center;
   flex-direction: row;
@@ -2556,7 +2639,7 @@ figcaption {
 }
 
 .fs-tag_template-2 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   flex-direction: row;
   flex: none;
@@ -2570,7 +2653,7 @@ figcaption {
 }
 
 .fs-tag_template-3 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   flex-direction: row;
   flex: none;
@@ -2584,8 +2667,7 @@ figcaption {
 }
 
 .fs-checkbox_button-3 {
-  border-width: 2px;
-  border-color: var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   flex: none;
   width: 1.25rem;
@@ -2596,7 +2678,7 @@ figcaption {
 }
 
 .fs-checkbox_button-3.w--redirected-checked {
-  border: 2px solid var(--_palettes---primary--on-base);
+  border-color: var(--_palettes---primary--on-base);
   background-color: var(--colors--primary);
   background-image: url('../images/check-icon_24px.svg');
   background-position: 50%;
@@ -2606,14 +2688,14 @@ figcaption {
 }
 
 .fs-checkbox_button-3.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-checkbox_button-3.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-checkbox_label-9 {
@@ -2629,16 +2711,16 @@ figcaption {
 
 .fs-search_field-1 {
   border-top-style: solid;
-  border-top-width: 2px;
+  border-top-width: var(--_sizes---thickness--line);
   border-top-color: var(--colors--text);
   border-right-style: solid;
-  border-right-width: 2px;
+  border-right-width: var(--_sizes---thickness--line);
   border-right-color: var(--colors--text);
   border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-bottom-width: var(--_sizes---thickness--line);
   border-bottom-color: var(--colors--text);
   border-left-style: solid;
-  border-left-width: 2px;
+  border-left-width: var(--_sizes---thickness--line);
   border-left-color: var(--colors--text);
   border-top-left-radius: var(--_sizes---radius--extra-small);
   border-top-right-radius: var(--_sizes---radius--extra-small);
@@ -2661,17 +2743,12 @@ figcaption {
 .fs-search_field-1:focus {
   border-color: var(--colors--primary);
   box-shadow: 0 0 0 .25rem var(--colors--focus-subtle);
-  outline-color: var(--colors--focus);
-  outline-offset: 0px;
-  outline-width: .188rem;
+  outline-width: 0;
   outline-style: none;
 }
 
-.fs-search_field-1:focus-visible {
-  outline-style: none;
-}
-
-.fs-search_field-1[data-wf-focus-visible] {
+.fs-search_field-1:focus-visible, .fs-search_field-1[data-wf-focus-visible] {
+  border-bottom-color: var(--colors--primary);
   outline-style: none;
 }
 
@@ -2705,9 +2782,9 @@ figcaption {
   border-top-style: none;
   border-top-width: 0;
   border-bottom-style: solid;
-  border-bottom-width: 2px;
   border-right-style: none;
   border-right-width: 0;
+  border-bottom-width: var(--_sizes---thickness--line);
   border-bottom-color: var(--colors--text);
   background-color: var(--colors--surface);
   background-image: url('../images/search-black.svg');
@@ -2721,24 +2798,20 @@ figcaption {
   margin-bottom: 0;
   padding: .5rem .25rem .5rem 3rem;
   font-size: 1rem;
-  transition-property: background-color, border;
-  transition-duration: .2s, .2s;
-  transition-timing-function: ease, ease;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: .2s, .2s, .3s;
+  transition-timing-function: ease, ease, ease;
 }
 
 .fs-search_field-2:focus {
   border-bottom-color: var(--colors--primary);
-  outline-color: var(--colors--focus);
-  outline-offset: 0px;
   outline-width: 0;
   outline-style: none;
 }
 
-.fs-search_field-2:focus-visible {
-  outline-style: none;
-}
-
-.fs-search_field-2[data-wf-focus-visible] {
+.fs-search_field-2:focus-visible, .fs-search_field-2[data-wf-focus-visible] {
+  border-bottom-color: var(--colors--primary);
+  box-shadow: 0 .25rem 0 0 var(--colors--focus-subtle);
   outline-style: none;
 }
 
@@ -2747,7 +2820,7 @@ figcaption {
 }
 
 .fs-checkbox_button-6 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   width: 1.5rem;
   height: 1.5rem;
@@ -2768,14 +2841,14 @@ figcaption {
 }
 
 .fs-checkbox_button-6.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-checkbox_button-6.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-checkbox_toggle-7 {
@@ -2818,18 +2891,11 @@ figcaption {
   inset: 0%;
 }
 
-.fs-checkbox_button-8:focus-visible {
+.fs-checkbox_button-8:focus-visible, .fs-checkbox_button-8[data-wf-focus-visible] {
   outline-color: var(--colors--focus);
-  outline-width: .188rem;
+  outline-offset: var(--_sizes---outline--offset-far);
   outline-style: solid;
-  outline-offset: .5rem !important;
-}
-
-.fs-checkbox_button-8[data-wf-focus-visible] {
-  outline-color: var(--colors--focus);
-  outline-width: .188rem;
-  outline-style: solid;
-  outline-offset: .5rem !important;
+  outline-width: var(--_sizes---outline--bold);
 }
 
 .fs-tag_close-icon-1 {
@@ -2874,8 +2940,7 @@ figcaption {
 }
 
 .fs-checkbox_button-10 {
-  border-width: 2px;
-  border-color: var(--colors--stroke);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   flex: none;
   width: 1.25rem;
@@ -2886,23 +2951,22 @@ figcaption {
 }
 
 .fs-checkbox_button-10.w--redirected-checked {
-  border-color: var(--colors--primary);
   background-color: var(--colors--primary);
   background-image: url('../images/check-icon_24px.svg');
   background-position: 50%;
   background-size: auto 1.25rem;
-  border-radius: 4px;
+  border-style: none;
 }
 
 .fs-checkbox_button-10.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-checkbox_button-10.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-reset_block-2 {
@@ -2932,7 +2996,7 @@ figcaption {
 .fs-radio_field-1 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -2957,7 +3021,7 @@ figcaption {
 .fs-radio_field-2 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -2982,7 +3046,7 @@ figcaption {
 .fs-radio_field-3 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -3007,7 +3071,7 @@ figcaption {
 .fs-radio_field-4 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -3030,7 +3094,7 @@ figcaption {
 }
 
 .fs-radio_field-6 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -3056,7 +3120,7 @@ figcaption {
 .fs-checkbox_field-1 {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   cursor: pointer;
@@ -3079,7 +3143,7 @@ figcaption {
 }
 
 .fs-sort_button-1 {
-  border: 2px solid var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   border-radius: var(--_sizes---radius--extra-small);
   background-color: var(--colors--surface);
   color: var(--colors--text);
@@ -3093,6 +3157,13 @@ figcaption {
   padding: .75rem 1.5rem .75rem 3rem;
   line-height: 1.25;
   display: flex;
+}
+
+.fs-sort_button-1:focus-visible, .fs-sort_button-1[data-wf-focus-visible] {
+  outline-color: var(--colors--focus);
+  outline-offset: var(--_sizes---outline--offset);
+  outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
 }
 
 .fs-sort_button-1.is-desc {
@@ -3167,8 +3238,7 @@ figcaption {
 }
 
 .fs-radio_button-2 {
-  border-width: 2px;
-  border-color: var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   flex: none;
   width: 1.25rem;
   height: 1.25rem;
@@ -3185,14 +3255,14 @@ figcaption {
 }
 
 .fs-radio_button-2.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-radio_button-2.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-radio_button-4 {
@@ -3214,19 +3284,18 @@ figcaption {
 }
 
 .fs-radio_button-4.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 0 0 var(--colors-special--transparent);
 }
 
 .fs-radio_button-4.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 5px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset-far);
 }
 
 .fs-radio_button-7 {
-  border-width: 2px;
-  border-color: var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   flex: none;
   width: 1.25rem;
   height: 1.25rem;
@@ -3244,14 +3313,14 @@ figcaption {
 }
 
 .fs-radio_button-7.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-radio_button-7.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-checkbox_text-off-9 {
@@ -3286,14 +3355,14 @@ figcaption {
 }
 
 .fs-checkbox_button-1.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-checkbox_button-1.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 5px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset-far);
 }
 
 .fs-dropdown_group-2 {
@@ -3318,8 +3387,7 @@ figcaption {
 }
 
 .fs-radio_button-3 {
-  border-width: 2px;
-  border-color: var(--colors--text);
+  border: var(--_sizes---thickness--line) solid var(--colors--text);
   flex: none;
   width: 1.25rem;
   height: 1.25rem;
@@ -3336,14 +3404,14 @@ figcaption {
 }
 
 .fs-radio_button-3.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-radio_button-3.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 3px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .fs-radio_icon-6 {
@@ -3383,18 +3451,11 @@ figcaption {
   inset: 0%;
 }
 
-.fs-checkbox_button-9:focus-visible {
+.fs-checkbox_button-9:focus-visible, .fs-checkbox_button-9[data-wf-focus-visible] {
   outline-color: var(--colors--focus);
-  outline-width: .188rem;
+  outline-offset: var(--_sizes---outline--offset-far);
   outline-style: solid;
-  outline-offset: 3px !important;
-}
-
-.fs-checkbox_button-9[data-wf-focus-visible] {
-  outline-color: var(--colors--focus);
-  outline-width: .188rem;
-  outline-style: solid;
-  outline-offset: 3px !important;
+  outline-width: var(--_sizes---outline--bold);
 }
 
 .fs-checkbox_button-7 {
@@ -3412,18 +3473,11 @@ figcaption {
   inset: 0%;
 }
 
-.fs-checkbox_button-7:focus-visible {
+.fs-checkbox_button-7:focus-visible, .fs-checkbox_button-7[data-wf-focus-visible] {
   outline-color: var(--colors--focus);
-  outline-width: .188rem;
+  outline-offset: var(--_sizes---outline--offset);
   outline-style: solid;
-  outline-offset: 3px !important;
-}
-
-.fs-checkbox_button-7[data-wf-focus-visible] {
-  outline-color: var(--colors--focus);
-  outline-width: .188rem;
-  outline-style: solid;
-  outline-offset: 3px !important;
+  outline-width: var(--_sizes---outline--bold);
 }
 
 .fs-checkbox_button-4 {
@@ -3446,14 +3500,14 @@ figcaption {
 }
 
 .fs-checkbox_button-4.w--redirected-focus {
-  box-shadow: none;
+  box-shadow: 0 0 #0000;
 }
 
 .fs-checkbox_button-4.w--redirected-focus-visible {
   outline-color: var(--colors--focus);
-  outline-offset: 5px;
-  outline-width: .188rem;
   outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset-far);
 }
 
 .fs-cards_grid {
@@ -5081,7 +5135,14 @@ figcaption {
 }
 
 .option.w--redirected-focus {
-  box-shadow: 0 0 0 3px var(--colors--focus-subtle);
+  box-shadow: 0 0 #0000;
+}
+
+.option.w--redirected-focus-visible {
+  outline-color: var(--colors--focus);
+  outline-style: solid;
+  outline-width: var(--_sizes---outline--bold);
+  outline-offset: var(--_sizes---outline--offset);
 }
 
 .option-field {
@@ -5301,7 +5362,7 @@ figcaption {
   align-items: center;
   width: auto;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 1ch;
   display: flex;
 }
 
@@ -5775,7 +5836,7 @@ figcaption {
   width: 5.5rem;
   height: 5.5rem;
   padding: .25rem;
-  font-size: clamp(.732rem, .069vi + .717rem, .772rem);
+  font-size: .825rem;
   line-height: 1.15;
   display: flex;
   position: relative;
@@ -5831,6 +5892,10 @@ figcaption {
   background-color: var(--colors-special--transparent);
   width: 100%;
   height: auto;
+}
+
+.sg-square.cc-has-radius {
+  border-radius: var(--_sizes---radius--base);
 }
 
 .sg-padding {
@@ -6092,7 +6157,7 @@ figcaption {
   width: 1.5rem;
   height: 1.5rem;
   padding: 0;
-  transition: all .4s;
+  transition: background-color .36s;
   display: flex;
   overflow: clip;
 }
@@ -6179,6 +6244,7 @@ figcaption {
 .u-light-mode {
   --colors--surface: var(--_palettes---neutral--white);
   --colors--text: var(--_palettes---neutral--900);
+  --colors--focus: var(--_palettes---primary--400);
   --colors--surface-muted: var(--_palettes---neutral--100);
   --colors--stroke-subtle: var(--_palettes---neutral--200);
   --colors--text-muted: var(--_palettes---neutral--500);
@@ -6194,10 +6260,8 @@ figcaption {
   --s2--code-tag: #7e7e7e;
   --colors--primary-deep: var(--_palettes---primary--700);
   --colors-special--inverted: var(--_palettes---neutral--white);
-  --colors--focus: var(--_palettes---primary--400);
   --colors--stroke: var(--_palettes---neutral--400);
   --colors--focus-subtle: var(--_palettes---primary--subtle);
-  --colors--focus\<deleted\|variable-8ebc0ec8-0ff0-c0f0-6c27-f8e94882036a\>: var(--_palettes---primary--400);
   --colors--stroke-emphasis: var(--_palettes---neutral--600);
   --colors-special--success: #c0e9ad;
   --colors-special--success-text: #226d02;
@@ -6221,6 +6285,7 @@ figcaption {
 .u-dark-mode {
   --colors--surface: var(--_palettes---neutral--900);
   --colors--text: var(--_palettes---neutral--100);
+  --colors--focus: var(--_palettes---primary--400);
   --colors--surface-muted: var(--_palettes---neutral--800);
   --colors--stroke-subtle: var(--_palettes---neutral--800);
   --colors--text-muted: var(--_palettes---neutral--500);
@@ -6236,10 +6301,8 @@ figcaption {
   --s2--code-tag: #7e7e7e;
   --colors--primary-deep: var(--_palettes---primary--700);
   --colors-special--inverted: var(--_palettes---neutral--900);
-  --colors--focus: var(--_palettes---primary--400);
   --colors--stroke: var(--_palettes---neutral--600);
   --colors--focus-subtle: var(--_palettes---primary--950);
-  --colors--focus\<deleted\|variable-8ebc0ec8-0ff0-c0f0-6c27-f8e94882036a\>: var(--_palettes---primary--400);
   --colors--stroke-emphasis: var(--_palettes---neutral--400);
   --colors-special--success: #c0e9ad;
   --colors-special--success-text: #226d02;
@@ -6363,12 +6426,7 @@ figcaption {
   inset: .5rem .5rem auto auto;
 }
 
-.modal_close:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid #146ef5;
-}
-
-.modal_close[data-wf-focus-visible] {
+.modal_close:focus-visible, .modal_close[data-wf-focus-visible] {
   outline-offset: 2px;
   outline: 2px solid #146ef5;
 }
@@ -7015,30 +7073,40 @@ figcaption {
   scroll-margin-top: 6rem;
 }
 
-.sg-continue {
+.continue {
   z-index: 99;
-  opacity: .3;
-  color: var(--colors-special--inverted);
+  border-radius: var(--_sizes---radius--rounded);
+  color: var(--colors--stroke-emphasis);
   text-align: center;
   cursor: pointer;
   flex-flow: column;
   flex: none;
   justify-content: center;
   align-items: center;
-  width: 8rem;
+  width: 12rem;
+  min-height: 2.75rem;
   margin: 0 auto;
-  padding: .5rem 0 1rem;
+  padding: 0;
+  line-height: 1;
   text-decoration: none;
-  transition: transform .3s;
+  transition: padding .3s;
   display: flex;
   position: absolute;
   inset: auto 0% 0%;
-  transform: translate(0);
+  transform: translate(0, -.5rem);
 }
 
-.sg-continue:hover {
-  opacity: 1;
-  transform: translate(0, 10%);
+.continue:hover {
+  padding-top: .375rem;
+}
+
+.continue.cc-inverted {
+  opacity: .6;
+  color: var(--colors-special--inverted);
+}
+
+.continue.cc-inverted:hover, .continue.cc-inverted:focus-visible, .continue.cc-inverted[data-wf-focus-visible] {
+  opacity: 100;
 }
 
 @media screen and (max-width: 991px) {
@@ -7058,23 +7126,26 @@ figcaption {
     --_sizes---radius--rounded: 999rem;
     --_sizes---richtext-spacing--base: .75rem;
     --_sizes---list-spacing--base: .5rem;
+    --_sizes---outline--bold: .1875rem;
     --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4.25rem;
     --_sizes---radius--extra-large: 1.25rem;
+    --_sizes---thickness--line: 2px;
     --_sizes---richtext-spacing--large: 1rem;
     --_sizes---list-spacing--large: .85rem;
     --_sizes---radius--small: .35rem;
     --_sizes---gap--base: 1.5rem;
     --_sizes---gap--small: .5rem;
     --_sizes---gap--large: 2.5rem;
-    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---list-spacing--small: .25rem;
+    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---radius--large: .85rem;
-    --_sizes---thickness--outline: .125rem;
-    --_sizes---thickness--outline-bold: .188rem;
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
     --_sizes---icon--large: 2rem;
+    --_sizes---outline--base: .125rem;
+    --_sizes---outline--offset: 3px;
+    --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 8;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -7419,6 +7490,10 @@ figcaption {
     max-width: 85vw;
   }
 
+  .sg-square {
+    font-size: .75rem;
+  }
+
   .sg-square.cc-for-palette.cc-not-square {
     height: 7rem;
   }
@@ -7448,11 +7523,6 @@ figcaption {
     padding-right: clamp(.5rem, 1.25vw, 1rem);
     font-size: .925rem;
   }
-
-  .sg-continue {
-    width: 60px;
-    bottom: 12px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -7472,23 +7542,26 @@ figcaption {
     --_sizes---radius--rounded: 999rem;
     --_sizes---richtext-spacing--base: .75rem;
     --_sizes---list-spacing--base: .5rem;
+    --_sizes---outline--bold: .1875rem;
     --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4rem;
     --_sizes---radius--extra-large: 1.25rem;
+    --_sizes---thickness--line: 2px;
     --_sizes---richtext-spacing--large: 1rem;
     --_sizes---list-spacing--large: .85rem;
     --_sizes---radius--small: .35rem;
     --_sizes---gap--base: 1.5rem;
     --_sizes---gap--small: .5rem;
     --_sizes---gap--large: 2.5rem;
-    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---list-spacing--small: .25rem;
+    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---radius--large: .85rem;
-    --_sizes---thickness--outline: .125rem;
-    --_sizes---thickness--outline-bold: .188rem;
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
     --_sizes---icon--large: 2rem;
+    --_sizes---outline--base: .125rem;
+    --_sizes---outline--offset: 3px;
+    --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 6;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -7541,11 +7614,6 @@ figcaption {
   .form_row {
     grid-column-gap: .75rem;
     grid-row-gap: .75rem;
-  }
-
-  .burger-icon.cc-circle.cc-lines {
-    background-color: var(--colors-special--transparent);
-    color: var(--colors--text);
   }
 
   .spacer-md {
@@ -7986,10 +8054,6 @@ figcaption {
   .sg-main-nav_link.cc-last {
     padding-right: var(--_sizes---container--padding);
   }
-
-  .sg-continue {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 479px) {
@@ -8009,23 +8073,26 @@ figcaption {
     --_sizes---radius--rounded: 999rem;
     --_sizes---richtext-spacing--base: .75rem;
     --_sizes---list-spacing--base: .5rem;
+    --_sizes---outline--bold: .1875rem;
     --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4rem;
     --_sizes---radius--extra-large: 1.25rem;
+    --_sizes---thickness--line: 2px;
     --_sizes---richtext-spacing--large: 1rem;
     --_sizes---list-spacing--large: .85rem;
     --_sizes---radius--small: .35rem;
     --_sizes---gap--base: 1.5rem;
     --_sizes---gap--small: .5rem;
     --_sizes---gap--large: 2.5rem;
-    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---list-spacing--small: .25rem;
+    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---radius--large: .85rem;
-    --_sizes---thickness--outline: .125rem;
-    --_sizes---thickness--outline-bold: .188rem;
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
     --_sizes---icon--large: 2rem;
+    --_sizes---outline--base: .125rem;
+    --_sizes---outline--offset: 3px;
+    --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 4;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -8294,13 +8361,6 @@ figcaption {
 
   .richtext-list {
     font-size: 15px;
-  }
-
-  .marquee_content {
-    grid-column-gap: 10vw;
-    grid-row-gap: 10vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
   }
 
   .block {
