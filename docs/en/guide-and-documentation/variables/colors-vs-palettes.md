@@ -32,8 +32,6 @@ Variable groups, such as **Primary**, **Secondary**, **Accent**, and **Neutral**
 
 {% hint style="danger" %}
 Please leave the name **"Neutral"** and the **variable names under it** unchanged.
-
-Other than that, as long as you know what you are doing, **you may make changes to other palette colors**, such as adding, removing, and renaming them.
 {% endhint %}
 
 

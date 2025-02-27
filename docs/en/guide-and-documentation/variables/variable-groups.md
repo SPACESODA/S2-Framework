@@ -28,15 +28,17 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Variable Groups  | Description                                              |
 | ---------------- | -------------------------------------------------------- |
 | Container        | Width and padding values for containers.                 |
-| Spacing          | Spacing values.                                          |
-| Richtext Spacing | Spacing for richtext elements.                           |
+| Spacing          | Values for layout spacing.                               |
 | List Spacing     | Spacing of lists.                                        |
+| Richtext Spacing | Spacing for richtext elements.                           |
 | Radius           | Radius values.                                           |
-| Thickness        | For borders mainly.                                      |
-| Outline          | For outline and offset values of outline.                |
 | Icon             | For icon sizes.                                          |
-| Button           | For sizes (height) of buttons.                           |
+| Button           | For sizes (heights) of buttons.                          |
+| Thickness        | For lines or borders.                                    |
+| Gap              | For gap heights and widths.                              |
 | Main Nav         | Grouping variables specifically for the main navigation. |
+| Outline          | For outline and offset values of outline.                |
+| Grid             | Grid system's gutter value and number of columns.        |
 
 :open\_file\_folder: **Text**
 
@@ -45,7 +47,9 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Font Family     | For global font selection.    |
 | Font Size       | For key font size variations. |
 
-<mark style="color:red;">\* While you can add more variables and edit the colors freely, it is not recommended to remove or rename the existing "Colors" and "Neutral" variables.</mark>
+{% hint style="danger" %}
+<mark style="color:red;">While you can add more variables and edit the colors freely, you are not recommended to remove or rename the existing "</mark><mark style="color:red;">**Colors**</mark><mark style="color:red;">" and "</mark><mark style="color:red;">**Neutral**</mark><mark style="color:red;">" variables.</mark>
+{% endhint %}
 
 
 
