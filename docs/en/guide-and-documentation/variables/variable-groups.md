@@ -32,8 +32,9 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Richtext Spacing | Spacing for richtext elements.                           |
 | List Spacing     | Spacing of lists.                                        |
 | Radius           | Radius values.                                           |
-| Thickness        | For borders and outlines mainly.                         |
-| Icon             | For con sizes.                                           |
+| Thickness        | For borders mainly.                                      |
+| Outline          | For outline and offset values of outline.                |
+| Icon             | For icon sizes.                                          |
 | Button           | For sizes (height) of buttons.                           |
 | Main Nav         | Grouping variables specifically for the main navigation. |
 
