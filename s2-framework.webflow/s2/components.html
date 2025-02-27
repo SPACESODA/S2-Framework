@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Feb 27 2025 04:00:50 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Feb 27 2025 13:06:27 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -154,6 +154,13 @@
       }
       .image-bs.cc-has-bar .beer-handle {
         margin-left: -2px;
+      }
+      input.beer-range:focus~.beer-handle {
+        color: var(--colors--primary);
+      }
+      input.beer-range:focus-visible~.beer-handle {
+        outline: var(--_sizes---outline--base) solid var(--colors--focus);
+        outline-offset: var(--_sizes---outline--offset);
       }
     </style>
 </head>
@@ -1223,7 +1230,7 @@
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section flex="col" position="relative" class="section cc-top-bottom-sm">
-                    <div events="none" z-index="auto" overflow="hidden" class="absolute-full-wrapper">
+                    <div events="none" z-index="auto" overflow="hidden" class="full-wrapper">
                       <div user-select="none" opacity="" class="deco-positioner"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-jU9VAZDGMzs-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-left-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-M2oJ7Uq_0rc-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-left-02"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-Wc8k-KryEPM-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-right-01"><img src="https://cnd-host.pages.dev/files/s2/joel-filipe-WikCrHmk7IU-unsplash.webp" loading="auto" animation="slideIn" alt="" class="section_image-deco cc-right-02"></div>
                     </div>
                     <div class="w-layout-blockcontainer container cc-8c w-container">
@@ -2625,6 +2632,16 @@
           });
         }
       });
+    </script>
+  <script>
+      setTimeout(function() {
+        document.querySelectorAll("input.beer-range").forEach((input) => {
+          input.setAttribute("onmouseleave", "this.blur()");
+          input.addEventListener("touchend", function() {
+            this.blur();
+          });
+        });
+      }, 2500);
     </script>
 </body>
 </html>
