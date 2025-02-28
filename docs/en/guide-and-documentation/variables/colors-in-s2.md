@@ -1,6 +1,6 @@
 ---
-description: Further Understanding of default "Colors" variable group in the S2 Framework.
 icon: palette
+description: Further Understanding of default "Colors" variable group in the S2 Framework.
 ---
 
 # Colors in S2
@@ -22,13 +22,14 @@ By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **S
 | **Stroke Subtle**   | Subtle stroke color         |
 | **Stroke Emphasis** | More obvoious stroke color  |
 
-|                   | Description / Purpose                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------------ |
-| **Primary**       | <p>Primary color is the main color of the website or brand<br>(Primary 500 by default)</p> |
-| **Primary Light** | <p>Light version of the primary color<br>(Primary 300 by default)</p>                      |
-| **Primary Deep**  | <p>Deep version of the primary color<br>(Primary 700 by default)</p>                       |
-| **Secondary**     | The secondary color of the website or brand                                                |
-| **Accent**        | Accent color of the website or brand                                                       |
+|                     | Description / Purpose                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| **Primary**         | <p>Primary color is the main color of the website or brand<br>(Primary 500 by default)</p> |
+| **Primary Light**   | <p>Light version of the primary color<br>(Primary 300 by default)</p>                      |
+| **Primary Deep**    | <p>Deep version of the primary color<br>(Primary 700 by default)</p>                       |
+| **Secondary**       | The secondary color of the website or brand                                                |
+| **Accent**          | Accent color of the website or brand                                                       |
+| **Extended 1 \~ 3** | Additional colors for the website                                                          |
 
 |                       | Description / Purpose                          |
 | --------------------- | ---------------------------------------------- |
