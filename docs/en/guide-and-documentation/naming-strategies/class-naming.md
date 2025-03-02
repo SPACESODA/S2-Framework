@@ -1,9 +1,9 @@
 ---
+icon: i-cursor
 description: >-
   Since styling in Webflow relies heavily on class names, adopting consistent
   and well-thought-out class naming strategies will help you build faster and
   maintain your site more efficiently over time.
-icon: i-cursor
 ---
 
 # Class Naming
@@ -107,8 +107,8 @@ Always use complete words other than the below abbreviations.
 | call-to-action | `cta`        | configuration | `config` |
 | information    | `info`       | subsidiary    | `sub`    |
 | alternative    | `alt`        | language      | `lang`   |
-| minium         | `min`        | % (eg. 20%)   | `20p`    |
-| maximum        | `max`        |               |          |
+| minium         | `min`        | reference(s)  | `ref`    |
+| maximum        | `max`        | % (eg. 20%    | `20p`    |
 
 ### Margin & Padding
 
