@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Feb 28 2025 05:27:05 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Mar 03 2025 10:27:07 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -258,6 +258,9 @@
               text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
             }
             /* custom accessibility styles */
+            [contenteditable]:focus-visible {
+              outline: none;
+            }
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
               outline: var(--_sizes---outline--bold) solid var(--colors--focus);
@@ -336,7 +339,7 @@
     </div>
     <div data-animation="default" class="sg-nav w-nav" data-easing2="ease" data-easing="ease" data-collapse="small" role="banner" data-duration="400" data-doc-height="1" z-index="top">
       <div class="sg-nav_container w-container">
-        <div class="sg-main-nav-inner">
+        <div class="sg-nav-inner">
           <div class="sg-main-logo-wrapper">
             <a href="../index.html" class="main-logo-link w-nav-brand">
               <div class="main-logo cc-s2 w-embed"><svg width="100%" height="100%" viewbox="0 0 136 131" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--colors--text)">
@@ -350,14 +353,14 @@
               </div>
             </a>
           </div>
-          <nav role="navigation" class="sg-main-nav_menu w-nav-menu">
-            <a href="/s2/styles#basics" class="sg-main-nav_link w-nav-link">Styles</a>
-            <a href="/s2/styles#richtext" class="sg-main-nav_link w-nav-link">Rich Text</a>
-            <a href="../s2/elements.html" class="sg-main-nav_link w-nav-link">UI Elements</a>
-            <a href="../s2/layouts.html" class="sg-main-nav_link w-nav-link">Layouts</a>
-            <a href="../s2/filter-ui.html" class="sg-main-nav_link w-nav-link">Filter UI</a>
-            <a href="../s2/components.html" class="sg-main-nav_link w-nav-link">Components</a>
-            <div class="sg-main-nav_link cc-last">
+          <nav role="navigation" class="sg-nav_menu w-nav-menu">
+            <a href="/s2/styles#basics" class="sg-nav_link w-nav-link">Styles</a>
+            <a href="/s2/styles#richtext" class="sg-nav_link w-nav-link">Rich Text</a>
+            <a href="../s2/elements.html" class="sg-nav_link w-nav-link">UI Elements</a>
+            <a href="../s2/layouts.html" class="sg-nav_link w-nav-link">Layouts</a>
+            <a href="../s2/filter-ui.html" class="sg-nav_link w-nav-link">Filter UI</a>
+            <a href="../s2/components.html" class="sg-nav_link w-nav-link">Components</a>
+            <div class="sg-nav_link cc-last">
               <div class="menu-button-wrapper"><button data-toggle="light-dark" aria-label="Toggle light and dark mode" class="toggle">
                   <div class="toggle-bg">
                     <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2109,6 +2112,26 @@
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="tag-label">section</div>
+                        <div class="tag-label">cc-top-bottom-0</div>
+                      </div>
+                    </div>
+                    <div class="card cc-p-0">
+                      <div class="section cc-top-bottom-0">
+                        <div class="sg-padding cc-0"></div>
+                        <div events="none" class="w-layout-blockcontainer container w-container">
+                          <div class="title-wrapper cc-sm">
+                            <h4 class="h4">Heading</h4>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        </div>
+                        <div class="sg-padding cc-0 cc-bottom"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">section</div>
                         <div class="tag-label">cc-top-sm</div>
                       </div>
                     </div>
@@ -3260,7 +3283,7 @@
             <div id="richtext" class="sg-anchor"></div>
             <h1>Rich Text Element</h1>
           </div>
-          <div class="section cc-top-bottom-sm">
+          <div class="section cc-top-sm">
             <div no-scrollbar="" class="sg-h-scroll cc-1fr">
               <div class="u-vflex-left-top">
                 <div style="gap: 4rem;" class="u-hflex-left-top">
