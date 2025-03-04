@@ -3690,6 +3690,7 @@ figcaption {
   width: 15vw;
   min-width: auto;
   max-width: 15rem;
+  padding-top: 1.5rem;
   padding-right: 0;
 }
 
@@ -5768,9 +5769,9 @@ figcaption {
   border-bottom-left-radius: var(--_sizes---radius--card);
   border-bottom-right-radius: var(--_sizes---radius--card);
   background-color: var(--s2--surface-alt);
-  top: calc(var(--_sizes---main-nav--height)  + 1rem);
+  top: calc(var(--_sizes---main-nav--height)  + 1.5rem);
   flex-direction: column;
-  max-height: 70vh;
+  max-height: 70svh;
   margin-top: 0;
   margin-bottom: 0;
   padding: 1.75rem 1.75rem 2.5rem;
