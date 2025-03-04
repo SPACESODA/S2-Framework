@@ -29,7 +29,7 @@ If you want to minimize the footprint of the S2 Framework, we generally recommen
 3. Make the **"Home"** page your homepage:
    * Remove `DELETE-ME` from the Home page.
    * As the cover page of the style guide will become "Old Home", you can also delete that page.
-4. Clean up all unused Components, _except_:
+4. Clean up all unused **Components**, _except_:
    * <mark style="color:green;">**S2 Base CSS: CDN**</mark>, and
    * <mark style="color:green;">**S2 Base CSS: Embed**</mark>
 5. Clean up all unused interactions.
