@@ -41,7 +41,7 @@
 * [Foundations of S2](more/foundations-of-s2.md)
 * [Our Approaches](more/our-approaches.md)
 * [vs. Client-First and other Frameworks](more/vs.-client-first-and-other-frameworks.md)
-* [🔥 Useful Tools](more/useful-tools.md)
+* [🧶 Useful Stuff](more/useful-stuff.md)
 
 ***
 

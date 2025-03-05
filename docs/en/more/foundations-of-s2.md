@@ -1,8 +1,8 @@
 ---
+icon: circle-heart
 description: >-
   The S2 Framework is a product of innovation, thoughtful integration, and years
   of craftsmanship.
-icon: circle-heart
 ---
 
 # Foundations of S2
@@ -15,14 +15,14 @@ S2 combines the best ideas from [Tailwind CSS](https://tailwindcss.com) and othe
 
 We drew inspiration and borrowed best practices from several other popular frameworks. Each of the below contributed methodologies that enhanced the versatility and functionality of the S2 Framework.
 
-|                                                                                    | Good parts we referenced                                                                                                                                                        |
-| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MAST & the Saddle Framework                                                        | S2 evolved from MAST and the Saddle Framework. We have many things alike, especially `u-` for utility classes and `cc-` for combo classes.                                      |
-| Tailwind CSS                                                                       | Tailwind CSS's utilities-first classes inspired us to create **S2 Attributes**. Tailwind CSS also affected the naming of our attributes and classes, and how colors are set up. |
-| [**Origin UI**](https://originui.com) and [**Radix UI**](https://www.radix-ui.com) | How some of the top quality UI are created                                                                                                                                      |
-| Lumos                                                                              | Flexgrid and Grid Layouts                                                                                                                                                       |
-| Finsweet                                                                           | Filter UI Kit                                                                                                                                                                   |
-| Googles Material Framework                                                         | The "**on-**" concept in colors                                                                                                                                                 |
+|                                                                                                                  | Good parts we referenced                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MAST & the Saddle Framework                                                                                      | S2 evolved from MAST and the Saddle Framework. We have many things alike, especially `u-` for utility classes and `cc-` for combo classes.                                      |
+| Tailwind CSS                                                                                                     | Tailwind CSS's utilities-first classes inspired us to create **S2 Attributes**. Tailwind CSS also affected the naming of our attributes and classes, and how colors are set up. |
+| [**Origin UI**](https://originui.com), [**Radix UI**](https://www.radix-ui.com) & [**Flux**](https://fluxui.dev) | How some of the top quality UI are created.                                                                                                                                     |
+| Lumos                                                                                                            | Flexgrid and Grid Layouts                                                                                                                                                       |
+| Finsweet                                                                                                         | Filter UI Kit                                                                                                                                                                   |
+| Googles Material Framework                                                                                       | The "**on-**" concept in colors                                                                                                                                                 |
 
 #### Big thanks to their excellent work!
 

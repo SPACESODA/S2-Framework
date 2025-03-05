@@ -2,7 +2,7 @@
 description: 🔥 = Highly recommanded
 ---
 
-# 🔥 Useful Tools
+# 🧶 Useful Stuff
 
 ## Fluid Typography
 
@@ -54,7 +54,7 @@ Finsweet's Fluid Responsive: [https://finsweet.com/client-first/docs/fluid-respo
 
 <details>
 
-<summary>Learn more about colors 📙</summary>
+<summary>Learn more about colors</summary>
 
 Knowing how others deal with color systems, palettes, naming, etc.
 
@@ -101,9 +101,9 @@ UTM builder: [https://utmbuilder.net](https://utmbuilder.net/)
 
 Squoosh: [https://squoosh.app](https://squoosh.app)
 
-Phosphor Icons: [https://phosphoricons.com](https://phosphoricons.com/)
+Phosphor Icons: [https://phosphoricons.com](https://phosphoricons.com/) 🔥
 
-Boxicons: [https://boxicons.com](https://boxicons.com/)
+Boxicons: [https://boxicons.com](https://boxicons.com/) 🔥
 
 Heroicons: [https://heroicons.com](https://heroicons.com/)
 
