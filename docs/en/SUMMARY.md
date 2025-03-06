@@ -3,11 +3,14 @@
 ## Welcome
 
 * [S2 is flow simple!](README.md)
+* [Getting Started](welcome/getting-started.md)
+
+***
+
+* [How to use the Cloneable?](how-to-use-the-cloneable.md)
 
 ## Guide & Documentation
 
-* [Getting Started](guide-and-documentation/getting-started.md)
-* [How to use the Cloneable?](guide-and-documentation/how-to-use-the-cloneable.md)
 * [Basic Concepts](guide-and-documentation/basic-concepts/README.md)
   * [Styling in Webflow](guide-and-documentation/basic-concepts/styling-in-webflow.md)
   * [Use Utility Classes Wisely](guide-and-documentation/basic-concepts/use-utility-classes-wisely.md)

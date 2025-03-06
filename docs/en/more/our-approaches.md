@@ -8,7 +8,11 @@ icon: star-christmas
 
 
 
-**So, continue reading if you are interested...** :see\_no\_evil:
+{% hint style="warning" %}
+Alert! The following can be boring :see\_no\_evil:
+
+**So, continue reading if you are interested...**
+{% endhint %}
 
 
 
