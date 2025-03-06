@@ -4781,12 +4781,13 @@ figcaption {
   height: 2.5rem;
 }
 
-.main-logo.cc-width-auto {
-  width: auto;
+.main-logo.cc-long-logo {
+  width: 9rem;
 }
 
-.main-logo.cc-full-logo {
-  width: 9rem;
+.main-logo.cc-square-logo {
+  width: 3rem;
+  height: 3rem;
 }
 
 .main-logo-wrapper {
@@ -7584,7 +7585,7 @@ figcaption {
     left: 30vw;
   }
 
-  .main-logo.cc-full-logo {
+  .main-logo.cc-long-logo {
     width: 8rem;
   }
 
@@ -8567,7 +8568,7 @@ figcaption {
     font-size: 14.5vw;
   }
 
-  .main-logo.cc-full-logo {
+  .main-logo.cc-long-logo {
     width: 7rem;
   }
 
