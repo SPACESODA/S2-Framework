@@ -1,4 +1,4 @@
-// BeerSlider v1.0
+// BeerSlider: Packed Script v1.0
 // by S2 Framework
 
 // Load BeerSlider dynamically

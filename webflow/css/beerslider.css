@@ -1,0 +1,40 @@
+/* BeerSlider Base CSS, Modified */
+
+.beer-slider *, .beer-slider:before, .beer-slider:after { box-sizing: border-box; }
+.beer-slider img, .beer-slider svg { vertical-align: bottom; }
+.beer-reveal > :first-child { width: 200%; height: 100%; max-width: none; }
+.beer-reveal > img:first-child { height: auto; }
+.beer-range { pointer-events: auto !important; }
+.beer-range::-webkit-slider-thumb { -webkit-appearance: auto; }
+.beer-range::-moz-range-thumb { appearance: auto; }
+.beer-range::-ms-tooltip { display: none; }
+.beer-handle:before, .beer-handle:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	transform-origin: 0 0;
+}
+.beer-handle:before { left: 0.625rem; transform: rotate(-45deg); }
+.beer-handle:after { left: calc(1.5rem + (1.5rem - 0.625rem)); transform: rotate(135deg); }
+.beer-reveal[data-beer-label]:after, .beer-slider[data-beer-label]:after {
+	position: absolute;
+	top: 1.25rem;
+	padding: 0.5rem 0.65rem;
+	content: attr(data-beer-label);
+}
+.beer-reveal[data-beer-label]:after { left: 1.25rem; }
+.beer-slider[data-beer-label]:after { right: 1.25rem; }
+.beer-reveal[data-beer-label=""]:after, .beer-slider[data-beer-label=""]:after { content: none; }
+.beer-handle, .beer-reveal { opacity: 0; }
+.beer-ready .beer-handle, .beer-ready .beer-reveal { opacity: 1; }
+.image-bs [for-data="true"] { display: none; }
+.beer-slider > img {
+	width: 100% !important;
+	max-width: 100%;
+	height: auto;
+}
+.beer-reveal > img:first-child {
+	height: 100% !important;
+}
