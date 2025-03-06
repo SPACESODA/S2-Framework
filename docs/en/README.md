@@ -1,7 +1,7 @@
 ---
 description: Welcome to the S2 Framework!
-cover: .gitbook/assets/S2-social-banner-thinner@2x.jpg
-coverY: 147.30845518118244
+cover: .gitbook/assets/S2-social-banner@2x.jpg
+coverY: 614.2854156538649
 layout:
   cover:
     visible: true
@@ -46,7 +46,8 @@ Preview and experiment with S2 :snowboarder:\
 
 Community and Support 🛟\
 <mark style="color:orange;">**Reddit**</mark>: [https://www.reddit.com/r/S2Framework](https://www.reddit.com/r/S2Framework/)\
-<mark style="color:purple;">**Discord**</mark>: [https://s2-framework.webflow.io/#discord](https://s2-framework.webflow.io/#discord)
+<mark style="color:purple;">**Discord**</mark>: [https://s2-framework.webflow.io/#discord](https://s2-framework.webflow.io/#discord)\
+**Github**: [https://github.com/SPACESODA/S2-Framework](https://github.com/SPACESODA/S2-Framework)
 
 Roadmap and Changelog 🤓\
 [https://s2-framework.webflow.io/#roadmap](https://s2-framework.webflow.io/#roadmap)
