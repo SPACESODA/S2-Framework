@@ -14,9 +14,9 @@ Apply the S2 Framework's base CSS by importing minified CSS from CDN.
 >
 > > <mark style="color:blue;">**`js`**</mark>
 > >
-> > <mark style="color:green;">**+ S2 Framework Base CSS**</mark> <mark style="color:blue;">**`css`**</mark>
+> > <mark style="color:green;">**- S2 Framework Base CSS**</mark> <mark style="color:blue;">**`css`**</mark>
 > >
-> > <mark style="color:green;">**+ Icon Libraries**</mark> <mark style="color:blue;">**`css`**</mark>
+> > <mark style="color:green;">**- Icon Libraries**</mark> <mark style="color:blue;">**`css`**</mark>
 > >
 > > <mark style="color:blue;">**`css_custom`**</mark>\
 > > `/* -- Global Custom Attributes -- */`\
