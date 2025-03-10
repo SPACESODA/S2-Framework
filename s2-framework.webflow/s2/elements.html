@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Mar 06 2025 08:58:13 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Mar 10 2025 12:16:39 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -6,10 +6,10 @@
   <meta content="S2 Framework" name="description">
   <meta content="UI Elements | S2 Framework" property="og:title">
   <meta content="S2 Framework" property="og:description">
-  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover.jpg" property="og:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover-v2.2.1.jpg" property="og:image">
   <meta content="UI Elements | S2 Framework" property="twitter:title">
   <meta content="S2 Framework" property="twitter:description">
-  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover.jpg" property="twitter:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover-v2.2.1.jpg" property="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -39,7 +39,7 @@
     </script>
 </head>
 <body dir="" body="sg" class="body">
-  <div data-nosnippet="true" s2="style-guide-only" class="delete-me cc-clone-cta">
+  <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
     <div code="js" class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -71,60 +71,9 @@
       <!--  For Style Guide only, you don't need this.  -->
       <script defer="" src="https://cloud.umami.is/script.js" data-website-id="d01ab616-cead-4f79-b338-266617396737"></script>
     </div>
-    <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
-      <!--  For Style Guide only, you don't need such scripts.  -->
-      <!--  Hide Cookie Consent in iFrames  -->
-      <script>
-          if (window.self !== window.top) {
-            document.addEventListener("DOMContentLoaded", function() {
-              const cookieConsent = document.querySelector("[cookieconsent]");
-              if (cookieConsent) {
-                cookieConsent.style.display = "none";
-              }
-            });
-          }
-        </script>
-      <!--  Force Eager Loading  -->
-      <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            // force all standard <img> elements to load immediately
-            document.querySelectorAll("img").forEach((img) => {
-              img.setAttribute("loading", "eager");
-              // handle Webflow-specific lazy-loaded images
-              const dataSrc =
-                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-              if (dataSrc) {
-                img.setAttribute("src", dataSrc);
-              } else {
-                img.src = img.src; // trigger reload if necessary
-              }
-            });
-            // force all background images to load immediately
-            document.querySelectorAll("*").forEach((el) => {
-              const bgImage = window.getComputedStyle(el).backgroundImage;
-              if (bgImage && bgImage.startsWith('url("')) {
-                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
-                const img = new Image();
-                img.src = url; // preload background image
-              }
-            });
-          });
-        </script>
-      <!--  Remove any s2="style-guide-only" element when the hostname is not S2  -->
-      <script>
-          (function() {
-            if (window.location.hostname !== "s2-framework.webflow.io") {
-              var elements = document.querySelectorAll('[s2="style-guide-only"]');
-              elements.forEach(function(el) {
-                el.parentNode.removeChild(el);
-              });
-            }
-          })();
-        </script>
-    </div>
-    <div s2="style-guide-only">
+    <div>
       <a href="https://webflow.com/made-in-webflow/website/s2-framework" aria-label="Clone Now" target="_blank" class="button w-inline-block">
-        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M82.6152 5H34.725C28.1731 5 22.7931 10.1139 22.3668 16.5597H30.6794C31.063 14.6776 32.7312 13.257 34.725 13.257H82.6152C84.8916 13.257 86.7436 15.109 86.7436 17.3854V65.2757C86.7436 66.9654 85.7234 68.4212 84.2666 69.0595V77.5515C90.318 76.7417 95.0006 71.5453 95.0006 65.2757V17.3854C95.0006 10.5561 89.4445 5 82.6152 5ZM17.3854 22.3398H65.2758C72.1051 22.3398 77.6612 27.8959 77.6612 34.7252V82.6155C77.6612 89.4449 72.1051 95.001 65.2758 95.001H17.3854C10.5561 95.001 5 89.4449 5 82.6155V34.7252C5 27.8959 10.5561 22.3398 17.3854 22.3398ZM65.2758 86.744C67.5522 86.744 69.4042 84.892 69.4042 82.6155V34.7252C69.4042 32.4488 67.5522 30.5967 65.2758 30.5967H17.3854C15.109 30.5967 13.257 32.4488 13.257 34.7252V82.6155C13.257 84.892 15.109 86.744 17.3854 86.744H65.2758ZM37.2021 46.285H45.4591V54.5419H53.716V62.7989H45.4591V71.0558H37.2021V62.7989H28.9452V54.5419H37.2021V46.285Z" fill="currentColor"></path>
           </svg></div>
         <div class="text-sm">Clone Now</div>
@@ -133,8 +82,8 @@
   </div>
   <div id="top" class="page">
     <div class="code">
-      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme)  -->
-        <!--  Note: The Mode Switching script is placed in the site's global custom code.  -->
+      <div code="js" class="js cc-in-global w-embed w-script"><!--  Script to apply Light / Dark Mode (Theme)  -->
+        <!--  Note: The script for Mode Switching function is included in the site's global "Head code".  -->
         <script>
             (function() {
               try {
@@ -173,12 +122,56 @@
             })();
           </script>
       </div>
-      <div class="code">
-        <div code="css" class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/css/s2.min.css">
+      <div class="css">
+        <div code="css" class="css_cdn w-embed"><!-- 
+S2 Framework Base CSS
+** Full Pacakge by CDN **
+** A few KBs only! **
+ -->
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
-      <div code="css" class="css_custom w-embed">
+      <div class="code cc-inside-global">
+        <div class="code_phosphor-icons w-embed"><!--  
+Phosphor Icons: Regular, Fill, Bold
+https://phosphoricons.com
+ -->
+          <!--  Regular  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/regular/style.min.css" rel="stylesheet">
+          <!--  Fill  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/fill/style.min.css" rel="stylesheet">
+          <!--  Bold  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/bold/style.min.css" rel="stylesheet">
+          <!--  Light  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/light/style.min.css" rel="stylesheet">
+          <!--  Thin  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/thin/style.min.css" rel="stylesheet">
+          <!--  Duotone  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/duotone/style.min.css" rel="stylesheet">
+          <style>
+              .icon[class*="ph"] {
+                display: block !important;
+              }
+            </style>
+        </div>
+        <div class="code_font-awesome w-embed"><!-- 
+Font Awesome Free: Solid, Regular, Brands
+https://fontawesome.com/search?ic=free
+ -->
+          <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+          <style>
+              .icon[class*="fa"] {
+                display: block !important;
+              }
+              .icon[class*="fa"]::before {
+                display: inline-block !important;
+                transform: scale(0.925);
+                transform-origin: center center;
+              }
+            </style>
+        </div>
+      </div>
+      <div code="css" class="css_custom cc-in-global w-embed">
         <style>
             /* ------------------------------ */
             /* -- Global Custom Attributes -- */
@@ -254,17 +247,14 @@
               background: var(--colors--primary);
               color: #fff;
             }
-            body * {
-              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
-            }
             /* custom accessibility styles */
-            [contenteditable]:focus-visible {
-              outline: none;
-            }
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
               outline: var(--_sizes---outline--bold) solid var(--colors--focus);
               outline-offset: var(--_sizes---outline--offset);
+            }
+            [contenteditable]:focus-visible {
+              outline: none;
             }
             /* main-nav_button */
             .main-nav_button path {
@@ -324,11 +314,6 @@
               content: '\2713\0020';
               color: var(--colors--primary);
             }
-            .breadcrumb-item a.w--current {
-              opacity: 0.6;
-              cursor: default;
-              pointer-events: none;
-            }
             /* styles for RTL lauout */
             [dir="rtl"] .main-nav_menu {
               margin-left: 0rem !important;
@@ -342,8 +327,8 @@
         <div class="sg-nav-inner">
           <div class="sg-main-logo-wrapper">
             <a href="../index.html" class="main-logo-link w-nav-brand">
-              <div class="main-logo cc-s2 w-embed"><svg width="100%" height="100%" viewbox="0 0 248 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M105.039 0C110.179 0 113.689 5.1971 111.769 9.96509L81.4549 85.2624C79.5353 90.0304 83.0455 95.2275 88.1854 95.2275H100.132C100.181 95.0797 100.235 94.9322 100.294 94.7851L136.624 4.54577C137.73 1.79914 140.394 0 143.355 0H204.801C209.941 0 213.451 5.1971 211.532 9.96509L181.217 85.2624C179.297 90.0304 182.808 95.2275 187.947 95.2275H240.177C245.317 95.2275 248.827 100.425 246.907 105.193L210.577 195.432C209.471 198.179 206.808 199.978 203.847 199.978H142.401C137.261 199.978 133.751 194.781 135.67 190.013L165.985 114.715C167.904 109.947 164.394 104.75 159.254 104.75H147.307C147.258 104.898 147.204 105.045 147.145 105.193L110.815 195.432C109.709 198.179 107.046 199.978 104.085 199.978H42.6384C37.4986 199.978 33.9884 194.781 35.908 190.013L66.2225 114.715C68.1421 109.947 64.6319 104.75 59.492 104.75H7.26265C2.12276 104.75 -1.38739 99.5531 0.532192 94.7851L36.8623 4.54577C37.9681 1.79914 40.6319 0 43.5928 0H105.039Z" fill="currentColor"></path>
+              <div class="main-logo cc-s2 w-embed"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8887 6C21.1723 6 5.99976 21.1726 5.99976 39.8889V216.111C5.99976 234.828 21.1723 250 39.8887 250H216.111C234.827 250 250 234.828 250 216.111V39.8889C250 21.1726 234.827 6 216.111 6H39.8887ZM83.5627 45.4407C84.6066 41.1937 88.415 38.2081 92.7884 38.2081H139.158C145.323 38.2081 149.855 43.9892 148.383 49.9761L131.177 119.976C130.294 123.568 133.014 127.037 136.713 127.037H180.959C187.124 127.037 191.657 132.818 190.185 138.805L172.437 211.007C171.393 215.255 167.585 218.24 163.212 218.24H116.842C110.677 218.24 106.145 212.459 107.617 206.472L124.823 136.472C125.706 132.88 122.986 129.412 119.287 129.412H75.0408C68.8756 129.412 64.3434 123.631 65.815 117.644L83.5627 45.4407Z" fill="currentColor"></path>
                 </svg></div>
               <div class="u-hide_md">
                 <div class="main-logo w-embed"><span style="font-size: 0.95rem; font-weight: 700; line-height: 1.025; color: inherit; margin: 0 0.7125em;">S2 Framework</span></div>
@@ -400,6 +385,46 @@
             </div>
           </div>
         </div>
+      </div>
+      <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+        <!--  For Style Guide only, you don't need such scripts.  -->
+        <!--  Hide Cookie Consent in iFrames  -->
+        <script>
+            if (window.self !== window.top) {
+              document.addEventListener("DOMContentLoaded", function() {
+                const cookieConsent = document.querySelector("[cookieconsent]");
+                if (cookieConsent) {
+                  cookieConsent.style.display = "none";
+                }
+              });
+            }
+          </script>
+        <!--  Force Eager Loading  -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              // force all standard <img> elements to load immediately
+              document.querySelectorAll("img").forEach((img) => {
+                img.setAttribute("loading", "eager");
+                // handle Webflow-specific lazy-loaded images
+                const dataSrc =
+                  img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+                if (dataSrc) {
+                  img.setAttribute("src", dataSrc);
+                } else {
+                  img.src = img.src; // trigger reload if necessary
+                }
+              });
+              // force all background images to load immediately
+              document.querySelectorAll("*").forEach((el) => {
+                const bgImage = window.getComputedStyle(el).backgroundImage;
+                if (bgImage && bgImage.startsWith('url("')) {
+                  const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                  const img = new Image();
+                  img.src = url; // preload background image
+                }
+              });
+            });
+          </script>
       </div>
       <div code="css" class="css w-embed">
         <style>
@@ -640,7 +665,7 @@
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button w-inline-block">
                           <div>Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
                             </svg></div>
                         </a>
@@ -754,7 +779,7 @@
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button cc-outline w-inline-block">
                           <div>Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
                             </svg></div>
                         </a>
@@ -868,15 +893,17 @@
                     <div class="block">
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button w-inline-block">
-                          <div class="text-sm">Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                            </svg></div>
+                          <div>Learn more</div>
+                          <div class="icon-wrapper">
+                            <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
                         </a>
                       </div>
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button w-inline-block">
-                          <div class="text-sm">Call our sales team</div>
+                          <div>Call our sales team</div>
                         </a>
                       </div>
                     </div>
@@ -891,14 +918,16 @@
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button cc-outline w-inline-block">
                           <div>Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                            </svg></div>
+                          <div class="icon-wrapper">
+                            <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
                         </a>
                       </div>
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button cc-outline w-inline-block">
-                          <div>How to use?</div>
+                          <div>How it works?</div>
                         </a>
                       </div>
                     </div>
@@ -913,9 +942,11 @@
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button cc-text w-inline-block">
                           <div>Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                            </svg></div>
+                          <div class="icon-wrapper">
+                            <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
                         </a>
                       </div>
                       <div class="button-wrapper cc-center">
@@ -935,9 +966,11 @@
                       <div class="button-wrapper cc-center">
                         <a href="#" class="button-link w-inline-block">
                           <div>Learn more</div>
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                            </svg></div>
+                          <div class="icon-wrapper">
+                            <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
                         </a>
                       </div>
                       <div class="button-wrapper cc-center">
@@ -959,7 +992,7 @@
                           <div>Learn more</div>
                         </a>
                         <a href="#" class="pill cc-status w-inline-block">
-                          <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#16A34A"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#16A34A" stroke-opacity="0.25" stroke-width="16"></circle>
                             </svg></div>
@@ -968,21 +1001,21 @@
                       </div>
                       <div class="button-wrapper">
                         <a href="#" class="pill w-inline-block">
-                          <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#007bff"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#80cfff" stroke-opacity="0.25" stroke-width="16"></circle>
                             </svg></div>
                           <div>Messages (2)</div>
                         </a>
                         <a href="#" class="pill w-inline-block">
-                          <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#ff0000"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#ff6666" stroke-opacity="0.25" stroke-width="16"></circle>
                             </svg></div>
                           <div>Special Offer</div>
                         </a>
                         <a href="#" class="pill cc-primary w-inline-block">
-                          <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#fff"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#fff" stroke-opacity="0.25" stroke-width="16"></circle>
                             </svg></div>
@@ -998,7 +1031,7 @@
                       <h3>Icons</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>The base <span class="tag-label">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (units in <code>em</code>, not <code>rem</code>).</p>
+                      <p>The base <span class="tag-label">icon</span> is <strong>1em</strong> x <strong>1em</strong>, allowing it to scale. The font size is not set.</p>
                     </div>
                   </div>
                   <div class="sg-element">
@@ -1107,6 +1140,9 @@
                         <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
                           </svg></div>
+                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.6726 32.9684L57.603 9.36893C57.9263 7.42924 59.6108 6 61.5845 6C62.8606 6 64.0516 6.59552 64.8173 7.6164L67.6928 11.4447H76.5575C78.7184 11.4447 80.7942 12.3125 82.3255 13.8438L85.3882 16.8895H94.9165C97.1794 16.8895 99 18.71 99 20.973V25.0566C99 32.5771 92.9087 38.6684 85.3882 38.6684H79.9434H77.2211H73.5969L72.7292 43.8579L53.6726 32.9684ZM71.7763 49.5749V87.671C71.7763 90.6826 69.3432 93.1157 66.3316 93.1157H60.8869C57.8753 93.1157 55.4422 90.6826 55.4422 87.671V68.0699C51.3586 70.1628 46.7306 71.3368 41.8303 71.3368C36.9301 71.3368 32.302 70.1628 28.2185 68.0699V87.671C28.2185 90.6826 25.7854 93.1157 22.7738 93.1157H17.329C14.3174 93.1157 11.8843 90.6826 11.8843 87.671V48.5029C6.98404 46.6483 3.1387 42.4967 1.81155 37.1881L1.16499 34.5508C0.433351 31.6413 2.20289 28.6807 5.12943 27.9491C8.05597 27.2174 10.9995 28.987 11.7312 31.9135L12.3947 34.5508C12.9903 36.9669 15.1682 38.6684 17.6693 38.6684H22.7738H25.4961H52.6858L71.7763 49.5749ZM79.9434 19.6118C79.9434 18.8898 79.6566 18.1974 79.1461 17.6868C78.6355 17.1763 77.9431 16.8895 77.2211 16.8895C76.4991 16.8895 75.8066 17.1763 75.2961 17.6868C74.7855 18.1974 74.4987 18.8898 74.4987 19.6118C74.4987 20.3338 74.7855 21.0263 75.2961 21.5368C75.8066 22.0474 76.4991 22.3342 77.2211 22.3342C77.9431 22.3342 78.6355 22.0474 79.1461 21.5368C79.6566 21.0263 79.9434 20.3338 79.9434 19.6118Z" fill="currentColor"></path>
+                          </svg></div>
                       </div>
                     </div>
                   </div>
@@ -1115,10 +1151,50 @@
                       <div class="tag-wrapper">
                         <div class="tag-label">icon</div>
                       </div>
+                      <div class="sg-note">an <strong>icon library</strong> will load only when set to &quot;Visible&quot; — configure inside <span class="tag-label cc-component">Global Code</span> component</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
+                      <div>
+                        <div class="title-wrapper cc-2xs">
+                          <a href="https://phosphoricons.com" target="_blank">Phosphor Icons</a>
+                        </div>
+                        <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i><i aria-hidden="true" class="icon cc-1-5em ph-fill ph-hand-waving"> </i><i aria-hidden="true" class="icon cc-2em ph-fill ph-hand-waving"> </i></div>
+                      </div>
+                      <div>
+                        <div class="title-wrapper cc-2xs">
+                          <a href="https://fontawesome.com/search?ic=free" target="_blank">Font Awesome Free</a>: Solid, Regular, Brands
+                        </div>
+                        <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top"><i aria-hidden="true" class="icon fa-solid fa-dog"> </i><i aria-hidden="true" class="icon cc-1-5em fa-solid fa-dog"> </i><i aria-hidden="true" class="icon cc-2em fa-solid fa-dog"> </i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label cc-component">Icon</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label cc-component">Icon: Wrapped</div>
+                      </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
+                      <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top"><i data-wf--icon--config-size="inherit" aria-hidden="true" class="icon ph-fill ph-magic-wand"> </i><i data-wf--icon--config-size="1-5em" aria-hidden="true" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine"> </i><i data-wf--icon--config-size="2em" aria-hidden="true" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer"> </i><i data-wf--icon--config-size="3em" aria-hidden="true" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake"> </i></div>
+                      <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top">
+                        <div data-wf--icon-wrapped--config-color="inherit" style="" class="icon-wrapper"><i data-wf--icon--config-size="inherit" aria-hidden="true" class="icon ph-fill ph-magic-wand"> </i></div>
+                        <div data-wf--icon-wrapped--config-color="extended-3" style="" class="icon-wrapper w-variant-e7d297c2-8018-2932-c2a6-a186cbaed955"><i data-wf--icon--config-size="1-5em" aria-hidden="true" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine"> </i></div>
+                        <div data-wf--icon-wrapped--config-color="secondary" style="" class="icon-wrapper w-variant-7ac06c1a-a923-bb18-8850-dd358ec5290a"><i data-wf--icon--config-size="2em" aria-hidden="true" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer"> </i></div>
+                        <div data-wf--icon-wrapped--config-color="accent" style="" class="icon-wrapper w-variant-ed53c54e-e373-34e1-89d1-8f2bfa05cbf5"><i data-wf--icon--config-size="3em" aria-hidden="true" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake"> </i></div>
+                        <div data-wf--icon-wrapped--config-color="inherit" style="font-size: 4.5rem; color: oklch(70% 0.2047 47.65);" class="icon-wrapper"><i data-wf--icon--config-size="inherit" aria-hidden="true" class="icon fa-solid fa-basketball"> </i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="tag-label">icon</div>
                         <div class="tag-label">cc-1em</div>
                       </div>
+                      <div class="sg-note">the size of icons can be changed by adding combo classes to <span class="tag-label">icon</span> or through parent elements</div>
                     </div>
                     <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;" class="block">
                       <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1127,7 +1203,7 @@
                       <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                         </svg></div>
-                      <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                         </svg></div>
                       <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1154,10 +1230,6 @@
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="tag-label">icon</div>
-                        <div class="tag-label">cc-rem</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="tag-label">icon</div>
                         <div class="tag-label">cc-1rem</div>
                       </div>
                     </div>
@@ -1168,7 +1240,7 @@
                       <div class="icon cc-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                         </svg></div>
-                      <div class="icon cc-rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="icon cc-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                         </svg></div>
                       <div class="icon cc-1-5rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1195,17 +1267,15 @@
                     <div class="sg-tags">
                       <div class="tag-wrapper">
                         <div class="tag-label">icon</div>
-                        <div class="tag-label">cc-image</div>
                       </div>
                       <div class="tag-wrapper">
-                        <div class="tag-label">icon</div>
                         <div class="tag-label">cc-image-1rem</div>
                       </div>
-                      <div class="sg-note">width is auto (suitable for images)</div>
-                      <div class="sg-note">for SVG, you should wrap it with an element that has a width value</div>
+                      <div class="sg-note">width is auto (suitable for images) and use rem for height</div>
+                      <div class="sg-note">for SVG images, you should wrap it with an element that has a width value</div>
                     </div>
                     <div class="block">
-                      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;" class="block"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-0-75rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-2rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-3rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-4rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-6rem"></div>
+                      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;" class="block"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-0-75rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1-25rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-2rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-3rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-4rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-6rem"></div>
                       <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top">
                         <div style="width: 6rem;">
                           <div class="icon cc-image-2rem w-embed"><svg width="100%" height="100%" viewbox="0 0 84 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1236,34 +1306,106 @@
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
-                        <div class="tag-label">icon-wrapper</div>
+                        <div class="tag-label">icon</div>
+                        <div class="tag-label">cc-100p</div>
                       </div>
-                      <div class="sg-note">for flexibility, wrap an icon with <span class="tag-label">icon-wrapper</span> before converting to component</div>
                     </div>
                     <div class="block">
-                      <div style="gap: 1rem; margin-bottom: 1.5rem;" class="u-hflex-left-center">
+                      <div style="width: 3.5rem;">
+                        <div class="icon cc-100p w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M50 96C75.4051 96 96 75.4051 96 50C96 24.5949 75.4051 4 50 4C24.5949 4 4 24.5949 4 50C4 75.4051 24.5949 96 50 96ZM46.7047 70.5213L75.7573 36.6266L70.2427 31.8997L44.0437 62.465L32.2568 47.7315L26.5853 52.2685L41.1116 70.4264L43.851 73.8508L46.7047 70.5213Z" fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">icon-wrapper</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-primary</div>
+                      </div>
+                      <div class="sg-note">modify the wrapper to give icons colors</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                      <div style="gap: 1rem;" class="u-hflex-left-center">
                         <div class="icon-wrapper">
                           <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></div>
                         </div>
                         <div class="icon-wrapper">
-                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg></div>
-                        </div>
-                        <div class="icon-wrapper">
                           <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></div>
                         </div>
+                        <div class="icon-wrapper">
+                          <div class="icon cc-2em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                        </div>
                       </div>
-                      <div gap="1-1" class="u-hflex-left-center">
+                      <div class="text-3xl">
+                        <div style="gap: 0.25rem;" class="u-hflex-left-center">
+                          <div class="icon-wrapper"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-primary"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-primary-light"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-primary-deep"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-secondary"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-accent"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-extended-1"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-extended-2"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-extended-3"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-text"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                          <div class="icon-wrapper cc-text-mu"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">icon-wrapper</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-circle</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">cc-lead</div>
+                      </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                      <div class="u-hflex-left-center">
                         <div class="icon-wrapper cc-circle">
                           <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></div>
                         </div>
+                      </div>
+                      <div>
+                        <div class="icon-wrapper cc-lead">
+                          <div class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M50 96C75.4051 96 96 75.4051 96 50C96 24.5949 75.4051 4 50 4C24.5949 4 4 24.5949 4 50C4 75.4051 24.5949 96 50 96ZM46.7047 70.5213L75.7573 36.6266L70.2427 31.8997L44.0437 62.465L32.2568 47.7315L26.5853 52.2685L41.1116 70.4264L43.851 73.8508L46.7047 70.5213Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <p>Task completed</p>
+                      </div>
+                      <div class="text-3xl">
+                        <div class="icon-wrapper cc-lead">
+                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M53.6726 32.9684L57.603 9.36893C57.9263 7.42924 59.6108 6 61.5845 6C62.8606 6 64.0516 6.59552 64.8173 7.6164L67.6928 11.4447H76.5575C78.7184 11.4447 80.7942 12.3125 82.3255 13.8438L85.3882 16.8895H94.9165C97.1794 16.8895 99 18.71 99 20.973V25.0566C99 32.5771 92.9087 38.6684 85.3882 38.6684H79.9434H77.2211H73.5969L72.7292 43.8579L53.6726 32.9684ZM71.7763 49.5749V87.671C71.7763 90.6826 69.3432 93.1157 66.3316 93.1157H60.8869C57.8753 93.1157 55.4422 90.6826 55.4422 87.671V68.0699C51.3586 70.1628 46.7306 71.3368 41.8303 71.3368C36.9301 71.3368 32.302 70.1628 28.2185 68.0699V87.671C28.2185 90.6826 25.7854 93.1157 22.7738 93.1157H17.329C14.3174 93.1157 11.8843 90.6826 11.8843 87.671V48.5029C6.98404 46.6483 3.1387 42.4967 1.81155 37.1881L1.16499 34.5508C0.433351 31.6413 2.20289 28.6807 5.12943 27.9491C8.05597 27.2174 10.9995 28.987 11.7312 31.9135L12.3947 34.5508C12.9903 36.9669 15.1682 38.6684 17.6693 38.6684H22.7738H25.4961H52.6858L71.7763 49.5749ZM79.9434 19.6118C79.9434 18.8898 79.6566 18.1974 79.1461 17.6868C78.6355 17.1763 77.9431 16.8895 77.2211 16.8895C76.4991 16.8895 75.8066 17.1763 75.2961 17.6868C74.7855 18.1974 74.4987 18.8898 74.4987 19.6118C74.4987 20.3338 74.7855 21.0263 75.2961 21.5368C75.8066 22.0474 76.4991 22.3342 77.2211 22.3342C77.9431 22.3342 78.6355 22.0474 79.1461 21.5368C79.6566 21.0263 79.9434 20.3338 79.9434 19.6118Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <p>We are dog friendly! Suspendisse varius enim in eros elementum tristique.</p>
+                      </div>
+                      <div class="h1">
+                        <div class="icon-wrapper cc-lead">
+                          <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M53.6726 32.9684L57.603 9.36893C57.9263 7.42924 59.6108 6 61.5845 6C62.8606 6 64.0516 6.59552 64.8173 7.6164L67.6928 11.4447H76.5575C78.7184 11.4447 80.7942 12.3125 82.3255 13.8438L85.3882 16.8895H94.9165C97.1794 16.8895 99 18.71 99 20.973V25.0566C99 32.5771 92.9087 38.6684 85.3882 38.6684H79.9434H77.2211H73.5969L72.7292 43.8579L53.6726 32.9684ZM71.7763 49.5749V87.671C71.7763 90.6826 69.3432 93.1157 66.3316 93.1157H60.8869C57.8753 93.1157 55.4422 90.6826 55.4422 87.671V68.0699C51.3586 70.1628 46.7306 71.3368 41.8303 71.3368C36.9301 71.3368 32.302 70.1628 28.2185 68.0699V87.671C28.2185 90.6826 25.7854 93.1157 22.7738 93.1157H17.329C14.3174 93.1157 11.8843 90.6826 11.8843 87.671V48.5029C6.98404 46.6483 3.1387 42.4967 1.81155 37.1881L1.16499 34.5508C0.433351 31.6413 2.20289 28.6807 5.12943 27.9491C8.05597 27.2174 10.9995 28.987 11.7312 31.9135L12.3947 34.5508C12.9903 36.9669 15.1682 38.6684 17.6693 38.6684H22.7738H25.4961H52.6858L71.7763 49.5749ZM79.9434 19.6118C79.9434 18.8898 79.6566 18.1974 79.1461 17.6868C78.6355 17.1763 77.9431 16.8895 77.2211 16.8895C76.4991 16.8895 75.8066 17.1763 75.2961 17.6868C74.7855 18.1974 74.4987 18.8898 74.4987 19.6118C74.4987 20.3338 74.7855 21.0263 75.2961 21.5368C75.8066 22.0474 76.4991 22.3342 77.2211 22.3342C77.9431 22.3342 78.6355 22.0474 79.1461 21.5368C79.6566 21.0263 79.9434 20.3338 79.9434 19.6118Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <p>Woof Woof</p>
                       </div>
                     </div>
                   </div>
@@ -1284,34 +1426,34 @@
                       <nav class="breadcrumb">
                         <ol itemtype="https://schema.org/BreadcrumbList" itemscope="https://schema.org/BreadcrumbList" role="list" class="breadcrumb-list w-list-unstyled">
                           <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                            <a itemprop="item" href="../home.html" class="w-inline-block">
+                            <a itemprop="item" href="../home.html" class="button-link cc-breadcrumb w-inline-block">
                               <div itemprop="name">Home</div>
                             </a>
                             <meta itemprop="position" content="1">
-                            <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div aria-hidden="true" class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 2L16 14.5L2 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg></div>
                           </li>
                           <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                            <a itemprop="item" href="#" class="w-inline-block">
+                            <a itemprop="item" href="#" class="button-link cc-breadcrumb w-inline-block">
                               <div itemprop="name">Level 2</div>
                             </a>
                             <meta itemprop="position" content="2">
-                            <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div aria-hidden="true" class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 2L16 14.5L2 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg></div>
                           </li>
                           <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                            <a itemprop="item" href="#" class="w-inline-block">
+                            <a itemprop="item" href="#" class="button-link cc-breadcrumb w-inline-block">
                               <div itemprop="name">Level 3</div>
                             </a>
                             <meta itemprop="position" content="3">
-                            <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div aria-hidden="true" class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 2L16 14.5L2 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg></div>
                           </li>
                           <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                            <a itemprop="item" href="../s2/elements.html" aria-current="page" class="w-inline-block w--current">
+                            <a itemprop="item" href="../s2/elements.html" aria-current="page" class="button-link cc-breadcrumb w-inline-block w--current">
                               <div itemprop="name">Current page</div>
                             </a>
                             <meta itemprop="position" content="4">
@@ -1336,18 +1478,12 @@
                     <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
                       <div class="message">This is a message block.</div>
                       <div class="message">
-                        <div me="1ch" float="start" class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 37C28.9411 37 37 28.9411 37 19C37 9.05887 28.9411 1 19 1C9.05887 1 1 9.05887 1 19C1 28.9411 9.05887 37 19 37ZM17.7105 27.0301L29.079 13.7669L26.921 11.9173L16.6693 23.8776L12.057 18.1123L9.83772 19.8877L15.5219 26.9929L16.5939 28.3329L17.7105 27.0301Z" fill="currentColor"></path>
-                          </svg></div>
-                        <div>Message block that has an icon with <span class="tag-label cc-attribute">float=&quot;start&quot;</span> attribute. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
-                      </div>
-                      <div class="message">
-                        <div style="width: auto; float: inline-start; margin-inline-end: 1ch;" class="block">
-                          <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="icon-wrapper cc-lead cc-1ch">
+                          <div class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19 37C28.9411 37 37 28.9411 37 19C37 9.05887 28.9411 1 19 1C9.05887 1 1 9.05887 1 19C1 28.9411 9.05887 37 19 37ZM17.7105 27.0301L29.079 13.7669L26.921 11.9173L16.6693 23.8776L12.057 18.1123L9.83772 19.8877L15.5219 26.9929L16.5939 28.3329L17.7105 27.0301Z" fill="currentColor"></path>
                             </svg></div>
                         </div>
-                        <div>Message block that has an icon wrapped by a <strong>Custom Element</strong> with custom styles. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
+                        <div>Message block that has an icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, quis viverra ornare.</div>
                       </div>
                       <div class="message cc-callout">
                         <div class="tag-wrapper">
@@ -1407,14 +1543,6 @@
                       <div class="message cc-highlight">
                         <div class="info">
                           <div class="text-lg">🦊</div>
-                          <div>Placing an &quot;info&quot; block inside a message block. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, mi quis viverra ornare.</div>
-                        </div>
-                      </div>
-                      <div class="message cc-warning">
-                        <div class="info">
-                          <div animation="pulse-bg-2" class="dot cc-important">
-                            <div class="dot_core cc-important"></div>
-                          </div>
                           <div>Placing an &quot;info&quot; block inside a message block. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus, mi quis viverra ornare.</div>
                         </div>
                       </div>
@@ -1482,7 +1610,7 @@
                         <div style="margin: 1rem auto;" class="col cc-9c">
                           <div class="card cc-p-0">
                             <div class="card-cover">
-                              <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 69vw, (max-width: 991px) 70vw, 68vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
+                              <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
                             </div>
                             <div class="card-body">
                               <div class="card-inner">
@@ -2572,6 +2700,14 @@
                       </div>
                     </div>
                     <div class="block">
+                      <div style="gap: 1rem; margin: 0 0 1rem 0;" class="u-hflex-left-center">
+                        <div class="dot">
+                          <div class="dot_core"></div>
+                        </div>
+                        <div class="dot cc-important">
+                          <div class="dot_core cc-important"></div>
+                        </div>
+                      </div>
                       <div mb="2" flex="col" gap="1-1" mt="0">
                         <div>
                           <div class="dot">
@@ -2650,9 +2786,202 @@
                         <div class="tag-label">tag-label</div>
                       </div>
                     </div>
-                    <div flex="col" gap="1-1" class="block">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
                       <p>Tags: <code>code tag</code> <span class="code-label">code label</span> <span class="tag-label">class label</span> <span class="tag-label cc-attribute">attribute label</span> <span class="tag-label cc-component">component label</span> <span class="tag-label cc-html">html label</span></p>
                       <p><span class="tag-label cc-primary">Primary</span> <span class="tag-label cc-secondary">Secondary</span> <span class="tag-label cc-accent">Accent</span></p>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">avatar-wrapper</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">avatar</div>
+                      </div>
+                      <div class="tag-wrapper">
+                        <div class="tag-label">badge</div>
+                      </div>
+                      <div class="sg-note">size adjustments on <span class="tag-label">avatar-wrapper</span>; styles apply on <span class="tag-label">avatar</span></div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                      <div style="gap: 0.5rem;" class="u-hflex-left-center">
+                        <div role="group" class="avatar-wrapper">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div><img src="../images/S2-logo-256.png" loading="lazy" aria-hidden="true" alt="" class="avator_image">
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper">
+                          <a aria-label="Profile" href="#" class="avatar w-inline-block">
+                            <div class="avatar_info">S2</div><img src="../images/S2-logo-256.png" loading="lazy" aria-hidden="true" alt="" class="avator_image">
+                          </a>
+                        </div>
+                        <div role="group" class="avatar-wrapper">
+                          <a aria-label="Profile" href="#" class="avatar w-inline-block">
+                            <div class="avatar_info">S2</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div style="gap: 0.5rem;" class="u-hflex-left-center">
+                        <div role="group" class="avatar-wrapper cc-2xl">
+                          <div aria-label="Profile" class="avatar cc-styled">
+                            <div class="avatar_info">S2</div><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=90&amp;w=300&amp;auto=format&amp;fit=crop" alt="Profile image" aria-hidden="true" class="avator_image">
+                          </div>
+                          <div class="badge">
+                            <div class="dot-mark"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="gap: 0.5rem;" class="u-hflex-left-center">
+                        <div role="group" class="avatar-wrapper">
+                          <div aria-label="Profile" class="avatar cc-primary">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper">
+                          <div aria-label="Profile" class="avatar cc-secondary">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper">
+                          <div aria-label="Profile" class="avatar cc-accent">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block">
+                        <div no-scrollbar="" class="sg-h-scroll cc-hflex cc-left-center">
+                          <div role="group" class="avatar-wrapper cc-xs">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-sm">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge cc-icon">
+                              <div class="icon cc-100p w-embed">
+                                <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div role="group" class="avatar-wrapper">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge">
+                              <div class="dot-mark"></div>
+                            </div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-lg">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge cc-counter">1</div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-xl">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=90&amp;w=300&amp;auto=format&amp;fit=crop" alt="Profile image" aria-hidden="true" class="avator_image">
+                            </div>
+                            <div class="badge">
+                              <div class="dot-mark"></div>
+                            </div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-2xl">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge cc-counter">68</div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-3xl">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge cc-icon">
+                              <div class="icon cc-100p w-embed">
+                                <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div no-scrollbar="" class="sg-h-scroll cc-hflex">
+                          <div role="group" class="avatar-wrapper cc-2xl">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge">
+                              <div class="dot-mark"></div>
+                            </div>
+                            <div class="badge cc-2">
+                              <div class="dot-mark"></div>
+                            </div>
+                            <div class="badge cc-3">
+                              <div class="dot-mark"></div>
+                            </div>
+                            <div class="badge cc-4">
+                              <div class="dot-mark"></div>
+                            </div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-2xl">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge cc-counter">1</div>
+                            <div class="badge cc-counter cc-counter-2">2</div>
+                            <div class="badge cc-counter cc-counter-3">3</div>
+                            <div class="badge cc-counter cc-counter-4">4</div>
+                          </div>
+                          <div role="group" class="avatar-wrapper cc-2xl">
+                            <div aria-label="Profile" class="avatar">
+                              <div class="avatar_info">S2</div>
+                            </div>
+                            <div class="badge cc-icon">
+                              <div class="icon cc-100p w-embed">
+                                <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                            <div class="badge cc-icon cc-icon-2">
+                              <div class="icon cc-100p w-embed">
+                                <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                            <div class="badge cc-icon cc-icon-3">
+                              <div class="icon cc-100p w-embed">
+                                <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                            <div class="badge cc-icon cc-icon-4">
+                              <div class="icon cc-100p w-embed">
+                                <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </section>

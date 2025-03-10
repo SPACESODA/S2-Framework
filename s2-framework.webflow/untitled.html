@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Mar 06 2025 08:58:13 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Mar 10 2025 12:16:39 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="666251e9d1151496fe245f26" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -25,8 +25,8 @@
 <body class="body">
   <div id="top" class="page">
     <div class="code">
-      <div code="js" class="js w-embed w-script"><!--  Inline Script to Apply Light / Dark Mode (Theme)  -->
-        <!--  Note: The Mode Switching script is placed in the site's global custom code.  -->
+      <div code="js" class="js cc-in-global w-embed w-script"><!--  Script to apply Light / Dark Mode (Theme)  -->
+        <!--  Note: The script for Mode Switching function is included in the site's global "Head code".  -->
         <script>
             (function() {
               try {
@@ -65,12 +65,56 @@
             })();
           </script>
       </div>
-      <div class="code">
-        <div code="css" class="css w-embed"><!--  S2 Framework: Base CSS  -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/css/s2.min.css">
+      <div class="css">
+        <div code="css" class="css_cdn w-embed"><!-- 
+S2 Framework Base CSS
+** Full Pacakge by CDN **
+** A few KBs only! **
+ -->
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
-      <div code="css" class="css_custom w-embed">
+      <div class="code cc-inside-global">
+        <div class="code_phosphor-icons w-embed"><!--  
+Phosphor Icons: Regular, Fill, Bold
+https://phosphoricons.com
+ -->
+          <!--  Regular  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/regular/style.min.css" rel="stylesheet">
+          <!--  Fill  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/fill/style.min.css" rel="stylesheet">
+          <!--  Bold  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/bold/style.min.css" rel="stylesheet">
+          <!--  Light  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/light/style.min.css" rel="stylesheet">
+          <!--  Thin  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/thin/style.min.css" rel="stylesheet">
+          <!--  Duotone  -->
+          <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web/src/duotone/style.min.css" rel="stylesheet">
+          <style>
+              .icon[class*="ph"] {
+                display: block !important;
+              }
+            </style>
+        </div>
+        <div class="code_font-awesome w-embed"><!-- 
+Font Awesome Free: Solid, Regular, Brands
+https://fontawesome.com/search?ic=free
+ -->
+          <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+          <style>
+              .icon[class*="fa"] {
+                display: block !important;
+              }
+              .icon[class*="fa"]::before {
+                display: inline-block !important;
+                transform: scale(0.925);
+                transform-origin: center center;
+              }
+            </style>
+        </div>
+      </div>
+      <div code="css" class="css_custom cc-in-global w-embed">
         <style>
             /* ------------------------------ */
             /* -- Global Custom Attributes -- */
@@ -146,17 +190,14 @@
               background: var(--colors--primary);
               color: #fff;
             }
-            body * {
-              text-decoration-thickness: clamp(0.75px, 0.075em, 0.25rem);
-            }
             /* custom accessibility styles */
-            [contenteditable]:focus-visible {
-              outline: none;
-            }
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
               outline: var(--_sizes---outline--bold) solid var(--colors--focus);
               outline-offset: var(--_sizes---outline--offset);
+            }
+            [contenteditable]:focus-visible {
+              outline: none;
             }
             /* main-nav_button */
             .main-nav_button path {
@@ -216,11 +257,6 @@
               content: '\2713\0020';
               color: var(--colors--primary);
             }
-            .breadcrumb-item a.w--current {
-              opacity: 0.6;
-              cursor: default;
-              pointer-events: none;
-            }
             /* styles for RTL lauout */
             [dir="rtl"] .main-nav_menu {
               margin-left: 0rem !important;
@@ -229,7 +265,7 @@
           </style>
       </div>
     </div>
-    <div code="css" class="css_page w-embed">
+    <div code="css" class="css_page-specific w-embed">
       <style>
           /* styles specific to this page */
         </style>
@@ -240,7 +276,7 @@
           <div class="main-logo-wrapper">
             <a aria-label="Go to Homepage" href="#" class="main-logo-link w-nav-brand">
               <div class="main-logo cc-square-logo w-embed"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M110.584 37C115.262 37 118.456 41.7293 116.709 46.0681L89.1232 114.588C87.3764 118.927 90.5706 123.656 95.2478 123.656H106.119C106.164 123.522 106.213 123.387 106.267 123.254L139.327 41.1366C140.333 38.6372 142.757 37 145.452 37H201.367C206.044 37 209.238 41.7293 207.492 46.0681L179.906 114.588C178.159 118.927 181.353 123.656 186.03 123.656H233.559C238.236 123.656 241.43 128.385 239.683 132.724L206.623 214.841C205.617 217.341 203.193 218.978 200.499 218.978H144.583C139.906 218.978 136.712 214.248 138.458 209.91L166.044 141.39C167.791 137.051 164.597 132.322 159.92 132.322H149.048C149.004 132.456 148.955 132.59 148.901 132.724L115.841 214.841C114.834 217.341 112.41 218.978 109.716 218.978H53.8006C49.1233 218.978 45.9291 214.248 47.6759 209.91L75.2618 141.39C77.0086 137.051 73.8144 132.322 69.1372 132.322H21.6089C16.9317 132.322 13.7375 127.592 15.4843 123.254L48.5443 41.1366C49.5506 38.6372 51.9746 37 54.669 37H110.584Z" fill="currentColor"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8887 6C21.1723 6 5.99976 21.1726 5.99976 39.8889V216.111C5.99976 234.828 21.1723 250 39.8887 250H216.111C234.827 250 250 234.828 250 216.111V39.8889C250 21.1726 234.827 6 216.111 6H39.8887ZM83.5627 45.4407C84.6066 41.1937 88.415 38.2081 92.7884 38.2081H139.158C145.323 38.2081 149.855 43.9892 148.383 49.9761L131.177 119.976C130.294 123.568 133.014 127.037 136.713 127.037H180.959C187.124 127.037 191.657 132.818 190.185 138.805L172.437 211.007C171.393 215.255 167.585 218.24 163.212 218.24H116.842C110.677 218.24 106.145 212.459 107.617 206.472L124.823 136.472C125.706 132.88 122.986 129.412 119.287 129.412H75.0408C68.8756 129.412 64.3434 123.631 65.815 117.644L83.5627 45.4407Z" fill="currentColor"></path>
                 </svg></div>
               <div class="main-logo w-embed"><span style="font-weight: 700; color: inherit; margin-left: 0.45em">YOUR SUPER&#8209;COOL LOGO</span></div>
             </a>
@@ -303,12 +339,26 @@
                 <h1 class="title-heading cc-xl">Page-Template</h1>
               </div>
               <div class="title-wrapper">
-                <div class="title-message cc-sm">You can use this component as a starter template for new pages. Simply <strong>Unlink Instance</strong> to start building. Modify this component to suit your project.</div>
+                <div class="title-message cc-sm">You can use this component as a starter template for new pages. Simply <strong>Unlink Instance</strong> to start building. Modify it to suit your project.</div>
               </div>
             </div>
           </header>
-          <div class="text-wrapper cc-max-40rem">
-            <p><strong>Tip:</strong> The <span class="tag-label">main</span> wrapper of the page SHOULD NOT include the <strong>nav</strong> and <strong>footer</strong>, and a page should always have a <span class="tag-label cc-html">Main</span> HTML tag.<br></p>
+          <div class="message cc-note">
+            <div class="info">
+              <div class="icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                  <rect width="256" height="256" fill="none"></rect>
+                  <path d="M48,120V40a8,8,0,0,1,8-8h96l56,56v32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                  <polyline points="152 32 152 88 208 88" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                  <line x1="24" y1="160" x2="24" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="60" y1="160" x2="60" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="100" y1="160" x2="100" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="116" y1="160" x2="84" y2="160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="60" y1="184" x2="24" y2="184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="140 208 140 160 164 192 188 160 188 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                  <polyline points="216 160 216 208 244 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg></div>
+              <div><strong>Tips:</strong> A page should always have only one <span class="tag-label cc-html">Main</span> tag. The <span class="tag-label cc-html">Main</span> <span class="tag-label">main</span> wrapper of a page SHOULD NOT contains <strong>nav</strong> and <strong>footer</strong> elements. If there are any <span class="tag-label cc-html">Aside</span> elements, they can be inside or outside of <span class="tag-label cc-html">Main</span>, depending on the context and purpose.</div>
+            </div>
           </div>
         </div>
       </section>
@@ -316,7 +366,7 @@
         <div class="w-layout-blockcontainer container w-container">
           <div class="cols-layout cc-vflex-at-md">
             <div class="col cc-45p">
-              <div class="image-wrapper"><img src="images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 45vw" srcset="images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" class="image"></div>
+              <div class="image-wrapper"><img src="images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" class="image"></div>
             </div>
             <div class="col cc-45p">
               <div class="title-wrapper">

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Mar 06 2025 08:58:13 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Mar 10 2025 12:16:39 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -6,10 +6,10 @@
   <meta content="One-page Style Guide based on the S2 Framework." name="description">
   <meta content="Style Guide | S2 Framework" property="og:title">
   <meta content="One-page Style Guide based on the S2 Framework." property="og:description">
-  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover.jpg" property="og:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover-v2.2.1.jpg" property="og:image">
   <meta content="Style Guide | S2 Framework" property="twitter:title">
   <meta content="One-page Style Guide based on the S2 Framework." property="twitter:description">
-  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover.jpg" property="twitter:image">
+  <meta content="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/identity/S2-og-cover-v2.2.1.jpg" property="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -31,7 +31,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
 </head>
 <body dir="" theme-change="false" class="body">
-  <div data-nosnippet="true" s2="style-guide-only" class="delete-me cc-clone-cta">
+  <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
     <div code="js" class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -63,67 +63,16 @@
       <!--  For Style Guide only, you don't need this.  -->
       <script defer="" src="https://cloud.umami.is/script.js" data-website-id="d01ab616-cead-4f79-b338-266617396737"></script>
     </div>
-    <div code="js" class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
-      <!--  For Style Guide only, you don't need such scripts.  -->
-      <!--  Hide Cookie Consent in iFrames  -->
-      <script>
-          if (window.self !== window.top) {
-            document.addEventListener("DOMContentLoaded", function() {
-              const cookieConsent = document.querySelector("[cookieconsent]");
-              if (cookieConsent) {
-                cookieConsent.style.display = "none";
-              }
-            });
-          }
-        </script>
-      <!--  Force Eager Loading  -->
-      <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            // force all standard <img> elements to load immediately
-            document.querySelectorAll("img").forEach((img) => {
-              img.setAttribute("loading", "eager");
-              // handle Webflow-specific lazy-loaded images
-              const dataSrc =
-                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-              if (dataSrc) {
-                img.setAttribute("src", dataSrc);
-              } else {
-                img.src = img.src; // trigger reload if necessary
-              }
-            });
-            // force all background images to load immediately
-            document.querySelectorAll("*").forEach((el) => {
-              const bgImage = window.getComputedStyle(el).backgroundImage;
-              if (bgImage && bgImage.startsWith('url("')) {
-                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
-                const img = new Image();
-                img.src = url; // preload background image
-              }
-            });
-          });
-        </script>
-      <!--  Remove any s2="style-guide-only" element when the hostname is not S2  -->
-      <script>
-          (function() {
-            if (window.location.hostname !== "s2-framework.webflow.io") {
-              var elements = document.querySelectorAll('[s2="style-guide-only"]');
-              elements.forEach(function(el) {
-                el.parentNode.removeChild(el);
-              });
-            }
-          })();
-        </script>
-    </div>
-    <div s2="style-guide-only">
+    <div>
       <a href="https://webflow.com/made-in-webflow/website/s2-framework" aria-label="Clone Now" target="_blank" class="button w-inline-block">
-        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M82.6152 5H34.725C28.1731 5 22.7931 10.1139 22.3668 16.5597H30.6794C31.063 14.6776 32.7312 13.257 34.725 13.257H82.6152C84.8916 13.257 86.7436 15.109 86.7436 17.3854V65.2757C86.7436 66.9654 85.7234 68.4212 84.2666 69.0595V77.5515C90.318 76.7417 95.0006 71.5453 95.0006 65.2757V17.3854C95.0006 10.5561 89.4445 5 82.6152 5ZM17.3854 22.3398H65.2758C72.1051 22.3398 77.6612 27.8959 77.6612 34.7252V82.6155C77.6612 89.4449 72.1051 95.001 65.2758 95.001H17.3854C10.5561 95.001 5 89.4449 5 82.6155V34.7252C5 27.8959 10.5561 22.3398 17.3854 22.3398ZM65.2758 86.744C67.5522 86.744 69.4042 84.892 69.4042 82.6155V34.7252C69.4042 32.4488 67.5522 30.5967 65.2758 30.5967H17.3854C15.109 30.5967 13.257 32.4488 13.257 34.7252V82.6155C13.257 84.892 15.109 86.744 17.3854 86.744H65.2758ZM37.2021 46.285H45.4591V54.5419H53.716V62.7989H45.4591V71.0558H37.2021V62.7989H28.9452V54.5419H37.2021V46.285Z" fill="currentColor"></path>
           </svg></div>
         <div class="text-sm">Clone Now</div>
       </a>
     </div>
   </div>
-  <div class="sg-grid-guide">
+  <div data-nosnippet="true" aria-hidden="true" tabindex="-1" class="sg-grid-guide">
     <div code="css" class="css w-embed">
       <style>
           /* -- styles for the grid guide -- */
@@ -183,12 +132,12 @@
       </div>
     </div>
   </div>
-  <div style="z-index: 2999; min-height: 100svh;" class="delete-me cc-dark">
+  <aside style="z-index: 2999; min-height: 100svh;" class="delete-me cc-dark">
     <section class="section cc-top-bottom-sm">
       <div class="w-layout-blockcontainer container w-container">
         <div style="display: inline-flex; position: relative; top: calc(-1 * var(--_sizes---spacing--base));">
           <a aria-label="Back to Cover Page" href="../index.html" class="button-link w-inline-block">
-            <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+            <div aria-hidden="true" class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                 <rect width="100%" height="100%" fill="none"></rect>
                 <polyline points="80 120 32 168 80 216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
                 <path d="M80,56h88a56,56,0,0,1,56,56h0a56,56,0,0,1-56,56H32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
@@ -198,7 +147,7 @@
         </div>
         <div class="title-wrapper">
           <div class="title-wrapper">
-            <h1 class="sg-hero-heading">S2 Framework for Templates</h1>
+            <h1 class="sg-hero-heading cc-white">S2 Framework for Templates</h1>
           </div>
           <div class="text-wrapper cc-max-40rem">
             <div class="richtext w-richtext">
@@ -208,7 +157,7 @@
             <div class="button-wrapper">
               <a aria-label="Learn more" href="https://s2-framework.gitbook.io/docs/guide-and-documentation/for-template-creators" target="_blank" class="button w-inline-block">
                 <div>Learn more</div>
-                <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M30 21.6667V31.6667C30 32.5507 29.6488 33.3986 29.0237 34.0237C28.3986 34.6488 27.5507 35 26.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V13.3333C5 12.4493 5.35119 11.6014 5.97631 10.9763C6.60143 10.3512 7.44928 10 8.33333 10H18.3333" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M25 5H35V15" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M16.667 23.3333L35.0003 5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -216,7 +165,7 @@
               </a>
               <a aria-label="Starter Page Structure" href="#starter" class="button cc-inverted w-inline-block">
                 <div>Starter Page Structure</div>
-                <div class="icon cc-1em w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                <div aria-hidden="true" class="icon cc-1em w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                     <rect width="100%" height="100%" fill="none"></rect>
                     <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
                     <polyline points="56 144 128 216 200 144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
@@ -231,11 +180,11 @@
       </div>
     </section>
     <a href="#style-guide" aria-label="Continue" class="continue cc-inverted w-inline-block">
-      <div class="icon cc-image-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 98 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div aria-hidden="true" class="icon cc-image-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 98 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M97.8007 1.12868C98.2819 2.12293 97.866 3.31901 96.8717 3.80021L48.4685 27.2266L1.1134 3.79249C0.123412 3.30259 -0.281984 2.1029 0.20792 1.11292C0.697824 0.122936 1.89751 -0.282459 2.88749 0.207445L48.488 22.7733L95.1292 0.199731C96.1234 -0.281468 97.3195 0.134438 97.8007 1.12868Z" fill="currentColor"></path>
         </svg></div>
     </a>
-  </div>
+  </aside>
   <div id="top" class="page">
     <div style="background: var(--s2--surface);" data-nosnippet="true" class="section cc-top-bottom-0">
       <div class="code w-embed w-script"><!--  
@@ -2041,33 +1990,18 @@
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="tag-label">video-wrapper</div>
-                      <div class="tag-label">video</div>
-                    </div>
-                  </div>
-                  <div class="block">
-                    <div style="gap: 1rem;" class="sg-flex-wrap">
-                      <div class="video-wrapper"><video width="100%" controls="" muted="" preload="metadata" playsinline="true" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" class="video">
-                          <source src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/media/pexels-5845753.mp4" type="video/mp4">
-                        </video></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sg-element">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
                       <div class="tag-label">absolute-full-wrapper</div>
                       <div class="tag-label">absolute-cover-image</div>
                     </div>
                   </div>
                   <div class="block">
                     <div style="position: relative; height: 10rem;" class="card cc-p-0">
-                      <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 97vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
+                      <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
                     </div>
                   </div>
                 </div>
               </section>
-              <section id="spacers" class="section">
+              <section id="spacer" class="section">
                 <div class="title-wrapper">
                   <div class="title-wrapper">
                     <h3>Spacer</h3>
@@ -2086,10 +2020,80 @@
                   <div class="block">
                     <div class="u-bg-pattern">
                       <div class="spacer">
-                        <div style="height: 2rem" class="spacer-base"></div>
-                        <div style="height: 2rem" class="spacer-md"></div>
-                        <div style="height: 2rem" class="spacer-sm"></div>
-                        <div style="height: 2rem" class="spacer-xs"></div>
+                        <div style="height: 2rem;" class="spacer-base"></div>
+                        <div style="height: 2rem;" class="spacer-md"></div>
+                        <div style="height: 2rem;" class="spacer-sm"></div>
+                        <div style="height: 2rem;" class="spacer-xs"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="other-structure" class="section">
+                <div class="title-wrapper">
+                  <div class="title-wrapper">
+                    <h3>Other Elements</h3>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">video-wrapper</div>
+                      <div class="tag-label">video</div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div style="gap: 1rem;" class="sg-flex-wrap">
+                      <div class="video-wrapper"><video width="100%" controls="" muted="" preload="metadata" playsinline="true" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" class="video">
+                          <source src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/media/pexels-5845753.mp4" type="video/mp4">
+                        </video></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">bg-video</div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div style="position: relative; height: 15rem;" class="card cc-p-0"><video autoplay="true" muted="" preload="metadata" playsinline="true" loop="" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" class="bg-video">
+                        <source src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/media/pexels-5845753.mp4" type="video/mp4">
+                      </video></div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">richtext-block</div>
+                    </div>
+                    <div class="sg-note">matching the font size and spacing between Rich Text elements</div>
+                  </div>
+                  <div class="block">
+                    <div class="card">
+                      <div class="richtext w-richtext">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <p>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                      </div>
+                      <div class="richtext-block">
+                        <div><strong>Result:</strong> Matched font size and spacing between <span class="tag-label">richtext</span> elements.</div>
+                      </div>
+                      <div class="richtext w-richtext">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                      </div>
+                    </div>
+                    <div style="margin-top: 1rem;" class="card">
+                      <div class="richtext cc-richtext-lg w-richtext">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        <p>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                      </div>
+                      <div class="richtext-block cc-richtext-lg">
+                        <div><strong>Result:</strong> Matched font size and spacing between <span class="tag-label">richtext</span> <span class="tag-label">cc-richtext-lg</span> elements.</div>
+                      </div>
+                      <div class="richtext cc-richtext-lg w-richtext">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
                       </div>
                     </div>
                   </div>
@@ -2755,7 +2759,7 @@
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button w-inline-block">
                         <div>Learn more</div>
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
                           </svg></div>
                       </a>
@@ -2829,6 +2833,39 @@
                   <div class="sg-tags">
                     <div class="tag-wrapper">
                       <div class="tag-label">button</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-inverted</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-sm</div>
+                      <div class="tag-label">cc-inverted</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-xs</div>
+                      <div class="tag-label">cc-inverted</div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div style="padding: 1rem 0;" bg="surface-alt" class="u-bg-primary">
+                      <div style="margin: 0;" class="button-wrapper cc-center">
+                        <a href="#" class="button cc-inverted w-inline-block">
+                          <div>Learn more</div>
+                        </a>
+                        <a href="#" class="button cc-sm cc-inverted w-inline-block">
+                          <div>Explore</div>
+                        </a>
+                        <a href="#" class="button cc-xs cc-inverted w-inline-block">
+                          <div>Go</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">button</div>
                       <div class="tag-label">cc-outline</div>
                     </div>
                   </div>
@@ -2836,7 +2873,7 @@
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button cc-outline w-inline-block">
                         <div>Learn more</div>
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
                           </svg></div>
                       </a>
@@ -2911,21 +2948,56 @@
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
+                      <div class="tag-label">button</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-inverted-outline</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-sm</div>
+                      <div class="tag-label">cc-inverted-outline</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-xs</div>
+                      <div class="tag-label">cc-inverted-outline</div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div style="padding: 1rem 0;" bg="surface-alt" class="u-bg-primary">
+                      <div style="margin: 0;" class="button-wrapper cc-center">
+                        <a href="#" class="button cc-inverted-outline w-inline-block">
+                          <div>Learn more</div>
+                        </a>
+                        <a href="#" class="button cc-sm cc-inverted-outline w-inline-block">
+                          <div>Explore</div>
+                        </a>
+                        <a href="#" class="button cc-xs cc-inverted-outline w-inline-block">
+                          <div>Go</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
                       <div class="tag-label cc-component">Button</div>
                     </div>
                   </div>
                   <div class="block">
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button w-inline-block">
-                        <div class="text-sm">Learn more</div>
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                          </svg></div>
+                        <div>Learn more</div>
+                        <div class="icon-wrapper">
+                          <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
                       </a>
                     </div>
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button w-inline-block">
-                        <div class="text-sm">Call our sales team</div>
+                        <div>Call our sales team</div>
                       </a>
                     </div>
                   </div>
@@ -2940,14 +3012,16 @@
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button cc-outline w-inline-block">
                         <div>Learn more</div>
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                          </svg></div>
+                        <div class="icon-wrapper">
+                          <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
                       </a>
                     </div>
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button cc-outline w-inline-block">
-                        <div>How to use?</div>
+                        <div>How it works?</div>
                       </a>
                     </div>
                   </div>
@@ -2962,9 +3036,11 @@
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button cc-text w-inline-block">
                         <div>Learn more</div>
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                          </svg></div>
+                        <div class="icon-wrapper">
+                          <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
                       </a>
                     </div>
                     <div class="button-wrapper cc-center">
@@ -2984,9 +3060,11 @@
                     <div class="button-wrapper cc-center">
                       <a href="#" class="button-link w-inline-block">
                         <div>Learn more</div>
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
-                          </svg></div>
+                        <div class="icon-wrapper">
+                          <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0387 0L10.6278 1.41752L13.898 4.67246L0.292969 4.68616L0.294979 6.68616L13.8627 6.67256L10.6476 9.90276L12.0651 11.3137L17.7087 5.64356L12.0387 0Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
                       </a>
                     </div>
                     <div class="button-wrapper cc-center">
@@ -3008,7 +3086,7 @@
                         <div>Learn more</div>
                       </a>
                       <a href="#" class="pill cc-status w-inline-block">
-                        <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#16A34A"></circle>
                             <circle cx="50" cy="50" r="38" stroke="#16A34A" stroke-opacity="0.25" stroke-width="16"></circle>
                           </svg></div>
@@ -3017,21 +3095,21 @@
                     </div>
                     <div class="button-wrapper">
                       <a href="#" class="pill w-inline-block">
-                        <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#007bff"></circle>
                             <circle cx="50" cy="50" r="38" stroke="#80cfff" stroke-opacity="0.25" stroke-width="16"></circle>
                           </svg></div>
                         <div>Messages (2)</div>
                       </a>
                       <a href="#" class="pill w-inline-block">
-                        <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#ff0000"></circle>
                             <circle cx="50" cy="50" r="38" stroke="#ff6666" stroke-opacity="0.25" stroke-width="16"></circle>
                           </svg></div>
                         <div>Special Offer</div>
                       </a>
                       <a href="#" class="pill cc-primary w-inline-block">
-                        <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#fff"></circle>
                             <circle cx="50" cy="50" r="38" stroke="#fff" stroke-opacity="0.25" stroke-width="16"></circle>
                           </svg></div>
@@ -3047,7 +3125,7 @@
                     <h3>Icons</h3>
                   </div>
                   <div class="text-wrapper cc-max-40rem">
-                    <p>The base <span class="tag-label">icon</span> is <strong>1.125em</strong> x <strong>1.125em</strong> (units in <code>em</code>, not <code>rem</code>).</p>
+                    <p>The base <span class="tag-label">icon</span> is <strong>1em</strong> x <strong>1em</strong>, allowing it to scale. The font size is not set.</p>
                   </div>
                 </div>
                 <div class="sg-element">
@@ -3156,6 +3234,9 @@
                       <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
                         </svg></div>
+                      <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M53.6726 32.9684L57.603 9.36893C57.9263 7.42924 59.6108 6 61.5845 6C62.8606 6 64.0516 6.59552 64.8173 7.6164L67.6928 11.4447H76.5575C78.7184 11.4447 80.7942 12.3125 82.3255 13.8438L85.3882 16.8895H94.9165C97.1794 16.8895 99 18.71 99 20.973V25.0566C99 32.5771 92.9087 38.6684 85.3882 38.6684H79.9434H77.2211H73.5969L72.7292 43.8579L53.6726 32.9684ZM71.7763 49.5749V87.671C71.7763 90.6826 69.3432 93.1157 66.3316 93.1157H60.8869C57.8753 93.1157 55.4422 90.6826 55.4422 87.671V68.0699C51.3586 70.1628 46.7306 71.3368 41.8303 71.3368C36.9301 71.3368 32.302 70.1628 28.2185 68.0699V87.671C28.2185 90.6826 25.7854 93.1157 22.7738 93.1157H17.329C14.3174 93.1157 11.8843 90.6826 11.8843 87.671V48.5029C6.98404 46.6483 3.1387 42.4967 1.81155 37.1881L1.16499 34.5508C0.433351 31.6413 2.20289 28.6807 5.12943 27.9491C8.05597 27.2174 10.9995 28.987 11.7312 31.9135L12.3947 34.5508C12.9903 36.9669 15.1682 38.6684 17.6693 38.6684H22.7738H25.4961H52.6858L71.7763 49.5749ZM79.9434 19.6118C79.9434 18.8898 79.6566 18.1974 79.1461 17.6868C78.6355 17.1763 77.9431 16.8895 77.2211 16.8895C76.4991 16.8895 75.8066 17.1763 75.2961 17.6868C74.7855 18.1974 74.4987 18.8898 74.4987 19.6118C74.4987 20.3338 74.7855 21.0263 75.2961 21.5368C75.8066 22.0474 76.4991 22.3342 77.2211 22.3342C77.9431 22.3342 78.6355 22.0474 79.1461 21.5368C79.6566 21.0263 79.9434 20.3338 79.9434 19.6118Z" fill="currentColor"></path>
+                        </svg></div>
                     </div>
                   </div>
                 </div>
@@ -3163,11 +3244,9 @@
                   <div class="sg-tags">
                     <div class="tag-wrapper">
                       <div class="tag-label">icon</div>
-                    </div>
-                    <div class="tag-wrapper">
-                      <div class="tag-label">icon</div>
                       <div class="tag-label">cc-1em</div>
                     </div>
+                    <div class="sg-note">the size of icons can be changed by adding combo classes to <span class="tag-label">icon</span> or through parent elements</div>
                   </div>
                   <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;" class="block">
                     <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3176,7 +3255,7 @@
                     <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                       </svg></div>
-                    <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                       </svg></div>
                     <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3203,10 +3282,6 @@
                   <div class="sg-tags">
                     <div class="tag-wrapper">
                       <div class="tag-label">icon</div>
-                      <div class="tag-label">cc-rem</div>
-                    </div>
-                    <div class="tag-wrapper">
-                      <div class="tag-label">icon</div>
                       <div class="tag-label">cc-1rem</div>
                     </div>
                   </div>
@@ -3217,7 +3292,7 @@
                     <div class="icon cc-1rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                       </svg></div>
-                    <div class="icon cc-rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="icon cc-1-25rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.335 49.9997C12.335 29.1969 29.1989 12.333 50.0016 12.333C70.8044 12.333 87.6683 29.1969 87.6683 49.9997C87.6683 70.8024 70.8044 87.6663 50.0016 87.6663C29.1989 87.6663 12.335 70.8024 12.335 49.9997ZM50.0016 4.33301C24.7806 4.33301 4.33496 24.7787 4.33496 49.9997C4.33496 75.2207 24.7806 95.6663 50.0016 95.6663C75.2226 95.6663 95.6683 75.2207 95.6683 49.9997C95.6683 24.7787 75.2226 4.33301 50.0016 4.33301ZM30.935 55.133C32.6972 53.8113 35.1951 54.1637 36.5235 55.9178L36.5439 55.9438C36.5696 55.9763 36.6178 56.0362 36.6878 56.1196C36.828 56.2867 37.0543 56.5462 37.3623 56.8675C37.9814 57.5136 38.9111 58.3893 40.1148 59.2648C42.5376 61.0269 45.8956 62.6664 50.0018 62.6664C54.1081 62.6664 57.466 61.0269 59.8889 59.2648C61.0926 58.3893 62.0223 57.5136 62.6414 56.8675C62.9493 56.5462 63.1756 56.2867 63.3159 56.1196C63.3859 56.0362 63.434 55.9763 63.4598 55.9438L63.4801 55.9179C64.8085 54.1637 67.3064 53.8113 69.0687 55.133C70.836 56.4585 71.1942 58.9657 69.8687 60.733L66.6687 58.333C69.8687 60.733 69.8677 60.7343 69.8667 60.7356L69.8646 60.7384L69.86 60.7446L69.8489 60.7592L69.8195 60.7976C69.7968 60.8272 69.7676 60.8646 69.7321 60.9094C69.6612 60.999 69.5649 61.1181 69.4437 61.2626C69.2015 61.5512 68.8581 61.9428 68.4173 62.4027C67.5391 63.3192 66.2551 64.5267 64.5942 65.7347C61.2879 68.1393 56.3123 70.6664 50.0018 70.6664C43.6913 70.6664 38.7158 68.1393 35.4094 65.7347C33.7485 64.5267 32.4646 63.3192 31.5863 62.4027C31.1456 61.9428 30.8022 61.5512 30.56 61.2626C30.4387 61.1181 30.3424 60.999 30.2715 60.9094L30.226 60.8516L30.1841 60.7976L30.1548 60.7592L30.1437 60.7446L30.139 60.7384L30.1369 60.7356C30.1359 60.7343 30.135 60.733 33.335 58.333L30.135 60.733C28.8095 58.9657 29.1677 56.4585 30.935 55.133ZM33.501 37.4995C33.501 35.2904 35.2918 33.4995 37.501 33.4995H37.5441C39.7532 33.4995 41.5441 35.2904 41.5441 37.4995C41.5441 39.7087 39.7532 41.4995 37.5441 41.4995H37.501C35.2918 41.4995 33.501 39.7087 33.501 37.4995ZM62.501 33.4995C60.2918 33.4995 58.501 35.2904 58.501 37.4995C58.501 39.7087 60.2918 41.4995 62.501 41.4995H62.5441C64.7532 41.4995 66.5441 39.7087 66.5441 37.4995C66.5441 35.2904 64.7532 33.4995 62.5441 33.4995H62.501Z" fill="currentColor"></path>
                       </svg></div>
                     <div class="icon cc-1-5rem w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3244,17 +3319,15 @@
                   <div class="sg-tags">
                     <div class="tag-wrapper">
                       <div class="tag-label">icon</div>
-                      <div class="tag-label">cc-image</div>
                     </div>
                     <div class="tag-wrapper">
-                      <div class="tag-label">icon</div>
                       <div class="tag-label">cc-image-1rem</div>
                     </div>
-                    <div class="sg-note">width is auto (suitable for images)</div>
-                    <div class="sg-note">for SVG, you should wrap it with an element that has a width value</div>
+                    <div class="sg-note">width is auto (suitable for images) and use rem for height</div>
+                    <div class="sg-note">for SVG images, you should wrap it with an element that has a width value</div>
                   </div>
                   <div class="block">
-                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;" class="block"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-0-75rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-2rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-3rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-4rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-6rem"></div>
+                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;" class="block"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-0-75rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1-25rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-1-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-2rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-3rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-4rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-5rem"><img src="../images/smile.svg" loading="lazy" alt="" class="icon cc-image-6rem"></div>
                     <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top">
                       <div style="width: 6rem;">
                         <div class="icon cc-image-2rem w-embed"><svg width="100%" height="100%" viewbox="0 0 84 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3278,8 +3351,23 @@
                   </div>
                   <div class="block">
                     <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M50 96C75.4051 96 96 75.4051 96 50C96 24.5949 75.4051 4 50 4C24.5949 4 4 24.5949 4 50C4 75.4051 24.5949 96 50 96ZM46.7047 70.5213L75.7573 36.6266L70.2427 31.8997L44.0437 62.465L32.2568 47.7315L26.5853 52.2685L41.1116 70.4264L43.851 73.8508L46.7047 70.5213Z" fill="currentColor"></path>
                       </svg></div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">icon</div>
+                      <div class="tag-label">cc-100p</div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div style="width: 3.5rem;">
+                      <div class="icon cc-100p w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M50 96C75.4051 96 96 75.4051 96 50C96 24.5949 75.4051 4 50 4C24.5949 4 4 24.5949 4 50C4 75.4051 24.5949 96 50 96ZM46.7047 70.5213L75.7573 36.6266L70.2427 31.8997L44.0437 62.465L32.2568 47.7315L26.5853 52.2685L41.1116 70.4264L43.851 73.8508L46.7047 70.5213Z" fill="currentColor"></path>
+                        </svg></div>
+                    </div>
                   </div>
                 </div>
                 <div class="sg-element">
@@ -3287,32 +3375,89 @@
                     <div class="tag-wrapper">
                       <div class="tag-label">icon-wrapper</div>
                     </div>
-                    <div class="sg-note">for flexibility, wrap an icon with <span class="tag-label">icon-wrapper</span> before converting to component</div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-primary</div>
+                    </div>
+                    <div class="sg-note">modify the wrapper to give icons colors</div>
                   </div>
-                  <div class="block">
-                    <div style="gap: 1rem; margin-bottom: 1.5rem;" class="u-hflex-left-center">
+                  <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                    <div style="gap: 1rem;" class="u-hflex-left-center">
                       <div class="icon-wrapper">
                         <div class="icon cc-1em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                           </svg></div>
                       </div>
                       <div class="icon-wrapper">
-                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg></div>
-                      </div>
-                      <div class="icon-wrapper">
                         <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                           </svg></div>
                       </div>
+                      <div class="icon-wrapper">
+                        <div class="icon cc-2em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg></div>
+                      </div>
                     </div>
-                    <div gap="1-1" class="u-hflex-left-center">
+                    <div class="text-3xl">
+                      <div style="gap: 0.25rem;" class="u-hflex-left-center">
+                        <div class="icon-wrapper"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-primary"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-primary-light"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-primary-deep"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-secondary"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-accent"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-extended-1"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-extended-2"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-extended-3"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-text"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                        <div class="icon-wrapper cc-text-mu"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">icon-wrapper</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-circle</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">cc-lead</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                    <div class="u-hflex-left-center">
                       <div class="icon-wrapper cc-circle">
                         <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 12H42M42 12C35.6508 12 28.9841 18.6667 28.0317 22M42 12C35.6508 12 28.9841 5.33333 28.0317 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                           </svg></div>
                       </div>
+                    </div>
+                    <div>
+                      <div class="icon-wrapper cc-lead">
+                        <div class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M50 96C75.4051 96 96 75.4051 96 50C96 24.5949 75.4051 4 50 4C24.5949 4 4 24.5949 4 50C4 75.4051 24.5949 96 50 96ZM46.7047 70.5213L75.7573 36.6266L70.2427 31.8997L44.0437 62.465L32.2568 47.7315L26.5853 52.2685L41.1116 70.4264L43.851 73.8508L46.7047 70.5213Z" fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                      <p>Task completed</p>
+                    </div>
+                    <div class="text-3xl">
+                      <div class="icon-wrapper cc-lead">
+                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.6726 32.9684L57.603 9.36893C57.9263 7.42924 59.6108 6 61.5845 6C62.8606 6 64.0516 6.59552 64.8173 7.6164L67.6928 11.4447H76.5575C78.7184 11.4447 80.7942 12.3125 82.3255 13.8438L85.3882 16.8895H94.9165C97.1794 16.8895 99 18.71 99 20.973V25.0566C99 32.5771 92.9087 38.6684 85.3882 38.6684H79.9434H77.2211H73.5969L72.7292 43.8579L53.6726 32.9684ZM71.7763 49.5749V87.671C71.7763 90.6826 69.3432 93.1157 66.3316 93.1157H60.8869C57.8753 93.1157 55.4422 90.6826 55.4422 87.671V68.0699C51.3586 70.1628 46.7306 71.3368 41.8303 71.3368C36.9301 71.3368 32.302 70.1628 28.2185 68.0699V87.671C28.2185 90.6826 25.7854 93.1157 22.7738 93.1157H17.329C14.3174 93.1157 11.8843 90.6826 11.8843 87.671V48.5029C6.98404 46.6483 3.1387 42.4967 1.81155 37.1881L1.16499 34.5508C0.433351 31.6413 2.20289 28.6807 5.12943 27.9491C8.05597 27.2174 10.9995 28.987 11.7312 31.9135L12.3947 34.5508C12.9903 36.9669 15.1682 38.6684 17.6693 38.6684H22.7738H25.4961H52.6858L71.7763 49.5749ZM79.9434 19.6118C79.9434 18.8898 79.6566 18.1974 79.1461 17.6868C78.6355 17.1763 77.9431 16.8895 77.2211 16.8895C76.4991 16.8895 75.8066 17.1763 75.2961 17.6868C74.7855 18.1974 74.4987 18.8898 74.4987 19.6118C74.4987 20.3338 74.7855 21.0263 75.2961 21.5368C75.8066 22.0474 76.4991 22.3342 77.2211 22.3342C77.9431 22.3342 78.6355 22.0474 79.1461 21.5368C79.6566 21.0263 79.9434 20.3338 79.9434 19.6118Z" fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                      <p>We are dog friendly! Suspendisse varius enim in eros elementum tristique.</p>
+                    </div>
+                    <div class="h1">
+                      <div class="icon-wrapper cc-lead">
+                        <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.6726 32.9684L57.603 9.36893C57.9263 7.42924 59.6108 6 61.5845 6C62.8606 6 64.0516 6.59552 64.8173 7.6164L67.6928 11.4447H76.5575C78.7184 11.4447 80.7942 12.3125 82.3255 13.8438L85.3882 16.8895H94.9165C97.1794 16.8895 99 18.71 99 20.973V25.0566C99 32.5771 92.9087 38.6684 85.3882 38.6684H79.9434H77.2211H73.5969L72.7292 43.8579L53.6726 32.9684ZM71.7763 49.5749V87.671C71.7763 90.6826 69.3432 93.1157 66.3316 93.1157H60.8869C57.8753 93.1157 55.4422 90.6826 55.4422 87.671V68.0699C51.3586 70.1628 46.7306 71.3368 41.8303 71.3368C36.9301 71.3368 32.302 70.1628 28.2185 68.0699V87.671C28.2185 90.6826 25.7854 93.1157 22.7738 93.1157H17.329C14.3174 93.1157 11.8843 90.6826 11.8843 87.671V48.5029C6.98404 46.6483 3.1387 42.4967 1.81155 37.1881L1.16499 34.5508C0.433351 31.6413 2.20289 28.6807 5.12943 27.9491C8.05597 27.2174 10.9995 28.987 11.7312 31.9135L12.3947 34.5508C12.9903 36.9669 15.1682 38.6684 17.6693 38.6684H22.7738H25.4961H52.6858L71.7763 49.5749ZM79.9434 19.6118C79.9434 18.8898 79.6566 18.1974 79.1461 17.6868C78.6355 17.1763 77.9431 16.8895 77.2211 16.8895C76.4991 16.8895 75.8066 17.1763 75.2961 17.6868C74.7855 18.1974 74.4987 18.8898 74.4987 19.6118C74.4987 20.3338 74.7855 21.0263 75.2961 21.5368C75.8066 22.0474 76.4991 22.3342 77.2211 22.3342C77.9431 22.3342 78.6355 22.0474 79.1461 21.5368C79.6566 21.0263 79.9434 20.3338 79.9434 19.6118Z" fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                      <p>Woof Woof</p>
                     </div>
                   </div>
                 </div>
@@ -3333,34 +3478,34 @@
                     <nav class="breadcrumb">
                       <ol itemtype="https://schema.org/BreadcrumbList" itemscope="https://schema.org/BreadcrumbList" role="list" class="breadcrumb-list w-list-unstyled">
                         <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                          <a itemprop="item" href="../home.html" class="w-inline-block">
+                          <a itemprop="item" href="../home.html" class="button-link cc-breadcrumb w-inline-block">
                             <div itemprop="name">Home</div>
                           </a>
                           <meta itemprop="position" content="1">
-                          <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2 2L16 14.5L2 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></div>
                         </li>
                         <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                          <a itemprop="item" href="#" class="w-inline-block">
+                          <a itemprop="item" href="#" class="button-link cc-breadcrumb w-inline-block">
                             <div itemprop="name">Level 2</div>
                           </a>
                           <meta itemprop="position" content="2">
-                          <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2 2L16 14.5L2 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></div>
                         </li>
                         <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                          <a itemprop="item" href="#" class="w-inline-block">
+                          <a itemprop="item" href="#" class="button-link cc-breadcrumb w-inline-block">
                             <div itemprop="name">Level 3</div>
                           </a>
                           <meta itemprop="position" content="3">
-                          <div class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div aria-hidden="true" class="icon cc-0-75em w-embed"><svg width="100%" height="100%" viewbox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2 2L16 14.5L2 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></div>
                         </li>
                         <li itemprop="itemListElement" itemscope="https://schema.org/ListItem" itemtype="https://schema.org/ListItem" class="breadcrumb-item">
-                          <a itemprop="item" href="../s2/elements.html" class="w-inline-block">
+                          <a itemprop="item" href="../ref/style-guide.html" aria-current="page" class="button-link cc-breadcrumb w-inline-block w--current">
                             <div itemprop="name">Current page</div>
                           </a>
                           <meta itemprop="position" content="4">
@@ -3385,8 +3530,8 @@
                   <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
                     <div class="message">This is a message block.</div>
                     <div class="message">
-                      <div style="width: auto; float: inline-start; margin-inline-end: 1ch;" class="block">
-                        <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="icon-wrapper cc-lead cc-1ch">
+                        <div class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19 37C28.9411 37 37 28.9411 37 19C37 9.05887 28.9411 1 19 1C9.05887 1 1 9.05887 1 19C1 28.9411 9.05887 37 19 37ZM17.7105 27.0301L29.079 13.7669L26.921 11.9173L16.6693 23.8776L12.057 18.1123L9.83772 19.8877L15.5219 26.9929L16.5939 28.3329L17.7105 27.0301Z" fill="currentColor"></path>
                           </svg></div>
                       </div>
@@ -3517,7 +3662,7 @@
                       <div style="margin: 1rem auto;" class="col cc-9c">
                         <div class="card cc-p-0">
                           <div class="card-cover">
-                            <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 479px) 69vw, (max-width: 991px) 70vw, 88vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
+                            <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
                           </div>
                           <div class="card-body">
                             <div class="card-inner">
@@ -3591,12 +3736,205 @@
                     </div>
                   </div>
                   <div class="block">
-                    <div style="gap: 1rem;" class="u-hflex-left-top">
+                    <div style="gap: 1rem; margin: 0 0 1rem 0;" class="u-hflex-left-center">
                       <div class="dot">
                         <div class="dot_core"></div>
                       </div>
                       <div class="dot cc-important">
                         <div class="dot_core cc-important"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sg-element">
+                  <div class="sg-tags">
+                    <div class="tag-wrapper">
+                      <div class="tag-label">avatar-wrapper</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">avatar</div>
+                    </div>
+                    <div class="tag-wrapper">
+                      <div class="tag-label">badge</div>
+                    </div>
+                    <div class="sg-note">size adjustments on <span class="tag-label">avatar-wrapper</span>; styles apply on <span class="tag-label">avatar</span></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                    <div style="gap: 0.5rem;" class="u-hflex-left-center">
+                      <div role="group" class="avatar-wrapper">
+                        <div aria-label="Profile" class="avatar">
+                          <div class="avatar_info">S2</div><img src="../images/S2-logo-256.png" loading="lazy" aria-hidden="true" alt="" class="avator_image">
+                        </div>
+                      </div>
+                      <div role="group" class="avatar-wrapper">
+                        <div aria-label="Profile" class="avatar">
+                          <div class="avatar_info">S2</div>
+                        </div>
+                      </div>
+                      <div role="group" class="avatar-wrapper">
+                        <a aria-label="Profile" href="#" class="avatar w-inline-block">
+                          <div class="avatar_info">S2</div><img src="../images/S2-logo-256.png" loading="lazy" aria-hidden="true" alt="" class="avator_image">
+                        </a>
+                      </div>
+                      <div role="group" class="avatar-wrapper">
+                        <a aria-label="Profile" href="#" class="avatar w-inline-block">
+                          <div class="avatar_info">S2</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div style="gap: 0.5rem;" class="u-hflex-left-center">
+                      <div role="group" class="avatar-wrapper cc-2xl">
+                        <div aria-label="Profile" class="avatar cc-styled">
+                          <div class="avatar_info">S2</div><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=90&amp;w=300&amp;auto=format&amp;fit=crop" alt="Profile image" aria-hidden="true" class="avator_image">
+                        </div>
+                        <div class="badge">
+                          <div class="dot-mark"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="gap: 0.5rem;" class="u-hflex-left-center">
+                      <div role="group" class="avatar-wrapper">
+                        <div aria-label="Profile" class="avatar cc-primary">
+                          <div class="avatar_info">S2</div>
+                        </div>
+                      </div>
+                      <div role="group" class="avatar-wrapper">
+                        <div aria-label="Profile" class="avatar cc-secondary">
+                          <div class="avatar_info">S2</div>
+                        </div>
+                      </div>
+                      <div role="group" class="avatar-wrapper">
+                        <div aria-label="Profile" class="avatar cc-accent">
+                          <div class="avatar_info">S2</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div no-scrollbar="" class="sg-h-scroll cc-hflex cc-left-center">
+                        <div role="group" class="avatar-wrapper cc-xs">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-sm">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge cc-icon">
+                            <div class="icon cc-100p w-embed">
+                              <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                  <rect width="256" height="256" fill="none"></rect>
+                                  <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge">
+                            <div class="dot-mark"></div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-lg">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge cc-counter">1</div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-xl">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=90&amp;w=300&amp;auto=format&amp;fit=crop" alt="Profile image" aria-hidden="true" class="avator_image">
+                          </div>
+                          <div class="badge">
+                            <div class="dot-mark"></div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-2xl">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge cc-counter">68</div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-3xl">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge cc-icon">
+                            <div class="icon cc-100p w-embed">
+                              <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                  <rect width="256" height="256" fill="none"></rect>
+                                  <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div no-scrollbar="" class="sg-h-scroll cc-hflex">
+                        <div role="group" class="avatar-wrapper cc-2xl">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge">
+                            <div class="dot-mark"></div>
+                          </div>
+                          <div class="badge cc-2">
+                            <div class="dot-mark"></div>
+                          </div>
+                          <div class="badge cc-3">
+                            <div class="dot-mark"></div>
+                          </div>
+                          <div class="badge cc-4">
+                            <div class="dot-mark"></div>
+                          </div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-2xl">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge cc-counter">1</div>
+                          <div class="badge cc-counter cc-counter-2">2</div>
+                          <div class="badge cc-counter cc-counter-3">3</div>
+                          <div class="badge cc-counter cc-counter-4">4</div>
+                        </div>
+                        <div role="group" class="avatar-wrapper cc-2xl">
+                          <div aria-label="Profile" class="avatar">
+                            <div class="avatar_info">S2</div>
+                          </div>
+                          <div class="badge cc-icon">
+                            <div class="icon cc-100p w-embed">
+                              <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                  <rect width="256" height="256" fill="none"></rect>
+                                  <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                          <div class="badge cc-icon cc-icon-2">
+                            <div class="icon cc-100p w-embed">
+                              <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                  <rect width="256" height="256" fill="none"></rect>
+                                  <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                          <div class="badge cc-icon cc-icon-3">
+                            <div class="icon cc-100p w-embed">
+                              <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                  <rect width="256" height="256" fill="none"></rect>
+                                  <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                          <div class="badge cc-icon cc-icon-4">
+                            <div class="icon cc-100p w-embed">
+                              <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
+                                  <rect width="256" height="256" fill="none"></rect>
+                                  <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -4259,7 +4597,7 @@
                           <div class="tag-wrapper">
                             <div class="tag-label">richtext</div>
                           </div>
-                          <div class="sg-note">default class to style rich text<br></div>
+                          <div class="sg-note">default class to style Rich Text element</div>
                         </div>
                       </div>
                       <div class="sg-richtext-demo">
@@ -4268,7 +4606,7 @@
                             <div class="tag-label">richtext</div>
                             <div class="tag-label">cc-richtext-lg</div>
                           </div>
-                          <div class="sg-note">Adding combo class to rich text elements can be tricky. You have to create and add styles to a combo class first.</div>
+                          <div class="sg-note">Adding combo class to Rich Text elements can be tricky. You have to create and apply styles to <span class="tag-label">cc-richtext-lg</span> directly as if styling a utility class.</div>
                         </div>
                       </div>
                     </div>
@@ -4503,7 +4841,7 @@
             </style>
         </div>
       </div>
-      <div code="css" class="css_page w-embed">
+      <div code="css" class="css_page-specific w-embed">
         <style>
             /* styles specific to this page */
           </style>
@@ -4514,7 +4852,7 @@
             <div class="main-logo-wrapper">
               <a aria-label="Go to Homepage" href="#" class="main-logo-link w-nav-brand">
                 <div class="main-logo cc-square-logo w-embed"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M110.584 37C115.262 37 118.456 41.7293 116.709 46.0681L89.1232 114.588C87.3764 118.927 90.5706 123.656 95.2478 123.656H106.119C106.164 123.522 106.213 123.387 106.267 123.254L139.327 41.1366C140.333 38.6372 142.757 37 145.452 37H201.367C206.044 37 209.238 41.7293 207.492 46.0681L179.906 114.588C178.159 118.927 181.353 123.656 186.03 123.656H233.559C238.236 123.656 241.43 128.385 239.683 132.724L206.623 214.841C205.617 217.341 203.193 218.978 200.499 218.978H144.583C139.906 218.978 136.712 214.248 138.458 209.91L166.044 141.39C167.791 137.051 164.597 132.322 159.92 132.322H149.048C149.004 132.456 148.955 132.59 148.901 132.724L115.841 214.841C114.834 217.341 112.41 218.978 109.716 218.978H53.8006C49.1233 218.978 45.9291 214.248 47.6759 209.91L75.2618 141.39C77.0086 137.051 73.8144 132.322 69.1372 132.322H21.6089C16.9317 132.322 13.7375 127.592 15.4843 123.254L48.5443 41.1366C49.5506 38.6372 51.9746 37 54.669 37H110.584Z" fill="currentColor"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.7222 3C18.5457 3 3 18.5456 3 37.7222V218.278C3 237.454 18.5456 253 37.7222 253H218.278C237.454 253 253 237.454 253 218.278V37.7222C253 18.5457 237.454 3 218.278 3H37.7222ZM82.47 43.4105C83.5396 39.0591 87.4417 36 91.9226 36H139.432C145.749 36 150.392 41.9233 148.884 48.0574L131.255 119.778C130.351 123.459 133.137 127.013 136.927 127.013H182.261C188.578 127.013 193.222 132.936 191.714 139.07L173.53 213.048C172.46 217.4 168.558 220.459 164.077 220.459H116.568C110.251 220.459 105.608 214.535 107.116 208.401L124.745 136.681C125.649 133 122.863 129.446 119.073 129.446H73.7386C67.4219 129.446 62.7782 123.523 64.286 117.389L82.47 43.4105Z" fill="currentColor"></path>
                   </svg></div>
               </a>
             </div>
@@ -4545,16 +4883,12 @@
             <div class="title-wrapper cc-lg">
               <h1 class="title-heading cc-xl">Starter Page Structure</h1>
             </div>
-            <div class="title-wrapper">
-              <div class="title-message cc-sm">This template follows the page structure recommended by the S2 Framework and is independent of any custom code. It serves as the perfect starting point for crafting your next Webflow Template masterpiece.</div>
-            </div>
+            <div class="title-message cc-sm">This template follows the page structure recommended by the S2 Framework and is independent of any custom code. It serves as the perfect starting point for crafting your next Webflow template.</div>
           </div>
         </section>
         <section class="section cc-top-sm">
           <div class="w-layout-blockcontainer container w-container">
-            <div class="text-wrapper cc-max-40rem">
-              <p><strong>Tip:</strong> The <span class="tag-label">main</span> wrapper of the page SHOULD NOT include the <strong>nav</strong> and <strong>footer</strong>, and a page should always have a <span class="tag-label cc-html">Main</span> HTML tag.<br></p>
-            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
           </div>
         </section>
       </main>
