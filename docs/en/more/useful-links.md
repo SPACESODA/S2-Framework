@@ -1,8 +1,8 @@
 ---
-description: 🔥 = Highly recommanded
+description: Highly recommanded = 🔥
 ---
 
-# 🧶 Useful Stuff
+# 🧶 Useful Links
 
 ## Fluid Typography
 

@@ -18,7 +18,7 @@ It is essentially a one-page Style Guide that fully complies with Webflow’s ma
    * the **"Licenses"** page (keep it if you find it useful)
    * the **"Password"** and **"404"** pages
 4. Remove the <mark style="color:green;">**Global Code**</mark> component on the **"Password"** and **"404"** pages.
-5. Go to the **"One-page Style Guide"** page and remove the <mark style="color:green;">**Clone Now CTA**</mark> component. The <mark style="color:green;">**Grid Guide**</mark> component also consists of custom code, but you may keep it as a tool and remove it later.
+5. Go to the **"One-page Style Guide"** page and remove the <mark style="color:green;">**\[ Clone Now CTA ]**</mark> component. The <mark style="color:green;">**Grid Guide**</mark> component also consists of custom code, but you may keep it as a tool and remove it later.
 6. _Optional_: Remove **Dark mode** from the **Colors** variable collection.
 7. Clean up all unused **Components**.
 8. Clean up all unused interactions.

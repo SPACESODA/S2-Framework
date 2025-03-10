@@ -16,9 +16,9 @@ This is our default and recommended structure when you start a page using the <m
 >
 > > **`page`** : Wrap all content within a div. This practice makes it easier to copy and paste entire pages or sections.
 > >
-> > > <mark style="color:green;">**Global Code**</mark> : Please refer to [this section](code-embed.md) for details.
+> > > <mark style="color:green;">**Global Code**</mark> : Please refer to [this section](global-code.md) for details.
 > > >
-> > > **`css_page`** : A hidden Webflow Code Embed element that allows you to add custom CSS specific to the page and see changes immediately.
+> > > **`css_page`** : A Webflow Code Embed element that allows you to add custom CSS specific to the page and see changes immediately.
 > > >
 > > > **`main-nav`** : The `nav`, the page's main navigation.
 > > >

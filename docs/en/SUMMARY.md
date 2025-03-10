@@ -27,7 +27,7 @@
   * [Naming Custom Attributes](guide-and-documentation/naming-strategies/naming-custom-attributes.md)
 * [Structure](guide-and-documentation/structure/README.md)
   * [HTML Structure](guide-and-documentation/structure/html-structure.md)
-  * [Code Embed](guide-and-documentation/structure/code-embed.md)
+  * [Global Code](guide-and-documentation/structure/global-code.md)
 * [S2 Attributes](guide-and-documentation/s2-attributes.md)
 * [S2 Components](guide-and-documentation/s2-components.md)
 * [S2 Framework Lite](guide-and-documentation/s2-framework-lite.md)
@@ -43,8 +43,12 @@
 * [FAQs](more/faqs.md)
 * [Foundations of S2](more/foundations-of-s2.md)
 * [Our Approaches](more/our-approaches.md)
-* [vs. Client-First and other Frameworks](more/vs.-client-first-and-other-frameworks.md)
-* [🧶 Useful Stuff](more/useful-stuff.md)
+* [Ready to switch to S2?](more/ready-to-switch-to-s2/README.md)
+  * [Frameworks Comparison Overview](more/ready-to-switch-to-s2/frameworks-comparison-overview.md)
+  * [From Client-First](more/ready-to-switch-to-s2/from-client-first.md)
+  * [From MAST or The Saddle](more/ready-to-switch-to-s2/from-mast-or-the-saddle.md)
+  * [From Lumos](more/ready-to-switch-to-s2/from-lumos.md)
+* [🧶 Useful Links](more/useful-links.md)
 
 ***
 

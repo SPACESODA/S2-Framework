@@ -13,7 +13,7 @@ layout:
     visible: true
 ---
 
-# vs. Client-First and other Frameworks
+# Frameworks Comparison Overview
 
 You may have this struggle:
 
@@ -65,13 +65,13 @@ The Saddle Framework is a Developer-First, Client-Focused Webflow framework. The
 
 **S2 Framework**
 
-S2 emphasizes a simple and easy-to-understand structure. There’s no need to over-prepare or create an overly complex layout. Avoid unnecessary nesting and excessive div wrapping.
+S2 emphasizes a simple and easy-to-understand structure. There’s no need to over-prepare or create overly complex structures. Avoid unnecessary nesting and excessive div wrapping.
 
 When building S2 Framework, we strictly follow our rules when building with S2. However, we encourage you to take advantage of the flexibility of Webflow when building your site.
 
 <mark style="color:purple;">**Client-First**</mark>
 
-It looks like Client-First does not usually call itself a framework but a guideline instead. Client-First suggests stricter adherence to rules to ensure consistency across projects.
+It looks like Client-First does not usually call itself a framework but a "guideline". Client-First suggests stricter adherence to rules to ensure consistency across projects.
 
 CF often results in deeply nested structures, partly due to the CSS “folder” concept they invented and partly as an early preparation for “flexibility.”
 
@@ -93,7 +93,7 @@ S2 is designed to be easy to start for anyone, and flexible for pros and develop
 
 By leveraging Webflow, we want anyone to be able to start using S2 effectively within a few hours of learning and hands-on exploration. For experienced users, you can dive deeper and use the framework fluently with custom code.
 
-While [S2 Attributes](../guide-and-documentation/s2-attributes.md) require some memorization, they are optional. Use only the ones you can easily remember and understand. Since the S2 Attributes library is small, you can become proficient quickly.
+While [S2 Attributes](../../guide-and-documentation/s2-attributes.md) require some memorization, they are optional. Use only the ones you can easily remember and understand. Since the S2 Attributes library is small, you can become proficient quickly.
 
 <mark style="color:purple;">**Client-First**</mark>
 
@@ -115,7 +115,7 @@ Example: `hero-banner_inner-wrapper`\
 1\. Use natural English in most cases.\
 2\. Use `-` to separate words of the same context.\
 3\. Use `_` to separate words of **different contexts** or **child elements**.\
-It's that simple! See the [Class Naming](../guide-and-documentation/naming-strategies/class-naming.md) section.
+It's that simple! See the [Class Naming](../../guide-and-documentation/naming-strategies/class-naming.md) section.
 
 S2 also includes a small set of abbreviations.
 
@@ -133,7 +133,7 @@ References:\
 
 <mark style="color:orange;">**MAST**</mark>**&#x20;&&#x20;**<mark style="color:blue;">**The Saddle Framework**</mark>
 
-The class naming strategies of S2 evolved from them. So, we basically share the same philosophy. In S2, we define the use of `-` and `_` more clearly ([see here](../guide-and-documentation/naming-strategies/class-naming.md#id-02.-dash-or-underscore)), and abbreviations in S2 are also a bit different.
+The class naming strategies of S2 evolved from them. So, we basically share the same philosophy. In S2, we define the use of `-` and `_` more clearly ([see here](../../guide-and-documentation/naming-strategies/class-naming.md#id-02.-dash-or-underscore)), and abbreviations in S2 are also a bit different.
 
 
 
@@ -147,7 +147,7 @@ All frameworks are generally similar for other naming conventions, such as varia
 
 **S2 Framework**
 
-S2 suggests [using utility classes wisely](../guide-and-documentation/basic-concepts/use-utility-classes-wisely.md) and encourages you to style by creating your own custom classes and leveraging [S2 Attributes](../guide-and-documentation/s2-attributes.md).
+S2 suggests [using utility classes wisely](../../guide-and-documentation/basic-concepts/use-utility-classes-wisely.md) and encourages you to style by creating your own custom classes and leveraging [S2 Attributes](../../guide-and-documentation/s2-attributes.md).
 
 S2 includes a set of well-designed utility classes. To guide styling decisions, S2 provides a simple hierarchy for making better styling choices:
 
