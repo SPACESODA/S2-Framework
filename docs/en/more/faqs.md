@@ -6,17 +6,17 @@ icon: message-question
 
 <details>
 
-<summary>What is S2 a theme, a template, a style guide, or a UI kit?</summary>
+<summary>What is S2 — a theme, a template, a style guide, or a UI kit?</summary>
 
 **S2 is a framework. It is not a theme or template.**
 
-The S2 framework is a complete system for building scalable, maintainable, and professional-grade websites. It provides a standardized approach to naming and organizing CSS classes and other elements.
+The S2 Framework is a complete system for building scalable, maintainable, and professional Webflow sites. It provides a standardized approach to naming and organizing CSS classes and other elements.
 
-During your design, you should modify the S2 Framework cloneable and make it the style guide of your site.
+During your design process, you should modify the S2 Framework cloneable and use it as the style guide for your site.
 
-You can use the S2 cloneable as a starting point for your project. Since we avoid over-styling, the layouts remain simple and adaptable, leaving you complete creative freedom. Feel free to modify anything as you build.
+You can use the S2 cloneable as a starting point for your project. Since we avoid over-styling, the layouts remain simple and adaptable, giving you complete creative freedom. Feel free to modify anything as you build.
 
-**The S2 Framework is not a UI kit** — but it includes well-formatted and structured basic UI elements that you can further style to fit your needs. Additionally, S2 provides a small collection of well-designed base layouts and components to help you build faster and more efficiently.
+**The S2 Framework is not a UI kit** — but, it does include well-structured basic UI elements that you can further style to fit your needs. Additionally, S2 provides a small collection of well-structured base layouts and components, helping you build faster and more efficiently.
 
 </details>
 
@@ -26,15 +26,17 @@ You can use the S2 cloneable as a starting point for your project. Since we avoi
 
 If you've started a project with a specific version of the S2 Framework, it’s best to continue using that version. Upgrading can be difficult and is often unnecessary, especially if you've already modified it.
 
-It is perfectly fine to continue using the version you are starting with.
+Again, it is perfectly fine to continue using the version you are starting with.
 
-However, if you find something new that is not available in your current version but exists in a newer S2 release, you can easily copy it from a freshly cloned version.
+However, if you find something new in a new version of S2 that is not available in your current version, you can easily copy it from a freshly cloned copy.
 
 </details>
 
 <details>
 
 <summary>Is there any conflict between the S2 Framework and Client-First conventions?</summary>
+
+No.
 
 There are differences, but there is no conflict between the S2 and the Client-First conventions.
 
@@ -50,7 +52,7 @@ The differences between both approaches are more about what works well and what 
 
 S2 Attributes is a concise, ready-to-use collection of attributes designed to streamline your development process.
 
-Inspired by Tailwind CSS's utility-first approach, S2 Attributes offers a similar concept — but uses attributes instead of classes — to keep your HTML clean and organized.
+Inspired by Tailwind CSS's utility-first approach, S2 Attributes offers a similar concept — but uses **attributes** instead of classes — to keep your HTML clean and organized.
 
 S2 Attributes is designed to keep your project classes clean and organized. It also gives you flexibility and helps you build faster. Using it is completely optional.
 
@@ -66,16 +68,6 @@ No. The set of custom codes is on each page and is very small in size. It has mi
 
 <details>
 
-<summary>How to find which elements a variable is applied to?</summary>
-
-Unfortunately, you cannot check this directly in the Webflow Designer panel. However, you can find where variables are applied by following these steps:
-
-First, go to the source code of any page. Find and visit the current stylesheet (the .css file). Then, you can search for the variable names, such as `var(--colors--primary)`.
-
-</details>
-
-<details>
-
 <summary>What if my project is not going to have light and dark colors.</summary>
 
 No problem. You can remove them all easily.
@@ -83,7 +75,7 @@ No problem. You can remove them all easily.
 1. Remove the Dark mode variable mode
 2. Remove the related UI elements and JavaScript
 
-&#x20;However, you can also leave the existing setup for future potential.
+&#x20;However, you can also leave the existing setup for future potential changes.
 
 </details>
 
@@ -103,11 +95,11 @@ Besides, S2 is a framework by nature. This approach ensures it remains simple an
 
 <details>
 
-<summary>Is using the S2 framework compatible with other frameworks, especially Client-First?</summary>
+<summary>Is using the S2 framework compatible with resources that are using other frameworks, especially Client-First?</summary>
 
 Yes, there won't be any conflict when you add or copy and paste components, layouts, scripts and community stuff that use other practices or frameworks into a site built with S2.
 
-In fact, the main difference is in class naming conventions. You can leave the names of such classes as they are, or rename them according to S2's conventions.
+In fact, the main difference is in class naming conventions. You can leave the class names of such elements as they are, or rename them according to S2's conventions.
 
 </details>
 
@@ -117,7 +109,9 @@ In fact, the main difference is in class naming conventions. You can leave the n
 
 Yes, absolutely.
 
-While you can remove unnecessary stuff from the cloned S2 framework (and clean up the styles) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around. Keeping them in the styles guild has very, very minimal impact on your site's performance.
+While you can remove unnecessary stuff from the cloned S2 framework (and clean up the styles) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around.
+
+Besides, keeping them in the styles guild has very, very, very minimal impact on your site's performance.
 
 </details>
 

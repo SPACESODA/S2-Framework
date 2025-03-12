@@ -1,9 +1,9 @@
 ---
-icon: i-cursor
 description: >-
   Since styling in Webflow relies heavily on class names, adopting consistent
   and well-thought-out class naming strategies will help you build faster and
   maintain your site more efficiently over time.
+icon: i-cursor
 ---
 
 # Class Naming
@@ -11,7 +11,7 @@ description: >-
 The naming strategies suggested in the S2 Framework are optimized for Webflow and incorporate the best parts from Tailwind CSS and MAST, and they are mostly the same as the Client-First convention.
 
 {% hint style="warning" %}
-**Class naming** is an important topic. The strategies of S2 have been carefully researched and tested on large and small projects.
+**Class naming** is an important topic. The class naming strategy or convention suggested by S2 has been carefully researched and tested on large and small projects.
 {% endhint %}
 
 
@@ -150,11 +150,11 @@ The term **Variants** in this context refers to a concept that is entirely diffe
 
 ### Size Variants
 
-When describing size variants of classes, use standard abbreviations for sizes.
+When describing size variants of classes, use standard abbreviations for sizes (and typography).
 
 `3xs` ← `2xs` ← `xs` ← `sm` ← `base` → `lg` → `xl` → `2xl` → `3xl`
 
-This approach is similar to breakpoints (but usually there is no **md**). It aligns with the Tailwind CSS convention.
+This approach is similar to breakpoints (but there is no **md**). It aligns with the Tailwind CSS convention.
 
 Do not use one-letter abbreviations like **s**, **m**, **l**.
 

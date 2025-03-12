@@ -9,9 +9,9 @@ icon: star-christmas
 
 
 {% hint style="warning" %}
-Alert! The following can be boring :see\_no\_evil:
+**Alert! The following can be boring** :see\_no\_evil:
 
-**So, continue reading if you are interested...**
+**Continue reading if you are interested...**
 {% endhint %}
 
 
