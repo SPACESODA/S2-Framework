@@ -22,11 +22,13 @@ You can use the S2 cloneable as a starting point for your project. Since we avoi
 
 <details>
 
-<summary>I am using an older version of S2, how to update?</summary>
+<summary>I am using an older version of S2, how to upgrade?</summary>
 
-Once you start a project with one version of the S2 Framework, you should continue to use that version for a project.
+If you've started a project with a specific version of the S2 Framework, it’s best to continue using that version. Upgrading can be difficult and is often unnecessary, especially if you've already modified it.
 
-The reason is that it can be very difficult to upgrade, and it is also unnecessary. Also, custom codes may have already been modified. It is perfectly fine to continue using the version you are starting with.
+It is perfectly fine to continue using the version you are starting with.
+
+However, if you find something new that is not available in your current version but exists in a newer S2 release, you can easily copy it from a freshly cloned version.
 
 </details>
 
@@ -36,7 +38,7 @@ The reason is that it can be very difficult to upgrade, and it is also unnecessa
 
 There are differences, but there is no conflict between the S2 and the Client-First conventions.
 
-For example, S2 uses prefixes like `cc-` and `u-`, and use a few abbreviations, but it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
+For example, S2 uses prefixes like `cc-` and `u-`, and we also use a few abbreviations. But, it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
 
 The differences between both approaches are more about what works well and what works even better.
 

@@ -93,7 +93,7 @@ S2 is designed to be easy to start for anyone, and flexible for pros and develop
 
 By leveraging Webflow, we want anyone to be able to start using S2 effectively within a few hours of learning and hands-on exploration. For experienced users, you can dive deeper and use the framework fluently with custom code.
 
-While [S2 Attributes](../../guide-and-documentation/s2-attributes.md) require some memorization, they are optional. Use only the ones you can easily remember and understand. Since the S2 Attributes library is small, you can become proficient quickly.
+While [S2 Attributes](../../guide-and-documentation/s2-attributes.md) require some memorization, they are entirely optional. **Use only the ones you can easily remember and understand.** Since the S2 Attributes library is small, you can become proficient quickly.
 
 <mark style="color:purple;">**Client-First**</mark>
 
