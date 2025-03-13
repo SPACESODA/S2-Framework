@@ -5,11 +5,9 @@ icon: code-compare
 
 # From Client-First
 
-You may have this struggle:
+Client-First is one of the most widely adopted frameworks in the Webflow community, and you might already be using it. So, you may have this struggle:
 
 > **“Wait, isn’t everyone using Client-First? Why even consider switching?”**
-
-Client-First is one of the most widely adopted frameworks in the Webflow community, and you might already be using it. But there’s always room for improvement, right?
 
 **This is our own experience —**
 
@@ -47,6 +45,12 @@ About utility classes, we suggest to use wisely. They can be difficult to track.
 * Do not stack or sandwich utility classes.
 * Do not modify a modifying utility class directly. Instead, create another combo class to modify the steak. For example, modifying `u-text-center` in `container` `u-text-center` is not recommended.
 * If you do not have an exact match for a utility class in mind, create and name your own class instead.
+
+### Compatibility
+
+Finsweet offers a lot of excellent free and premium resources, and you may need to use some of them in your projects.
+
+In the world of Webflow, there is no real incompatibility. S2 is designed to work seamlessly alongside resources base on other frameworks, utilities, and add-ons.
 
 
 

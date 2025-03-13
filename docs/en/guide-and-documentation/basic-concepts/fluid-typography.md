@@ -168,7 +168,7 @@ The generated values are applied to the Webflow Designer for the <mark style="co
 
 ## Summary
 
-So, in summary, the fluid values have been applied directly to:
+In S2, the fluid values have been applied directly to:
 
 * <mark style="color:purple;">**`Body`**</mark>, **`text-base`**
 * **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
@@ -179,11 +179,13 @@ So, in summary, the fluid values have been applied directly to:
 
 This allows you to enjoy the benefits without relying on custom code.
 
-However, honestly, manually entering all the `clamp()` values can be a bit cumbersome if you want to change font sizes. **This process will become super simple instantly when Webflow allows** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** :fingers\_crossed:
+We understand that manually entering all the `clamp()` values can be a bit cumbersome if you want to change font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
 
 {% hint style="info" %}
-Usually, you don't need to change the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values. S2's default will scale nicely at different font sizes.
+Usually, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values. S2's default will scale nicely with different font sizes.
 {% endhint %}
+
+Other questions:
 
 <details>
 
