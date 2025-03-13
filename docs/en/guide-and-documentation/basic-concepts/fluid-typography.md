@@ -1,39 +1,39 @@
 ---
-icon: dolphin
 description: >-
   Fluid Typography (or Fluid Responsive) is an idea that font size changes
   fluidly with the screen's width, not just changes at breakpoints.
+icon: dolphin
 ---
 
 # Fluid Typography
 
-In the [S2 Framework](https://s2-framework.webflow.io/s2/styles?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2), we adopted the modern concepts of **Fluid Typography** and **Type Scale**.
+In the [S2 Framework](https://s2-framework.webflow.io/s2/styles?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2), we adopted the modern concepts of **Fluid Typography** and **Type Scale**, which makes it **Fluid Type Scale**. &#x20;
 
 The fluid behavior can be achieved nicely using `clamp()` in the font-size property, allowing text to scale dynamically based on the viewport size. By adopting a type scale ratio, we can ensure smooth, consistent typography that maintains visual harmony across different screen sizes without guesswork.
 
-To take advantage of both, we can use the open-source tool [Fluid Type Scale](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
+To take advantage of both, we can use the open-source tool [Fluid Type Scale Calculator](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
 
 {% hint style="info" %}
-If you think the default font size in the S2 Cloneable is fine, you can skip this chapter.
+If you think the default font size in the S2 Cloneable is fine and you don't have to make any changes yet, you can skip this chapter.
 {% endhint %}
 
 
 
-## Concept
+## The Concept
 
-Once you understand the concept, you can use the tool to adjust the values to fit your design needs easily. This diagram explains the basic concept of [an Example of a 2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280).
+Once you understand the concept, you can use the tool to adjust the values to fit your design needs easily. Let's take a look at the below diagram:
 
 <figure><img src="../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
 
+The above diagram explains the basic concept of this example: [2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+
 ```
-// CSS generated in this demo example
+// CSS generated in the example
 --_text---hero-title--base: clamp(2.5rem, 6.087vi + 1.13rem, 6rem);
 --_text---hero-title--lg: clamp(3.125rem, 10.217vi + 0.826rem, 9rem);
 ```
 
-Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280).
-
-It will be helpful if you want to set up fluid typography for a particular class.
+Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). It will be helpful if you want to set up fluid typography for a particular class.
 
 {% hint style="info" %}
 **How to update `clamp()` values according to my design needs?**
@@ -51,21 +51,21 @@ Below are the default configurations in the S2 Framework.
 
 <mark style="color:purple;">**`Body`**</mark>, **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
-<mark style="color:blue;">✦</mark> [See our Configuration →](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.057475\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
-
 In the cloneable, the base font size, which is the font size that applies to <mark style="color:purple;">`Body`</mark> via the Webflow Designer, is set according to the below in the tool.
 
-Key configs to look at:
+<mark style="color:blue;">✦</mark> [See our Configuration →](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.057475\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+
+Key configs we looked at:
 
 |              |                                      |
 | ------------ | ------------------------------------ |
 | 16px         | Desired min of base size is 1rem     |
 | 18px         | Desired max if base size is 1.125rem |
-| Max of --xl  | 1.5rem                               |
-| Max of --3xl | 2rem                                 |
-| Min of --3xl | 1.25rem                              |
+| Max of `xl`  | 1.5rem                               |
+| Max of `3xl` | 2rem                                 |
+| Min of `3xl` | 1.25rem                              |
 
-Here's what we get for the font-size value:
+Here's what we get for the fluid values:
 
 ```
 --_text---font-size--base: clamp(1rem, 0.217vi + 0.951rem, 1.125rem);
@@ -75,19 +75,24 @@ Here's what we get for the font-size value:
 --_text---font-size--3xl: clamp(1.25rem, 1.304vi + 0.957rem, 2rem);
 ```
 
+Great, let's move on to the smaller sizes!
+
 **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
+
+The process is similar for the smaller sizes, the min and max values of the base font size should be constant. This time, as the sizes are quite small, it will be easier to get a desired results by using `xs` as the baseline step.
 
 <mark style="color:blue;">✦</mark> [See our Configuration →](https://www.fluid-type-scale.com/calculate?minFontSize=13\&minWidth=360\&minRatio=1.1095\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-The process is similar, the min and max values of the base font size should be constant.
-
-Key configs to look at:
+Key configs we looked at:
 
 |                  |                               |
 | ---------------- | ----------------------------- |
-| Use --xs as base | Easier to set up a scale down |
-| Max of --xs      | 0.875rem (14px)               |
-| Min of --3xs     | Within a reasonable size      |
+| Use `xs` as base | Easier to set up a scale down |
+| `base`           | Same value                    |
+| Max of `xs`      | 0.875rem (14px)               |
+| Min of `3xs`     | Within a reasonable size      |
+
+Here's what we get:
 
 ```
 --_text---font-size--3xs: clamp(0.66rem, 0.036vi + 0.652rem, 0.681rem);
@@ -97,9 +102,17 @@ Key configs to look at:
 --_text---font-size--base: clamp(1rem, 0.217vi + 0.951rem, 1.125rem);
 ```
 
+<details>
+
+<summary>Want to scale down more aggressively?</summary>
+
+Here are two examples for reference:
+
 <mark style="color:blue;">✦</mark> [Alternative configuration: Scale down more on smaller screens →](https://www.fluid-type-scale.com/calculate?minFontSize=12.5\&minWidth=360\&minRatio=1.13125\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
 <mark style="color:blue;">✦</mark> [Alternative configuration: Scale down even more →](https://www.fluid-type-scale.com/calculate?minFontSize=12\&minWidth=360\&minRatio=1.1545\&maxFontSize=13\&maxWidth=1280\&maxRatio=1.1765\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+
+</details>
 
 
 
@@ -107,22 +120,18 @@ Key configs to look at:
 
 <mark style="color:purple;">**`Heading 1`**</mark> to <mark style="color:purple;">**`Heading 6`**</mark>, **`h1`** to **`h6`**
 
+Similarly, we can use the [Fluid Type Scale](https://www.fluid-type-scale.com) tool to get the fluid values effortlessly for headings. `h6` is the baseline step, and in S2, we want to make it the same as the <mark style="color:purple;">**Body**</mark> font size.
+
 <mark style="color:blue;">✦</mark> [See our Configuration →](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.24577245\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.347625\&steps=h6%2Ch5%2Ch4%2Ch3%2Ch2%2Ch1\&baseStep=h6\&prefix=_text---heading-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-Similarly, we can use the [Fluid Type Scale](https://www.fluid-type-scale.com) tool to get the fluid values effortlessly for headings.
-
-Configurations to get the `clamp()` value for `h1` to `h6`
-
-{% hint style="warning" %}
-`h6` is the baseline step, and it is the same as the root font size.
-{% endhint %}
-
-Key configs to look at:
+Key configs we looked at:
 
 |             |      |
 | ----------- | ---- |
-| Max of --h1 | 5rem |
-| Min of --h1 | 3rem |
+| Max of `h1` | 5rem |
+| Min of `h1` | 3rem |
+
+Here's what we get:
 
 ```
 --_text---heading--h6: clamp(1rem, 0.217vi + 0.951rem, 1.125rem);
@@ -133,20 +142,13 @@ Key configs to look at:
 --_text---heading--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
 ```
 
+{% hint style="info" %}
 The above `clamp()` values have been applied to the tags <mark style="color:purple;">`Heading 1`</mark> to <mark style="color:purple;">`Heading 6`</mark>, and also to classes `h1` to `h6`.
+{% endhint %}
 
 **`h7`**, **`h8`**
 
-Sometimes you simply need smaller headings, so, there are `h7` and `h8`. They are arbitrary classes invented to style smaller headings.
-
-<mark style="color:blue;">✦</mark> [See our Configuration →](https://www.fluid-type-scale.com/calculate?minFontSize=13\&minWidth=360\&minRatio=1.125\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.1595\&steps=h8%2Ch7\&baseStep=h7\&prefix=_text---heading-\&useContainerWidth=false\&includeFallbacks=true\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
-
-```
---_text---heading--h8: clamp(0.722rem, 0.056vi + 0.71rem, 0.755rem);
---_text---heading--h7: clamp(0.813rem, 0.109vi + 0.788rem, 0.875rem);
-```
-
-In the configuration, we get our desired max sizes 0.875rem and 0.755rem; and the min sizes are also within reasonable value.
+Sometimes you simply need smaller headings, so, there are `h7` and `h8`. They are arbitrary classes invented to style smaller headings. For simplicity, we can just use regular font sizes.
 
 
 
@@ -156,21 +158,52 @@ In the configuration, we get our desired max sizes 0.875rem and 0.755rem; and th
 
 S2 also adopted fluid font styles on `sup` and `sub` elements.
 
-We prepare a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is modified from the tool created by [Lorenz Woehr](https://css-tricks.com/fluid-superscripts-and-subscripts/).&#x20;
+We have prepared a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is modified from the tool created by [Lorenz Woehr](https://css-tricks.com/fluid-superscripts-and-subscripts/).&#x20;
 
 <mark style="color:blue;">✦</mark> [Fluid Sup / Sub CSS Generator →](https://codepen.io/realanthonyc/pen/emOXEMz)
 
-On the S2 Framework, the CSS styles are applied seamlessly to the Webflow Designer at the tag level. They look perfect!
+The generated values are applied to the Webflow Designer for the <mark style="color:purple;">**`sup`**</mark> and <mark style="color:purple;">**`sub`**</mark> tags. Now, they scale properly with nice positions according to the font size.
 
 
 
-## Optional Setups
+## Summary
 
-The following setups require custom CSS and are not yet included in the framework’s cloneable. Adding them to your site is optional.
+In S2, the fluid values have been applied directly to:
 
-### For very small screens
+* <mark style="color:purple;">**`Body`**</mark>, **`text-base`**
+* **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
+* **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
+* <mark style="color:purple;">**`Heading 1`**</mark> \~ <mark style="color:purple;">**`Heading 6`**</mark>
+* **`h1`** \~ **`h6`**
+* <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
 
-You can add this to your custom CSS to scale fonts down for devices smaller than the iPhone SE (319px or below). The `clamp()` value is based on [this configuration](https://www.fluid-type-scale.com/calculate?minFontSize=14\&minWidth=240\&minRatio=1\&maxFontSize=16\&maxWidth=319\&maxRatio=2\&steps=body\&baseStep=body\&prefix=s2\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=319).
+This allows you to enjoy the benefits without relying on custom code.
+
+We understand that manually entering all the `clamp()` values can be a bit cumbersome if you want to change font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
+
+{% hint style="info" %}
+Usually, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values. S2's default will scale nicely with different font sizes.
+{% endhint %}
+
+Other questions:
+
+<details>
+
+<summary>Want to have bigger fonts overall?</summary>
+
+If you are happy with S2's default type scales and setup, you can get an overall bigger fluid font size values effortlessly. Just follow these steps:
+
+1. Open the **Fluid Type Scale Calculator** using our configuration links.
+2. Change the **Base font size** of **Maximum (Desktop)** into e.g. 22px or 24px.
+3. Change the **Base font size** of **Minimum (Mobile)** into e.g. 18px.
+
+</details>
+
+<details>
+
+<summary>Scaling font sizes down for very small screens?</summary>
+
+You can use custom CSS to scale fonts down for devices smaller than the iPhone SE (319px or below). Here is the `clamp()` value based on [this configuration](https://www.fluid-type-scale.com/calculate?minFontSize=14\&minWidth=240\&minRatio=1\&maxFontSize=16\&maxWidth=319\&maxRatio=2\&steps=body\&baseStep=body\&prefix=s2\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=319).
 
 {% code overflow="wrap" %}
 ```css
@@ -178,38 +211,119 @@ You can add this to your custom CSS to scale fonts down for devices smaller than
 ```
 {% endcode %}
 
-### Custom Values for Variables
+This is optional and not yet included in the framework’s cloneable by default. For most projects, it is usually not necessary.
 
-The variables below in the custom CSS already exist in the variables panel. The `clamp()` values give the variables the power of fluid behavior according to the default font size values in the S2 cloneable.
+</details>
 
-However, since Webflow does not yet allow adding custom values to variables; if you want to apply such variables to the font-size values of other classes, you can place this custom code in the `custom` of the <mark style="color:green;">**Global Code**</mark> component.
+<details>
+
+<summary>How to override the default font-size values by CSS custom code?</summary>
+
+If you don't want to manually input fluid values for each class in the Style panel one by one, you can use custom CSS to apply them easily.
+
+To simplify this process, we've prepared a CSS template that allows you to override values of font size variables and text class font sizes effortlessly. Simply copy and paste the values generated by the **Fluid Type Scale Calculator** into the template and place the code inside `css_custom` in the <mark style="color:green;">**Global Code**</mark> section.
 
 ```css
-/* custom values for variables */
+<style>
+/* overriding values of the font size variables */
 :root {
-	--_text---font-size--3xs: clamp(0.66rem, 0.036vi + 0.652rem, 0.681rem);
-	--_text---font-size--2xs: clamp(0.732rem, 0.069vi + 0.717rem, 0.772rem);
-	--_text---font-size--xs: clamp(0.813rem, 0.109vi + 0.788rem, 0.875rem);
-	--_text---font-size--sm: clamp(0.901rem, 0.158vi + 0.866rem, 0.992rem);
-	--_text---font-size--base: clamp(1rem, 0.217vi + 0.951rem, 1.125rem);
-	--_text---font-size--lg: clamp(1.057rem, 0.42vi + 0.963rem, 1.299rem);
-	--_text---font-size--xl: clamp(1.118rem, 0.664vi + 0.969rem, 1.5rem);
-	--_text---font-size--2xl: clamp(1.183rem, 0.956vi + 0.967rem, 1.732rem);
-	--_text---font-size--3xl: clamp(1.25rem, 1.304vi + 0.957rem, 2rem);
+  --_text---font-size--3xs: ;
+  --_text---font-size--2xs: ;
+  --_text---font-size--xs: ;
+  --_text---font-size--sm: ;
+  --_text---font-size--base: ;
+  --_text---font-size--lg: ;
+  --_text---font-size--xl: ;
+  --_text---font-size--2xl: ;
+  --_text---font-size--3xl: ;
+  --_text---heading--h6: ;
+  --_text---heading--h5: ;
+  --_text---heading--h4: ;
+  --_text---heading--h3: ;
+  --_text---heading--h2: ;
+  --_text---heading--h1: ;
 }
+/* applying the above variables to the text classes */
+body       { font-size: var(--_text---font-size--base); }
+.text-3xs  { font-size: var(--_text---font-size--3xs); }
+.text-2xs  { font-size: var(--_text---font-size--2xs); }
+.text-xs   { font-size: var(--_text---font-size--xs); }
+.text-sm   { font-size: var(--_text---font-size--sm); }
+.text-base { font-size: var(--_text---font-size--base); }
+.text-lg   { font-size: var(--_text---font-size--lg); }
+.text-xl   { font-size: var(--_text---font-size--xl); }
+.text-2xl  { font-size: var(--_text---font-size--2xl); }
+.text-3xl  { font-size: var(--_text---font-size--3xl); }
+h6, .h6    { font-size: var(--_text---heading--h6); }
+h5, .h5    { font-size: var(--_text---heading--h5); }
+h4, .h4    { font-size: var(--_text---heading--h4); }
+h3, .h3    { font-size: var(--_text---heading--h3); }
+h2, .h2    { font-size: var(--_text---heading--h2); }
+h1, .h1    { font-size: var(--_text---heading--h1); }
+</style>
 ```
 
+Example of a larger font size setup:
+
+✦ [Configuration from --3xs to --base →](https://www.fluid-type-scale.com/calculate?minFontSize=18\&minWidth=360\&minRatio=1.1095\&maxFontSize=24\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)\
+✦ [Configuration from --base to --3xl →](https://www.fluid-type-scale.com/calculate?minFontSize=18\&minWidth=360\&minRatio=1.057475\&maxFontSize=24\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)\
+✦ [Configuration from --h6 to --h1 →](https://www.fluid-type-scale.com/calculate?minFontSize=18\&minWidth=360\&minRatio=1.24577245\&maxFontSize=24\&maxWidth=1280\&maxRatio=1.347625\&steps=h6%2Ch5%2Ch4%2Ch3%2Ch2%2Ch1\&baseStep=h6\&prefix=_text---heading-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+
+```css
+<style>
+/* overriding values of the font size variables */
+:root {
+  --_text---font-size--3xs: clamp(0.742rem, 0.288vi + 0.678rem, 0.908rem);
+  --_text---font-size--2xs: clamp(0.824rem, 0.358vi + 0.743rem, 1.029rem);
+  --_text---font-size--xs: clamp(0.914rem, 0.44vi + 0.815rem, 1.167rem);
+  --_text---font-size--sm: clamp(1.014rem, 0.538vi + 0.893rem, 1.323rem);
+  --_text---font-size--base: clamp(1.125rem, 0.652vi + 0.978rem, 1.5rem);
+  --_text---font-size--lg: clamp(1.19rem, 0.943vi + 0.977rem, 1.732rem);
+  --_text---font-size--xl: clamp(1.258rem, 1.291vi + 0.968rem, 2rem);
+  --_text---font-size--2xl: clamp(1.33rem, 1.703vi + 0.947rem, 2.31rem);
+  --_text---font-size--3xl: clamp(1.407rem, 2.192vi + 0.914rem, 2.667rem);
+  --_text---heading--h6: clamp(1.125rem, 0.652vi + 0.978rem, 1.5rem);
+  --_text---heading--h5: clamp(1.401rem, 1.078vi + 1.159rem, 2.021rem);
+  --_text---heading--h4: clamp(1.746rem, 1.701vi + 1.363rem, 2.724rem);
+  --_text---heading--h3: clamp(2.175rem, 2.602vi + 1.59rem, 3.671rem);
+  --_text---heading--h2: clamp(2.71rem, 3.892vi + 1.834rem, 4.947rem);
+  --_text---heading--h1: clamp(3.376rem, 5.724vi + 2.088rem, 6.667rem);
+}
+/* applying the above variables to the text classes */
+body       { font-size: var(--_text---font-size--base); }
+.text-3xs  { font-size: var(--_text---font-size--3xs); }
+.text-2xs  { font-size: var(--_text---font-size--2xs); }
+.text-xs   { font-size: var(--_text---font-size--xs); }
+.text-sm   { font-size: var(--_text---font-size--sm); }
+.text-base { font-size: var(--_text---font-size--base); }
+.text-lg   { font-size: var(--_text---font-size--lg); }
+.text-xl   { font-size: var(--_text---font-size--xl); }
+.text-2xl  { font-size: var(--_text---font-size--2xl); }
+.text-3xl  { font-size: var(--_text---font-size--3xl); }
+h6, .h6    { font-size: var(--_text---heading--h6); }
+h5, .h5    { font-size: var(--_text---heading--h5); }
+h4, .h4    { font-size: var(--_text---heading--h4); }
+h3, .h3    { font-size: var(--_text---heading--h3); }
+h2, .h2    { font-size: var(--_text---heading--h2); }
+h1, .h1    { font-size: var(--_text---heading--h1); }
+</style>
+```
+
+</details>
 
 
 
 
-**Extended reading:**
 
-{% embed url="https://css-tricks.com/snippets/css/fluid-typography/" %}
+**Extended readings:**
 
-{% embed url="https://css-tricks.com/simplified-fluid-typography/" %}
+Learn about `clamp()`: [https://developer.mozilla.org/en-US/docs/Web/CSS/clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)
 
-{% embed url="https://css-tricks.com/fluid-superscripts-and-subscripts/" %}
+Fluid Typography: [https://css-tricks.com/snippets/css/fluid-typography/](https://css-tricks.com/snippets/css/fluid-typography/)
+
+Simplified Fluid Typography: [https://css-tricks.com/simplified-fluid-typography/](https://css-tricks.com/simplified-fluid-typography/)
+
+Fluid Superscripts and Subscripts: [https://css-tricks.com/fluid-superscripts-and-subscripts/](https://css-tricks.com/fluid-superscripts-and-subscripts/)
 
 
 

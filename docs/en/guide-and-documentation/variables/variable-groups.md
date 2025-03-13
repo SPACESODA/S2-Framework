@@ -8,11 +8,11 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 
 :open\_file\_folder: **Theme**
 
-| Variable Groups                           | Description                                                                                                                   |
-| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Colors <mark style="color:red;">\*</mark> | Contains essential colors for selection throughout the project.                                                               |
-| Colors - Special                          | Contains colors for specific purposes, particularly those that maintain a consistent appearance in both light and dark modes. |
-| S2                                        | Colors for the style guide only.                                                                                              |
+| Variable Groups                           | Description                                                                                                                              |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Colors <mark style="color:red;">\*</mark> | <p>Contains essential colors for selection throughout the project.<br>If you have more colors, you are recommanded to add them here.</p> |
+| Colors - Special                          | Contains colors for specific purposes, particularly those that maintain a consistent appearance in both light and dark modes.            |
+| S2                                        | Colors for the style guide only.                                                                                                         |
 
 :open\_file\_folder: **Palettes**
 
@@ -25,27 +25,27 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 
 :open\_file\_folder: **Sizes**
 
-| Variable Groups  | Description                                              |
-| ---------------- | -------------------------------------------------------- |
-| Container        | Width and padding values for containers.                 |
-| Spacing          | Values for layout spacing.                               |
-| List Spacing     | Spacing of lists.                                        |
-| Richtext Spacing | Spacing for richtext elements.                           |
-| Radius           | Radius values.                                           |
-| Icon             | For icon sizes.                                          |
-| Button           | For sizes (heights) of buttons.                          |
-| Thickness        | For lines or borders.                                    |
-| Gap              | For gap heights and widths.                              |
-| Main Nav         | Grouping variables specifically for the main navigation. |
-| Outline          | For outline and offset values of outline.                |
-| Grid             | Grid system's gutter value and number of columns.        |
+| Variable Groups | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| Container       | Width and padding values for containers.                 |
+| Spacing         | Values for layout spacing.                               |
+| Radius          | Radius values.                                           |
+| Icon            | For icon sizes.                                          |
+| Button          | For sizes (heights) of buttons.                          |
+| Thickness       | For lines or borders.                                    |
+| Gap             | For gap heights and widths.                              |
+| Main Nav        | Grouping variables specifically for the main navigation. |
+| Outline         | For outline and offset values of outline.                |
+| Grid            | Grid system's gutter value and number of columns.        |
 
 :open\_file\_folder: **Text**
 
-| Variable Groups | Description                   |
-| --------------- | ----------------------------- |
-| Font Family     | For global font selection.    |
-| Font Size       | For key font size variations. |
+| Variable Groups  | Description                     |
+| ---------------- | ------------------------------- |
+| Font Family      | For global font selection.      |
+| Font Size        | For key font size variations.   |
+| List Spacing     | Spacing of lists.               |
+| Richtext Spacing | Spacing for Rich Text elements. |
 
 {% hint style="danger" %}
 <mark style="color:red;">While you can add more variables and edit the colors freely, you are not recommended to remove or rename the existing "</mark><mark style="color:red;">**Colors**</mark><mark style="color:red;">" and "</mark><mark style="color:red;">**Neutral**</mark><mark style="color:red;">" variables.</mark>

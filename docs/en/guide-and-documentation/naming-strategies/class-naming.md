@@ -1,9 +1,9 @@
 ---
-icon: i-cursor
 description: >-
   Since styling in Webflow relies heavily on class names, adopting consistent
   and well-thought-out class naming strategies will help you build faster and
   maintain your site more efficiently over time.
+icon: i-cursor
 ---
 
 # Class Naming
@@ -11,7 +11,7 @@ description: >-
 The naming strategies suggested in the S2 Framework are optimized for Webflow and incorporate the best parts from Tailwind CSS and MAST, and they are mostly the same as the Client-First convention.
 
 {% hint style="warning" %}
-**Class naming** is an important topic. The strategies of S2 have been carefully researched and tested on large and small projects.
+**Class naming** is an important topic. The class naming strategy or convention suggested by S2 has been carefully researched and tested on large and small projects.
 {% endhint %}
 
 
@@ -75,7 +75,7 @@ For base CSS classes, the order should resemble **normal English word order**. D
 
 `featured-author-icon`
 
-The adjective or descriptive term is usually placed **after** the main keyword for combo classes and utility classes. That makes them more identifiable and organized.
+The descriptive term is usually placed **after** the main keyword for combo classes and utility classes. That makes them more identifiable and organized.
 
 `item-block` `cc-task`
 
@@ -91,13 +91,15 @@ Values or counting descriptions are usually written **at the last**. For example
 
 ## 05. Abbreviations
 
-Always use complete words other than the below abbreviations.
+Always use complete words other than the below abbreviations:
 
 * [Glossary](class-naming.md#glossary)
 * [Margin & Padding Shorthands](class-naming.md#margin-and-padding)
 * [Style Variants](class-naming.md#id-06.-style-variants) (Breakpoints, Size variants, Color variants)
 
 ### Glossary
+
+:pushpin: **Abbreviation: Group 1**
 
 |                |              |               |          |
 | -------------- | ------------ | ------------- | -------- |
@@ -108,9 +110,11 @@ Always use complete words other than the below abbreviations.
 | information    | `info`       | subsidiary    | `sub`    |
 | alternative    | `alt`        | language      | `lang`   |
 | minium         | `min`        | reference(s)  | `ref`    |
-| maximum        | `max`        | % (eg. 20%    | `20p`    |
+| maximum        | `max`        | % (e.g. 20%)  | `20p`    |
 
 ### Margin & Padding
+
+:pushpin: **Abbreviation: Group 2**
 
 Here are the shorthands for **margin** and **padding**.
 
@@ -124,7 +128,7 @@ Here are the shorthands for **margin** and **padding**.
 | margin-top & -bottom | `my` | padding-top & -bottom | `py` |
 
 {% hint style="info" %}
-The letter notation aligns with Tailwind CSS’s convention for padding and margin utilities. For the value part, we recommend giving the actual value a unit or a description label.
+The above letter notation aligns with Tailwind CSS’s convention for padding and margin utilities. For the value part, we recommend labeling the actual value as a unit or a description.
 {% endhint %}
 
 Examples: `-mb-0`, `-mx-auto`, `-my-1rem`, `-mb-tall`, `-mb-messages`
@@ -138,6 +142,8 @@ Sometimes, when you think you do not need to distinguish between margin or paddi
 
 ## 06. Style Variants
 
+:pushpin: **Abbreviation: Group 3**
+
 Style Variants are different versions of the same class type.
 
 {% hint style="info" %}
@@ -150,13 +156,13 @@ The term **Variants** in this context refers to a concept that is entirely diffe
 
 ### Size Variants
 
-When describing size variants of classes, use standard abbreviations for sizes.
+When describing size variants of classes, use standard abbreviations for sizes (and typography).
 
-`3xs` ← `2xs` ← `xs` ← `sm` ← `base` → `lg` → `xl` → `2xl` → `3xl`
+**`3xs`** ← **`2xs`** ← **`xs`** ← **`sm`** ← **`base`** → **`lg`** → **`xl`** → **`2xl`** → **`3xl`**
 
-This approach is similar to breakpoints (but usually there is no **md**). It aligns with the Tailwind CSS convention.
+This approach is similar to breakpoints (but there is no **md**). It aligns with the Tailwind CSS convention.
 
-Do not use one-letter abbreviations like **s**, **m**, **l**.
+Note: Do not use one-letter abbreviations like **s**, **m**, **l**.
 
 Tips: **Avoid overusing adjectives** such as **large**, **larger**, **big**, **bigger**, **small**, **smaller**, **tall**, **huge**, **tiny**, and **mini** for sizes when naming classes if you can give them purposeful and descriptive names. Such words can be confusing and make it difficult to see the size hierarchies over time.
 
@@ -192,7 +198,6 @@ To keep naming conventions consistent and more aligned with standard CSS, follow
 * Use `textarea` rather than **text-area**.
 * Use `button` rather than **btn**.
 * Use `wrapper` instead of **wrap** (if you mean "wrapper"). The reason for that is to avoid confusion with the `-wrap` and `-nowrap` properties.
-* Use `base` instead of terms like **primary**, **regular**, etc.
 * Use `gray` instead of **grey**.
 * Use `color` instead of **colour**.
 * Use the complete words when talking about `subtle` and `subscribe`. Use `sub` only if referring to "**subsidiary**".

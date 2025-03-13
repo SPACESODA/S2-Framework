@@ -9,9 +9,9 @@ icon: star-christmas
 
 
 {% hint style="warning" %}
-Alert! The following can be boring :see\_no\_evil:
+**Alert! The following can be boring** :see\_no\_evil:
 
-**So, continue reading if you are interested...**
+**Continue reading if you are interested...**
 {% endhint %}
 
 
@@ -22,9 +22,9 @@ Alert! The following can be boring :see\_no\_evil:
 
 Tailwind CSS is an excellent CSS framework. It influenced how we name classes and attributes, making them more streamlined and flexible.
 
-Tailwind’s core philosophy is [utility-first classes](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/). However, the way that utility classes stack is not practical in Webflow. Extensive use of utility classes and deep stacking are generally [discouraged](../guide-and-documentation/basic-concepts/use-utility-classes-wisely.md) in Webflow. Besides, Webflow also generates specific styles for each combo class.
+Tailwind’s core philosophy is [utility-first classes](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/). However, the way that utility classes stack is not practical in Webflow. Extensive use of utility classes and deep stacking are generally [discouraged](../../guide-and-documentation/basic-concepts/use-utility-classes-wisely.md) in Webflow. Besides, Webflow also generates specific styles for each combo class.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Just to be clear again, we don’t see Webflow as the place that can fully utilize utility classes, let alone stack them. In S2, we’ve got **S2 Attributes**, which work similarly but in the form of utility attributes. **S2 Attributes are a set of pre-styled&#x20;**_**attributes**_**, not classes.**
 {% endhint %}
 

@@ -1,11 +1,22 @@
 ---
 icon: toggle-large-on
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
 
 # Ready to switch to S2?
 
-Are you considering adopting the S2 Framework? If you’re currently using another framework, transitioning might seem challenging — but we’ve got you covered!
+Thinking about adopting the S2 Framework? If you're using another framework, the transition might seem challenging — but don't worry, it's easier than you think, and we've got you covered!
 
-To make your switch smoother, we are preparing quick know-how guides to help you integrate S2 with minimal friction. (Work in progress)
+To make your switch smoother, we are preparing quick know-how sections to help you transition to S2 with minimal friction.
 
 Let’s get started!

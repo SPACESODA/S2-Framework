@@ -23,15 +23,23 @@ We aim for clear and simple names that are easy to search for in the Webflow pan
 
 ## Naming Components
 
-While it is flexible, we recommend naming Webflow components like natural and brief English titles and capitalizing them correctly. Group components into folders logically, and make their names easily searchable and identifiable. Examples:
+While it is flexible, we recommend naming Webflow components using natural and concise English titles with title capitalization; keep names short and make your components easily searchable and identifiable. Organize your components into folders. Examples:
 
 <mark style="color:green;">**Blog Card**</mark>
 
-<mark style="color:green;">**Button with Arrow**</mark>
-
 <mark style="color:green;">**Latest Status Block**</mark>
 
-For those who are interested: [Capitalization in Titles: Rules and Examples](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/)
+<mark style="color:green;">**CTA: Subscribe**</mark>
+
+<mark style="color:green;">**CTA: Enquiry**</mark>
+
+Some components are meant to be nested within another component. In that case, you can add a "<mark style="color:green;">**-**</mark> " before the name to make them easily identifiable and prevent them from appearing at the top when using [Quick Find](https://help.webflow.com/hc/en-us/articles/33961382093587-Quick-find). Examples:
+
+<mark style="color:green;">**Subscription Section**</mark>
+
+<mark style="color:green;">**- Simple Subscription Form**</mark>
+
+About title capitalization: [Capitalization in Titles: Rules and Examples](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/)
 
 
 

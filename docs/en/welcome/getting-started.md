@@ -24,7 +24,7 @@ layout:
 S2 is designed for ease of use. You don't have to be an expert to start using S2.\
 Get familiar with the framework in an hour!
 
-:smile: **Step 1. Read the Docs (15-30mins)**
+:smile: **Step 1. Read the Docs (30mins)**
 
 > Let’s start by reading this guide document. Pay close attention to our recommended **naming conventions**.
 

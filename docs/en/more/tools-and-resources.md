@@ -1,8 +1,9 @@
 ---
 description: Highly recommanded = 🔥
+icon: sparkles
 ---
 
-# 🧶 Useful Links
+# Tools and Resources
 
 ## Fluid Typography
 
