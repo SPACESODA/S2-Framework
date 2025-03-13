@@ -25,11 +25,16 @@ Discord: https://s2-framework.webflow.io/#discord
 https://www.jsdelivr.com/package/gh/SPACESODA/S2-Framework
 
 **S2 Framework: Base CSS** <br>
+Base Setup + S2 Attributes + S2 Colors & Palettes + CSS Animations <br>
 https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.css <br>
 Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.min.css
 
-<br>
+**S2 Attributes** <br>
+https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2-attributes.css <br>
+Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2-attributes.min.css
+
 <br>
 
+<hr>
 S2 Framework is marked with Creative Commons CC0 1.0 Universal.<br>
 © [Copyright and terms](https://s2-framework.gitbook.io/docs/copyright-and-terms)
