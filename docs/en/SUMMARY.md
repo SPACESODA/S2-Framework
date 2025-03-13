@@ -19,7 +19,7 @@
 * [Variables](guide-and-documentation/variables/README.md)
   * [Colors vs Palettes](guide-and-documentation/variables/colors-vs-palettes.md)
   * [Colors in S2](guide-and-documentation/variables/colors-in-s2.md)
-  * [Typography](guide-and-documentation/variables/typography.md)
+  * [Text](guide-and-documentation/variables/text.md)
   * [Variable Groups](guide-and-documentation/variables/variable-groups.md)
 * [Naming Strategies](guide-and-documentation/naming-strategies/README.md)
   * [Class Naming](guide-and-documentation/naming-strategies/class-naming.md)

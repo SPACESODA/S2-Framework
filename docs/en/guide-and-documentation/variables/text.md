@@ -2,7 +2,7 @@
 icon: text-size
 ---
 
-# Typography
+# Text
 
 ## Font Family
 
@@ -19,13 +19,13 @@ S2 adopted **Fluid Type Scale** on some key tags and classes, including:
 * **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 * <mark style="color:purple;">**`Heading 1`**</mark> \~ <mark style="color:purple;">**`Heading 6`**</mark>
 * **`h1`** \~ **`h6`**
-* <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
+* <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>&#x20;
 
-About fluid values and Fluid Type Scale, please refer to this section: [fluid-typography.md](../basic-concepts/fluid-typography.md "mention")
+{% hint style="info" %}
+About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography.md](../basic-concepts/fluid-typography.md "mention")
+{% endhint %}
 
-In S2, we also have these variables under **Text** > **Font Size**:
-
-**Variables for font sizes in S2:**
+In S2, we also have these variables for font sizes under **Text** > **Font Size**:
 
 `3xs` ← `2xs` ← `xs` ← `sm` ← `base` → `lg` → `xl` → `2xl` → `3xl`&#x20;
 
@@ -51,7 +51,7 @@ However, as Webflow does not allow applying custom values to variables [**yet**]
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-12 14.54.30.png" alt=""><figcaption><p>Font Size variables: Absolute values equivalent to our default fluid type scale</p></figcaption></figure>
 
 {% hint style="warning" %}
-<mark style="color:orange;">**Advanced**</mark>
+<mark style="color:orange;">**Advanced:**</mark>
 
 If you want to have true fluid behavior on custom classes that use these variables, or if you want to **override** these absolute values, you can place custom CSS in the <mark style="color:green;">**Global Code**</mark> component.
 {% endhint %}

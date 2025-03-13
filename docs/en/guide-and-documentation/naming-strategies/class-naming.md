@@ -124,7 +124,7 @@ Here are the shorthands for **margin** and **padding**.
 | margin-top & -bottom | `my` | padding-top & -bottom | `py` |
 
 {% hint style="info" %}
-The letter notation aligns with Tailwind CSS’s convention for padding and margin utilities. For the value part, we recommend giving the actual value a unit or a description label.
+The above letter notation aligns with Tailwind CSS’s convention for padding and margin utilities. For the value part, we recommend labeling the actual value as a unit or a description.
 {% endhint %}
 
 Examples: `-mb-0`, `-mx-auto`, `-my-1rem`, `-mb-tall`, `-mb-messages`

@@ -7,11 +7,11 @@ icon: dolphin
 
 # Fluid Typography
 
-In the [S2 Framework](https://s2-framework.webflow.io/s2/styles?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2), we adopted the modern concepts of **Fluid Typography** and **Type Scale**.
+In the [S2 Framework](https://s2-framework.webflow.io/s2/styles?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2), we adopted the modern concepts of **Fluid Typography** and **Type Scale**, which makes it **Fluid Type Scale**. &#x20;
 
 The fluid behavior can be achieved nicely using `clamp()` in the font-size property, allowing text to scale dynamically based on the viewport size. By adopting a type scale ratio, we can ensure smooth, consistent typography that maintains visual harmony across different screen sizes without guesswork.
 
-To take advantage of both, we can use the open-source tool [Fluid Type Scale](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
+To take advantage of both, we can use the open-source tool [Fluid Type Scale Calculator](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
 
 {% hint style="info" %}
 If you think the default font size in the S2 Cloneable is fine and you don't have to make any changes yet, you can skip this chapter.
@@ -128,8 +128,8 @@ Key configs we looked at:
 
 |             |      |
 | ----------- | ---- |
-| Max of h1   | 5rem |
-| Min of --h1 | 3rem |
+| Max of `h1` | 5rem |
+| Min of `h1` | 3rem |
 
 Here's what we get:
 
@@ -142,7 +142,7 @@ Here's what we get:
 --_text---heading--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
 ```
 
-{% hint style="warning" %}
+{% hint style="info" %}
 The above `clamp()` values have been applied to the tags <mark style="color:purple;">`Heading 1`</mark> to <mark style="color:purple;">`Heading 6`</mark>, and also to classes `h1` to `h6`.
 {% endhint %}
 
@@ -183,11 +183,9 @@ However, to be honest, manually entering all the `clamp()` values can be a bit c
 
 <details>
 
-<summary>Scaling fonts down for very small screens</summary>
+<summary>Scaling font sizes down for very small screens?</summary>
 
-You can add this to your custom CSS to scale fonts down for devices smaller than the iPhone SE (319px or below). The `clamp()` value is based on [this configuration](https://www.fluid-type-scale.com/calculate?minFontSize=14\&minWidth=240\&minRatio=1\&maxFontSize=16\&maxWidth=319\&maxRatio=2\&steps=body\&baseStep=body\&prefix=s2\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=319).
-
-This is not yet included in the framework’s cloneable by default. It is optional, but usually not needed.
+You can use custom CSS to scale fonts down for devices smaller than the iPhone SE (319px or below). Here is the `clamp()` value based on [this configuration](https://www.fluid-type-scale.com/calculate?minFontSize=14\&minWidth=240\&minRatio=1\&maxFontSize=16\&maxWidth=319\&maxRatio=2\&steps=body\&baseStep=body\&prefix=s2\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=319).
 
 {% code overflow="wrap" %}
 ```css
@@ -195,16 +193,19 @@ This is not yet included in the framework’s cloneable by default. It is option
 ```
 {% endcode %}
 
+This is optional and not yet included in the framework’s cloneable by default. It is usually not necessary for most projects.
+
 </details>
 
 <details>
 
-<summary>Want bigger fonts overall?</summary>
+<summary>Want to have bigger fonts overall?</summary>
 
-If you are happy with our default scales and setup, you can get an overall bigger fluid font size values effortlessly. Just follow these steps:
+If you are happy with our default type scales and setup, you can get an overall bigger fluid font size values effortlessly. Just follow these steps:
 
-1. Change the **Base font size** of **Maximum (Desktop)** into e.g. 24px.
-2. Change the **Base font size** of **Minimum (Mobile)** into e.g. 18px.
+1. Open the **Fluid Type Scale Calculator** using our configuration links.
+2. Change the **Base font size** of **Maximum (Desktop)** into e.g. 24px.
+3. Change the **Base font size** of **Minimum (Mobile)** into e.g. 18px.
 
 </details>
 

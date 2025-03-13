@@ -49,8 +49,8 @@ Community and Support 🛟\
 <mark style="color:purple;">**Discord**</mark>: [https://s2-framework.webflow.io/#discord](https://s2-framework.webflow.io/#discord)\
 **Github**: [https://github.com/SPACESODA/S2-Framework](https://github.com/SPACESODA/S2-Framework)
 
-Roadmap and Changelog 🤓\
-[https://s2-framework.webflow.io/#roadmap](https://s2-framework.webflow.io/#roadmap)
+Changelog and Roadmap 🤓\
+[https://s2-framework.webflow.io/#changelog](https://s2-framework.webflow.io/#changelog)
 
 
 

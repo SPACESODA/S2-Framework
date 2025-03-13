@@ -56,7 +56,7 @@ Here is a template of media queries that uses Webflow’s breakpoints.
 ## JavaScript
 
 {% hint style="warning" %}
-Unless a script needs to be placed as early as possible AFTER the `body` tag, or serves a special purpose for a Webflow Component, we recommend avoiding adding JavaScript directly to the canvas using Code Embed.
+Unless a script needs to be placed as early as possible AFTER the `body` tag, or serves a special purpose for a Webflow Component, we recommend avoiding adding JavaScript directly to the canvas using Code Embed whenever possible.
 
 We recommend placing scripts in the site-wide or page-specific **Head code** or **Footer code** areas.
 {% endhint %}
