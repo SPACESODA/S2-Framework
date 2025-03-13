@@ -23,7 +23,7 @@ We aim for clear and simple names that are easy to search for in the Webflow pan
 
 ## Naming Components
 
-While it is flexible, we recommend naming Webflow components using natural and concise English titles with title capitalization. Organize components into folders logically, making their names easily searchable and identifiable. Examples:
+While it is flexible, we recommend naming Webflow components using natural and concise English titles with title capitalization; keep names short and make your components easily searchable and identifiable. Organize your components into folders. Examples:
 
 <mark style="color:green;">**Blog Card**</mark>
 

@@ -12,7 +12,7 @@ S2 follows the best practices of semantic HTML structure in the <mark style="col
 
 This is our default and recommended structure when you start a page using the <mark style="color:green;">**Page Template**</mark> component or the **New Page Template**.
 
-> **`body`** : This is the <mark style="color:purple;">`body`</mark> tag with class `body`.
+> **`body`** : This is the <mark style="color:purple;">**`Body`**</mark> tag with class `body`.
 >
 > > **`page`** : Wrap all content within a div. This practice makes it easier to copy and paste entire pages or sections.
 > >
