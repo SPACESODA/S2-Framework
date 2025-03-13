@@ -13,7 +13,7 @@ S2 combines the best ideas from [Tailwind CSS](https://tailwindcss.com) and othe
 
 
 
-We drew inspiration and borrowed best practices from several other popular frameworks. Each of the below contributed methodologies that enhanced the versatility and functionality of the S2 Framework.
+We drew inspiration and borrowed best practices from several other popular frameworks. They contributed methodologies that enhanced the versatility and functionality of the S2 Framework.
 
 |                                                                                                                  | Good parts we referenced                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
