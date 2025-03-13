@@ -2,7 +2,7 @@
   --colors--surface: var(--_palettes---neutral--white);
   --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --colors--text: var(--_palettes---neutral--900);
-  --_text---values--deeper: 110%;
+  --_text---other--deeper: 110%;
   --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --colors--focus: var(--_palettes---primary--400);
   --_sizes---radius--extra-small: .275rem;
@@ -36,8 +36,8 @@
   --_sizes---button--extra-small: 1.75rem;
   --_sizes---radius--rounded: 999rem;
   --colors-special--inverted: var(--_palettes---neutral--white);
-  --_sizes---richtext-spacing--base: .75rem;
-  --_sizes---list-spacing--base: .5rem;
+  --_text---richtext-spacing--base: .75rem;
+  --_text---list-spacing--base: .5rem;
   --_text---font-size--xs: .875rem;
   --colors--stroke: var(--_palettes---neutral--400);
   --_sizes---outline--bold: .1875rem;
@@ -58,9 +58,9 @@
   --colors-special--highlight-text: #965c00;
   --colors-special--info: #cceff7;
   --colors-special--info-text: #00728b;
-  --_sizes---richtext-spacing--large: 1rem;
+  --_text---richtext-spacing--large: 1rem;
   --_text---font-size--lg: 1.299rem;
-  --_sizes---list-spacing--large: .85rem;
+  --_text---list-spacing--large: .85rem;
   --_palettes---neutral--50: #f2f2f2;
   --colors--extended-1: #f48668;
   --colors--extended-2: #dd614a;
@@ -138,8 +138,8 @@
   --_text---font-size--xl: 1.5rem;
   --_text---font-size--2xl: 1.732rem;
   --_text---font-size--3xl: 2rem;
-  --_sizes---list-spacing--small: .25rem;
-  --_sizes---richtext-spacing--small: .5rem;
+  --_text---list-spacing--small: .25rem;
+  --_text---richtext-spacing--small: .5rem;
   --_sizes---radius--large: .85rem;
   --_sizes---icon--small: 1rem;
   --_sizes---icon--medium: 1.5rem;
@@ -251,7 +251,7 @@ body {
 }
 
 h1 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
@@ -261,7 +261,7 @@ h1 {
 }
 
 h2 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
@@ -271,7 +271,7 @@ h2 {
 }
 
 h3 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
@@ -281,7 +281,7 @@ h3 {
 }
 
 h4 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
@@ -291,7 +291,7 @@ h4 {
 }
 
 h5 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
@@ -301,7 +301,7 @@ h5 {
 }
 
 h6 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   margin-top: 0;
   margin-bottom: 0;
@@ -514,7 +514,7 @@ figcaption {
   box-shadow: inset 0 0 0 1px var(--s2--border-highlight);
   opacity: 1;
   pointer-events: auto;
-  color: var(--s2--border-highlight);
+  color: #76b300;
   background-image: url('../images/padding-bg-pattern.svg');
   background-position: 0 0;
   background-repeat: repeat;
@@ -523,6 +523,7 @@ figcaption {
   justify-content: center;
   align-items: center;
   min-height: 3rem;
+  font-size: 1rem;
   display: flex;
 }
 
@@ -733,42 +734,42 @@ figcaption {
 }
 
 .h1 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: clamp(3rem, 3.478vi + 2.218rem, 5rem);
   line-height: 1.125;
 }
 
 .h2 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
   line-height: 1.175;
 }
 
 .h3 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
   line-height: 1.2;
 }
 
 .h4 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
   line-height: 1.2;
 }
 
 .h5 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
   line-height: 1.2;
 }
 
 .h6 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: clamp(1rem, .217vi + .951rem, 1.125rem);
   line-height: 1.2;
@@ -1269,7 +1270,7 @@ figcaption {
 }
 
 .richtext {
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
 }
 
 .richtext h1 {
@@ -1298,17 +1299,17 @@ figcaption {
 }
 
 .richtext p {
-  margin-top: var(--_sizes---richtext-spacing--base);
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-top: var(--_text---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
 }
 
 .richtext ul, .richtext ol {
-  margin-top: var(--_sizes---list-spacing--base);
-  grid-row-gap: var(--_sizes---list-spacing--base);
+  margin-top: var(--_text---list-spacing--base);
+  grid-row-gap: var(--_text---list-spacing--base);
 }
 
 .richtext figure {
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
@@ -4156,7 +4157,7 @@ figcaption {
 .eyebrow {
   color: var(--colors--primary);
   margin-top: .5em;
-  font-size: 1.15rem;
+  font-size: 1.175rem;
   font-weight: 400;
   line-height: 1.25;
 }
@@ -4716,7 +4717,7 @@ figcaption {
 }
 
 .list-custom {
-  grid-row-gap: var(--_sizes---list-spacing--base);
+  grid-row-gap: var(--_text---list-spacing--base);
   flex-flow: column;
   margin-top: 0;
   margin-bottom: 0;
@@ -4737,7 +4738,7 @@ figcaption {
 }
 
 .cc-richtext-lg {
-  margin-bottom: var(--_sizes---richtext-spacing--large);
+  margin-bottom: var(--_text---richtext-spacing--large);
   font-size: var(--_text---font-size--lg);
 }
 
@@ -4768,13 +4769,19 @@ figcaption {
 }
 
 .cc-richtext-lg p {
-  margin-top: var(--_sizes---richtext-spacing--large);
-  margin-bottom: var(--_sizes---richtext-spacing--large);
+  margin-top: var(--_text---richtext-spacing--large);
+  margin-bottom: var(--_text---richtext-spacing--large);
 }
 
-.cc-richtext-lg ul, .cc-richtext-lg ol {
-  margin-top: var(--_sizes---list-spacing--large);
-  grid-row-gap: var(--_sizes---list-spacing--large);
+.cc-richtext-lg ul {
+  margin-top: var(--_text---list-spacing--large);
+  grid-column-gap: 0rem;
+  grid-row-gap: var(--_text---list-spacing--large);
+}
+
+.cc-richtext-lg ol {
+  margin-top: var(--_text---list-spacing--large);
+  grid-row-gap: var(--_text---list-spacing--large);
 }
 
 .cc-richtext-lg blockquote {
@@ -4784,17 +4791,20 @@ figcaption {
 }
 
 .cc-richtext-lg figure {
-  margin-bottom: var(--_sizes---richtext-spacing--large);
+  margin-bottom: var(--_text---richtext-spacing--large);
 }
 
 .cc-richtext-lg pre {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--_text---richtext-spacing--large);
+  margin-bottom: var(--_text---richtext-spacing--large);
+  font-size: var(--_text---font-size--xs);
+  line-height: 1.725;
 }
 
 .sg-hero-heading {
   letter-spacing: -.0175em;
   font-size: 7rem;
+  position: relative;
 }
 
 .sg-hero-heading.cc-white {
@@ -5096,7 +5106,7 @@ figcaption {
 }
 
 .list-none {
-  grid-row-gap: var(--_sizes---list-spacing--base);
+  grid-row-gap: var(--_text---list-spacing--base);
   padding-left: 0;
   list-style-type: none;
 }
@@ -5462,16 +5472,16 @@ figcaption {
 }
 
 .list {
-  grid-row-gap: var(--_sizes---list-spacing--base);
+  grid-row-gap: var(--_text---list-spacing--base);
 }
 
 .richtext-list {
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
 }
 
 .richtext-list h5 {
-  margin-top: var(--_sizes---richtext-spacing--base);
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-top: var(--_text---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
   color: var(--colors--text-muted);
   font-size: var(--_text---font-size--sm);
   text-underline-offset: .125em;
@@ -5480,20 +5490,20 @@ figcaption {
 }
 
 .richtext-list p {
-  margin-top: var(--_sizes---richtext-spacing--base);
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-top: var(--_text---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
 }
 
 .richtext-list ul {
-  margin-top: var(--_sizes---list-spacing--base);
-  grid-row-gap: var(--_sizes---list-spacing--base);
+  margin-top: var(--_text---list-spacing--base);
+  grid-row-gap: var(--_text---list-spacing--base);
   padding-left: 0;
   list-style-type: none;
 }
 
 .richtext-list ol {
-  margin-top: var(--_sizes---list-spacing--base);
-  grid-row-gap: var(--_sizes---list-spacing--base);
+  margin-top: var(--_text---list-spacing--base);
+  grid-row-gap: var(--_text---list-spacing--base);
   padding-left: 0;
 }
 
@@ -5530,7 +5540,7 @@ figcaption {
 }
 
 .richtext-list figure {
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
 }
 
 .bg-overlay {
@@ -5709,6 +5719,10 @@ figcaption {
   overflow: hidden;
 }
 
+.image-bs.cc-with-ratio {
+  aspect-ratio: 16 / 9;
+}
+
 .image-bs_reveal {
   z-index: 2;
   object-fit: cover;
@@ -5833,6 +5847,7 @@ figcaption {
   min-height: 3rem;
   margin: 0;
   padding: 0;
+  font-size: 1rem;
   line-height: 1;
   display: flex;
 }
@@ -5946,7 +5961,7 @@ figcaption {
   border-bottom-left-radius: var(--_sizes---radius--card);
   border-bottom-right-radius: var(--_sizes---radius--card);
   background-color: var(--s2--surface-alt);
-  top: calc(var(--_sizes---main-nav--height)  + 1.5rem);
+  top: calc(var(--_sizes---main-nav--height)  + 1.25rem);
   flex-direction: column;
   max-height: 70svh;
   margin-top: 0;
@@ -6324,7 +6339,6 @@ figcaption {
   grid-row-gap: .5rem;
   border-radius: var(--_sizes---radius--rounded);
   background-color: var(--colors--surface-muted);
-  opacity: 1;
   color: var(--colors--text-muted);
   flex: none;
   justify-content: center;
@@ -6339,18 +6353,26 @@ figcaption {
   display: flex;
 }
 
-.pill:hover {
-  opacity: .9;
-  filter: brightness(105%);
-}
-
 .pill.cc-primary {
   background-color: var(--colors--primary);
   color: var(--_palettes---primary--on-base);
 }
 
-.pill.cc-status {
+.pill.cc-primary.cc-inverse {
+  background-color: var(--_palettes---primary--on-base);
+  color: var(--colors--primary);
+}
+
+.pill.cc-surface {
   background-color: var(--colors--surface);
+  color: var(--colors--text-muted);
+}
+
+.pill.cc-slim {
+  grid-column-gap: 1ch;
+  grid-row-gap: 1ch;
+  min-height: 1.625rem;
+  padding: .25rem .6rem;
 }
 
 .sg-anchor {
@@ -6510,14 +6532,14 @@ figcaption {
 }
 
 .h7 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: .875rem;
   line-height: 1.15;
 }
 
 .h8 {
-  filter: contrast(var(--_text---values--deeper));
+  filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
   font-size: .75rem;
   line-height: 1.15;
@@ -7493,12 +7515,12 @@ figcaption {
 }
 
 .richtext-block {
-  margin-bottom: var(--_sizes---richtext-spacing--base);
+  margin-bottom: var(--_text---richtext-spacing--base);
   display: block;
 }
 
 .richtext-block.cc-richtext-lg {
-  margin-bottom: var(--_sizes---richtext-spacing--large);
+  margin-bottom: var(--_text---richtext-spacing--large);
 }
 
 .avatar-wrapper {
@@ -7612,7 +7634,7 @@ figcaption {
 }
 
 .avatar.cc-styled:hover {
-  box-shadow: 0 2px 6px 0 #0003, 0 0 0 6px var(--colors--secondary), 0 2px 6px 6px #0003;
+  box-shadow: 0 2px 6px 0 #0003, 0 0 0 6px var(--colors--accent), 0 2px 6px 6px #0003;
 }
 
 .avator_image {
@@ -7779,19 +7801,13 @@ figcaption {
     --_sizes---button--small: 2.65rem;
     --_sizes---button--extra-small: 1.75rem;
     --_sizes---radius--rounded: 999rem;
-    --_sizes---richtext-spacing--base: .75rem;
-    --_sizes---list-spacing--base: .5rem;
     --_sizes---outline--bold: .1875rem;
     --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4.25rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---thickness--line: 2px;
-    --_sizes---richtext-spacing--large: 1rem;
-    --_sizes---list-spacing--large: .85rem;
     --_sizes---radius--small: .35rem;
     --_sizes---gap--base: 1.5rem;
-    --_sizes---list-spacing--small: .25rem;
-    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---radius--large: .85rem;
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
@@ -7803,11 +7819,15 @@ figcaption {
     --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 8;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---values--deeper: 110%;
+    --_text---other--deeper: 110%;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---richtext-spacing--base: .75rem;
+    --_text---list-spacing--base: .5rem;
     --_text---font-size--xs: .855rem;
     --_text---font-size--sm: .964rem;
+    --_text---richtext-spacing--large: 1rem;
     --_text---font-size--lg: 1.223rem;
+    --_text---list-spacing--large: .85rem;
     --_text---font-size--2xs: .759rem;
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-size--3xs: .674rem;
@@ -7815,6 +7835,12 @@ figcaption {
     --_text---font-size--xl: 1.38rem;
     --_text---font-size--2xl: 1.56rem;
     --_text---font-size--3xl: 1.765rem;
+    --_text---list-spacing--small: .25rem;
+    --_text---richtext-spacing--small: .5rem;
+  }
+
+  .sg-demo-card {
+    font-size: .85rem;
   }
 
   .sg-demo-card.cc-demo {
@@ -7998,10 +8024,6 @@ figcaption {
     font-size: 1.575rem;
   }
 
-  .eyebrow {
-    font-size: 1.125rem;
-  }
-
   .sg-nav.cc-page-nav {
     display: none;
   }
@@ -8095,6 +8117,10 @@ figcaption {
 
   .richtext-list h5 {
     font-size: 13px;
+  }
+
+  .u-bg-pattern {
+    font-size: .85rem;
   }
 
   .block {
@@ -8193,19 +8219,13 @@ figcaption {
     --_sizes---button--small: 2.65rem;
     --_sizes---button--extra-small: 1.75rem;
     --_sizes---radius--rounded: 999rem;
-    --_sizes---richtext-spacing--base: .75rem;
-    --_sizes---list-spacing--base: .5rem;
     --_sizes---outline--bold: .1875rem;
     --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---thickness--line: 2px;
-    --_sizes---richtext-spacing--large: 1rem;
-    --_sizes---list-spacing--large: .85rem;
     --_sizes---radius--small: .35rem;
     --_sizes---gap--base: 1.5rem;
-    --_sizes---list-spacing--small: .25rem;
-    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---radius--large: .85rem;
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
@@ -8217,11 +8237,15 @@ figcaption {
     --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 6;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---values--deeper: 110%;
+    --_text---other--deeper: 110%;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---richtext-spacing--base: .75rem;
+    --_text---list-spacing--base: .5rem;
     --_text---font-size--xs: .84rem;
     --_text---font-size--sm: .942rem;
+    --_text---richtext-spacing--large: 1rem;
     --_text---font-size--lg: 1.164rem;
+    --_text---list-spacing--large: .85rem;
     --_text---font-size--2xs: .75rem;
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-size--3xs: .669rem;
@@ -8229,6 +8253,8 @@ figcaption {
     --_text---font-size--xl: 1.287rem;
     --_text---font-size--2xl: 1.426rem;
     --_text---font-size--3xl: 1.582rem;
+    --_text---list-spacing--small: .25rem;
+    --_text---richtext-spacing--small: .5rem;
   }
 
   .sg-demo-card.cc-demo {
@@ -8482,6 +8508,10 @@ figcaption {
     font-size: 1.775rem;
   }
 
+  .eyebrow {
+    font-size: 1.125rem;
+  }
+
   .sg-nav {
     background-color: var(--colors-special--glass);
   }
@@ -8708,19 +8738,13 @@ figcaption {
     --_sizes---button--small: 2.65rem;
     --_sizes---button--extra-small: 1.75rem;
     --_sizes---radius--rounded: 999rem;
-    --_sizes---richtext-spacing--base: .75rem;
-    --_sizes---list-spacing--base: .5rem;
     --_sizes---outline--bold: .1875rem;
     --_sizes---radius--card: .625rem;
     --_sizes---main-nav--height: 4rem;
     --_sizes---radius--extra-large: 1.25rem;
     --_sizes---thickness--line: 2px;
-    --_sizes---richtext-spacing--large: 1rem;
-    --_sizes---list-spacing--large: .85rem;
     --_sizes---radius--small: .35rem;
     --_sizes---gap--base: 1.5rem;
-    --_sizes---list-spacing--small: .25rem;
-    --_sizes---richtext-spacing--small: .5rem;
     --_sizes---radius--large: .85rem;
     --_sizes---icon--small: 1rem;
     --_sizes---icon--medium: 1.5rem;
@@ -8732,11 +8756,15 @@ figcaption {
     --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 4;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---values--deeper: 110%;
+    --_text---other--deeper: 110%;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---richtext-spacing--base: .75rem;
+    --_text---list-spacing--base: .5rem;
     --_text---font-size--xs: .821rem;
     --_text---font-size--sm: .913rem;
+    --_text---richtext-spacing--large: 1rem;
     --_text---font-size--lg: 1.089rem;
+    --_text---list-spacing--large: .85rem;
     --_text---font-size--2xs: .737rem;
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
     --_text---font-size--3xs: .681rem;
@@ -8744,6 +8772,8 @@ figcaption {
     --_text---font-size--xl: 1.168rem;
     --_text---font-size--2xl: 1.254rem;
     --_text---font-size--3xl: 1.347rem;
+    --_text---list-spacing--small: .25rem;
+    --_text---richtext-spacing--small: .5rem;
   }
 
   code, .tag-label {
@@ -8923,7 +8953,6 @@ figcaption {
   }
 
   .eyebrow {
-    font-size: 1rem;
     line-height: 1.175;
   }
 

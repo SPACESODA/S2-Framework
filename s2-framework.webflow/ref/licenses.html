@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Mar 11 2025 03:16:58 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Mar 13 2025 22:33:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="67c438e1bc7c4a621d7b925b" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -30,6 +30,46 @@
 </head>
 <body dir="" theme-change="false" class="body">
   <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
+    <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+      <!--  For Style Guide only, you don't need the below scripts.  -->
+      <!--  Hide Cookie Consent in iFrames  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
+        </script>
+      <!--  Force Eager Loading  -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // force all standard <img> elements to load immediately
+            document.querySelectorAll("img").forEach((img) => {
+              img.setAttribute("loading", "eager");
+              // handle Webflow-specific lazy-loaded images
+              const dataSrc =
+                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+              if (dataSrc) {
+                img.setAttribute("src", dataSrc);
+              } else {
+                img.src = img.src; // trigger reload if necessary
+              }
+            });
+            // force all background images to load immediately
+            document.querySelectorAll("*").forEach((el) => {
+              const bgImage = window.getComputedStyle(el).backgroundImage;
+              if (bgImage && bgImage.startsWith('url("')) {
+                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                const img = new Image();
+                img.src = url; // preload background image
+              }
+            });
+          });
+        </script>
+    </div>
     <div class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -179,10 +219,10 @@
                   </div>
                   <div class="col-wrapper">
                     <figure class="col cc-3-3-2-2">
-                      <a aria-label="Image from Unsplash" href="https://unsplash.com/photos/NFs6dRTBgaM" target="_blank" class="block w-inline-block"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="image cc-preview"></a>
+                      <a aria-label="Image from Unsplash" href="https://unsplash.com/photos/blue-and-white-water-wave-bN8UPda2xFY" target="_blank" class="block w-inline-block"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="image cc-preview"></a>
                     </figure>
                     <figure class="col cc-3-3-2-2">
-                      <a aria-label="Image from Unsplash" href="https://unsplash.com/photos/Ns-BIiW_cNU" target="_blank" class="block w-inline-block"><img src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" class="image cc-preview"></a>
+                      <a aria-label="Image from Unsplash" href="https://unsplash.com/photos/an-aerial-view-of-a-body-of-water-GA-ulY5KZaI" target="_blank" class="block w-inline-block"><img src="https://images.unsplash.com/photo-1688884886868-421fbe604f17" loading="lazy" alt="a demo image" class="image cc-preview"></a>
                     </figure>
                     <figure class="col cc-3-3-2-2">
                       <a aria-label="Image from Unsplash" href="https://unsplash.com/photos/UBqvbEUbEPM" target="_blank" class="block w-inline-block"><img src="https://images.unsplash.com/photo-1690732218123-2f3f4a11faa7" loading="lazy" alt="a demo image" class="image cc-preview"></a>

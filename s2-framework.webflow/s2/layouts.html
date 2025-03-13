@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Mar 11 2025 03:16:58 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Mar 13 2025 22:33:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -40,6 +40,46 @@
 </head>
 <body dir="" body="sg" class="body">
   <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
+    <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+      <!--  For Style Guide only, you don't need the below scripts.  -->
+      <!--  Hide Cookie Consent in iFrames  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
+        </script>
+      <!--  Force Eager Loading  -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // force all standard <img> elements to load immediately
+            document.querySelectorAll("img").forEach((img) => {
+              img.setAttribute("loading", "eager");
+              // handle Webflow-specific lazy-loaded images
+              const dataSrc =
+                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+              if (dataSrc) {
+                img.setAttribute("src", dataSrc);
+              } else {
+                img.src = img.src; // trigger reload if necessary
+              }
+            });
+            // force all background images to load immediately
+            document.querySelectorAll("*").forEach((el) => {
+              const bgImage = window.getComputedStyle(el).backgroundImage;
+              if (bgImage && bgImage.startsWith('url("')) {
+                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                const img = new Image();
+                img.src = url; // preload background image
+              }
+            });
+          });
+        </script>
+    </div>
     <div class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -447,46 +487,6 @@ https://fontawesome.com/search?ic=free
           </div>
         </div>
       </div>
-      <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
-        <!--  For Style Guide only, you don't need such scripts.  -->
-        <!--  Hide Cookie Consent in iFrames  -->
-        <script>
-            if (window.self !== window.top) {
-              document.addEventListener("DOMContentLoaded", function() {
-                const cookieConsent = document.querySelector("[cookieconsent]");
-                if (cookieConsent) {
-                  cookieConsent.style.display = "none";
-                }
-              });
-            }
-          </script>
-        <!--  Force Eager Loading  -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              // force all standard <img> elements to load immediately
-              document.querySelectorAll("img").forEach((img) => {
-                img.setAttribute("loading", "eager");
-                // handle Webflow-specific lazy-loaded images
-                const dataSrc =
-                  img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-                if (dataSrc) {
-                  img.setAttribute("src", dataSrc);
-                } else {
-                  img.src = img.src; // trigger reload if necessary
-                }
-              });
-              // force all background images to load immediately
-              document.querySelectorAll("*").forEach((el) => {
-                const bgImage = window.getComputedStyle(el).backgroundImage;
-                if (bgImage && bgImage.startsWith('url("')) {
-                  const url = bgImage.slice(5, -2); // extract URL from `url("...")`
-                  const img = new Image();
-                  img.src = url; // preload background image
-                }
-              });
-            });
-          </script>
-      </div>
       <div class="css w-embed">
         <style>
             /* -- Style Guide: Custom Styles -- */
@@ -572,10 +572,10 @@ https://fontawesome.com/search?ic=free
                 <div class="tag-wrapper">
                   <div class="tag-label">col-wrapper</div>
                 </div>
-                <div class="sg-note cc-width-auto">The <span class="tag-label">col-wrapper</span> is designed for wrapping <span class="tag-label">col</span> <span class="tag-label">cc-span-1</span> to <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-1c</span> to <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span>. Here are a few examples:</div>
+                <div class="sg-note cc-width-auto">The <span class="tag-label">col-wrapper</span> is designed for wrapping <span class="tag-label">col</span> <span class="tag-label">cc-span-1</span> to <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-1c</span> to <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span>. Here are some examples:</div>
               </div>
               <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
+                <div style="display: flex; flex-direction: column; gap: 2rem;" class="block">
                   <div class="col-wrapper">
                     <div class="col cc-span-2">
                       <div class="u-bg-pattern cc-with-border">-span-2</div>

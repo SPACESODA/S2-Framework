@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Mar 11 2025 03:16:58 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Mar 13 2025 22:33:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -90,6 +90,46 @@
 </head>
 <body dir="" body="sg" class="body">
   <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
+    <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+      <!--  For Style Guide only, you don't need the below scripts.  -->
+      <!--  Hide Cookie Consent in iFrames  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
+        </script>
+      <!--  Force Eager Loading  -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // force all standard <img> elements to load immediately
+            document.querySelectorAll("img").forEach((img) => {
+              img.setAttribute("loading", "eager");
+              // handle Webflow-specific lazy-loaded images
+              const dataSrc =
+                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+              if (dataSrc) {
+                img.setAttribute("src", dataSrc);
+              } else {
+                img.src = img.src; // trigger reload if necessary
+              }
+            });
+            // force all background images to load immediately
+            document.querySelectorAll("*").forEach((el) => {
+              const bgImage = window.getComputedStyle(el).backgroundImage;
+              if (bgImage && bgImage.startsWith('url("')) {
+                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                const img = new Image();
+                img.src = url; // preload background image
+              }
+            });
+          });
+        </script>
+    </div>
     <div class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -436,46 +476,6 @@ https://fontawesome.com/search?ic=free
             </div>
           </div>
         </div>
-      </div>
-      <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
-        <!--  For Style Guide only, you don't need such scripts.  -->
-        <!--  Hide Cookie Consent in iFrames  -->
-        <script>
-            if (window.self !== window.top) {
-              document.addEventListener("DOMContentLoaded", function() {
-                const cookieConsent = document.querySelector("[cookieconsent]");
-                if (cookieConsent) {
-                  cookieConsent.style.display = "none";
-                }
-              });
-            }
-          </script>
-        <!--  Force Eager Loading  -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              // force all standard <img> elements to load immediately
-              document.querySelectorAll("img").forEach((img) => {
-                img.setAttribute("loading", "eager");
-                // handle Webflow-specific lazy-loaded images
-                const dataSrc =
-                  img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-                if (dataSrc) {
-                  img.setAttribute("src", dataSrc);
-                } else {
-                  img.src = img.src; // trigger reload if necessary
-                }
-              });
-              // force all background images to load immediately
-              document.querySelectorAll("*").forEach((el) => {
-                const bgImage = window.getComputedStyle(el).backgroundImage;
-                if (bgImage && bgImage.startsWith('url("')) {
-                  const url = bgImage.slice(5, -2); // extract URL from `url("...")`
-                  const img = new Image();
-                  img.src = url; // preload background image
-                }
-              });
-            });
-          </script>
       </div>
       <div class="css w-embed">
         <style>
@@ -1204,7 +1204,7 @@ https://fontawesome.com/search?ic=free
                           </div>
                         </div>
                         <div class="text-wrapper cc-align-center">
-                          <p text-align="center" class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem.</p>
+                          <p text-align="center" class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt eros. Quisque quis euismod lorem.</p>
                         </div>
                       </header>
                       <div class="button-wrapper cc-center">
@@ -1421,10 +1421,10 @@ https://fontawesome.com/search?ic=free
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <div gap="3-3" flex="col" class="section">
-                    <div gap="3-3" flex="col" class="container cc-10c">
-                      <div class="image-bs">
+                    <div gap="3-3" flex="col" class="container">
+                      <div class="image-bs cc-with-ratio">
                         <div for-data="true" class="beer-slider">
-                          <div class="beer-reveal"><img sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image-bs_reveal"></div><img sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" class="image-bs_base">
+                          <div class="beer-reveal"><img sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image-bs_reveal"></div><img src="https://images.unsplash.com/photo-1688884886868-421fbe604f17" alt="" beer-label="AFTER" class="image-bs_base">
                           <div class="beer-range"></div><span class="beer-handle"></span>
                         </div>
                       </div>
@@ -1460,7 +1460,7 @@ https://fontawesome.com/search?ic=free
                     <div class="w-layout-blockcontainer container w-container">
                       <div class="cols-layout cc-vflex-at-md">
                         <div class="col cc-45p">
-                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
+                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                         <div class="col cc-45p">
                           <div class="title-wrapper">
@@ -1512,7 +1512,7 @@ https://fontawesome.com/search?ic=free
                           </div>
                         </div>
                         <div class="col cc-45p">
-                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 500w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 800w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1tom-parkes-Ns-BIiW_cNU-unsplash.avif 1080w, ../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif 1920w" alt="futuristic tunnel image" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" loading="lazy" class="image"></div>
+                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                       </div>
                     </div>
@@ -2111,7 +2111,7 @@ https://fontawesome.com/search?ic=free
                           <div class="footer_bottom">
                             <p>© 2025 Your Company Inc.<br>All rights reserved.</p>
                             <div class="footer_bottom-logo">
-                              <a href="#" class="w-inline-block">
+                              <a aria-label="Go to Homepage" href="#" class="w-inline-block">
                                 <div class="main-logo cc-square-logo w-embed"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <title>S2 Framework</title>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8887 6C21.1723 6 5.99976 21.1726 5.99976 39.8889V216.111C5.99976 234.828 21.1723 250 39.8887 250H216.111C234.827 250 250 234.828 250 216.111V39.8889C250 21.1726 234.827 6 216.111 6H39.8887ZM83.5627 45.4407C84.6066 41.1937 88.415 38.2081 92.7884 38.2081H139.158C145.323 38.2081 149.855 43.9892 148.383 49.9761L131.177 119.976C130.294 123.568 133.014 127.037 136.713 127.037H180.959C187.124 127.037 191.657 132.818 190.185 138.805L172.437 211.007C171.393 215.255 167.585 218.24 163.212 218.24H116.842C110.677 218.24 106.145 212.459 107.617 206.472L124.823 136.472C125.706 132.88 122.986 129.412 119.287 129.412H75.0408C68.8756 129.412 64.3434 123.631 65.815 117.644L83.5627 45.4407Z" fill="currentColor"></path>
@@ -2306,7 +2306,7 @@ https://fontawesome.com/search?ic=free
                                 </li>
                               </ul>
                             </div>
-                            <a href="#" target="_blank" class="pill cc-status w-inline-block">
+                            <a href="#" target="_blank" class="pill cc-surface w-inline-block">
                               <div class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <circle opacity="0.25" cx="4" cy="4.0293" r="4" fill="#16A34A"></circle>
                                   <circle cx="4.00004" cy="4.02799" r="2.66667" fill="#16A34A"></circle>

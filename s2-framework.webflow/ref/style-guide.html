@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Mar 11 2025 03:16:58 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Mar 13 2025 22:33:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -32,6 +32,46 @@
 </head>
 <body dir="" theme-change="false" class="body">
   <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
+    <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+      <!--  For Style Guide only, you don't need the below scripts.  -->
+      <!--  Hide Cookie Consent in iFrames  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
+        </script>
+      <!--  Force Eager Loading  -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // force all standard <img> elements to load immediately
+            document.querySelectorAll("img").forEach((img) => {
+              img.setAttribute("loading", "eager");
+              // handle Webflow-specific lazy-loaded images
+              const dataSrc =
+                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+              if (dataSrc) {
+                img.setAttribute("src", dataSrc);
+              } else {
+                img.src = img.src; // trigger reload if necessary
+              }
+            });
+            // force all background images to load immediately
+            document.querySelectorAll("*").forEach((el) => {
+              const bgImage = window.getComputedStyle(el).backgroundImage;
+              if (bgImage && bgImage.startsWith('url("')) {
+                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                const img = new Image();
+                img.src = url; // preload background image
+              }
+            });
+          });
+        </script>
+    </div>
     <div class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -839,7 +879,7 @@
                     <h3>Colors</h3>
                   </div>
                   <div class="text-wrapper cc-max-40rem">
-                    <p>Colors under the &quot;Colors&quot; variable group. For simplicity, only Primary color has Light and Deep defined by default.</p>
+                    <p>Colors under the &quot;Colors&quot; variable group. (For simplicity, only Primary color has Primary Light and Primary Deep defined as variables by default.)</p>
                   </div>
                 </div>
                 <div class="block">
@@ -1998,7 +2038,7 @@
                   </div>
                   <div class="block">
                     <div style="position: relative; height: 12rem;" class="card cc-p-0">
-                      <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
+                      <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                     </div>
                   </div>
                 </div>
@@ -3082,18 +3122,69 @@
                   </div>
                   <div class="block">
                     <div style="margin-top: 0;" class="button-wrapper">
+                      <div class="pill">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>Default</div>
+                      </div>
+                      <div class="pill cc-primary">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>Primary</div>
+                      </div>
+                      <div class="pill cc-primary cc-inverse">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>Primary Inverse</div>
+                      </div>
+                      <div class="pill cc-surface">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>Surface</div>
+                      </div>
+                    </div>
+                    <div class="button-wrapper">
+                      <div class="pill cc-slim">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>Slim</div>
+                      </div>
+                      <div style="color: #c11574; background: #fdf2fa;" class="pill cc-slim">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>UI/UX Design</div>
+                      </div>
+                      <div style="color: #027a48; background: #ecfdf3;" class="pill cc-slim">
+                        <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                          </svg></div>
+                        <div>Environment</div>
+                      </div>
+                    </div>
+                    <div class="button-wrapper">
                       <a href="#" class="pill w-inline-block">
                         <div>Learn more</div>
                       </a>
-                      <a href="#" class="pill cc-status w-inline-block">
+                      <a href="#" class="pill cc-surface w-inline-block">
                         <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#16A34A"></circle>
                             <circle cx="50" cy="50" r="38" stroke="#16A34A" stroke-opacity="0.25" stroke-width="16"></circle>
                           </svg></div>
-                        <div>All systems normal</div>
+                        <div>System status</div>
                       </a>
-                    </div>
-                    <div class="button-wrapper">
                       <a href="#" class="pill w-inline-block">
                         <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#007bff"></circle>
@@ -3101,7 +3192,7 @@
                           </svg></div>
                         <div>Messages (2)</div>
                       </a>
-                      <a href="#" class="pill w-inline-block">
+                      <a href="#" class="pill cc-surface w-inline-block">
                         <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="#ff0000"></circle>
                             <circle cx="50" cy="50" r="38" stroke="#ff6666" stroke-opacity="0.25" stroke-width="16"></circle>
@@ -3665,7 +3756,7 @@
                       <div style="margin: 1rem auto;" class="col cc-9c">
                         <div class="card cc-p-0">
                           <div class="card-cover">
-                            <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
+                            <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                           </div>
                           <div class="card-body">
                             <div class="card-inner">
@@ -3824,7 +3915,7 @@
                             <div class="avatar_info">S2</div>
                           </div>
                           <div class="badge cc-icon">
-                            <div class="icon cc-100p w-embed">
+                            <div aria-hidden="true" class="icon cc-100p w-embed">
                               <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                   <rect width="256" height="256" fill="none"></rect>
                                   <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -3865,7 +3956,7 @@
                             <div class="avatar_info">S2</div>
                           </div>
                           <div class="badge cc-icon">
-                            <div class="icon cc-100p w-embed">
+                            <div aria-hidden="true" class="icon cc-100p w-embed">
                               <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                   <rect width="256" height="256" fill="none"></rect>
                                   <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -3875,7 +3966,7 @@
                         </div>
                       </div>
                       <div no-scrollbar="true" class="sg-h-scroll cc-hflex">
-                        <div role="group" class="avatar-wrapper cc-xl">
+                        <div role="group" class="avatar-wrapper cc-lg">
                           <div aria-label="Profile" class="avatar">
                             <div class="avatar_info">S2</div>
                           </div>
@@ -3892,7 +3983,7 @@
                             <div class="dot-mark"></div>
                           </div>
                         </div>
-                        <div role="group" class="avatar-wrapper cc-xl">
+                        <div role="group" class="avatar-wrapper cc-lg">
                           <div aria-label="Profile" class="avatar">
                             <div class="avatar_info">S2</div>
                           </div>
@@ -3901,12 +3992,12 @@
                           <div class="badge cc-counter cc-counter-3">3</div>
                           <div class="badge cc-counter cc-counter-4">4</div>
                         </div>
-                        <div role="group" class="avatar-wrapper cc-xl">
+                        <div role="group" class="avatar-wrapper cc-lg">
                           <div aria-label="Profile" class="avatar">
                             <div class="avatar_info">S2</div>
                           </div>
                           <div class="badge cc-icon">
-                            <div class="icon cc-100p w-embed">
+                            <div aria-hidden="true" class="icon cc-100p w-embed">
                               <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                   <rect width="256" height="256" fill="none"></rect>
                                   <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -3914,7 +4005,7 @@
                             </div>
                           </div>
                           <div class="badge cc-icon cc-icon-2">
-                            <div class="icon cc-100p w-embed">
+                            <div aria-hidden="true" class="icon cc-100p w-embed">
                               <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                   <rect width="256" height="256" fill="none"></rect>
                                   <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -3922,7 +4013,7 @@
                             </div>
                           </div>
                           <div class="badge cc-icon cc-icon-3">
-                            <div class="icon cc-100p w-embed">
+                            <div aria-hidden="true" class="icon cc-100p w-embed">
                               <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                   <rect width="256" height="256" fill="none"></rect>
                                   <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -3930,7 +4021,7 @@
                             </div>
                           </div>
                           <div class="badge cc-icon cc-icon-4">
-                            <div class="icon cc-100p w-embed">
+                            <div aria-hidden="true" class="icon cc-100p w-embed">
                               <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                   <rect width="256" height="256" fill="none"></rect>
                                   <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -4152,7 +4243,7 @@
                     <div class="tag-wrapper">
                       <div class="tag-label">col-wrapper</div>
                     </div>
-                    <div class="sg-note cc-width-auto">The <span class="tag-label">col-wrapper</span> is designed for wrapping <span class="tag-label">col</span> <span class="tag-label">cc-span-1</span> to <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-1c</span> to <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span>. Here are a few examples:</div>
+                    <div class="sg-note cc-width-auto">The <span class="tag-label">col-wrapper</span> is designed for wrapping <span class="tag-label">col</span> <span class="tag-label">cc-span-1</span> to <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-1c</span> to <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span>. Here are some examples:</div>
                   </div>
                   <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
@@ -4647,55 +4738,58 @@
                           <ol start="" role="list">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum elit dolore magna.</li>
                           </ol>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                          <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
-                          <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
-                          <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.</p>
+                          <blockquote><strong>Blockquote</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+                          <h5>H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                          <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt agna aliqua. E=MC<sup>2</sup> 🚀</p>
                           <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
                           <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
                           <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                           <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                           <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
+                          </figure>
+                          <p>Lorem ipsum dolor sit amet, consectet elit. Suspendisse varius enim in eros elementum tristique.</p>
+                          <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>This is a <strong>short</strong> caption.</figcaption>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros elementum tristique.</p>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros elementum tristique.</p>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>This is a caption.</figcaption>
                           </figure>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                           <figure class="w-richtext-align-normal w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                           <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>Align to right and also have a caption.</figcaption>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                           <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -4713,7 +4807,7 @@
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor et dolore magna aliqua.</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         </div>
                       </div>
@@ -4750,55 +4844,58 @@
                           <ol start="" role="list">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum elit dolore magna.</li>
                           </ol>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                          <blockquote>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
-                          <h5>This is a H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
-                          <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt et agna aliqua. E=MC<sup>2</sup> 🚀</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.</p>
+                          <blockquote><strong>Blockquote</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+                          <h5>H5 heading with <sup>sup</sup> and <sub>sub</sub> for demo.</h5>
+                          <p>Lorem ipsum<sup>TM</sup> dolor sit amet, consectetur<sup>sup text</sup> adipiscing elit, sed do eiusmod<sub>sub text</sub> incididunt agna aliqua. E=MC<sup>2</sup> 🚀</p>
                           <p>Adding a <code>code</code> tag for <code>demo purpose</code>.</p>
                           <p>Testing long context with the <code>code</code> tag:<code>Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code> Suspendisse varius enim in eros, ut enim ad minim veniam.</p>
                           <p><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</code></p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                           <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                           <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
+                          </figure>
+                          <p>Lorem ipsum dolor sit amet, consectet elit. Suspendisse varius enim in eros elementum tristique.</p>
+                          <figure style="max-width:1920pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>This is a <strong>short</strong> caption.</figcaption>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros elementum tristique.</p>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in eros elementum tristique.</p>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>This is a caption.</figcaption>
                           </figure>
                           <figure class="w-richtext-align-center w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>This is a <strong>long</strong> caption <em>after</em> an <a href="#">image</a> with caption. Lorem ipsum dolor sit amet, consectetur adipiscingelit. Suspendisse varius enim in eros elementum tristique.</figcaption>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                           <figure class="w-richtext-align-normal w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           <figure class="w-richtext-align-floatleft w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                           <figure class="w-richtext-align-floatright w-richtext-figure-type-image">
-                            <div><img loading="lazy" src="../images/tom-parkes-Ns-BIiW_cNU-unsplash_1.avif" alt="futuristic tunnel image"></div>
+                            <div><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" alt="blue waves"></div>
                             <figcaption>Align to right and also have a caption.</figcaption>
                           </figure>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                           <pre contenteditable="false" class="w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-htmlbars" style="white-space:pre"><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">1</span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Code Block within Rich Text Element Demo</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">h3</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">2</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</span><span class="xml" style="color:#ffa07a">&lt;/</span><span class="xml" style="color:#ffa07a">p</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">3</span><span class="xml"></span><span class="xml" style="color:#ffa07a">&lt;</span><span class="xml" style="color:#ffa07a">ul</span><span class="xml" style="color:#ffa07a">&gt;</span><span class="xml">
@@ -4816,7 +4913,7 @@
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">6</span><span class="xml">  </span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">li</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">7</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">ul</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">
 </span><span class="comment linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none">8</span><span class="xml"></span><span class="xml" style="color:#d91e18">&lt;</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><span class="xml" style="color:#d91e18">&lt;/</span><span class="xml" style="color:#d91e18">p</span><span class="xml" style="color:#d91e18">&gt;</span></code></pre>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor et dolore magna aliqua.</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         </div>
                       </div>

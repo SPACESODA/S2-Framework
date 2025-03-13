@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Mar 11 2025 03:16:58 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Mar 13 2025 22:33:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -40,6 +40,46 @@
 </head>
 <body dir="" body="sg" class="body">
   <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
+    <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
+      <!--  For Style Guide only, you don't need the below scripts.  -->
+      <!--  Hide Cookie Consent in iFrames  -->
+      <script>
+          if (window.self !== window.top) {
+            document.addEventListener("DOMContentLoaded", function() {
+              const cookieConsent = document.querySelector("[cookieconsent]");
+              if (cookieConsent) {
+                cookieConsent.style.display = "none";
+              }
+            });
+          }
+        </script>
+      <!--  Force Eager Loading  -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // force all standard <img> elements to load immediately
+            document.querySelectorAll("img").forEach((img) => {
+              img.setAttribute("loading", "eager");
+              // handle Webflow-specific lazy-loaded images
+              const dataSrc =
+                img.getAttribute("data-src") || img.getAttribute("data-wf-src");
+              if (dataSrc) {
+                img.setAttribute("src", dataSrc);
+              } else {
+                img.src = img.src; // trigger reload if necessary
+              }
+            });
+            // force all background images to load immediately
+            document.querySelectorAll("*").forEach((el) => {
+              const bgImage = window.getComputedStyle(el).backgroundImage;
+              if (bgImage && bgImage.startsWith('url("')) {
+                const url = bgImage.slice(5, -2); // extract URL from `url("...")`
+                const img = new Image();
+                img.src = url; // preload background image
+              }
+            });
+          });
+        </script>
+    </div>
     <div class="js w-embed w-script"><!--  Google tag (gtag.js)  -->
       <!--  For Style Guide only, you don't need this.  -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PX2FCCPV82"></script>
@@ -386,46 +426,6 @@ https://fontawesome.com/search?ic=free
             </div>
           </div>
         </div>
-      </div>
-      <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
-        <!--  For Style Guide only, you don't need such scripts.  -->
-        <!--  Hide Cookie Consent in iFrames  -->
-        <script>
-            if (window.self !== window.top) {
-              document.addEventListener("DOMContentLoaded", function() {
-                const cookieConsent = document.querySelector("[cookieconsent]");
-                if (cookieConsent) {
-                  cookieConsent.style.display = "none";
-                }
-              });
-            }
-          </script>
-        <!--  Force Eager Loading  -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              // force all standard <img> elements to load immediately
-              document.querySelectorAll("img").forEach((img) => {
-                img.setAttribute("loading", "eager");
-                // handle Webflow-specific lazy-loaded images
-                const dataSrc =
-                  img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-                if (dataSrc) {
-                  img.setAttribute("src", dataSrc);
-                } else {
-                  img.src = img.src; // trigger reload if necessary
-                }
-              });
-              // force all background images to load immediately
-              document.querySelectorAll("*").forEach((el) => {
-                const bgImage = window.getComputedStyle(el).backgroundImage;
-                if (bgImage && bgImage.startsWith('url("')) {
-                  const url = bgImage.slice(5, -2); // extract URL from `url("...")`
-                  const img = new Image();
-                  img.src = url; // preload background image
-                }
-              });
-            });
-          </script>
       </div>
       <div class="css w-embed">
         <style>
@@ -989,18 +989,69 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <div style="margin-top: 0;" class="button-wrapper">
+                        <div class="pill">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>Default</div>
+                        </div>
+                        <div class="pill cc-primary">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>Primary</div>
+                        </div>
+                        <div class="pill cc-primary cc-inverse">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>Primary Inverse</div>
+                        </div>
+                        <div class="pill cc-surface">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>Surface</div>
+                        </div>
+                      </div>
+                      <div class="button-wrapper">
+                        <div class="pill cc-slim">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>Slim</div>
+                        </div>
+                        <div style="color: #c11574; background: #fdf2fa;" class="pill cc-slim">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>UI/UX Design</div>
+                        </div>
+                        <div style="color: #027a48; background: #ecfdf3;" class="pill cc-slim">
+                          <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="30" fill="currentColor"></circle>
+                              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity="0.25" stroke-width="16"></circle>
+                            </svg></div>
+                          <div>Environment</div>
+                        </div>
+                      </div>
+                      <div class="button-wrapper">
                         <a href="#" class="pill w-inline-block">
                           <div>Learn more</div>
                         </a>
-                        <a href="#" class="pill cc-status w-inline-block">
+                        <a href="#" class="pill cc-surface w-inline-block">
                           <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#16A34A"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#16A34A" stroke-opacity="0.25" stroke-width="16"></circle>
                             </svg></div>
-                          <div>All systems normal</div>
+                          <div>System status</div>
                         </a>
-                      </div>
-                      <div class="button-wrapper">
                         <a href="#" class="pill w-inline-block">
                           <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#007bff"></circle>
@@ -1008,7 +1059,7 @@ https://fontawesome.com/search?ic=free
                             </svg></div>
                           <div>Messages (2)</div>
                         </a>
-                        <a href="#" class="pill w-inline-block">
+                        <a href="#" class="pill cc-surface w-inline-block">
                           <div aria-hidden="true" class="icon cc-mini w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="50" cy="50" r="30" fill="#ff0000"></circle>
                               <circle cx="50" cy="50" r="38" stroke="#ff6666" stroke-opacity="0.25" stroke-width="16"></circle>
@@ -1176,13 +1227,13 @@ https://fontawesome.com/search?ic=free
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
-                      <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top"><i data-wf--icon--config-size="inherit" class="icon ph-fill ph-magic-wand" aria-hidden="true"> </i><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine" aria-hidden="true"> </i><i data-wf--icon--config-size="2em" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer" aria-hidden="true"> </i><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake" aria-hidden="true"> </i></div>
+                      <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top"><i data-wf--icon--config-size="inherit" class="icon ph-fill ph-magic-wand" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="2em" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-basketball" aria-hidden="true" style="font-size: 4.5rem;"> </i></div>
                       <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top">
-                        <div data-wf--icon-wrapped--config-color="inherit" style="" class="icon-wrapper"><i data-wf--icon--config-size="inherit" class="icon ph-fill ph-magic-wand" aria-hidden="true"> </i></div>
-                        <div data-wf--icon-wrapped--config-color="extended-3" style="" class="icon-wrapper w-variant-e7d297c2-8018-2932-c2a6-a186cbaed955"><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine" aria-hidden="true"> </i></div>
-                        <div data-wf--icon-wrapped--config-color="secondary" style="" class="icon-wrapper w-variant-7ac06c1a-a923-bb18-8850-dd358ec5290a"><i data-wf--icon--config-size="2em" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer" aria-hidden="true"> </i></div>
-                        <div data-wf--icon-wrapped--config-color="accent" style="" class="icon-wrapper w-variant-ed53c54e-e373-34e1-89d1-8f2bfa05cbf5"><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake" aria-hidden="true"> </i></div>
-                        <div data-wf--icon-wrapped--config-color="inherit" style="font-size: 4.5rem; color: oklch(70% 0.2047 47.65);" class="icon-wrapper"><i data-wf--icon--config-size="inherit" class="icon fa-solid fa-basketball" aria-hidden="true"> </i></div>
+                        <div data-wf--icon-wrapped--config-color="inherit" style="" class="icon-wrapper"><i data-wf--icon--config-size="inherit" class="icon ph-fill ph-magic-wand" aria-hidden="true" style=""> </i></div>
+                        <div data-wf--icon-wrapped--config-color="extended-3" style="" class="icon-wrapper w-variant-e7d297c2-8018-2932-c2a6-a186cbaed955"><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine" aria-hidden="true" style=""> </i></div>
+                        <div data-wf--icon-wrapped--config-color="secondary" style="" class="icon-wrapper w-variant-7ac06c1a-a923-bb18-8850-dd358ec5290a"><i data-wf--icon--config-size="2em" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer" aria-hidden="true" style=""> </i></div>
+                        <div data-wf--icon-wrapped--config-color="accent" style="" class="icon-wrapper w-variant-ed53c54e-e373-34e1-89d1-8f2bfa05cbf5"><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake" aria-hidden="true" style=""> </i></div>
+                        <div data-wf--icon-wrapped--config-color="inherit" style="color: oklch(70% 0.2047 47.65);" class="icon-wrapper"><i data-wf--icon--config-size="inherit" class="icon fa-solid fa-basketball" aria-hidden="true" style="font-size: 4.5rem;"> </i></div>
                       </div>
                     </div>
                   </div>
@@ -1614,7 +1665,7 @@ https://fontawesome.com/search?ic=free
                         <div style="margin: 1rem auto;" class="col cc-9c">
                           <div class="card cc-p-0">
                             <div class="card-cover">
-                              <div class="full-wrapper"><img src="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 500w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 800w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1ferdinand-stohr-NFs6dRTBgaM-unsplash.avif 1080w, ../images/ferdinand-stohr-NFs6dRTBgaM-unsplash_1.avif 1920w" alt="futuristic pattern image" class="full-cover"></div>
+                              <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                             </div>
                             <div class="card-body">
                               <div class="card-inner">
@@ -2679,7 +2730,7 @@ https://fontawesome.com/search?ic=free
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
                         </div>
                         <div class="button-wrapper">
-                          <a hash="title-layouts" href="../s2/components.html" class="button cc-outline w-button">See all Title Layouts →</a>
+                          <a href="/s2/components#title-layouts" class="button cc-outline w-button">See all Title Layouts →</a>
                         </div>
                       </header>
                     </div>
@@ -2770,7 +2821,7 @@ https://fontawesome.com/search?ic=free
                       </div>
                       <div mb="2" mt="1" class="button-wrapper">
                         <a animation="pulse-bg" href="#" class="button w-button">pulse-bg</a>
-                        <a animation="pulse-bg-1" href="#" class="button w-button">pulse-bg-1</a><button animation="pulse-bg-2" style="color: #c9426f;" class="button">
+                        <a color="white" animation="pulse-bg-1" href="#" class="button w-button">pulse-bg-1</a><button animation="pulse-bg-2" style="color: #c9426f;" class="button">
                           <div>pulse-bg-2</div>
                         </button><button animation="pulse-bg-3" style="color: #ccc;" class="button">
                           <div>pulse-bg-3</div>
@@ -2870,7 +2921,7 @@ https://fontawesome.com/search?ic=free
                               <div class="avatar_info">S2</div>
                             </div>
                             <div class="badge cc-icon">
-                              <div class="icon cc-100p w-embed">
+                              <div aria-hidden="true" class="icon cc-100p w-embed">
                                 <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                     <rect width="256" height="256" fill="none"></rect>
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -2911,7 +2962,7 @@ https://fontawesome.com/search?ic=free
                               <div class="avatar_info">S2</div>
                             </div>
                             <div class="badge cc-icon">
-                              <div class="icon cc-100p w-embed">
+                              <div aria-hidden="true" class="icon cc-100p w-embed">
                                 <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                     <rect width="256" height="256" fill="none"></rect>
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -2921,7 +2972,7 @@ https://fontawesome.com/search?ic=free
                           </div>
                         </div>
                         <div no-scrollbar="true" class="sg-h-scroll cc-hflex">
-                          <div role="group" class="avatar-wrapper cc-xl">
+                          <div role="group" class="avatar-wrapper cc-lg">
                             <div aria-label="Profile" class="avatar">
                               <div class="avatar_info">S2</div>
                             </div>
@@ -2938,7 +2989,7 @@ https://fontawesome.com/search?ic=free
                               <div class="dot-mark"></div>
                             </div>
                           </div>
-                          <div role="group" class="avatar-wrapper cc-xl">
+                          <div role="group" class="avatar-wrapper cc-lg">
                             <div aria-label="Profile" class="avatar">
                               <div class="avatar_info">S2</div>
                             </div>
@@ -2947,12 +2998,12 @@ https://fontawesome.com/search?ic=free
                             <div class="badge cc-counter cc-counter-3">3</div>
                             <div class="badge cc-counter cc-counter-4">4</div>
                           </div>
-                          <div role="group" class="avatar-wrapper cc-xl">
+                          <div role="group" class="avatar-wrapper cc-lg">
                             <div aria-label="Profile" class="avatar">
                               <div class="avatar_info">S2</div>
                             </div>
                             <div class="badge cc-icon">
-                              <div class="icon cc-100p w-embed">
+                              <div aria-hidden="true" class="icon cc-100p w-embed">
                                 <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                     <rect width="256" height="256" fill="none"></rect>
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -2960,7 +3011,7 @@ https://fontawesome.com/search?ic=free
                               </div>
                             </div>
                             <div class="badge cc-icon cc-icon-2">
-                              <div class="icon cc-100p w-embed">
+                              <div aria-hidden="true" class="icon cc-100p w-embed">
                                 <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                     <rect width="256" height="256" fill="none"></rect>
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -2968,7 +3019,7 @@ https://fontawesome.com/search?ic=free
                               </div>
                             </div>
                             <div class="badge cc-icon cc-icon-3">
-                              <div class="icon cc-100p w-embed">
+                              <div aria-hidden="true" class="icon cc-100p w-embed">
                                 <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                     <rect width="256" height="256" fill="none"></rect>
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
@@ -2976,7 +3027,7 @@ https://fontawesome.com/search?ic=free
                               </div>
                             </div>
                             <div class="badge cc-icon cc-icon-4">
-                              <div class="icon cc-100p w-embed">
+                              <div aria-hidden="true" class="icon cc-100p w-embed">
                                 <div style="color: var(--colors--accent)"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                                     <rect width="256" height="256" fill="none"></rect>
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
