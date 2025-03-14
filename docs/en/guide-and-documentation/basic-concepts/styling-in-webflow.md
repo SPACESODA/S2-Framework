@@ -4,30 +4,45 @@ icon: brackets-curly
 
 # Styling in Webflow
 
-Understanding the concepts below is essential for building and customizing your Webflow projects.
+## Basic Concepts
 
-<table data-column-title-hidden data-view="cards"><thead><tr><th>Concepts</th><th>Description</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Classes of HTML Tags and Webflow Elements</strong></td><td><p>HTML tags are the basic building blocks.</p><p>Webflow elements are pre-built elements in Webflow, such as Containers, Grids, and Buttons.</p></td><td></td></tr><tr><td><strong>Element Classes</strong></td><td>Custom Element Classes (or base classes) allow you to create unique styles for specific elements.</td><td></td></tr><tr><td><strong>Combo Classes</strong></td><td>Combo classes are modifier classes and variations of existing classes. They allowing you to tweak styles for specific instances without creating new element classes. They all start with <code>cc-</code>.</td><td></td></tr><tr><td><strong>Attributes</strong></td><td><a href="https://university.webflow.com/lesson/custom-attributes">Attributes</a> are not "classes" but we can use CSS to style attributes. Attributes allow you to easily apply additional styles and functionality to elements without creating new classes. <strong>S2 Attributes</strong> help you work faster.</td><td></td></tr><tr><td><strong>Utility Classes</strong></td><td>Utility classes are predefined classes that can apply specific styles or functionality. They help streamline your design process. They all start with <code>u-</code>.</td><td></td></tr></tbody></table>
+Understanding basic concepts below is essential for building and customizing your Webflow projects.
+
+<table data-column-title-hidden data-view="cards"><thead><tr><th>Concepts</th><th>Description</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Classes of HTML Tags and Webflow Elements</strong></td><td><p>HTML tags are the basic building blocks.</p><p>Webflow elements are pre-built elements in Webflow, such as Containers, Grids, and Buttons.</p></td><td></td></tr><tr><td><strong>Element Classes</strong></td><td>Custom Element Classes (or base classes) allow you to create unique styles for specific elements.</td><td></td></tr><tr><td><strong>Combo Classes</strong></td><td>Combo classes are modifier classes and variations of existing classes. They allowing you to tweak styles for specific instances without creating new element classes. They all start with <code>cc-</code>.</td><td></td></tr><tr><td><strong>Attributes</strong></td><td><a href="https://university.webflow.com/lesson/custom-attributes">Attributes</a> are not "classes" but we can use CSS to apply styles like a preset. <strong>S2 Attributes</strong> help you work faster by allowing you to easily apply additional styles and functionality to elements without creating new classes.</td><td></td></tr><tr><td><strong>Utility Classes</strong></td><td>Utility classes are predefined classes that can apply specific styles or functionality. They help streamline your design process. They all start with <code>u-</code>.</td><td></td></tr></tbody></table>
 
 
 
-## Choosing between Classes, Attributes, and Utility Classes
+## When to use S2 Attributes?
 
-### When to use attributes?
-
-* When you want to apply styles or functions to an element in a single location or for a one-time purpose.
-* When you want to avoid creating a new combo class that would be rarely reused or might create confusion.
+* When you want to apply styles or functions to an element in a **single location** or for a **one-time purpose**.
+* When you want to avoid creating a new combo class that would be rarely reused.
 * When existing combo classes on an element are already complex and potentially confusing.
 
 Focus on your creativity and enjoy Webflow's flexibility. Use attributes that you remember and fully understand. No pressure!
 
-### Guide to Making Styling Choices
+Learn about **S2 Attributes** in this section:
 
-Here’s our simple approach to help you _prioritize_ your styling decisions:
+{% content-ref url="../s2-attributes.md" %}
+[s2-attributes.md](../s2-attributes.md)
+{% endcontent-ref %}
 
-1. Use existing **Element Classes** and **Combo Classes** from the S2 Framework.
-2. Create and use your **classes**.
-3. Use the framework's **Attributes** (S2 Attributes) that you understand and remember.
-4. Use the framework's **Utility Classes**.
+
+
+## Guide to Making Styling Choices
+
+Not sure whether to use Classes, Attributes, or Utility Classes? Follow this priority-based approach to make the best styling decisions:
+
+**Priority 1:**\
+Use existing **Element Classes** and **Combo Classes** from the S2 Framework.
+
+**Priority 2:**\
+Create and use your **classes**.
+
+**Priority 3:**\
+Use **S2 Attributes** that you understand and can easily remember.
+
+**Priority 4:**\
+Use the framework's **Utility Classes**.
 
 
 
@@ -37,11 +52,15 @@ Attributes are powerful tools. **However, attributes cannot be searched directly
 
 **Attributes can never satisfy all styling needs.** Setting up too many attributes that are not carefully planned can also lead to huge confusion easily. We are not here to reinvent CSS or build a CSS utility framework like Tailwind.
 
-Therefore, we recommend following the above [#guide-to-making-styling-choices](styling-in-webflow.md#guide-to-making-styling-choices "mention") and sticking with the framework's official **S2 Attributes**.
+Therefore, we recommend following the above [#guide-to-making-styling-choices](styling-in-webflow.md#guide-to-making-styling-choices "mention") and sticking with the framework's official and standardized **S2 Attributes**.
 
-If you really want to create new custom attributes, place them in the `04_custom` code embed inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
+If you really want to create new custom attributes, place them in the `css_custom` code embed inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
 
-Read more: [naming-custom-attributes.md](../naming-strategies/naming-custom-attributes.md "mention")
+
+
+**Extended reading:**
+
+[naming-custom-attributes.md](../naming-strategies/naming-custom-attributes.md "mention")
 
 
 

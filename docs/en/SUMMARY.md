@@ -13,7 +13,7 @@
 
 * [Basic Concepts](guide-and-documentation/basic-concepts/README.md)
   * [Styling in Webflow](guide-and-documentation/basic-concepts/styling-in-webflow.md)
-  * [Use Utility Classes Wisely](guide-and-documentation/basic-concepts/use-utility-classes-wisely.md)
+  * [Utility Classes](guide-and-documentation/basic-concepts/utility-classes.md)
   * [Units](guide-and-documentation/basic-concepts/units.md)
   * [Fluid Typography](guide-and-documentation/basic-concepts/fluid-typography.md)
 * [Variables](guide-and-documentation/variables/README.md)
@@ -49,10 +49,11 @@
 * [Read More](more/read-more/README.md)
   * [Foundations of S2](more/read-more/foundations-of-s2.md)
   * [Our Approaches](more/read-more/our-approaches.md)
+  * [Custom CSS for Font Sizes](more/read-more/custom-css-for-font-sizes.md)
 
 ## Links
 
-* [🤘 Cloneable](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2)
+* [🤘 Clone S2](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2)
 * [🪵 Changelog & Roadmap](https://s2-framework.webflow.io/#changelog)
 
 ***

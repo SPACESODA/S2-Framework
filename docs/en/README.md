@@ -38,7 +38,7 @@ There are only a handful of truly amazing Webflow frameworks (not templates) out
 
 ## :tada: Get Started
 
-Explore the framework 🚀\
+Explore and Clone 🚀\
 [https://s2-framework.webflow.io](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2)
 
 Preview and experiment with S2 :snowboarder:\
@@ -49,8 +49,10 @@ Community and Support 🛟\
 <mark style="color:purple;">**Discord**</mark>: [https://s2-framework.webflow.io/#discord](https://s2-framework.webflow.io/#discord)\
 **Github**: [https://github.com/SPACESODA/S2-Framework](https://github.com/SPACESODA/S2-Framework)
 
-Changelog and Roadmap 🤓\
+Changelog and Roadmap :wood:\
 [https://s2-framework.webflow.io/#changelog](https://s2-framework.webflow.io/#changelog)
+
+
 
 
 

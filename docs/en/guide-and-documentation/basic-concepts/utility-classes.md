@@ -5,9 +5,11 @@ description: >-
 icon: u
 ---
 
-# Use Utility Classes Wisely
+# Utility Classes
 
 Utility classes are ready-made styled classes that can be quickly searched and applied. In the S2 Framework, they are prefixed with `u-` to make them easy to search and identify.
+
+## Use Utility Classes Wisely
 
 Utility classes can sometimes be confusing and even problematic due to some implicit behaviors of how Webflow handles class stacking, which may not be well-known to all users. Additionally, they can be difficult to describe and remember.
 
@@ -35,13 +37,12 @@ Utility classes can sometimes be confusing and even problematic due to some impl
 
 * <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark>
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark>
-*   `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker`&#x20;
-
-    ☝️ **Only if** <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker` **is pre-defined.**
+* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker`
 
 **Not recommended:**
 
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark> <mark style="color:blue;">`u-font-bold`</mark>
+* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker` <mark style="color:blue;">`u-font-bold`</mark>
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark> `cc-bold`
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker` `cc-first`&#x20;
 
@@ -52,10 +53,8 @@ Utility classes can sometimes be confusing and even problematic due to some impl
 > You should do this instead:  `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-featured` \
 > Or: `blog-post` `cc-featured` :100:
 
-
-
 {% hint style="warning" %}
-Modifying a utility class will affect all instances where it's used. For example, updating the styles of <mark style="color:blue;">`u-bg-primary`</mark> utility class will also apply to `blog-post` <mark style="color:blue;">`u-bg-primary`</mark>.
+Modifying the "root" utility class will affect all instances where it's used. For example, updating the styles of <mark style="color:blue;">`u-bg-primary`</mark> utility class will also apply to `blog-post` <mark style="color:blue;">`u-bg-primary`</mark>.
 
 However, modifying `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> will add styles on top of the combo and will not affect the utility class itself.
 

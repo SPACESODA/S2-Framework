@@ -50,11 +50,15 @@ However, as Webflow does not allow applying custom values to variables [**yet**]
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-12 14.54.30.png" alt=""><figcaption><p>Font Size variables: Absolute values equivalent to our default fluid type scale</p></figcaption></figure>
 
-{% hint style="warning" %}
 <mark style="color:orange;">**Advanced:**</mark>
 
-If you want to have true fluid behavior on custom classes that use these variables, or if you want to **override** these absolute values, you can place custom CSS in the <mark style="color:green;">**Global Code**</mark> component.
-{% endhint %}
+If you want true fluid behavior on text and your custom classes, or if you want to override the default absolute values in the **Text** > **Font Size** variables, you can use custom CSS to do so.
+
+The CSS template can be found here:
+
+{% content-ref url="../../more/read-more/custom-css-for-font-sizes.md" %}
+[custom-css-for-font-sizes.md](../../more/read-more/custom-css-for-font-sizes.md)
+{% endcontent-ref %}
 
 
 

@@ -133,7 +133,7 @@ All frameworks are generally similar for other naming conventions, such as varia
 
 **S2 Framework**
 
-S2 suggests [using utility classes wisely](../../guide-and-documentation/basic-concepts/use-utility-classes-wisely.md) and encourages you to style by creating your own custom classes and leveraging [S2 Attributes](../../guide-and-documentation/s2-attributes.md).
+S2 suggests [using utility classes wisely](../../guide-and-documentation/basic-concepts/utility-classes.md) and encourages you to style by creating your own custom classes and leveraging [S2 Attributes](../../guide-and-documentation/s2-attributes.md).
 
 S2 includes a set of well-designed utility classes. To guide styling decisions, S2 provides a simple hierarchy for making better styling choices:
 

@@ -10,12 +10,6 @@ S2 Attributes is a lightweight library of pre-defined attributes. The concept is
 
 Take `[opacity="1"]` as an example, when applying this attribute to an element on the Designer panel, `opacity` is the attribute name and `1` is the attribute value.
 
-{% hint style="warning" %}
-**Attributes can exist without a value.** However, in some cases, **custom elements** and elements within them require attributes to have a value. We can type in something like `true` and it should work fine.
-{% endhint %}
-
-
-
 ### Learning S2 Attributes
 
 The best way to understand attributes is to read the CSS, visit:
@@ -23,11 +17,13 @@ The best way to understand attributes is to read the CSS, visit:
 [https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/s2-attributes.css](../../../webflow/css/s2-attributes.css)
 
 {% hint style="info" %}
-The codes on the GitHub repository can be a bit behind the latest version of the framework.
+**Attributes can exist without a value.** However, in some cases, **custom elements** and elements within them require attributes to have a value. We can type in something like `true` in the value and it should work fine.
 {% endhint %}
 
 {% hint style="danger" %}
-**We strongly recommend that you DO NOT add new attributes to the S2 Attributes nor rename any attributes.** If the S2 Attributes do not perfectly match your desired style, create combo classes or use utility classes to style instead.
+**Do not modify S2 Attributes!**
+
+**We strongly recommend that you do not add new attributes to S2 Attributes or rename existing ones.** If S2 Attributes do not perfectly match your desired style, we suggest using combo classes or utility classes instead.
 {% endhint %}
 
 
