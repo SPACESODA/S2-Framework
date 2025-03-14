@@ -140,6 +140,8 @@
   --_text---font-size--3xl: 2rem;
   --_text---list-spacing--small: .25rem;
   --_text---richtext-spacing--small: .5rem;
+  --_text---other--word-space: .35em;
+  --_text---other--lighter: 90%;
   --_sizes---radius--large: .85rem;
   --_sizes---icon--small: 1rem;
   --_sizes---icon--medium: 1.5rem;
@@ -7837,6 +7839,8 @@ figcaption {
     --_text---font-size--3xl: 1.765rem;
     --_text---list-spacing--small: .25rem;
     --_text---richtext-spacing--small: .5rem;
+    --_text---other--word-space: .35em;
+    --_text---other--lighter: 90%;
   }
 
   .sg-demo-card {
@@ -8255,6 +8259,8 @@ figcaption {
     --_text---font-size--3xl: 1.582rem;
     --_text---list-spacing--small: .25rem;
     --_text---richtext-spacing--small: .5rem;
+    --_text---other--word-space: .35em;
+    --_text---other--lighter: 90%;
   }
 
   .sg-demo-card.cc-demo {
@@ -8774,6 +8780,8 @@ figcaption {
     --_text---font-size--3xl: 1.347rem;
     --_text---list-spacing--small: .25rem;
     --_text---richtext-spacing--small: .5rem;
+    --_text---other--word-space: .35em;
+    --_text---other--lighter: 90%;
   }
 
   code, .tag-label {
