@@ -1,6 +1,6 @@
 ---
-icon: palette
 description: Further Understanding of default "Colors" variable group in the S2 Framework.
+icon: palette
 ---
 
 # Colors in S2
@@ -22,14 +22,14 @@ By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **S
 | **Stroke Subtle**   | Subtle stroke color         |
 | **Stroke Emphasis** | More obvoious stroke color  |
 
-|                     | Description / Purpose                                                                      |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| **Primary**         | <p>Primary color is the main color of the website or brand<br>(Primary 500 by default)</p> |
-| **Primary Light**   | <p>Light version of the primary color<br>(Primary 300 by default)</p>                      |
-| **Primary Deep**    | <p>Deep version of the primary color<br>(Primary 700 by default)</p>                       |
-| **Secondary**       | The secondary color of the website or brand                                                |
-| **Accent**          | Accent color of the website or brand                                                       |
-| **Extended 1 \~ 3** | Additional colors for the website                                                          |
+|                                                      | Description / Purpose                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary**                                          | Primary color is the main color of the website or brand                                                                                                                                                                                                                                |
+| **Primary Light**                                    | <p>Light version of the primary color<br>(Default: Primary 300)</p>                                                                                                                                                                                                                    |
+| **Primary Deep**                                     | <p>Deep version of the primary color<br>(Default: Primary 700)</p>                                                                                                                                                                                                                     |
+| **Secondary**                                        | The secondary color of the website or brand                                                                                                                                                                                                                                            |
+| **Accent**                                           | Accent color of the website or brand                                                                                                                                                                                                                                                   |
+| <mark style="color:blue;">**Extended Colors**</mark> | <mark style="color:blue;">Additional colors according to your brand. You can add, remove, or rename their names on the</mark> <mark style="color:blue;"></mark><mark style="color:blue;">**Variables**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">panel.</mark> |
 
 |                       | Description / Purpose                          |
 | --------------------- | ---------------------------------------------- |
