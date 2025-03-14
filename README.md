@@ -6,35 +6,34 @@ The S2 Framework is a modern Webflow-optimized framework that provides a solid f
 
 **Explore and clone:** https://s2-framework.webflow.io
 
-<br>
 
-**Full Docs (Japanese version coming soon):** <br>
+**Full Docs (Japanese version coming soon):**  
 📘 https://s2-framework.gitbook.io
 
-<br>
 
-**Community & Support:** <br>
-Reddit: https://www.reddit.com/r/S2Framework <br>
+**Community & Support:**  
+Reddit: https://www.reddit.com/r/S2Framework  
 Discord: https://s2-framework.webflow.io/#discord
 
-<br>
+&nbsp;
 
 **CDN**
 
-**Files by jsDelivr** <br>
+**Files by jsDelivr**  
 https://www.jsdelivr.com/package/gh/SPACESODA/S2-Framework
 
-**S2 Framework: Base CSS** <br>
-Base Setup + S2 Attributes + S2 Colors & Palettes + CSS Animations <br>
-https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.css <br>
+**S2 Framework: Base CSS**  
+Base Setup + S2 Attributes + S2 Colors & Palettes + CSS Animations  
+https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.css  
 Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2.min.css
 
-**S2 Attributes** <br>
-https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2-attributes.css <br>
+**S2 Attributes**  
+https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2-attributes.css  
 Minified: https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/webflow/css/s2-attributes.min.css
 
-<br>
+&nbsp;
 
-<hr>
-S2 Framework is marked with Creative Commons CC0 1.0 Universal.<br>
-© [Copyright and terms](https://s2-framework.gitbook.io/docs/copyright-and-terms)
+---
+
+S2 Framework is marked with **Creative Commons CC0 1.0 Universal**.  
+© [Copyright and Terms](https://s2-framework.gitbook.io/docs/copyright-and-terms)
