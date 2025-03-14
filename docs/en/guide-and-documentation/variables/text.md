@@ -54,7 +54,7 @@ However, as Webflow does not allow applying custom values to variables [**yet**]
 
 If you want true fluid behavior on text and your custom classes, or if you want to override the default absolute values in the **Text** > **Font Size** variables, you can use custom CSS to do so.
 
-The CSS template can be found here:
+The CSS template can be found on this page:
 
 {% content-ref url="../../more/read-more/custom-css-for-font-sizes.md" %}
 [custom-css-for-font-sizes.md](../../more/read-more/custom-css-for-font-sizes.md)

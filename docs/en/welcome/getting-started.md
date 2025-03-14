@@ -17,8 +17,6 @@ layout:
 
 **The S2 Framework is designed for everyone, whether you are a professional, a designer, or a marketer.** S2 aims to be accessible to anyone with basic HTML + CSS skills and a fundamental understanding of Webflow.
 
-### Don't worry about memorizing everything at first. You can always search and experiment in Webflow Designer and refer to the guide when needed.
-
 
 
 S2 is designed for ease of use. You don't have to be an expert to start using S2.\

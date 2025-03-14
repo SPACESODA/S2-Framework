@@ -17,21 +17,23 @@ You can completely remove the **Dark mode** from **Colors** if your website does
 {% endhint %}
 
 {% hint style="danger" %}
-Renaming and removing the default **Colors** variables will not break your site visually, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
+Renaming and removing the default **Colors** variables will not break your site, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
 {% endhint %}
 
 
 
 ## Palettes :art:
 
-Variable groups, such as **Primary**, **Secondary**, **Accent**, and **Neutral**, inside the **Palettes** variable collection are predefined sets of colors picked for the website, and then, they can be selected by variables under **Colors**. This method provides flexibility to update colors by choosing from palette variables without disrupting the site's overall style.
+Variable groups, such as **Primary**, **Secondary**, **Accent**, and **Neutral**, inside the **Palettes** variable collection are predefined sets of colors picked for the website.
 
-**S2's default palettes** (the "**Lightness Minimum**" of all colors are set to **15**)**:**
+**Palettes** variables can be selected by **Colors** variables. This method provides flexibility to update colors by choosing from palette variables without disrupting the site's overall style.
+
+**S2's Palettes** (the "**Lightness Minimum**" of our default colors are set to **15**)**:**
 
 [https://www.tints.dev/?neutral=7E7E7E\&primary=0145AB\&secondary=00B499\&accent=F3BB09](https://www.tints.dev/?neutral=7E7E7E\&primary=0145AB\&secondary=00B499\&accent=F3BB09)
 
 {% hint style="danger" %}
-Please leave the name **"Neutral"** and the **variable names under it** unchanged.
+Please leave the name **"Neutral"** and all Neutral colors' **variable names** unchanged.
 {% endhint %}
 
 

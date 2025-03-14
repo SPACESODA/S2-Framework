@@ -53,7 +53,7 @@
 
 ## Links
 
-* [🤘 Clone S2](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2)
+* [🤘 Clone in Webflow](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2)
 * [🪵 Changelog & Roadmap](https://s2-framework.webflow.io/#changelog)
 
 ***
