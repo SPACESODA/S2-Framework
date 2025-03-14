@@ -6377,7 +6377,7 @@ figcaption {
   bottom: auto;
   left: 0%;
   right: 0%;
-  top: calc(-1 * (var(--_sizes---spacing--small)  + var(--_sizes---main-nav--height)));
+  top: calc(-1 * (var(--_sizes---spacing--sm)  + var(--_sizes---main-nav--height)));
   max-height: 0;
   position: absolute;
 }
