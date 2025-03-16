@@ -32,7 +32,7 @@ layout:
 
 With simplicity and ease of use at its core, S2 helps you build faster and smarter while offering great flexibility and extendable functionality.
 
-There are only a handful of truly amazing Webflow frameworks (not templates) out there, and S2 is proud to stand among the very best. 🤘
+There are only a handful of truly amazing Webflow frameworks (not templates) out there, and S2 is proud to stand among the best. 🤘
 
 
 
