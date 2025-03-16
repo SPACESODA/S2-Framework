@@ -16,11 +16,11 @@ By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **S
 | **Text Dim**    | Dim: less contrast to background |
 | **Text Dimmer** | Dimmer                           |
 
-|                     | Description / Purpose       |
-| ------------------- | --------------------------- |
-| **Stroke**          | Color for borders and lines |
-| **Stroke Subtle**   | Subtle stroke color         |
-| **Stroke Emphasis** | More obvoious stroke color  |
+|                     | Description / Purpose        |
+| ------------------- | ---------------------------- |
+| **Stroke**          | Color for borders and lines  |
+| **Stroke Subtle**   | Subtle stroke color          |
+| **Stroke Emphasis** | More emphasised stroke color |
 
 |                                                      | Description / Purpose                                                                                                                                                                                                                                                                  |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,6 +42,12 @@ By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **S
 | ---------------- | ---------------------------- |
 | **Focus**        | Color of used in focus state |
 | **Focus Subtle** | Light version of focus color |
+
+{% hint style="danger" %}
+Renaming and removing the **default Colors** variables will not break your site, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
+{% endhint %}
+
+
 
 
 
