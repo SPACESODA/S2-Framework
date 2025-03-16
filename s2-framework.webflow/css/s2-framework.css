@@ -136,7 +136,6 @@
   --colors--extended-6: #5f2b89;
   --_sizes---line--bold: .15625rem;
   --_sizes---line--3h: .375rem;
-  --_sizes---gap--sm: .75rem;
   --_sizes---gap--xs: .5rem;
   --_text---other--word-space: .35em;
   --_sizes---line--2h: .25rem;
@@ -152,6 +151,7 @@
   --_text---richtext-spacing--sm: .5rem;
   --_text---other--lighter: 90%;
   --_sizes---radius--lg: .85rem;
+  --_sizes---gap--sm: .75rem;
   --_sizes---gap--base: 1rem;
   --_sizes---gap--xl: 2rem;
   --_sizes---outline--base: .125rem;
@@ -1283,31 +1283,21 @@ figcaption {
 }
 
 .richtext h1 {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-top: .35em;
+  margin-bottom: .35em;
 }
 
 .richtext h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: .45em;
+  margin-bottom: .45em;
 }
 
 .richtext h3, .richtext h4 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
-.richtext h5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.richtext h6 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.richtext p {
+.richtext h5, .richtext h6, .richtext p {
   margin-top: var(--_text---richtext-spacing--base);
   margin-bottom: var(--_text---richtext-spacing--base);
 }
@@ -4744,29 +4734,29 @@ figcaption {
 }
 
 .cc-richtext-lg h1 {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-top: .35em;
+  margin-bottom: .35em;
 }
 
 .cc-richtext-lg h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: .45em;
+  margin-bottom: .45em;
 }
 
 .cc-richtext-lg h3, .cc-richtext-lg h4 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 .cc-richtext-lg h5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1rem;
+  margin-top: var(--_text---richtext-spacing--lg);
+  margin-bottom: var(--_text---richtext-spacing--lg);
 }
 
 .cc-richtext-lg h6 {
+  margin-top: var(--_text---richtext-spacing--lg);
+  margin-bottom: var(--_text---richtext-spacing--lg);
   font-size: var(--_text---font-size--lg);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .cc-richtext-lg p {
@@ -7823,7 +7813,7 @@ figcaption {
   align-items: center;
   min-width: auto;
   max-width: 100%;
-  padding: .5rem 0 1.25rem;
+  padding: .5rem 0 1rem;
   line-height: 1;
   transition: box-shadow .3s ease-in;
   display: flex;
@@ -7850,8 +7840,8 @@ figcaption {
 
 .tab-pane {
   margin-top: var(--_sizes---line--2h);
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   position: relative;
 }
 
@@ -7880,10 +7870,10 @@ figcaption {
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--3h: .375rem;
-    --_sizes---gap--sm: .75rem;
     --_sizes---gap--xs: .5rem;
     --_sizes---line--2h: .25rem;
     --_sizes---radius--lg: .85rem;
+    --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
@@ -8304,10 +8294,10 @@ figcaption {
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--3h: .375rem;
-    --_sizes---gap--sm: .75rem;
     --_sizes---gap--xs: .5rem;
     --_sizes---line--2h: .25rem;
     --_sizes---radius--lg: .85rem;
+    --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
@@ -8807,8 +8797,8 @@ figcaption {
   }
 
   .tabs-menu {
-    grid-column-gap: var(--_sizes---gap--sm);
-    grid-row-gap: var(--_sizes---gap--sm);
+    grid-column-gap: var(--_sizes---gap--xs);
+    grid-row-gap: var(--_sizes---gap--xs);
   }
 }
 
@@ -8837,10 +8827,10 @@ figcaption {
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--3h: .375rem;
-    --_sizes---gap--sm: .75rem;
     --_sizes---gap--xs: .5rem;
     --_sizes---line--2h: .25rem;
     --_sizes---radius--lg: .85rem;
+    --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
@@ -9168,8 +9158,8 @@ figcaption {
   }
 
   .tabs-menu {
-    grid-column-gap: var(--_sizes---gap--xs);
-    grid-row-gap: var(--_sizes---gap--xs);
+    grid-column-gap: 0rem;
+    grid-row-gap: 0rem;
   }
 }
 
