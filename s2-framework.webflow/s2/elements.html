@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Mar 14 2025 14:27:01 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Mar 16 2025 04:09:59 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -168,7 +168,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.2.0/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.5.0/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -287,11 +287,19 @@ https://fontawesome.com/search?ic=free
               background: var(--colors--primary);
               color: #fff;
             }
-            /* custom accessibility styles */
+            /* accessibility styles */
+            html:not(.wf-design-mode) :focus-visible:not(input, textarea, select, section, .section, .container, .w-tab-link),
+            [tabindex]:not([tabindex="-1"]):focus-visible,
+            [aria-label]:not(input, textarea, select):focus-visible,
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
               outline: var(--_sizes---outline--bold) solid var(--colors--focus);
               outline-offset: var(--_sizes---outline--offset);
+            }
+            section:focus,
+            .section:focus,
+            .container:focus {
+              outline: none;
             }
             [contenteditable]:focus-visible {
               outline: none;
@@ -311,18 +319,7 @@ https://fontawesome.com/search?ic=free
               transform: translateY(0%) rotate(0deg);
             }
             /* better sup and sub on headings */
-            h1 sup,
-            .h1 sup,
-            h1 sub,
-            .h1 sup,
-            h2 sup,
-            .h2 sup,
-            h2 sub,
-            .h2 sup,
-            h3 sup,
-            .h3 sup,
-            h3 sub,
-            .h3 sup {
+            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
               margin: 0 -0.275ch;
             }
             /* better modal */
@@ -432,13 +429,16 @@ https://fontawesome.com/search?ic=free
             /* -- Style Guide: Custom Styles -- */
             /* Only used for styling the style guide. */
             /* DO NOT INCLUDE THESE STYLES ON OTHER WEB PAGES. */
+            /* background-color of the style guide */
             [body="sg"] {
               background-color: var(--s2--surface);
             }
+            /* force no text-decocration */
             [text-deco="none"],
             [text-deco="none"] a {
               text-decoration: none !important;
             }
+            /* layout adjustments */
             .sg-element>section,
             .sg-element>.section {
               flex: 1;
@@ -451,7 +451,7 @@ https://fontawesome.com/search?ic=free
                 width: 100vw !important;
               }
             }
-            /* adjustment of .box-label elements that are inside .s2-demo */
+            /* .box-label elements inside .s2-demo */
             .s2-demo .box-label {
               margin-left: -2px;
               padding-bottom: calc(1.25rem + 0.125rem);
@@ -483,7 +483,7 @@ https://fontawesome.com/search?ic=free
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
-            /* styles for dark mode */
+            /* additional styles for dark mode */
             .u-dark-mode .s2-demo-box {
               background-image: none;
               background-color: #0A0A0A;
@@ -1443,21 +1443,6 @@ https://fontawesome.com/search?ic=free
                                 <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
                               </svg></div>
                           </div>
-                          <div class="icon-wrapper cc-extended-1">
-                            <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="icon-wrapper cc-extended-2">
-                            <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="icon-wrapper cc-extended-3">
-                            <div class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M47.4724 12.0729C48.3704 9.30901 52.2806 9.30902 53.1787 12.073L60.8777 35.768C61.2793 37.0041 62.4312 37.8409 63.7309 37.8409H88.6453C91.5515 37.8409 92.7598 41.5598 90.4087 43.268L70.2525 57.9123C69.201 58.6763 68.761 60.0304 69.1626 61.2664L76.8616 84.9615C77.7597 87.7254 74.5962 90.0238 72.2451 88.3156L52.0889 73.6712C51.0374 72.9073 49.6136 72.9073 48.5622 73.6712L28.406 88.3156C26.0548 90.0238 22.8914 87.7254 23.7894 84.9615L31.4884 61.2664C31.89 60.0304 31.4501 58.6763 30.3986 57.9123L10.2424 43.268C7.89125 41.5598 9.09958 37.8409 12.0058 37.8409H36.9202C38.2199 37.8409 39.3717 37.0041 39.7734 35.768L47.4724 12.0729Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
                         </div>
                       </div>
                       <div class="text-3xl">
@@ -1470,9 +1455,6 @@ https://fontawesome.com/search?ic=free
                           <div class="icon-wrapper cc-primary-deep"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
                           <div class="icon-wrapper cc-secondary"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
                           <div class="icon-wrapper cc-accent"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
-                          <div class="icon-wrapper cc-extended-1"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
-                          <div class="icon-wrapper cc-extended-2"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
-                          <div class="icon-wrapper cc-extended-3"><i aria-hidden="true" class="icon ph-fill ph-hand-waving"> </i></div>
                         </div>
                       </div>
                     </div>
@@ -1684,47 +1666,41 @@ https://fontawesome.com/search?ic=free
                       </div>
                     </div>
                     <div class="block">
-                      <div style="gap: 1rem; margin-bottom: 1rem;" class="sg-flex-wrap">
-                        <div class="col cc-grow">
+                      <div style="gap: 1rem; margin-bottom: 1rem;" class="u-hflex-wrap">
+                        <div class="col cc-6c">
                           <div class="card">
                             <div class="title-wrapper">
                               <h3 class="h4">Card heading</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum.</p>
                           </div>
                         </div>
-                        <div class="col cc-grow">
+                        <div class="col cc-6c">
                           <div class="card">
                             <div class="card-title">
                               <h3 class="h6">This is a card title.</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum.</p>
                           </div>
                         </div>
-                      </div>
-                      <div style="gap: 1rem; margin-bottom: 1rem;" class="sg-flex-wrap">
-                        <div class="col cc-grow">
+                        <div class="col cc-6c">
                           <div class="card cc-heavy">
-                            <div class="title-wrapper">
-                              <h3 class="h4">Card heading</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                            <div class="h4">Heavy style</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum.</p>
                           </div>
                         </div>
-                        <div class="col cc-grow">
+                        <div class="col cc-6c">
                           <div class="box-label">
                             <div>box-label</div>
                           </div>
                           <div class="card cc-heavy">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum.</p>
                           </div>
                         </div>
-                      </div>
-                      <div style="gap: 1rem; margin-bottom: 1rem;" class="sg-flex-wrap">
                         <div style="margin: 1rem auto;" class="col cc-9c">
                           <div class="card cc-p-0">
                             <div class="card-cover">
-                              <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                              <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                             </div>
                             <div class="card-body">
                               <div class="card-inner">
@@ -1737,12 +1713,8 @@ https://fontawesome.com/search?ic=free
                           </div>
                         </div>
                       </div>
-                      <div style="gap: 1rem;" class="sg-flex-wrap">
-                        <div class="col cc-grow">
-                          <div class="card cc-p-0">
-                            <div class="u-bg-pattern">no padding</div>
-                          </div>
-                        </div>
+                      <div class="card cc-p-0">
+                        <div class="u-bg-pattern">no padding</div>
                       </div>
                     </div>
                   </div>
@@ -2789,7 +2761,7 @@ https://fontawesome.com/search?ic=free
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
                         </div>
                         <div class="button-wrapper">
-                          <a href="/s2/components#title-layouts" class="button cc-outline w-button">See all Title Layouts →</a>
+                          <a href="/s2/components#title-layouts" class="button cc-outline w-button">See all Title Layouts</a>
                         </div>
                       </header>
                     </div>
@@ -3092,6 +3064,61 @@ https://fontawesome.com/search?ic=free
                                     <path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z" fill="currentColor"></path>
                                   </svg></div>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">tabs</div>
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div data-current="Tab 01" data-easing="ease-in" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
+                        <div class="tabs-menu w-tab-menu">
+                          <a data-w-tab="Tab 01" class="tab-link w-inline-block w-tab-link w--current">
+                            <div>Tab 01</div>
+                          </a>
+                          <a data-w-tab="Tab 02" class="tab-link w-inline-block w-tab-link">
+                            <div>Tab 02</div>
+                          </a>
+                          <a data-w-tab="Tab 03" class="tab-link w-inline-block w-tab-link">
+                            <div>Tab 03</div>
+                          </a>
+                          <a data-w-tab="Tab 04" class="tab-link w-inline-block w-tab-link">
+                            <div>Tab 04</div>
+                          </a>
+                        </div>
+                        <div class="tabs-content w-tab-content">
+                          <div data-w-tab="Tab 01" class="tab-pane w-tab-pane w--tab-active">
+                            <div class="richtext-list w-richtext">
+                              <h3>Tab 01</h3>
+                              <p><strong>Base tab classes that you can further customize.</strong></p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                            </div>
+                          </div>
+                          <div data-w-tab="Tab 02" class="tab-pane w-tab-pane">
+                            <div class="richtext-list w-richtext">
+                              <h3>Tab 02</h3>
+                              <p><strong>Base tab classes that you can further customize.</strong></p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                            </div>
+                          </div>
+                          <div data-w-tab="Tab 03" class="tab-pane w-tab-pane">
+                            <div class="richtext-list w-richtext">
+                              <h3>Tab 03</h3>
+                              <p><strong>Base tab classes that you can further customize.</strong></p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                            </div>
+                          </div>
+                          <div data-w-tab="Tab 04" class="tab-pane w-tab-pane">
+                            <div class="richtext-list w-richtext">
+                              <h3>Tab 04</h3>
+                              <p><strong>Base tab classes that you can further customize.</strong></p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                             </div>
                           </div>
                         </div>

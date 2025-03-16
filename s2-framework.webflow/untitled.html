@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Mar 14 2025 14:27:01 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Mar 16 2025 04:09:59 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="666251e9d1151496fe245f26" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -71,7 +71,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.2.0/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.5.0/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -190,11 +190,19 @@ https://fontawesome.com/search?ic=free
               background: var(--colors--primary);
               color: #fff;
             }
-            /* custom accessibility styles */
+            /* accessibility styles */
+            html:not(.wf-design-mode) :focus-visible:not(input, textarea, select, section, .section, .container, .w-tab-link),
+            [tabindex]:not([tabindex="-1"]):focus-visible,
+            [aria-label]:not(input, textarea, select):focus-visible,
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
               outline: var(--_sizes---outline--bold) solid var(--colors--focus);
               outline-offset: var(--_sizes---outline--offset);
+            }
+            section:focus,
+            .section:focus,
+            .container:focus {
+              outline: none;
             }
             [contenteditable]:focus-visible {
               outline: none;
@@ -214,18 +222,7 @@ https://fontawesome.com/search?ic=free
               transform: translateY(0%) rotate(0deg);
             }
             /* better sup and sub on headings */
-            h1 sup,
-            .h1 sup,
-            h1 sub,
-            .h1 sup,
-            h2 sup,
-            .h2 sup,
-            h2 sub,
-            .h2 sup,
-            h3 sup,
-            .h3 sup,
-            h3 sub,
-            .h3 sup {
+            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
               margin: 0 -0.275ch;
             }
             /* better modal */

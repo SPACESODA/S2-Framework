@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Mar 14 2025 14:27:01 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Mar 16 2025 04:09:59 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -228,7 +228,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.2.0/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.5.0/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -347,11 +347,19 @@ https://fontawesome.com/search?ic=free
               background: var(--colors--primary);
               color: #fff;
             }
-            /* custom accessibility styles */
+            /* accessibility styles */
+            html:not(.wf-design-mode) :focus-visible:not(input, textarea, select, section, .section, .container, .w-tab-link),
+            [tabindex]:not([tabindex="-1"]):focus-visible,
+            [aria-label]:not(input, textarea, select):focus-visible,
             input[type="submit"]:focus-visible,
             input[type="file"]:focus-visible {
               outline: var(--_sizes---outline--bold) solid var(--colors--focus);
               outline-offset: var(--_sizes---outline--offset);
+            }
+            section:focus,
+            .section:focus,
+            .container:focus {
+              outline: none;
             }
             [contenteditable]:focus-visible {
               outline: none;
@@ -371,18 +379,7 @@ https://fontawesome.com/search?ic=free
               transform: translateY(0%) rotate(0deg);
             }
             /* better sup and sub on headings */
-            h1 sup,
-            .h1 sup,
-            h1 sub,
-            .h1 sup,
-            h2 sup,
-            .h2 sup,
-            h2 sub,
-            .h2 sup,
-            h3 sup,
-            .h3 sup,
-            h3 sub,
-            .h3 sup {
+            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
               margin: 0 -0.275ch;
             }
             /* better modal */
@@ -492,13 +489,16 @@ https://fontawesome.com/search?ic=free
             /* -- Style Guide: Custom Styles -- */
             /* Only used for styling the style guide. */
             /* DO NOT INCLUDE THESE STYLES ON OTHER WEB PAGES. */
+            /* background-color of the style guide */
             [body="sg"] {
               background-color: var(--s2--surface);
             }
+            /* force no text-decocration */
             [text-deco="none"],
             [text-deco="none"] a {
               text-decoration: none !important;
             }
+            /* layout adjustments */
             .sg-element>section,
             .sg-element>.section {
               flex: 1;
@@ -511,7 +511,7 @@ https://fontawesome.com/search?ic=free
                 width: 100vw !important;
               }
             }
-            /* adjustment of .box-label elements that are inside .s2-demo */
+            /* .box-label elements inside .s2-demo */
             .s2-demo .box-label {
               margin-left: -2px;
               padding-bottom: calc(1.25rem + 0.125rem);
@@ -543,7 +543,7 @@ https://fontawesome.com/search?ic=free
             .s2-demo-expand-button.cc-clicked [icon="expand"] {
               display: none;
             }
-            /* styles for dark mode */
+            /* additional styles for dark mode */
             .u-dark-mode .s2-demo-box {
               background-image: none;
               background-color: #0A0A0A;
@@ -621,152 +621,185 @@ https://fontawesome.com/search?ic=free
               </div>
             </div>
             <div class="block">
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
-                  <div class="tag-wrapper">
-                    <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-12</div>
-                  </div>
-                  <div class="sg-note cc-width-auto">for base: 12 cols</div>
+              <div class="sg-tags cc-width-auto">
+                <div class="tag-wrapper">
+                  <div class="tag-label">col</div>
+                  <div class="tag-label">cc-span-</div>
                 </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-2">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-3">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-4">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-5">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-6">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-7">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-8">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-9">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-10">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-11">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-12">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                  </div>
-                </div>
+                <div class="sg-note cc-width-auto">the <span class="tag-label">cc-span-</span> classes are referencing to the closest parent element that has container inline size defined</div>
               </div>
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
-                  <div class="tag-wrapper">
-                    <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1-md</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-8-md</div>
-                  </div>
-                  <div class="sg-note cc-width-auto">for tablet: 8 cols</div>
+              <div data-current="Base" data-easing="ease-in" data-duration-in="300" data-duration-out="100" class="w-tabs">
+                <div class="tabs-menu w-tab-menu">
+                  <a data-w-tab="Base" class="tab-link w-inline-block w-tab-link w--current">
+                    <div>Base</div>
+                  </a>
+                  <a data-w-tab="Tablet" class="tab-link w-inline-block w-tab-link">
+                    <div>Tablet</div>
+                  </a>
+                  <a data-w-tab="Landscape" class="tab-link w-inline-block w-tab-link">
+                    <div>Landscape</div>
+                  </a>
+                  <a data-w-tab="Mobile" class="tab-link w-inline-block w-tab-link">
+                    <div>Mobile</div>
+                  </a>
                 </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-2-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-3-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-4-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-5-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-6-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-7-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-8-md">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
-                  <div class="tag-wrapper">
-                    <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1-sm</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-6-sm</div>
-                  </div>
-                  <div class="sg-note cc-width-auto">for landscape: 6 cols</div>
-                </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-2-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-3-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-4-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-5-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-6-sm">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                <div class="tabs-content w-tab-content">
+                  <div data-w-tab="Base" class="w-tab-pane w--tab-active">
+                    <div class="sg-element cc-block">
+                      <div class="sg-tags cc-width-auto">
+                        <div class="tag-wrapper">
+                          <div class="tag-label">col</div>
+                          <div class="tag-label">cc-span-1</div>
+                          <div>~</div>
+                          <div class="tag-label">cc-span-12</div>
+                        </div>
+                        <div class="sg-note cc-width-auto">for base: 12 cols</div>
+                      </div>
+                      <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                          <div class="col cc-span-1">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-2">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-3">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-4">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-5">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-6">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-7">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-8">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-9">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-10">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-11">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-12">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="sg-element cc-block">
-                <div class="sg-tags cc-width-auto">
-                  <div class="tag-wrapper">
-                    <div class="tag-label">col</div>
-                    <div class="tag-label">cc-span-1-xs</div>
-                    <div>~</div>
-                    <div class="tag-label">cc-span-4-xs</div>
+                  <div data-w-tab="Tablet" class="w-tab-pane">
+                    <div class="sg-element cc-block">
+                      <div class="sg-tags cc-width-auto">
+                        <div class="tag-wrapper">
+                          <div class="tag-label">col</div>
+                          <div class="tag-label">cc-span-1-md</div>
+                          <div>~</div>
+                          <div class="tag-label">cc-span-8-md</div>
+                        </div>
+                        <div class="sg-note cc-width-auto">for tablet: 8 cols</div>
+                      </div>
+                      <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                          <div class="col cc-span-1-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-2-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-3-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-4-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-5-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-6-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-7-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-8-md">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="sg-note cc-width-auto">for mobile: 4 cols</div>
-                </div>
-                <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                  <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                    <div class="col cc-span-1-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                  <div data-w-tab="Landscape" class="w-tab-pane">
+                    <div class="sg-element cc-block">
+                      <div class="sg-tags cc-width-auto">
+                        <div class="tag-wrapper">
+                          <div class="tag-label">col</div>
+                          <div class="tag-label">cc-span-1-sm</div>
+                          <div>~</div>
+                          <div class="tag-label">cc-span-6-sm</div>
+                        </div>
+                        <div class="sg-note cc-width-auto">for landscape: 6 cols</div>
+                      </div>
+                      <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                          <div class="col cc-span-1-sm">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-2-sm">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-3-sm">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-4-sm">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-5-sm">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-6-sm">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col cc-span-2-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-3-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
-                    </div>
-                    <div class="col cc-span-4-xs">
-                      <div class="u-bg-pattern cc-with-border">col</div>
+                  </div>
+                  <div data-w-tab="Mobile" class="w-tab-pane">
+                    <div class="sg-element cc-block">
+                      <div class="sg-tags cc-width-auto">
+                        <div class="tag-wrapper">
+                          <div class="tag-label">col</div>
+                          <div class="tag-label">cc-span-1-xs</div>
+                          <div>~</div>
+                          <div class="tag-label">cc-span-4-xs</div>
+                        </div>
+                        <div class="sg-note cc-width-auto">for mobile: 4 cols</div>
+                      </div>
+                      <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                          <div class="col cc-span-1-xs">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-2-xs">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-3-xs">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                          <div class="col cc-span-4-xs">
+                            <div class="u-bg-pattern cc-with-border">col</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -779,7 +812,7 @@ https://fontawesome.com/search?ic=free
                     <div>~</div>
                     <div class="tag-label">cc-12c</div>
                   </div>
-                  <div class="sg-note cc-width-auto">12 cols at any width</div>
+                  <div class="sg-note cc-width-auto">simple 12 columns at any width</div>
                 </div>
                 <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
                   <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
@@ -1012,7 +1045,7 @@ https://fontawesome.com/search?ic=free
               <h1>Grid Layout Utilities</h1>
             </div>
             <div class="text-wrapper">
-              <p><span class="tag-label cc-secondary">Advanced</span> This Grid Layout utilities system is a simplified modification of the <a href="https://www.youtube.com/watch?v=J78BBoZbmG8" target="_blank">Grid Utilities by Timothy Ricks</a>.</p>
+              <p><span class="tag-label cc-primary">Advanced</span> This Grid Layout utilities system is a simplified modification of the <a href="https://www.youtube.com/watch?v=J78BBoZbmG8" target="_blank">Grid Utilities by Timothy Ricks</a>.</p>
             </div>
           </div>
           <div class="sg-grid-demo">

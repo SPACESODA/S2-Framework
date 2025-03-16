@@ -32,15 +32,6 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 .w-lightbox-control { outline: none !important; }
 .w-slider-dot { flex: 0 0 auto; }
 
-/* accessibility */
-html:not(.wf-design-mode) :focus-visible:not(input):not(textarea):not(select):not(section):not(.section):not(.container) {
-	outline: var(--_sizes---outline--base) solid var(--colors--focus);
-	outline-offset: var(--_sizes---outline--offset);
-}
-section:focus, .section:focus, .container:focus { outline: none; }
-[tabindex]:not([tabindex="-1"]):focus-visible,
-[aria-label]:not(input):not(textarea):not(select):focus-visible { outline: var(--_sizes---outline--bold) solid var(--colors--focus); outline-offset: var(--_sizes---outline--offset); }
-
 /* -- S2 Features -- */
 
 /* html-table */
