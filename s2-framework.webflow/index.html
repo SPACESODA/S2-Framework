@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sun Mar 16 2025 04:36:07 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Mar 16 2025 08:28:22 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -60,6 +60,7 @@
     </script>
   <!--  Simple Glitch and GSAP Animations  -->
   <!--  For Style Guide only, you don't need this.  -->
+  <!--  Glitch Animation  -->
   <style>
       /* variables for timing */
       :root {
@@ -160,19 +161,8 @@
           transform: translate(0, 0);
         }
       }
-      /* ensure hidden initially */
-      [data-element="1"],
-      [data-element="2"],
-      [data-element="3"],
-      [data-element="4"],
-      [data-element="5"] {
-        opacity: 0;
-      }
     </style>
-  <!--  GSAP  -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap/dist/gsap.min.js" defer=""></script>
   <script defer="">
-      // Glitch Animation
       document.addEventListener("DOMContentLoaded", () => {
         const h1 = document.querySelector('h1[data-element="glitch"]');
         if (h1) {
@@ -190,7 +180,16 @@
           }, delay * 1000);
         }
       });
-      // GSAP Animation
+    </script>
+  <!--  GSAP  -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap/dist/gsap.min.js" defer=""></script>
+  <!--  GSAP Animation  -->
+  <script>
+      const style = document.createElement("style");
+      style.innerHTML = '[data-element="flyIn"] { opacity: 0; }';
+      document.head.appendChild(style);
+    </script>
+  <script defer="">
       window.addEventListener("load", () => {
         const flyInElements = document.querySelectorAll('[data-element="flyIn"]');
         // only proceed if such elements exist

@@ -135,9 +135,11 @@
   --colors--extended-5: #8144a8;
   --colors--extended-6: #5f2b89;
   --_sizes---line--bold: .15625rem;
-  --_sizes---line--2h: .375rem;
+  --_sizes---line--3h: .375rem;
   --_sizes---gap--sm: .75rem;
+  --_sizes---gap--xs: .5rem;
   --_text---other--word-space: .35em;
+  --_sizes---line--2h: .25rem;
   --colors-special--transparent-white: #fff0;
   --_palettes---accent--500: #f3bb09;
   --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -150,7 +152,6 @@
   --_text---richtext-spacing--sm: .5rem;
   --_text---other--lighter: 90%;
   --_sizes---radius--lg: .85rem;
-  --_sizes---gap--xs: .5rem;
   --_sizes---gap--base: 1rem;
   --_sizes---gap--xl: 2rem;
   --_sizes---outline--base: .125rem;
@@ -3747,6 +3748,7 @@ figcaption {
 .col {
   padding: 2rem var(--_sizes---container--padding);
   max-width: 100%;
+  display: block;
 }
 
 .col.cc-main {
@@ -4091,6 +4093,7 @@ figcaption {
 .col.cc-grow {
   flex: 1;
   padding: 0;
+  display: block;
 }
 
 .col.cc-3-3-2-2 {
@@ -7628,11 +7631,11 @@ figcaption {
 }
 
 .avatar.cc-styled {
-  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--2h) var(--colors--surface), 0 2px 6px 6px #0003;
+  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--3h) var(--colors--surface), 0 2px 6px 6px #0003;
 }
 
 .avatar.cc-styled:hover {
-  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--2h) var(--colors--accent), 0 2px 6px 6px #0003;
+  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--3h) var(--colors--accent), 0 2px 6px 6px #0003;
 }
 
 .avator_image {
@@ -7812,7 +7815,7 @@ figcaption {
   grid-column-gap: var(--_text---other--word-space);
   grid-row-gap: var(--_text---other--word-space);
   background-color: var(--colors-special--transparent);
-  box-shadow: 0 var(--_sizes---line--1h) 0 0 var(--colors--stroke-subtle);
+  box-shadow: 0 var(--_sizes---line--2h) 0 0 var(--colors--stroke-subtle);
   color: var(--colors--text-muted);
   flex-flow: wrap;
   flex: 1;
@@ -7836,7 +7839,7 @@ figcaption {
 
 .tab-link.w--current {
   background-color: var(--colors-special--transparent);
-  box-shadow: 0 var(--_sizes---line--1h) 0 0 var(--colors--primary);
+  box-shadow: 0 var(--_sizes---line--2h) 0 0 var(--colors--primary);
   color: var(--colors--text);
 }
 
@@ -7846,6 +7849,7 @@ figcaption {
 }
 
 .tab-pane {
+  margin-top: var(--_sizes---line--2h);
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   position: relative;
@@ -7875,10 +7879,11 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--bold: .15625rem;
-    --_sizes---line--2h: .375rem;
+    --_sizes---line--3h: .375rem;
     --_sizes---gap--sm: .75rem;
-    --_sizes---radius--lg: .85rem;
     --_sizes---gap--xs: .5rem;
+    --_sizes---line--2h: .25rem;
+    --_sizes---radius--lg: .85rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
@@ -8298,10 +8303,11 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--bold: .15625rem;
-    --_sizes---line--2h: .375rem;
+    --_sizes---line--3h: .375rem;
     --_sizes---gap--sm: .75rem;
-    --_sizes---radius--lg: .85rem;
     --_sizes---gap--xs: .5rem;
+    --_sizes---line--2h: .25rem;
+    --_sizes---radius--lg: .85rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
@@ -8830,10 +8836,11 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--bold: .15625rem;
-    --_sizes---line--2h: .375rem;
+    --_sizes---line--3h: .375rem;
     --_sizes---gap--sm: .75rem;
-    --_sizes---radius--lg: .85rem;
     --_sizes---gap--xs: .5rem;
+    --_sizes---line--2h: .25rem;
+    --_sizes---radius--lg: .85rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
@@ -9158,6 +9165,11 @@ figcaption {
 
   .u-grid-global.cc-3-2-2-1, .u-grid-global.cc-4-3-2-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .tabs-menu {
+    grid-column-gap: var(--_sizes---gap--xs);
+    grid-row-gap: var(--_sizes---gap--xs);
   }
 }
 
