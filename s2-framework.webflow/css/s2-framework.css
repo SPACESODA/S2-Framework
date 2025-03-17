@@ -1325,6 +1325,7 @@ figcaption {
 }
 
 .richtext pre {
+  clear: both;
   font-size: var(--_text---font-size--xs);
   margin-top: 1rem;
   margin-bottom: 1rem;
