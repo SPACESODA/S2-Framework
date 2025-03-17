@@ -7,11 +7,11 @@ icon: dolphin
 
 # Fluid Typography
 
-In the [S2 Framework](https://s2-framework.webflow.io/s2/styles?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2), we adopted the modern concepts of **Fluid Typography** and **Type Scale**, which makes it **Fluid Type Scale**. &#x20;
+S2 Framework has adopted the modern concepts of **Fluid Typography** and **Type Scale**, which makes it **Fluid Type Scale**. &#x20;
 
-The fluid behavior can be achieved nicely using `clamp()` in the font-size property, allowing text to scale dynamically based on the viewport size. By adopting a type scale ratio, we can ensure smooth, consistent typography that maintains visual harmony across different screen sizes without guesswork.
+The fluid behavior is effectively achieved using `clamp()` in the font-size property, allowing text to scale dynamically based on the viewport size. By adopting a type scale ratio, we can ensure smooth, consistent typography that maintains visual harmony across different screen sizes without guesswork.
 
-To take advantage of both, we can use the open-source tool [Fluid Type Scale Calculator](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
+To take advantage of both, we can use the open-source tool [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
 
 {% hint style="info" %}
 If you think the default font size in the S2 Cloneable is fine and you don't have to make any changes yet, you can skip this chapter.
