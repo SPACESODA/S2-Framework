@@ -1305,6 +1305,7 @@ figcaption {
 .richtext ul, .richtext ol {
   margin-top: var(--_text---list-spacing--base);
   grid-row-gap: var(--_text---list-spacing--base);
+  margin-bottom: 0;
 }
 
 .richtext figure {
@@ -7664,10 +7665,10 @@ figcaption {
   align-items: center;
   width: 20cqw;
   min-width: 8px;
-  max-width: 1.25rem;
+  max-width: 1.125rem;
   height: 20cqw;
   min-height: 8px;
-  max-height: 1.25rem;
+  max-height: 1.125rem;
   line-height: 1;
   text-decoration: none;
   display: flex;
