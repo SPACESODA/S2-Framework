@@ -7,7 +7,13 @@ icon: palette
 
 ## Colors
 
-By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **Secondary**, **Accent**, **Surface**, and **Focus** colors. Here is a list of default colors in the group:
+By default, variables in **Colors** cover **Primary**, **Secondary**, **Accent**, **Text**, **Stroke**, **Surface**, and **Focus** colors. Here is a list of default colors in the group:
+
+|               | Description / Purpose                                   |
+| ------------- | ------------------------------------------------------- |
+| **Primary**   | Primary color is the main color of the website or brand |
+| **Secondary** | The secondary color of the website or brand             |
+| **Accent**    | Accent color of the website or brand                    |
 
 |                 | Description / Purpose            |
 | --------------- | -------------------------------- |
@@ -22,15 +28,6 @@ By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **S
 | **Stroke Subtle**   | Subtle stroke color          |
 | **Stroke Emphasis** | More emphasised stroke color |
 
-|                                                      | Description / Purpose                                                                                                                                                                                                                                                                  |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Primary**                                          | Primary color is the main color of the website or brand                                                                                                                                                                                                                                |
-| **Primary Light**                                    | <p>Light version of the primary color<br>(Default: Primary 300)</p>                                                                                                                                                                                                                    |
-| **Primary Deep**                                     | <p>Deep version of the primary color<br>(Default: Primary 700)</p>                                                                                                                                                                                                                     |
-| **Secondary**                                        | The secondary color of the website or brand                                                                                                                                                                                                                                            |
-| **Accent**                                           | Accent color of the website or brand                                                                                                                                                                                                                                                   |
-| <mark style="color:blue;">**Extended Colors**</mark> | <mark style="color:blue;">Additional colors according to your brand. You can add, remove, or rename their names on the</mark> <mark style="color:blue;"></mark><mark style="color:blue;">**Variables**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">panel.</mark> |
-
 |                       | Description / Purpose                          |
 | --------------------- | ---------------------------------------------- |
 | **Surface**           | The option of background color                 |
@@ -44,10 +41,22 @@ By default, variables in **Colors** cover **Text**, **Stroke**, **Primary**, **S
 | **Focus Subtle** | Light version of focus color |
 
 {% hint style="danger" %}
-Renaming and removing the **default Colors** variables will not break your site, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
+Renaming and removing the default **Colors** variables will not break your site, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
 {% endhint %}
 
 
+
+## Colors: Extended
+
+|                     | Description / Purpose                                                                                                  |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Extended Colors** | Additional colors of your brand identity. You can modify, add, or rename the extended colors to align with your brand. |
+
+
+
+## Colors: Special
+
+Stored the colors that are useful for other specific purposes.
 
 
 
