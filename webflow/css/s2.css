@@ -654,7 +654,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 /* pulse-bg */
 @keyframes pulse-bg { 0%, 100% { background-color: var(--bg-s, #aaa); } 50% { background-color: var(--bg-e, #ddd); } }
 [animation^="pulse-bg"] { animation: pulse-bg 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-[animation="pulse-bg"] { --bg-s: var(--colors--primary); --bg-e: var(--colors--primary-300); }
+[animation="pulse-bg"] { --bg-s: var(--_palettes---primary--500); --bg-e: var(--_palettes---primary--300); }
 
 /* controls */
 [animation-direction="reverse"] { animation-direction: reverse; }
