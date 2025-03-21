@@ -103,7 +103,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 /* -- S2 Attributes -- */
 /* ------------------- */
 
-/* Last updated with: S2 Framework v2.2.2.0 */
+/* Last updated with: S2 Framework v2.2.6.4 */
 
 /* basics */
 [hidden], [hide], .u-hide { display: none; }
@@ -162,8 +162,8 @@ body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode
 [line-clamp="4"] { -webkit-line-clamp: 4; }
 [line-clamp="5"] { -webkit-line-clamp: 5; }
 [line-clamp="6"] { -webkit-line-clamp: 6; }
-[box-deco="clone"] { box-decoration-break: clone; }
-[box-deco="slice"] { box-decoration-break: slice; }
+[box-deco="clone"] { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+[box-deco="slice"] { -webkit-box-decoration-break: clone; box-decoration-break: slice; }
 [float="start"] { float: inline-start; }
 [float="end"] { float: inline-end; }
 [float="left"] { float: left; margin-right: 0.5ch; }
