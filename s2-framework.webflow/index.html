@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Mar 21 2025 02:02:09 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Mar 29 2025 14:16:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -355,7 +355,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.6.4/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.7.3/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -680,7 +680,7 @@ https://fontawesome.com/search?ic=free
           <header class="title-layout">
             <div class="title-wrapper cc-align-center">
               <div class="tag-wrapper">
-                <div data-nosnippet="true" gradient="3" class="code-label">v2.2.6</div>
+                <div data-nosnippet="true" gradient="3" class="code-label">v2.2.7</div>
               </div>
               <div style="margin: 1.15rem 0 0.5rem 0;" class="title-wrapper cc-xl">
                 <h1 data-element="glitch" white-space="nowrap" class="sg-hero-heading">S2 Framework</h1>
@@ -796,10 +796,14 @@ https://fontawesome.com/search?ic=free
             "use strict";
             // function to set a cookie
             function setCookie(name, value, days) {
-              const date = new Date();
-              date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-              const expires = "expires=" + date.toUTCString();
-              document.cookie = `${name}=${value}; ${expires}; path=/`;
+              try {
+                const date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = `${name}=${value}; ${expires}; path=/`;
+              } catch (error) {
+                console.error("Error setting cookie:", error);
+              }
             }
             // function to get a cookie by name
             function getCookie(name) {
@@ -814,7 +818,7 @@ https://fontawesome.com/search?ic=free
               }
               return "";
             }
-            // function to check if consent is given
+            // manages the display and interaction
             function checkConsent() {
               const consentBox = document.querySelector('[cookieConsent="true"]');
               if (!consentBox) return;
@@ -822,27 +826,27 @@ https://fontawesome.com/search?ic=free
                 consentBox.getAttribute("cookieConsent-name") || "cookie_consent";
               const cookieValue =
                 consentBox.getAttribute("cookieConsent-value") || "accepted";
+              // set duration in days
               const duration =
                 parseInt(consentBox.getAttribute("cookieConsent-duration")) || 30;
-              // if cookie exists and has the accepted value, do not show the consent box
               if (getCookie(cookieName) === cookieValue) {
                 consentBox.style.display = "none";
                 return;
               }
-              // show the consent box
               consentBox.style.display = "block";
-              // handle "allow"
               const acceptBtn = consentBox.querySelector(
                 '[cookieConsent-action="allow"]'
               );
               if (acceptBtn) {
-                acceptBtn.addEventListener("click", function() {
+                const acceptHandler = function() {
                   setCookie(cookieName, cookieValue, duration);
                   consentBox.style.display = "none";
-                });
+                  acceptBtn.removeEventListener("click", acceptHandler);
+                };
+                acceptBtn.addEventListener("click", acceptHandler);
               }
             }
-            // initialize the consent check when the DOM is fully loaded
+            // initialize the script when the DOM is ready
             if (
               document.readyState === "complete" ||
               document.readyState === "interactive"
@@ -875,7 +879,7 @@ https://fontawesome.com/search?ic=free
         </div>
         <div class="text-xs">We use <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>, <a href="http://clarity.microsoft.com" target="_blank">Microsoft Clarity</a> and <a href="https://umami.is" target="_blank">Umami</a> to analyze this site without collecting personal data. By browsing, you consent to our use of cookies.</div>
         <div style="opacity: 0.75;" class="text-2xs">
-          <div>This notice is just for transparency, not EU compliance. <strong>Like this simple Cookie Consent component? Clone it away!</strong></div>
+          <div>This notice is just for transparency, not EU compliance. <strong>Like this super simple Cookie Consent? Clone it away!</strong></div>
         </div>
       </div>
       <div user-select="none" class="cookie-consent_actions">

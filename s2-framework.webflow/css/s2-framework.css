@@ -412,6 +412,8 @@ sub {
 code {
   border-radius: var(--_sizes---radius--xs);
   background-color: var(--colors--surface-muted);
+  opacity: .75;
+  filter: contrast(110%);
   outline-color: var(--colors--stroke-subtle);
   outline-offset: -1px;
   color: var(--colors--text-muted);
@@ -825,6 +827,11 @@ figcaption {
 .image.cc-preview {
   aspect-ratio: 3 / 2;
   border-radius: var(--_sizes---radius--base);
+}
+
+.image.cc-video-cover {
+  z-index: -3;
+  position: relative;
 }
 
 .text-wrapper {
@@ -6291,8 +6298,8 @@ figcaption {
   overflow: clip;
 }
 
-.s2-demo-box.cc-max-80svh {
-  max-height: 80svh;
+.s2-demo-box.cc-max-75svh {
+  max-height: 75svh;
 }
 
 .s2-demo-expand-button {
@@ -6303,6 +6310,7 @@ figcaption {
   text-align: center;
   cursor: pointer;
   border-top-left-radius: 30%;
+  border-bottom-right-radius: 0;
   justify-content: center;
   align-items: center;
   padding: .45rem .55rem;
@@ -7889,6 +7897,15 @@ figcaption {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   position: relative;
+}
+
+.plyr-player {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: clip;
 }
 
 @media screen and (max-width: 991px) {

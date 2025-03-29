@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Mar 21 2025 02:02:09 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Mar 29 2025 14:16:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -168,7 +168,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.6.4/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.7.3/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -2556,7 +2556,7 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <div style="position: relative; height: 12rem;" class="card cc-p-0">
-                        <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                        <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                       </div>
                     </div>
                   </div>
@@ -2604,7 +2604,7 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <div style="gap: 1rem;" class="sg-flex-wrap">
-                        <div class="video-wrapper"><video width="100%" controls="" muted="" preload="metadata" playsinline="true" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" class="video">
+                        <div class="video-wrapper"><video width="100%" controls="" muted="" preload="metadata" playsinline="true" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" crossorigin="anonymous" class="video">
                             <source src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/media/pexels-5845753.mp4" type="video/mp4">
                           </video></div>
                       </div>
@@ -2617,7 +2617,7 @@ https://fontawesome.com/search?ic=free
                       </div>
                     </div>
                     <div class="block">
-                      <div style="position: relative; height: 15rem;" class="card cc-p-0"><video autoplay="true" muted="" preload="metadata" playsinline="true" loop="" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" class="bg-video">
+                      <div style="position: relative; height: 15rem;" class="card cc-p-0"><video autoplay="true" muted="" preload="metadata" playsinline="true" loop="" poster="https://images.pexels.com/videos/5845753/pexels-photo-5845753.jpeg" crossorigin="anonymous" class="bg-video">
                           <source src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework/assets/media/pexels-5845753.mp4" type="video/mp4">
                         </video></div>
                     </div>
@@ -2839,12 +2839,13 @@ https://fontawesome.com/search?ic=free
                         <div class="tag-wrapper">
                           <div class="tag-label cc-attribute">truncate</div>
                         </div>
-                        <div class="sg-note">wrapped with <span class="tag-label">block</span> <span class="tag-label">cc-full</span> in the example as it needs a wrapper with width value</div>
+                        <div class="sg-note">only works when the element or its parent has a set width</div>
                       </div>
                       <div class="block">
                         <div class="card">
                           <div class="block cc-full">
                             <div truncate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                            <p truncate="" style="max-width: 300px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                           </div>
                         </div>
                       </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Mar 21 2025 02:02:09 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Mar 29 2025 14:16:58 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -218,7 +218,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.6.4/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.2.7.3/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -580,6 +580,9 @@ https://fontawesome.com/search?ic=free
                 <a href="#footers" class="sg-side_sub-link w-inline-block">
                   <div>Footers</div>
                 </a>
+                <a href="#plyr" class="sg-side_sub-link w-inline-block">
+                  <div>Plyr Player</div>
+                </a>
               </div>
             </div>
           </nav>
@@ -926,7 +929,7 @@ https://fontawesome.com/search?ic=free
                 <div class="box-label">
                   <div>Title Layouts</div>
                 </div>
-                <div demo-expand="" overflow-y="auto" class="s2-demo-box cc-max-80svh">
+                <div demo-expand="" overflow-y="auto" class="s2-demo-box cc-max-75svh">
                   <div style="padding: 1rem;" class="block">
                     <div mb="2" gap="3-2" class="grid-cols">
                       <header class="title-layout">
@@ -2342,25 +2345,286 @@ https://fontawesome.com/search?ic=free
                 </div>
               </div>
             </section>
-            <div class="u-hide">
-              <div class="s2-demo">
-                <div class="box-label">
-                  <div>S2 Components Demo</div>
+            <section id="plyr" class="section cc-bottom-sm">
+              <div class="title-wrapper">
+                <div class="title-wrapper">
+                  <h2 class="h4">Plyr Video Player</h2>
                 </div>
-                <div demo-expand="" class="s2-demo-box cc-expand">
-                  <div class="s2-demo-expand-button w-embed">
-                    <div class="icon" events="none" icon="expand"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M37 5C37 3.89543 36.1046 3 35 3H25C23.8954 3 23 3.89543 23 5C23 6.10457 23.8954 7 25 7H30.1712L21.9188 15.2525C21.1377 16.0335 21.1377 17.2998 21.9188 18.0809C22.6998 18.8619 23.9662 18.8619 24.7472 18.0809L33 9.8281V15C33 16.1046 33.8954 17 35 17C36.1046 17 37 16.1046 37 15V5Z" fill="currentColor"></path>
-                        <path d="M7 25C7 23.8954 6.10457 23 5 23C3.89543 23 3 23.8954 3 25V34.9998V34.9998C3 35.0071 3.00004 35.0145 3.00012 35.0218C3.00265 35.2593 3.04658 35.4868 3.12503 35.6976C3.22209 35.959 3.37568 36.2043 3.58579 36.4144C3.82319 36.6518 4.10544 36.817 4.40526 36.9101C4.50755 36.9419 4.61336 36.9657 4.72195 36.9808C4.82265 36.9949 4.92421 37.0013 5.02569 37H15C16.1046 37 17 36.1046 17 35C17 33.8954 16.1046 33 15 33H9.82859L18.0809 24.7477C18.8619 23.9667 18.8619 22.7003 18.0809 21.9193C17.2998 21.1382 16.0335 21.1382 15.2525 21.9193L7 30.1717V25Z" fill="currentColor"></path>
-                      </svg></div>
-                    <div class="icon" events="none" icon="close" style="display: none;"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.667 23.4191C18.667 22.3145 17.7716 21.4191 16.667 21.4191H6.66699C5.56242 21.4191 4.66699 22.3145 4.66699 23.4191C4.66699 24.5237 5.56242 25.4191 6.66699 25.4191H11.8382L3.58579 33.6716C2.80474 34.4526 2.80474 35.719 3.58579 36.5C4.36684 37.281 5.63317 37.281 6.41421 36.5L14.667 28.2472V33.4191C14.667 34.5237 15.5624 35.4191 16.667 35.4191C17.7716 35.4191 18.667 34.5237 18.667 33.4191V23.4191Z" fill="currentColor"></path>
-                        <path d="M25.4174 6.6665C25.4174 5.56193 24.5219 4.6665 23.4174 4.6665C22.3128 4.6665 21.4174 5.56193 21.4174 6.6665V16.6663C21.4174 16.6736 21.4174 16.681 21.4175 16.6883C21.42 16.9258 21.4639 17.1533 21.5424 17.3641C21.6395 17.6255 21.793 17.8708 22.0031 18.0809C22.2405 18.3183 22.5228 18.4835 22.8226 18.5766C22.9249 18.6084 23.0307 18.6322 23.1393 18.6473C23.24 18.6614 23.3416 18.6678 23.4431 18.6665H33.4174C34.5219 18.6665 35.4174 17.7711 35.4174 16.6665C35.4174 15.5619 34.5219 14.6665 33.4174 14.6665H28.2459L36.4982 6.41421C37.2793 5.63317 37.2793 4.36684 36.4982 3.58579C35.7172 2.80474 34.4509 2.80474 33.6698 3.58579L25.4174 11.8382V6.6665Z" fill="currentColor"></path>
-                      </svg></div>
+                <div class="text-wrapper cc-max-40rem">
+                  <div class="text-sm"><span class="tag-label">Advanced</span> <strong>Plyr</strong> is a powerful, accessible, and customizable media player for HTML5 video, audio, YouTube, and Vimeo. You can further develop the player based on our demos and custom code. Feel free to remove this section if it is not relevant to your use case.<br>Learn more: <a href="https://plyr.io/" target="_blank">Plyr</a> | <a href="#" target="_blank">CodePen</a>
                   </div>
                 </div>
               </div>
-            </div>
+              <section class="section cc-top-sm">
+                <div style="margin-bottom: 3rem;" class="container cc-10c">
+                  <div class="js w-embed w-script"><!--  Plyr CSS and JS  -->
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+                    <!--  Initialize Plyr Players and Customization  -->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          window.players = window.players || [];
+                          // Initialize Plyr for each .video-wrapper containing a .plyr-player
+                          document.querySelectorAll(".video-wrapper").forEach((wrapper) => {
+                            const playerElement = wrapper.querySelector(".plyr-player");
+                            if (!playerElement) return;
+                            const config = {
+                              tooltips: {
+                                controls: true,
+                                seek: true
+                              }
+                            };
+                            const provider = playerElement.getAttribute("data-plyr-provider");
+                            // Provider-specific configuration
+                            if (provider === "youtube") {
+                              const videoId = playerElement.getAttribute("data-plyr-embed-id");
+                              config.youtube = {
+                                color: "white",
+                                rel: 0,
+                                iv_load_policy: 3,
+                                controls: 0,
+                                autoplay: playerElement.hasAttribute("autoplay") ||
+                                  playerElement.hasAttribute("data-autoplay"),
+                                mute: playerElement.hasAttribute("muted"),
+                                playsinline: 1
+                              };
+                              // Try to enable looping on YouTube by using a playlist (may not work)
+                              if (playerElement.hasAttribute("loop")) {
+                                const playlistId =
+                                  playerElement.getAttribute("data-playlist") || videoId;
+                                config.youtube.loop = 1;
+                                config.youtube.playlist = playlistId;
+                              }
+                            } else if (provider === "vimeo") {
+                              config.vimeo = {
+                                playsinline: 1,
+                                autoplay: playerElement.hasAttribute("autoplay") ||
+                                  playerElement.hasAttribute("data-autoplay"),
+                                muted: playerElement.hasAttribute("muted"),
+                                loop: playerElement.hasAttribute("loop")
+                              };
+                            }
+                            // Create Plyr instance and store it
+                            const player = new Plyr(playerElement, config);
+                            window.players.push(player);
+                            wrapper.plyrPlayer = player;
+                            // Additional settings for HTML5 videos
+                            const videoElement =
+                              playerElement.tagName === "VIDEO" ? playerElement : null;
+                            if (videoElement) {
+                              if (
+                                videoElement.hasAttribute("autoplay") ||
+                                videoElement.hasAttribute("data-autoplay")
+                              ) {
+                                player.on("canplay", () => {
+                                  player.play().catch((error) => {
+                                    console.warn("Autoplay was prevented:", error);
+                                  });
+                                });
+                              }
+                              if (videoElement.hasAttribute("loop")) {
+                                player.on("ended", () => {
+                                  player.restart();
+                                });
+                              }
+                              if (videoElement.hasAttribute("muted")) {
+                                player.muted = true;
+                              }
+                              if (videoElement.hasAttribute("playsinline")) {
+                                videoElement.setAttribute("playsinline", "");
+                              }
+                            }
+                            // Create a custom class for styling purpose
+                            const customClass = "plyr--paused-not-ended";
+                            const container = playerElement.closest(".plyr");
+                            if (container) {
+                              const removeCustomClass = () => container.classList.remove(customClass);
+                              player.on("pause", () => {
+                                if (!player.ended) {
+                                  container.classList.add(customClass);
+                                }
+                              });
+                              player.on("play", removeCustomClass);
+                              player.on("ended", removeCustomClass);
+                            }
+                          });
+                        });
+                      </script>
+                    <!--  Custom Control Buttons  -->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          document.querySelectorAll(".video-wrapper").forEach((wrapper) => {
+                            const player =
+                              wrapper.plyrPlayer ||
+                              (window.players &&
+                                window.players.find(
+                                  (p) => p.element.closest(".video-wrapper") === wrapper
+                                ));
+                            if (!player) return;
+                            const controls = [{
+                                selector: ".js-play",
+                                action: () => player.play()
+                              },
+                              {
+                                selector: ".js-pause",
+                                action: () => player.pause()
+                              },
+                              {
+                                selector: ".js-rewind",
+                                action: () => player.rewind(10)
+                              },
+                              {
+                                selector: ".js-forward",
+                                action: () => player.forward(10)
+                              }
+                            ];
+                            controls.forEach(({
+                              selector,
+                              action
+                            }) => {
+                              const btn = wrapper.querySelector(selector);
+                              if (btn) btn.addEventListener("click", action);
+                            });
+                          });
+                        });
+                      </script>
+                  </div>
+                  <div class="css w-embed"><!--  Custom CSS for Plyr Players  -->
+                    <style>
+                        :root {
+                          --plyr-color-main: var(--colors--accent);
+                          --plyr-video-background: rgba(0, 0, 0, 1);
+                          --plyr-player-radius: 1.25rem;
+                        }
+                        .plyr,
+                        .plyr-player,
+                        .plyr-player .image.cc-video-cover {
+                          width: 100%;
+                          border-radius: var(--plyr-player-radius);
+                        }
+                        .plyr:fullscreen,
+                        .plyr:fullscreen video {
+                          border-radius: 0 !important;
+                          object-fit: contain !important;
+                        }
+                        /* transition for iframe to hide YouTube recommendations */
+                        .plyr iframe {
+                          opacity: 0;
+                          transition: opacity 0ms linear;
+                          transition-delay: 0ms;
+                        }
+                        .plyr.plyr--playing iframe,
+                        .plyr.plyr--paused-not-ended iframe {
+                          opacity: 1;
+                          transition: opacity 1600ms ease;
+                          transition-delay: 800ms;
+                        }
+                        /* hide Plyr controls until a video is played */
+                        .plyr.plyr--stopped .plyr__controls {
+                          display: none;
+                        }
+                        /* trick to make YouTube's UI invisible */
+                        .plyr--youtube iframe {
+                          height: 300% !important;
+                          top: -100% !important;
+                        }
+                        /* remove duplicated Vimeo caption generated by Plyr */
+                        .plyr--vimeo .plyr__captions,
+                        .plyr--vimeo [data-plyr="captions"] {
+                          display: none;
+                        }
+                      </style>
+                  </div>
+                  <div style="gap: 1.75rem;" class="u-vflex-stretch-top">
+                    <div data-preview-thumbnails="https://cdn.plyr.io/static/demo/thumbs/240p.vtt" class="video-wrapper">
+                      <p class="h6">HTML 5 Video: Multiple resolutions</p><video playsinline="" preload="metadata" crossorigin="anonymous" data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" class="plyr-player">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                        <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt">
+                        <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                      </video>
+                      <div class="w-embed">
+                        <div style="display: flex; gap: 0.35rem;">
+                          <button class="pill js-play">Play</button>
+                          <button class="pill js-pause">Pause</button>
+                          <button class="pill js-rewind u-hide_sm">Rewind</button>
+                          <button class="pill js-forward u-hide_sm">Forward</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-preview-thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt" class="video-wrapper">
+                      <p class="h6">HTML 5 Video: Autoplay + Muted + Loop</p><video playsinline="" preload="metadata" crossorigin="anonymous" data-poster="https://files.vidstack.io/sprite-fight/poster.webp" poster="https://files.vidstack.io/sprite-fight/poster.webp" data-autoplay="true" class="plyr-player">
+                        <source src="https://files.vidstack.io/sprite-fight/720p.mp4" type="video/mp4">
+                        <track kind="captions" label="English" srclang="en" src="https://files.vidstack.io/sprite-fight/subs/english.vtt">
+                        <track kind="captions" label="Spanish" srclang="es" src="https://files.vidstack.io/sprite-fight/subs/spanish.vtt">
+                      </video>
+                      <div class="w-embed">
+                        <div style="display: flex; gap: 0.35rem;">
+                          <button class="pill js-play">Play</button>
+                          <button class="pill js-pause">Pause</button>
+                          <button class="pill js-rewind u-hide_sm">Rewind</button>
+                          <button class="pill js-forward u-hide_sm">Forward</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="video-wrapper">
+                      <p class="h6">YouTube</p>
+                      <div data-plyr-provider="youtube" data-plyr-embed-id="JgHpOWYcDsA" data-poster="https://www.mbusa.com/content/dam/mb-nafta/us/future-vehicles/my25/maybach-sl/gallery/full/2025-MAYBACH-SL-ROADSTER-FMG-001-FE-DR.jpg" class="plyr-player"><img src="https://www.mbusa.com/content/dam/mb-nafta/us/future-vehicles/my25/maybach-sl/gallery/full/2025-MAYBACH-SL-ROADSTER-FMG-001-FE-DR.jpg" alt="" aria-hidden="true" tabindex="-1" class="image cc-video-cover"></div>
+                      <div class="w-embed">
+                        <div style="display: flex; gap: 0.35rem;">
+                          <button class="pill js-play">Play</button>
+                          <button class="pill js-pause">Pause</button>
+                          <button class="pill js-rewind u-hide_sm">Rewind</button>
+                          <button class="pill js-forward u-hide_sm">Forward</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="video-wrapper">
+                      <p class="h6">YouTube: No Poster</p>
+                      <div data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY" data-poster="" class="plyr-player"><img src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" alt="" aria-hidden="true" tabindex="-1" class="image cc-video-cover"></div>
+                      <div class="w-embed">
+                        <div style="display: flex; gap: 0.35rem;">
+                          <button class="pill js-play">Play</button>
+                          <button class="pill js-pause">Pause</button>
+                          <button class="pill js-rewind u-hide_sm">Rewind</button>
+                          <button class="pill js-forward u-hide_sm">Forward</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="video-wrapper">
+                      <p class="h6">Vimeo</p>
+                      <div data-plyr-provider="vimeo" data-plyr-embed-id="154856650" data-poster="https://i.vimeocdn.com/video/555456812-9166af36f284712fb70dc2dfcde0229ca41595b9a82e627e60afa65402d072a8-d_640x360" class="plyr-player"><img src="https://i.vimeocdn.com/video/555456812-9166af36f284712fb70dc2dfcde0229ca41595b9a82e627e60afa65402d072a8-d_640x360" alt="" aria-hidden="true" tabindex="-1" class="image cc-video-cover"></div>
+                      <div class="w-embed">
+                        <div style="display: flex; gap: 0.35rem;">
+                          <button class="pill js-play">Play</button>
+                          <button class="pill js-pause">Pause</button>
+                          <button class="pill js-rewind u-hide_sm">Rewind</button>
+                          <button class="pill js-forward u-hide_sm">Forward</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="video-wrapper">
+                      <p class="h6">Vimeo</p>
+                      <div data-plyr-provider="vimeo" data-plyr-embed-id="255546259" data-poster="https://i.vimeocdn.com/video/682983081-4228f74d8f0488ebaee8f0bf70075d9441c42d21ce17278d42530e6babd4219b-d_640x360" class="plyr-player"><img src="https://i.vimeocdn.com/video/682983081-4228f74d8f0488ebaee8f0bf70075d9441c42d21ce17278d42530e6babd4219b-d_640x360" alt="" aria-hidden="true" tabindex="-1" class="image cc-video-cover"></div>
+                      <div class="w-embed">
+                        <div style="display: flex; gap: 0.35rem;">
+                          <button class="pill js-play">Play</button>
+                          <button class="pill js-pause">Pause</button>
+                          <button class="pill js-rewind u-hide_sm">Rewind</button>
+                          <button class="pill js-forward u-hide_sm">Forward</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div mt="1" class="message cc-note">
+                  <div class="text-sm">💡 Custom CSS and JavaScript required. You can find them inside the container of this demo section.</div>
+                </div>
+                <div mt="1" class="message cc-note">
+                  <div class="text-sm">The cover image, which should be the same as the video poster, is just a placeholder for Webflow Designer. It will not be rendered on the website. Besides, you can use <code>data-autoplay</code> instead of <code>autoplay</code> to avoid annoying autoplay in Webflow Designer.</div>
+                </div>
+              </section>
+            </section>
           </div>
         </div>
       </div>
