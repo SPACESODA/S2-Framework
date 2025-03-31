@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Mar 31 2025 06:37:35 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Mar 31 2025 08:08:39 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -553,7 +553,7 @@ https://fontawesome.com/search?ic=free
       <style>
           /* background-color of the style guide */
           [body="sg"] {
-            background-color: var(--s2--surface);
+            background-color: #000;
           }
           /* force no text-decocration */
           [text-deco="none"],
@@ -566,7 +566,7 @@ https://fontawesome.com/search?ic=free
             --cover--tagline: 3.75cqw;
             --cover--message: 1.85cqw;
             --cover--button: 1.675cqw;
-            --cover--text-sm: calc(1.15cqw - 0.025vw);
+            --cover--text-sm: clamp(0.65rem, calc(1.075cqw - 0.05vw), 999rem);
             --cover--padding: 8vw;
           }
           .container.cc-full {
@@ -607,7 +607,7 @@ https://fontawesome.com/search?ic=free
           }
           .sg-cover_button {
             font-size: var(--cover--button);
-            padding: 1cqw 1.25cqw;
+            padding: 1cqw 1.35cqw;
             border-radius: 0;
           }
           .sg-cover_button.cc-browse {
@@ -620,10 +620,11 @@ https://fontawesome.com/search?ic=free
           .sg-cover_footer {
             position: absolute;
             left: auto;
-            top: 0.5rem;
+            top: 0.75cqw;
             right: 0%;
             bottom: auto;
             font-size: var(--cover--text-sm);
+            margin: 0 0 2rem 0;
           }
           .sg-cover_footer>div {
             display: flex;
@@ -657,10 +658,17 @@ https://fontawesome.com/search?ic=free
             :root {
               --cover--h1: 15.5cqw;
               --cover--message: 1.125rem;
-              --cover--button: 1.0825rem;
-              --cover--text-sm: 0.775rem;
+              --cover--button: 1.0725rem;
+              --cover--text-sm: 0.725rem;
+            }
+            .sg-cover_h1 {
+              margin: 0 0 4cqw 0;
+            }
+            .sg-cover_tagline {
+              margin: 0 0 6cqw 0;
             }
             .sg-cover_message {
+              margin: 0 0 2.5cqw 0;
               width: 100%;
             }
             .sg-cover_footer {
@@ -672,7 +680,8 @@ https://fontawesome.com/search?ic=free
               align-content: center;
             }
             .sg-cover_button {
-              padding: 0 1.125rem;
+              padding: 0.75rem 1rem;
+              min-height: auto;
               border-radius: 0;
             }
             .sg-cover_button.cc-browse {
@@ -681,26 +690,85 @@ https://fontawesome.com/search?ic=free
           }
           @media screen and (max-width: 767px) {
             :root {
-              --cover--tagline: clamp(1.25em, 5vw, 2rem);
-              --cover--padding: 1rem;
+              --cover--tagline: clamp(1.15em, 5.25vw, 2rem);
+              --cover--message: 1.125rem;
+              --cover--button: 0.95rem;
+              --cover--padding: 0.85rem;
             }
           }
-          @media screen and (max-width: 479px) {
-            .sg-cover_button.cc-clone {
-              padding: 0;
-            }
-          }
+          @media screen and (max-width: 479px) {}
         </style>
     </div>
     <main position="relative" class="main">
+      <div data-nosnippet="true" aria-hidden="true" tabindex="-1" class="sg-grid-guide">
+        <div class="css w-embed">
+          <style>
+              /* -- styles for the grid guide -- */
+              /* -- default visibility -- */
+              .sg-grid-guide {
+                display: none;
+              }
+              html.wf-design-mode .sg-grid-guide {
+                display: block !important;
+              }
+            </style>
+        </div>
+        <div class="css w-embed">
+          <style>
+              /* -- styles for the grid guide -- */
+              /* -- visibility option -- */
+              .sg-grid-guide {
+                display: block !important;
+              }
+            </style>
+        </div>
+        <div class="css w-embed">
+          <style>
+              /* -- styles for the grid guide -- */
+              .sg-grid-guide_list {
+                counter-reset: gridguides;
+              }
+              .sg-grid-guide_list>div::before {
+                counter-increment: gridguides;
+                content: counter(gridguides);
+              }
+              .sg-grid-guide_col {
+                box-shadow: inset -1px 0 0 0 #8c8c8c80, inset 1px 0 0 0 #8c8c8c80;
+              }
+            </style>
+        </div>
+        <div style="position: relative;" class="container cc-full">
+          <div class="sg-grid-guide_list u-grid-global">
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+            <div class="sg-grid-guide_col"></div>
+          </div>
+        </div>
+      </div>
       <section position="relative" height-is="min-100svh" flex="col" place-content="around" style="padding: 2.5rem 0 1rem 0;" class="section">
         <div tabindex="-1" z-index="-1" overflow="hidden" events="none" class="full-wrapper">
           <div class="full-cover w-embed">
-            <div class="full-cover s2-cover_bg"><img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=90&w=2800&auto=format" loading="eager" class="full-cover" alt=""></div>
+            <div class="full-cover s2-cover_bg"><img src="https://images.unsplash.com/photo-1607893351349-0cfa621476ed?q=90&w=2560&auto=format" loading="eager" class="full-cover" alt=""></div>
             <style>
                 .s2-cover_bg {
                   background: #000;
-                  opacity: 0.8;
+                  opacity: 0.3;
+                  filter: saturate(0%);
                 }
                 .s2-cover_bg img {
                   opacity: 0;
@@ -709,75 +777,15 @@ https://fontawesome.com/search?ic=free
                 }
               </style>
           </div>
-          <div data-nosnippet="true" aria-hidden="true" tabindex="-1" class="sg-grid-guide">
-            <div class="css w-embed">
-              <style>
-                  /* -- styles for the grid guide -- */
-                  /* -- default visibility -- */
-                  .sg-grid-guide {
-                    display: none;
-                  }
-                  html.wf-design-mode .sg-grid-guide {
-                    display: block !important;
-                  }
-                </style>
-            </div>
-            <div class="css w-embed">
-              <style>
-                  /* -- styles for the grid guide -- */
-                  /* -- visibility option -- */
-                  .sg-grid-guide {
-                    display: block !important;
-                  }
-                </style>
-            </div>
-            <div class="css w-embed">
-              <style>
-                  /* -- styles for the grid guide -- */
-                  .sg-grid-guide_list {
-                    counter-reset: gridguides;
-                  }
-                  .sg-grid-guide_list>div::before {
-                    counter-increment: gridguides;
-                    content: counter(gridguides);
-                  }
-                  .sg-grid-guide_col {
-                    box-shadow: inset -1px 0 0 0 #8c8c8c80, inset 1px 0 0 0 #8c8c8c80;
-                  }
-                </style>
-            </div>
-            <div style="position: relative;" class="container cc-full">
-              <div class="sg-grid-guide_list u-grid-global">
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-                <div class="sg-grid-guide_col"></div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="w-layout-blockcontainer container cc-full w-container">
-          <div style="filter: saturate(0%); margin-bottom: 0.25rem;" class="tag-wrapper">
+          <div style="filter: saturate(0%); margin: 0 0 0.35rem 0;" class="tag-wrapper">
             <div data-nosnippet="true" gradient="3" class="code-label">v2.2.7</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
           <p data-element="" class="sg-cover_tagline">A Webflow Framework for Everyone.<br>Flexible, Easy to master, and Straightforward.</p>
           <p data-element="flyIn" class="sg-cover_message">S2 is a powerful framework that provides a solid foundation for projects of any size. Build faster, smarter!</p>
-          <div style="margin: 3rem 0 2rem 0;" class="button-wrapper">
+          <div style="margin: 2.5rem 0 2rem 0;" class="button-wrapper">
             <a href="s2/styles.html" aria-label="Browse S2" data-element="flyIn" class="button cc-outline sg-cover_button cc-browse" rel="prefetch">
               <div>Browse S2</div>
             </a>
@@ -793,7 +801,7 @@ https://fontawesome.com/search?ic=free
           <div position="relative" class="block">
             <div class="block sg-cover_message" data-element="flyIn">
               <p data-element="flyIn">One-page Style Guide for Webflow Templates</p>
-              <div style="margin: 0 0 2rem 0;" class="button-wrapper">
+              <div style="margin: 0; padding: 0.25rem 0 2rem 0;" class="button-wrapper">
                 <a href="ref/style-guide.html" aria-label="Browse S2" data-element="flyIn" class="button cc-text sg-cover_button cc-templates">
                   <div>S2 for Templates</div>
                   <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -828,7 +836,7 @@ https://fontawesome.com/search?ic=free
                   </a>
                 </span>
               </div>
-              <div gap="sm" style="margin: 0.5rem 0 0 0;" class="block">
+              <div gap="sm" style="margin: 0.275rem 0 0 0;" class="block">
                 <div gap="word" flex-wrap="wrap-nice" class="u-hflex-center-center w-embed"><span>
                     <a href="http://s2-framework.gitbook.io/docs" target="_blink">Docs</a> and <a href="http://s2-framework.webflow.io/#changelog" target="_blink">Changelog</a>
                   </span></div>
@@ -857,7 +865,7 @@ https://fontawesome.com/search?ic=free
       </section>
     </main>
   </div>
-  <dialog cookieconsent="true" cookieconsent-duration="180" data-nosnippet="true" class="cookie-consent cc-position cc-floating">
+  <dialog cookieconsent="true" cookieconsent-duration="180" data-nosnippet="true" hidden="" class="cookie-consent cc-position cc-floating">
     <div class="js w-embed w-script"><!--  Simple Cookie Consent Notice  -->
       <script>
           (function() {
