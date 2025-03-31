@@ -1016,6 +1016,7 @@ figcaption {
 .button.cc-text {
   color: inherit;
   background-color: #0000;
+  min-width: auto;
 }
 
 .button.cc-xs {

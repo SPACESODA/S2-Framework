@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Mar 31 2025 05:46:46 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Mar 31 2025 06:37:35 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -91,7 +91,7 @@
         text-shadow: 4px 0 rgba(80, 80, 80, 0.75);
       }
       .glitch::after {
-        text-shadow: -4px 0 rgba(90, 90, 90, 0.75);
+        text-shadow: -4px 0 rgba(60, 60, 60, 0.75);
       }
       /* class to activate the glitch animation */
       .glitch-active::before {
@@ -549,7 +549,7 @@ https://fontawesome.com/search?ic=free
     <div code="css" class="css_page w-embed">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Judson&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Judson&family=Manrope:wght@600&display=swap" rel="stylesheet">
       <style>
           /* background-color of the style guide */
           [body="sg"] {
@@ -562,7 +562,7 @@ https://fontawesome.com/search?ic=free
           }
           /* content styles */
           :root {
-            --cover--h1: 11.5cqw;
+            --cover--h1: 12cqw;
             --cover--tagline: 3.75cqw;
             --cover--message: 1.85cqw;
             --cover--button: 1.675cqw;
@@ -577,12 +577,12 @@ https://fontawesome.com/search?ic=free
             font-size: calc(var(--cover--text-sm) + 0.15rem);
           }
           .sg-cover_h1 {
-            font-family: "Judson", serif;
-            font-weight: 400;
+            font-family: "Manrope", serif;
+            font-weight: 600;
             font-style: normal;
             font-size: var(--cover--h1);
             line-height: 1;
-            letter-spacing: -0.0125em;
+            letter-spacing: -0.025em;
             margin: 0 0 1rem 0;
           }
           .sg-cover_tagline {
@@ -606,8 +606,12 @@ https://fontawesome.com/search?ic=free
             width: 65%;
           }
           .sg-cover_button {
-            border-radius: 0;
             font-size: var(--cover--button);
+            padding: 1cqw 1.25cqw;
+            border-radius: 0;
+          }
+          .sg-cover_button.cc-browse {
+            box-shadow: inset 0 0 0 0.175cqw;
           }
           .sg-cover_button.cc-templates {
             padding: 0;
@@ -638,10 +642,20 @@ https://fontawesome.com/search?ic=free
             }
           }
           @media screen and (min-width: 1440px) {}
-          @media screen and (min-width: 1920px) {}
+          @media screen and (min-width: 1920px) {
+            .sg-cover_h1 {
+              margin: 0 0 1.75cqw 0;
+            }
+            .sg-cover_tagline {
+              margin: 0 0 3cqw 0;
+            }
+            .sg-cover_message {
+              margin: 0 0 3.75cqw 0;
+            }
+          }
           @media screen and (max-width: 991px) {
             :root {
-              --cover--h1: 16.75cqw;
+              --cover--h1: 15.5cqw;
               --cover--message: 1.125rem;
               --cover--button: 1.0825rem;
               --cover--text-sm: 0.775rem;
@@ -656,6 +670,13 @@ https://fontawesome.com/search?ic=free
               justify-content: flex-start;
               align-items: center;
               align-content: center;
+            }
+            .sg-cover_button {
+              padding: 0 1.125rem;
+              border-radius: 0;
+            }
+            .sg-cover_button.cc-browse {
+              box-shadow: inset 0 0 0 0.125rem;
             }
           }
           @media screen and (max-width: 767px) {
@@ -672,7 +693,7 @@ https://fontawesome.com/search?ic=free
         </style>
     </div>
     <main position="relative" class="main">
-      <section position="relative" height-is="min-100svh" flex="col" place-content="around" style="padding: 2.75rem 0 1rem 0;" class="section">
+      <section position="relative" height-is="min-100svh" flex="col" place-content="around" style="padding: 2.5rem 0 1rem 0;" class="section">
         <div tabindex="-1" z-index="-1" overflow="hidden" events="none" class="full-wrapper">
           <div class="full-cover w-embed">
             <div class="full-cover s2-cover_bg"><img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=90&w=2800&auto=format" loading="eager" class="full-cover" alt=""></div>
@@ -750,7 +771,7 @@ https://fontawesome.com/search?ic=free
           </div>
         </div>
         <div class="w-layout-blockcontainer container cc-full w-container">
-          <div style="filter: saturate(0%);" class="tag-wrapper">
+          <div style="filter: saturate(0%); margin-bottom: 0.25rem;" class="tag-wrapper">
             <div data-nosnippet="true" gradient="3" class="code-label">v2.2.7</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
@@ -770,8 +791,8 @@ https://fontawesome.com/search?ic=free
         </div>
         <div class="w-layout-blockcontainer container cc-full w-container">
           <div position="relative" class="block">
-            <div data-element="flyIn" class="block">
-              <p data-element="flyIn" class="sg-cover_message">One-page Style Guide for Webflow Templates</p>
+            <div class="block sg-cover_message" data-element="flyIn">
+              <p data-element="flyIn">One-page Style Guide for Webflow Templates</p>
               <div style="margin: 0 0 2rem 0;" class="button-wrapper">
                 <a href="ref/style-guide.html" aria-label="Browse S2" data-element="flyIn" class="button cc-text sg-cover_button cc-templates">
                   <div>S2 for Templates</div>
