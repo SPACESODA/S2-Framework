@@ -35,19 +35,13 @@ Finsweet's Fluid Responsive: [https://finsweet.com/client-first/docs/fluid-respo
 
 <details>
 
-<summary>Other color tools</summary>
+<summary>More color tools</summary>
 
 [https://coolors.co/contrast-checker](https://coolors.co/contrast-checker)
 
-[https://coolors.co/visualizer](https://coolors.co/visualizer/)
-
 [https://huemint.com](https://huemint.com/)
 
-[https://colorhunt.co](https://colorhunt.co/)
-
 [https://www.color-hex.com](https://www.color-hex.com/)
-
-[https://icolorpalette.com](https://icolorpalette.com/)
 
 [https://poolors.com](https://poolors.com/)
 
@@ -88,7 +82,7 @@ HTML Table Generator: [https://www.tablesgenerator.com/html\_tables](https://www
 
 ## Fonts
 
-PX to REM Converter: [https://nekocalc.com/px-to-rem-converter](https://nekocalc.com/px-to-rem-converter)
+PX to REM Converter: [https://remtopx.com](https://remtopx.com/)
 
 Fontjoy Font Pairing: [https://fontjoy.com](https://fontjoy.com/)
 

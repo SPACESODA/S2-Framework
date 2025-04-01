@@ -32,7 +32,7 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Radius          | Radius values.                                           |
 | Icon            | For icon sizes.                                          |
 | Button          | For sizes (heights) of buttons.                          |
-| Thickness       | For lines or borders.                                    |
+| Line            | For lines or borders.                                    |
 | Gap             | For gap heights and widths.                              |
 | Main Nav        | Grouping variables specifically for the main navigation. |
 | Outline         | For outline and offset values of outline.                |
@@ -40,15 +40,16 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 
 :open\_file\_folder: **Text**
 
-| Variable Groups  | Description                     |
-| ---------------- | ------------------------------- |
-| Font Family      | For global font selection.      |
-| Font Size        | For key font size variations.   |
-| List Spacing     | Spacing of lists.               |
-| Richtext Spacing | Spacing for Rich Text elements. |
+| Variable Groups  | Description                      |
+| ---------------- | -------------------------------- |
+| Font Family      | For global font selection.       |
+| Font Size        | For key font size variations.    |
+| List Spacing     | Spacing of lists.                |
+| Richtext Spacing | Spacing for Rich Text elements.  |
+| Other            | Other typography related values. |
 
 {% hint style="danger" %}
-<mark style="color:red;">While you can add more variables and edit the colors freely, you are not recommended to remove or rename the existing "</mark><mark style="color:red;">**Colors**</mark><mark style="color:red;">" and "</mark><mark style="color:red;">**Neutral**</mark><mark style="color:red;">" variables.</mark>
+<mark style="color:red;">While you can add more variables and edit the colors freely, it is not recommended that you remove or rename the existing "</mark><mark style="color:red;">**Colors**</mark><mark style="color:red;">" and "</mark><mark style="color:red;">**Neutral**</mark><mark style="color:red;">" variables.</mark>
 {% endhint %}
 
 
