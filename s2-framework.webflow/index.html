@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Mar 31 2025 08:08:39 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Apr 01 2025 01:13:32 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -562,19 +562,23 @@ https://fontawesome.com/search?ic=free
           }
           /* content styles */
           :root {
-            --cover--h1: 12cqw;
-            --cover--tagline: 3.75cqw;
-            --cover--message: 1.85cqw;
-            --cover--button: 1.675cqw;
-            --cover--text-sm: clamp(0.65rem, calc(1.075cqw - 0.05vw), 999rem);
+            --cover--h1: 11.75cqw;
+            --cover--tagline: 3.725cqw;
+            --cover--message: 1.725cqw;
+            --cover--button: 1.625cqw;
+            --cover--text-sm: 1.5cqw;
+            --cover--text-xs: 1.0625cqw;
             --cover--padding: 8vw;
+          }
+          .section {
+            padding: clamp(2rem, 3.5vw, 3.5vh) 0;
           }
           .container.cc-full {
             padding-left: var(--cover--padding);
             padding-right: var(--cover--padding);
           }
           .code-label {
-            font-size: calc(var(--cover--text-sm) + 0.15rem);
+            font-size: var(--cover--text-sm);
           }
           .sg-cover_h1 {
             font-family: "Manrope", serif;
@@ -607,7 +611,7 @@ https://fontawesome.com/search?ic=free
           }
           .sg-cover_button {
             font-size: var(--cover--button);
-            padding: 1cqw 1.35cqw;
+            padding: 1.125cqw 1.75cqw;
             border-radius: 0;
           }
           .sg-cover_button.cc-browse {
@@ -623,7 +627,7 @@ https://fontawesome.com/search?ic=free
             top: 0.75cqw;
             right: 0%;
             bottom: auto;
-            font-size: var(--cover--text-sm);
+            font-size: var(--cover--text-xs);
             margin: 0 0 2rem 0;
           }
           .sg-cover_footer>div {
@@ -637,12 +641,12 @@ https://fontawesome.com/search?ic=free
           .sg-cover_footer div::after {
             display: none;
           }
-          @media screen and (min-width: 1280px) {
+          @media screen and (min-width: 1280px) {}
+          @media screen and (min-width: 1440px) {
             :root {
-              --cover--h1: 12cqw;
+              --cover--padding: 12vw;
             }
           }
-          @media screen and (min-width: 1440px) {}
           @media screen and (min-width: 1920px) {
             .sg-cover_h1 {
               margin: 0 0 1.75cqw 0;
@@ -659,7 +663,8 @@ https://fontawesome.com/search?ic=free
               --cover--h1: 15.5cqw;
               --cover--message: 1.125rem;
               --cover--button: 1.0725rem;
-              --cover--text-sm: 0.725rem;
+              --cover--text-sm: clamp(0.825rem, calc(1.175cqw + 0.5rem), 9rem);
+              --cover--text-xs: 0.75rem;
             }
             .sg-cover_h1 {
               margin: 0 0 4cqw 0;
@@ -680,12 +685,15 @@ https://fontawesome.com/search?ic=free
               align-content: center;
             }
             .sg-cover_button {
-              padding: 0.75rem 1rem;
+              padding: 0.85rem 1.15rem;
               min-height: auto;
               border-radius: 0;
             }
             .sg-cover_button.cc-browse {
               box-shadow: inset 0 0 0 0.125rem;
+            }
+            .sg-cover_button.cc-templates {
+              padding: 1rem 0 3rem 0;
             }
           }
           @media screen and (max-width: 767px) {
@@ -760,7 +768,7 @@ https://fontawesome.com/search?ic=free
           </div>
         </div>
       </div>
-      <section position="relative" height-is="min-100svh" flex="col" place-content="around" style="padding: 2.5rem 0 1rem 0;" class="section">
+      <section position="relative" height-is="min-100svh" flex="col" place-content="around" class="section">
         <div tabindex="-1" z-index="-1" overflow="hidden" events="none" class="full-wrapper">
           <div class="full-cover w-embed">
             <div class="full-cover s2-cover_bg"><img src="https://images.unsplash.com/photo-1607893351349-0cfa621476ed?q=90&w=2560&auto=format" loading="eager" class="full-cover" alt=""></div>
@@ -779,13 +787,13 @@ https://fontawesome.com/search?ic=free
           </div>
         </div>
         <div class="w-layout-blockcontainer container cc-full w-container">
-          <div style="filter: saturate(0%); margin: 0 0 0.35rem 0;" class="tag-wrapper">
+          <div style="filter: saturate(0%); margin: 0 0 0.5rem 0;" class="tag-wrapper">
             <div data-nosnippet="true" gradient="3" class="code-label">v2.2.7</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
           <p data-element="" class="sg-cover_tagline">A Webflow Framework for Everyone.<br>Flexible, Easy to master, and Straightforward.</p>
           <p data-element="flyIn" class="sg-cover_message">S2 is a powerful framework that provides a solid foundation for projects of any size. Build faster, smarter!</p>
-          <div style="margin: 2.5rem 0 2rem 0;" class="button-wrapper">
+          <div style="margin: 4.5cqw 0 2rem 0;" class="button-wrapper">
             <a href="s2/styles.html" aria-label="Browse S2" data-element="flyIn" class="button cc-outline sg-cover_button cc-browse" rel="prefetch">
               <div>Browse S2</div>
             </a>
@@ -801,7 +809,7 @@ https://fontawesome.com/search?ic=free
           <div position="relative" class="block">
             <div class="block sg-cover_message" data-element="flyIn">
               <p data-element="flyIn">One-page Style Guide for Webflow Templates</p>
-              <div style="margin: 0; padding: 0.25rem 0 2rem 0;" class="button-wrapper">
+              <div style="margin: 0;" class="button-wrapper">
                 <a href="ref/style-guide.html" aria-label="Browse S2" data-element="flyIn" class="button cc-text sg-cover_button cc-templates">
                   <div>S2 for Templates</div>
                   <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -865,7 +873,7 @@ https://fontawesome.com/search?ic=free
       </section>
     </main>
   </div>
-  <dialog cookieconsent="true" cookieconsent-duration="180" data-nosnippet="true" hidden="" class="cookie-consent cc-position cc-floating">
+  <dialog cookieconsent="true" cookieconsent-duration="180" data-nosnippet="true" class="cookie-consent cc-position cc-floating">
     <div class="js w-embed w-script"><!--  Simple Cookie Consent Notice  -->
       <script>
           (function() {
