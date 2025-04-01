@@ -44,7 +44,7 @@
   --_text---font-size--sm: .992rem;
   --_sizes---line--thin: .0625rem;
   --_sizes---radius--card: .625rem;
-  --_sizes---line--1h: .1875rem;
+  --_sizes---line--3px: .1875rem;
   --colors--stroke-emphasis: var(--_palettes---neutral--600);
   --colors-special--success: #c0e9ad;
   --colors-special--success-text: #226d02;
@@ -138,11 +138,10 @@
   --colors-extended--10: #b4dc19;
   --colors-extended--11: #cd2f7b;
   --colors-extended--12: #ffafa5;
-  --_sizes---line--bold: .15625rem;
-  --_sizes---line--3h: .375rem;
+  --_sizes---line--6px: .375rem;
   --_sizes---gap--xs: .5rem;
   --_text---other--word-space: .35em;
-  --_sizes---line--2h: .25rem;
+  --_sizes---line--4px: .25rem;
   --colors-special--transparent-white: #fff0;
   --_palettes---accent--500: #f3bb09;
   --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -155,6 +154,7 @@
   --_text---richtext-spacing--sm: .5rem;
   --_text---other--lighter: 90%;
   --_sizes---radius--lg: .85rem;
+  --_sizes---line--bold: .15625rem;
   --_sizes---gap--sm: .75rem;
   --_sizes---gap--base: 1rem;
   --_sizes---gap--xl: 2rem;
@@ -1624,7 +1624,7 @@ figcaption {
   z-index: 3;
   grid-column-gap: 1.25rem;
   grid-row-gap: 1.25rem;
-  border-width: var(--_sizes---line--1h);
+  border-width: var(--_sizes---line--3px);
   border-color: var(--colors--stroke-emphasis);
   flex-flow: column;
   justify-content: flex-start;
@@ -7566,10 +7566,10 @@ figcaption {
 }
 
 .avatar-wrapper {
-  margin-top: var(--_sizes---line--bold);
-  margin-right: var(--_sizes---line--bold);
-  margin-bottom: var(--_sizes---line--bold);
-  margin-left: var(--_sizes---line--bold);
+  margin-top: var(--_sizes---line--base);
+  margin-right: var(--_sizes---line--base);
+  margin-bottom: var(--_sizes---line--base);
+  margin-left: var(--_sizes---line--base);
   border-top-left-radius: var(--_sizes---radius--rounded);
   border-top-right-radius: var(--_sizes---radius--rounded);
   border-bottom-left-radius: var(--_sizes---radius--rounded);
@@ -7619,7 +7619,7 @@ figcaption {
   border-bottom-left-radius: var(--_sizes---radius--rounded);
   border-bottom-right-radius: var(--_sizes---radius--rounded);
   background-color: var(--colors--surface-muted);
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--colors--stroke-subtle);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--stroke-subtle);
   color: var(--colors--text-muted);
   text-align: center;
   flex-flow: column wrap;
@@ -7641,45 +7641,45 @@ figcaption {
 }
 
 .avatar:hover {
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--colors--stroke);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--stroke);
 }
 
 .avatar.cc-primary {
   background-color: var(--_palettes---primary--100);
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--colors--primary);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--primary);
   color: var(--_palettes---primary--on-light);
 }
 
 .avatar.cc-primary:hover {
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--_palettes---primary--800);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--_palettes---primary--800);
 }
 
 .avatar.cc-secondary {
   background-color: var(--_palettes---secondary--100);
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--colors--secondary);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--secondary);
   color: var(--_palettes---secondary--on-light);
 }
 
 .avatar.cc-secondary:hover {
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--_palettes---secondary--800);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--_palettes---secondary--800);
 }
 
 .avatar.cc-accent {
   background-color: var(--_palettes---accent--100);
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--colors--accent);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--accent);
   color: var(--_palettes---accent--on-light);
 }
 
 .avatar.cc-accent:hover {
-  box-shadow: 0 0 0 var(--_sizes---line--bold) var(--_palettes---accent--800);
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--_palettes---accent--800);
 }
 
 .avatar.cc-styled {
-  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--3h) var(--colors--surface), 0 2px 6px 6px #0003;
+  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--6px) var(--colors--surface), 0 2px 6px 6px #0003;
 }
 
 .avatar.cc-styled:hover {
-  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--3h) var(--colors--accent), 0 2px 6px 6px #0003;
+  box-shadow: 0 2px 6px 0 #0003, 0 0 0 var(--_sizes---line--6px) var(--colors--accent), 0 2px 6px 6px #0003;
 }
 
 .avator_image {
@@ -7763,10 +7763,11 @@ figcaption {
   border-bottom-left-radius: var(--_sizes---radius--rounded);
   border-bottom-right-radius: var(--_sizes---radius--rounded);
   background-color: var(--_palettes---primary--100);
-  pointer-events: none;
   color: var(--_palettes---primary--on-light);
   text-align: center;
   cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
   width: min-content;
   min-width: clamp(1.25rem, 30cqw, 2rem);
   max-width: none;
@@ -7860,7 +7861,7 @@ figcaption {
   grid-column-gap: var(--_text---other--word-space);
   grid-row-gap: var(--_text---other--word-space);
   background-color: var(--colors-special--transparent);
-  box-shadow: 0 var(--_sizes---line--2h) 0 0 var(--colors--stroke-subtle);
+  box-shadow: 0 var(--_sizes---line--4px) 0 0 var(--colors--stroke-subtle);
   color: var(--colors--text-muted);
   flex-flow: wrap;
   flex: 1;
@@ -7884,7 +7885,7 @@ figcaption {
 
 .tab-link.w--current {
   background-color: var(--colors-special--transparent);
-  box-shadow: 0 var(--_sizes---line--2h) 0 0 var(--colors--primary);
+  box-shadow: 0 var(--_sizes---line--4px) 0 0 var(--colors--primary);
   color: var(--colors--text);
 }
 
@@ -7894,7 +7895,7 @@ figcaption {
 }
 
 .tab-pane {
-  margin-top: var(--_sizes---line--2h);
+  margin-top: var(--_sizes---line--4px);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   position: relative;
@@ -7981,16 +7982,16 @@ figcaption {
     --_sizes---outline--bold: .1875rem;
     --_sizes---line--thin: .0625rem;
     --_sizes---radius--card: .625rem;
-    --_sizes---line--1h: .1875rem;
+    --_sizes---line--3px: .1875rem;
     --_sizes---main-nav--height: 4.25rem;
     --_sizes---radius--xl: 1.25rem;
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
-    --_sizes---line--bold: .15625rem;
-    --_sizes---line--3h: .375rem;
+    --_sizes---line--6px: .375rem;
     --_sizes---gap--xs: .5rem;
-    --_sizes---line--2h: .25rem;
+    --_sizes---line--4px: .25rem;
     --_sizes---radius--lg: .85rem;
+    --_sizes---line--bold: .15625rem;
     --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
@@ -8409,16 +8410,16 @@ figcaption {
     --_sizes---outline--bold: .1875rem;
     --_sizes---line--thin: .0625rem;
     --_sizes---radius--card: .625rem;
-    --_sizes---line--1h: .1875rem;
+    --_sizes---line--3px: .1875rem;
     --_sizes---main-nav--height: 4rem;
     --_sizes---radius--xl: 1.25rem;
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
-    --_sizes---line--bold: .15625rem;
-    --_sizes---line--3h: .375rem;
+    --_sizes---line--6px: .375rem;
     --_sizes---gap--xs: .5rem;
-    --_sizes---line--2h: .25rem;
+    --_sizes---line--4px: .25rem;
     --_sizes---radius--lg: .85rem;
+    --_sizes---line--bold: .15625rem;
     --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
@@ -8954,16 +8955,16 @@ figcaption {
     --_sizes---outline--bold: .1875rem;
     --_sizes---line--thin: .0625rem;
     --_sizes---radius--card: .625rem;
-    --_sizes---line--1h: .1875rem;
+    --_sizes---line--3px: .1875rem;
     --_sizes---main-nav--height: 4rem;
     --_sizes---radius--xl: 1.25rem;
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
-    --_sizes---line--bold: .15625rem;
-    --_sizes---line--3h: .375rem;
+    --_sizes---line--6px: .375rem;
     --_sizes---gap--xs: .5rem;
-    --_sizes---line--2h: .25rem;
+    --_sizes---line--4px: .25rem;
     --_sizes---radius--lg: .85rem;
+    --_sizes---line--bold: .15625rem;
     --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
