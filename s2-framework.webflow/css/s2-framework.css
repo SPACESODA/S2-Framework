@@ -7909,6 +7909,60 @@ figcaption {
   overflow: clip;
 }
 
+.slider {
+  background-color: var(--colors-special--transparent);
+  height: 40cqw;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.slider_mask {
+  aspect-ratio: auto;
+}
+
+.slider_slide {
+  border-radius: var(--_sizes---radius--card);
+  position: relative;
+  overflow: clip;
+}
+
+.slider_arrow {
+  opacity: .6;
+  text-align: center;
+  width: clamp(2rem, 8cqw, 99rem);
+  font-size: 5cqw;
+  line-height: 1;
+  text-decoration: none;
+  transition-property: opacity;
+  transition-duration: .28s;
+  transition-timing-function: ease-out;
+}
+
+.slider_arrow:hover, .slider_arrow:focus {
+  opacity: 1;
+}
+
+.slider_nav {
+  text-align: center;
+  height: 1.5rem;
+  min-height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: .5rem;
+  padding-bottom: 0;
+  font-size: clamp(.5rem, 1.75cqw, 1rem);
+  line-height: 1.15;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: block;
+  container-type: inline-size;
+}
+
 @media screen and (max-width: 991px) {
   body {
     --_sizes---radius--xs: .275rem;
@@ -8875,6 +8929,10 @@ figcaption {
   .tabs-menu {
     grid-column-gap: var(--_sizes---gap--xs);
     grid-row-gap: var(--_sizes---gap--xs);
+  }
+
+  .slider_arrow {
+    font-size: 1.5rem;
   }
 }
 
