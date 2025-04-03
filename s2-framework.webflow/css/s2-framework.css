@@ -6424,7 +6424,7 @@ figcaption {
   padding: 0;
   display: block;
   position: fixed;
-  inset: auto auto .85rem .85rem;
+  inset: auto auto 0 0;
 }
 
 .delete-me.cc-dark {
@@ -7518,9 +7518,9 @@ figcaption {
   inset: 0%;
 }
 
-.video-wrapper {
-  grid-column-gap: .25rem;
-  grid-row-gap: .25rem;
+.player-wrapper {
+  grid-column-gap: .375rem;
+  grid-row-gap: .375rem;
   flex-flow: column;
   place-content: flex-start;
   align-self: flex-start;

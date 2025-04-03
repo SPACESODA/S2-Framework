@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Apr 01 2025 23:26:35 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Apr 03 2025 08:54:26 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66202061f8a728275a122f8d" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -47,7 +47,7 @@
   <script defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-rangeslider@1/rangeslider.js"></script>
 </head>
 <body dir="" body="sg" class="body">
-  <div data-nosnippet="true" tabindex="-1" animation="fadeIn" class="delete-me cc-clone-cta">
+  <div data-nosnippet="true" tabindex="-1" class="delete-me cc-clone-cta">
     <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
       <!--  For Style Guide only, you don't need the below scripts.  -->
       <!--  Hide Cookie Consent in iFrames  -->
@@ -119,10 +119,20 @@
       <!--  For Style Guide only, you don't need this.  -->
       <script defer="" src="https://cloud.umami.is/script.js" data-website-id="d01ab616-cead-4f79-b338-266617396737"></script>
     </div>
-    <div>
-      <a href="https://webflow.com/made-in-webflow/website/s2-framework" aria-label="Clone Now" target="_blank" class="button w-inline-block">
-        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M82.6152 5H34.725C28.1731 5 22.7931 10.1139 22.3668 16.5597H30.6794C31.063 14.6776 32.7312 13.257 34.725 13.257H82.6152C84.8916 13.257 86.7436 15.109 86.7436 17.3854V65.2757C86.7436 66.9654 85.7234 68.4212 84.2666 69.0595V77.5515C90.318 76.7417 95.0006 71.5453 95.0006 65.2757V17.3854C95.0006 10.5561 89.4445 5 82.6152 5ZM17.3854 22.3398H65.2758C72.1051 22.3398 77.6612 27.8959 77.6612 34.7252V82.6155C77.6612 89.4449 72.1051 95.001 65.2758 95.001H17.3854C10.5561 95.001 5 89.4449 5 82.6155V34.7252C5 27.8959 10.5561 22.3398 17.3854 22.3398ZM65.2758 86.744C67.5522 86.744 69.4042 84.892 69.4042 82.6155V34.7252C69.4042 32.4488 67.5522 30.5967 65.2758 30.5967H17.3854C15.109 30.5967 13.257 32.4488 13.257 34.7252V82.6155C13.257 84.892 15.109 86.744 17.3854 86.744H65.2758ZM37.2021 46.285H45.4591V54.5419H53.716V62.7989H45.4591V71.0558H37.2021V62.7989H28.9452V54.5419H37.2021V46.285Z" fill="currentColor"></path>
+    <div style="display: block;">
+      <div class="css w-embed">
+        <style>
+            .clone-button {
+              border-radius: 0;
+              min-height: auto;
+              padding: 0.6rem 0.85rem;
+              font-weight: bold;
+            }
+          </style>
+      </div>
+      <a href="https://webflow.com/made-in-webflow/website/s2-framework" animation="fadeIn" aria-label="Clone Now" target="_blank" class="button w-inline-block clone-button">
+        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8562 0L19.6486 18H11L14.8534 10.54H14.6805C11.5015 14.6668 6.7583 17.3835 0 18V10.6433C0 10.6433 4.32345 10.3879 6.86508 7.71575H0V0.000141978H7.71561V6.34612L7.88878 6.34541L11.0417 0.000141978H16.8768V6.30588L17.0499 6.3056L20.3211 0H28.8562Z" fill="currentColor"></path>
           </svg></div>
         <div class="text-sm">Clone Now</div>
       </a>
@@ -206,7 +216,7 @@ https://phosphoricons.com
 Font Awesome Free: Solid, Regular, Brands
 https://fontawesome.com/search?ic=free
  -->
-          <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" rel="stylesheet">
           <style>
               .icon[class*="fa"] {
                 display: block !important;
@@ -446,7 +456,7 @@ https://fontawesome.com/search?ic=free
             [text-deco="none"] a {
               text-decoration: none !important;
             }
-            /* layout adjustments */
+            /* other styles */
             .sg-element>section,
             .sg-element>.section {
               flex: 1;
@@ -473,12 +483,12 @@ https://fontawesome.com/search?ic=free
               bottom: 0rem;
               left: 0rem;
               z-index: 1000000;
+              border-radius: 0rem;
               width: auto !important;
               max-height: none !important;
-              margin: 0rem;
-              border-radius: 0rem;
               box-shadow: none !important;
               padding: 0px;
+              margin: 0rem;
               overflow: scroll;
               overscroll-behavior: none;
             }
