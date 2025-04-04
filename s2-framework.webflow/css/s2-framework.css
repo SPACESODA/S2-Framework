@@ -3743,7 +3743,7 @@ figcaption {
   display: flex;
 }
 
-.flex-cols.cc-sticky-nav {
+.flex-cols.cc-sticky-col {
   align-items: flex-start;
 }
 
@@ -8085,7 +8085,7 @@ figcaption {
     justify-content: flex-start;
   }
 
-  .flex-cols.cc-sticky-nav {
+  .flex-cols.cc-sticky-col {
     flex-flow: column;
     justify-content: flex-start;
     align-items: stretch;
