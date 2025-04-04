@@ -139,7 +139,6 @@
   --colors-extended--11: #cd2f7b;
   --colors-extended--12: #ffafa5;
   --_sizes---line--6px: .375rem;
-  --_sizes---gap--xs: .5rem;
   --_text---other--word-space: .35em;
   --_sizes---line--4px: .25rem;
   --colors-special--transparent-white: #fff0;
@@ -155,6 +154,7 @@
   --_text---other--lighter: 90%;
   --_sizes---radius--lg: .85rem;
   --_sizes---line--bold: .15625rem;
+  --_sizes---gap--xs: .5rem;
   --_sizes---gap--sm: .75rem;
   --_sizes---gap--base: 1rem;
   --_sizes---gap--xl: 2rem;
@@ -3735,7 +3735,7 @@ figcaption {
   display: flex;
 }
 
-.cols-layout {
+.flex-cols {
   flex-flow: row;
   justify-content: space-between;
   align-items: stretch;
@@ -3743,13 +3743,7 @@ figcaption {
   display: flex;
 }
 
-.cols-layout.cc-max-120rem {
-  max-width: 120rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cols-layout.cc-sticky-aside {
+.flex-cols.cc-sticky-nav {
   align-items: flex-start;
 }
 
@@ -3819,7 +3813,7 @@ figcaption {
   padding-right: 0;
 }
 
-.col.cc-aside.cc-sticky {
+.col.cc-aside.cc-on-left_sticky {
   z-index: 999;
   order: 0;
   max-width: none;
@@ -4901,7 +4895,7 @@ figcaption {
   margin-inline-end: .35em;
   display: block;
   position: relative;
-  top: -2px;
+  top: -.035ch;
   overflow: clip;
   transform: translate(0, 8%);
 }
@@ -5838,6 +5832,8 @@ figcaption {
   pointer-events: none;
   color: #76b300;
   text-align: center;
+  white-space: pre-wrap;
+  word-break: break-all;
   background-image: url('../images/padding-bg-pattern.svg');
   background-position: 0 0;
   background-repeat: repeat;
@@ -5847,14 +5843,17 @@ figcaption {
   align-items: center;
   min-height: 3rem;
   margin: 0;
-  padding: 0;
+  padding: 0 0;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.025;
+  text-decoration: none;
   display: flex;
 }
 
 .u-bg-pattern.cc-with-border {
   border: 1px solid var(--s2--border-highlight);
+  padding-left: .25em;
+  padding-right: .25em;
 }
 
 .tag {
@@ -5962,7 +5961,7 @@ figcaption {
   border-bottom-left-radius: var(--_sizes---radius--card);
   border-bottom-right-radius: var(--_sizes---radius--card);
   background-color: var(--s2--surface-alt);
-  top: calc(var(--_sizes---main-nav--height)  + 1.25rem);
+  top: calc(var(--_sizes---main-nav--height)  + 1.5rem);
   flex-direction: column;
   max-height: 70svh;
   margin-top: 0;
@@ -7346,7 +7345,7 @@ figcaption {
   flex-flow: wrap;
   flex: 1;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   display: flex;
 }
@@ -7988,10 +7987,10 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
-    --_sizes---gap--xs: .5rem;
     --_sizes---line--4px: .25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
+    --_sizes---gap--xs: .5rem;
     --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
@@ -8079,14 +8078,14 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
-  .cols-layout.cc-vflex-at-md {
+  .flex-cols.cc-vflex-at-md {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     flex-flow: column;
     justify-content: flex-start;
   }
 
-  .cols-layout.cc-sticky-aside {
+  .flex-cols.cc-sticky-nav {
     flex-flow: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -8101,7 +8100,7 @@ figcaption {
     display: none;
   }
 
-  .col.cc-aside.cc-sticky {
+  .col.cc-aside.cc-on-left_sticky {
     margin-left: calc(-1 * var(--_sizes---line--base));
     margin-right: calc(-1 * var(--_sizes---line--base));
     order: 0;
@@ -8416,10 +8415,10 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
-    --_sizes---gap--xs: .5rem;
     --_sizes---line--4px: .25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
+    --_sizes---gap--xs: .5rem;
     --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
@@ -8570,7 +8569,7 @@ figcaption {
     position: relative;
   }
 
-  .cols-layout {
+  .flex-cols {
     flex-flow: column;
     justify-content: flex-start;
   }
@@ -8605,7 +8604,7 @@ figcaption {
     min-width: auto;
   }
 
-  .col.cc-aside.cc-sticky {
+  .col.cc-aside.cc-on-left_sticky {
     order: 0;
   }
 
@@ -8928,8 +8927,8 @@ figcaption {
   }
 
   .tabs-menu {
-    grid-column-gap: var(--_sizes---gap--xs);
-    grid-row-gap: var(--_sizes---gap--xs);
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
   }
 
   .slider_arrow {
@@ -8961,10 +8960,10 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
-    --_sizes---gap--xs: .5rem;
     --_sizes---line--4px: .25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
+    --_sizes---gap--xs: .5rem;
     --_sizes---gap--sm: .75rem;
     --_sizes---gap--base: 1rem;
     --_sizes---gap--xl: 2rem;
@@ -9297,8 +9296,8 @@ figcaption {
   }
 
   .tabs-menu {
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
   }
 }
 
