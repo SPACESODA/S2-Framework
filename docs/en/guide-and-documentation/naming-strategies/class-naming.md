@@ -203,7 +203,7 @@ To keep naming conventions consistent and more aligned with standard CSS, follow
 * Use the complete words when talking about `subtle` and `subscribe`. Use `sub` only if referring to "**subsidiary**".
 
 {% hint style="info" %}
-Unless you have many variants for the same thing, using **descriptive words** is always better than using **-1**, **-2**, **-3**, **-a**, **-b**, **-c**, etc. Descriptive names improve readability and clarity.
+Unless you have many variants that are hard to create a name for them, using **descriptive words** is always better than using **-1**, **-2**, **-3**, **-a**, **-b**, **-c**, etc. Descriptive names improve readability and clarity.
 {% endhint %}
 
 
@@ -219,6 +219,14 @@ Consider creating a new combo class by combining its combo classes. Example:
 ❌  `button` `cc-pill` `cc-outline` `cc-has-icon` `cc-lg`
 
 ✅  `button` `cc-pill` `cc-outline-with-icon` `cc-lg`
+
+{% hint style="success" %}
+**Exception** — Stacking classes for Column Layouts
+
+For example, 4 cols on Desktop (base); 6 on Tablet; 3 on Landscape; and 2 on Mobile.
+
+`col` `cc-span-4` `cc-span-6-md` `cc-span-3-sm` `cc-span-2-xs`
+{% endhint %}
 
 
 

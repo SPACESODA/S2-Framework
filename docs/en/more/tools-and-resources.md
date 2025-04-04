@@ -100,9 +100,13 @@ Phosphor Icons: [https://phosphoricons.com](https://phosphoricons.com/) 🔥
 
 Boxicons: [https://boxicons.com](https://boxicons.com/) 🔥
 
+Lucide Icons: [https://lucide.dev](https://lucide.dev/)
+
 Heroicons: [https://heroicons.com](https://heroicons.com/)
 
 Emoji Finder: [https://emojifinder.com](https://emojifinder.com/)
+
+UTM Builder: [https://utmbuilder.com](https://utmbuilder.com/)
 
 
 
