@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Apr 04 2025 11:42:46 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Apr 05 2025 07:00:15 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -169,12 +169,13 @@
               min-height: auto;
               padding: 0.6rem 0.85rem;
               font-weight: bold;
+              gap: 0.65ch;
             }
           </style>
       </div>
       <a href="https://webflow.com/made-in-webflow/website/s2-framework" animation="fadeIn" aria-label="Clone Now" target="_blank" class="button w-inline-block clone-button">
-        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8562 0L19.6486 18H11L14.8534 10.54H14.6805C11.5015 14.6668 6.7583 17.3835 0 18V10.6433C0 10.6433 4.32345 10.3879 6.86508 7.71575H0V0.000141978H7.71561V6.34612L7.88878 6.34541L11.0417 0.000141978H16.8768V6.30588L17.0499 6.3056L20.3211 0H28.8562Z" fill="currentColor"></path>
+        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M98.7905 16L67.5869 77H38.2778L51.3365 51.7189H50.7506C39.9773 65.7042 23.9031 74.9107 1 77V52.069C1 52.069 15.6517 51.2034 24.265 42.1478H1V16.0005H27.1473V37.5063L27.7342 37.5039L38.4191 16.0005H58.1936V37.3699L58.7802 37.369L69.8659 16H98.7905Z" fill="currentColor"></path>
           </svg></div>
         <div class="text-sm">Clone Now</div>
       </a>
@@ -411,6 +412,9 @@ https://fontawesome.com/search?ic=free
               content: '\2713\0020';
               color: var(--colors--primary);
             }
+            code {
+              font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
+            }
             /* styles for RTL lauout */
             [dir="rtl"] .main-nav_menu {
               margin-left: 0rem !important;
@@ -557,7 +561,7 @@ https://fontawesome.com/search?ic=free
     <main class="main">
       <div style="max-width: 120rem; margin: 0 auto;" class="flex-cols">
         <aside class="col cc-aside cc-sg-aside">
-          <nav text-deco="none" no-scrollbar="" class="sg-side_nav cc-slim">
+          <nav text-deco="none" no-scrollbar="true" class="sg-side_nav cc-slim">
             <div class="sg-side_group">
               <a href="#s2-components" class="sg-side_group-title w-inline-block">
                 <div class="text-lg">Components</div>
@@ -2703,13 +2707,13 @@ https://fontawesome.com/search?ic=free
             function expandBox(parentBox, button) {
               button.classList.add("cc-clicked");
               parentBox.setAttribute("demo-expand", "true");
-              body.style.overflow = "hidden"; // Prevent background scrolling
+              body.style.overflow = "hidden"; // prevent background scrolling
             }
             // function to collapse the demo box
             function collapseBox(parentBox, button) {
               button.classList.remove("cc-clicked");
               parentBox.removeAttribute("demo-expand");
-              body.style.overflow = ""; // Restore original overflow
+              body.style.overflow = ""; // restore original overflow
             }
             // handle Esc key to close any expanded demo boxes
             document.addEventListener("keydown", (event) => {

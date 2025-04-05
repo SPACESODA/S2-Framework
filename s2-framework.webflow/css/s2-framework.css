@@ -3743,7 +3743,7 @@ figcaption {
   display: flex;
 }
 
-.flex-cols.cc-sticky-col {
+.flex-cols.cc-align-top {
   align-items: flex-start;
 }
 
@@ -4202,8 +4202,9 @@ figcaption {
   margin-left: calc(var(--_sizes---container--padding) * -1);
   margin-right: calc(var(--_sizes---container--padding) * -1);
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  overscroll-behavior: auto;
+  scroll-snap-type: x mandatory;
   grid-template-rows: auto;
   grid-template-columns: minmax(16rem, 1fr);
   grid-auto-columns: minmax(16rem, 1fr);
@@ -5962,6 +5963,8 @@ figcaption {
   border-bottom-right-radius: var(--_sizes---radius--card);
   background-color: var(--s2--surface-alt);
   top: calc(var(--_sizes---main-nav--height)  + 1.5rem);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
   flex-direction: column;
   max-height: 70svh;
   margin-top: 0;
@@ -6299,6 +6302,8 @@ figcaption {
 }
 
 .s2-demo-box.cc-max-75svh {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
   max-height: 75svh;
 }
 
@@ -7847,28 +7852,33 @@ figcaption {
 }
 
 .tabs-menu {
-  grid-column-gap: var(--_sizes---grid--gutter);
-  grid-row-gap: var(--_sizes---grid--gutter);
-  flex-flow: wrap;
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+  box-shadow: inset 0 -.25rem 0 0 var(--colors--stroke-subtle);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+  touch-action: auto;
+  flex-flow: row;
   justify-content: flex-start;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   display: flex;
   position: relative;
+  overflow-x: auto;
 }
 
 .tab-link {
   grid-column-gap: var(--_text---other--word-space);
   grid-row-gap: var(--_text---other--word-space);
   background-color: var(--colors-special--transparent);
-  box-shadow: 0 var(--_sizes---line--4px) 0 0 var(--colors--stroke-subtle);
-  color: var(--colors--text-muted);
+  box-shadow: inset 0 -.25rem 0 0 var(--colors--stroke-subtle);
+  color: var(--colors--text-dim);
   flex-flow: wrap;
-  flex: 1;
+  flex: none;
   justify-content: flex-start;
   align-items: center;
   min-width: auto;
-  max-width: 100%;
-  padding: .5rem 0 1rem;
+  padding: 1rem 2ch;
   line-height: 1;
   transition: box-shadow .3s ease-in;
   display: flex;
@@ -7884,7 +7894,7 @@ figcaption {
 
 .tab-link.w--current {
   background-color: var(--colors-special--transparent);
-  box-shadow: 0 var(--_sizes---line--4px) 0 0 var(--colors--primary);
+  box-shadow: inset 0 -.25rem 0 0 var(--colors--primary);
   color: var(--colors--text);
 }
 
@@ -8085,7 +8095,7 @@ figcaption {
     justify-content: flex-start;
   }
 
-  .flex-cols.cc-sticky-col {
+  .flex-cols.cc-align-top.cc-responsive {
     flex-flow: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -8926,9 +8936,9 @@ figcaption {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .tabs-menu {
-    grid-column-gap: .5rem;
-    grid-row-gap: .5rem;
+  .tab-link {
+    padding-left: 1ch;
+    padding-right: 1ch;
   }
 
   .slider_arrow {
@@ -9293,11 +9303,6 @@ figcaption {
 
   .palette-wrapper {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .tabs-menu {
-    grid-column-gap: .5rem;
-    grid-row-gap: .5rem;
   }
 }
 
