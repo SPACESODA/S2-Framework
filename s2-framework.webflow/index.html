@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Apr 05 2025 07:00:15 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Apr 06 2025 03:28:09 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -549,22 +549,20 @@ https://fontawesome.com/search?ic=free
           </style>
       </div>
     </div>
-    <div code="css" class="css_page w-embed">
+    <div code="css" class="css_page w-embed"><!--  For this cover page only, you don't need this.  -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
       <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Judson&family=Manrope:wght@600&display=swap" rel="stylesheet">
       <style>
-          /* background-color of the style guide */
           [body="sg"] {
             background-color: #000;
             font-family: "Inter", Arial, serif;
+            font-optical-sizing: auto;
           }
-          /* force no text-decocration */
           [text-deco="none"],
           [text-deco="none"] a {
             text-decoration: none !important;
           }
-          /* content styles */
           :root {
             --cover--h1: 11.75cqw;
             --cover--tagline: 3.725cqw;
@@ -581,13 +579,16 @@ https://fontawesome.com/search?ic=free
             padding-left: var(--cover--padding);
             padding-right: var(--cover--padding);
           }
+          .code-label,
+          .sg-cover_h1 {
+            font-family: "Manrope", Arial, serif;
+            font-weight: 600;
+          }
           .code-label {
             font-size: var(--cover--text-sm);
             filter: saturate(0%);
           }
           .sg-cover_h1 {
-            font-family: "Manrope", serif;
-            font-weight: 600;
             font-style: normal;
             font-size: var(--cover--h1);
             line-height: 1;
@@ -595,7 +596,6 @@ https://fontawesome.com/search?ic=free
             margin: 0 0 1rem 0;
           }
           .sg-cover_tagline {
-            font-optical-sizing: auto;
             font-weight: 520;
             font-style: normal;
             font-size: var(--cover--tagline);
@@ -604,7 +604,6 @@ https://fontawesome.com/search?ic=free
             margin: 0 0 2.5rem 0;
           }
           .sg-cover_message {
-            font-optical-sizing: auto;
             font-weight: 460;
             font-style: normal;
             font-size: var(--cover--message);
@@ -621,15 +620,12 @@ https://fontawesome.com/search?ic=free
             box-shadow: inset 0 0 0 0.175cqw;
           }
           .sg-cover_button.cc-templates {
-            padding: 0;
             font-size: var(--cover--message);
+            padding: 0;
           }
           .sg-cover_footer {
             position: absolute;
-            left: auto;
-            top: 0.75cqw;
-            right: 0%;
-            bottom: auto;
+            inset: 0.75cqw 0% auto auto;
             font-size: var(--cover--text-xs);
             margin: 0 0 2rem 0;
           }
@@ -791,7 +787,7 @@ https://fontawesome.com/search?ic=free
         </div>
         <div class="w-layout-blockcontainer container cc-full w-container">
           <div style="margin: 0 0 0.5rem 0;" class="tag-wrapper">
-            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v2.3.2</div>
+            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v2.3.3</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
           <p data-element="" class="sg-cover_tagline">A Webflow Framework for Everyone.<br>Flexible, Easy to master, and Straightforward.</p>

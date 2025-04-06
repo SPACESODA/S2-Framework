@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Apr 05 2025 07:00:15 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Apr 06 2025 03:28:09 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -229,7 +229,7 @@
   <div id="top" class="page">
     <div class="code w-embed w-script"><!--  
   Replace Webflow's JS smooth scroll with native CSS smooth scrolling,
-  so that the scroll-margin-top property works as intended.
+  so that the "scroll-margin" property can work as intended.
  -->
       <!--  This is optional and applies to this page only.  -->
       <script>
@@ -245,9 +245,6 @@
         </style>
     </div>
     <div style="background: var(--s2--surface);" data-nosnippet="true" class="section cc-top-bottom-0">
-      <div class="u-hide">
-        <div class="u-scroll-margin-top"></div>
-      </div>
       <section id="style-guide" class="section cc-bottom-sm">
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
@@ -283,7 +280,7 @@
       <div class="block">
         <section id="basics" class="section cc-top-sm">
           <div class="w-layout-blockcontainer container w-container">
-            <div id="typography" class="sg-group u-scroll-margin-top">
+            <div id="typography" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <h2>Typography</h2>
               </div>
@@ -870,7 +867,7 @@
                 </div>
               </section>
             </div>
-            <div id="presets" class="sg-group u-scroll-margin-top">
+            <div id="presets" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <h2>Presets</h2>
               </div>
@@ -1545,7 +1542,7 @@
                 </div>
               </section>
             </div>
-            <div id="structure" class="sg-group u-scroll-margin-top">
+            <div id="structure" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <h2>Structure</h2>
               </div>
@@ -1765,102 +1762,104 @@
                     <p>Sections usually need a <span class="tag-label">container</span> to keep layouts from becoming too wide. Containers also control the horizontal padding in order to maintain the same spacing throughout your project.</p>
                   </div>
                 </div>
-                <div class="sg-element cc-block">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="tag-label">container</div>
-                    </div>
-                  </div>
-                  <div class="section cc-top-bottom-sm">
-                    <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container">
-                      <div events="none">
-                        <div class="title-wrapper cc-sm">
-                          <h4 class="h4">Heading</h4>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                <div style="width: auto; margin: 0 calc(-1 * var(--_sizes---container--padding));" class="block">
+                  <div class="sg-element cc-block">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">container</div>
                       </div>
-                      <div class="sg-padding cc-container"></div>
-                      <div class="sg-padding cc-container cc-right"></div>
                     </div>
-                  </div>
-                </div>
-                <div class="sg-element cc-block">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="tag-label">container</div>
-                      <div class="tag-label">cc-10c</div>
-                    </div>
-                  </div>
-                  <div class="section cc-top-bottom-sm">
-                    <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-10c">
-                      <div events="none">
-                        <div class="title-wrapper cc-sm">
-                          <h4 class="h4">Heading</h4>
+                    <div class="section cc-top-bottom-sm">
+                      <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container">
+                        <div events="none">
+                          <div class="title-wrapper cc-sm">
+                            <h4 class="h4">Heading</h4>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        <div class="sg-padding cc-container"></div>
+                        <div class="sg-padding cc-container cc-right"></div>
                       </div>
-                      <div class="sg-padding cc-container"></div>
-                      <div class="sg-padding cc-container cc-right"></div>
                     </div>
                   </div>
-                </div>
-                <div class="sg-element cc-block">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="tag-label">container</div>
-                      <div class="tag-label">cc-8c</div>
+                  <div class="sg-element cc-block">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-10c</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="section cc-top-bottom-sm">
-                    <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-8c">
-                      <div events="none">
-                        <div class="title-wrapper cc-sm">
-                          <h4 class="h4">Heading</h4>
+                    <div class="section cc-top-bottom-sm">
+                      <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-10c">
+                        <div events="none">
+                          <div class="title-wrapper cc-sm">
+                            <h4 class="h4">Heading</h4>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.<br></p>
+                        <div class="sg-padding cc-container"></div>
+                        <div class="sg-padding cc-container cc-right"></div>
                       </div>
-                      <div class="sg-padding cc-container"></div>
-                      <div class="sg-padding cc-container cc-right"></div>
                     </div>
                   </div>
-                </div>
-                <div class="sg-element cc-block">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="tag-label">container</div>
-                      <div class="tag-label">cc-6c</div>
+                  <div class="sg-element cc-block">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-8c</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="section cc-top-bottom-sm">
-                    <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-6c">
-                      <div events="none">
-                        <div class="title-wrapper cc-sm">
-                          <h4 class="h4">Heading</h4>
+                    <div class="section cc-top-bottom-sm">
+                      <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-8c">
+                        <div events="none">
+                          <div class="title-wrapper cc-sm">
+                            <h4 class="h4">Heading</h4>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.<br></p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                        <div class="sg-padding cc-container"></div>
+                        <div class="sg-padding cc-container cc-right"></div>
                       </div>
-                      <div class="sg-padding cc-container"></div>
-                      <div class="sg-padding cc-container cc-right"></div>
                     </div>
                   </div>
-                </div>
-                <div class="sg-element cc-block">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="tag-label">container</div>
-                      <div class="tag-label">cc-full</div>
+                  <div class="sg-element cc-block">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-6c</div>
+                      </div>
                     </div>
-                  </div>
-                  <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
-                    <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-full">
-                      <div events="none">
-                        <div class="title-wrapper cc-sm">
-                          <h4 class="h4">Heading</h4>
+                    <div class="section cc-top-bottom-sm">
+                      <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-6c">
+                        <div events="none">
+                          <div class="title-wrapper cc-sm">
+                            <h4 class="h4">Heading</h4>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        <div class="sg-padding cc-container"></div>
+                        <div class="sg-padding cc-container cc-right"></div>
                       </div>
-                      <div class="sg-padding cc-container"></div>
-                      <div class="sg-padding cc-container cc-right"></div>
+                    </div>
+                  </div>
+                  <div class="sg-element cc-block">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label">container</div>
+                        <div class="tag-label">cc-full</div>
+                      </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column;" class="section cc-top-bottom-sm">
+                      <div style="position: relative; border: var(--_sizes---line--thin) solid var(--colors--stroke); border-radius: var(--_sizes---radius--card); background-color: var(--colors--surface); overflow: hidden;" class="container cc-full">
+                        <div events="none">
+                          <div class="title-wrapper cc-sm">
+                            <h4 class="h4">Heading</h4>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
+                        </div>
+                        <div class="sg-padding cc-container"></div>
+                        <div class="sg-padding cc-container cc-right"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2148,7 +2147,7 @@
                 </div>
               </section>
             </div>
-            <div id="utilities" class="sg-group u-scroll-margin-top">
+            <div id="utilities" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <div class="title-wrapper">
                   <h2>Utilities</h2>
@@ -2785,7 +2784,7 @@
         </section>
         <section id="ui-elements" class="section cc-top-sm">
           <div class="w-layout-blockcontainer container w-container">
-            <div id="elements" class="sg-group u-scroll-margin-top">
+            <div id="elements" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <h2>UI Elements</h2>
               </div>
@@ -4143,7 +4142,7 @@
                 </div>
               </div>
             </div>
-            <div id="forms" class="sg-group u-scroll-margin-top">
+            <div id="forms" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <h2>Forms</h2>
               </div>
@@ -4336,7 +4335,7 @@
         </section>
         <section class="section cc-top-sm">
           <div class="w-layout-blockcontainer container w-container">
-            <div id="column" class="sg-group u-scroll-margin-top">
+            <div id="column" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <div class="title-wrapper">
                   <h2>Column Layouts</h2>
@@ -4351,10 +4350,15 @@
                     <div class="tag-wrapper">
                       <div class="tag-label">col-wrapper</div>
                     </div>
-                    <div class="sg-note cc-width-auto"><span class="tag-label">col-wrapper</span> is a class specifically designed to wrap <span class="tag-label">col</span> <span class="tag-label">cc-span-12</span>, <span class="tag-label">col</span> <span class="tag-label">cc-12c</span>, and <span class="tag-label">col</span> <span class="tag-label">cc-grow</span> for column layouts</div>
+                    <div class="sg-note cc-width-auto">you can use <span class="tag-label">col-wrapper</span> to wrap <span class="tag-label">col</span> elements for column-based layouts, typically with combo classes such as <span class="tag-label">cc-span-12</span>, <span class="tag-label">cc-12c</span>, and <span class="tag-label">cc-grow</span></div>
                   </div>
                   <div style="padding: 2rem 0;" class="section cc-top-bottom-sm">
-                    <div style="margin-bottom: 1rem;" class="text-xs">A few examples:</div>
+                    <div class="col-wrapper">
+                      <div style="box-shadow: inset 0 0 0 1px #ccc;" class="col">
+                        <div style="width: 6rem;" class="u-bg-pattern cc-with-border">col</div>
+                      </div>
+                    </div>
+                    <div style="margin: 2rem 0 1rem 0;" class="text-xs">A few examples:</div>
                     <div style="display: flex; flex-direction: column; gap: 2rem;" class="block">
                       <div class="col-wrapper">
                         <div class="col cc-span-2">
@@ -4408,7 +4412,7 @@
                     </div>
                     <div class="sg-note cc-width-auto">the <span class="tag-label">cc-span-</span> classes reference to the closest parent element that has container inline size defined</div>
                   </div>
-                  <div data-current="Base" data-easing="ease-in" data-duration-in="300" data-duration-out="100" class="w-tabs">
+                  <div data-current="Base" data-easing="ease-in" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
                     <div class="tabs-menu w-tab-menu">
                       <a data-w-tab="Base" class="tab-link w-inline-block w-tab-link w--current">
                         <div>Base</div>
@@ -4424,7 +4428,7 @@
                       </a>
                     </div>
                     <div class="tabs-content w-tab-content">
-                      <div data-w-tab="Base" class="w-tab-pane w--tab-active">
+                      <div data-w-tab="Base" class="tab-pane cc-p-0 w-tab-pane w--tab-active">
                         <div class="sg-element cc-block">
                           <div class="sg-tags cc-width-auto">
                             <div class="tag-wrapper">
@@ -4477,7 +4481,7 @@
                           </div>
                         </div>
                       </div>
-                      <div data-w-tab="Tablet" class="w-tab-pane">
+                      <div data-w-tab="Tablet" class="tab-pane cc-p-0 w-tab-pane">
                         <div class="sg-element cc-block">
                           <div class="sg-tags cc-width-auto">
                             <div class="tag-wrapper">
@@ -4518,7 +4522,7 @@
                           </div>
                         </div>
                       </div>
-                      <div data-w-tab="Landscape" class="w-tab-pane">
+                      <div data-w-tab="Landscape" class="tab-pane cc-p-0 w-tab-pane">
                         <div class="sg-element cc-block">
                           <div class="sg-tags cc-width-auto">
                             <div class="tag-wrapper">
@@ -4553,7 +4557,7 @@
                           </div>
                         </div>
                       </div>
-                      <div data-w-tab="Mobile" class="w-tab-pane">
+                      <div data-w-tab="Mobile" class="tab-pane cc-p-0 w-tab-pane">
                         <div class="sg-element cc-block">
                           <div class="sg-tags cc-width-auto">
                             <div class="tag-wrapper">
@@ -4584,53 +4588,119 @@
                       </div>
                     </div>
                   </div>
-                  <div class="sg-element cc-block">
-                    <div class="sg-tags cc-width-auto">
-                      <div class="tag-wrapper">
-                        <div class="tag-label">col</div>
-                        <div class="tag-label">cc-1c</div>
-                        <div>~</div>
-                        <div class="tag-label">cc-12c</div>
-                      </div>
-                      <div class="sg-note cc-width-auto">simple 12-column system based on the parent&#x27;s width</div>
+                  <div data-current="Combo Classes" data-easing="ease-in" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
+                    <div class="tabs-menu w-tab-menu">
+                      <a data-w-tab="Combo Classes" class="tab-link w-inline-block w-tab-link w--current">
+                        <div>Combo Classes</div>
+                      </a>
+                      <a data-w-tab="Utility Classes" class="tab-link w-inline-block w-tab-link">
+                        <div>Utility Classes</div>
+                      </a>
                     </div>
-                    <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
-                      <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
-                        <div class="col cc-1c">
-                          <div class="u-bg-pattern cc-with-border">col-1c</div>
+                    <div class="tabs-content w-tab-content">
+                      <div data-w-tab="Combo Classes" class="tab-pane cc-p-0 w-tab-pane w--tab-active">
+                        <div class="sg-element cc-block">
+                          <div class="sg-tags cc-width-auto">
+                            <div class="tag-wrapper">
+                              <div class="tag-label">col</div>
+                              <div class="tag-label">cc-1c</div>
+                              <div>~</div>
+                              <div class="tag-label">cc-12c</div>
+                            </div>
+                            <div class="sg-note cc-width-auto">12-column system based just on the parent&#x27;s width</div>
+                          </div>
+                          <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                              <div class="col cc-1c">
+                                <div class="u-bg-pattern cc-with-border">cc-1c</div>
+                              </div>
+                              <div class="col cc-2c">
+                                <div class="u-bg-pattern cc-with-border">cc-2c</div>
+                              </div>
+                              <div class="col cc-3c">
+                                <div class="u-bg-pattern cc-with-border">cc-3c</div>
+                              </div>
+                              <div class="col cc-4c">
+                                <div class="u-bg-pattern cc-with-border">cc-4c</div>
+                              </div>
+                              <div class="col cc-5c">
+                                <div class="u-bg-pattern cc-with-border">cc-5c</div>
+                              </div>
+                              <div class="col cc-6c">
+                                <div class="u-bg-pattern cc-with-border">cc-6c</div>
+                              </div>
+                              <div class="col cc-7c">
+                                <div class="u-bg-pattern cc-with-border">cc-7c</div>
+                              </div>
+                              <div class="col cc-8c">
+                                <div class="u-bg-pattern cc-with-border">cc-8c</div>
+                              </div>
+                              <div class="col cc-9c">
+                                <div class="u-bg-pattern cc-with-border">cc-9c</div>
+                              </div>
+                              <div class="col cc-10c">
+                                <div class="u-bg-pattern cc-with-border">cc-10c</div>
+                              </div>
+                              <div class="col cc-11c">
+                                <div class="u-bg-pattern cc-with-border">cc-11c</div>
+                              </div>
+                              <div class="col cc-12c">
+                                <div class="u-bg-pattern cc-with-border">cc-12c</div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="col cc-2c">
-                          <div class="u-bg-pattern cc-with-border">col-2c</div>
-                        </div>
-                        <div class="col cc-3c">
-                          <div class="u-bg-pattern cc-with-border">col-3c</div>
-                        </div>
-                        <div class="col cc-4c">
-                          <div class="u-bg-pattern cc-with-border">col-4c</div>
-                        </div>
-                        <div class="col cc-5c">
-                          <div class="u-bg-pattern cc-with-border">col-5c</div>
-                        </div>
-                        <div class="col cc-6c">
-                          <div class="u-bg-pattern cc-with-border">col-6c</div>
-                        </div>
-                        <div class="col cc-7c">
-                          <div class="u-bg-pattern cc-with-border">col-7c</div>
-                        </div>
-                        <div class="col cc-8c">
-                          <div class="u-bg-pattern cc-with-border">col-8c</div>
-                        </div>
-                        <div class="col cc-9c">
-                          <div class="u-bg-pattern cc-with-border">col-9c</div>
-                        </div>
-                        <div class="col cc-10c">
-                          <div class="u-bg-pattern cc-with-border">col-10c</div>
-                        </div>
-                        <div class="col cc-11c">
-                          <div class="u-bg-pattern cc-with-border">col-11c</div>
-                        </div>
-                        <div class="col cc-12c">
-                          <div class="u-bg-pattern cc-with-border">col-12c</div>
+                      </div>
+                      <div data-w-tab="Utility Classes" class="tab-pane cc-p-0 w-tab-pane">
+                        <div class="sg-element cc-block">
+                          <div class="sg-tags cc-width-auto">
+                            <div class="tag-wrapper">
+                              <div class="tag-label">u-1c</div>
+                              <div>~</div>
+                              <div class="tag-label">u-12c</div>
+                            </div>
+                            <div class="sg-note cc-width-auto">equivalent utility classes with only width styles applied</div>
+                          </div>
+                          <div style="padding-bottom: 0;" class="section cc-top-bottom-sm">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;" class="block">
+                              <div class="u-1c">
+                                <div class="u-bg-pattern cc-with-border">u-1c</div>
+                              </div>
+                              <div class="u-2c">
+                                <div class="u-bg-pattern cc-with-border">u-2c</div>
+                              </div>
+                              <div class="u-3c">
+                                <div class="u-bg-pattern cc-with-border">u-3c</div>
+                              </div>
+                              <div class="u-4c">
+                                <div class="u-bg-pattern cc-with-border">u-4c</div>
+                              </div>
+                              <div class="u-5c">
+                                <div class="u-bg-pattern cc-with-border">u-5c</div>
+                              </div>
+                              <div class="u-6c">
+                                <div class="u-bg-pattern cc-with-border">u-6c</div>
+                              </div>
+                              <div class="u-7c">
+                                <div class="u-bg-pattern cc-with-border">u-7c</div>
+                              </div>
+                              <div class="u-8c">
+                                <div class="u-bg-pattern cc-with-border">u-8c</div>
+                              </div>
+                              <div class="u-9c">
+                                <div class="u-bg-pattern cc-with-border">u-9c</div>
+                              </div>
+                              <div class="u-10c">
+                                <div class="u-bg-pattern cc-with-border">u-10c</div>
+                              </div>
+                              <div class="u-11c">
+                                <div class="u-bg-pattern cc-with-border">u-11c</div>
+                              </div>
+                              <div class="u-12c">
+                                <div class="u-bg-pattern cc-with-border">u-12c</div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4820,7 +4890,7 @@
         </section>
         <section class="section cc-top-sm">
           <div class="w-layout-blockcontainer container w-container">
-            <div id="richtext" class="sg-group u-scroll-margin-top">
+            <div id="richtext" class="sg-group cc-scroll-margin">
               <div class="title-wrapper">
                 <h2>Rich Text Element</h2>
               </div>
