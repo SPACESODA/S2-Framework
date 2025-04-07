@@ -140,6 +140,7 @@
   --colors-extended--12: #ffafa5;
   --_sizes---line--6px: .375rem;
   --_text---other--word-space: .35em;
+  --_sizes---grid--bento: 1.5rem;
   --colors-special--transparent-white: #fff0;
   --_palettes---accent--500: #f3bb09;
   --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -3788,23 +3789,17 @@ figcaption {
   padding-left: 0;
 }
 
+.col.cc-aside.cc-on-left.cc-lg {
+  width: 35%;
+}
+
 .col.cc-aside.cc-on-right {
   max-width: none;
   padding-right: 0;
 }
 
-.col.cc-aside.cc-on-left-lg {
-  padding-left: 0;
-}
-
-.col.cc-aside.cc-on-right-lg {
-  padding-right: 0;
-}
-
-.col.cc-aside.cc-on-left-lg {
+.col.cc-aside.cc-on-right.cc-lg {
   width: 35%;
-  max-width: none;
-  padding-left: 0;
 }
 
 .col.cc-aside.cc-on-right-lg {
@@ -7929,6 +7924,12 @@ figcaption {
   overflow: clip;
 }
 
+.slider-wrapper {
+  width: 100%;
+  display: block;
+  container-type: inline-size;
+}
+
 .slider {
   background-color: var(--colors-special--transparent);
   height: 40cqw;
@@ -7975,12 +7976,6 @@ figcaption {
   text-decoration: none;
   display: block;
   position: relative;
-}
-
-.slider-wrapper {
-  width: 100%;
-  display: block;
-  container-type: inline-size;
 }
 
 .u-1c {
@@ -8031,6 +8026,113 @@ figcaption {
   width: 100%;
 }
 
+.bento {
+  grid-column-gap: var(--_sizes---grid--bento);
+  grid-row-gap: var(--_sizes---grid--bento);
+  flex-flow: wrap;
+  flex: 1;
+  justify-content: space-between;
+  align-items: stretch;
+  display: flex;
+}
+
+.bento-col {
+  grid-column-gap: var(--_sizes---grid--gutter);
+  grid-row-gap: var(--_sizes---grid--gutter);
+  flex-flow: column;
+  flex: none;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+}
+
+.bento-col.u-2c {
+  width: calc(2 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 1 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-3c {
+  width: calc(3 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 2 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-4c {
+  grid-column-gap: var(--_sizes---grid--bento);
+  grid-row-gap: var(--_sizes---grid--bento);
+  width: calc(4 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 3 * var(--_sizes---grid--bento));
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.bento-col.u-5c {
+  width: calc(5 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 4 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-6c {
+  width: calc(6 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 5 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-7c {
+  width: calc(7 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 6 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-8c {
+  grid-column-gap: var(--_sizes---grid--bento);
+  grid-row-gap: var(--_sizes---grid--bento);
+  width: calc(8 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 7 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-9c {
+  width: calc(9 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 8 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-10c {
+  width: calc(10 * ((100% - 11 * var(--_sizes---grid--bento)) / 12)  + 9 * var(--_sizes---grid--bento));
+}
+
+.bento-col.u-grow {
+  min-width: var(--_sizes---grid--bento);
+  flex: 1;
+  width: auto;
+}
+
+.bento-cell {
+  flex-flow: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-width: 100%;
+  min-height: 12rem;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.bento-cell.cc-tall {
+  flex: none;
+  min-height: 16rem;
+}
+
+.bento-cell.cc-short {
+  flex: none;
+  min-height: 8rem;
+}
+
+.bento-card {
+  border-radius: var(--_sizes---radius--card);
+  box-shadow: inset 0 0 0 var(--_sizes---line--thin) var(--colors--stroke-subtle), 0 .5rem 1.5rem -.25rem var(--colors--stroke-subtle);
+  flex-flow: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 991px) {
   body {
     --_sizes---radius--xs: .275rem;
@@ -8055,6 +8157,7 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
+    --_sizes---grid--bento: 1.25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
@@ -8161,6 +8264,11 @@ figcaption {
     flex-flow: column;
     justify-content: flex-start;
     align-items: stretch;
+  }
+
+  .col {
+    padding-top: var(--_sizes---container--padding);
+    padding-bottom: var(--_sizes---container--padding);
   }
 
   .col.cc-main.cc-sg-main {
@@ -8487,6 +8595,7 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
+    --_sizes---grid--bento: 1.25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
@@ -8652,24 +8761,26 @@ figcaption {
     padding-right: 0;
   }
 
+  .col.cc-aside.cc-on-left.cc-lg {
+    width: 100%;
+  }
+
   .col.cc-aside.cc-on-right {
     padding-top: 0;
     padding-left: 0;
   }
 
-  .col.cc-aside.cc-on-left-lg {
-    padding-bottom: 0;
-    padding-right: 0;
+  .col.cc-aside.cc-on-right.cc-lg {
+    width: 100%;
   }
 
   .col.cc-aside.cc-on-right-lg {
     order: 1;
-    padding: 0 0 2rem;
-  }
-
-  .col.cc-aside.cc-on-left-lg, .col.cc-aside.cc-on-right-lg {
     width: 100%;
     min-width: auto;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .col.cc-aside.cc-on-left_sticky {
@@ -9002,6 +9113,10 @@ figcaption {
   .slider_arrow {
     font-size: 1.5rem;
   }
+
+  .bento-col.u-2c, .bento-col.u-3c, .bento-col.u-4c, .bento-col.u-5c, .bento-col.u-6c, .bento-col.u-7c, .bento-col.u-8c, .bento-col.u-9c, .bento-col.u-10c, .bento-col.u-grow {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -9028,6 +9143,7 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
+    --_sizes---grid--bento: 1.25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
@@ -9126,10 +9242,6 @@ figcaption {
   .fs-style_interaction {
     width: 100%;
     margin-top: 12px;
-  }
-
-  .col.cc-aside.cc-on-left-lg {
-    padding-left: 0;
   }
 
   .col.cc-aside.cc-on-right-lg {
