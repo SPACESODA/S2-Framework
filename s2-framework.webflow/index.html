@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Apr 07 2025 04:37:12 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Apr 11 2025 04:18:23 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -26,8 +26,11 @@
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <link href="https://s2-framework.webflow.io/" rel="canonical"><!--  Mode Switching Function  -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/js/mode-switching.min.js" as="script">
-  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/js/mode-switching.min.js" defer=""></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-switching.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-switching.min.js" defer=""></script>
+  <!--  To Apply Mode  -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-apply.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-apply.min.js" defer=""></script>
   <!--  Meta Tags for Style Guide only  -->
   <meta property="og:locale" content="en_US">
   <meta name="robots" content="noarchive">
@@ -233,7 +236,7 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
 THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
 </head>
-<body body="sg" theme-change="false" class="body u-dark-mode">
+<body body="sg" theme-change="false" theme-default="dark" class="body u-dark-mode">
   <div data-nosnippet="true" tabindex="-1" class="delete-me cc-clone-cta">
     <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
       <!--  For Style Guide only, you don't need the below scripts.  -->
@@ -309,46 +312,6 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   </div>
   <div id="top" class="page">
     <div class="code">
-      <div class="js cc-in-global w-embed w-script"><!--  Script to apply Light / Dark Mode (Theme)  -->
-        <!--  Note: The script for Mode Switching function is included in the site's global "Head code".  -->
-        <script>
-            (function() {
-              try {
-                const THEME_KEY = "theme";
-                const SYSTEM_THEME = "system";
-                const LIGHT_CLASS = "u-light-mode";
-                const DARK_CLASS = "u-dark-mode";
-                const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-                // get system's preferred color scheme
-                function getSystemTheme() {
-                  return window.matchMedia("(prefers-color-scheme: dark)").matches ?
-                    "dark" :
-                    "light";
-                }
-                // check if theme changes are allowed
-                const themeChangeAllowed =
-                  document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
-                if (themeChangeAllowed) {
-                  // get user's theme preference from localStorage
-                  const storedTheme = localStorage.getItem(THEME_KEY);
-                  let themePreference = storedTheme || SYSTEM_THEME;
-                  // to apply the theme
-                  const actualTheme =
-                    themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                  // add theme class
-                  if (actualTheme === "dark") {
-                    document.body.classList.add(DARK_CLASS);
-                  } else {
-                    document.body.classList.add(LIGHT_CLASS);
-                  }
-                }
-              } catch (e) {
-                // log any initialization errors
-                console.warn("Theme initialization error:", e);
-              }
-            })();
-          </script>
-      </div>
       <div class="css">
         <div class="css_cdn w-embed"><!-- 
 S2 Framework Base CSS
@@ -621,7 +584,7 @@ https://fontawesome.com/search?ic=free
           }
           .sg-cover_button.cc-templates {
             font-size: var(--cover--message);
-            padding: 0;
+            padding: 1rem 0;
           }
           .sg-cover_footer {
             position: absolute;
@@ -676,14 +639,6 @@ https://fontawesome.com/search?ic=free
               margin: 0 0 2.5cqw 0;
               width: 100%;
             }
-            .sg-cover_footer {
-              position: relative;
-            }
-            .sg-cover_footer>div {
-              justify-content: flex-start;
-              align-items: center;
-              align-content: center;
-            }
             .sg-cover_button {
               padding: 0.85rem 1.15rem;
               min-height: auto;
@@ -692,8 +647,14 @@ https://fontawesome.com/search?ic=free
             .sg-cover_button.cc-browse {
               box-shadow: inset 0 0 0 0.125rem;
             }
-            .sg-cover_button.cc-templates {
-              padding: 1rem 0 3rem 0;
+            .sg-cover_footer {
+              position: relative;
+              margin-top: 3rem;
+            }
+            .sg-cover_footer>div {
+              justify-content: flex-start;
+              align-items: center;
+              align-content: center;
             }
           }
           @media screen and (max-width: 767px) {
@@ -701,6 +662,14 @@ https://fontawesome.com/search?ic=free
               --cover--tagline: clamp(1.175em, 5.275vw, 2rem);
               --cover--button: 0.95rem;
               --cover--padding: 0.85rem;
+            }
+            .section {
+              padding: 2.5rem 0;
+              justify-content: start;
+              flex-wrap: nowrap;
+            }
+            .first-container {
+              margin-bottom: 5rem;
             }
           }
           @media screen and (max-width: 479px) {}
@@ -785,9 +754,9 @@ https://fontawesome.com/search?ic=free
               </style>
           </div>
         </div>
-        <div class="w-layout-blockcontainer container cc-full w-container">
+        <div class="w-layout-blockcontainer container cc-full w-container first-container">
           <div style="margin: 0 0 0.5rem 0;" class="tag-wrapper">
-            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v2.3.5</div>
+            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v2.3.6</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
           <p data-element="" class="sg-cover_tagline">A Webflow Framework for Everyone.<br>Flexible, Easy to master, and Straightforward.</p>
@@ -818,7 +787,7 @@ https://fontawesome.com/search?ic=free
               </div>
             </div>
             <footer class="sg-cover_footer" data-element="flyIn">
-              <div line-height="1" flex-wrap="wrap-nice" gap="word" data-nosnippet="true" text-deco="none" class="w-embed"><span class="icon cc-1-25em" style="margin-right: 0.125em;"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div line-height="1" flex-wrap="wrap-nice" gap="word" data-nosnippet="true" text-deco="none" class="w-embed"><span class="icon cc-1-25em" style="margin-right: 0.125em;"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S2 Framework" focusable="false">
                     <title>S2 Framework</title>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8887 6C21.1723 6 5.99976 21.1726 5.99976 39.8889V216.111C5.99976 234.828 21.1723 250 39.8887 250H216.111C234.827 250 250 234.828 250 216.111V39.8889C250 21.1726 234.827 6 216.111 6H39.8887ZM83.5627 45.4407C84.6066 41.1937 88.415 38.2081 92.7884 38.2081H139.158C145.323 38.2081 149.855 43.9892 148.383 49.9761L131.177 119.976C130.294 123.568 133.014 127.037 136.713 127.037H180.959C187.124 127.037 191.657 132.818 190.185 138.805L172.437 211.007C171.393 215.255 167.585 218.24 163.212 218.24H116.842C110.677 218.24 106.145 212.459 107.617 206.472L124.823 136.472C125.706 132.88 122.986 129.412 119.287 129.412H75.0408C68.8756 129.412 64.3434 123.631 65.815 117.644L83.5627 45.4407Z" fill="currentColor"></path>
                   </svg></span>
@@ -962,7 +931,7 @@ https://fontawesome.com/search?ic=free
         </div>
         <div class="text-xs">We use <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>, <a href="http://clarity.microsoft.com" target="_blank">Microsoft Clarity</a> and <a href="https://umami.is" target="_blank">Umami</a> to analyze this site without collecting personal data. By browsing, you consent to our use of cookies.</div>
         <div style="opacity: 0.75;" class="text-2xs">
-          <div>This notice is just for transparency, not EU compliance. <strong>Like this super simple Cookie Consent? Clone it away!</strong></div>
+          <div>This notice is just for transparency, not EU compliance. Btw, you can clone away this simple Cookie Consent!</div>
         </div>
       </div>
       <div user-select="none" class="cookie-consent_actions">

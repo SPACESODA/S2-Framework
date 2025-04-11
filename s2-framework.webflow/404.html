@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Apr 07 2025 04:37:12 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Apr 11 2025 04:18:23 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -19,51 +19,14 @@
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <link href="https://s2-framework.webflow.io/404" rel="canonical"><!--  Mode Switching Function  -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/js/mode-switching.min.js" as="script">
-  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/js/mode-switching.min.js" defer=""></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-switching.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-switching.min.js" defer=""></script>
+  <!--  To Apply Mode  -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-apply.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-apply.min.js" defer=""></script>
 </head>
 <body class="body">
   <div class="code">
-    <div class="js cc-in-global w-embed w-script"><!--  Script to apply Light / Dark Mode (Theme)  -->
-      <!--  Note: The script for Mode Switching function is included in the site's global "Head code".  -->
-      <script>
-          (function() {
-            try {
-              const THEME_KEY = "theme";
-              const SYSTEM_THEME = "system";
-              const LIGHT_CLASS = "u-light-mode";
-              const DARK_CLASS = "u-dark-mode";
-              const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
-              // get system's preferred color scheme
-              function getSystemTheme() {
-                return window.matchMedia("(prefers-color-scheme: dark)").matches ?
-                  "dark" :
-                  "light";
-              }
-              // check if theme changes are allowed
-              const themeChangeAllowed =
-                document.body.getAttribute(THEME_CHANGE_ALLOWED_ATTR) !== "false";
-              if (themeChangeAllowed) {
-                // get user's theme preference from localStorage
-                const storedTheme = localStorage.getItem(THEME_KEY);
-                let themePreference = storedTheme || SYSTEM_THEME;
-                // to apply the theme
-                const actualTheme =
-                  themePreference === SYSTEM_THEME ? getSystemTheme() : themePreference;
-                // add theme class
-                if (actualTheme === "dark") {
-                  document.body.classList.add(DARK_CLASS);
-                } else {
-                  document.body.classList.add(LIGHT_CLASS);
-                }
-              }
-            } catch (e) {
-              // log any initialization errors
-              console.warn("Theme initialization error:", e);
-            }
-          })();
-        </script>
-    </div>
     <div class="css">
       <div class="css_cdn w-embed"><!-- 
 S2 Framework Base CSS

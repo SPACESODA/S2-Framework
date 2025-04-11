@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Mon Apr 07 2025 04:37:12 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Apr 11 2025 04:18:23 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -26,8 +26,11 @@
   <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="../images/webclip.png" rel="apple-touch-icon">
   <link href="https://s2-framework.webflow.io/ref/style-guide" rel="canonical"><!--  Mode Switching Function  -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/js/mode-switching.min.js" as="script">
-  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.1.8.2/webflow/js/mode-switching.min.js" defer=""></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-switching.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-switching.min.js" defer=""></script>
+  <!--  To Apply Mode  -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-apply.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.6/webflow/js/mode-apply.min.js" defer=""></script>
   <meta name="robots" content="noindex, nofollow, noarchive">
 </head>
 <body dir="" theme-change="false" class="body">
@@ -106,20 +109,22 @@
     <div style="display: block;">
       <div class="css w-embed">
         <style>
-            .clone-button {
+            .clone-now-button {
               border-radius: 0;
               min-height: auto;
-              padding: 0.6rem 0.85rem;
+              padding: 0.825rem 1rem 0.75rem 1rem;
+              font-family: Arial, serif;
               font-weight: bold;
+              font-size: 0.95rem;
               gap: 0.65ch;
             }
           </style>
       </div>
-      <a href="https://webflow.com/made-in-webflow/website/s2-framework" animation="fadeIn" aria-label="Clone Now" target="_blank" class="button w-inline-block clone-button">
-        <div aria-hidden="true" class="icon w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a href="https://webflow.com/made-in-webflow/website/s2-framework" animation="fadeIn" aria-label="Clone Now" target="_blank" class="button w-inline-block clone-now-button">
+        <div aria-hidden="true" class="icon cc-1-25em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M98.7905 16L67.5869 77H38.2778L51.3365 51.7189H50.7506C39.9773 65.7042 23.9031 74.9107 1 77V52.069C1 52.069 15.6517 51.2034 24.265 42.1478H1V16.0005H27.1473V37.5063L27.7342 37.5039L38.4191 16.0005H58.1936V37.3699L58.7802 37.369L69.8659 16H98.7905Z" fill="currentColor"></path>
           </svg></div>
-        <div class="text-sm">Clone Now</div>
+        <div>Clone Now</div>
       </a>
     </div>
   </div>
@@ -198,7 +203,7 @@
         </div>
         <div class="title-wrapper">
           <div class="title-wrapper">
-            <h1 class="sg-hero-heading cc-white">S2 Framework for Templates</h1>
+            <h1 class="sg-hero-heading">S2 Framework for Templates</h1>
           </div>
           <div class="text-wrapper cc-max-40rem">
             <div class="richtext w-richtext">
@@ -3813,7 +3818,7 @@
                   </div>
                   <div class="block">
                     <div class="slider-wrapper">
-                      <div data-delay="3000" data-animation="fade" class="slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="4" data-duration="500" data-infinite="true">
+                      <div data-delay="3600" data-animation="cross" class="slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="4" data-duration="900" data-infinite="true">
                         <div class="slider_mask w-slider-mask">
                           <div class="slider_slide w-slide">
                             <div class="full-wrapper"><img src="https://images.unsplash.com/photo-1607893351349-0cfa621476ed?q=80&amp;w=1200&amp;auto=format" alt="demo image" class="full-cover"></div>
@@ -3902,7 +3907,9 @@
                     <h3>Bento Layout</h3>
                   </div>
                   <div class="text-wrapper cc-max-40rem">
-                    <p>A clean, flexible, flex-based Bento Layout system that&#x27;s easy to build and manage.</p>
+                    <p>A clean, flexible, flex-based Bento Layout system that&#x27;s easy to build and manage. The gap size is easily adjustable via a variable.<br>
+                      <a href="https://bento-layout-cloneable.webflow.io/" target="_blank">Cloneable example</a>
+                    </p>
                   </div>
                 </div>
                 <div class="sg-element cc-block">

@@ -141,6 +141,7 @@
   --_sizes---line--6px: .375rem;
   --_text---other--word-space: .35em;
   --_sizes---grid--bento: 1.5rem;
+  --_sizes---radius--lg: .85rem;
   --colors-special--transparent-white: #fff0;
   --_palettes---accent--500: #f3bb09;
   --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -152,7 +153,6 @@
   --_text---list-spacing--sm: .25rem;
   --_text---richtext-spacing--sm: .5rem;
   --_text---other--lighter: 90%;
-  --_sizes---radius--lg: .85rem;
   --_sizes---line--bold: .15625rem;
   --_sizes---line--4px: .25rem;
   --_sizes---gap--xs: .5rem;
@@ -1023,7 +1023,6 @@ figcaption {
 .button.cc-xs {
   min-height: var(--_sizes---button--xs);
   grid-column-gap: .35rem;
-  border-radius: var(--_sizes---radius--rounded);
   min-width: 2.75rem;
   padding: .25rem .75rem;
   line-height: 1.25;
@@ -6392,7 +6391,7 @@ figcaption {
   padding-bottom: var(--_sizes---spacing--base);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  background-color: var(--colors--surface-muted);
+  background-color: var(--s2--surface-alt);
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
@@ -6431,8 +6430,12 @@ figcaption {
 }
 
 .delete-me.cc-dark {
-  background-color: var(--colors--surface-alt);
-  color: var(--colors-special--inverted);
+  background-color: var(--colors--surface-alt-muted);
+  color: var(--colors--text-dimmer);
+}
+
+.delete-me.u-dark-mode {
+  background-color: var(--colors--surface-muted);
 }
 
 .mode-switch {
@@ -7932,7 +7935,7 @@ figcaption {
 
 .slider {
   background-color: var(--colors-special--transparent);
-  height: 40cqw;
+  height: 45cqw;
   margin-bottom: 3rem;
   display: block;
 }
@@ -8034,6 +8037,7 @@ figcaption {
   justify-content: space-between;
   align-items: stretch;
   display: flex;
+  position: relative;
 }
 
 .bento-col {
@@ -8101,8 +8105,7 @@ figcaption {
   justify-content: flex-start;
   align-items: stretch;
   min-width: 100%;
-  min-height: 12rem;
-  padding: 0;
+  min-height: 14rem;
   text-decoration: none;
   display: flex;
   position: relative;
@@ -8110,16 +8113,17 @@ figcaption {
 
 .bento-cell.cc-tall {
   flex: none;
-  min-height: 16rem;
+  min-height: 18rem;
 }
 
 .bento-cell.cc-short {
   flex: none;
-  min-height: 8rem;
+  min-height: 10rem;
 }
 
 .bento-card {
-  border-radius: var(--_sizes---radius--card);
+  border-radius: var(--_sizes---radius--lg);
+  background-color: var(--colors-special--transparent);
   box-shadow: inset 0 0 0 var(--_sizes---line--thin) var(--colors--stroke-subtle), 0 .5rem 1.5rem -.25rem var(--colors--stroke-subtle);
   flex-flow: column;
   flex: 1;
@@ -8595,7 +8599,7 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
-    --_sizes---grid--bento: 1.25rem;
+    --_sizes---grid--bento: 2rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
@@ -9143,7 +9147,7 @@ figcaption {
     --_sizes---radius--sm: .35rem;
     --_sizes---gap--lg: 1.5rem;
     --_sizes---line--6px: .375rem;
-    --_sizes---grid--bento: 1.25rem;
+    --_sizes---grid--bento: 2rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
