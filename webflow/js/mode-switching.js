@@ -1,4 +1,4 @@
-// Mode Switching Function v2.0
+// Mode Switching Function v2.1
 // by S2 Framework
 
 (function () {
@@ -35,16 +35,41 @@
       }
     }
   }
-  // get the user's theme preference
+  // determine the current active theme regardless of source
+  function getCurrentActiveTheme() {
+    if (document.body.classList.contains(DARK_CLASS)) {
+      return "dark";
+    } else {
+      return "light";
+    }
+  }
+  // get the user's theme preference from localStorage
   function getThemePreference() {
     return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
   }
   // initialize the theme on page load
   function initializeTheme() {
     if (isThemeChangeAllowed()) {
-      const themePreference = getThemePreference();
-      applyTheme(themePreference, false);
+      // we don't need to apply the theme here as it's already handled by the inline script
+      // just update toggle states to match the currently applied theme
+      updateToggleStates();
     }
+  }
+  // update toggle button states to match current theme
+  function updateToggleStates() {
+    const currentTheme = getCurrentActiveTheme();
+    const toggles = document.querySelectorAll('[data-toggle="light-dark"]');
+    toggles.forEach((toggle) => {
+      // add any class or state updates needed for your toggle UI
+      // this depends on your specific toggle implementation
+      if (currentTheme === "dark") {
+        toggle.setAttribute("aria-checked", "true");
+        // add any other visual updates needed
+      } else {
+        toggle.setAttribute("aria-checked", "false");
+        // add any other visual updates needed
+      }
+    });
   }
   // set up event listeners for buttons and toggles
   function setupEventListeners() {
@@ -64,9 +89,11 @@
       .querySelectorAll('[data-toggle="light-dark"]')
       .forEach((toggleSwitch) => {
         toggleSwitch.addEventListener("click", () => {
-          const currentTheme = getThemePreference();
+          // Get current visible theme rather than stored preference
+          const currentTheme = getCurrentActiveTheme();
           const newTheme = currentTheme === "dark" ? "light" : "dark";
           applyTheme(newTheme);
+          updateToggleStates();
         });
       });
   }
@@ -86,6 +113,7 @@
     .addEventListener("change", () => {
       if (getThemePreference() === SYSTEM_THEME) {
         applyTheme(SYSTEM_THEME, false);
+        updateToggleStates();
       }
     });
 })();
