@@ -89,13 +89,19 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 
 /* mode switching */
 /* default styles of mode switching ui */
-body.u-light-mode .toggle {}
+.toggle:active .toggle-button { width: 1.875em; }
 body.u-dark-mode .toggle { justify-content: flex-end; }
-body.u-light-mode .mode-switch > [data-button="color-mode-light"] { background-color: #ffffff80; }
+body.u-light-mode .mode-switch > [data-button="color-mode-light"] { background-color: #ffffff90; }
 body.u-dark-mode .mode-switch > [data-button="color-mode-dark"] { background-color: #00000060; }
-body.u-dark-mode .mode-switch > .mode-switch_button:not([data-button="color-mode-dark"]):hover {
-	background-color: #bbb;
-	color: #ddd;
+body.u-system-mode.u-light-mode .mode-switch > [data-button="color-mode-system"] { background-color: #ffffff90; }
+body.u-system-mode.u-dark-mode .mode-switch > [data-button="color-mode-system"] { background-color: #00000060; }
+body.u-system-mode.u-light-mode .mode-switch > [data-button="color-mode-light"],
+body.u-system-mode.u-dark-mode .mode-switch > [data-button="color-mode-dark"] {
+	background-color: transparent;
+}
+body.u-dark-mode .mode-switch > .mode-switch_button:hover {
+	background-color: #666;
+	color: #bbb;
 }
 
 

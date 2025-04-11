@@ -1,4 +1,4 @@
-// Mode Switching Function v2.1
+// Mode Switching Function v2.2
 // by S2 Framework
 
 (function () {
@@ -6,6 +6,7 @@
   const SYSTEM_THEME = "system";
   const LIGHT_CLASS = "u-light-mode";
   const DARK_CLASS = "u-dark-mode";
+  const SYSTEM_MODE_CLASS = "u-system-mode";
   const THEME_CHANGE_ALLOWED_ATTR = "theme-change";
   // check if changing of Light / Dark Mode (Theme) is allowed
   function isThemeChangeAllowed() {
@@ -21,11 +22,20 @@
   function applyTheme(theme, savePreference = true) {
     if (!isThemeChangeAllowed()) return;
     const actualTheme = theme === SYSTEM_THEME ? getSystemTheme() : theme;
+    const isSystemMode = theme === SYSTEM_THEME;
+    // remove theme classes efficiently to minimize flashing
     document.body.classList.remove(LIGHT_CLASS, DARK_CLASS);
+    // apply the appropriate theme class
     if (actualTheme === "light") {
       document.body.classList.add(LIGHT_CLASS);
     } else {
       document.body.classList.add(DARK_CLASS);
+    }
+    // handle system mode class
+    if (isSystemMode) {
+      document.body.classList.add(SYSTEM_MODE_CLASS);
+    } else {
+      document.body.classList.remove(SYSTEM_MODE_CLASS);
     }
     if (savePreference) {
       try {
@@ -43,6 +53,10 @@
       return "light";
     }
   }
+  // check if currently in system mode
+  function isInSystemMode() {
+    return getThemePreference() === SYSTEM_THEME;
+  }
   // get the user's theme preference from localStorage
   function getThemePreference() {
     return localStorage.getItem(THEME_KEY) || SYSTEM_THEME;
@@ -50,8 +64,14 @@
   // initialize the theme on page load
   function initializeTheme() {
     if (isThemeChangeAllowed()) {
-      // we don't need to apply the theme here as it's already handled by the inline script
-      // just update toggle states to match the currently applied theme
+      const currentPreference = getThemePreference();
+      // apply system mode class if needed
+      if (currentPreference === SYSTEM_THEME) {
+        document.body.classList.add(SYSTEM_MODE_CLASS);
+      } else {
+        document.body.classList.remove(SYSTEM_MODE_CLASS);
+      }
+      // update toggle states to match the currently applied theme
       updateToggleStates();
     }
   }
@@ -89,9 +109,10 @@
       .querySelectorAll('[data-toggle="light-dark"]')
       .forEach((toggleSwitch) => {
         toggleSwitch.addEventListener("click", () => {
-          // Get current visible theme rather than stored preference
+          // get current visible theme rather than stored preference
           const currentTheme = getCurrentActiveTheme();
           const newTheme = currentTheme === "dark" ? "light" : "dark";
+          // when toggling, always move to explicit mode, not system mode
           applyTheme(newTheme);
           updateToggleStates();
         });
@@ -111,7 +132,7 @@
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", () => {
-      if (getThemePreference() === SYSTEM_THEME) {
+      if (isInSystemMode()) {
         applyTheme(SYSTEM_THEME, false);
         updateToggleStates();
       }
