@@ -16,7 +16,7 @@ During your design process, you should modify the S2 Framework cloneable and use
 
 You can use the S2 cloneable as a starting point for your project. Since we avoid over-styling, the layouts remain simple and adaptable, giving you complete creative freedom. Feel free to modify anything as you build.
 
-**The S2 Framework is not a UI kit** — but, it does include well-structured basic UI elements that you can further style to fit your needs. Additionally, S2 provides a small collection of well-structured base layouts and components, helping you build faster and more efficiently.
+**The S2 Framework is not a UI kit** — but, it does include some well-structured basic UI elements that you can further style to fit your needs. Additionally, S2 provides a small collection of well-structured base layouts and components, helping you build faster and more efficiently.
 
 </details>
 
@@ -26,7 +26,7 @@ You can use the S2 cloneable as a starting point for your project. Since we avoi
 
 If you've started a project with a specific version of the S2 Framework, it’s best to continue using that version. Upgrading can be difficult and is often unnecessary, especially if you've already modified it.
 
-Again, it is perfectly fine to continue using the version you are starting with.
+So, it is perfectly fine to continue using the version you are starting with.
 
 However, if you find something new in a new version of S2 that is not available in your current version, you can easily copy it from a freshly cloned copy.
 
@@ -36,11 +36,9 @@ However, if you find something new in a new version of S2 that is not available 
 
 <summary>Is there any conflict between the S2 Framework and Client-First conventions?</summary>
 
-No.
+No. There is no conflict between the S2 and the Client-First conventions (or any other naming conventions).
 
-There are differences, but there is no conflict between the S2 and the Client-First conventions.
-
-For example, S2 uses prefixes like `cc-` and `u-`, and we also use a few abbreviations. But, it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
+There are differences, for example, S2 uses prefixes like `cc-` and `u-`, and we also use a few abbreviations. But, it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
 
 The differences between both approaches are more about what works well and what works even better.
 
@@ -62,7 +60,7 @@ S2 Attributes is designed to keep your project classes clean and organized. It a
 
 <summary>Does S2 Attributes cause any performance issues?</summary>
 
-No. The set of custom codes is on each page and is very small in size. It has minimal effect on your site compared with other aspects.
+No. The set of custom codes is on each page and is very small in size. It has a very minimal and insignificant impact on your site compared with other aspects.
 
 </details>
 
@@ -70,12 +68,29 @@ No. The set of custom codes is on each page and is very small in size. It has mi
 
 <summary>What if my project is not going to have light and dark colors.</summary>
 
-No problem. You can remove them all easily.
+No problem. You can remove the feature easily:
 
-1. Remove the Dark mode variable mode
-2. Remove the related UI elements and JavaScript
+1. Remove the Dark mode variable mode.
+2. Remove the related UI elements and JavaScript.
 
 &#x20;However, you can also leave the existing setup for future potential changes.
+
+</details>
+
+<details>
+
+<summary>My design or the default theme color is dark. What should I do?</summary>
+
+**Option 1:**
+
+If you want to keep the default mode-switching feature of S2, you can add an attribute `theme-default="dark"` to a page's <mark style="color:purple;">`Body`</mark> tag. Then, enable Webflow Designer to display pages in dark mode by one of the following methods:
+
+* Change the "Colors" under "Variable mode" for the `body` class or the <mark style="color:purple;">`Body`</mark> tag to "**Dark mode**".
+* Add the utility class `u-dark-mode` to the `body` class.
+
+**Option 2:**
+
+If you're only using dark colors and don’t need mode-switching, you can manually adjust the Base mode colors under the "Colors" variables. Then, remove the Dark mode entirely.
 
 </details>
 
@@ -87,7 +102,7 @@ No problem. You can remove them all easily.
 
 **S2 Components are not components**; at least, they are not components yet. We just name them this way.
 
-While we also considered creating ready-made, [properties](https://help.webflow.com/hc/en-us/articles/33961219350547-Component-properties)-powered, [slot](https://university.webflow.com/lesson/slots)-powered layout components, **we decided it would be best for you to convert such components yourself**.
+While we also considered creating ready-made [properties](https://help.webflow.com/hc/en-us/articles/33961219350547-Component-properties)- or [slot](https://university.webflow.com/lesson/slots)-powered layout components, **we decided it would be best for you to convert such components yourself**.
 
 Besides, S2 is a framework by nature. This approach ensures it remains simple and flexible, allowing you to effortlessly remove anything unnecessary.
 
@@ -109,9 +124,9 @@ In fact, the main difference is in class naming conventions. You can leave the c
 
 Yes, absolutely.
 
-While you can remove unnecessary stuff from the cloned S2 framework (and clean up the styles) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around.
+While you can remove unnecessary stuff from the cloned S2 framework (and clean up their styles and interactions used) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around.
 
-Besides, keeping them in the styles guild has very, very, very minimal impact on your site's performance.
+Besides, keeping them in the styles guild has very very very minimal impact on your site's performance.
 
 </details>
 

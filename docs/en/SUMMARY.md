@@ -33,7 +33,7 @@
 
 ## Editions
 
-* [Build your Own](editions/build-your-own.md)
+* [Build your own S2](editions/build-your-own-s2.md)
 * [S2 Framework Lite](editions/s2-framework-lite.md)
 * [S2 for Template Creators](editions/s2-for-template-creators.md)
 
