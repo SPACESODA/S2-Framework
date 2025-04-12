@@ -186,15 +186,15 @@ Sometimes, when it is not about deep or light:
 
 To keep naming conventions consistent and more aligned with standard CSS, follow these guidelines:
 
-* Use `width` and `height` but not just **w** or **h**.
-* Use `button` instead of **btn**.
-* Use `image` instead of **img**.
-* Use `richtext` instead of **rich-text**.
-* Use `textarea` instead of **text-area**.
-* Use `wrapper` instead of **wrap** when the meaning or purpose is "wrapper". This is to avoid confusion with the `-wrap` and `-nowrap` properties.
-* Use `-wrapper` instead of **\_wrapper** as it is part of the context of the word, and such classes are usually parent classes.
-* Use `sub` only when referring to the meaning of "**subsidiary**". Use complete words when talking about `subtle` and `subscribe`.
-* Use CSS terminology for color names throughout the project. For example, use `gray` instead of **grey**, and `color` instead of **colour**.
+* Use **`width`** and **`height`** but not just **w** or **h**.
+* Use **`button`** instead of **btn**.
+* Use **`image`** instead of **img**.
+* Use **`richtext`** instead of **rich-text**.
+* Use **`textarea`** instead of **text-area**.
+* Use **`wrapper`** instead of **wrap** when the meaning or purpose is "wrapper". This is to avoid confusion with the **`-wrap`** and **`-nowrap`** properties.
+* Use **`-wrapper`** instead of **\_wrapper** as it is part of the context of the word, and such classes are usually parent classes.
+* Use **`sub`** only when referring to the meaning of "**subsidiary**". Use complete words when talking about **`subtle`** and **`subscribe`**.
+* Use CSS terminology for color names throughout the project. For example, use **`gray`** instead of **grey**, and **`color`** instead of **colour**.
 * Unless you have many variants that are hard to create a name for them, using **descriptive words** is always better than using **-1**, **-2**, **-3**, **-a**, **-b**, **-c**, etc. Descriptive names improve readability and clarity.
 
 
@@ -203,7 +203,7 @@ To keep naming conventions consistent and more aligned with standard CSS, follow
 
 Creating style variants using combo classes is always a nice practice. For example, try to use `button` `cc-lg` instead of creating a new `button-lg` class.
 
-It is okay to stack 3 classes, and the limit is 4. Do not stack 5 or more classes.
+It is okay to stack 3 classes, and the limit is 4. **Do not stack 5 or more classes.**
 
 Consider creating a new combo class by combining its combo classes. Example:
 
@@ -212,7 +212,7 @@ Consider creating a new combo class by combining its combo classes. Example:
 ✅  `button` `cc-pill` `cc-outline-with-icon` `cc-lg`
 
 {% hint style="success" %}
-**Exception — Stacking classes for Column Layouts:**
+**Exception — Stacking classes for Column Layouts**
 
 For example, 4 cols on Desktop (base); 6 on Tablet; 3 on Landscape; and 2 on Mobile, you will need:
 
