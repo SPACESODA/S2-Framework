@@ -87,21 +87,27 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 .html-table[scrollable][th-sticky] thead th { position: sticky; top: -1px; z-index: 998; }
 .html-table[scrollable][th-sticky] tbody th { position: sticky; left: -1px; z-index: 997; }
 
-/* mode switching */
-/* default styles of mode switching ui */
-.toggle:active .toggle-button { width: 1.875em; }
+/* toggle ui */
+.toggle:active .toggle-button { width: 1.85em; }
+
+/* mode switching ui */
+/* toggle style */
 body.u-dark-mode .toggle { justify-content: flex-end; }
-body.u-light-mode .mode-switch > [data-button="color-mode-light"] { background-color: #ffffff90; }
-body.u-dark-mode .mode-switch > [data-button="color-mode-dark"] { background-color: #00000060; }
-body.u-system-mode.u-light-mode .mode-switch > [data-button="color-mode-system"] { background-color: #ffffff90; }
-body.u-system-mode.u-dark-mode .mode-switch > [data-button="color-mode-system"] { background-color: #00000060; }
-body.u-system-mode.u-light-mode .mode-switch > [data-button="color-mode-light"],
-body.u-system-mode.u-dark-mode .mode-switch > [data-button="color-mode-dark"] {
-	background-color: transparent;
+/* mode-switch style */
+:root {
+	--light-mode-on: rgba(255, 255, 255, 0.55);
+	--dark-mode-on: rgba(0, 0, 0, 0.35);
 }
-body.u-dark-mode .mode-switch > .mode-switch_button:hover {
-	background-color: #666;
-	color: #bbb;
+body.u-system-mode .mode-switch [data-button]:not([data-button="color-mode-system"]) { background-color: transparent; }
+body.u-system-mode.u-light-mode .mode-switch [data-button="color-mode-system"] { background-color: var(--light-mode-on); }
+body.u-system-mode.u-dark-mode .mode-switch [data-button="color-mode-system"] { background-color: var(--dark-mode-on); }
+body.u-light-mode .mode-switch [data-button="color-mode-light"] { background-color: var(--light-mode-on); }
+body.u-dark-mode .mode-switch [data-button="color-mode-dark"] { background-color: var(--dark-mode-on); }
+body.u-light-mode .mode-switch .mode-switch_button:hover {
+	background-color: rgba(170, 170, 170, 1); color: rgba(240, 240, 240, 1);
+}
+body.u-dark-mode .mode-switch .mode-switch_button:hover {
+	background-color: rgba(210, 210, 210, 1); color: rgba(130, 130, 130, 1);
 }
 
 
@@ -109,7 +115,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:hover {
 /* -- S2 Attributes -- */
 /* ------------------- */
 
-/* Last updated with: S2 Framework v2.2.7.3 */
+/* Last updated with: S2 Framework v2.3.8 */
 
 /* basics */
 [hidden], [hide], .u-hide { display: none; }
@@ -380,6 +386,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:hover {
 [me="auto"] { margin-inline-end: auto; }
 
 /* display, flex, grid, gap, order, place- */
+[display="unset"], [unset] { display: unset; }
 [display="block"],[block] { display: block; }
 [display="inline"], [inline] { display: inline; }
 [display="inline-block"], [inline-block] { display: inline-block; }
@@ -490,6 +497,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:hover {
 [object-fit="none"] { object-fit: none; }
 [flip="h"] { transform: scaleX(-1); }
 [flip="v"] { transform: scaleY(-1); }
+[isolate] { isolation: isolate; }
 
 /* visually-hidden */
 /* for accessibility: hidden for visual users, readable for screen readers */
@@ -672,7 +680,7 @@ body.u-dark-mode .mode-switch > .mode-switch_button:hover {
 [animation^="pulse-bg"] { animation: pulse-bg 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 [animation="pulse-bg"] { --bg-s: var(--_palettes---primary--500); --bg-e: var(--_palettes---primary--300); }
 
-/* controls */
+/* animation controls */
 [animation-direction="reverse"] { animation-direction: reverse; }
 [animation-state="paused"] { animation-play-state: paused; }
 [animation-state="running"] { animation-play-state: running; }

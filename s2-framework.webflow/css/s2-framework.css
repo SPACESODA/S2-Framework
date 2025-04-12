@@ -8124,6 +8124,90 @@ figcaption {
   overflow: hidden;
 }
 
+.search {
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  display: flex;
+  position: relative;
+}
+
+.search-button-wrapper {
+  text-align: center;
+  flex-flow: row;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  display: flex;
+  position: relative;
+}
+
+.search-button {
+  z-index: 9;
+  background-color: var(--colors--primary);
+  color: var(--_palettes---primary--on-base);
+  text-align: center;
+  cursor: pointer;
+  width: auto;
+  height: 3rem;
+  padding: 0 1rem;
+  line-height: 1;
+  display: block;
+  position: relative;
+  overflow: clip;
+}
+
+.search-button.cc-overlay {
+  background-color: var(--colors-special--transparent);
+  color: var(--colors-special--transparent);
+  flex: 1;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  inset: 0%;
+}
+
+.search-button_content {
+  z-index: 1;
+  cursor: pointer;
+  flex-flow: row;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 3rem;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  inset: 0%;
+}
+
+.search-result-wrapper {
+  padding-top: var(--_sizes---gap--lg);
+  margin-top: 0;
+}
+
+.search-result-list {
+  grid-column-gap: var(--_sizes---gap--lg);
+  grid-row-gap: var(--_sizes---gap--lg);
+  flex-flow: column;
+  align-items: stretch;
+  display: flex;
+}
+
+.search-result-item {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-flow: column;
+  align-items: stretch;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   body {
     --_sizes---radius--xs: .275rem;
