@@ -20,7 +20,7 @@ This is our default and recommended structure when you start a page using the <m
 > > >
 > > > **`css_page`** : A Webflow Code Embed element that allows you to add custom CSS specific to the page and see changes immediately.
 > > >
-> > > **`main-nav`** : The `nav`, the page's main navigation.
+> > > **`main-nav`** : Contains `nav`, the page's main navigation.
 > > >
 > > > **`main`** : Wraps the main content of the web page.
 > > >
@@ -52,9 +52,11 @@ In terms of HTML, the default page structure looks like this (simplified), which
     <div class="page">
         <!-- Component: Global Code -->
         <!-- Code Embed: css_page -->
-        <nav class="main-nav">
-            <!-- Main navigation -->
-        </nav>
+        <header>
+            <div class="main-nav">
+                <nav><!-- Main navigation --></nav>
+            </div>
+        </header>
         <main>
             <section>
                 <div class="container">
