@@ -15,7 +15,6 @@ img, video { height: auto; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 [code], .code, .css, .js { display: none !important; }
-.spacer * { padding: 0; }
 
 /* remove tab highlight on touch devices */
 * { -webkit-tap-highlight-color: transparent; }
@@ -115,10 +114,10 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 /* -- S2 Attributes -- */
 /* ------------------- */
 
-/* Last updated with: S2 Framework v2.3.8 */
+/* Last updated with: S2 Framework v2.4.0 */
 
 /* basics */
-[hidden], [hide], .u-hide { display: none; }
+[hide], .u-hide, [hidden="true"] { display: none; }
 [disabled] { filter: saturate(0%); cursor: default; pointer-events: none; }
 [user-select="none"] { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 [events="none"] { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; touch-action: none; }
@@ -442,14 +441,6 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 [place-self="center"] { place-self: center; }
 [place-self="stretch"] { place-self: stretch; }
 
-/* overflow */
-[overflow="visible"] { overflow: visible !important; }
-[overflow="hidden"] { overflow: hidden !important; }
-[overflow="clip"] { overflow: clip !important; }
-[overflow="scroll"] { overflow: scroll; }  [overflow="auto"] { overflow: auto; }
-[overflow-x="scroll"] { overflow-x: scroll; }  [overflow-x="auto"] { overflow-x: auto; }
-[overflow-y="scroll"] { overflow-y: scroll; }  [overflow-y="auto"] { overflow-y: auto; }
-
 /* color, background, border, outline, appearance */
 [color="inherit"] { color: inherit; }
 [color="transparent"] { color: transparent; }
@@ -480,14 +471,30 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 [list-icon] li { position: relative; margin-left: 1.8em; }
 [list-icon] li::before { position: absolute; top: -0.095em; left: -1.325em; font-size: 1.125em; content: '\25CF\0020'; color: var(--colors--primary); }
 
+/* overflow */
+[overflow="auto"] { overflow: auto; }
+[overflow="scroll"] { overflow: scroll; }
+[overflow="visible"] { overflow: visible; }
+[overflow="hidden"] { overflow: hidden; }  [overflow="clip"] { overflow: clip; }
+[overflow-y="auto"] { overflow-y: auto; }
+[overflow-y="scroll"] { overflow-y: scroll; }
+[overflow-y="visible"] { overflow-y: visible; }
+[overflow-y="hidden"] { overflow-y: hidden; }  [overflow-y="clip"] { overflow-y: clip; }
+[overflow-x="auto"] { overflow-x: auto; }
+[overflow-x="scroll"] { overflow-x: scroll; }
+[overflow-x="visible"] { overflow-x: visible; }
+[overflow-x="hidden"] { overflow-x: hidden; }  [overflow-x="clip"] { overflow-x: clip; }
+
+/* overscroll */
+[overscroll="auto"] { overscroll-behavior: auto; }
+[overscroll="contain"] { overscroll-behavior: contain; }
+[overscroll="none"] { overscroll-behavior: none; -ms-overflow-style: none; scrollbar-width: none; touch-action: pan-x pan-y; }
+[overscroll="none"]::-webkit-scrollbar { width: 0px; height: 0px; }
+
 /* no-scrollbar */
 [no-scrollbar]::-webkit-scrollbar { display: none !important; width: 0px; height: 0px; }
 [no-scrollbar] { -ms-overflow-style: none; scrollbar-width: none; }
 [no-scrollbar]::-webkit-scrollbar-thumb { background-color: transparent; }
-
-/* no-overscroll */
-[no-overscroll] { overscroll-behavior: none; -webkit-overflow-scrolling: touch; touch-action: none; -ms-overflow-style: none; scrollbar-width: none; }
-[no-overscroll]::-webkit-scrollbar { width: 0px; height: 0px; }
 
 /* misc */
 [object-fit="cover"] { object-fit: cover; }
