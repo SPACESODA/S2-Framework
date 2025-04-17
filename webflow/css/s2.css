@@ -10,7 +10,7 @@
 /* basics */
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 h1, h2, h3 { text-wrap: balance; }
-img, svg, video, audio, canvas, iframe, embed, object { display: block; vertical-align: middle; }
+img, svg, video, audio, canvas, iframe, embed, object { display: block; }
 img, video { height: auto; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
@@ -67,19 +67,19 @@ nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 	margin: 0 0 0.5rem 0;
 }
 /* scrollable html-table */
-.html-table[scrollable] { overflow: auto; }
-.html-table[scrollable] table { display: block !important; }
-.html-table[scrollable] table, .html-table[scrollable="5"] table { max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px); }
-.html-table[scrollable="6"] table { max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 6 + 7px); }
-.html-table[scrollable="7"] table { max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 7 + 8px); }
-.html-table[scrollable="8"] table { max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 8 + 9px); }
-.html-table[scrollable] table th, .html-table[scrollable] table td { white-space: nowrap !important; }
-.html-table[scrollable]::-webkit-scrollbar { display: none !important; }
-.html-table[scrollable] { -ms-overflow-style: none; scrollbar-width: none; overscroll-behavior: none; }
+:root { --html-table-row-height: calc(1rem * 1.25 + 0.65rem * 2); }
+.html-table[scrollable] { overflow: auto; overscroll-behavior: none; -ms-overflow-style: none; scrollbar-width: none; touch-action: pan-x pan-y; }
+.html-table[scrollable]::-webkit-scrollbar { width: 0px; height: 0px; }
 .html-table[scrollable]::-webkit-scrollbar-thumb { background-color: transparent; }
+.html-table[scrollable] table { display: block !important; }
+.html-table[scrollable] table, .html-table[scrollable="5"] table { max-height: calc(var(--html-table-row-height) * 5 + 6px); }
+.html-table[scrollable="6"] table { max-height: calc(var(--html-table-row-height) * 6 + 7px); }
+.html-table[scrollable="7"] table { max-height: calc(var(--html-table-row-height) * 7 + 8px); }
+.html-table[scrollable="8"] table { max-height: calc(var(--html-table-row-height) * 8 + 9px); }
+.html-table[scrollable] table th, .html-table[scrollable] table td { white-space: nowrap !important; }
 .html-table[scrollable="x"] { overflow-x: auto; overflow-y: hidden; }
 .html-table[scrollable="x"] table { max-height: none; }
-.html-table[scrollable="y"] { overflow-x: hidden; overflow-y: auto; max-height: calc(((1rem * 1.25) + (0.65rem * 2)) * 5 + 6px); }
+.html-table[scrollable="y"] { overflow-x: hidden; overflow-y: auto; max-height: calc(var(--html-table-row-height) * 5 + 6px); }
 .html-table[scrollable="y"] table { display: table !important; }
 /* th-sticky */
 .html-table[scrollable][th-sticky] thead th:first-child { position: sticky; top:-1px; left: -1px; z-index: 999; }
@@ -114,7 +114,7 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 /* -- S2 Attributes -- */
 /* ------------------- */
 
-/* Last updated with: S2 Framework v2.4.0 */
+/* Last updated with: S2 Framework v2.4.2 */
 
 /* basics */
 [hide], .u-hide, [hidden="true"] { display: none; }
@@ -488,12 +488,11 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 /* overscroll */
 [overscroll="auto"] { overscroll-behavior: auto; }
 [overscroll="contain"] { overscroll-behavior: contain; }
-[overscroll="none"] { overscroll-behavior: none; -ms-overflow-style: none; scrollbar-width: none; touch-action: pan-x pan-y; }
-[overscroll="none"]::-webkit-scrollbar { width: 0px; height: 0px; }
+[overscroll="none"] { overscroll-behavior: none; -ms-overflow-style: none; touch-action: pan-x pan-y; }
 
 /* no-scrollbar */
-[no-scrollbar]::-webkit-scrollbar { display: none !important; width: 0px; height: 0px; }
 [no-scrollbar] { -ms-overflow-style: none; scrollbar-width: none; }
+[no-scrollbar]::-webkit-scrollbar { width: 0px; height: 0px; }
 [no-scrollbar]::-webkit-scrollbar-thumb { background-color: transparent; }
 
 /* misc */
