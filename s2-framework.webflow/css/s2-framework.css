@@ -1623,9 +1623,6 @@ figcaption {
 }
 
 .card.cc-p-0 {
-  box-shadow: 0 0 0 var(--_sizes---line--thin) var(--colors--stroke);
-  border-style: none;
-  border-width: 0;
   width: 100%;
   min-width: auto;
   padding: 0;
@@ -7763,6 +7760,10 @@ figcaption {
   box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--surface);
 }
 
+.avatar.cc-surface:hover {
+  box-shadow: 0 0 0 var(--_sizes---line--base) var(--colors--surface-muted);
+}
+
 .avatar.cc-white {
   background-color: var(--colors--surface);
   box-shadow: 0 0 0 var(--_sizes---line--3px) var(--_palettes---neutral--white);
@@ -8083,8 +8084,10 @@ figcaption {
 }
 
 .slider_arrow {
+  z-index: 3;
   opacity: .6;
   text-align: center;
+  cursor: pointer;
   width: clamp(2rem, 8cqw, 99rem);
   font-size: 5cqw;
   line-height: 1;
@@ -8633,15 +8636,6 @@ figcaption {
   max-height: 65vh;
   display: block;
   position: relative;
-}
-
-.card-wrapper {
-  border-radius: var(--_sizes---radius--card);
-  width: 100%;
-  min-width: auto;
-  padding: 0;
-  display: block;
-  overflow: visible;
 }
 
 .hero-section_images-group {
