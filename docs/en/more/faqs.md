@@ -40,7 +40,7 @@ No. There is no conflict between the S2 and the Client-First conventions (or any
 
 There are differences, for example, S2 uses prefixes like `cc-` and `u-`, and we also use a few abbreviations. But, it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
 
-The differences between both approaches are more about what works well and what works even better.
+The differences between the two approaches are more about what works well and what works even better.
 
 </details>
 

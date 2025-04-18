@@ -59,10 +59,16 @@ Here are more examples to help you get familiar with this approach:
 
 Use `cc-` for ALL combo classes.
 
-S2 does not use **is-**, and does not use **has-**, **with-**, **without-**, **no-**, **not-**, **non-**, or any other prefixes of such kind for combo classes. If you need to convey meanings such as **is**, **has**, **with**, etc., name the combo classes as `cc-is-`, `cc-has-`, `cc-with-`.
+S2 does not use **has-**, **with-**, **without-**, **no-**, **not-**, **non-**, or any other prefixes of such kind for combo classes. If you need to convey meanings such as **is**, **has**, **with**, etc., name the combo classes as `cc-is-`, `cc-has-`, `cc-with-`.
 
 {% hint style="info" %}
-Sometimes you might copy components from other sources into your project. These components may follow different naming conventions (e.g. Client-First uses `is-` for combo classes), especially when JavaScript is used to target specific class names for functionality. In such cases, it’s fine to keep the original class names. There’s no need to rename them to `cc-`.
+In S2, we prefer using `cc-` for combo classes.
+
+For consistency, always use the `cc-` prefix when creating new classes.
+
+Sometimes, you may work with existing components or projects that use different naming conventions for combo classes, such as `is-` in Client-First. In some cases, class names are tied to JavaScript functionality and cannot be easily changed.
+
+When that happens, it is fine to leave the names as they are. There is no need to rename them to `cc-`.
 {% endhint %}
 
 Use `u-` for ALL utility classes.
