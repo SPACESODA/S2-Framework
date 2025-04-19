@@ -26,9 +26,5 @@ It is essentially a **one-page Style Guide** that fully complies with Webflow’
 
 :tada: Congratulations! You are now ready to start building.
 
-{% hint style="info" %}
-_**Note about the "Form" demos:**_ Since there is no custom code to remove the **select** fields' default dropdown arrows after the above cleanup, you may need to apply some styling and adjust the spacing to improve their appearance.
-{% endhint %}
-
 
 
