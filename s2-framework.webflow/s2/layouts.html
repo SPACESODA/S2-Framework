@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Apr 18 2025 05:54:32 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Apr 19 2025 14:59:30 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -206,7 +206,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.2/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.5/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -378,6 +378,33 @@ https://fontawesome.com/search?ic=free
               position: fixed;
               inset: 0;
             }
+            /* select: custom arrow */
+            :root {
+              --select-arrow-size: 0.375em;
+            }
+            .select-wrapper select {
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+            .select-wrapper::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
+              width: var(--select-arrow-size);
+              height: var(--select-arrow-size);
+              border-right: 0.125em solid currentColor;
+              border-bottom: 0.125em solid currentColor;
+              border-radius: 0 0 25% 0;
+              transform: translateY(-65%) rotate(45deg);
+              transition: transform 0.2s ease, border-color 0.2s ease;
+              opacity: 0.6;
+              pointer-events: none;
+            }
+            .input-field.cc-boxed .select-wrapper::after {
+              inset-inline-end: var(--select-arrow-size);
+            }
             /* other styles */
             .input-field.cc-boxed:focus-within {
               border-color: var(--colors--primary);
@@ -385,7 +412,7 @@ https://fontawesome.com/search?ic=free
             }
             .richtext-list ul li::before {
               position: absolute;
-              margin-left: -1.65em;
+              margin-inline-start: -1.65em;
               content: '\2713\0020';
               color: var(--colors--primary);
             }
@@ -393,9 +420,8 @@ https://fontawesome.com/search?ic=free
               font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
             }
             /* styles for RTL lauout */
-            [dir="rtl"] .main-nav_menu {
-              margin-left: 0rem !important;
-              margin-right: auto;
+            [dir="rtl"] .list-item_icon {
+              background-position: 100% 0%;
             }
           </style>
       </div>
@@ -410,7 +436,7 @@ https://fontawesome.com/search?ic=free
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8887 6C21.1723 6 5.99976 21.1726 5.99976 39.8889V216.111C5.99976 234.828 21.1723 250 39.8887 250H216.111C234.827 250 250 234.828 250 216.111V39.8889C250 21.1726 234.827 6 216.111 6H39.8887ZM83.5627 45.4407C84.6066 41.1937 88.415 38.2081 92.7884 38.2081H139.158C145.323 38.2081 149.855 43.9892 148.383 49.9761L131.177 119.976C130.294 123.568 133.014 127.037 136.713 127.037H180.959C187.124 127.037 191.657 132.818 190.185 138.805L172.437 211.007C171.393 215.255 167.585 218.24 163.212 218.24H116.842C110.677 218.24 106.145 212.459 107.617 206.472L124.823 136.472C125.706 132.88 122.986 129.412 119.287 129.412H75.0408C68.8756 129.412 64.3434 123.631 65.815 117.644L83.5627 45.4407Z" fill="currentColor"></path>
                 </svg></div>
               <div class="u-hide_md">
-                <div class="main-logo w-embed"><span style="font-size: 0.95rem; font-weight: 700; line-height: 1.025; color: inherit; margin: 0 0.7125em;">S2 Framework</span></div>
+                <div class="main-logo w-embed"><span style="font-size: 0.95rem; font-weight: 700; line-height: 1.025; color: inherit; margin-inline-start: 0.7125em;">S2 Framework</span></div>
               </div>
             </a>
           </div>
@@ -932,12 +958,12 @@ https://fontawesome.com/search?ic=free
                   <div class="col cc-main cc-px-0">
                     <div class="u-bg-pattern cc-with-border">main</div>
                   </div>
-                  <aside class="col cc-aside cc-on-right">
+                  <aside class="col cc-aside cc-end">
                     <div class="u-bg-pattern cc-with-border">aside</div>
                   </aside>
                 </div>
                 <div class="flex-cols">
-                  <aside class="col cc-aside cc-on-left">
+                  <aside class="col cc-aside cc-start">
                     <div class="u-bg-pattern cc-with-border">aside</div>
                   </aside>
                   <div class="col cc-main cc-px-0">
@@ -948,12 +974,12 @@ https://fontawesome.com/search?ic=free
                   <div class="col cc-main cc-px-0">
                     <div class="u-bg-pattern cc-with-border">main</div>
                   </div>
-                  <aside class="col cc-aside cc-on-right cc-lg">
+                  <aside class="col cc-aside cc-end cc-lg">
                     <div class="u-bg-pattern cc-with-border">aside</div>
                   </aside>
                 </div>
                 <div class="flex-cols">
-                  <aside class="col cc-aside cc-on-left cc-lg">
+                  <aside class="col cc-aside cc-start cc-lg">
                     <div class="u-bg-pattern cc-with-border">aside</div>
                   </aside>
                   <div class="col cc-main cc-px-0">
@@ -1097,7 +1123,7 @@ https://fontawesome.com/search?ic=free
               <h1>Grid Layout Utilities</h1>
             </div>
             <div class="text-wrapper">
-              <p><span class="tag-label cc-primary">Advanced</span> This Grid Layout utilities system is a simplified modification of the <a href="https://www.youtube.com/watch?v=J78BBoZbmG8" target="_blank">Grid Utilities by Timothy Ricks</a>.</p>
+              <p><span class="tag-label cc-primary">Advanced</span> The Grid Layout utilities system in S2 is a simplified and improved version of the <a href="https://www.youtube.com/watch?v=J78BBoZbmG8" target="_blank">Grid Utilities by Timothy Ricks</a>.</p>
             </div>
           </div>
           <div class="sg-grid-demo">
@@ -1114,7 +1140,7 @@ https://fontawesome.com/search?ic=free
               </div>
               <div class="sg-grid-demo_item">
                 <div class="u-grid-global cc-12-8-6-4">
-                  <div class="sg-demo-card cc-demo">grid-column (demo)</div>
+                  <div class="sg-demo-card cc-4-span-6">grid-column (demo)</div>
                 </div>
               </div>
             </div>

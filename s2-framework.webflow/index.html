@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Apr 18 2025 05:54:32 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Apr 19 2025 14:59:30 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -318,7 +318,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.2/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.5/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -490,6 +490,33 @@ https://fontawesome.com/search?ic=free
               position: fixed;
               inset: 0;
             }
+            /* select: custom arrow */
+            :root {
+              --select-arrow-size: 0.375em;
+            }
+            .select-wrapper select {
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+            .select-wrapper::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
+              width: var(--select-arrow-size);
+              height: var(--select-arrow-size);
+              border-right: 0.125em solid currentColor;
+              border-bottom: 0.125em solid currentColor;
+              border-radius: 0 0 25% 0;
+              transform: translateY(-65%) rotate(45deg);
+              transition: transform 0.2s ease, border-color 0.2s ease;
+              opacity: 0.6;
+              pointer-events: none;
+            }
+            .input-field.cc-boxed .select-wrapper::after {
+              inset-inline-end: var(--select-arrow-size);
+            }
             /* other styles */
             .input-field.cc-boxed:focus-within {
               border-color: var(--colors--primary);
@@ -497,7 +524,7 @@ https://fontawesome.com/search?ic=free
             }
             .richtext-list ul li::before {
               position: absolute;
-              margin-left: -1.65em;
+              margin-inline-start: -1.65em;
               content: '\2713\0020';
               color: var(--colors--primary);
             }
@@ -505,9 +532,8 @@ https://fontawesome.com/search?ic=free
               font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
             }
             /* styles for RTL lauout */
-            [dir="rtl"] .main-nav_menu {
-              margin-left: 0rem !important;
-              margin-right: auto;
+            [dir="rtl"] .list-item_icon {
+              background-position: 100% 0%;
             }
           </style>
       </div>
@@ -588,7 +614,8 @@ https://fontawesome.com/search?ic=free
           }
           .sg-cover_footer {
             position: absolute;
-            inset: 0.75cqw 0% auto auto;
+            inset-block-start: 0.75cqw;
+            inset-inline-end: 0%;
             font-size: var(--cover--text-xs);
             margin: 0 0 2rem 0;
           }
@@ -756,7 +783,7 @@ https://fontawesome.com/search?ic=free
         </div>
         <div class="w-layout-blockcontainer container cc-full w-container first-container">
           <div style="margin: 0 0 0.5rem 0;" class="tag-wrapper">
-            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v2.4.3</div>
+            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v2.4.5</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
           <p class="sg-cover_tagline">A Webflow Framework for Everyone.<br>Flexible, Easy to master, and Straightforward.</p>
@@ -812,11 +839,11 @@ https://fontawesome.com/search?ic=free
                   </a>
                 </span>
               </div>
-              <div gap="sm" style="margin: 0.275rem 0 0 0;" class="block">
+              <div gap="sm" style="margin: 0.425rem 0 0 0;" class="block">
                 <div gap="word" flex-wrap="wrap-nice" class="u-hflex-center-center w-embed"><span>
                     <a href="http://s2-framework.gitbook.io/docs" target="_blink">Docs</a> and <a href="http://s2-framework.webflow.io/#changelog" target="_blink">Changelog</a>
                   </span></div>
-                <div gap="sm" style="transform: scale(0.88); transform-origin: center center;" class="u-hflex-center-center">
+                <div gap="sm" style="transform: scale(0.9); transform-origin: center center;" class="u-hflex-center-center">
                   <a rel="noopener" aria-label="S2 Framework on Github" href="https://github.com/SPACESODA/S2-Framework" target="_blank" class="w-inline-block">
                     <div class="icon cc-1-5em w-embed"><svg width="100%" height="100%" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M50 3C23.48 3 2 24.48 2 51C2 72.24 15.74 90.18 34.82 96.54C37.22 96.96 38.12 95.52 38.12 94.26C38.12 93.12 38.06 89.34 38.06 85.32C26 87.54 22.88 82.38 21.92 79.68C21.38 78.3 19.04 74.04 17 72.9C15.32 72 12.92 69.78 16.94 69.72C20.72 69.66 23.42 73.2 24.32 74.64C28.64 81.9 35.54 79.86 38.3 78.6C38.72 75.48 39.98 73.38 41.36 72.18C30.68 70.98 19.52 66.84 19.52 48.48C19.52 43.26 21.38 38.94 24.44 35.58C23.96 34.38 22.28 29.46 24.92 22.86C24.92 22.86 28.94 21.6 38.12 27.78C41.96 26.7 46.04 26.16 50.12 26.16C54.2 26.16 58.28 26.7 62.12 27.78C71.3 21.54 75.32 22.86 75.32 22.86C77.96 29.46 76.28 34.38 75.8 35.58C78.86 38.94 80.72 43.2 80.72 48.48C80.72 66.9 69.5 70.98 58.82 72.18C60.56 73.68 62.06 76.56 62.06 81.06C62.06 87.48 62 92.64 62 94.26C62 95.52 62.9 97.02 65.3 96.54C84.26 90.18 98 72.18 98 51C98 24.48 76.52 3 50 3Z" fill="#ddd"></path>

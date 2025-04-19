@@ -12,7 +12,6 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 h1, h2, h3 { text-wrap: balance; }
 img, svg, video, audio, canvas, iframe, embed, object { display: block; }
 img, video { height: auto; }
-select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 nav a:not(p a), footer nav li a, .footer nav li a { text-decoration: none; }
 [code], .code, .css, .js { display: none !important; }
 
@@ -114,7 +113,7 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 /* -- S2 Attributes -- */
 /* ------------------- */
 
-/* Last updated with: S2 Framework v2.4.2 */
+/* Last updated with: S2 Framework v2.4.5 */
 
 /* basics */
 [hide], .u-hide, [hidden="true"] { display: none; }
@@ -468,8 +467,8 @@ body.u-dark-mode .mode-switch .mode-switch_button:hover {
 [list-type] li { list-style-position: outside; }
 [list-type] li::before { content: none !important; /* reset */ }
 [list-type] { list-style: none !important; /* reset */ }
-[list-icon] li { position: relative; margin-left: 1.8em; }
-[list-icon] li::before { position: absolute; top: -0.095em; left: -1.325em; font-size: 1.125em; content: '\25CF\0020'; color: var(--colors--primary); }
+[list-icon] li { position: relative; margin-inline-start: 0em; }
+[list-icon] li::before { position: absolute; top: -0.085em; inset-inline-start: -1.325em; font-size: 1.125em; content: '\25CF\0020'; color: var(--colors--primary); }
 
 /* overflow */
 [overflow="auto"] { overflow: auto; }

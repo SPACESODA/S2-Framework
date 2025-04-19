@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Apr 18 2025 05:54:32 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Apr 19 2025 14:59:30 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66b023bf4e23db0c33056abe" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -40,7 +40,7 @@ S2 Framework Base CSS
 ** Full Pacakge by CDN **
 ** A few KBs only! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.2/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.5/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code cc-inside-global">
@@ -212,6 +212,33 @@ https://fontawesome.com/search?ic=free
               position: fixed;
               inset: 0;
             }
+            /* select: custom arrow */
+            :root {
+              --select-arrow-size: 0.375em;
+            }
+            .select-wrapper select {
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+            .select-wrapper::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
+              width: var(--select-arrow-size);
+              height: var(--select-arrow-size);
+              border-right: 0.125em solid currentColor;
+              border-bottom: 0.125em solid currentColor;
+              border-radius: 0 0 25% 0;
+              transform: translateY(-65%) rotate(45deg);
+              transition: transform 0.2s ease, border-color 0.2s ease;
+              opacity: 0.6;
+              pointer-events: none;
+            }
+            .input-field.cc-boxed .select-wrapper::after {
+              inset-inline-end: var(--select-arrow-size);
+            }
             /* other styles */
             .input-field.cc-boxed:focus-within {
               border-color: var(--colors--primary);
@@ -219,7 +246,7 @@ https://fontawesome.com/search?ic=free
             }
             .richtext-list ul li::before {
               position: absolute;
-              margin-left: -1.65em;
+              margin-inline-start: -1.65em;
               content: '\2713\0020';
               color: var(--colors--primary);
             }
@@ -227,9 +254,8 @@ https://fontawesome.com/search?ic=free
               font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
             }
             /* styles for RTL lauout */
-            [dir="rtl"] .main-nav_menu {
-              margin-left: 0rem !important;
-              margin-right: auto;
+            [dir="rtl"] .list-item_icon {
+              background-position: 100% 0%;
             }
           </style>
       </div>
@@ -240,9 +266,7 @@ https://fontawesome.com/search?ic=free
         </style>
     </div>
     <main class="main">
-      <section class="section">
-        <div class="w-layout-blockcontainer container w-container"></div>
-      </section>
+      <div class="w-layout-blockcontainer container w-container"></div>
     </main>
   </div>
   <dialog data-nosnippet="true" events="none" z-index="top" class="delete-me cc-bottom-note">

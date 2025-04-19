@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Apr 18 2025 05:54:32 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Apr 19 2025 14:59:30 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -33,7 +33,7 @@
   <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.8/webflow/js/mode-switching.min.js" defer=""></script>
   <meta name="robots" content="noindex, nofollow, noarchive">
 </head>
-<body dir="" class="body">
+<body dir="" theme-change="false" theme-default="light" class="body">
   <div data-nosnippet="true" tabindex="-1" class="delete-me cc-clone-cta">
     <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
       <!--  For Style Guide only, you don't need the below scripts.  -->
@@ -236,7 +236,7 @@
   <div id="top" class="page">
     <div class="code w-embed w-script"><!--  
   Replace Webflow's JS smooth scroll with native CSS smooth scrolling,
-  so that the "scroll-margin" property can work as intended.
+  so that the "scroll-margin" property can work as intended on this page.
  -->
       <!--  This is optional and applies to this page only.  -->
       <script>
@@ -267,7 +267,7 @@
       </section>
       <div data-animation="default" class="sg-nav cc-page-nav w-nav" data-easing2="ease" data-easing="ease" data-collapse="small" role="banner" data-duration="400" data-doc-height="1" z-index="top">
         <div class="sg-nav_container cc-page-nav w-container">
-          <nav role="navigation" class="sg-nav_menu cc-to-left w-nav-menu">
+          <nav role="navigation" class="sg-nav_menu cc-page-nav w-nav-menu">
             <a href="#typography" class="sg-nav_link cc-page-nav w-nav-link">Typography</a>
             <a href="#presets" class="sg-nav_link cc-page-nav w-nav-link">Presets</a>
             <a href="#structure" class="sg-nav_link cc-page-nav w-nav-link">Structure</a>
@@ -634,20 +634,17 @@
                 <div class="sg-element">
                   <div class="sg-tags">
                     <div class="tag-wrapper">
-                      <div class="tag-label">list-item_image-icon<br></div>
+                      <div class="tag-label">list-item_icon<br></div>
                     </div>
                     <div class="sg-note">use a combo class to change the background-image for the bullets</div>
                   </div>
                   <div gap="base" flex="col" class="block">
                     <ul role="list" class="list w-list-unstyled">
-                      <li class="list-item_image-icon">
+                      <li class="list-item_icon">
                         <div>Lorem ipsum dolor sit amet</div>
                       </li>
-                      <li class="list-item_image-icon">
+                      <li class="list-item_icon">
                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus mi quis viverra ornare.</div>
-                      </li>
-                      <li class="list-item_image-icon">
-                        <div>Lorem ipsum<br></div>
                       </li>
                     </ul>
                   </div>
@@ -658,14 +655,13 @@
                       <div class="tag-label cc-html">Unordered Lists</div>
                     </div>
                     <div class="tag-wrapper">
-                      <div><span class="tag-label">list-none</span> / <span class="tag-label">list-h</span></div>
+                      <div class="tag-label">list-none</div>
+                      <div>/</div>
+                      <div class="tag-label">list-h</div>
                     </div>
                   </div>
                   <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="block">
-                    <ul role="list" class="list-none">
-                      <li>
-                        <div>Lorem ipsum dolor sit amet</div>
-                      </li>
+                    <ul role="list" class="list-none w-list-unstyled">
                       <li>
                         <div>Lorem ipsum dolor sit amet</div>
                       </li>
@@ -673,8 +669,8 @@
                         <div>Lorem ipsum dolor sit amet</div>
                       </li>
                     </ul>
-                    <div style="max-width: 30rem;">
-                      <ul role="list" class="list-h">
+                    <div style="max-width: 30rem;" class="block">
+                      <ul role="list" class="list-h w-list-unstyled">
                         <li>
                           <div>Lorem ipsum</div>
                         </li>
@@ -698,8 +694,8 @@
                         </li>
                       </ul>
                     </div>
-                    <div style="max-width: 30rem;" mx="auto">
-                      <ul role="list" class="list-h cc-center">
+                    <div style="max-width: 30rem;" mx="auto" class="block">
+                      <ul role="list" class="list-h cc-center w-list-unstyled">
                         <li>
                           <div>Lorem ipsum</div>
                         </li>
@@ -735,60 +731,42 @@
                     <div style="gap: 1.5rem;" class="sg-flex-wrap">
                       <div class="col cc-p-0">
                         <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                          <div class="tag-label cc-html">Unordered Lists</div>
+                          <div class="tag-label cc-html">Unordered / Ordered Lists</div>
                           <div class="tag-label">list-custom</div>
+                          <div class="tag-label">list-custom_item</div>
                         </div>
                         <ul role="list" class="list-custom">
                           <li class="list-custom_item">Sed posuere consectetur est at lobortis.</li>
-                          <li class="list-custom_item">Sed posuere consectetur est at lobortis.</li>
-                          <li class="list-custom_item">Sed posuere consectetur est at lobortis.</li>
+                          <li class="list-custom_item cc-disc">Sed posuere consectetur est at lobortis.</li>
+                          <li class="list-custom_item cc-square">Sed posuere consectetur est at lobortis.</li>
+                          <li class="list-custom_item cc-decimal">Sed posuere consectetur est at lobortis.</li>
+                          <li class="list-custom_item cc-la">Sed posuere consectetur est at lobortis.</li>
+                          <li class="list-custom_item cc-ua">Sed posuere consectetur est at lobortis.</li>
                         </ul>
                       </div>
                       <div class="col cc-p-0">
                         <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                          <div class="tag-label cc-html">Ordered Lists</div>
-                          <div class="tag-label">list-custom</div>
+                          <div class="tag-label">list-custom_item</div>
+                          <div class="tag-label">cc-flex</div>
                         </div>
-                        <ol role="list" class="list-custom">
-                          <li class="list-custom_item cc-ua">Sed posuere consectetur est at lobortis.</li>
-                          <li class="list-custom_item cc-ua">Sed posuere consectetur est at lobortis.</li>
-                          <li class="list-custom_item cc-ua">Sed posuere consectetur est at lobortis.</li>
-                        </ol>
-                      </div>
-                      <div class="col cc-p-0">
-                        <div style="margin-bottom: 1rem;" class="tag-wrapper">
-                          <div class="tag-label">list-custom</div>
-                          <div class="tag-label">cc-p-0</div>
-                        </div>
-                        <div class="list-custom cc-p-0">
-                          <div class="list-custom_item cc-with-icon">
-                            <div class="list-item_icon-wrapper">
-                              <div class="list-item_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
+                        <div class="list-custom">
+                          <div class="list-custom_item cc-flex">
+                            <div class="icon-wrapper cc-list-icon">
+                              <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
                                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                 </svg></div>
                             </div>
-                            <div>Sed posuere consectetur est at lobortis.</div>
+                            <div inline="">Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</div>
                           </div>
-                          <div class="list-custom_item cc-with-icon">
-                            <div class="list-item_icon-wrapper">
-                              <div class="list-item_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
+                          <div class="list-custom_item cc-flex">
+                            <div class="icon-wrapper cc-list-icon">
+                              <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
                                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                 </svg></div>
                             </div>
-                            <div>Sed posuere consectetur est at lobortis.</div>
-                          </div>
-                          <div class="list-custom_item cc-with-icon">
-                            <div class="list-item_icon-wrapper">
-                              <div class="list-item_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
-                                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                </svg></div>
-                            </div>
-                            <div>
-                              <div>Sed posuere consectetur est at lobortis.</div>
-                            </div>
+                            <div>Sed posuere consectetur est at lobortis</div>
                           </div>
                         </div>
                       </div>
@@ -1785,7 +1763,7 @@
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                         <div class="sg-padding cc-container"></div>
-                        <div class="sg-padding cc-container cc-right"></div>
+                        <div class="sg-padding cc-container cc-end"></div>
                       </div>
                     </div>
                   </div>
@@ -1805,7 +1783,7 @@
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                         <div class="sg-padding cc-container"></div>
-                        <div class="sg-padding cc-container cc-right"></div>
+                        <div class="sg-padding cc-container cc-end"></div>
                       </div>
                     </div>
                   </div>
@@ -1825,7 +1803,7 @@
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.<br></p>
                         </div>
                         <div class="sg-padding cc-container"></div>
-                        <div class="sg-padding cc-container cc-right"></div>
+                        <div class="sg-padding cc-container cc-end"></div>
                       </div>
                     </div>
                   </div>
@@ -1845,7 +1823,7 @@
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
                         </div>
                         <div class="sg-padding cc-container"></div>
-                        <div class="sg-padding cc-container cc-right"></div>
+                        <div class="sg-padding cc-container cc-end"></div>
                       </div>
                     </div>
                   </div>
@@ -1865,7 +1843,7 @@
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                         <div class="sg-padding cc-container"></div>
-                        <div class="sg-padding cc-container cc-right"></div>
+                        <div class="sg-padding cc-container cc-end"></div>
                       </div>
                     </div>
                   </div>
@@ -2050,7 +2028,7 @@
                   </div>
                   <div class="block">
                     <div style="position: relative; height: 12rem;" class="card cc-p-0">
-                      <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                      <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                     </div>
                   </div>
                 </div>
@@ -2760,16 +2738,6 @@
                     <div class="u-hide_xs">
                       <div events="none" class="sg-square"></div>
                     </div>
-                  </div>
-                </div>
-                <div class="sg-element">
-                  <div class="sg-tags">
-                    <div class="tag-wrapper">
-                      <div class="tag-label">u-align-center</div>
-                    </div>
-                  </div>
-                  <div class="block">
-                    <div class="u-align-center">Hello!</div>
                   </div>
                 </div>
                 <div class="sg-element">
@@ -3785,7 +3753,7 @@
                     <div class="u-10c">
                       <div class="card cc-p-0">
                         <div class="card-cover">
-                          <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                          <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                         </div>
                         <div class="card-body">
                           <div class="card-inner">
@@ -4165,7 +4133,7 @@
                         <div aria-label="Avatar of a member" role="group" class="avatar-wrapper cc-overlapping">
                           <div class="avatar cc-white"><img src="https://images.unsplash.com/photo-1663893364107-a6ecd06cf615?q=80&amp;w=300&amp;auto=format&amp;fit=crop" alt="Profile image" aria-hidden="true" class="avator_image"></div>
                         </div>
-                        <div style="margin-left: 1.25rem; opacity: 50%;" class="text-sm">36k+ members</div>
+                        <div style="margin-inline-start: 1.25rem; opacity: 50%;" class="text-sm">36k+ members</div>
                       </div>
                       <div class="u-hflex-left-center">
                         <div aria-label="Avatar of a member" role="group" class="avatar-wrapper cc-lg cc-overlapping">
@@ -4177,7 +4145,7 @@
                         <div aria-label="Avatar of a member" role="group" class="avatar-wrapper cc-lg cc-overlapping">
                           <div class="avatar cc-white"><img src="https://images.unsplash.com/photo-1663893364107-a6ecd06cf615?q=80&amp;w=300&amp;auto=format&amp;fit=crop" alt="Profile image" aria-hidden="true" class="avator_image"></div>
                         </div>
-                        <div style="margin-left: 1.25rem; opacity: 50%;" class="text-sm">36k+ members</div>
+                        <div style="margin-inline-start: 1.25rem; opacity: 50%;" class="text-sm">36k+ members</div>
                       </div>
                     </div>
                   </div>
@@ -4423,11 +4391,7 @@
                                 <option value="First">First choice</option>
                                 <option value="Second">Second choice</option>
                                 <option value="Third">Third choice</option>
-                              </select>
-                              <div class="icon cc-select-arrow w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></div>
-                            </div>
+                              </select></div>
                           </div>
                           <div class="input-field"><label for="Demo-A-Message" class="text-sm">Textarea</label><textarea id="Demo-A-Message" name="Demo-A-Message" maxlength="5000" data-name="Demo A Message" placeholder="Your message" required="" class="input cc-textarea w-input"></textarea></div>
                           <div class="input-field">
@@ -4520,11 +4484,7 @@
                                 <option value="First">First choice</option>
                                 <option value="Second">Second choice</option>
                                 <option value="Third">Third choice</option>
-                              </select>
-                              <div class="icon cc-select-arrow cc-pl-0 w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></div>
-                            </div>
+                              </select></div>
                           </div>
                           <div class="input-field cc-boxed">
                             <div class="u-text-stroke"><label for="Demo-B-Message" class="text-xs">Textarea</label></div><textarea id="Demo-B-Message" name="Demo-B-Message" maxlength="5000" data-name="Demo B Message" placeholder="Your message" required="" class="input cc-textarea cc-boxed w-input"></textarea>
@@ -4942,12 +4902,12 @@
                       <div class="col cc-main cc-px-0">
                         <div class="u-bg-pattern cc-with-border">main</div>
                       </div>
-                      <aside class="col cc-aside cc-on-right">
+                      <aside class="col cc-aside cc-end">
                         <div class="u-bg-pattern cc-with-border">aside</div>
                       </aside>
                     </div>
                     <div class="flex-cols">
-                      <aside class="col cc-aside cc-on-left">
+                      <aside class="col cc-aside cc-start">
                         <div class="u-bg-pattern cc-with-border">aside</div>
                       </aside>
                       <div class="col cc-main cc-px-0">
@@ -4958,12 +4918,12 @@
                       <div class="col cc-main cc-px-0">
                         <div class="u-bg-pattern cc-with-border">main</div>
                       </div>
-                      <aside class="col cc-aside cc-on-right cc-lg">
+                      <aside class="col cc-aside cc-end cc-lg">
                         <div class="u-bg-pattern cc-with-border">aside</div>
                       </aside>
                     </div>
                     <div class="flex-cols">
-                      <aside class="col cc-aside cc-on-left cc-lg">
+                      <aside class="col cc-aside cc-start cc-lg">
                         <div class="u-bg-pattern cc-with-border">aside</div>
                       </aside>
                       <div class="col cc-main cc-px-0">
@@ -5410,7 +5370,7 @@
             <div class="title-wrapper cc-lg">
               <h1 class="title-heading cc-xl">Starter Page Structure</h1>
             </div>
-            <div class="title-message cc-sm">This template follows the page structure recommended by the S2 Framework and is independent of any custom code. It serves as the perfect starting point for crafting your next Webflow template.</div>
+            <div class="title-message cc-sm">This Starter Page Structure follows the structure recommended by the S2 Framework and is independent of any custom code. It serves as the perfect starting point for crafting your next Webflow template.</div>
           </div>
         </section>
         <section class="section cc-top-sm">
