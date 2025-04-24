@@ -11,24 +11,31 @@ After [**cloning**](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_med
 1. **Set up your Homepage**
    1. Make the page **Home** your homepage.
    2. Change the S2 Framework Cover page into "Draft", or simply delete it.
-   3. Delete the `DELETE-ME` section on your new homepage.
-   4. Add the <mark style="color:green;">**Page Template**</mark> component.
+   3. Remove the `DELETE-ME` section on your new homepage.
 2. **Configure the Variables**
    * Set up the colors of your Palettes in the Variables panel.
    * Configure your Font Family variables.
 3. **Start building!**
-   * Use the **New Page Template** to create a new page.
-   * Unlink the instance of the <mark style="color:green;">**Page Template**</mark> component.
+   * Add the <mark style="color:green;">**Page Template**</mark> component to your **Home**, or use the **New Page Template** to create a new page.
+   * Unlink the <mark style="color:green;">**Page Template**</mark> component instance and begin building.
+
+
 
 <details>
 
-<summary>Do I need to design on the Page Template now?</summary>
+<summary>Do I need to update the design on the Page Template at the beginning?</summary>
 
-No, you don't need to do so at the beginning.
+Designing a full page directly inside a component can be inconvenient.
 
-Designing a large page inside a component can be inconvenient.
+Instead, you can start by building your layout outside the component. Once everything is more finalized, simply copy and paste the sections and elements back into the Page Template component.
 
-You can begin designing by unlinking the <mark style="color:green;">**Page Template**</mark> component on any blank page. Once your layouts are more consolidated, you can copy and paste the parts back to the <mark style="color:green;">**Page Template**</mark> component later.
+</details>
+
+<details>
+
+<summary>Do I need to configure all variables before building?</summary>
+
+Not necessarily. You can start building with the default values and adjust variables later. However, if you already have a solid design, it is a good idea to set up your palette and font variables upfront.
 
 </details>
 

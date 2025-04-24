@@ -70,27 +70,26 @@ No. The set of custom codes is on each page and is very small in size. It has a 
 
 No problem. You can remove the feature easily:
 
-1. Remove the Dark mode variable mode.
-2. Remove the related UI elements and JavaScript.
-
-&#x20;However, you can also leave the existing setup for future potential changes.
+1. Remove the Dark mode variables.
+2. Remove the related scripts from the project's global head code.
+3. Remove the related UI elements (optional).
 
 </details>
 
 <details>
 
-<summary>My design or the default theme color is dark. What should I do?</summary>
+<summary>My design or my default theme is dark. What should I do?</summary>
 
 **Option 1:**
 
-If you want to keep the default mode-switching feature of S2, you can add an attribute `theme-default="dark"` to a page's <mark style="color:purple;">`Body`</mark> tag. Then, enable Webflow Designer to display pages in dark mode by one of the following methods:
+If you want to keep S2's default mode-switching feature, you can add an attribute `theme-default="dark"` to a page's <mark style="color:purple;">`Body`</mark> tag. Then, enable Webflow Designer to display pages in dark mode by one of the following methods:
 
 * Change the "Colors" under "Variable mode" for the `body` class or the <mark style="color:purple;">`Body`</mark> tag to "**Dark mode**".
 * Add the utility class `u-dark-mode` to the `body` class.
 
 **Option 2:**
 
-If you're only using dark colors and don’t need mode-switching, you can manually adjust the Base mode colors under the "Colors" variables. Then, remove the Dark mode entirely.
+If your site is dark and you don't need mode-switching, you can manually update the Base mode colors under the "Colors" variables. Then, remove the pre-built Dark mode entirely.
 
 </details>
 
@@ -124,9 +123,21 @@ In fact, the main difference is in class naming conventions. You can leave the c
 
 Yes, absolutely.
 
-While you can remove unnecessary stuff from the cloned S2 framework (and clean up their styles and interactions used) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around.
+While you can remove unnecessary stuff from the cloned S2 framework (and clean up styles and interactions unused) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around.
 
 Besides, keeping them in the styles guild has very very very minimal impact on your site's performance.
+
+</details>
+
+<details>
+
+<summary>Is the S2 Framework compatiable with RTL?</summary>
+
+Yes.
+
+S2 Framework has been fully compatible with RTL language or layout since v2.4.5, except for some of the Filter UI elements.
+
+To enable RTL, you can add the attribute `dir="rtl"` to the `body` element.
 
 </details>
 
