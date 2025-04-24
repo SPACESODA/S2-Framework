@@ -7,25 +7,25 @@ icon: dolphin
 
 # Fluid Typography
 
-S2 Framework has adopted the modern concepts of **Fluid Typography** and **Type Scale**, which makes it **Fluid Type Scale**. &#x20;
+S2 Framework adopts modern **Fluid Typography** + **Type Scale** concepts — together known as **Fluid Type Scale**.
 
-The fluid behavior is effectively achieved using `clamp()` in the font-size property, allowing text to scale dynamically based on the viewport size. And by adopting a type scale ratio, we can ensure smooth, consistent typography that maintains visual harmony across different screen sizes without guesswork.
+**Fluid** behavior is achieved using `clamp()` function in the font-size property, allowing text to scale dynamically with the viewport. And by applying a **type scale** ratio, we can maintain smooth, harmonious typography across screen sizes without guesswork.
 
-To take advantage of both, we can use the open-source tool [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
+To take advantage of both, we use the open-source [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
 
 {% hint style="info" %}
-If you think the default font size in the S2 Cloneable is fine and you don't have to make any changes yet, you can skip this chapter.
+If you're happy with the default font sizes provided in the S2 Cloneable and don't need to make changes yet, you may skip this chapter.
 {% endhint %}
 
 
 
 ## The Concept
 
-Once you understand the concept, you can use the tool to adjust the values to fit your design needs easily. Let's take a look at the diagram below:
+Once you understand the basic concept, making adjustments becomes quite easy. Let’s take a look at the diagram below:
 
 <figure><img src="../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
 
-The above diagram explains the basic concept of this example: [2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+The above diagram explains the basic concept of a [2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280) example:
 
 ```
 // CSS generated in the example
@@ -33,37 +33,33 @@ The above diagram explains the basic concept of this example: [2-step Fluid Type
 --_text---hero-title--lg: clamp(3.125rem, 10.217vi + 0.826rem, 9rem);
 ```
 
-Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). It will be helpful if you want to set up fluid typography for a particular class.
+Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---example-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). This is helpful if you want to apply fluid typography to a specific class.
 
-{% hint style="success" %}
-**How to update `clamp()` values according to my design needs?**
-
-You can start by opening one of our configurations below.
-
-In most cases, all you have to change are the "Base font sizes (the min and max values)" in the Fluid Type Scale tool and you will get a new set of `clamp()` values. Choose your font and use the preview tool to verify your settings.
-{% endhint %}
-
-🤩 Now, with the above basic knowledge, let's look at the default setup on S2.
+🤩 Now, with the above basic knowledge, let's explore the default setup on S2.
 
 
 
 ## Text
 
-Below are the default configurations in the S2 Framework.
+Fluid Type Scale has been applied to the Body tag and text classes in the S2 Framework:
 
-<mark style="color:purple;">**`Body`**</mark>, **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
+**`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**, \
+<mark style="color:purple;">**`Body`**</mark>, **`text-base`**, \
+&#xNAN;**`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
-In the cloneable, the base font size, which is the font size that applies to <mark style="color:purple;">`Body`</mark> via the Webflow Designer, is set according to the below in the tool.
+Let's take a look at the default configuration on the larger end of the scale first:
+
+<mark style="color:purple;">**`Body`**</mark> = **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
 <mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.057475\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-| Key references: |                                         |
-| --------------- | --------------------------------------- |
-| Min of `base`   | Desired min of base is 1rem (16px)      |
-| Max of `base`   | Desired max if base is 1.125rem (18rem) |
-| Max of `xl`     | 1.5rem                                  |
-| Min of `3xl`    | 1.25rem                                 |
-| Max of `3xl`    | 2rem                                    |
+| Key points:   |                                         |
+| ------------- | --------------------------------------- |
+| Min of `base` | Desired min of base is 1rem (16px)      |
+| Max of `base` | Desired max if base is 1.125rem (18rem) |
+| Max of `xl`   | 1.5rem, which is a reasonable size      |
+| Min of `3xl`  | 1.25rem                                 |
+| Max of `3xl`  | 2rem                                    |
 
 Here's what we get for the fluid values:
 
@@ -75,15 +71,15 @@ Here's what we get for the fluid values:
 --_text---font-size--3xl: clamp(1.25rem, 1.304vi + 0.957rem, 2rem);
 ```
 
-Great, let's move on to the smaller sizes!
+Let's move on to the smaller sizes!
 
 **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
 
-The process is similar for the smaller sizes; the min and max values of the base font size should be constant. This time, as the sizes are quite small, it will be easier to get the desired results by using `xs` as the baseline step.
+The process is similar for the smaller sizes; the min and max values of the base font size should be constant. (This time, as the sizes are quite small, it will be easier to get the desired results by using `xs` as the baseline step.)
 
 <mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=13\&minWidth=360\&minRatio=1.1095\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-| Key references:  |                               |
+| Key points:      |                               |
 | ---------------- | ----------------------------- |
 | Use `xs` as base | Easier to set up a scale down |
 | `base`           | Same value                    |
@@ -116,16 +112,18 @@ Here are two examples for reference:
 
 ## Headings
 
-<mark style="color:purple;">**`Heading 1`**</mark> to <mark style="color:purple;">**`Heading 6`**</mark>, **`h1`** to **`h6`**
+Fluid Type Scale has also been applied to the heading tags and classes:
 
-Similarly, we can also use the Fluid Type Scale tool to get the fluid values effortlessly for headings. `h6` is the baseline step, and in S2, we want to make it the same as the <mark style="color:purple;">**Body**</mark> font size.
+<mark style="color:purple;">**`Heading 1`**</mark> to <mark style="color:purple;">**`Heading 6`**</mark>, and **`h1`** to **`h6`**
+
+As before, we can use the **Fluid Type Scale Calculator** to generate fluid values effortlessly for headings. In S2, `h6` serves as the baseline step, matching the font size of <mark style="color:purple;">`Body`</mark>.
 
 <mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.24577245\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.347625\&steps=h6%2Ch5%2Ch4%2Ch3%2Ch2%2Ch1\&baseStep=h6\&prefix=_text---heading-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-| Key references: |      |
-| --------------- | ---- |
-| Max of `h1`     | 5rem |
-| Min of `h1`     | 3rem |
+| Key points: |      |
+| ----------- | ---- |
+| Min of `h1` | 3rem |
+| Max of `h1` | 5rem |
 
 Here's what we get:
 
@@ -139,12 +137,12 @@ Here's what we get:
 ```
 
 {% hint style="info" %}
-The above `clamp()` values have been applied to the tags <mark style="color:purple;">`Heading 1`</mark> to <mark style="color:purple;">`Heading 6`</mark>, and also to classes `h1` to `h6`.
+The above values have been applied to the tags <mark style="color:purple;">`Heading 1`</mark> to <mark style="color:purple;">`Heading 6`</mark>, and also to classes `h1` to `h6`.
 {% endhint %}
 
 **`h7`**, **`h8`**
 
-Sometimes you simply need smaller headings, so there are `h7` and `h8`. They are arbitrary classes invented to style smaller headings. For simplicity, we can just use regular font sizes.
+Sometimes you simply need smaller headings — that's where `h7` and `h8` come in. These are arbitrary classes created to style smaller headings. Since their sizes are too small to benefit from fluid scaling, we use regular fixed font sizes for simplicity.
 
 
 
@@ -152,27 +150,27 @@ Sometimes you simply need smaller headings, so there are `h7` and `h8`. They are
 
 <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
 
-S2 adopted fluid font styles on `sup` and `sub` elements.
+S2 applies fluid font styles on `sup` and `sub` elements.
 
 We have prepared a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is modified from the tool created by [Lorenz Woehr](https://css-tricks.com/fluid-superscripts-and-subscripts/).&#x20;
 
 <mark style="color:blue;">✦</mark> [Fluid Sup / Sub CSS Generator](https://codepen.io/realanthonyc/pen/emOXEMz)
 
-The generated values are applied to the Webflow Designer for the <mark style="color:purple;">**`sup`**</mark> and <mark style="color:purple;">**`sub`**</mark> tags. Now, they scale properly with nice positions according to the font size.
+The generated values are applied to the Webflow Designer for the <mark style="color:purple;">**`sup`**</mark> and <mark style="color:purple;">**`sub`**</mark> tags, allowing them to scale correctly and maintain proper positioning relative to the font size.
 
 {% hint style="info" %}
-Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values — S2's default setup scales well with different font sizes, no matter how your typography changes.
+Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values — S2's default setup scales perfectly with different font sizes, regardless of your typography settings.
 {% endhint %}
 
 
 
 ## Font Size Variables
 
-S2 includes font size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, font sizes need to be manually entered in the Variables panel. Default values are already included in the cloneable.
+S2 includes font size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, we manually enter the font sizes in the Variables panel. Default values are already included in the cloneable.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
 
-You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint. In Webflow, the default breakpoints are: 1280px, 991px, 767px, and 479px.
+You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint in the preview section (scroll down). In Webflow, the default breakpoints are: 1280px, 991px, 767px, and 479px.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for font size variables</p></figcaption></figure>
 
@@ -189,9 +187,7 @@ In S2, the fluid values have been applied directly to:
 * **`h1`** \~ **`h6`**
 * <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
 
-Additionally, the **font size variables** also have values that can align with the Fluid Type Scale.
-
-This allows you to enjoy the benefits without relying on custom code.
+Additionally, the **font size variables** also have values that can align with the Fluid Type Scale. This allows you to enjoy the benefits without relying on custom code.
 
 {% hint style="success" %}
 We understand that manually entering all such values can be a bit cumbersome when you want to adjust font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
@@ -200,6 +196,20 @@ We understand that manually entering all such values can be a bit cumbersome whe
 
 
 ## **Questions?**
+
+<details>
+
+<summary>How to update the <code>clamp()</code> values according to my design?</summary>
+
+You can start by opening one of our configurations.
+
+In most cases, all you need to update in the **Fluid Type Scale Calculator** are the **min** and **max** values of the base font size to generate a new set of `clamp()` values.
+
+Choose your preferred font in the tool to preview and verify your settings.
+
+Then, apply your custom `clamp()` values directly to the font-size in Webflow Designer.
+
+</details>
 
 <details>
 
