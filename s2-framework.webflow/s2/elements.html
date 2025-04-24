@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Apr 19 2025 14:59:30 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Apr 24 2025 12:15:37 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a10" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -436,11 +436,10 @@ https://fontawesome.com/search?ic=free
             /* -- Style Guide: Custom Styles -- */
             /* Only used for styling the style guide. */
             /* DO NOT INCLUDE THESE STYLES ON OTHER WEB PAGES. */
-            /* background-color of the style guide */
             [body="sg"] {
               background-color: var(--s2--surface);
+              overscroll-behavior-x: none;
             }
-            /* force no text-decocration */
             [text-deco="none"],
             [text-deco="none"] a {
               text-decoration: none !important;
@@ -647,12 +646,10 @@ https://fontawesome.com/search?ic=free
                       <div class="tag-wrapper">
                         <div class="tag-label">body</div>
                         <div class="tag-label">u-light-mode</div>
-                      </div>
-                      <div class="tag-wrapper">
-                        <div class="tag-label">body</div>
+                        <div>/</div>
                         <div class="tag-label">u-dark-mode</div>
                       </div>
-                      <div class="sg-note">forcing a page to have mode styles applied</div>
+                      <div class="sg-note">apply mode styles to a page</div>
                     </div>
                     <div class="block">
                       <div class="body u-light-mode">
@@ -665,6 +662,12 @@ https://fontawesome.com/search?ic=free
                           <div>Content of Dark Mode color styles.</div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="message cc-note">
+                    <div class="info">
+                      <div data-wf--icon-wrapped--config-color="primary" style="" class="icon-wrapper w-variant-7b94d794-1457-79cf-b6dc-f032ad4d5632"><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-bold ph-code" aria-hidden="true" style=""> </i></div>
+                      <div>S2 Framework includes a powerful Light / Dark Mode switching feature that utilizes Webflow&#x27;s variable modes, allowing you to set up effortlessly and easily manage colors across modes.<br>Default mode is &quot;Follow system&quot;. The scripts for applying and switching modes (via CDN) are placed in the global head section.<br>To set a default mode for a page, add attribute <span class="tag-label cc-attribute">theme-default=&quot;light&quot;</span> or <span class="tag-label cc-attribute">theme-default=&quot;dark&quot;</span> to the <span class="tag-label cc-html">Body</span> element. If you want Webflow Designer to display the page in dark mode as well, add the <span class="tag-label">u-dark-mode</span> utility class to <span class="tag-label">body</span>.</div>
                     </div>
                   </div>
                 </section>
@@ -1249,12 +1252,19 @@ https://fontawesome.com/search?ic=free
                       <div class="tag-wrapper">
                         <div class="tag-label cc-component">Icon</div>
                       </div>
-                      <div class="tag-wrapper">
-                        <div class="tag-label cc-component">Icon: Wrapped</div>
-                      </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
                       <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top"><i data-wf--icon--config-size="inherit" class="icon ph-fill ph-magic-wand" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="2em" class="icon w-variant-12076101-25a6-2c42-70d2-3ca04a0cea66 ph-fill ph-flying-saucer" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-snowflake" aria-hidden="true" style=""> </i><i data-wf--icon--config-size="3em" class="icon w-variant-6fd722ca-f05e-9f16-8d7d-857898492a08 fa-solid fa-basketball" aria-hidden="true" style="font-size: 4.5rem;"> </i></div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
+                        <div class="tag-label cc-component">Icon: Wrapped</div>
+                      </div>
+                      <div class="sg-note">customize color options by using Component variants</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;" class="block">
                       <div style="flex-wrap: wrap; gap: 1rem;" class="u-hflex-left-top">
                         <div data-wf--icon-wrapped--config-color="inherit" style="" class="icon-wrapper"><i data-wf--icon--config-size="inherit" class="icon ph-fill ph-magic-wand" aria-hidden="true" style=""> </i></div>
                         <div data-wf--icon-wrapped--config-color="extended-3" style="" class="icon-wrapper w-variant-e7d297c2-8018-2932-c2a6-a186cbaed955"><i data-wf--icon--config-size="1-5em" class="icon w-variant-d90edb07-c2f8-8067-b5cc-586cf731fe62 ph-fill ph-wine" aria-hidden="true" style=""> </i></div>
