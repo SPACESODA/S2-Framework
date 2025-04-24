@@ -43,7 +43,7 @@ You can start by opening one of our configurations below.
 In most cases, all you have to change are the "Base font sizes (the min and max values)" in the Fluid Type Scale tool and you will get a new set of `clamp()` values. Choose your font and use the preview tool to verify your settings.
 {% endhint %}
 
-Now, with the above basic knowledge, let's look at the default setup on S2.
+🤩 Now, with the above basic knowledge, let's look at the default setup on S2.
 
 
 
@@ -79,7 +79,7 @@ Great, let's move on to the smaller sizes!
 
 **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
 
-The process is similar for the smaller sizes; the min and max values of the base font size should be constant. This time, as the sizes are quite small, it will be easier to get a desired results by using `xs` as the baseline step.
+The process is similar for the smaller sizes; the min and max values of the base font size should be constant. This time, as the sizes are quite small, it will be easier to get the desired results by using `xs` as the baseline step.
 
 <mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=13\&minWidth=360\&minRatio=1.1095\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
@@ -161,7 +161,7 @@ We have prepared a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is
 The generated values are applied to the Webflow Designer for the <mark style="color:purple;">**`sup`**</mark> and <mark style="color:purple;">**`sub`**</mark> tags. Now, they scale properly with nice positions according to the font size.
 
 {% hint style="info" %}
-Usually, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values. S2's default will scale nicely with different font sizes.
+Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values — S2's default setup scales well with different font sizes, no matter how your typography changes.
 {% endhint %}
 
 
@@ -199,7 +199,7 @@ We understand that manually entering all such values can be a bit cumbersome whe
 
 
 
-## **Questions you may have**
+## **Questions?**
 
 <details>
 
@@ -232,9 +232,9 @@ This is optional and usually unnecessary. It is not included in the framework's 
 
 <details>
 
-<summary>How to override the default font-size values by CSS custom code?</summary>
+<summary>How to override the default font-size values using custom CSS?</summary>
 
-Visit this page: [Custom CSS for Font Sizes](../../more/read-more/custom-css-for-font-sizes.md)
+Please visit this page: [Custom CSS for Font Sizes](../../more/read-more/custom-css-for-font-sizes.md)
 
 </details>
 
