@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Apr 24 2025 12:15:37 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri Apr 25 2025 06:59:26 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a14" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -505,7 +505,7 @@ https://fontawesome.com/search?ic=free
       <section class="section cc-top-sm">
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
-            <div id="basics" class="sg-anchor"></div>
+            <div id="basics" aria-hidden="true" class="sg-anchor"></div>
             <h1>Basic Styles</h1>
           </div>
           <div class="sg-wrapper">
@@ -615,7 +615,7 @@ https://fontawesome.com/search?ic=free
                   <h2>Typography</h2>
                 </div>
                 <div class="text-wrapper cc-max-40rem">
-                  <p>S2 uses a <a href="https://s2-framework.gitbook.io/docs/guide-and-documentation/basic-concepts/fluid-typography" target="_blank">Fluid Type Scale</a> for its Heading and Text classes.</p>
+                  <p>S2 uses <a href="https://s2-framework.gitbook.io/docs/guide-and-documentation/basic-concepts/fluid-typography" target="_blank"><strong>Fluid Type Scale</strong></a> for the headings, Body, and text classes.</p>
                 </div>
                 <section id="headings" class="section">
                   <div class="title-wrapper">
@@ -623,7 +623,7 @@ https://fontawesome.com/search?ic=free
                       <h3>Headings</h3>
                     </div>
                     <div class="text-wrapper cc-max-40rem">
-                      <p>Styles are applied to both tags and classes. Heading levels should follow the correct hierarchy, but styles can be overridden with classes. For example, use <span class="tag-label">h3</span> class to style a <span class="tag-label cc-html">Heading 1</span> element if it is too large for the design.</p>
+                      <p>Heading levels should follow the correct semantic hierarchy on a page, but you can override styles using classes. For example, you can use the <span class="tag-label">h3</span> class to style a <span class="tag-label cc-html">Heading 1</span> element if it is too large for the design.</p>
                     </div>
                   </div>
                   <div class="sg-element">
@@ -637,7 +637,6 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <h1>HTML H1</h1>
-                      <h1 class="h1">Heading h1</h1>
                       <div class="h1">Text h1</div>
                     </div>
                   </div>
@@ -652,7 +651,6 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <h2>HTML H2</h2>
-                      <h2 class="h2">Heading h2</h2>
                       <div class="h2">Text h2</div>
                     </div>
                   </div>
@@ -667,7 +665,6 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <h3>HTML H3</h3>
-                      <h3 class="h3">Heading h3</h3>
                       <div class="h3">Text h3</div>
                     </div>
                   </div>
@@ -682,7 +679,6 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <h4>HTML H4</h4>
-                      <h4 class="h4">Heading h4</h4>
                       <div class="h4">Text h4</div>
                     </div>
                   </div>
@@ -697,7 +693,6 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <h5>HTML H5</h5>
-                      <h5 class="h5">Heading h5</h5>
                       <div class="h5">Text h5</div>
                     </div>
                   </div>
@@ -712,7 +707,6 @@ https://fontawesome.com/search?ic=free
                     </div>
                     <div class="block">
                       <h6>HTML H6</h6>
-                      <h6 class="h6">Heading h6</h6>
                       <div class="h6">Text h6</div>
                       <p>Lorem ipsum dolor sit amet consectetur elit.</p>
                     </div>
@@ -809,7 +803,7 @@ https://fontawesome.com/search?ic=free
                       <div class="tag-wrapper">
                         <div class="tag-label">text-base</div>
                       </div>
-                      <div class="sg-note">font-size: same as Body<br>line-height: same as Body</div>
+                      <div class="sg-note">font-size and line-height are the same as <span class="tag-label cc-html">Body</span></div>
                     </div>
                     <div class="block">
                       <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
@@ -858,22 +852,22 @@ https://fontawesome.com/search?ic=free
                   <div class="sg-element">
                     <div class="sg-tags">
                       <div class="tag-wrapper">
+                        <div class="tag-label cc-html">Body</div>
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</div>
+                    </div>
+                  </div>
+                  <div class="sg-element">
+                    <div class="sg-tags">
+                      <div class="tag-wrapper">
                         <div class="tag-label cc-html">Paragraph</div>
                       </div>
                       <div class="sg-note">font-size: not set<br>line-height: not set</div>
                     </div>
                     <div class="block">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</p>
-                    </div>
-                  </div>
-                  <div class="sg-element">
-                    <div class="sg-tags">
-                      <div class="tag-wrapper">
-                        <div class="tag-label cc-html">Body</div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros tristique. Duis cursus, mi quis viverra ornare.</div>
                     </div>
                   </div>
                 </section>
@@ -3351,7 +3345,7 @@ https://fontawesome.com/search?ic=free
       <section class="section">
         <div class="w-layout-blockcontainer container w-container">
           <div class="title-wrapper">
-            <div id="richtext" class="sg-anchor"></div>
+            <div id="richtext" aria-hidden="true" class="sg-anchor"></div>
             <h1>Rich Text Element</h1>
           </div>
           <div class="section cc-top-sm">

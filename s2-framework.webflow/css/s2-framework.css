@@ -6211,10 +6211,6 @@ figcaption {
   padding-bottom: 1.75rem;
 }
 
-.sg-group.cc-scroll-margin {
-  scroll-margin: 6rem 0 0;
-}
-
 .sg-element {
   grid-column-gap: var(--_sizes---grid--gutter);
   grid-row-gap: 1rem;
@@ -6562,8 +6558,14 @@ figcaption {
   left: 0%;
   right: 0%;
   top: calc(-1 * (var(--_sizes---spacing--sm)  + var(--_sizes---main-nav--height)));
+  -webkit-user-select: none;
+  user-select: none;
   max-height: 0;
   position: absolute;
+}
+
+.sg-anchor.cc-taller {
+  top: -8rem;
 }
 
 .delete-me {
