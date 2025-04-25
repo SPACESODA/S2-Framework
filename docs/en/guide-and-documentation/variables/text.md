@@ -12,27 +12,26 @@ Setting up the site's font family under **Font Family** variables ensures consis
 
 ## Font Size
 
-S2 adopted **Fluid Type Scale** on some key tags and classes, including:
+S2 applied **Fluid Type Scale** on some key tags and classes, including:
 
 * <mark style="color:purple;">**`Body`**</mark>, **`text-base`**
 * **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
 * **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 * <mark style="color:purple;">**`Heading 1`**</mark> \~ <mark style="color:purple;">**`Heading 6`**</mark>
 * **`h1`** \~ **`h6`**
-* <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>&#x20;
 
 {% hint style="info" %}
 About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography](../basic-concepts/fluid-typography/ "mention")
 {% endhint %}
 
-In S2, we also have these variables for font sizes under **Text** > **Font Size**:
+In S2, we also have these **variables** for font sizes under **Text** > **Font Size**: in the Variables panel:
 
 **`3xs`** ← **`2xs`** ← **`xs`** ← **`sm`** ← **`base`** → **`lg`** → **`xl`** → **`2xl`** → **`3xl`**&#x20;
 
-Ideally, we would like to apply the below fluid values to these variables, which are the same as the `text-` classes.
+Ideally, we would like to apply the below fluid values to these variables, which are the same as the <mark style="color:purple;">**Body**</mark> and `text-` classes.
 
 ```css
-/* fluid values for Font Size variables */
+/* fluid values */
 :root {
   --_text---font-size--3xs: clamp(0.66rem, 0.036vi + 0.652rem, 0.681rem);
   --_text---font-size--2xs: clamp(0.732rem, 0.069vi + 0.717rem, 0.772rem);
@@ -46,19 +45,13 @@ Ideally, we would like to apply the below fluid values to these variables, which
 }
 ```
 
-However, as Webflow does not allow applying custom values to variables [**yet**](https://x.com/leinwand/status/1898901668483485730), we have entered absolute values equivalent to our default fluid typography at different breakpoints in the Variable panel.
+However, as Webflow does not allow applying custom values to variables [**yet**](https://x.com/leinwand/status/1898901668483485730), we have entered fixed values into the Variables panel that are equivalent to our default Fluid Typography across breakpoints.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-12 14.54.30.png" alt=""><figcaption><p>Font Size variables: Absolute values equivalent to our default fluid type scale</p></figcaption></figure>
 
-<mark style="color:orange;">**Advanced:**</mark>
+This allows other classes and elements to use font sizes that closely follow the Fluid Type Scale.
 
-If you want true fluid behavior on text and your custom classes, or if you want to override the default absolute values in the **Text** > **Font Size** variables, you can use custom CSS to do so.
-
-The CSS template can be found on this page:
-
-{% content-ref url="../basic-concepts/fluid-typography/css-for-fluid-type-scale.md" %}
-[css-for-fluid-type-scale.md](../basic-concepts/fluid-typography/css-for-fluid-type-scale.md)
-{% endcontent-ref %}
+Besides, once Webflow releases support for custom variable values, upgrading will be effortless.
 
 
 

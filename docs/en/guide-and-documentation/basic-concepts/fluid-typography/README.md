@@ -162,13 +162,13 @@ Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> 
 
 ## Font Size Variables
 
-S2 includes font size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, we manually enter the font sizes in the Variables panel. Default values are already included in the cloneable.
+S2 includes Font Size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, we manually enter the font sizes in the Variables panel. Default values are already included in the cloneable.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
 
 You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint in the preview section (scroll down). In Webflow, the default breakpoints are: 1280px, 991px, 767px, and 479px.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for font size variables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for Font Size variables</p></figcaption></figure>
 
 
 
@@ -183,7 +183,7 @@ In S2, the fluid values have been applied directly to:
 * **`h1`** \~ **`h6`**
 * <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
 
-Additionally, the **font size variables** also have values that can align with the Fluid Type Scale. This allows you to enjoy the benefits without relying on custom code.
+Additionally, the **Font Size variables** also have values that can align with the Fluid Type Scale. This allows you to enjoy the benefits without relying on custom code.
 
 {% hint style="success" %}
 We understand that manually entering all these values can be a bit cumbersome when you want to adjust font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
