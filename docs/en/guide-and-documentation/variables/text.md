@@ -22,7 +22,7 @@ S2 adopted **Fluid Type Scale** on some key tags and classes, including:
 * <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>&#x20;
 
 {% hint style="info" %}
-About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography.md](../basic-concepts/fluid-typography.md "mention")
+About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography](../basic-concepts/fluid-typography/ "mention")
 {% endhint %}
 
 In S2, we also have these variables for font sizes under **Text** > **Font Size**:
@@ -56,8 +56,8 @@ If you want true fluid behavior on text and your custom classes, or if you want 
 
 The CSS template can be found on this page:
 
-{% content-ref url="../../more/read-more/custom-css-for-font-sizes.md" %}
-[custom-css-for-font-sizes.md](../../more/read-more/custom-css-for-font-sizes.md)
+{% content-ref url="../basic-concepts/fluid-typography/css-for-fluid-type-scale.md" %}
+[css-for-fluid-type-scale.md](../basic-concepts/fluid-typography/css-for-fluid-type-scale.md)
 {% endcontent-ref %}
 
 

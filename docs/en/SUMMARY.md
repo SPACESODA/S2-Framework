@@ -15,7 +15,8 @@
   * [Styling in Webflow](guide-and-documentation/basic-concepts/styling-in-webflow.md)
   * [Utility Classes](guide-and-documentation/basic-concepts/utility-classes.md)
   * [Units](guide-and-documentation/basic-concepts/units.md)
-  * [Fluid Typography](guide-and-documentation/basic-concepts/fluid-typography.md)
+  * [Fluid Typography](guide-and-documentation/basic-concepts/fluid-typography/README.md)
+    * [CSS for Fluid Type Scale](guide-and-documentation/basic-concepts/fluid-typography/css-for-fluid-type-scale.md)
 * [Variables](guide-and-documentation/variables/README.md)
   * [Colors vs Palettes](guide-and-documentation/variables/colors-vs-palettes.md)
   * [Colors in S2](guide-and-documentation/variables/colors-in-s2.md)
@@ -49,7 +50,6 @@
 * [Read More](more/read-more/README.md)
   * [Foundations of S2](more/read-more/foundations-of-s2.md)
   * [Our Approaches](more/read-more/our-approaches.md)
-  * [Custom CSS for Font Sizes](more/read-more/custom-css-for-font-sizes.md)
 
 ## Links
 

@@ -7,11 +7,7 @@ icon: dolphin
 
 # Fluid Typography
 
-S2 Framework adopts modern **Fluid Typography** + **Type Scale** concepts — together known as **Fluid Type Scale**.
-
-**Fluid** behavior is achieved using `clamp()` function in the font-size property, allowing text to scale dynamically with the viewport. And by applying a **type scale** ratio, we can maintain smooth, harmonious typography across screen sizes without guesswork.
-
-To take advantage of both, we use the open-source [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to generate all the `clamp()` values we need effortlessly.
+S2 Framework adopts the modern **Fluid Type Scale** concept — a combination of **Fluid Typography** and **Type Scale**. To take advantage of both, we use the open-source [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to effortlessly generate all the `clamp()` values we need.
 
 {% hint style="info" %}
 If you're happy with the default font sizes provided in the S2 Cloneable and don't need to make changes yet, you may skip this chapter.
@@ -21,19 +17,23 @@ If you're happy with the default font sizes provided in the S2 Cloneable and don
 
 ## The Concept
 
-Once you understand the basic concept, making adjustments becomes quite easy. Let’s take a look at the diagram below:
+The **fluid** behavior is achieved using `clamp()` function in the font-size property, allowing text to scale dynamically with the viewport. And by applying a **type scale** ratio, we can maintain smooth, harmonious typography across screen sizes without guesswork.
 
-<figure><img src="../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
+Let’s take a look at the diagram below:
+
+<figure><img src="../../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
 
 The above diagram explains the basic concept of a [2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280) example:
 
-```
-// CSS generated in the example
+```css
+/* CSS generated in the example */
 --_text---hero-title--base: clamp(2.5rem, 6.087vi + 1.13rem, 6rem);
 --_text---hero-title--lg: clamp(3.125rem, 10.217vi + 0.826rem, 9rem);
 ```
 
-Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---example-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). This is helpful if you want to apply fluid typography to a specific class.
+Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---example-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). This is helpful if you want to apply fluid typography to a specific class or variable.
+
+Once you understand the basic concept, making adjustments becomes quite easy.
 
 🤩 Now, with the above basic knowledge, let's explore the default setup on S2.
 
@@ -136,10 +136,6 @@ Here's what we get:
 --_text---heading--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
 ```
 
-{% hint style="info" %}
-The above values have been applied to the tags <mark style="color:purple;">`Heading 1`</mark> to <mark style="color:purple;">`Heading 6`</mark>, and also to classes `h1` to `h6`.
-{% endhint %}
-
 **`h7`**, **`h8`**
 
 Sometimes you simply need smaller headings — that's where `h7` and `h8` come in. These are arbitrary classes created to style smaller headings. Since their sizes are too small to benefit from fluid scaling, we use regular fixed font sizes for simplicity.
@@ -168,11 +164,11 @@ Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> 
 
 S2 includes font size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, we manually enter the font sizes in the Variables panel. Default values are already included in the cloneable.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
 
 You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint in the preview section (scroll down). In Webflow, the default breakpoints are: 1280px, 991px, 767px, and 479px.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for font size variables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for font size variables</p></figcaption></figure>
 
 
 
@@ -190,7 +186,11 @@ In S2, the fluid values have been applied directly to:
 Additionally, the **font size variables** also have values that can align with the Fluid Type Scale. This allows you to enjoy the benefits without relying on custom code.
 
 {% hint style="success" %}
-We understand that manually entering all such values can be a bit cumbersome when you want to adjust font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
+We understand that manually entering all these values can be a bit cumbersome when you want to adjust font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
+
+If you prefer using custom CSS instead of editing the font-size values on the panel, visit:
+
+[css-for-fluid-type-scale.md](css-for-fluid-type-scale.md "mention")
 {% endhint %}
 
 
@@ -231,7 +231,7 @@ You can use custom CSS to scale fonts down for devices smaller than the iPhone S
 
 {% code overflow="wrap" %}
 ```css
-// smaller font size on very small devices
+/* smaller font size on very small devices */
 @media screen and (max-width:319px) { body { font-size: clamp(0.875rem, 2.532vi + 0.495rem, 1rem); } }
 ```
 {% endcode %}
@@ -242,9 +242,11 @@ This is optional and usually unnecessary. It is not included in the framework's 
 
 <details>
 
-<summary>How to override the default font-size values using custom CSS?</summary>
+<summary>Can I override the default font-size values using custom CSS?</summary>
 
-Please visit this page: [Custom CSS for Font Sizes](../../more/read-more/custom-css-for-font-sizes.md)
+Yes. Please visit this page:
+
+[css-for-fluid-type-scale.md](css-for-fluid-type-scale.md "mention")
 
 </details>
 

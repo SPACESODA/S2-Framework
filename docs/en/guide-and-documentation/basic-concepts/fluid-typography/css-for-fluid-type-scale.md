@@ -1,8 +1,9 @@
 ---
+description: Custom CSS Template for Fluid Type Scale
 icon: file-code
 ---
 
-# Custom CSS for Font Sizes
+# CSS for Fluid Type Scale
 
 Webflow does not [**yet**](https://x.com/leinwand/status/1898901668483485730) allow custom values to be applied to variables. However, if any of the following apply to you, **custom CSS** can help you implement font size changes more efficiently:
 
