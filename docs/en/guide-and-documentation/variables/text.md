@@ -24,11 +24,11 @@ S2 applied **Fluid Type Scale** on some key tags and classes, including:
 About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography](../basic-concepts/fluid-typography/ "mention")
 {% endhint %}
 
-In S2, we also have these **variables** for font sizes under **Text** > **Font Size**: in the Variables panel:
+In S2, we also have these **variables** for font sizes under **Text** > **Font Size** in the Variables panel:
 
 **`3xs`** ← **`2xs`** ← **`xs`** ← **`sm`** ← **`base`** → **`lg`** → **`xl`** → **`2xl`** → **`3xl`**&#x20;
 
-Ideally, we would like to apply the below fluid values to these variables, which are the same as the <mark style="color:purple;">**Body**</mark> and `text-` classes.
+Ideally, we would like to apply the fluid values to these variables. The code would look like this if we use custom CSS:
 
 ```css
 /* fluid values */
@@ -47,11 +47,9 @@ Ideally, we would like to apply the below fluid values to these variables, which
 
 However, as Webflow does not allow applying custom values to variables [**yet**](https://x.com/leinwand/status/1898901668483485730), we have entered fixed values into the Variables panel that are equivalent to our default Fluid Typography across breakpoints.
 
+This allows other classes and elements to use font sizes that closely follow the Fluid Type Scale. Besides, once Webflow releases support for custom variable values, upgrading will be effortless.
+
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-12 14.54.30.png" alt=""><figcaption><p>Font Size variables: Absolute values equivalent to our default fluid type scale</p></figcaption></figure>
-
-This allows other classes and elements to use font sizes that closely follow the Fluid Type Scale.
-
-Besides, once Webflow releases support for custom variable values, upgrading will be effortless.
 
 
 
