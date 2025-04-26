@@ -144,6 +144,7 @@
   --_sizes---grid--bento: 1.5rem;
   --_sizes---radius--lg: .85rem;
   --_sizes---gap--base: 1rem;
+  --_sizes---gap--sm: .75rem;
   --colors-special--transparent-white: #fff0;
   --_palettes---accent--500: #f3bb09;
   --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -158,7 +159,6 @@
   --_sizes---line--bold: .15625rem;
   --_sizes---line--4px: .25rem;
   --_sizes---gap--xs: .5rem;
-  --_sizes---gap--sm: .75rem;
   --_sizes---gap--xl: 2rem;
   --_sizes---outline--base: .125rem;
   --_sizes---outline--offset: 3px;
@@ -328,7 +328,7 @@ p {
 }
 
 a {
-  text-underline-offset: .275em;
+  text-underline-offset: .25em;
   text-underline-position: auto;
   color: inherit;
   text-decoration: underline;
@@ -1257,7 +1257,7 @@ figcaption {
   font-size: 1.5em;
 }
 
-.icon.cc-80-100 {
+.icon.cc-shop-menu {
   aspect-ratio: 80 / 100;
   width: auto;
   height: 1.15em;
@@ -3743,7 +3743,7 @@ figcaption {
 }
 
 .main-nav-inner.cc-font-sm {
-  font-size: 1rem;
+  font-size: var(--_text---font-size--sm);
   line-height: 1.125;
 }
 
@@ -4345,7 +4345,7 @@ figcaption {
   padding-bottom: 0;
   font-weight: 700;
   display: flex;
-  position: sticky;
+  position: relative;
   top: 0;
 }
 
@@ -5977,8 +5977,8 @@ figcaption {
   width: 100%;
   height: auto;
   min-height: 2.5rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   position: relative;
 }
@@ -6209,6 +6209,10 @@ figcaption {
   width: 100%;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.sg-group.cc-taller-padding {
+  padding-top: 7.75rem;
 }
 
 .sg-element {
@@ -6562,10 +6566,6 @@ figcaption {
   user-select: none;
   max-height: 0;
   position: absolute;
-}
-
-.sg-anchor.cc-taller {
-  top: -8rem;
 }
 
 .delete-me {
@@ -8483,7 +8483,7 @@ figcaption {
 }
 
 .pre-nav {
-  z-index: 99;
+  z-index: 8;
   background-color: var(--colors--surface-muted);
   font-size: var(--_text---font-size--xs);
   width: 100%;
@@ -8495,7 +8495,7 @@ figcaption {
 .pre-nav_content {
   flex-flow: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   height: auto;
   min-height: 2.5rem;
@@ -8515,7 +8515,9 @@ figcaption {
 }
 
 .main-logo_overflow {
-  z-index: 3;
+  z-index: 9;
+  padding-right: var(--_sizes---container--padding);
+  padding-left: var(--_sizes---container--padding);
   flex-flow: row;
   justify-content: center;
   align-items: flex-end;
@@ -8560,7 +8562,7 @@ figcaption {
   color: var(--colors--primary);
 }
 
-.main-nav_group_link.cc-overlay-menu {
+.main-nav_group_link.cc-at-start {
   padding-inline-start: 0;
 }
 
@@ -8581,7 +8583,7 @@ figcaption {
   display: flex;
 }
 
-.main-nav_group.cc-end {
+.main-nav_group.cc-at-end {
   margin-inline: auto 0;
 }
 
@@ -8591,7 +8593,7 @@ figcaption {
   justify-content: center;
   align-items: center;
   width: auto;
-  min-width: 2.75rem;
+  min-width: 2.5rem;
   min-height: 2.5rem;
   display: flex;
   position: relative;
@@ -8729,6 +8731,10 @@ figcaption {
   box-shadow: 0 .125rem .5rem #0003;
 }
 
+.dropdown-list.cc-at-end.w--open {
+  inset-inline-end: 0%;
+}
+
 .dropdown-list_scrollable {
   overscroll-behavior: none;
   width: auto;
@@ -8798,10 +8804,10 @@ figcaption {
     --_sizes---grid--bento: 1.25rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---gap--base: 1rem;
+    --_sizes---gap--sm: .75rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
     --_sizes---gap--xs: .5rem;
-    --_sizes---gap--sm: .75rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
     --_sizes---outline--offset: 3px;
@@ -9146,6 +9152,10 @@ figcaption {
     max-height: none;
   }
 
+  .sg-group.cc-taller-padding {
+    padding-top: 4rem;
+  }
+
   .sg-element {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
@@ -9211,13 +9221,23 @@ figcaption {
     display: flex;
   }
 
+  .pre-nav_group {
+    grid-column-gap: var(--_sizes---gap--sm);
+    grid-row-gap: var(--_sizes---gap--sm);
+  }
+
   .main-nav_group_link {
     padding-left: .5rem;
     padding-right: .5rem;
   }
 
+  .main-nav_group_link.cc-shop-icon {
+    padding-left: .35rem;
+    padding-right: .35rem;
+  }
+
   .shop-icon-wrapper {
-    min-width: 2.5rem;
+    min-width: 2.25rem;
     min-height: 2.25rem;
   }
 
@@ -9269,10 +9289,10 @@ figcaption {
     --_sizes---grid--bento: 2rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---gap--base: 1rem;
+    --_sizes---gap--sm: .75rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
     --_sizes---gap--xs: .5rem;
-    --_sizes---gap--sm: .75rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
     --_sizes---outline--offset: 3px;
@@ -9786,7 +9806,7 @@ figcaption {
   }
 
   .shop-icon-wrapper {
-    min-width: 8vw;
+    min-width: max(6vw, 1.75rem);
     min-height: 2rem;
   }
 
@@ -9827,10 +9847,10 @@ figcaption {
     --_sizes---grid--bento: 2rem;
     --_sizes---radius--lg: .85rem;
     --_sizes---gap--base: 1rem;
+    --_sizes---gap--sm: .75rem;
     --_sizes---line--bold: .15625rem;
     --_sizes---line--4px: .25rem;
     --_sizes---gap--xs: .5rem;
-    --_sizes---gap--sm: .75rem;
     --_sizes---gap--xl: 2rem;
     --_sizes---outline--base: .125rem;
     --_sizes---outline--offset: 3px;
