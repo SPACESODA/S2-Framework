@@ -29,29 +29,29 @@ Utility classes can sometimes be confusing and even problematic due to some impl
 
 **Good:**
 
-* <mark style="color:blue;">`u-bg-primary`</mark> `cc-white-text`
+* <mark style="color:blue;">`u-bg-primary`</mark> `is-white-text`
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark>
-* `blog-post` `cc-today` <mark style="color:blue;">`u-bg-primary`</mark>
+* `blog-post` `is-today` <mark style="color:blue;">`u-bg-primary`</mark>
 
 **Still ok, but be careful not to overuse:**
 
 * <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark>
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark>
-* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker`
+* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `is-darker`
 
 **Not recommended:**
 
 * `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark> <mark style="color:blue;">`u-font-bold`</mark>
-* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker` <mark style="color:blue;">`u-font-bold`</mark>
-* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark> `cc-bold`
-* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker` `cc-first`&#x20;
+* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `is-darker` <mark style="color:blue;">`u-font-bold`</mark>
+* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> <mark style="color:blue;">`u-text-uppercase`</mark> `is-bold`
+* `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `is-darker` `is-first`&#x20;
 
-> It is much better to create a **combo class** with a **descriptive name**, like `cc-featured`.
+> It is much better to create a **combo class** with a **descriptive name**, like `is-featured`.
 >
-> Example: `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-darker` `cc-first`&#x20;
+> Example: `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `is-darker` `is-first`&#x20;
 >
-> You should do this instead:  `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `cc-featured` \
-> Or: `blog-post` `cc-featured` :100:
+> You should do this instead:  `blog-post` <mark style="color:blue;">`u-bg-primary`</mark> `is-featured` \
+> Or: `blog-post` `is-featured` :100:
 
 {% hint style="warning" %}
 Modifying the "root" utility class will affect all instances where it's used. For example, updating the styles of <mark style="color:blue;">`u-bg-primary`</mark> utility class will also apply to `blog-post` <mark style="color:blue;">`u-bg-primary`</mark>.

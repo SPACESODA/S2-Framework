@@ -46,30 +46,25 @@ Here are more examples to help you get familiar with this approach:
 | Examples of using Dash: | Examples of using Underscore: |
 | ----------------------- | ----------------------------- |
 | `u-`                    | `main-nav_dropdown`           |
-| `cc-`                   | `slider_control-button`       |
+| `is-`                   | `slider_control-button`       |
 | `main-header`           | `job-item_info`               |
 | `job-title`             | `job-item_info-icon`          |
 | `long-button-arrow`     | `footer_social-link`          |
-| `cc-last-row`           | `product_list-item`           |
+| `is-last-row`           | `product_list-item`           |
 | `author-title-xl`       | `sidebar_nav-item`            |
 
 
 
 ## 03. Combo and Utility Classes
 
-Use `cc-` for ALL combo classes.
+Use `is-` for ALL combo classes.
 
-S2 does not use **has-**, **with-**, **without-**, **no-**, **not-**, **non-**, or any other prefixes of such kind for combo classes. If you need to convey meanings such as **is**, **has**, **with**, etc., name the combo classes as `cc-is-`, `cc-has-`, `cc-with-`.
+S2 does not use **has-**, **with-**, **without-**, **no-**, **not-**, **non-**, or any other prefixes of such kind for combo classes. If you need to convey meanings such as **has**, **with**, etc., name the combo classes as `is-has-`, `is-with-`.
 
 {% hint style="info" %}
-In S2, we prefer using `cc-` for combo classes.
+In S2, we prefer using `is-` for combo classes.
 
-For consistency, always use the `cc-` prefix when creating new classes.
-
-Sometimes, you may work with existing components or projects that use different naming conventions for combo classes, such as `is-` in Client-First. In some cases, class names are tied to JavaScript functionality and cannot be easily changed.
-
-When that happens, it is fine to leave the names as they are. There is no need to rename them to `cc-`.
-{% endhint %}
+For consistency, always use the `is-` prefix when creating new classes.
 
 Use `u-` for ALL utility classes.
 
@@ -85,15 +80,15 @@ For base CSS classes, the order should resemble **normal English word order**. F
 
 The descriptive term is usually placed **after** the main keyword for combo classes and utility classes. That makes them more identifiable and organized.
 
-`item-block` `cc-task`
+`item-block` `is-task`
 
-`item-block` `cc-task-xs`
+`item-block` `is-task-xs`
 
-`item-block` `cc-task-expired`
+`item-block` `is-task-expired`
 
 Values or counting descriptions are usually written **at the last**. For example:
 
-`text-wrapper` `cc-max-40rem`
+`text-wrapper` `is-max-40rem`
 
 
 
@@ -142,7 +137,7 @@ The above letter notation aligns with Tailwind CSS’s convention for padding an
 Examples: `-mb-0`, `-mx-auto`, `-my-1rem`, `-mb-tall`, `-mb-messages`
 
 When all sides have the same values, you can write them like these:\
-`-m-0`, `-p-0`, `cc-1rem`, `cc-content-0`
+`-m-0`, `-p-0`, `is-1rem`, `is-content-0`
 
 Sometimes, when you think you do not need to distinguish between margin or padding, or when you want to leave some flexibility in the design, it is fine to use `-top`, `-bottom`, `-left`, `-right`, or their combinations, such as `-top-bottom-lg`.
 
@@ -207,22 +202,22 @@ To keep naming conventions consistent and more aligned with standard CSS, follow
 
 ## 08. Stacking of Combo Classes
 
-Creating style variants using combo classes is always a nice practice. For example, try to use `button` `cc-lg` instead of creating a new `button-lg` class.
+Creating style variants using combo classes is always a nice practice. For example, try to use `button` `is-lg` instead of creating a new `button-lg` class.
 
 It is okay to stack 3 classes, and the limit is 4. **Do not stack 5 or more classes.**
 
 Consider creating a new combo class by combining its combo classes. Example:
 
-❌  `button` `cc-pill` `cc-outline` `cc-has-icon` `cc-lg`
+❌  `button` `is-pill` `is-outline` `is-has-icon` `is-lg`
 
-✅  `button` `cc-pill` `cc-outline-with-icon` `cc-lg`
+✅  `button` `is-pill` `is-outline-with-icon` `is-lg`
 
 {% hint style="success" %}
 **Exception — Stacking classes for Column Layouts**
 
 For example, 4 cols on Desktop (base); 6 on Tablet; 3 on Landscape; and 2 on Mobile, you will need:
 
-`col` `cc-span-4` `cc-span-6-md` `cc-span-3-sm` `cc-span-2-xs`
+`col` `is-span-4` `is-span-6-md` `is-span-3-sm` `is-span-2-xs`
 {% endhint %}
 
 

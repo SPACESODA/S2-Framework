@@ -36,9 +36,9 @@ However, if you find something new in a new version of S2 that is not available 
 
 <summary>Is there any conflict between the S2 Framework and Client-First conventions?</summary>
 
-No. There is no conflict between the S2 and the Client-First conventions (or any other naming conventions).
+No. There is no conflict between the S2 and the Client-First conventions (or any other naming conventions). Since S2 Framework v3.0.0, we both use `is-` for combo classes.
 
-There are differences, for example, S2 uses prefixes like `cc-` and `u-`, and we also use a few abbreviations. But, it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
+There are differences, for example, S2 uses prefix `u-` for utility classes, and we also use a few abbreviations. But, it causes no conflicts. You can easily update style names when you bring something that follows the Client-First conventions into an S2 project.
 
 The differences between the two approaches are more about what works well and what works even better.
 

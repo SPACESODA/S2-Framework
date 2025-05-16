@@ -9,7 +9,9 @@ Congratulations! You should feel comfortable when starting with S2.
 
 ### Class Naming Convention
 
-S2, MAST, and The Saddle share many similar practices. Apart from all using cc- for combo classes and u- for utility classes, S2 provides a more precise definition of how to use - and \_ in class naming:
+S2, MAST, and The Saddle share many similar practices. S2 uses u- for utility classes, but is- for combo classes (MAST and the Saddle Framework use cc- for combo classes).
+
+S2 provides a more precise definition of how to use - and \_ in class naming:
 
 1. Use natural English in most cases.
 2. Use `-` to separate words of the same context.

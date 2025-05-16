@@ -95,7 +95,7 @@ They are both easy, but MAST seemingly has more utility classes to look at.
 
 **S2 Framework**
 
-S2 has a clear and simple class naming convention. We use `cc-` for combo classes and `u-` for utility classes. Additionally, we follow a straightforward strategy for when to use `-` and `_`.
+S2 has a clear and simple class naming convention. We use `is-` for combo classes and `u-` for utility classes. Additionally, we follow a straightforward strategy for when to use `-` and `_`.
 
 Example: `hero-banner_inner-wrapper`\
 1\. Use natural English in most cases.\

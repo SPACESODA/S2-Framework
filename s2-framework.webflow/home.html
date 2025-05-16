@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Apr 26 2025 12:20:47 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Fri May 16 2025 00:22:08 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a11" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -19,11 +19,11 @@
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <link href="https://s2-framework.webflow.io/home" rel="canonical"><!--  To Apply Light / Dark Mode (Theme)  -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.8/webflow/js/mode-apply.min.js" as="script">
-  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.8/webflow/js/mode-apply.min.js" defer=""></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/js/mode-apply.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/js/mode-apply.min.js" defer=""></script>
   <!--  Mode Switching Function  -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.8/webflow/js/mode-switching.min.js" as="script">
-  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.3.8/webflow/js/mode-switching.min.js" defer=""></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/js/mode-switching.min.js" as="script">
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/js/mode-switching.min.js" defer=""></script>
 </head>
 <body class="body">
   <aside height-is="min-100svh" data-nosnippet="true" class="delete-me">
@@ -31,13 +31,12 @@
       <div class="css">
         <div class="css_cdn w-embed"><!-- 
 S2 Framework Base CSS
-** Full Pacakge by CDN **
-** A few KBs only! **
+** Full set by CDN — only a few KBs! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@2.4.5/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
-      <div class="code cc-inside-global">
+      <div class="code is-inside-global">
         <div class="code_ph-icons w-embed"><!--  
 Phosphor Icons: Regular, Fill, Bold
 https://phosphoricons.com
@@ -77,7 +76,7 @@ https://fontawesome.com/search?ic=free
             </style>
         </div>
       </div>
-      <div class="css_custom cc-in-global w-embed">
+      <div class="css_custom is-in-global w-embed">
         <style>
             /* ------------------------------ */
             /* -- Global Custom Attributes -- */
@@ -184,6 +183,24 @@ https://fontawesome.com/search?ic=free
             .main-nav_button.w--open path {
               transform: translateY(0%) rotate(0deg);
             }
+            /* better slider nav */
+            .w-slider-nav.w-round>div {
+              border-radius: 999rem;
+              transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .slider_nav.is-overlay>div {
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+            .slider_nav.is-overlay>div.w-active {
+              background-color: rgba(255, 255, 255, 1);
+            }
+            .slider_nav[slider-nav-style="bar"]>div {
+              width: 0.375rem;
+              height: 0.375rem;
+            }
+            .slider_nav[slider-nav-style="bar"]>div.w-active {
+              width: 1.5rem;
+            }
             /* better sup and sub on headings */
             :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
               margin: 0 -0.275ch;
@@ -201,12 +218,12 @@ https://fontawesome.com/search?ic=free
               outline: none !important;
               box-shadow: none;
             }
-            .modal.cc-open {
+            .modal.is-open {
               display: block;
               position: fixed;
               inset: 0;
             }
-            /* select: custom arrow */
+            /* select element: custom arrow */
             :root {
               --select-arrow-size: 0.375em;
             }
@@ -230,11 +247,11 @@ https://fontawesome.com/search?ic=free
               opacity: 0.6;
               pointer-events: none;
             }
-            .input-field.cc-boxed .select-wrapper::after {
+            .input-field.is-boxed .select-wrapper::after {
               inset-inline-end: var(--select-arrow-size);
             }
             /* other styles */
-            .input-field.cc-boxed:focus-within {
+            .input-field.is-boxed:focus-within {
               border-color: var(--colors--primary);
               box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
             }
@@ -260,12 +277,12 @@ https://fontawesome.com/search?ic=free
       </div>
       <div class="text-wrapper">
         <p>You can set this page as your homepage.</p>
-        <p>➊ Delete this block. ➋ Add the <span class="tag-label cc-component">Page Template</span> component. ➌ Unlink it to start building.</p>
+        <p>➊ Delete this block. ➋ Add the <span class="tag-label is-component">Page Template</span> component. ➌ Unlink it to start building.</p>
       </div>
     </div>
     <div class="container">
       <div class="button-wrapper">
-        <a aria-label="Go to cover page" href="index.html" class="button cc-outline w-button">Go to cover page</a>
+        <a aria-label="Go to cover page" href="index.html" class="button is-outline w-button">Go to cover page</a>
         <link rel="prefetch" href="/">
       </div>
     </div>

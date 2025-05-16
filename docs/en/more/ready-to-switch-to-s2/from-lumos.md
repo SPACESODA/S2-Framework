@@ -19,7 +19,7 @@ That said, some **Grid Utility** classes (a simplified and slightly modified ver
 
 Lumos uses is- as a prefix for combo classes and u- for utility classes.
 
-In S2, we use `cc-` for combo classes to have better search results in the panel and make them visually easier to identify. Utility classes `u-` remain the same as in Lumos.
+In S2, we also use `is-` for combo classes and `u-` for utility classes.
 
 Lumos has a comprehensive but complex class naming system with specific rules for different usages, which can be difficult to remember and apply consistently.
 

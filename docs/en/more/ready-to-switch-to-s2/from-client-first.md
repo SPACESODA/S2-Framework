@@ -19,7 +19,7 @@ Client-First is one of the most widely adopted frameworks in the Webflow communi
 
 In Client-First, `is-` is used as a prefix for combo-class names, while utility classes has no prefix and they are not easily distinguishable.
 
-In S2, we use `cc-` for combo-classes and `u-` for utility classes.
+In S2, we also use `is-` for combo-classes and `u-` for utility classes.
 
 In Client-First, you may need to consider the "class folder" concept when naming classes. Some may also follow the long BEM naming method, resulting in overly lengthy names.
 
