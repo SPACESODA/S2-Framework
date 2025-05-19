@@ -1,5 +1,5 @@
 ---
-description: Highly recommanded = 🔥
+description: 'Highly recommended: 🔥'
 icon: sparkles
 ---
 
@@ -17,9 +17,11 @@ Finsweet's Fluid Responsive: [https://finsweet.com/client-first/docs/fluid-respo
 
 ## Color Tools
 
-### Palette Generators
+### Tints / Palette Generators
 
 [https://www.tints.dev](https://www.tints.dev/?neutral=7E7E7E\&primary=0145AB\&secondary=00B499\&accent=F3BB09) 🔥
+
+[https://hihayk.github.io](https://hihayk.github.io/scale/#5/5/70/90/0/0/100/100/0145ab/1/69/171/white)
 
 [https://www.tailwindshades.com](https://www.tailwindshades.com/)
 
