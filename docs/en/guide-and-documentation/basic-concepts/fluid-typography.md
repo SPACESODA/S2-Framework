@@ -9,7 +9,7 @@ icon: dolphin
 
 S2 Framework adopts the modern **Fluid Type Scale** concept — a combination of **Fluid Typography** and **Type Scale**. To take advantage of both, we use the open-source [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to effortlessly generate all the `clamp()` values we need.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 If you're happy with the default font sizes provided in the S2 Cloneable and don't need to make changes yet, you may skip this chapter.
 {% endhint %}
 
@@ -21,7 +21,7 @@ The **fluid** behavior is achieved using `clamp()` function in the font-size pro
 
 Let’s take a look at the diagram below:
 
-<figure><img src="../../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
 
 The above diagram explains the basic concept of a [2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280) example:
 
@@ -164,11 +164,11 @@ Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> 
 
 S2 includes Font Size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, we manually enter the font sizes in the Variables panel. Default values are already included in the cloneable.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
 
 You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint in the preview section (scroll down). In Webflow, the default breakpoints are: 1280px, 991px, 767px, and 479px.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for Font Size variables</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for Font Size variables</p></figcaption></figure>
 
 
 

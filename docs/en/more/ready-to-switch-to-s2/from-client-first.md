@@ -11,9 +11,7 @@ Client-First is one of the most widely adopted frameworks in the Webflow communi
 
 **This is our own experience —**
 
-> ### "We tried to embrace Client-First in our past projects. However, we observed that not only did our clients find it quite difficult to follow, but our designers also struggled to keep up with all the rules."
-
-
+> #### "We tried to embrace Client-First in our past projects. However, we observed that not only did our clients find it quite difficult to follow, but our designers also struggled to keep up with all the rules."
 
 ### Class Naming Convention
 
@@ -51,6 +49,3 @@ About utility classes, we suggest to use wisely. They can be difficult to track.
 Finsweet offers a lot of excellent free and premium resources, and you may need to use some of them in your projects.
 
 In the world of Webflow, there is no real incompatibility. S2 is designed to work seamlessly alongside resources base on other frameworks, utilities, and add-ons.
-
-
-

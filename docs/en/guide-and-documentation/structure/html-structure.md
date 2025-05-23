@@ -18,7 +18,7 @@ This is our default and recommended structure when you start a page using the <m
 > >
 > > > <mark style="color:green;">**Global Code**</mark> : Please refer to [this section](global-code.md) for details.
 > > >
-> > > **`css_page`** : A Webflow Code Embed element that allows you to add custom CSS specific to the page and see changes immediately.
+> > > **`css_page`** : It allows you to add custom CSS specific to the page and see changes immediately.
 > > >
 > > > **`main-nav`** : Contains `nav`, the page's main navigation.
 > > >

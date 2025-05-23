@@ -13,8 +13,8 @@ Understanding **rem**, **unitless**, **em**, and **px**:
 
 Visit this section to learn more about the purpose of fluid font sizes that use **rem** as unit:
 
-{% content-ref url="fluid-typography/" %}
-[fluid-typography](fluid-typography/)
+{% content-ref url="fluid-typography.md" %}
+[fluid-typography.md](fluid-typography.md)
 {% endcontent-ref %}
 
 

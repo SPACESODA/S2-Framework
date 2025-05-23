@@ -5,6 +5,10 @@ icon: file-code
 
 # CSS for Fluid Type Scale
 
+{% hint style="warning" %}
+You can skip this page if you are unfamiliar with custom CSS or do not intend to update Fluid Type Scale by using custom CSS.
+{% endhint %}
+
 If any of the following apply to you and you are comfortable with codes, **custom CSS** can help you implement font size changes more efficiently:
 
 * You want to override the fixed values in the font size variables.

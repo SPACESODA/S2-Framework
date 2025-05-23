@@ -21,7 +21,7 @@ S2 applied **Fluid Type Scale** on some key tags and classes, including:
 * **`h1`** \~ **`h6`**
 
 {% hint style="info" %}
-About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography](../basic-concepts/fluid-typography/ "mention")
+About Fluid Type Scale and fluid values, please refer to this section: [fluid-typography.md](../basic-concepts/fluid-typography.md "mention")
 {% endhint %}
 
 In S2, we also have these **variables** for font sizes under **Text** > **Font Size** in the Variables panel:
