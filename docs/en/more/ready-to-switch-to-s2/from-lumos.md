@@ -7,9 +7,11 @@ icon: code-compare
 
 The Lumos Framework is very, umm… advanced.
 
+While Lumos may make you feel magical, it may be too hacky for most people and especially clients.
+
 ### About Grid
 
-Lumos embraces grid systems, and sometimes relying on custom code and custom properties to set up the grid structure. You may also need to understand concepts like **subgrid** to fully utilize it. While powerful, this approach can be fragile and difficult for your team and collaborators to follow.
+Lumos embraces grid systems, and sometimes relies on custom code and custom properties to set up the grid structure. You may also need to understand concepts like **subgrid** to fully utilize it. While powerful, this approach can be fragile and difficult for your team and collaborators to follow.
 
 S2 recommends using Webflow Designer to set up grids rather than relying on custom code whenever possible. This ensures a more intuitive and maintainable workflow, making collaboration much easier.
 
@@ -17,9 +19,7 @@ That said, some **Grid Utility** classes (a simplified and slightly modified ver
 
 ### Class Naming Convention
 
-Lumos uses is- as a prefix for combo classes and u- for utility classes.
-
-In S2, we also use `is-` for combo classes and `u-` for utility classes.
+Lumos uses `is-` as a prefix for combo classes and `u-` for utility classes. In S2, we also use `is-` for combo classes and `u-` for utility classes.
 
 Lumos has a comprehensive but complex class naming system with specific rules for different usages, which can be difficult to remember and apply consistently.
 

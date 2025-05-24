@@ -25,7 +25,7 @@ Tailwind CSS is an excellent CSS framework. It influenced how we name classes an
 Tailwind’s core philosophy is [utility-first classes](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/). However, the way that utility classes stack is not practical in Webflow. Extensive use of utility classes and deep stacking are generally [discouraged](../../guide-and-documentation/basic-concepts/utility-classes.md) in Webflow. Besides, Webflow also generates specific styles for each combo class.
 
 {% hint style="info" %}
-Just to be clear again, we don’t see Webflow as the place that can fully utilize utility classes, let alone stack them. In S2, we’ve got **S2 Attributes**, which work similarly but in the form of utility attributes. **S2 Attributes are a set of pre-styled&#x20;**_**attributes**_**, not classes.**
+Just to be clear, we don’t see Webflow as the place that can fully utilize utility classes, let alone stack the classes. In S2, we’ve got **S2 Attributes**, which work similarly but in the form of utility attributes. **S2 Attributes are a set of pre-styled&#x20;**_**attributes**_**, not classes.**
 {% endhint %}
 
 ### About S2 Attributes
@@ -42,17 +42,19 @@ Before we dive in, let’s get familiar with some _terminology_. For an extended
 
 Structurally:
 
-* **Content-specific classes:** e.g. `post-intro-info` and `author-bio`.
 * **Content-agnostic classes:** e.g. `card`, which are less content-specific
+* **Content-specific classes:** e.g. `post-intro-info` and `author-bio`.
 
 About CSS classes design:
 
-* **Component-first approach**
 * **Utility-first approach** (extended reading: [a blog by Tailwind's creator](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/))
+* **Component-first approach**
 
 S2 strikes a balance between the above approaches.
 
-When building S2, we tend to be more **Content-agnostic**. But we encourage you to create purposeful **Content-specific** classes wisely when designing your project. As a framework, we are certainly more **Utility-first** in different aspects; but in your projects, you have the freedom to take a component-first approach when styling specific parts of your site and enjoy the flexibility of Webflow.
+When building S2, we tend to be more **Content-agnostic**. However, we encourage you to create purposeful **Content-specific** classes when designing your project.
+
+As a framework, we are certainly more **Utility-first**. However, in your projects, you have the freedom to take a **Component-first** approach when styling specific parts of your site and enjoy the flexibility of Webflow.
 
 Other considerations:
 
