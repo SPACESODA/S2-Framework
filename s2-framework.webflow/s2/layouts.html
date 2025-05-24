@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri May 23 2025 11:55:17 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat May 24 2025 01:11:32 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6603a8818d141eeb4c696af6" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -205,7 +205,7 @@
 S2 Framework Base CSS
 ** Full set by CDN — only a few KBs! **
  -->
-          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/css/s2.min.css" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.2/webflow/css/s2.min.css" rel="stylesheet">
         </div>
       </div>
       <div class="code is-inside-global">
@@ -254,6 +254,9 @@ https://fontawesome.com/search?ic=free
             /* -- Global Custom Attributes -- */
             /* ------------------------------ */
             /* gradient */
+            [gradient] {
+              background-image: linear-gradient(135deg, var(--colors--primary) 0%, var(--colors--secondary) 100%);
+            }
             [gradient="1"] {
               background-image: linear-gradient(135deg, #3E6CFF 0%, #CD3EFF 50%, #FF3EA6 100%);
             }
@@ -264,6 +267,9 @@ https://fontawesome.com/search?ic=free
               background-image: linear-gradient(135deg, rgba(0, 24, 60, 1) 0%, rgba(60, 110, 238, 1) 100%);
             }
             /* shadow */
+            [shadow] {
+              box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            }
             [shadow="xs"] {
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
             }
@@ -276,20 +282,22 @@ https://fontawesome.com/search?ic=free
             [shadow="xl"] {
               box-shadow: 0 14px 24px -4px rgba(0, 0, 0, 0.18), 0 8px 12px -4px rgba(0, 0, 0, 0.1);
             }
-            /* pulse-bg animation */
-            [animation="pulse-bg-1"] {
-              --bg-s: var(--colors--accent);
-              --bg-e: var(--colors--secondary);
-            }
-            [animation="pulse-bg-2"] {
-              --bg-s: #FFB6B6;
-              --bg-e: #FFF0F0;
-            }
-            [animation="pulse-bg-3"] {
-              --bg-s: #222;
-              --bg-e: #888;
+            /* text-shadow */
+            [text-shadow] {
+              text-shadow: 0 0 1rem var(--_palettes---neutral--black);
             }
             /* list-type */
+            [list-type] li {
+              list-style-position: outside;
+            }
+            [list-type] li::before {
+              content: none !important;
+              /* reset */
+            }
+            [list-type] {
+              list-style: none !important;
+              /* reset */
+            }
             [list-type="disc"] {
               list-style-type: disc !important;
             }
@@ -304,6 +312,18 @@ https://fontawesome.com/search?ic=free
             }
             /* list-icon */
             /* css entities: https://www.w3schools.com/cssref/css_entities.php */
+            [list-icon] li {
+              position: relative;
+              margin-inline-start: 0em;
+            }
+            [list-icon] li::before {
+              position: absolute;
+              top: -0.085em;
+              inset-inline-start: -1.325em;
+              font-size: 1.125em;
+              content: '\25CF\0020';
+              color: var(--colors--primary);
+            }
             [list-icon="spark"] li::before {
               content: '\2726\0020' !important;
               color: var(--colors--primary) !important;
@@ -315,6 +335,19 @@ https://fontawesome.com/search?ic=free
             [list-icon="asterisk"] li::before {
               content: '\2731\0020' !important;
               color: var(--colors--secondary) !important;
+            }
+            /* animation: pulse-bg */
+            [animation="pulse-bg-1"] {
+              --bg-s: var(--colors--accent);
+              --bg-e: var(--colors--secondary);
+            }
+            [animation="pulse-bg-2"] {
+              --bg-s: #FFB6B6;
+              --bg-e: #FFF0F0;
+            }
+            [animation="pulse-bg-3"] {
+              --bg-s: #222;
+              --bg-e: #888;
             }
             /* -------------------------- */
             /* -- Global Custom Styles -- */
@@ -355,7 +388,7 @@ https://fontawesome.com/search?ic=free
             .main-nav_button.w--open path {
               transform: translateY(0%) rotate(0deg);
             }
-            /* better slider nav */
+            /* slider nav */
             .w-slider-nav.w-round>div {
               border-radius: 999rem;
               transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
