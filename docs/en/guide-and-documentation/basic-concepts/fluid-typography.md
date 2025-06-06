@@ -174,7 +174,7 @@ You can use the **Fluid Type Scale Calculator** to get the values for each break
 
 ## Summary
 
-In S2, the fluid values have been applied directly to:
+In S2, the fluid values have been applied to the following classes via variables. Editing is super easy!
 
 * <mark style="color:purple;">**`Body`**</mark>, **`text-base`**
 * **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**
@@ -182,16 +182,6 @@ In S2, the fluid values have been applied directly to:
 * <mark style="color:purple;">**`Heading 1`**</mark> \~ <mark style="color:purple;">**`Heading 6`**</mark>
 * **`h1`** \~ **`h6`**
 * <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
-
-Additionally, the **Font Size variables** also have values that can align with the Fluid Type Scale. This allows you to enjoy the benefits without relying on custom code.
-
-{% hint style="success" %}
-We understand that manually entering all these values can be a bit cumbersome when you want to adjust font sizes. **This process will become super simple once Webflow supports** [**custom values for variables**](https://x.com/leinwand/status/1898901668483485730) **in the future.** Hopefully, this feature will be available soon. :fingers\_crossed:
-
-If you prefer using custom CSS instead of editing the font-size values on the panel, visit:
-
-[css-for-fluid-type-scale.md](css-for-fluid-type-scale.md "mention")
-{% endhint %}
 
 
 
@@ -246,7 +236,7 @@ This is optional and usually unnecessary. It is not included in the framework's 
 
 Yes. Please visit this page:
 
-[css-for-fluid-type-scale.md](css-for-fluid-type-scale.md "mention")
+[css-for-fluid-type-scale.md](../../more/read-more/css-for-fluid-type-scale.md "mention")
 
 </details>
 

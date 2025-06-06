@@ -6,6 +6,12 @@ icon: file-code
 # CSS for Fluid Type Scale
 
 {% hint style="warning" %}
+The information on this page is not quite necessary now since Webflow's launch of this feature: \
+[https://webflow.com/updates/function-variables](https://webflow.com/updates/function-variables) \
+Editing **Fluid Type Scale** values via the Variables Panel is super easy now!
+{% endhint %}
+
+{% hint style="warning" %}
 You can skip this page if you are unfamiliar with custom CSS or do not intend to update Fluid Type Scale by using custom CSS.
 {% endhint %}
 

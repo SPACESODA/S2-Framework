@@ -16,7 +16,6 @@
   * [Utility Classes](guide-and-documentation/basic-concepts/utility-classes.md)
   * [Units](guide-and-documentation/basic-concepts/units.md)
   * [Fluid Typography](guide-and-documentation/basic-concepts/fluid-typography.md)
-  * [CSS for Fluid Type Scale](guide-and-documentation/basic-concepts/css-for-fluid-type-scale.md)
 * [Variables](guide-and-documentation/variables/README.md)
   * [Colors vs Palettes](guide-and-documentation/variables/colors-vs-palettes.md)
   * [Colors in S2](guide-and-documentation/variables/colors-in-s2.md)
@@ -50,6 +49,7 @@
 * [Read More](more/read-more/README.md)
   * [Foundations of S2](more/read-more/foundations-of-s2.md)
   * [Our Approaches](more/read-more/our-approaches.md)
+  * [CSS for Fluid Type Scale](more/read-more/css-for-fluid-type-scale.md)
 
 ## Links
 
