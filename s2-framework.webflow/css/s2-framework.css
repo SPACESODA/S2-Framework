@@ -2,8 +2,15 @@
   --colors--surface: var(--_palettes---neutral--white);
   --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --colors--text: var(--_palettes---neutral--900);
+  --_text---font-size--base: clamp(1rem, .217vi + .951rem, 1.125rem);
   --_text---other--deeper: 110%;
   --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --_text---font-size--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
+  --_text---font-size--h2: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
+  --_text---font-size--h3: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
+  --_text---font-size--h4: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
+  --_text---font-size--h5: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
+  --_text---font-size--h6: clamp(1rem, .217vi + .951rem, 1.125rem);
   --colors--focus: var(--_palettes---primary--400);
   --_sizes---radius--xs: .275rem;
   --colors--surface-muted: var(--_palettes---neutral--100);
@@ -25,6 +32,9 @@
   --_sizes---container--max-width: 90rem;
   --_sizes---container--padding: 2.25rem;
   --_sizes---grid--gutter: 1rem;
+  --_text---font-size--xs: clamp(.813rem, .109vi + .788rem, .875rem);
+  --_text---font-size--sm: clamp(.901rem, .158vi + .866rem, .992rem);
+  --_text---font-size--lg: clamp(1.057rem, .42vi + .963rem, 1.299rem);
   --s2--code-tag: #7e7e7e;
   --_sizes---button--base: 3.25rem;
   --_sizes---radius--rounded: 999rem;
@@ -37,11 +47,10 @@
   --colors-special--inverted: var(--_palettes---neutral--white);
   --_text---richtext-spacing--base: .75rem;
   --_text---list-spacing--base: .5rem;
-  --_text---font-size--xs: .875rem;
   --colors--stroke: var(--_palettes---neutral--400);
   --_sizes---outline--bold: .1875rem;
   --colors--focus-subtle: var(--_palettes---primary--subtle);
-  --_text---font-size--sm: .992rem;
+  --_text---font-size--xl: clamp(1.118rem, .664vi + .969rem, 1.5rem);
   --_sizes---line--thin: .0625rem;
   --_sizes---radius--card: .625rem;
   --_sizes---line--3px: .1875rem;
@@ -59,7 +68,6 @@
   --colors-special--info: #cceff7;
   --colors-special--info-text: #00728b;
   --_text---richtext-spacing--lg: 1rem;
-  --_text---font-size--lg: 1.299rem;
   --_text---list-spacing--lg: .85rem;
   --_palettes---primary--300: #3485fe;
   --_palettes---primary--700: #013584;
@@ -69,16 +77,19 @@
   --colors-extended--04: #ad85d1;
   --colors-extended--05: #8144a8;
   --colors-extended--06: #5f2b89;
+  --_text---font-size--2xl: clamp(1.183rem, .956vi + .967rem, 1.732rem);
+  --_text---font-size--3xl: clamp(1.25rem, 1.304vi + .957rem, 2rem);
+  --_text---font-size--2xs: clamp(.732rem, .069vi + .717rem, .772rem);
   --_sizes---radius--sm: .35rem;
   --colors--text-dimmer: var(--_palettes---neutral--200);
   --colors--text-dim: var(--_palettes---neutral--300);
   --_palettes---accent--on-base: #644d00;
-  --_text---font-size--2xs: .772rem;
   --_palettes---primary--subtle: #c8ddf3;
   --s2--surface-alt: #eef1f3;
   --_sizes---gap--lg: 1.5rem;
   --colors--surface-alt-muted: var(--_palettes---neutral--800);
   --colors--surface-alt: var(--_palettes---neutral--900);
+  --_text---font-size--3xs: clamp(.66rem, .036vi + .652rem, .681rem);
   --_palettes---primary--on-light: var(--_palettes---primary--900);
   --_palettes---primary--on-deep: var(--_palettes---primary--100);
   --_palettes---secondary--on-light: #006959;
@@ -148,11 +159,6 @@
   --colors-special--transparent-white: #fff0;
   --_palettes---accent--500: #f3bb09;
   --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --_text---font-size--3xs: .681rem;
-  --_text---font-size--base: 1.125rem;
-  --_text---font-size--xl: 1.5rem;
-  --_text---font-size--2xl: 1.732rem;
-  --_text---font-size--3xl: 2rem;
   --_text---list-spacing--sm: .25rem;
   --_text---richtext-spacing--sm: .5rem;
   --_text---other--lighter: 90%;
@@ -259,16 +265,16 @@ body {
   background-color: var(--colors--surface);
   font-family: var(--_text---font-family--primary);
   color: var(--colors--text);
-  font-size: clamp(1rem, .217vi + .951rem, 1.125rem);
+  font-size: var(--_text---font-size--base);
   line-height: 1.5;
 }
 
 h1 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
+  font-size: var(--_text---font-size--h1);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(3rem, 3.478vi + 2.218rem, 5rem);
   font-weight: 400;
   line-height: 1.125;
 }
@@ -276,9 +282,9 @@ h1 {
 h2 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
+  font-size: var(--_text---font-size--h2);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
   font-weight: 400;
   line-height: 1.175;
 }
@@ -286,9 +292,9 @@ h2 {
 h3 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
+  font-size: var(--_text---font-size--h3);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -296,9 +302,9 @@ h3 {
 h4 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
+  font-size: var(--_text---font-size--h4);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -306,9 +312,9 @@ h4 {
 h5 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
+  font-size: var(--_text---font-size--h5);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -316,9 +322,9 @@ h5 {
 h6 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
+  font-size: var(--_text---font-size--h6);
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(1rem, .217vi + .951rem, 1.125rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -726,42 +732,42 @@ figcaption {
 .h1 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
-  font-size: clamp(3rem, 3.478vi + 2.218rem, 5rem);
+  font-size: var(--_text---font-size--h1);
   line-height: 1.125;
 }
 
 .h2 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
-  font-size: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
+  font-size: var(--_text---font-size--h2);
   line-height: 1.175;
 }
 
 .h3 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
-  font-size: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
+  font-size: var(--_text---font-size--h3);
   line-height: 1.2;
 }
 
 .h4 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
-  font-size: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
+  font-size: var(--_text---font-size--h4);
   line-height: 1.2;
 }
 
 .h5 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
-  font-size: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
+  font-size: var(--_text---font-size--h5);
   line-height: 1.2;
 }
 
 .h6 {
   filter: contrast(var(--_text---other--deeper));
   font-family: var(--_text---font-family--headings);
-  font-size: clamp(1rem, .217vi + .951rem, 1.125rem);
+  font-size: var(--_text---font-size--h6);
   line-height: 1.2;
 }
 
@@ -834,22 +840,22 @@ figcaption {
 }
 
 .text-base {
-  font-size: clamp(1rem, .217vi + .951rem, 1.125rem);
+  font-size: var(--_text---font-size--base);
   line-height: 1.5;
 }
 
 .text-xs {
-  font-size: clamp(.813rem, .109vi + .788rem, .875rem);
+  font-size: var(--_text---font-size--xs);
   line-height: 1.5;
 }
 
 .text-sm {
-  font-size: clamp(.901rem, .158vi + .866rem, .992rem);
+  font-size: var(--_text---font-size--sm);
   line-height: 1.5;
 }
 
 .text-lg {
-  font-size: clamp(1.057rem, .42vi + .963rem, 1.299rem);
+  font-size: var(--_text---font-size--lg);
   line-height: 1.5;
 }
 
@@ -1551,7 +1557,7 @@ figcaption {
 }
 
 .text-xl {
-  font-size: clamp(1.118rem, .664vi + .969rem, 1.5rem);
+  font-size: var(--_text---font-size--xl);
   line-height: 1.5;
 }
 
@@ -3240,12 +3246,12 @@ figcaption {
 }
 
 .text-2xl {
-  font-size: clamp(1.183rem, .956vi + .967rem, 1.732rem);
+  font-size: var(--_text---font-size--2xl);
   line-height: 1.35;
 }
 
 .text-3xl {
-  font-size: clamp(1.25rem, 1.304vi + .957rem, 2rem);
+  font-size: var(--_text---font-size--3xl);
   line-height: 1.35;
 }
 
@@ -3473,7 +3479,7 @@ figcaption {
 }
 
 .text-2xs {
-  font-size: clamp(.732rem, .069vi + .717rem, .772rem);
+  font-size: var(--_text---font-size--2xs);
   line-height: 1.4;
 }
 
@@ -5073,7 +5079,7 @@ figcaption {
 }
 
 .text-3xs {
-  font-size: clamp(.66rem, .036vi + .652rem, .681rem);
+  font-size: var(--_text---font-size--3xs);
   line-height: 1.4;
 }
 
@@ -6950,23 +6956,29 @@ figcaption {
     --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 8;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---font-size--base: clamp(1rem, .217vi + .951rem, 1.125rem);
     --_text---other--deeper: 110%;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---font-size--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
+    --_text---font-size--h2: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
+    --_text---font-size--h3: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
+    --_text---font-size--h4: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
+    --_text---font-size--h5: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
+    --_text---font-size--h6: clamp(1rem, .217vi + .951rem, 1.125rem);
+    --_text---font-size--xs: clamp(.813rem, .109vi + .788rem, .875rem);
+    --_text---font-size--sm: clamp(.901rem, .158vi + .866rem, .992rem);
+    --_text---font-size--lg: clamp(1.057rem, .42vi + .963rem, 1.299rem);
     --_text---richtext-spacing--base: .75rem;
     --_text---list-spacing--base: .5rem;
-    --_text---font-size--xs: .855rem;
-    --_text---font-size--sm: .964rem;
+    --_text---font-size--xl: clamp(1.118rem, .664vi + .969rem, 1.5rem);
     --_text---other--word-space: .35em;
     --_text---richtext-spacing--lg: 1rem;
-    --_text---font-size--lg: 1.223rem;
     --_text---list-spacing--lg: .85rem;
-    --_text---font-size--2xs: .759rem;
+    --_text---font-size--2xl: clamp(1.183rem, .956vi + .967rem, 1.732rem);
+    --_text---font-size--3xl: clamp(1.25rem, 1.304vi + .957rem, 2rem);
+    --_text---font-size--2xs: clamp(.732rem, .069vi + .717rem, .772rem);
+    --_text---font-size--3xs: clamp(.66rem, .036vi + .652rem, .681rem);
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--3xs: .674rem;
-    --_text---font-size--base: 1.086rem;
-    --_text---font-size--xl: 1.38rem;
-    --_text---font-size--2xl: 1.56rem;
-    --_text---font-size--3xl: 1.765rem;
     --_text---list-spacing--sm: .25rem;
     --_text---richtext-spacing--sm: .5rem;
     --_text---other--lighter: 90%;
@@ -7426,23 +7438,29 @@ figcaption {
     --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 6;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---font-size--base: clamp(1rem, .217vi + .951rem, 1.125rem);
     --_text---other--deeper: 110%;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---font-size--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
+    --_text---font-size--h2: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
+    --_text---font-size--h3: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
+    --_text---font-size--h4: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
+    --_text---font-size--h5: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
+    --_text---font-size--h6: clamp(1rem, .217vi + .951rem, 1.125rem);
+    --_text---font-size--xs: clamp(.813rem, .109vi + .788rem, .875rem);
+    --_text---font-size--sm: clamp(.901rem, .158vi + .866rem, .992rem);
+    --_text---font-size--lg: clamp(1.057rem, .42vi + .963rem, 1.299rem);
     --_text---richtext-spacing--base: .75rem;
     --_text---list-spacing--base: .5rem;
-    --_text---font-size--xs: .84rem;
-    --_text---font-size--sm: .942rem;
+    --_text---font-size--xl: clamp(1.118rem, .664vi + .969rem, 1.5rem);
     --_text---other--word-space: .35em;
     --_text---richtext-spacing--lg: 1rem;
-    --_text---font-size--lg: 1.164rem;
     --_text---list-spacing--lg: .85rem;
-    --_text---font-size--2xs: .75rem;
+    --_text---font-size--2xl: clamp(1.183rem, .956vi + .967rem, 1.732rem);
+    --_text---font-size--3xl: clamp(1.25rem, 1.304vi + .957rem, 2rem);
+    --_text---font-size--2xs: clamp(.732rem, .069vi + .717rem, .772rem);
+    --_text---font-size--3xs: clamp(.66rem, .036vi + .652rem, .681rem);
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--3xs: .669rem;
-    --_text---font-size--base: 1.055rem;
-    --_text---font-size--xl: 1.287rem;
-    --_text---font-size--2xl: 1.426rem;
-    --_text---font-size--3xl: 1.582rem;
     --_text---list-spacing--sm: .25rem;
     --_text---richtext-spacing--sm: .5rem;
     --_text---other--lighter: 90%;
@@ -7976,23 +7994,29 @@ figcaption {
     --_sizes---outline--offset-far: 5px;
     --_sizes---grid--column: 4;
     --_text---font-family--primary: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---font-size--base: clamp(1rem, .217vi + .951rem, 1.125rem);
     --_text---other--deeper: 110%;
     --_text---font-family--headings: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --_text---font-size--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
+    --_text---font-size--h2: clamp(2.409rem, 2.264vi + 1.899rem, 3.71rem);
+    --_text---font-size--h3: clamp(1.933rem, 1.426vi + 1.613rem, 2.753rem);
+    --_text---font-size--h4: clamp(1.552rem, .854vi + 1.36rem, 2.043rem);
+    --_text---font-size--h5: clamp(1.246rem, .47vi + 1.14rem, 1.516rem);
+    --_text---font-size--h6: clamp(1rem, .217vi + .951rem, 1.125rem);
+    --_text---font-size--xs: clamp(.813rem, .109vi + .788rem, .875rem);
+    --_text---font-size--sm: clamp(.901rem, .158vi + .866rem, .992rem);
+    --_text---font-size--lg: clamp(1.057rem, .42vi + .963rem, 1.299rem);
     --_text---richtext-spacing--base: .75rem;
     --_text---list-spacing--base: .5rem;
-    --_text---font-size--xs: .821rem;
-    --_text---font-size--sm: .913rem;
+    --_text---font-size--xl: clamp(1.118rem, .664vi + .969rem, 1.5rem);
     --_text---other--word-space: .35em;
     --_text---richtext-spacing--lg: 1rem;
-    --_text---font-size--lg: 1.089rem;
     --_text---list-spacing--lg: .85rem;
-    --_text---font-size--2xs: .737rem;
+    --_text---font-size--2xl: clamp(1.183rem, .956vi + .967rem, 1.732rem);
+    --_text---font-size--3xl: clamp(1.25rem, 1.304vi + .957rem, 2rem);
+    --_text---font-size--2xs: clamp(.732rem, .069vi + .717rem, .772rem);
+    --_text---font-size--3xs: clamp(.66rem, .036vi + .652rem, .681rem);
     --_text---font-family--secondary: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    --_text---font-size--3xs: .681rem;
-    --_text---font-size--base: 1.016rem;
-    --_text---font-size--xl: 1.168rem;
-    --_text---font-size--2xl: 1.254rem;
-    --_text---font-size--3xl: 1.347rem;
     --_text---list-spacing--sm: .25rem;
     --_text---richtext-spacing--sm: .5rem;
     --_text---other--lighter: 90%;
