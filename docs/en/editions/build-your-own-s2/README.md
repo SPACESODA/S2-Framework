@@ -14,16 +14,16 @@ When you clone the S2 Framework, you get full control over styles, allowing you 
 
 To remove everything except a one-page Style Guide:
 
-{% content-ref url="s2-for-template-creators.md" %}
-[s2-for-template-creators.md](s2-for-template-creators.md)
+{% content-ref url="one-page-style-guide.md" %}
+[one-page-style-guide.md](one-page-style-guide.md)
 {% endcontent-ref %}
 
 
 
 Just keeps the best parts we recommend:
 
-{% content-ref url="s2-framework-lite.md" %}
-[s2-framework-lite.md](s2-framework-lite.md)
+{% content-ref url="lite-edition.md" %}
+[lite-edition.md](lite-edition.md)
 {% endcontent-ref %}
 
 

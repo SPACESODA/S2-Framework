@@ -34,17 +34,17 @@
 ## Editions
 
 * [Build your own S2](editions/build-your-own-s2/README.md)
-  * [One-page Style Guide](editions/build-your-own-s2/s2-for-template-creators.md)
-  * [Lite Edition](editions/build-your-own-s2/s2-framework-lite.md)
+  * [One-page Style Guide](editions/build-your-own-s2/one-page-style-guide.md)
+  * [Lite Edition](editions/build-your-own-s2/lite-edition.md)
 
 ## More
 
 * [FAQs](more/faqs.md)
-* [Ready to switch to S2?](more/ready-to-switch-to-s2/README.md)
-  * [Frameworks Comparison Overview](more/ready-to-switch-to-s2/frameworks-comparison-overview.md)
-  * [From Client-First](more/ready-to-switch-to-s2/from-client-first.md)
-  * [From MAST or The Saddle](more/ready-to-switch-to-s2/from-mast-or-the-saddle.md)
-  * [From Lumos](more/ready-to-switch-to-s2/from-lumos.md)
+* [Ready to switch to S2?](more/switch-to-s2/README.md)
+  * [Frameworks Comparison Overview](more/switch-to-s2/frameworks-comparison-overview.md)
+  * [From Client-First](more/switch-to-s2/from-client-first.md)
+  * [From MAST or The Saddle](more/switch-to-s2/from-mast-or-the-saddle.md)
+  * [From Lumos](more/switch-to-s2/from-lumos.md)
 * [Tools and Resources](more/tools-and-resources.md)
 * [Read More](more/read-more/README.md)
   * [Foundations of S2](more/read-more/foundations-of-s2.md)

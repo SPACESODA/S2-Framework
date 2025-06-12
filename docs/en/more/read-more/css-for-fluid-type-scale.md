@@ -7,18 +7,11 @@ icon: file-code
 # CSS for Fluid Type Scale
 
 {% hint style="warning" %}
-The information on this page is not quite necessary now since Webflow's launch of this feature: \
-[https://webflow.com/updates/function-variables](https://webflow.com/updates/function-variables) \
-Editing **Fluid Type Scale** values via the Variables Panel is super easy now!
-{% endhint %}
-
-{% hint style="warning" %}
 You can skip this page if you are unfamiliar with custom CSS or do not intend to update Fluid Type Scale by using custom CSS.
 {% endhint %}
 
 If any of the following apply to you and you are comfortable with codes, **custom CSS** can help you implement font size changes more efficiently:
 
-* You want to override the fixed values in the font size variables.
 * You prefer not to manually input fluid values for each class in the Style panel.
 * You want to preview your configurations.
 
@@ -70,7 +63,7 @@ h1, .h1    { font-size: var(--_text---heading--h1); }
 
 
 
-## Larger overall font size
+## Example of larger overall font size
 
 <mark style="color:blue;">✦</mark> [Configuration of text](https://www.fluid-type-scale.com/calculate?minFontSize=18\&minWidth=360\&minRatio=1.125\&maxFontSize=24\&maxWidth=1280\&maxRatio=1.2\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)\
 <mark style="color:blue;">✦</mark> [Configuration of headings](https://www.fluid-type-scale.com/calculate?minFontSize=18\&minWidth=360\&minRatio=1.2\&maxFontSize=24\&maxWidth=1280\&maxRatio=1.333\&steps=h6%2Ch5%2Ch4%2Ch3%2Ch2%2Ch1\&baseStep=h6\&prefix=_text---heading-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
