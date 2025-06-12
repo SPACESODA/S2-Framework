@@ -33,9 +33,9 @@
 
 ## Editions
 
-* [Build your own S2](editions/build-your-own-s2.md)
-* [S2 Framework Lite](editions/s2-framework-lite.md)
-* [S2 for Template Creators](editions/s2-for-template-creators.md)
+* [Build your own S2](editions/build-your-own-s2/README.md)
+  * [One-page Style Guide](editions/build-your-own-s2/s2-for-template-creators.md)
+  * [Lite Edition](editions/build-your-own-s2/s2-framework-lite.md)
 
 ## More
 

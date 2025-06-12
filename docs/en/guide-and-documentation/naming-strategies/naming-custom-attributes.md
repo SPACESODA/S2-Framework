@@ -4,12 +4,12 @@ icon: brackets-square
 
 # Naming Custom Attributes
 
-{% hint style="info" %}
+{% hint style="warning" %}
 You can skip this page if you are not planning to create new custom attributes.
 {% endhint %}
 
 {% hint style="info" %}
-Place custom attributes in the `css_custom` Code Embed inside the <mark style="color:green;">**Global Code**</mark> component.
+Recommended: Please place custom attributes in the `css_custom` Code Embed inside the <mark style="color:green;">**Global Code**</mark> component.
 {% endhint %}
 
 Creating custom attributes is a more advanced topic. Below is a set of naming guidelines for creating custom attributes, which we also follow:

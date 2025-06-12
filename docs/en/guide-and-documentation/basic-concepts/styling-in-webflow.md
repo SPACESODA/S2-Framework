@@ -6,11 +6,9 @@ icon: brackets-curly
 
 ## Basic Concepts
 
-Understanding basic concepts below is essential for building and customizing your Webflow projects.
+Understanding the basic concepts below is essential for building and customizing your Webflow projects.
 
 <table data-column-title-hidden data-view="cards"><thead><tr><th>Concepts</th><th>Description</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Classes of HTML Tags and Webflow Elements</strong></td><td><p>HTML tags are the basic building blocks.</p><p>Webflow elements are pre-built elements in Webflow, such as Containers, Grids, and Buttons.</p></td><td></td></tr><tr><td><strong>Element Classes</strong></td><td>Custom Element Classes (or base classes) allow you to create unique styles for specific elements.</td><td></td></tr><tr><td><strong>Combo Classes</strong></td><td>Combo classes are modifier classes and variations of existing classes. They allowing you to tweak styles for specific instances without creating new element classes. They all start with <code>is-</code>.</td><td></td></tr><tr><td><strong>Attributes</strong></td><td><a href="https://university.webflow.com/lesson/custom-attributes">Attributes</a> are not "classes" but we can use CSS to apply styles like a preset. <strong>S2 Attributes</strong> help you work faster by allowing you to easily apply additional styles and functionality to elements without creating new classes.</td><td></td></tr><tr><td><strong>Utility Classes</strong></td><td>Utility classes are predefined classes that can apply specific styles or functionality. They help streamline your design process. They all start with <code>u-</code>.</td><td></td></tr></tbody></table>
-
-
 
 ## When to use S2 Attributes?
 
@@ -25,8 +23,6 @@ Learn about **S2 Attributes** in this section:
 {% content-ref url="../s2-attributes.md" %}
 [s2-attributes.md](../s2-attributes.md)
 {% endcontent-ref %}
-
-
 
 ## Guide to Making Styling Choices
 
@@ -44,8 +40,6 @@ Use **S2 Attributes** that you understand and can easily remember.
 **Priority 4:**\
 Use the framework's **Utility Classes**.
 
-
-
 ## Should I create new Attributes?
 
 Attributes are powerful tools. **However, attributes cannot be searched directly in any Webflow panels. When you want to rename something, there is also no way to update all instances quickly.**
@@ -55,8 +49,6 @@ Attributes are powerful tools. **However, attributes cannot be searched directly
 Therefore, we recommend following the above [#guide-to-making-styling-choices](styling-in-webflow.md#guide-to-making-styling-choices "mention") and sticking with the framework's official and standardized **S2 Attributes**.
 
 If you really want to create new custom attributes, place them in the `css_custom` code embed inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
-
-
 
 **Extended reading:**
 

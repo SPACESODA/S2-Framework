@@ -10,11 +10,11 @@ After [**cloning**](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_med
 
 1. **Set up your Homepage**
    1. Make the page **Home** your homepage.
-   2. Change the S2 Framework Cover page into "Draft", or simply delete it.
+   2. Delete the S2 Framework Cover page.
    3. Remove the `DELETE-ME` section on your new homepage.
 2. **Configure the Variables**
    * Set up the colors of your Palettes in the Variables panel.
-   * Configure your Font Family variables.
+   * Configure other variables, such as Font Family.
 3. **Start building!**
    * Add the <mark style="color:green;">**Page Template**</mark> component to your **Home**, or use the **New Page Template** to create a new page.
    * Unlink the <mark style="color:green;">**Page Template**</mark> component instance and begin building.
@@ -23,11 +23,11 @@ After [**cloning**](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_med
 
 <details>
 
-<summary>Do I need to update the design on the Page Template at the beginning?</summary>
+<summary>Do I have to update the design on the Page Template first?</summary>
 
 Designing a full page directly inside a component can be inconvenient.
 
-Instead, you can start by building your layout outside the component. Once everything is more finalized, simply copy and paste the sections and elements back into the Page Template component.
+Instead, you can start by building your layout outside the component. Once everything is more finalized, copy and paste those sections and elements back into the Page Template component.
 
 </details>
 

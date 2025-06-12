@@ -1,5 +1,6 @@
 ---
 description: Custom CSS Template for Fluid Type Scale
+hidden: true
 icon: file-code
 ---
 
@@ -19,7 +20,7 @@ If any of the following apply to you and you are comfortable with codes, **custo
 
 * You want to override the fixed values in the font size variables.
 * You prefer not to manually input fluid values for each class in the Style panel.
-* You want to preview your configurations quickly.
+* You want to preview your configurations.
 
 
 

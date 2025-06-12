@@ -9,8 +9,10 @@ icon: dolphin
 
 S2 Framework adopts the modern **Fluid Type Scale** concept — a combination of **Fluid Typography** and **Type Scale**. To take advantage of both, we use the open-source [**Fluid Type Scale Calculator**](https://www.fluid-type-scale.com) to effortlessly generate all the `clamp()` values we need.
 
+Thanks to Webflow's [Advanced Variable with Function](https://webflow.com/updates/function-variables) feature, the **Fluid Type Scale** values are managed in the **Variables panel** — all in one place, so that you can view and update them very easily.
+
 {% hint style="warning" %}
-If you're happy with the default font sizes provided in the S2 Cloneable and don't need to make changes yet, you may skip this chapter.
+**If you're happy with the overall font sizes provided by default in the S2 Cloneable and don't need to make changes yet, you may skip this chapter.**
 {% endhint %}
 
 
@@ -35,7 +37,7 @@ Here is another example — a simple [Single-step Configuration](https://www.flu
 
 Once you understand the basic concept, making adjustments becomes quite easy.
 
-🤩 Now, with the above basic knowledge, let's explore the default setup on S2.
+🤩 Now, with the above basic knowledge, let's explore our default setup.
 
 
 
@@ -44,12 +46,12 @@ Once you understand the basic concept, making adjustments becomes quite easy.
 Fluid Type Scale has been applied to the Body tag and text classes in the S2 Framework:
 
 **`text-sm`**, **`text-xs`**, **`text-2xs`**, **`text-3xs`**, \
-<mark style="color:purple;">**`Body`**</mark>, **`text-base`**, \
+<mark style="color:purple;">**`Body`**</mark> = **`text-base`**, \
 &#xNAN;**`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
 Let's take a look at the default configuration on the larger end of the scale first:
 
-<mark style="color:purple;">**`Body`**</mark> = **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
+<mark style="color:purple;">**`Body`**</mark> / **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
 <mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.057475\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
@@ -136,7 +138,7 @@ Here's what we get:
 --_text---heading--h1: clamp(3rem, 3.478vi + 2.218rem, 5rem);
 ```
 
-**`h7`**, **`h8`**
+About **`h7`** and **`h8`**:
 
 Sometimes you simply need smaller headings — that's where `h7` and `h8` come in. These are arbitrary classes created to style smaller headings. Since their sizes are too small to benefit from fluid scaling, we use regular fixed font sizes for simplicity.
 
@@ -155,18 +157,14 @@ We have prepared a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is
 The generated values are applied to the Webflow Designer for the <mark style="color:purple;">**`sup`**</mark> and <mark style="color:purple;">**`sub`**</mark> tags, allowing them to scale correctly and maintain proper positioning relative to the font size.
 
 {% hint style="info" %}
-Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values — S2's default setup scales perfectly with different font sizes, regardless of your typography settings.
+Normally, you don't need to adjust the <mark style="color:purple;">`sup`</mark> and <mark style="color:purple;">`sub`</mark> values — S2's default setup scales perfectly with any different font sizes, regardless of your typography settings.
 {% endhint %}
 
 
 
-## Font Size Variables
+## Preview your setup
 
-S2 includes Font Size variables that can be easily applied to other classes and elements. To best align with the **Fluid Type Scale** used for tags and classes, we manually enter the font sizes in the Variables panel. Default values are already included in the cloneable.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.29.34.png" alt=""><figcaption><p>Font Size Variables in S2</p></figcaption></figure>
-
-You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint in the preview section (scroll down). In Webflow, the default breakpoints are: 1280px, 991px, 767px, and 479px.
+You can use the **Fluid Type Scale Calculator** to get the values for each breakpoint in the preview section (please scroll down). In Webflow, the breakpoints are: 1280px, 991px, 767px, and 479px.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 18.26.53.png" alt=""><figcaption><p>Screenshot to show how to get the values for Font Size variables</p></figcaption></figure>
 
@@ -189,7 +187,7 @@ In S2, the fluid values have been applied to the following classes via variables
 
 <details>
 
-<summary>How to update the <code>clamp()</code> values according to my design?</summary>
+<summary>How to customize the <code>clamp()</code> values according to my design?</summary>
 
 You can start by opening one of our configurations.
 
@@ -227,16 +225,6 @@ You can use custom CSS to scale fonts down for devices smaller than the iPhone S
 {% endcode %}
 
 This is optional and usually unnecessary. It is not included in the framework's cloneable yet.
-
-</details>
-
-<details>
-
-<summary>Can I override the default font-size values using custom CSS?</summary>
-
-Yes. Please visit this page:
-
-[css-for-fluid-type-scale.md](../../more/read-more/css-for-fluid-type-scale.md "mention")
 
 </details>
 

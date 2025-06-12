@@ -6,7 +6,7 @@ icon: brackets-square
 
 **S2 Attributes — easy-to-use and powerful attributes to help you work faster.**
 
-S2 Attributes is a lightweight library of pre-defined attributes. The concept is similar to utility classes in Tailwind CSS but tailored for Webflow in the form of **attributes**.
+**S2 Attributes is a lightweight library of pre-defined attributes.** The concept is similar to utility classes in Tailwind CSS but tailored for Webflow in the form of **attributes**.
 
 Take `[opacity="1"]` as an example, when applying this attribute to an element on the Designer panel, `opacity` is the attribute name and `1` is the attribute value.
 
