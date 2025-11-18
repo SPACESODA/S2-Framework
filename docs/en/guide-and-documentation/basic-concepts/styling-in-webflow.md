@@ -42,13 +42,13 @@ Use the framework's **Utility Classes**.
 
 ## Should I create new Attributes?
 
-Attributes are powerful tools. **However, attributes cannot be searched directly in any Webflow panels. When you want to rename something, there is also no way to update all instances quickly.**
+Attributes are powerful tools. **However, attributes cannot be searched directly in any Webflow panels. When you want to rename something, there is no way to update all instances quickly.**
 
 **Attributes can never satisfy all styling needs.** Setting up too many attributes that are not carefully planned can also lead to huge confusion easily. We are not here to reinvent CSS or build a CSS utility framework like Tailwind.
 
 Therefore, we recommend following the above [#guide-to-making-styling-choices](styling-in-webflow.md#guide-to-making-styling-choices "mention") and sticking with the framework's official and standardized **S2 Attributes**.
 
-If you really want to create new custom attributes, place them in the `css_custom` code embed inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
+If you really want to create new custom attributes, place them in the `css_custom` code embedded inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
 
 **Extended reading:**
 

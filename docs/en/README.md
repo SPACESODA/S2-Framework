@@ -2,20 +2,6 @@
 description: Welcome to the S2 Framework!
 cover: .gitbook/assets/S2-social-banner@2x.jpg
 coverY: 77
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # S2 is flow simple!

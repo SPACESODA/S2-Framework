@@ -49,7 +49,6 @@
 * [Read More](more/read-more/README.md)
   * [Foundations of S2](more/read-more/foundations-of-s2.md)
   * [Our Approaches](more/read-more/our-approaches.md)
-  * [CSS for Fluid Type Scale](more/read-more/css-for-fluid-type-scale.md)
 
 ## Links
 

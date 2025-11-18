@@ -1,17 +1,6 @@
 ---
 description: S2 Framework is marked with CC0 1.0 Universal.
 icon: copyright
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
 ---
 
 # Copyright & Terms

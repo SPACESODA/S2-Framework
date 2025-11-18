@@ -8,7 +8,6 @@ icon: dumbbell
 
 1. Delete these pages:
    * **"S2 Components"** page
-   * **"For Drafting"** page
    * Reference Pages, including:
      * The **"One-page Style Guide"** page
      * The **"Licenses"** page
@@ -17,10 +16,7 @@ icon: dumbbell
 3. Make the **"Home"** page your homepage:
    * Remove `DELETE-ME` from the Home page
    * As the cover page of the style guide will become "Old Home", you can also delete it.
-4. Clean up all unused **Components**, _except_:
-   * <mark style="color:green;">**Global Code**</mark>
-   * <mark style="color:green;">**- Framework Base CSS**</mark>
-   * <mark style="color:green;">**- Icon Libraries**</mark>
+4. Clean up all unused **Components**_._
 5. Clean up all unused interactions.
 6. Clean up all unused styles.
 

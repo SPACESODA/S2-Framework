@@ -1,16 +1,5 @@
 ---
 icon: face-thinking
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Frameworks Comparison Overview
@@ -23,7 +12,7 @@ Brief descriptions of some major frameworks:
 
 <summary>About <mark style="color:purple;"><strong>Client-First</strong></mark></summary>
 
-Client-First is an excellent guideline or framework developed by Finsweet, one of the earliest designed for Webflow design and development. \
+Client-First is an excellent guideline or framework developed by Finsweet, one of the earliest designed for Webflow design and development.\
 It provides a set of guidelines and strategies focused on class naming and structure, inspired by Bootstrap and methodologies like BEM (Block, Element, Modifier), but tailored for Webflow’s visual and modular nature.\
 Client-First is an excellent and comprehensive set of strategies. It is one of the best frameworks available. It inspires best practices in web development and promotes a systematic approach to building responsive and accessible sites. The [Semantic HTML tags](https://finsweet.com/client-first/docs/semantic-html-tags) and [Accessibility](https://finsweet.com/client-first/docs/accessibility) sections in the Client-First documentation are particularly noteworthy. We highly recommend reading these sections.
 
@@ -44,8 +33,6 @@ Mast is a lightweight, developer-first CSS framework for Webflow. It uses tried 
 The Saddle Framework is a Developer-First, Client-Focused Webflow framework. The objective was to maximize reusability and utility, enabling any editor to enhance functionality effortlessly by incorporating a component or attribute to a page or element.
 
 </details>
-
-
 
 ## 1. Mindsets & Structure
 
@@ -69,8 +56,6 @@ MAST shares a similar mindset with S2 — leveraging the power and flexibility o
 
 Not much was mentioned, but it should be close to MAST.
 
-
-
 ## 2. Learning Curve
 
 **S2 Framework**
@@ -88,8 +73,6 @@ Client-First generally requires more memorization, especially for utility classe
 <mark style="color:orange;">**MAST**</mark>**&#x20;&&#x20;**<mark style="color:blue;">**The Saddle Framework**</mark>
 
 They are both easy, but MAST seemingly has more utility classes to look at.
-
-
 
 ## 3. Class Naming Convention
 
@@ -114,20 +97,16 @@ The use of `-` and `_` in Client-First is somewhat ambiguous. Its "folder" conce
 Client-First also uses full words for everything, even for some frequently used terms, leading to longer class names. This result is also partly due to the folder concept, which adds extra design complexity and increases the burden on designers, making it harder to follow.
 
 References:\
-[https://finsweet.com/client-first/docs/classes-strategy-1](https://finsweet.com/client-first/docs/classes-strategy-1) \
+[https://finsweet.com/client-first/docs/classes-strategy-1](https://finsweet.com/client-first/docs/classes-strategy-1)\
 [https://finsweet.com/client-first/docs/classes-strategy-2](https://finsweet.com/client-first/docs/classes-strategy-2)
 
 <mark style="color:orange;">**MAST**</mark>**&#x20;&&#x20;**<mark style="color:blue;">**The Saddle Framework**</mark>
 
 The class naming strategies of S2 evolved from them. So, we basically share the same philosophy. In S2, we define the use of `-` and `_` more clearly ([see here](../../guide-and-documentation/naming-strategies/class-naming.md#id-02.-dash-or-underscore)), and abbreviations in S2 are also a bit different.
 
-
-
 ## 4. Other Naming Conventions
 
 All frameworks are generally similar for other naming conventions, such as variables, components, and interactions. The differences are not a significant concern.
-
-
 
 ## 5. Use of Utility Classes
 

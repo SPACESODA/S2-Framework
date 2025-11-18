@@ -20,7 +20,7 @@ To remove everything except a one-page Style Guide:
 
 
 
-Just keeps the best parts we recommend:
+Just keep some of the best parts:
 
 {% content-ref url="lite-edition.md" %}
 [lite-edition.md](lite-edition.md)

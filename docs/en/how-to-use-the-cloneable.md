@@ -35,7 +35,7 @@ Instead, you can start by building your layout outside the component. Once every
 
 <summary>Do I need to configure all variables before building?</summary>
 
-Not necessarily. You can start building with the default values and adjust variables later. However, if you already have a solid design, it is a good idea to set up your palette and font variables upfront.
+Not necessarily. You can start building with the default values and adjust variables later. However, if you already have a solid design concept, it is a good idea to set up your palette and font variables upfront.
 
 </details>
 
