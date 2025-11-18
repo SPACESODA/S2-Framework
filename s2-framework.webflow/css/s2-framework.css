@@ -4716,26 +4716,6 @@ figcaption {
   position: relative;
 }
 
-.delete-me.is-bottom-note {
-  z-index: 2000;
-  grid-column-gap: 0rem;
-  grid-row-gap: 0rem;
-  border: 0px solid var(--colors-special--transparent);
-  border-radius: var(--_sizes---radius--rounded);
-  background-color: var(--colors--accent);
-  color: var(--_palettes---accent--on-base);
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  max-width: 50rem;
-  min-height: 2rem;
-  margin: 0 auto .75rem;
-  padding: .5rem 1rem;
-  position: fixed;
-  inset: auto 0% 0%;
-}
-
 .delete-me.is-clone-cta {
   z-index: 999999;
   background-color: var(--colors-special--transparent);
