@@ -4,7 +4,7 @@ icon: swatchbook
 
 # Colors vs Palettes
 
-Instead of applying colors from palettes to classes each time, we suggest using **Colors** variables whenever possible. The names of **Colors** usually specify their roles or purposes, and the names of **Palettes** describe the colors.
+We suggest using **Colors** variables whenever possible. The names of **Colors** usually specify their roles or purposes.
 
 
 
@@ -16,7 +16,7 @@ The variable groups below are the core color options for your project:
 * Colors: Extended
 * Colors: Special
 
-The Colors variables have **Base mode** (the Base mode is "Light" mode by default) and **Dark mode** setup. By using **Colors**, you can easily update the entire color scheme of your site anytime.,&#x20;
+The Colors variables have **Base mode** (the Base mode is "Light" mode by default) and **Dark mode** setup. By using **Colors**, you can easily update the entire color scheme of your site.
 
 You can modify, add, or rename the extended colors to align with your brand.
 
@@ -30,17 +30,14 @@ You can remove the **Dark mode** from **Colors** completely if your website does
 
 Palettes are groups or sets of colors that are essentially tint variations.
 
-The Primary, Secondary, Accent, and Neutral colors follow an 11-step tint setup (50-500-950 scale).
+**Palettes** variables are picked by the **Colors** variables. This method provides flexibility to update colors by choosing from palette variables without disrupting the site's overall style.
 
-**Palettes** variables can be selected by **Colors** variables. This method provides flexibility to update colors by choosing from palette variables without disrupting the site's overall style.
+The Primary, Secondary, Accent, and Neutral colors follow an 11-step tint setup (50-500-950 scale). You can use a **tint generator** to get the tints.
 
-**Colors** variables reference **Palettes** variables, giving you the flexibility to update colors by selecting from palettes easily without disrupting the site's overall style.
-
-**S2's Palettes** (the "**Lightness Minimum**" of our default colors is set to **15**)**:**\
-[https://www.tints.dev/?neutral=7E7E7E\&primary=0145AB\&secondary=00B499\&accent=F3BB09](https://www.tints.dev/?neutral=7E7E7E\&primary=0145AB\&secondary=00B499\&accent=F3BB09)
+See S2's default Palettes on [tints.dev](https://www.tints.dev/palette/v1:cHJpbWFyeXwwMTQ1YWJ8NTAwfGx8MHwwfDE1fDEwMHxtfnNlY29uZGFyeXwwMGI0OTl8NTAwfGx8MHwwfDE1fDEwMHxtfmFjY2VudHxmM2JiMDl8NTAwfGx8MHwwfDE1fDEwMHxtfm5ldXRyYWx8N2U3ZTdlfDUwMHxsfDB8MHwwfDEwMHxt?output=hex)
 
 {% hint style="danger" %}
-Please keep the name **"Neutral"** and all **Neutral colors' variable names** unchanged.
+Please keep the palette name **"Neutral"** and all of its **variable names** unchanged.
 {% endhint %}
 
 

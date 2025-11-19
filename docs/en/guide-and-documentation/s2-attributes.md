@@ -12,8 +12,7 @@ Take `[opacity="1"]` as an example, when applying this attribute to an element o
 
 ### Learning S2 Attributes
 
-The best way to understand attributes is to read the CSS, visit:
-
+The best way to understand attributes is to read the CSS, visit: \
 [https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/s2-attributes.css](../../../webflow/css/s2-attributes.css)
 
 {% hint style="info" %}
@@ -25,6 +24,12 @@ The best way to understand attributes is to read the CSS, visit:
 
 **We strongly recommend that you do not add new attributes to S2 Attributes or rename existing ones.** If S2 Attributes do not perfectly match your desired style, we suggest using combo classes or utility classes instead.
 {% endhint %}
+
+### When to use S2 Attributes?
+
+Use those attributes that you understand and easily remember.
+
+Not sure whether to use Classes, Attributes, or Utility Classes? Follow this priority-based approach to make the best styling decisions: [#guide-to-styling](basic-concepts/styling-in-webflow.md#guide-to-styling "mention")
 
 
 

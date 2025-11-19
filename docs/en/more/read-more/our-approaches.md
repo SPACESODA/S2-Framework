@@ -9,7 +9,7 @@ icon: star-christmas
 
 
 {% hint style="warning" %}
-**Alert! The following can be boring** :see\_no\_evil:
+**The following can be boring** :see\_no\_evil:
 
 **Continue reading if you are interested...**
 {% endhint %}
@@ -84,7 +84,7 @@ As a result, S2 is a combination of:
 
 S2 also includes a few essential UI and basic layout components that serve as starter templates and usage examples, helping you work even faster! These templates are separate from the core framework and can be easily removed.
 
-### Easy of Use
+### Reduce complexity
 
 The S2 Framework is designed to reduce complexity. We aim to make it accessible to anyone with basic HTML and CSS skills.
 
@@ -111,7 +111,7 @@ We avoid over-styling and do not impose a strong style or design, allowing for g
 
 ## Webflow is flexible and powerful
 
-Webflow is a robust platform known for its flexibility and ease of use. We do not want the amount of hidden knowledge average people have to put into defeating Webflow's simplicity and flexibility.
+Webflow is a robust platform known for its flexibility and ease of use.
 
 S2 does not enforce rigid and complex rules. As the framework developer, we prioritize structural simplicity and perfect class naming. However, for you, the focus should be on creating perfect web pages.
 

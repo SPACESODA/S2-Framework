@@ -33,15 +33,15 @@
 
 ## Editions
 
-* [Build your own S2](editions/build-your-own-s2/README.md)
-  * [One-page Style Guide](editions/build-your-own-s2/one-page-style-guide.md)
-  * [Lite Edition](editions/build-your-own-s2/lite-edition.md)
+* [Build your own S2](editions/build-your-own-s2.md)
+* [One-page Style Guide](editions/one-page-style-guide.md)
+* [Lite Edition](editions/lite-edition.md)
 
 ## More
 
 * [FAQs](more/faqs.md)
-* [Ready to switch to S2?](more/switch-to-s2/README.md)
-  * [Frameworks Comparison Overview](more/switch-to-s2/frameworks-comparison-overview.md)
+* [Switch to S2?](more/switch-to-s2/README.md)
+  * [Frameworks Comparison](more/switch-to-s2/frameworks-comparison-overview.md)
   * [From Client-First](more/switch-to-s2/from-client-first.md)
   * [From MAST or The Saddle](more/switch-to-s2/from-mast-or-the-saddle.md)
   * [From Lumos](more/switch-to-s2/from-lumos.md)

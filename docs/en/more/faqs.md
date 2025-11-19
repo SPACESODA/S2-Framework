@@ -46,7 +46,7 @@ The differences between the two approaches are more about what works well and wh
 
 <details>
 
-<summary>What is S2 Attributes?</summary>
+<summary>What is "S2 Attributes"?</summary>
 
 S2 Attributes is a concise, ready-to-use collection of attributes designed to streamline your development process.
 
@@ -125,7 +125,7 @@ Yes, absolutely.
 
 While you can remove unnecessary stuff from the cloned S2 framework (and clean up styles and interactions unused) at any time, we generally recommend that you do this after you have completed most of your site-building process. It is always handy to have them around.
 
-Besides, keeping them in the styles guild has very very very minimal impact on your site's performance.
+Besides, keeping them in the styles guild has very very minimal impact on your site's performance.
 
 </details>
 

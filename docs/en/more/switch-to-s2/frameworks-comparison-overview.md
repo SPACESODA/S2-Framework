@@ -2,7 +2,7 @@
 icon: face-thinking
 ---
 
-# Frameworks Comparison Overview
+# Frameworks Comparison
 
 This page breaks down the key differences and similarities between S2, Client-First, MAST, and the Saddle Framework — helping you decide if switching makes sense for you.
 
@@ -34,6 +34,8 @@ The Saddle Framework is a Developer-First, Client-Focused Webflow framework. The
 
 </details>
 
+
+
 ## 1. Mindsets & Structure
 
 **S2 Framework**
@@ -56,6 +58,8 @@ MAST shares a similar mindset with S2 — leveraging the power and flexibility o
 
 Not much was mentioned, but it should be close to MAST.
 
+
+
 ## 2. Learning Curve
 
 **S2 Framework**
@@ -74,6 +78,8 @@ Client-First generally requires more memorization, especially for utility classe
 
 They are both easy, but MAST seemingly has more utility classes to look at.
 
+
+
 ## 3. Class Naming Convention
 
 **S2 Framework**
@@ -90,7 +96,7 @@ S2 also includes a small set of abbreviations.
 
 <mark style="color:purple;">**Client-First**</mark>
 
-Client-first uses `is-` for combo classes. While this is entirely fine, it can make filtering combo classes in searches slightly difficult as `is` is common in many class names. For utility classes, Client-First does not use a prefix, which can become very confusing over time.
+Client-first uses `is-` for combo classes. For utility classes, Client-First does not use a prefix, which can become very confusing over time.
 
 The use of `-` and `_` in Client-First is somewhat ambiguous. Its "folder" concept has to rely on Finsweet’s Chrome extension for visualization.
 
@@ -102,11 +108,15 @@ References:\
 
 <mark style="color:orange;">**MAST**</mark>**&#x20;&&#x20;**<mark style="color:blue;">**The Saddle Framework**</mark>
 
-The class naming strategies of S2 evolved from them. So, we basically share the same philosophy. In S2, we define the use of `-` and `_` more clearly ([see here](../../guide-and-documentation/naming-strategies/class-naming.md#id-02.-dash-or-underscore)), and abbreviations in S2 are also a bit different.
+The class naming strategies of S2 evolved from them. So, we basically share the same philosophy. In S2, we define the use of `-` and `_` in a [clear](https://s2-framework.gitbook.io/docs/guide-and-documentation/naming-strategies/class-naming#id-02.-dash-or-underscore) way. The abbreviations in S2 are also slightly different.
+
+
 
 ## 4. Other Naming Conventions
 
 All frameworks are generally similar for other naming conventions, such as variables, components, and interactions. The differences are not a significant concern.
+
+
 
 ## 5. Use of Utility Classes
 
@@ -121,7 +131,7 @@ Classes in Framework **→** Your Custom Classes **→** S2 Attributes (optional
 <mark style="color:purple;">**Client-First**</mark>
 
 Client-First advocates the power of utility classes. However, this can lead to issues such as:\
-\- Potential confusion due to missing a `u-` prefix to distinguish utility classes.\
+\- Potential confusion due to missing `u-` prefix to distinguish utility classes.\
 \- Stacking utility classes incorrectly.\
 \- Root utility classes being unintentionally styled or removed.
 

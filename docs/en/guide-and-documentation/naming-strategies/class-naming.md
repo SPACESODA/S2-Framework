@@ -7,13 +7,11 @@ icon: i-cursor
 
 # Class Naming
 
-In Webflow, naming a class also means naming the elements. The class naming strategy suggested by S2 has been carefully researched and tested in practice on large and small projects. It blends the best ideas from Tailwind CSS and MAST and is optimized for Webflow.
+In Webflow, naming a class also means naming the elements. The class naming strategy suggested by S2 has been carefully researched and tested in practice on large and small projects. It blends the best ideas from Tailwind CSS, MAST, and client-first, then simplified and optimized for Webflow.
 
 {% hint style="warning" %}
-**Class naming** is an important topic, please read through the entire page.
+**Class naming** is an important topic. Please read through the entire page.
 {% endhint %}
-
-
 
 ## Goals
 
@@ -21,13 +19,9 @@ Our class naming goals are to make class names easy to **read** and **understand
 
 Webflow is very flexible and allows you to scale easily. Keep your class names clean and your structure simple — don't over-engineer it.
 
-
-
 ## 01. Lowercase
 
 Class names should be ALL lowercase to ensure consistency and readability.
-
-
 
 ## 02. Dash or Underscore
 
@@ -36,7 +30,7 @@ The use of `-` (dash / hyphen) and `_` (underscore) is guided by these rules:
 * Use **dashes** to separate words, just like in normal English.
 * Use **underscores** for **different contexts** or **child elements**.
 
-For examples:
+For example:
 
 * You may name a class `cta-section_overlay-bg`.
 * An element with a `blog-card` class can have a child element with `blog-card_image` class.
@@ -53,22 +47,15 @@ Here are more examples to help you get familiar with this approach:
 | `is-last-row`           | `product_list-item`           |
 | `author-title-xl`       | `sidebar_nav-item`            |
 
-
-
 ## 03. Combo and Utility Classes
 
 Use `is-` for ALL combo classes.
 
 S2 does not use **has-**, **with-**, **without-**, **no-**, **not-**, **non-**, or any other prefixes of such kind for combo classes. If you need to convey meanings such as **has**, **with**, etc., name the combo classes as `is-has-`, `is-with-`.
 
-{% hint style="info" %}
-In S2, we prefer using `is-` for combo classes.
+In S2, we use `is-` for combo classes.
 
-For consistency, always use the `is-` prefix when creating new classes.
-
-Use `u-` for ALL utility classes.
-
-
+Use `u-` for utility classes.
 
 ## 04. Word Order
 
@@ -86,15 +73,13 @@ The descriptive term is usually placed **after** the main keyword for combo clas
 
 `item-block` `is-task-expired`
 
-Values or counting descriptions are usually written **at the last**. For example:
+Values or counting descriptions are usually written **last**. For example:
 
 `text-wrapper` `is-max-40rem`
 
-
-
 ## 05. Abbreviations
 
-Always use complete words other than the below abbreviations:
+Always use complete words other than the following abbreviations:
 
 * [Glossary](class-naming.md#glossary)
 * [Margin & Padding Shorthands](class-naming.md#margin-and-padding)
@@ -141,15 +126,13 @@ When all sides have the same values, you can write them like these:\
 
 Sometimes, when you think you do not need to distinguish between margin or padding, or when you want to leave some flexibility in the design, it is fine to use `-top`, `-bottom`, `-left`, `-right`, or their combinations, such as `-top-bottom-lg`.
 
-
-
 ## 06. Style Variants
 
 :pushpin: **Abbreviation (Group 3):**
 
 ### i. Breakpoints
 
-<table data-full-width="true"><thead><tr><th></th><th>Large 3</th><th>Large 2</th><th>Large 1</th><th>Desktop</th><th>Tablet</th><th>Mobile Landscape</th><th>Mobile Portrait</th></tr></thead><tbody><tr><td><strong>px</strong></td><td>> 1920px</td><td>> 1440px</td><td>> 1280px</td><td>–</td><td>&#x3C; 991px</td><td>&#x3C; 767px</td><td>&#x3C; 478px</td></tr><tr><td><strong>Class naming</strong></td><td><code>-2xl</code> <br><code>-at-2xl</code></td><td><code>-xl</code> <br><code>-at-xl</code></td><td><code>-lg</code> <br><code>-at-lg</code></td><td>– / <code>-base</code></td><td><code>-md</code> <br><code>-at-md</code></td><td><code>-sm</code> <br><code>-at-sm</code></td><td><code>-xs</code> <br><code>-at-xs</code></td></tr><tr><td><strong>For variables</strong></td><td>1920px</td><td>1440px</td><td>1280px</td><td>Base</td><td>Tablet</td><td>Landscape</td><td>Mobile</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th></th><th>Large 3</th><th>Large 2</th><th>Large 1</th><th>Desktop</th><th>Tablet</th><th>Mobile Landscape</th><th>Mobile Portrait</th></tr></thead><tbody><tr><td><strong>px</strong></td><td>> 1920px</td><td>> 1440px</td><td>> 1280px</td><td>–</td><td>&#x3C; 991px</td><td>&#x3C; 767px</td><td>&#x3C; 478px</td></tr><tr><td><strong>Class naming</strong></td><td><code>-2xl</code><br><code>-at-2xl</code></td><td><code>-xl</code><br><code>-at-xl</code></td><td><code>-lg</code><br><code>-at-lg</code></td><td>– / <code>-base</code></td><td><code>-md</code><br><code>-at-md</code></td><td><code>-sm</code><br><code>-at-sm</code></td><td><code>-xs</code><br><code>-at-xs</code></td></tr><tr><td><strong>For variables</strong></td><td>1920px</td><td>1440px</td><td>1280px</td><td>Base</td><td>Tablet</td><td>Landscape</td><td>Mobile</td></tr></tbody></table>
 
 ### ii. Size Variants
 
@@ -169,10 +152,10 @@ It is more flexible when naming color variants. However, for better consistency,
 
 **Deeper** ← **Deep** ← **BASE** → **Light** → **Lighter**
 
-|                   | Deeper    | Deep    | BASE | Light    | Lighter     |
-| ----------------- | --------- | ------- | ---- | -------- | ----------- |
-| **Class naming**  | `-deeper` | `-deep` | –    | `-light` |  `-lighter` |
-| **For variables** | Deeper    | Deep    | –    | Light    | Lighter     |
+|                   | Deeper    | Deep    | BASE | Light    | Lighter    |
+| ----------------- | --------- | ------- | ---- | -------- | ---------- |
+| **Class naming**  | `-deeper` | `-deep` | –    | `-light` | `-lighter` |
+| **For variables** | Deeper    | Deep    | –    | Light    | Lighter    |
 
 Sometimes, when it is not about deep or light:
 
@@ -180,8 +163,6 @@ Sometimes, when it is not about deep or light:
 | ----------------- | ----- | ------- | ----------- |
 | **Class naming**  | `-mu` | `-vb`   | `-alt`      |
 | **For variables** | Muted | Vibrant | Alt         |
-
-
 
 ## 07. Additional Notes
 
@@ -198,8 +179,6 @@ To keep naming conventions consistent and more aligned with standard CSS, follow
 * Use CSS terminology for color names throughout the project. For example, use **`gray`** instead of **grey**, and **`color`** instead of **colour**.
 * Unless you have many variants that are hard to create a name for them, using **descriptive words** is always better than using **-1**, **-2**, **-3**, **-a**, **-b**, **-c**, etc. Descriptive names improve readability and clarity.
 
-
-
 ## 08. Stacking of Combo Classes
 
 Creating style variants using combo classes is always a nice practice. For example, try to use `button` `is-lg` instead of creating a new `button-lg` class.
@@ -208,9 +187,9 @@ It is okay to stack 3 classes, and the limit is 4. **Do not stack 5 or more clas
 
 Consider creating a new combo class by combining its combo classes. Example:
 
-❌  `button` `is-pill` `is-outline` `is-has-icon` `is-lg`
+❌ `button` `is-pill` `is-outline` `is-has-icon` `is-lg`
 
-✅  `button` `is-pill` `is-outline-with-icon` `is-lg`
+✅ `button` `is-pill` `is-outline-with-icon` `is-lg`
 
 {% hint style="success" %}
 **Exception — Stacking classes for Column Layouts**

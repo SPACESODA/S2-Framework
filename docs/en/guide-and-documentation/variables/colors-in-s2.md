@@ -48,15 +48,15 @@ Renaming and removing the default **Colors** variables will not break your site,
 
 ## Colors: Extended
 
-|                     | Description / Purpose                                                                                                  |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Extended Colors** | Additional colors of your brand identity. You can modify, add, or rename the extended colors to align with your brand. |
+|                     | Description / Purpose                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Extended Colors** | Additional colors of your brand identity. You can modify, add, rename, or remove the extended colors to align with your brand. |
 
 
 
 ## Colors: Special
 
-Stored the colors that are useful for other specific purposes.
+Useful for some specific purposes.
 
 
 

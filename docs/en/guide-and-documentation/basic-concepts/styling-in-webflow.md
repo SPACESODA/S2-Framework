@@ -24,7 +24,7 @@ Learn about **S2 Attributes** in this section:
 [s2-attributes.md](../s2-attributes.md)
 {% endcontent-ref %}
 
-## Guide to Making Styling Choices
+## Guide to Styling
 
 Not sure whether to use Classes, Attributes, or Utility Classes? Follow this priority-based approach to make the best styling decisions:
 
@@ -35,7 +35,7 @@ Use existing **Element Classes** and **Combo Classes** from the S2 Framework.
 Create and use your **classes**.
 
 **Priority 3:**\
-Use **S2 Attributes** that you understand and can easily remember.
+Use **S2 Attributes** that you understand and can easily remember. Use of these attributes is optional.
 
 **Priority 4:**\
 Use the framework's **Utility Classes**.
@@ -46,7 +46,7 @@ Attributes are powerful tools. **However, attributes cannot be searched directly
 
 **Attributes can never satisfy all styling needs.** Setting up too many attributes that are not carefully planned can also lead to huge confusion easily. We are not here to reinvent CSS or build a CSS utility framework like Tailwind.
 
-Therefore, we recommend following the above [#guide-to-making-styling-choices](styling-in-webflow.md#guide-to-making-styling-choices "mention") and sticking with the framework's official and standardized **S2 Attributes**.
+Therefore, we recommend following the **above** guide and sticking with the framework's official version of **S2 Attributes**.
 
 If you really want to create new custom attributes, place them in the `css_custom` code embedded inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
 

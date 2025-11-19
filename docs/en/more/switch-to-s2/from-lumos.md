@@ -5,7 +5,7 @@ icon: code-compare
 
 # From Lumos
 
-The Lumos Framework is very, umm… advanced.
+The Lumos Framework is very... umm… advanced.
 
 While Lumos may make you feel magical, it may be too hacky for most people and especially clients.
 

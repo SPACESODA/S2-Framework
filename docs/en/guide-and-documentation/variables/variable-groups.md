@@ -6,7 +6,7 @@ icon: folder-tree
 
 Variable Collections and Groups out-of-the-box in S2 Framework:
 
-:open\_file\_folder: **Theme**
+**Theme**
 
 | Variable Groups                           | Description                                                                                                                              |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -14,7 +14,7 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Colors - Special                          | Contains colors for specific purposes, particularly those that maintain a consistent appearance in both light and dark modes.            |
 | S2                                        | Colors for the style guide only.                                                                                                         |
 
-:open\_file\_folder: **Palettes**
+**Palettes**
 
 | Variable Groups                            | Description                                                                                                                                   |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,7 +23,7 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Accent                                     | The palette of Accent colors.                                                                                                                 |
 | Neutral <mark style="color:red;">\*</mark> | The palette of Neutral (grayscale) colors.                                                                                                    |
 
-:open\_file\_folder: **Sizes**
+**Sizes**
 
 | Variable Groups | Description                                              |
 | --------------- | -------------------------------------------------------- |
@@ -38,7 +38,7 @@ Variable Collections and Groups out-of-the-box in S2 Framework:
 | Outline         | For outline and offset values of outline.                |
 | Grid            | Grid system's gutter value and number of columns.        |
 
-:open\_file\_folder: **Text**
+**Text**
 
 | Variable Groups  | Description                      |
 | ---------------- | -------------------------------- |

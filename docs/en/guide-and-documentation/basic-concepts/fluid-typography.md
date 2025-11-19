@@ -11,6 +11,8 @@ S2 Framework adopts the modern **Fluid Type Scale** concept — a combination of
 
 Thanks to Webflow's [Advanced Variable with Function](https://webflow.com/updates/function-variables) feature, the **Fluid Type Scale** values are managed in the **Variables panel** — all in one place, so that you can view and update them very easily.
 
+You only need one base `clamp()` value for each variable or class. This makes management super easy. Once you understand the basic concept, making adjustments becomes quite straightforward.
+
 {% hint style="warning" %}
 **If you're happy with the overall font sizes provided by default in the S2 Cloneable and don't need to make changes yet, you may skip this chapter.**
 {% endhint %}
@@ -25,17 +27,17 @@ Let’s take a look at the diagram below:
 
 <figure><img src="../../.gitbook/assets/social-fluid-type-scale-explainer@2x.png" alt="The Concept of Fluid Type Scale" width="563"><figcaption><p>The Concept of Fluid Type Scale</p></figcaption></figure>
 
-The above diagram explains the basic concept of a [2-step Fluid Type Scale](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280) example:
+The above diagram explains the basic concept of a [2-step](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1.25\&maxFontSize=64\&maxWidth=1280\&maxRatio=1.5\&steps=base%2C+lg\&baseStep=base\&prefix=_text---hero-title-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Playwrite+NZ\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280) Fluid Type Scale example:
 
 ```css
-/* CSS generated in the example */
+/* CSS generated in this example */
 --_text---hero-title--base: clamp(2.5rem, 6.087vi + 1.13rem, 6rem);
 --_text---hero-title--lg: clamp(3.125rem, 10.217vi + 0.826rem, 9rem);
 ```
 
-Here is another example — a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---example-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). This is helpful if you want to apply fluid typography to a specific class or variable.
+Just another example: a simple [Single-step Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=32\&minWidth=360\&minRatio=1\&maxFontSize=64\&maxWidth=1280\&maxRatio=2\&steps=base\&baseStep=base\&prefix=_text---example-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Marmelad\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280). This is helpful if you want to apply fluid typography to a specific class or variable.
 
-Once you understand the basic concept, making adjustments becomes quite easy.
+
 
 🤩 Now, with the above basic knowledge, let's explore our default setup.
 
@@ -49,19 +51,19 @@ Fluid Type Scale has been applied to the Body tag and text classes in the S2 Fra
 <mark style="color:purple;">**`Body`**</mark> = **`text-base`**, \
 &#xNAN;**`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
-Let's take a look at the default configuration on the larger end of the scale first:
+Let's first take a look at the default configuration on the larger end of the scale:
 
-<mark style="color:purple;">**`Body`**</mark> / **`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
+**`text-base`**, **`text-lg`**, **`text-xl`**, **`text-2xl`**, **`text-3xl`**
 
-<mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.057475\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+<mark style="color:blue;">✦</mark> [See our configuration](https://www.fluid-type-scale.com/calculate?minFontSize=16\&minWidth=360\&minRatio=1.057475\&maxFontSize=18\&maxWidth=1280\&maxRatio=1.15475\&steps=base%2Clg%2Cxl%2C2xl%2C3xl\&baseStep=base\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-| Key points:   |                                         |
-| ------------- | --------------------------------------- |
-| Min of `base` | Desired min of base is 1rem (16px)      |
-| Max of `base` | Desired max if base is 1.125rem (18rem) |
-| Max of `xl`   | 1.5rem, which is a reasonable size      |
-| Min of `3xl`  | 1.25rem                                 |
-| Max of `3xl`  | 2rem                                    |
+| Key considerations: |                                         |
+| ------------------- | --------------------------------------- |
+| Min of `base`       | Desired min of base is 1rem (16px)      |
+| Max of `base`       | Desired max if base is 1.125rem (18rem) |
+| Max of `xl`         | 1.5rem, which is a reasonable size      |
+| Min of `3xl`        | 1.25rem                                 |
+| Max of `3xl`        | 2rem                                    |
 
 Here's what we get for the fluid values:
 
@@ -79,14 +81,14 @@ Let's move on to the smaller sizes!
 
 The process is similar for the smaller sizes; the min and max values of the base font size should be constant. (This time, as the sizes are quite small, it will be easier to get the desired results by using `xs` as the baseline step.)
 
-<mark style="color:blue;">✦</mark> [See our Configuration](https://www.fluid-type-scale.com/calculate?minFontSize=13\&minWidth=360\&minRatio=1.1095\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
+<mark style="color:blue;">✦</mark> [See our configuration](https://www.fluid-type-scale.com/calculate?minFontSize=13\&minWidth=360\&minRatio=1.1095\&maxFontSize=14\&maxWidth=1280\&maxRatio=1.13375\&steps=3xs%2C2xs%2Cxs%2Csm%2Cbase\&baseStep=xs\&prefix=_text---font-size-\&useContainerWidth=false\&includeFallbacks=false\&useRems=true\&remValue=16\&decimals=3\&previewFont=Inter\&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground\&previewWidth=1280)
 
-| Key points:      |                               |
-| ---------------- | ----------------------------- |
-| Use `xs` as base | Easier to set up a scale down |
-| `base`           | Same value                    |
-| Max of `xs`      | 0.875rem (14px)               |
-| Min of `3xs`     | Within a reasonable size      |
+| Key considerations: |                               |
+| ------------------- | ----------------------------- |
+| Use `xs` as base    | Easier to set up a scale down |
+| `base`              | Same value                    |
+| Max of `xs`         | 0.875rem (14px)               |
+| Min of `3xs`        | Within a reasonable size      |
 
 Here's what we get:
 
@@ -140,17 +142,17 @@ Here's what we get:
 
 About **`h7`** and **`h8`**:
 
-Sometimes you simply need smaller headings — that's where `h7` and `h8` come in. These are arbitrary classes created to style smaller headings. Since their sizes are too small to benefit from fluid scaling, we use regular fixed font sizes for simplicity.
+Sometimes, you may need smaller headings — that's where `h7` and `h8` come in. These are arbitrary classes created to style smaller headings. Since their sizes are too small to benefit from fluid scaling, we use regular fixed font sizes for simplicity.
 
 
 
-## Superscript & Subscript
+## Sup & Sub
 
 <mark style="color:purple;">**`sup`**</mark>, <mark style="color:purple;">**`sub`**</mark>
 
-S2 applies fluid font styles on `sup` and `sub` elements.
+S2 applies fluid font styles on `sup` (superscript) and `sub` (subscript) elements.
 
-We have prepared a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is modified from the tool created by [Lorenz Woehr](https://css-tricks.com/fluid-superscripts-and-subscripts/).&#x20;
+We have prepared a **Fluid Sup / Sub CSS Generator** for the S2 Framework. It is modified from the tool created by [Lorenz Woehr](https://css-tricks.com/fluid-superscripts-and-subscripts/).
 
 <mark style="color:blue;">✦</mark> [Fluid Sup / Sub CSS Generator](https://codepen.io/realanthonyc/pen/emOXEMz)
 

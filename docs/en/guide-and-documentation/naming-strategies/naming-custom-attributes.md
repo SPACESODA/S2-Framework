@@ -5,7 +5,7 @@ icon: brackets-square
 # Naming Custom Attributes
 
 {% hint style="warning" %}
-You can skip this page if you are not planning to create new custom attributes.
+Skip this page if you are not planning to create new custom attributes.
 {% endhint %}
 
 {% hint style="info" %}

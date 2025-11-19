@@ -13,7 +13,7 @@ Are you a template creator? Since Webflow _**does not**_**&#x20;allow custom cod
 
 
 
-**Let's follow these steps:**
+**Follow these steps:**
 
 1. Go to **Site settings**, then **Custom code**, and remove all the code from the global **Head code** and **Footer code**. Remember to click "Save".
 2. Open Designer, make the **"Home"** page your homepage, and remove the `DELETE-ME` element from the page.
@@ -25,7 +25,7 @@ Are you a template creator? Since Webflow _**does not**_**&#x20;allow custom cod
 4. Remove the <mark style="color:green;">**Global Code**</mark> component from the **"Password"**, **"404"**, and **"Search Results"** pages.
 5. Remove the **"New Page Template"** page, unlink the instance on the page, and then remove the <mark style="color:green;">**Global Code**</mark> component.
 6. Go to the **"One-page Style Guide"** page and remove the `DELETE-ME` element from the page. (The <mark style="color:green;">**Grid Guide**</mark> component also consists of custom code, but you may keep it as a tool and remove it later.)
-7. _Optional_: Remove the whole **Dark mode** column from the **Colors** variable collection.
+7. Remove the whole **Dark mode** column from the **Colors** variable collection.
 8. Clean up all unused **Components** in the following order:
    * The **Page Template** component
    * The **Icon: Wrapped** component
