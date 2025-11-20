@@ -6,7 +6,7 @@ icon: square-code
 
 ## The <mark style="color:green;">Global Code</mark> Component
 
-The custom code in the <mark style="color:green;">**Global Code**</mark> **component** allows styles to be applied on both the editing canvas and the published site. You can place **your custom styles** in <mark style="color:blue;">`css_custom`</mark> inside the <mark style="color:green;">**Global Code**</mark> **component**. Let's take a look at the overall structure.
+The custom code in the <mark style="color:green;">**Global Code**</mark> **component** allows styles to be applied on both the editing canvas and the published site. You can place **your custom styles** in the code embed element <mark style="color:blue;">**`css_custom`**</mark> inside the <mark style="color:green;">**Global Code**</mark> **component**. Let's take a look at the overall structure.
 
 Apply the S2 Framework's base CSS by importing minified CSS from CDN.
 
@@ -14,9 +14,29 @@ Apply the S2 Framework's base CSS by importing minified CSS from CDN.
 >
 > > <mark style="color:green;">**- Framework Base CSS**</mark> <mark style="color:blue;">`css`</mark>
 > >
+> > > <mark style="color:blue;">**`css_cdn`**</mark> ... default option of the clonable
+> > >
+> > > <mark style="color:blue;">**`css_base-setup`**</mark>
+> > >
+> > > <mark style="color:blue;">**`css_s2-features`**</mark>
+> > >
+> > > <mark style="color:blue;">**`css_s2-attributes`**</mark>
+> > >
+> > > <mark style="color:blue;">**`css_s2-colors`**</mark>
+> > >
+> > > <mark style="color:blue;">**`css_css-animations`**</mark>
+> >
 > > <mark style="color:green;">**- Icon Libraries**</mark> <mark style="color:blue;">`css`</mark>
 > >
-> > <mark style="color:blue;">`css_custom`</mark>\
+> > > <mark style="color:blue;">**`code_ph-icons`**</mark> ... default enabled
+> > >
+> > > <mark style="color:blue;">**`code_fa-icons`**</mark> ... default enabled
+> > >
+> > > <mark style="color:blue;">**`code_bx-icons`**</mark>
+> > >
+> > > <mark style="color:blue;">**`code_lni-icons`**</mark>
+> >
+> > <mark style="color:blue;">**`css_custom`**</mark>\
 > > `/* -- Global Custom Attributes -- */`\
 > > `/* -- Global Custom Styles -- */`
 
@@ -32,7 +52,7 @@ Click into the <mark style="color:green;">**Global Code**</mark> component and s
 
 For page-specific custom styles, place them inside `css_page` code embed.
 
-> <mark style="color:blue;">`css_page`</mark>\
+> <mark style="color:blue;">**`css_page`**</mark>\
 > `/* styles specific to a page */`
 
 Here is a template of media queries that uses Webflow’s breakpoints.

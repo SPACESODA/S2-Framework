@@ -14,8 +14,8 @@ icon: dumbbell
 2. Go to the **"Layouts"** page, scroll down:
    * Remove the **Grid Layout Utilities** section
 3. Make the **"Home"** page your homepage:
-   * Remove `DELETE-ME` from the Home page
-   * The cover page of the style guide will become "Old Home". You can also delete it.
+   * Remove the `DELETE-ME` element from the page.
+   * The cover page of the style guide will become "Old Home". You may delete it.
 4. Clean up all unused **Components**_._
 5. Clean up all unused interactions.
 6. Clean up all unused styles.
