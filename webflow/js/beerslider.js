@@ -61,7 +61,9 @@ function initBeerSlider() {
     // Adjust input behavior after a delay
     setTimeout(() => {
       document.querySelectorAll("input.beer-range").forEach((input) => {
-        input.setAttribute("onmouseleave", "this.blur()");
+        input.addEventListener("mouseleave", function () {
+          this.blur();
+        });
         input.addEventListener("touchend", function () {
           this.blur();
         });
