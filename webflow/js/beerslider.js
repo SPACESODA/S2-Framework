@@ -1,4 +1,4 @@
-// BeerSlider: Packed Script v1.1
+// BeerSlider: Packed Script v1.2
 // by S2 Framework
 
 // Load BeerSlider dynamically
@@ -23,8 +23,8 @@ function initBeerSlider() {
       const baseAlt = images[0].alt || "";
       const revealImage = images[1].src;
       const revealAlt = images[1].alt || "";
-      const baseLabel = images[0].getAttribute("beer-label") || "BEFORE";
-      const revealLabel = images[1].getAttribute("beer-label") || "AFTER";
+      const baseLabel = images[0].getAttribute("bs-label") || "BEFORE";
+      const revealLabel = images[1].getAttribute("bs-label") || "AFTER";
       // Create the BeerSlider structure securely using DOM methods
       const beerSlider = document.createElement("div");
       beerSlider.className = "beer-slider";
