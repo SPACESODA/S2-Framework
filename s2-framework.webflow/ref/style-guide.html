@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Nov 20 2025 13:36:04 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Dec 13 2025 12:06:29 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -96,11 +96,6 @@
   </div>
   <aside style="z-index: 2999; min-height: 100svh;" class="delete-me is-dark">
     <div data-nosnippet="true" tabindex="-1" class="delete-me is-clone-cta">
-      <div class="css_cdn w-embed"><!-- 
-S2 Framework Base CSS: Full set by CDN
- -->
-        <link href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.1.3/webflow/css/s2.min.css" rel="stylesheet">
-      </div>
       <div class="js w-embed w-iframe w-script"><!--  Other Functions for the Style Guide  -->
         <!--  For Style Guide only, you don't need the below scripts.  -->
         <!--  Hide Cookie Consent in iFrames  -->
@@ -123,7 +118,7 @@ S2 Framework Base CSS: Full set by CDN
                 // handle Webflow-specific lazy-loaded images
                 const dataSrc =
                   img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-                if (dataSrc) {
+                if (dataSrc && !dataSrc.trim().toLowerCase().startsWith("javascript:")) {
                   img.setAttribute("src", dataSrc);
                 } else {
                   img.src = img.src; // trigger reload if necessary
@@ -223,7 +218,7 @@ S2 Framework Base CSS: Full set by CDN
           </div>
         </div>
         <div class="text-wrapper">
-          <p class="text-xs">Typically, you&#x27;ll use either the Full Edition or this one-page version for your project.</p>
+          <p class="text-xs">Typically, you&#x27;ll use either the <a href="../s2/styles.html">Full Edition</a> or this one-page version for your project.</p>
           <p class="text-xs">Delete this page if it&#x27;s not needed — everything here is already included in the Full Edition.</p>
         </div>
       </div>
@@ -244,7 +239,7 @@ S2 Framework Base CSS: Full set by CDN
             </div>
             <div class="text-wrapper">
               <p>Style guide and elements for the website.</p>
-              <p>Powered by the <a href="https://s2-framework.webflow.io" target="_blank">S2 Framework</a> <span class="code-label">v3.1.3</span>.</p>
+              <p>Powered by the <a href="https://s2-framework.webflow.io" target="_blank">S2 Framework</a> <span class="code-label">v3.2</span>.</p>
             </div>
           </div>
         </div>

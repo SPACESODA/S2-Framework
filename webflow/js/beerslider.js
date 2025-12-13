@@ -1,4 +1,4 @@
-// BeerSlider: Packed Script v1.0
+// BeerSlider: Packed Script v1.1
 // by S2 Framework
 
 // Load BeerSlider dynamically
@@ -25,18 +25,31 @@ function initBeerSlider() {
       const revealAlt = images[1].alt || "";
       const baseLabel = images[0].getAttribute("beer-label") || "BEFORE";
       const revealLabel = images[1].getAttribute("beer-label") || "AFTER";
-      // Create the BeerSlider template
-      const template = `
-        <div class="beer-slider" data-beer-label="${revealLabel}">
-          <img src="${revealImage}" alt="${revealAlt}" loading="lazy" style="object-fit: cover;">
-          <div class="beer-reveal" data-beer-label="${baseLabel}">
-            <img src="${baseImage}" alt="${baseAlt}" loading="lazy" style="object-fit: cover;">
-          </div>
-        </div>`;
-      // Remove the original two images and insert the BeerSlider template
+      // Create the BeerSlider structure securely using DOM methods
+      const beerSlider = document.createElement("div");
+      beerSlider.className = "beer-slider";
+      beerSlider.setAttribute("data-beer-label", revealLabel);
+      const revealImg = document.createElement("img");
+      revealImg.src = revealImage;
+      revealImg.alt = revealAlt;
+      revealImg.loading = "lazy";
+      revealImg.style.objectFit = "cover";
+      const beerReveal = document.createElement("div");
+      beerReveal.className = "beer-reveal";
+      beerReveal.setAttribute("data-beer-label", baseLabel);
+      const baseImg = document.createElement("img");
+      baseImg.src = baseImage;
+      baseImg.alt = baseAlt;
+      baseImg.loading = "lazy";
+      baseImg.style.objectFit = "cover";
+      // Assemble the structure
+      beerReveal.appendChild(baseImg);
+      beerSlider.appendChild(revealImg);
+      beerSlider.appendChild(beerReveal);
+      // Remove the original two images and insert the new structure
       images[1].remove();
       images[0].remove();
-      imageWrapper.insertAdjacentHTML("afterbegin", template);
+      imageWrapper.insertBefore(beerSlider, imageWrapper.firstChild);
     }
     // Initialize each BeerSlider
     const beerSliders = document.getElementsByClassName("beer-slider");

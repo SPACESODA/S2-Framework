@@ -554,15 +554,7 @@ figcaption {
   grid-column: 4 / span 6;
 }
 
-.css, .js, .css_custom {
-  display: none;
-}
-
-.css_custom.is-in-global {
-  display: block;
-}
-
-.css_page {
+.css, .js, .css_page {
   display: none;
 }
 
@@ -1758,6 +1750,7 @@ figcaption {
   border-bottom-right-radius: var(--_sizes---radius--rounded);
   width: calc(100% - (var(--_sizes---container--padding) * 2));
   max-width: none;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   position: relative;
