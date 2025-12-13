@@ -6,6 +6,8 @@
   const script = document.createElement("script");
   script.src =
     "https://cdn.jsdelivr.net/npm/beerslider@1.0.3/dist/BeerSlider.min.js";
+  script.integrity = "sha384-u5dQbXAkFDmpblAhhiE1Wi4RQ8kxHcS1CgbrB75CI+Ycm0cC+F4hfiRBCe4w+X4c";
+  script.crossOrigin = "anonymous";
   script.onload = initBeerSlider;
   document.head.appendChild(script);
 })();
