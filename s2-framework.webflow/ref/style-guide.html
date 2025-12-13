@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Dec 13 2025 12:06:29 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Dec 13 2025 12:26:42 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6790798bbb9a0394d97352de" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -118,7 +118,13 @@
                 // handle Webflow-specific lazy-loaded images
                 const dataSrc =
                   img.getAttribute("data-src") || img.getAttribute("data-wf-src");
-                if (dataSrc && !dataSrc.trim().toLowerCase().startsWith("javascript:")) {
+                const lowerSrc = (dataSrc || "").trim().toLowerCase();
+                if (
+                  dataSrc &&
+                  !lowerSrc.startsWith("javascript:") &&
+                  !lowerSrc.startsWith("vbscript:") &&
+                  !lowerSrc.startsWith("data:")
+                ) {
                   img.setAttribute("src", dataSrc);
                 } else {
                   img.src = img.src; // trigger reload if necessary
@@ -2004,7 +2010,7 @@
                   </div>
                   <div class="block">
                     <div style="position: relative; height: 12rem;" class="card is-p-0">
-                      <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                      <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                     </div>
                   </div>
                 </div>
@@ -3729,7 +3735,7 @@
                     <div class="u-10c">
                       <div class="card is-p-0">
                         <div class="card-cover">
-                          <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                          <div class="full-wrapper"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="100vw" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
                         </div>
                         <div class="card-body">
                           <div class="card-inner">
