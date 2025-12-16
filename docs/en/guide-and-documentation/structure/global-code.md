@@ -6,27 +6,23 @@ icon: square-code
 
 ## The <mark style="color:green;">Global Code</mark> Component
 
-The custom code in the <mark style="color:green;">**Global Code**</mark> **component** allows styles to be applied on both the editing canvas and the published site. You can place **your custom styles** in the code embed element <mark style="color:blue;">**`css_custom`**</mark> inside the <mark style="color:green;">**Global Code**</mark> **component**. Let's take a look at the overall structure.
+The custom code in the <mark style="color:green;">**Global Code**</mark> **component** allows styles to be applied not only to the published site but also to your editing canvas.
 
-Apply the S2 Framework's base CSS by importing minified CSS from CDN.
+Let's examine the overall structure of the <mark style="color:green;">**Global Code**</mark> **component**:
 
-> <mark style="color:green;">**Global Code**</mark> <mark style="color:blue;">`code`</mark>
+> <mark style="color:green;">**Global Code**</mark>
 >
-> > <mark style="color:green;">**- Framework Base CSS**</mark> <mark style="color:blue;">`css`</mark>
-> >
-> > > <mark style="color:blue;">**`css_cdn`**</mark> ... default option of the clonable
-> > >
-> > > <mark style="color:blue;">**`css_base-setup`**</mark>
-> > >
-> > > <mark style="color:blue;">**`css_s2-features`**</mark>
-> > >
-> > > <mark style="color:blue;">**`css_s2-attributes`**</mark>
-> > >
-> > > <mark style="color:blue;">**`css_s2-colors`**</mark>
-> > >
-> > > <mark style="color:blue;">**`css_css-animations`**</mark>
-> >
-> > <mark style="color:green;">**- Icon Libraries**</mark> <mark style="color:blue;">`css`</mark>
+> <mark style="color:blue;">**`Base Setup`**</mark> <mark style="color:blue;">`css`</mark>
+>
+> <mark style="color:blue;">**`S2 Attributes & Colors`**</mark> <mark style="color:blue;">`css by CDN`</mark>
+>
+> <mark style="color:blue;">**`CSS Animations`**</mark> <mark style="color:blue;">`css`</mark>
+>
+> <mark style="color:blue;">**`Custom Styles`**</mark> <mark style="color:blue;">`css`</mark>
+>
+> <mark style="color:blue;">**`Custom Attributes`**</mark> <mark style="color:blue;">`css`</mark>
+>
+> > <mark style="color:green;">**Icon Libraries**</mark>
 > >
 > > > <mark style="color:blue;">**`code_ph-icons`**</mark> ... default enabled
 > > >
@@ -35,16 +31,14 @@ Apply the S2 Framework's base CSS by importing minified CSS from CDN.
 > > > <mark style="color:blue;">**`code_bx-icons`**</mark>
 > > >
 > > > <mark style="color:blue;">**`code_lni-icons`**</mark>
-> >
-> > <mark style="color:blue;">**`css_custom`**</mark>\
-> > `/* -- Global Custom Attributes -- */`\
-> > `/* -- Global Custom Styles -- */`
 
-{% hint style="info" %}
-**How can I switch to the "embed option" globally?**
+Our modular approach to custom CSS within the Global Code component makes everything easy to manage. Each module works like a plugin, and you can remove any part that is not useful for your project.
 
-Click into the <mark style="color:green;">**Global Code**</mark> component and switch the visibility setting from CDN to Embed options to apply it globally.
-{% endhint %}
+* <mark style="color:blue;">**`Base Setup`**</mark>: Core style configs and resets.
+* <mark style="color:blue;">**`S2 Attributes & Colors`**</mark>: **S2 Attributes** is a lightweight library of predefined attributes to help you work faster. **Colors & Palettes** uses the framework's Colors and Palettes variables as attributes.
+* <mark style="color:blue;">**`CSS Animations`**</mark>: A set of basic but useful CSS animation attributes.
+* <mark style="color:blue;">**`Custom Styles`**</mark>: Global custom styles for enhancements and some S2 Framework features.
+* <mark style="color:blue;">**`Custom Attributes`**</mark>: Essential global custom attributes that can be configured as needed.
 
 
 

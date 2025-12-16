@@ -4,10 +4,8 @@
 
 * [S2 is flow simple!](README.md)
 * [Getting Started](welcome/getting-started.md)
-
-***
-
-* [How to use the Cloneable?](how-to-use-the-cloneable.md)
+* [How to use the Cloneable?](welcome/how-to-use-the-cloneable.md)
+* [One-page Style Guide](welcome/one-page-style-guide.md)
 
 ## Guide & Documentation
 
@@ -29,13 +27,6 @@
   * [HTML Structure](guide-and-documentation/structure/html-structure.md)
   * [Global Code](guide-and-documentation/structure/global-code.md)
 * [S2 Attributes](guide-and-documentation/s2-attributes.md)
-* [S2 Components](guide-and-documentation/s2-components.md)
-
-## Editions
-
-* [Build your own S2](editions/build-your-own-s2.md)
-* [One-page Style Guide](editions/one-page-style-guide.md)
-* [Lite Edition](editions/lite-edition.md)
 
 ## More
 

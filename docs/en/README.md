@@ -31,9 +31,9 @@ Preview and experiment with S2 :snowboarder:\
 [Read-only mode on Webflow](https://s2-framework.webflow.io/#preview)
 
 Community and Support 🛟\
+**Github**: [github.com/SPACESODA/S2-Framework](https://github.com/SPACESODA/S2-Framework)\
 <mark style="color:orange;">**Reddit**</mark>: [r/S2Framework](https://www.reddit.com/r/S2Framework/)\
-<mark style="color:purple;">**Discord**</mark>: [s2-framework.webflow.io/#discord](https://s2-framework.webflow.io/#discord)\
-**Github**: [github.com/SPACESODA/S2-Framework](https://github.com/SPACESODA/S2-Framework)
+<mark style="color:purple;">**Discord**</mark>: [s2-framework.webflow.io/#discord](https://s2-framework.webflow.io/#discord)
 
 Changelog and Roadmap :wood:\
 [s2-framework.webflow.io/#changelog](https://s2-framework.webflow.io/#changelog)
