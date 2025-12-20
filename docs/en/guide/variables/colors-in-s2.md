@@ -41,7 +41,7 @@ By default, variables in **Colors** cover **Primary**, **Secondary**, **Accent**
 | **Focus Subtle** | Light version of focus color |
 
 {% hint style="danger" %}
-Renaming and removing the default **Colors** variables will not break your site, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
+Renaming and removing the default **Colors** variables will not break your site entirely, but you will probably need to re-apply the colors to some styles because such variables will become "**unlinked**". You will have to fix them manually.
 {% endhint %}
 
 

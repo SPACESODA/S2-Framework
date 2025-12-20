@@ -22,7 +22,7 @@ icon: star-christmas
 
 Tailwind CSS is an excellent CSS framework. It influenced how we name classes and attributes, making them more streamlined and flexible.
 
-Tailwind’s core philosophy is [utility-first classes](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/). However, the way that utility classes stack is not practical in Webflow. Extensive use of utility classes and deep stacking are generally [discouraged](../../guide-and-documentation/basic-concepts/utility-classes.md) in Webflow. Besides, Webflow also generates specific styles for each combo class.
+Tailwind’s core philosophy is [utility-first classes](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/). However, the way that utility classes stack is not practical in Webflow. Extensive use of utility classes and deep stacking are generally [discouraged](../../guide/basic-concepts/utility-classes.md) in Webflow. Besides, Webflow also generates specific styles for each combo class.
 
 {% hint style="info" %}
 Just to be clear, we don’t see Webflow as the place that can fully utilize utility classes, let alone stack the classes. In S2, we’ve got **S2 Attributes**, which work similarly but in the form of utility attributes. **S2 Attributes are a set of pre-styled&#x20;**_**attributes**_**, not classes.**
@@ -103,7 +103,7 @@ We avoid over-styling and do not impose a strong style or design, allowing for g
 * Over-styling of elements
 * Strong style directives
 * Utility classes that are difficult to understand or hard to remember
-* Utility classes that are too simple that you should style directly
+* Utility classes that are too simple to style directly
 * Anything that requires extensive memorization
 * Parts that are difficult to remove
 
@@ -113,15 +113,9 @@ We avoid over-styling and do not impose a strong style or design, allowing for g
 
 Webflow is a robust platform known for its flexibility and ease of use.
 
-S2 does not enforce rigid and complex rules. As the framework developer, we prioritize structural simplicity and perfect class naming. However, for you, the focus should be on creating perfect web pages.
+S2 does not enforce rigid and complex rules. As the framework developer, we prioritize structural simplicity and perfect class naming. However, for you, the focus should be on creating your web designs.
 
 We encourage everyone to be creative without restrictions. Let nothing slow you down.
-
-
-
-## Usage beyond Webflow
-
-Although S2 is optimized for Webflow, it is essentially simple CSS combined with nice base styles from Webflow. For those who are already familiar with S2, it is also perfect for creating custom websites and applications. Just clone, export, and you're ready to go.
 
 
 

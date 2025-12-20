@@ -135,7 +135,7 @@ Besides, keeping them in the styles guild has very very minimal impact on your s
 
 Yes.
 
-S2 Framework has been fully compatible with RTL language or layout since v2.4.5, except for some of the Filter UI elements.
+S2 Framework has been fully compatible with RTL or layout since v2.4.5.
 
 To enable RTL, you can add the attribute `dir="rtl"` to the `body` element.
 
