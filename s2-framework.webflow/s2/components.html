@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Dec 13 2025 13:20:53 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Dec 20 2025 03:43:19 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -31,15 +31,8 @@
   <!--  Mode Switching Function  -->
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/js/mode-switching.min.js" as="script">
   <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.0.0/webflow/js/mode-switching.min.js" defer=""></script>
-  <!--  Meta Tags for Style Guide only  -->
-  <meta property="og:locale" content="en_US">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="format-detection" content="telephone=no">
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.documentElement.setAttribute("lang", "en-US");
-      });
-    </script>
   <!--  Modal  -->
   <!--  Move to global custom "Head code" if it is useful for the whole site.  -->
   <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.2.0/webflow/js/modal.min.js" defer=""></script>
@@ -551,11 +544,145 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
       </div>
       <div class="w-embed">
         <style>
-            /* ----------------- */
-            /* -- S2 Features -- */
-            /* ----------------- */
-            /* Custom CSS required to support certain features */
-            /* html-table */
+            /* ------------------- */
+            /* -- Custom Styles -- */
+            /* ------------------- */
+            /* Global custom styles for enhancements and some S2 Framework features */
+            /* == html and body == */
+            html:not(.wf-design-mode) ::selection {
+              background: var(--colors--primary);
+              color: #fff;
+            }
+            /* == main-nav_button == */
+            .main-nav_button path {
+              transition: transform 300ms ease;
+              transform-origin: center;
+            }
+            .main-nav_button path {
+              transform: translateY(-8%) rotate(-45deg);
+            }
+            .main-nav_button path:last-child {
+              transform: translateY(11%) rotate(45deg);
+            }
+            .main-nav_button.w--open path {
+              transform: translateY(0%) rotate(0deg);
+            }
+            /* == better sup and sub on headings == */
+            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
+              margin: 0 -0.275ch;
+            }
+            /* == select element: custom arrow == */
+            :root {
+              --select-arrow-size: 0.375em;
+            }
+            .select-wrapper select {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+            .select-wrapper::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
+              width: var(--select-arrow-size);
+              height: var(--select-arrow-size);
+              border-right: 0.125em solid currentColor;
+              border-bottom: 0.125em solid currentColor;
+              border-radius: 0 0 25% 0;
+              transform: translateY(-65%) rotate(45deg);
+              transition: transform 0.2s ease, border-color 0.2s ease;
+              opacity: 0.6;
+              pointer-events: none;
+            }
+            .input-field.is-boxed .select-wrapper::after {
+              inset-inline-end: var(--select-arrow-size);
+            }
+            /* == styles for other form elements == */
+            .input-field.is-boxed:focus-within {
+              border-color: var(--colors--primary);
+              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
+            }
+            .richtext-list ul li::before {
+              position: absolute;
+              margin-inline-start: -1.65em;
+              content: '\2713\0020';
+              color: var(--colors--primary);
+            }
+            /* == toggle ui == */
+            .toggle:active .toggle-button {
+              width: 1.85em;
+            }
+            /* == mode switching ui == */
+            /* toggle */
+            body.u-dark-mode .toggle {
+              justify-content: flex-end;
+            }
+            /* mode-switch style */
+            :root {
+              --light-mode-on: rgba(255, 255, 255, 0.55);
+              --dark-mode-on: rgba(0, 0, 0, 0.35);
+            }
+            body.u-system-mode .mode-switch [data-button]:not([data-button="color-mode-system"]) {
+              background-color: transparent;
+            }
+            body.u-system-mode.u-light-mode .mode-switch [data-button="color-mode-system"] {
+              background-color: var(--light-mode-on);
+            }
+            body.u-system-mode.u-dark-mode .mode-switch [data-button="color-mode-system"] {
+              background-color: var(--dark-mode-on);
+            }
+            body.u-light-mode .mode-switch [data-button="color-mode-light"] {
+              background-color: var(--light-mode-on);
+            }
+            body.u-dark-mode .mode-switch [data-button="color-mode-dark"] {
+              background-color: var(--dark-mode-on);
+            }
+            body.u-light-mode .mode-switch .mode-switch_button:hover {
+              background-color: rgba(170, 170, 170, 1);
+              color: rgba(240, 240, 240, 1);
+            }
+            body.u-dark-mode .mode-switch .mode-switch_button:hover {
+              background-color: rgba(210, 210, 210, 1);
+              color: rgba(130, 130, 130, 1);
+            }
+            /* == better modal == */
+            dialog.modal[open] {
+              animation: fadeIn 480ms ease-out forwards;
+            }
+            dialog.modal::backdrop {
+              background: rgba(0, 0, 0, 0.8);
+              cursor: pointer;
+            }
+            dialog button:focus,
+            dialog button:focus-visible {
+              outline: none !important;
+              box-shadow: none;
+            }
+            .modal.is-open {
+              display: block;
+              position: fixed;
+              inset: 0;
+            }
+            /* == slider nav == */
+            .w-slider-nav.w-round>div {
+              border-radius: 999rem;
+              transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .slider_nav.is-overlay>div {
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+            .slider_nav.is-overlay>div.w-active {
+              background-color: rgba(255, 255, 255, 1);
+            }
+            .slider_nav[slider-nav-style="bar"]>div {
+              width: 0.375rem;
+              height: 0.375rem;
+            }
+            .slider_nav[slider-nav-style="bar"]>div.w-active {
+              width: 1.5rem;
+            }
+            /* == html-table == */
             /* base styles for html-table */
             .html-table {
               width: 100%;
@@ -582,8 +709,8 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
               color: inherit;
               text-align: inherit;
             }
-            .html-table thead th {}
-            .html-table tfoot td {}
+            /* .html-table thead th {} */
+            /* .html-table tfoot td {} */
             .html-table caption {
               caption-side: top;
               font-weight: normal;
@@ -660,57 +787,11 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
               left: -1px;
               z-index: 997;
             }
-            /* toggle ui */
-            .toggle:active .toggle-button {
-              width: 1.85em;
+            /* == code == */
+            code {
+              font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
             }
-            /* mode switching ui */
-            /* toggle style */
-            body.u-dark-mode .toggle {
-              justify-content: flex-end;
-            }
-            /* mode-switch style */
-            :root {
-              --light-mode-on: rgba(255, 255, 255, 0.55);
-              --dark-mode-on: rgba(0, 0, 0, 0.35);
-            }
-            body.u-system-mode .mode-switch [data-button]:not([data-button="color-mode-system"]) {
-              background-color: transparent;
-            }
-            body.u-system-mode.u-light-mode .mode-switch [data-button="color-mode-system"] {
-              background-color: var(--light-mode-on);
-            }
-            body.u-system-mode.u-dark-mode .mode-switch [data-button="color-mode-system"] {
-              background-color: var(--dark-mode-on);
-            }
-            body.u-light-mode .mode-switch [data-button="color-mode-light"] {
-              background-color: var(--light-mode-on);
-            }
-            body.u-dark-mode .mode-switch [data-button="color-mode-dark"] {
-              background-color: var(--dark-mode-on);
-            }
-            body.u-light-mode .mode-switch .mode-switch_button:hover {
-              background-color: rgba(170, 170, 170, 1);
-              color: rgba(240, 240, 240, 1);
-            }
-            body.u-dark-mode .mode-switch .mode-switch_button:hover {
-              background-color: rgba(210, 210, 210, 1);
-              color: rgba(130, 130, 130, 1);
-            }
-          </style>
-      </div>
-      <div class="w-embed">
-        <style>
-            /* ------------------- */
-            /* -- Custom Styles -- */
-            /* ------------------- */
-            /* The most essential global custom styles */
-            /* html and body */
-            html:not(.wf-design-mode) ::selection {
-              background: var(--colors--primary);
-              color: #fff;
-            }
-            /* accessibility */
+            /* == accessibility == */
             html:not(.wf-design-mode) :focus-visible:not(input, textarea, select, section, .section, .container, .w-tab-link),
             [tabindex]:not([tabindex="-1"]):focus-visible,
             [aria-label]:not(input, textarea, select):focus-visible,
@@ -727,105 +808,11 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
             [contenteditable]:focus-visible {
               outline: none;
             }
-            /* main-nav_button */
-            .main-nav_button path {
-              transition: transform 300ms ease;
-              transform-origin: center;
-            }
-            .main-nav_button path {
-              transform: translateY(-8%) rotate(-45deg);
-            }
-            .main-nav_button path:last-child {
-              transform: translateY(11%) rotate(45deg);
-            }
-            .main-nav_button.w--open path {
-              transform: translateY(0%) rotate(0deg);
-            }
-            /* slider nav */
-            .w-slider-nav.w-round>div {
-              border-radius: 999rem;
-              transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            .slider_nav.is-overlay>div {
-              background-color: rgba(255, 255, 255, 0.5);
-            }
-            .slider_nav.is-overlay>div.w-active {
-              background-color: rgba(255, 255, 255, 1);
-            }
-            .slider_nav[slider-nav-style="bar"]>div {
-              width: 0.375rem;
-              height: 0.375rem;
-            }
-            .slider_nav[slider-nav-style="bar"]>div.w-active {
-              width: 1.5rem;
-            }
-            /* better sup and sub on headings */
-            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
-              margin: 0 -0.275ch;
-            }
-            /* better modal */
-            dialog.modal[open] {
-              animation: fadeIn 480ms ease-out forwards;
-            }
-            dialog.modal::backdrop {
-              background: rgba(0, 0, 0, 0.8);
-              cursor: pointer;
-            }
-            dialog button:focus,
-            dialog button:focus-visible {
-              outline: none !important;
-              box-shadow: none;
-            }
-            .modal.is-open {
-              display: block;
-              position: fixed;
-              inset: 0;
-            }
-            /* select element: custom arrow */
-            :root {
-              --select-arrow-size: 0.375em;
-            }
-            .select-wrapper select {
-              appearance: none;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-            }
-            .select-wrapper::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
-              width: var(--select-arrow-size);
-              height: var(--select-arrow-size);
-              border-right: 0.125em solid currentColor;
-              border-bottom: 0.125em solid currentColor;
-              border-radius: 0 0 25% 0;
-              transform: translateY(-65%) rotate(45deg);
-              transition: transform 0.2s ease, border-color 0.2s ease;
-              opacity: 0.6;
-              pointer-events: none;
-            }
-            .input-field.is-boxed .select-wrapper::after {
-              inset-inline-end: var(--select-arrow-size);
-            }
-            /* other styles */
-            .input-field.is-boxed:focus-within {
-              border-color: var(--colors--primary);
-              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
-            }
-            .richtext-list ul li::before {
-              position: absolute;
-              margin-inline-start: -1.65em;
-              content: '\2713\0020';
-              color: var(--colors--primary);
-            }
-            code {
-              font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
-            }
-            /* styles for RTL layout */
+            /* == styles for RTL layout == */
             [dir="rtl"] .list-item_icon {
               background-position: 100% 0%;
             }
+            /* == other global custom styles go here == */
           </style>
       </div>
       <div class="w-embed">
@@ -1342,7 +1329,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Main Nav / Base: Special</div>
+                  <div>Main Nav / Special</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <aside data-nosnippet="true" role="region" aria-label="Top Banner" class="top-bar">
@@ -1488,7 +1475,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Main Nav / eCommerce</div><span style="box-shadow: none; background-color: #ffffff60; color: #fff; font-size: 0.6em; top: -0.05em;" class="tag">BETA</span>
+                  <div>Main Nav / eCommerce</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box is-has-height">
                   <div class="block is-scrollable">
@@ -1762,20 +1749,20 @@ https://fontawesome.com/search?ic=free-collection
             <section id="title-layouts" class="section is-bottom-sm">
               <div class="title-wrapper">
                 <div class="title-wrapper">
-                  <h2 class="h4">Title Layouts</h2>
+                  <h2 class="h4">Title Sets</h2>
                 </div>
                 <div class="text-wrapper is-max-40rem">
-                  <p>Title Layouts <span class="tag-label">title-layout</span> greatly speed up your web design process by eliminating the need to repeatedly create classes for headings or titles. You can customize them in your early design process.</p>
+                  <p>Title Sets <span class="tag-label">title-set</span> improve consistency and greatly speed up your web design process by eliminating the need to repeatedly create classes for headings and titles. You may customize them during the early design process.</p>
                 </div>
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Title Layouts</div>
+                  <div>Title Sets</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box is-has-height is-taller">
                   <div style="padding: 1rem;" class="block is-scrollable">
                     <div mb="2" gap="3-2" class="grid-cols">
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper">
                           <div class="title-wrapper is-sm">
                             <h2 class="title-heading is-xl">Our services and capabilities</h2>
@@ -1788,7 +1775,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper is-sm">
                           <div class="title-wrapper is-sm">
                             <h2 class="title-heading is-lg">Our services and capabilities</h2>
@@ -1801,7 +1788,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper">
                           <div class="title-wrapper is-sm">
                             <div class="eyebrow">Unleash potentials</div>
@@ -1814,7 +1801,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper">
                           <div class="title-wrapper is-sm">
                             <div class="eyebrow">Unleash potentials</div>
@@ -1827,7 +1814,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper is-sm">
                           <h2 class="title-heading">About our company</h2>
                         </div>
@@ -1835,7 +1822,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper">
                           <h2 class="title-heading is-lg">Recruitment of IT professionals in the region</h2>
                         </div>
@@ -1843,7 +1830,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper">
                           <div class="title-wrapper is-sm">
                             <h2 class="title-heading is-lg">Our Executives</h2>
@@ -1856,7 +1843,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper is-sm">
                           <div class="title-wrapper is-sm">
                             <h2 class="title-heading is-lg">Our Management</h2>
@@ -1869,7 +1856,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper is-align-center">
                           <div class="title-wrapper is-xs">
                             <h2 class="title-heading is-lg">Value</h2>
@@ -1882,7 +1869,7 @@ https://fontawesome.com/search?ic=free-collection
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.</p>
                         </div>
                       </header>
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper is-align-center">
                           <div class="title-wrapper is-sm">
                             <div color="text" class="eyebrow">Lorem ipsum dolor sit amet</div>
@@ -2005,7 +1992,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Hero Section / Style 01</div>
+                  <div>Hero Section / 01</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section is-padding-adjusted">
@@ -2013,12 +2000,12 @@ https://fontawesome.com/search?ic=free-collection
                       <div class="bg-overlay"></div>
                       <div position="relative" class="w-layout-blockcontainer container w-container">
                         <div class="hero-inner">
-                          <div text-shadow="" class="title-layout">
+                          <div text-shadow="" class="title-set">
                             <div class="title-wrapper is-lg">
-                              <h1 style="color: #fff;" class="title-heading is-3xl">WritePad</h1>
+                              <h1 style="color: #fff;" class="title-heading is-3xl">Sketcy</h1>
                             </div>
                             <div class="text-wrapper">
-                              <div class="title-message is-sm">The last writing app you&#x27;ll ever need.</div>
+                              <div class="title-message is-sm">The last sketch app you&#x27;ll ever need.</div>
                             </div>
                           </div>
                           <div mt="0" class="button-wrapper">
@@ -2042,7 +2029,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Hero Section / Style 02</div>
+                  <div>Hero Section / 02</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section flex="col" position="relative" class="section">
@@ -2050,10 +2037,10 @@ https://fontawesome.com/search?ic=free-collection
                       <div user-select="none" opacity="" class="deco-positioner"><img src="https://images.pexels.com/photos/163864/santorini-oia-greece-travel-163864.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" loading="auto" alt="" class="deco-image is-left-01"><img src="https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" loading="auto" alt="" class="deco-image is-left-02"><img src="https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" loading="auto" alt="" class="deco-image is-right-01"><img src="https://images.pexels.com/photos/13900724/pexels-photo-13900724.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" loading="auto" alt="" class="deco-image is-right-02"></div>
                     </div>
                     <div class="w-layout-blockcontainer container is-6c w-container">
-                      <header class="title-layout">
+                      <header class="title-set">
                         <div class="title-wrapper is-align-center">
                           <div class="title-wrapper">
-                            <div class="eyebrow">This is an eyebrow title</div>
+                            <div class="eyebrow">This is an eyebrow</div>
                           </div>
                           <div class="title-wrapper">
                             <h1 class="h2">This is your hero section title</h1>
@@ -2094,7 +2081,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Hero Section / Style 03</div><span style="box-shadow: none; background-color: #ffffff60; color: #fff; font-size: 0.6em; top: -0.05em;" class="tag">NEW</span>
+                  <div>Hero Section / 03</div><span style="box-shadow: none; background-color: #ffffff60; color: #fff; font-size: 0.6em; top: -0.05em;" class="tag">NEW</span>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section flex="col" position="relative" class="section is-bg-surface">
@@ -2107,7 +2094,7 @@ https://fontawesome.com/search?ic=free-collection
                             <div style="height: 0rem;" class="spacer_sm"></div>
                             <div style="height: 0rem;" class="spacer_xs"></div>
                           </div>
-                          <header class="title-layout">
+                          <header class="title-set">
                             <div class="title-wrapper">
                               <div class="title-wrapper">
                                 <div class="u-hflex-left-center">
@@ -2170,8 +2157,8 @@ https://fontawesome.com/search?ic=free-collection
               <div class="text-wrapper">
                 <div class="richtext w-richtext">
                   <p><strong>Flexible:</strong> Place the <span class="tag-label is-html">dialog</span> <span class="tag-label">modal</span> modals anywhere on a page.<strong>‍</strong></p>
-                  <p><strong>Attributes:</strong> Corresponding modal open by matching the <span class="tag-label is-attribute">data-modal=&quot;modal-id&quot;</span> attributes.<strong>‍</strong></p>
-                  <p><strong>Simple:</strong> Add a <span class="tag-label">is-open</span> class to open up the dialog for easy editing.<strong>‍</strong></p>
+                  <p><strong>Multiple Instances:</strong> Open by matching the <span class="tag-label is-attribute">data-modal=&quot;modal-id&quot;</span> attributes.<strong>‍</strong></p>
+                  <p><strong>Simple:</strong> Add the <span class="tag-label">is-open</span> class to open the dialog for easy editing.<strong>‍</strong></p>
                   <p><strong>Accessible:</strong> Leverage accessibility features of native <span class="tag-label is-html">dialog</span>.</p>
                 </div>
               </div>
@@ -2229,7 +2216,7 @@ https://fontawesome.com/search?ic=free-collection
                 </div>
                 <div class="text-wrapper is-max-40rem">
                   <p>
-                    <a href="https://github.com/ezekielaquino/Marquee3000" target="_blank">Marquee3000</a> is used in the JavaScript version.
+                    <a href="https://github.com/SPACESODA/marquee6k" target="_blank">marquee6k</a> is used in the JavaScript version.
                   </p>
                   <p mt="0.5">In the pure CSS version, you can use <span class="tag-label is-attribute">data-repeat=&quot;x3&quot;</span> to easily repeat the content to make it long enough for looping.</p>
                 </div>
@@ -2240,7 +2227,7 @@ https://fontawesome.com/search?ic=free-collection
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <div py="base" px="0" class="container is-full">
-                    <div class="marquee-wrapper marquee3k" data-speed="1.2" data-pausable="true">
+                    <div class="marquee-wrapper marquee6k" data-speed="1.2" data-pausable="true">
                       <div class="marquee">
                         <div class="marquee_content is-gap-lg">
                           <div style="background: #05445E; border-radius: 100%;" class="icon is-4rem"></div>
@@ -2369,14 +2356,14 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>2-Col Section / Base: Layout 01</div>
+                  <div>2-Col Section / 01</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section">
                     <div class="w-layout-blockcontainer container w-container">
                       <div class="flex-cols is-vflex-at-md">
                         <div class="col is-45p">
-                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image"></div>
+                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9921875px, 939.9921875px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                         <div class="col is-45p">
                           <div class="title-wrapper">
@@ -2408,7 +2395,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>2-Col Section / Base: Layout 02</div>
+                  <div>2-Col Section / 02</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section">
@@ -2428,7 +2415,7 @@ https://fontawesome.com/search?ic=free-collection
                           </div>
                         </div>
                         <div class="col is-45p">
-                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image"></div>
+                          <div class="image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9921875px, 939.9921875px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" class="image"></div>
                         </div>
                       </div>
                     </div>
@@ -2457,7 +2444,7 @@ https://fontawesome.com/search?ic=free-collection
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section is-top-sm">
                     <div class="w-layout-blockcontainer container is-10c w-container">
-                      <header text-align="center" class="title-layout">
+                      <header text-align="center" class="title-set">
                         <div class="title-wrapper">
                           <div class="title-wrapper">
                             <h2 class="title-message">FAQs</h2>
@@ -2517,7 +2504,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Accordion / Style 01</div>
+                  <div>Accordion / 01</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <div class="u-dark-mode">
@@ -2609,12 +2596,12 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Accordion / Style 02</div>
+                  <div>Accordion / 02</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <section class="section is-top-sm">
                     <div class="w-layout-blockcontainer container is-8c w-container">
-                      <header text-align="center" class="title-layout">
+                      <header text-align="center" class="title-set">
                         <div class="title-wrapper">
                           <div class="title-wrapper">
                             <h2 class="title-message">FAQs</h2>
@@ -2679,7 +2666,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Footer / Base: Layout 01</div>
+                  <div>Footer / 01</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <footer bg="dark" class="footer">
@@ -2836,7 +2823,7 @@ https://fontawesome.com/search?ic=free-collection
                             </nav>
                           </div>
                           <div class="footer_bottom">
-                            <p>© 2025 Your Company Inc. All rights reserved.</p>
+                            <p>© 2026 Your Company Inc. All rights reserved.</p>
                             <nav class="footer_sub-nav">
                               <ul flex-wrap="wrap-nice" role="list" class="list-h is-center">
                                 <li>
@@ -2872,7 +2859,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Footer / Base: Layout 02</div>
+                  <div>Footer / 02</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <footer bg="dark" class="footer">
@@ -3025,7 +3012,7 @@ https://fontawesome.com/search?ic=free-collection
                             </div>
                           </div>
                           <div class="footer_bottom">
-                            <p>© 2025 Your Company Inc.<br>All rights reserved.</p>
+                            <p>© 2026 Your Company Inc.<br>All rights reserved.</p>
                             <div class="footer_bottom-logo">
                               <a aria-label="Go to Homepage" href="#" class="w-inline-block">
                                 <div class="main-logo is-square-logo w-embed"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
@@ -3063,7 +3050,7 @@ https://fontawesome.com/search?ic=free-collection
               </div>
               <div class="s2-demo">
                 <div class="box-label">
-                  <div>Footer / Base: Layout 03</div>
+                  <div>Footer / 03</div>
                 </div>
                 <div demo-expand="" class="s2-demo-box">
                   <footer class="footer">
@@ -3232,7 +3219,7 @@ https://fontawesome.com/search?ic=free-collection
                           </div>
                           <div class="footer_bottom is-align-center">
                             <div gap="base" flex-wrap="wrap" class="u-vflex-center-center">
-                              <p>© 2025 Your Company Inc. All rights reserved.</p>
+                              <p>© 2026 Your Company Inc. All rights reserved.</p>
                               <a aria-label="Go to Homepage" href="#" class="w-inline-block">
                                 <div class="icon is-1-5rem w-embed"><svg width="100%" height="100%" viewbox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
                                     <title>S2 Framework</title>
@@ -3271,8 +3258,8 @@ https://fontawesome.com/search?ic=free-collection
               <section class="section is-top-sm">
                 <div style="margin-bottom: 3rem;" class="container is-10c">
                   <div class="js w-embed w-script"><!--  Plyr CSS and JS  -->
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.css">
-                    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.8.3/dist/plyr.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/plyr@3.8.3/dist/plyr.min.js"></script>
                     <!--  Script for Plyr Player  -->
                     <script>
                         // Initialize and Customize Plyr Players
@@ -3476,7 +3463,7 @@ https://fontawesome.com/search?ic=free-collection
                   </div>
                   <div style="gap: 1.75rem;" class="u-vflex-stretch-top">
                     <div data-preview-thumbnails="https://s2-framework.pages.dev/assets/demo/plyr/240p.vtt" class="player-wrapper">
-                      <p class="h6">HTML5 Video A: Multiple resolutions + Autoplay + Muted + Loop</p><video controls="" playsinline="true" preload="metadata" crossorigin="anonymous" data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-autoplay="true" muted="" loop="" class="plyr-player">
+                      <p class="h6">HTML5 Video (A) - Multiple resolutions + Autoplay + Muted + Loop</p><video controls="" playsinline="true" preload="metadata" crossorigin="anonymous" data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-autoplay="true" muted="" loop="" class="plyr-player">
                         <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
                         <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
                         <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt">
@@ -3492,7 +3479,7 @@ https://fontawesome.com/search?ic=free-collection
                       </div>
                     </div>
                     <div data-preview-thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt" class="player-wrapper">
-                      <p class="h6">HTML5 Video B</p><video controls="" playsinline="true" preload="metadata" crossorigin="anonymous" data-poster="https://files.vidstack.io/sprite-fight/poster.webp" poster="https://files.vidstack.io/sprite-fight/poster.webp" class="plyr-player">
+                      <p class="h6">HTML5 Video (B)</p><video controls="" playsinline="true" preload="metadata" crossorigin="anonymous" data-poster="https://files.vidstack.io/sprite-fight/poster.webp" poster="https://files.vidstack.io/sprite-fight/poster.webp" class="plyr-player">
                         <source src="https://files.vidstack.io/sprite-fight/720p.mp4" type="video/mp4">
                         <track kind="captions" label="English" srclang="en" src="https://files.vidstack.io/sprite-fight/subs/english.vtt">
                         <track kind="captions" label="Spanish" srclang="es" src="https://files.vidstack.io/sprite-fight/subs/spanish.vtt">
@@ -3507,7 +3494,7 @@ https://fontawesome.com/search?ic=free-collection
                       </div>
                     </div>
                     <div class="player-wrapper">
-                      <p class="h6">YouTube A</p>
+                      <p class="h6">YouTube (A)</p>
                       <div data-plyr-provider="youtube" data-plyr-embed-id="wCDIYvFmgW8" data-poster="https://i.ytimg.com/vi/wCDIYvFmgW8/maxresdefault.jpg" class="plyr-player"><img src="https://i.ytimg.com/vi/wCDIYvFmgW8/maxresdefault.jpg" alt="" aria-hidden="true" tabindex="-1" class="image is-video-cover"></div>
                       <div class="w-embed">
                         <div style="display: flex; gap: 0.35rem;">
@@ -3519,7 +3506,7 @@ https://fontawesome.com/search?ic=free-collection
                       </div>
                     </div>
                     <div class="player-wrapper">
-                      <p class="h6">YouTube B: No Poster</p>
+                      <p class="h6">YouTube (B) - No Poster</p>
                       <div data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY" data-poster="" class="plyr-player"><img src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" alt="" aria-hidden="true" tabindex="-1" class="image is-video-cover"></div>
                       <div class="w-embed">
                         <div style="display: flex; gap: 0.35rem;">
@@ -3531,7 +3518,7 @@ https://fontawesome.com/search?ic=free-collection
                       </div>
                     </div>
                     <div class="player-wrapper">
-                      <p class="h6">Vimeo A</p>
+                      <p class="h6">Vimeo (A)</p>
                       <div data-plyr-provider="vimeo" data-plyr-embed-id="154856650" data-poster="https://i.vimeocdn.com/video/555456812-9166af36f284712fb70dc2dfcde0229ca41595b9a82e627e60afa65402d072a8-d_640x360" class="plyr-player"><img src="https://i.vimeocdn.com/video/555456812-9166af36f284712fb70dc2dfcde0229ca41595b9a82e627e60afa65402d072a8-d_640x360" alt="" aria-hidden="true" tabindex="-1" class="image is-video-cover"></div>
                       <div class="w-embed">
                         <div style="display: flex; gap: 0.35rem;">
@@ -3543,7 +3530,7 @@ https://fontawesome.com/search?ic=free-collection
                       </div>
                     </div>
                     <div class="player-wrapper">
-                      <p class="h6">Vimeo B</p>
+                      <p class="h6">Vimeo (B)</p>
                       <div data-plyr-provider="vimeo" data-plyr-embed-id="255546259" data-poster="https://i.vimeocdn.com/video/682983081-4228f74d8f0488ebaee8f0bf70075d9441c42d21ce17278d42530e6babd4219b-d_640x360" class="plyr-player"><img src="https://i.vimeocdn.com/video/682983081-4228f74d8f0488ebaee8f0bf70075d9441c42d21ce17278d42530e6babd4219b-d_640x360" alt="" aria-hidden="true" tabindex="-1" class="image is-video-cover"></div>
                       <div class="w-embed">
                         <div style="display: flex; gap: 0.35rem;">
@@ -3678,11 +3665,11 @@ https://fontawesome.com/search?ic=free-collection
         }
       });
     </script>
-  <!--  marquee3k  -->
+  <!--  marquee6k  -->
   <!--  Move to global custom "Footer code" if it is useful for the whole site.  -->
-  <script src="https://cdn.jsdelivr.net/npm/marquee3000@1.1.1/marquee3k.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/SPACESODA/marquee6k@latest/marquee6k.min.js"></script>
   <script>
-      Marquee3k.init();
+      marquee6k.init();
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Dec 13 2025 13:20:53 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sat Dec 20 2025 03:43:19 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66009eb8d493d5a53c375a0c" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -673,11 +673,145 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
       </div>
       <div class="w-embed">
         <style>
-            /* ----------------- */
-            /* -- S2 Features -- */
-            /* ----------------- */
-            /* Custom CSS required to support certain features */
-            /* html-table */
+            /* ------------------- */
+            /* -- Custom Styles -- */
+            /* ------------------- */
+            /* Global custom styles for enhancements and some S2 Framework features */
+            /* == html and body == */
+            html:not(.wf-design-mode) ::selection {
+              background: var(--colors--primary);
+              color: #fff;
+            }
+            /* == main-nav_button == */
+            .main-nav_button path {
+              transition: transform 300ms ease;
+              transform-origin: center;
+            }
+            .main-nav_button path {
+              transform: translateY(-8%) rotate(-45deg);
+            }
+            .main-nav_button path:last-child {
+              transform: translateY(11%) rotate(45deg);
+            }
+            .main-nav_button.w--open path {
+              transform: translateY(0%) rotate(0deg);
+            }
+            /* == better sup and sub on headings == */
+            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
+              margin: 0 -0.275ch;
+            }
+            /* == select element: custom arrow == */
+            :root {
+              --select-arrow-size: 0.375em;
+            }
+            .select-wrapper select {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+            .select-wrapper::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
+              width: var(--select-arrow-size);
+              height: var(--select-arrow-size);
+              border-right: 0.125em solid currentColor;
+              border-bottom: 0.125em solid currentColor;
+              border-radius: 0 0 25% 0;
+              transform: translateY(-65%) rotate(45deg);
+              transition: transform 0.2s ease, border-color 0.2s ease;
+              opacity: 0.6;
+              pointer-events: none;
+            }
+            .input-field.is-boxed .select-wrapper::after {
+              inset-inline-end: var(--select-arrow-size);
+            }
+            /* == styles for other form elements == */
+            .input-field.is-boxed:focus-within {
+              border-color: var(--colors--primary);
+              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
+            }
+            .richtext-list ul li::before {
+              position: absolute;
+              margin-inline-start: -1.65em;
+              content: '\2713\0020';
+              color: var(--colors--primary);
+            }
+            /* == toggle ui == */
+            .toggle:active .toggle-button {
+              width: 1.85em;
+            }
+            /* == mode switching ui == */
+            /* toggle */
+            body.u-dark-mode .toggle {
+              justify-content: flex-end;
+            }
+            /* mode-switch style */
+            :root {
+              --light-mode-on: rgba(255, 255, 255, 0.55);
+              --dark-mode-on: rgba(0, 0, 0, 0.35);
+            }
+            body.u-system-mode .mode-switch [data-button]:not([data-button="color-mode-system"]) {
+              background-color: transparent;
+            }
+            body.u-system-mode.u-light-mode .mode-switch [data-button="color-mode-system"] {
+              background-color: var(--light-mode-on);
+            }
+            body.u-system-mode.u-dark-mode .mode-switch [data-button="color-mode-system"] {
+              background-color: var(--dark-mode-on);
+            }
+            body.u-light-mode .mode-switch [data-button="color-mode-light"] {
+              background-color: var(--light-mode-on);
+            }
+            body.u-dark-mode .mode-switch [data-button="color-mode-dark"] {
+              background-color: var(--dark-mode-on);
+            }
+            body.u-light-mode .mode-switch .mode-switch_button:hover {
+              background-color: rgba(170, 170, 170, 1);
+              color: rgba(240, 240, 240, 1);
+            }
+            body.u-dark-mode .mode-switch .mode-switch_button:hover {
+              background-color: rgba(210, 210, 210, 1);
+              color: rgba(130, 130, 130, 1);
+            }
+            /* == better modal == */
+            dialog.modal[open] {
+              animation: fadeIn 480ms ease-out forwards;
+            }
+            dialog.modal::backdrop {
+              background: rgba(0, 0, 0, 0.8);
+              cursor: pointer;
+            }
+            dialog button:focus,
+            dialog button:focus-visible {
+              outline: none !important;
+              box-shadow: none;
+            }
+            .modal.is-open {
+              display: block;
+              position: fixed;
+              inset: 0;
+            }
+            /* == slider nav == */
+            .w-slider-nav.w-round>div {
+              border-radius: 999rem;
+              transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .slider_nav.is-overlay>div {
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+            .slider_nav.is-overlay>div.w-active {
+              background-color: rgba(255, 255, 255, 1);
+            }
+            .slider_nav[slider-nav-style="bar"]>div {
+              width: 0.375rem;
+              height: 0.375rem;
+            }
+            .slider_nav[slider-nav-style="bar"]>div.w-active {
+              width: 1.5rem;
+            }
+            /* == html-table == */
             /* base styles for html-table */
             .html-table {
               width: 100%;
@@ -704,8 +838,8 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
               color: inherit;
               text-align: inherit;
             }
-            .html-table thead th {}
-            .html-table tfoot td {}
+            /* .html-table thead th {} */
+            /* .html-table tfoot td {} */
             .html-table caption {
               caption-side: top;
               font-weight: normal;
@@ -782,57 +916,11 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
               left: -1px;
               z-index: 997;
             }
-            /* toggle ui */
-            .toggle:active .toggle-button {
-              width: 1.85em;
+            /* == code == */
+            code {
+              font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
             }
-            /* mode switching ui */
-            /* toggle style */
-            body.u-dark-mode .toggle {
-              justify-content: flex-end;
-            }
-            /* mode-switch style */
-            :root {
-              --light-mode-on: rgba(255, 255, 255, 0.55);
-              --dark-mode-on: rgba(0, 0, 0, 0.35);
-            }
-            body.u-system-mode .mode-switch [data-button]:not([data-button="color-mode-system"]) {
-              background-color: transparent;
-            }
-            body.u-system-mode.u-light-mode .mode-switch [data-button="color-mode-system"] {
-              background-color: var(--light-mode-on);
-            }
-            body.u-system-mode.u-dark-mode .mode-switch [data-button="color-mode-system"] {
-              background-color: var(--dark-mode-on);
-            }
-            body.u-light-mode .mode-switch [data-button="color-mode-light"] {
-              background-color: var(--light-mode-on);
-            }
-            body.u-dark-mode .mode-switch [data-button="color-mode-dark"] {
-              background-color: var(--dark-mode-on);
-            }
-            body.u-light-mode .mode-switch .mode-switch_button:hover {
-              background-color: rgba(170, 170, 170, 1);
-              color: rgba(240, 240, 240, 1);
-            }
-            body.u-dark-mode .mode-switch .mode-switch_button:hover {
-              background-color: rgba(210, 210, 210, 1);
-              color: rgba(130, 130, 130, 1);
-            }
-          </style>
-      </div>
-      <div class="w-embed">
-        <style>
-            /* ------------------- */
-            /* -- Custom Styles -- */
-            /* ------------------- */
-            /* The most essential global custom styles */
-            /* html and body */
-            html:not(.wf-design-mode) ::selection {
-              background: var(--colors--primary);
-              color: #fff;
-            }
-            /* accessibility */
+            /* == accessibility == */
             html:not(.wf-design-mode) :focus-visible:not(input, textarea, select, section, .section, .container, .w-tab-link),
             [tabindex]:not([tabindex="-1"]):focus-visible,
             [aria-label]:not(input, textarea, select):focus-visible,
@@ -849,105 +937,11 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
             [contenteditable]:focus-visible {
               outline: none;
             }
-            /* main-nav_button */
-            .main-nav_button path {
-              transition: transform 300ms ease;
-              transform-origin: center;
-            }
-            .main-nav_button path {
-              transform: translateY(-8%) rotate(-45deg);
-            }
-            .main-nav_button path:last-child {
-              transform: translateY(11%) rotate(45deg);
-            }
-            .main-nav_button.w--open path {
-              transform: translateY(0%) rotate(0deg);
-            }
-            /* slider nav */
-            .w-slider-nav.w-round>div {
-              border-radius: 999rem;
-              transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            .slider_nav.is-overlay>div {
-              background-color: rgba(255, 255, 255, 0.5);
-            }
-            .slider_nav.is-overlay>div.w-active {
-              background-color: rgba(255, 255, 255, 1);
-            }
-            .slider_nav[slider-nav-style="bar"]>div {
-              width: 0.375rem;
-              height: 0.375rem;
-            }
-            .slider_nav[slider-nav-style="bar"]>div.w-active {
-              width: 1.5rem;
-            }
-            /* better sup and sub on headings */
-            :is(h1, .h1, h2, .h2, h3, .h3) :is(sup, sub) {
-              margin: 0 -0.275ch;
-            }
-            /* better modal */
-            dialog.modal[open] {
-              animation: fadeIn 480ms ease-out forwards;
-            }
-            dialog.modal::backdrop {
-              background: rgba(0, 0, 0, 0.8);
-              cursor: pointer;
-            }
-            dialog button:focus,
-            dialog button:focus-visible {
-              outline: none !important;
-              box-shadow: none;
-            }
-            .modal.is-open {
-              display: block;
-              position: fixed;
-              inset: 0;
-            }
-            /* select element: custom arrow */
-            :root {
-              --select-arrow-size: 0.375em;
-            }
-            .select-wrapper select {
-              appearance: none;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-            }
-            .select-wrapper::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              inset-inline-end: calc(0.75rem + var(--select-arrow-size));
-              width: var(--select-arrow-size);
-              height: var(--select-arrow-size);
-              border-right: 0.125em solid currentColor;
-              border-bottom: 0.125em solid currentColor;
-              border-radius: 0 0 25% 0;
-              transform: translateY(-65%) rotate(45deg);
-              transition: transform 0.2s ease, border-color 0.2s ease;
-              opacity: 0.6;
-              pointer-events: none;
-            }
-            .input-field.is-boxed .select-wrapper::after {
-              inset-inline-end: var(--select-arrow-size);
-            }
-            /* other styles */
-            .input-field.is-boxed:focus-within {
-              border-color: var(--colors--primary);
-              box-shadow: 0 0 0 var(--_sizes---outline--bold) var(--colors--focus-subtle);
-            }
-            .richtext-list ul li::before {
-              position: absolute;
-              margin-inline-start: -1.65em;
-              content: '\2713\0020';
-              color: var(--colors--primary);
-            }
-            code {
-              font-family: "Lucida Console", "Consolas", "Liberation Mono", monospace !important;
-            }
-            /* styles for RTL layout */
+            /* == styles for RTL layout == */
             [dir="rtl"] .list-item_icon {
               background-position: 100% 0%;
             }
+            /* == other global custom styles go here == */
           </style>
       </div>
       <div class="w-embed">
@@ -1340,7 +1334,7 @@ https://fontawesome.com/search?ic=free-collection
         </div>
         <div class="w-layout-blockcontainer container is-full w-container first-container">
           <div style="margin: 0 0 0.5rem 0;" class="tag-wrapper">
-            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v3.2</div>
+            <div gradient="3" data-nosnippet="true" style="letter-spacing: 0.05em;" class="code-label">v3.4</div>
           </div>
           <h1 class="sg-cover_h1" data-element="glitch">S2 Framework</h1>
           <p class="sg-cover_tagline">A Webflow Framework for Everyone.<br>Flexible, Easy to master, and Straightforward.</p>

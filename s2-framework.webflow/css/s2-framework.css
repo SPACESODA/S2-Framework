@@ -2350,7 +2350,7 @@ figcaption {
   display: block;
 }
 
-.title-layout {
+.title-set {
   margin-bottom: var(--_sizes---spacing--sm);
   position: relative;
 }
@@ -4776,7 +4776,7 @@ figcaption {
 }
 
 .cookie-consent-inner {
-  background-color: var(--colors--surface);
+  background-color: color-mix(in srgb, var(--colors--surface) 85%, transparent);
   flex-direction: column;
   max-width: 32rem;
   margin-left: auto;
@@ -4789,6 +4789,7 @@ figcaption {
   z-index: 9500;
   border: 0px none var(--colors-special--transparent);
   border-radius: var(--_sizes---radius--card);
+  background-color: var(--colors-special--transparent);
   outline-color: var(--colors--stroke-subtle);
   outline-offset: 0px;
   color: var(--colors--text);
