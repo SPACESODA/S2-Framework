@@ -41,7 +41,7 @@ We also do not include `u-alignment-` utilities, as we believe, in reality, alig
 
 To be honest, Flex configurations in Webflow are already quick and easy. The main reason for including Flex Utilities in S2 is to eliminate the need to constantly think of new class names.
 
-### Mindset
+### The Mindset
 
 A Webflow project is often handled by multiple stakeholders, including teammates, collaborators, partners, clients, and even their colleagues. Not everyone involved will have deep knowledge of frameworks or technical details.
 

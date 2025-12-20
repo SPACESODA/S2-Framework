@@ -60,7 +60,7 @@ In terms of HTML, the default page structure looks like this (simplified), which
         <main>
             <section>
                 <div class="container">
-                    <header class="title-set-layout">
+                    <header class="title-set">
                         <!-- Page title -->
                     </header>
                     <!-- Section content -->

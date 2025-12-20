@@ -31,7 +31,7 @@ Refer to the [Class Naming](https://s2-framework.gitbook.io/docs/guide-and-docum
 
 S2 also includes a few abbreviations to streamline naming.
 
-### Mindset
+### The Mindset
 
 S2 has no class folder concept.
 
@@ -49,3 +49,6 @@ About utility classes, we suggest to use wisely. They can be difficult to track.
 Finsweet offers a lot of excellent free and premium resources, and you may need to use some of them in your projects.
 
 In the world of Webflow, there is no real incompatibility. S2 is designed to work seamlessly alongside resources base on other frameworks, utilities, and add-ons.
+
+
+

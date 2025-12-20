@@ -27,9 +27,35 @@ The best way to understand attributes is to read the CSS, visit: \
 
 ### When to use S2 Attributes?
 
-Use those attributes that you understand and easily remember.
+Use attributes that you understand and easily remember.
 
-Not sure whether to use Classes, Attributes, or Utility Classes? Follow this priority-based approach to make the best styling decisions: [#guide-to-styling](basic-concepts/styling-in-webflow.md#guide-to-styling "mention")
+Not sure whether to use Classes, Attributes, or Utility Classes? Follow this approach to make the best styling decisions:
+
+{% stepper %}
+{% step %}
+### Classes from the framework
+
+Use existing **Element Classes** and **Combo Classes** from the S2 Framework.
+{% endstep %}
+
+{% step %}
+### Your classes
+
+Create and use your **classes**.
+{% endstep %}
+
+{% step %}
+### S2 Attributes (optional)
+
+Use **S2 Attributes** that you understand and can easily remember.
+{% endstep %}
+
+{% step %}
+### Utility classes
+
+The framework's **Utility Classes**
+{% endstep %}
+{% endstepper %}
 
 
 

@@ -16,7 +16,7 @@ Understanding the basic concepts below is essential for building and customizing
 * When you want to avoid creating a new combo class that would be rarely reused.
 * When existing combo classes on an element are already complex and potentially confusing.
 
-Focus on your creativity and enjoy Webflow's flexibility. Use attributes that you remember and fully understand. No pressure!
+Focus on your creativity and take advantage of Webflow's flexibility. Use attributes that you remember and fully understand. No pressure!
 
 Learn about **S2 Attributes** in this section:
 
@@ -26,31 +26,45 @@ Learn about **S2 Attributes** in this section:
 
 ## Guide to Styling
 
-Not sure whether to use Classes, Attributes, or Utility Classes? Follow this priority-based approach to make the best styling decisions:
+Not sure whether to use Classes, Attributes, or Utility Classes? Follow this approach to make the best styling decisions:
 
-**Priority 1:**\
+{% stepper %}
+{% step %}
+### Classes from the framework
+
 Use existing **Element Classes** and **Combo Classes** from the S2 Framework.
+{% endstep %}
 
-**Priority 2:**\
+{% step %}
+### Your classes
+
 Create and use your **classes**.
+{% endstep %}
 
-**Priority 3:**\
-Use **S2 Attributes** that you understand and can easily remember. Use of these attributes is optional.
+{% step %}
+### S2 Attributes (optional)
 
-**Priority 4:**\
-Use the framework's **Utility Classes**.
+Use **S2 Attributes** that you understand and can easily remember.
+{% endstep %}
 
-## Should I create new Attributes?
+{% step %}
+### Utility classes
+
+The framework's **Utility Classes**.
+{% endstep %}
+{% endstepper %}
+
+## Should I create new Attributes for styling?
+
+The short answer is to try to avoid it.
 
 Attributes are powerful tools. **However, attributes cannot be searched directly in any Webflow panels. When you want to rename something, there is no way to update all instances quickly.**
 
-**Attributes can never satisfy all styling needs.** Setting up too many attributes that are not carefully planned can also lead to huge confusion easily. We are not here to reinvent CSS or build a CSS utility framework like Tailwind.
+**Attributes can never satisfy all styling needs.** Setting up too many attributes that are not carefully planned can also easily lead to confusion. We are not here to reinvent CSS or build a CSS utility framework like Tailwind.
 
 Therefore, we recommend following the **above** guide and sticking with the framework's official version of **S2 Attributes**.
 
-If you really want to create new custom attributes, place them in the `css_custom` code embedded inside the <mark style="color:green;">**Global Code**</mark> component. Avoid creating too many custom attributes.
-
-**Extended reading:**
+If you really want to create new custom attributes, place them in the `Custom Attributes` code embedded inside the <mark style="color:green;">**Global Code**</mark> component.
 
 [naming-custom-attributes.md](../naming-strategies/naming-custom-attributes.md "mention")
 
