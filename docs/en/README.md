@@ -2,6 +2,23 @@
 description: Welcome to the S2 Framework!
 cover: .gitbook/assets/S2-social-banner@2x.jpg
 coverY: 77
+layout:
+  width: default
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # S2 is flow simple!
@@ -27,8 +44,8 @@ There are only a handful of truly amazing Webflow frameworks (not templates) out
 Explore and Clone 🚀\
 [https://s2-framework.webflow.io](https://s2-framework.webflow.io/?utm_source=gitbook\&utm_medium=docs\&utm_campaign=s2)
 
-Preview and experiment with S2 :snowboarder:\
-[Read-only mode on Webflow](https://s2-framework.webflow.io/#preview)
+Preview and experiment on Webflow :snowboarder:\
+[Read-only mode](https://s2-framework.webflow.io/#preview)
 
 Community and Support 🛟\
 **Github**: [github.com/SPACESODA/S2-Framework](https://github.com/SPACESODA/S2-Framework)\
@@ -42,11 +59,9 @@ Changelog and Roadmap :wood:\
 
 
 
-
-
 ***
 
-Built with 🤍 by [Anthony C.](https://x.com/anthonycxc) with SPACESODA and HYPE STUDIO for everyone using Webflow.
+Built with ♥ by SPACESODA with [Anthony C](https://x.com/anthonycxc) for everyone using Webflow.
 
 
 

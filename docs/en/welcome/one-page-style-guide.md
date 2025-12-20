@@ -8,7 +8,7 @@ icon: shapes
 # One-page Style Guide
 
 {% hint style="info" %}
-Are you a template creator? Since Webflow _**does not**_**&#x20;allow custom code** to be embedded in templates, this one-page version is perfect for you. It is essentially a **one-page Style Guide** that fully complies with Webflow’s marketplace submission [requirements](https://webflow.com/templates/submission-guidelines), making your template creation process faster, more organized, scalable, and easy to maintain for anyone.
+Are you a template creator? Since Webflow **does not allow custom code** to be embedded in templates, this one-page version is perfect for you. It is essentially a **one-page Style Guide** that fully complies with Webflow’s marketplace submission [requirements](https://webflow.com/templates/submission-guidelines), making your template creation process faster, more organized, scalable, and easy to maintain for anyone.
 {% endhint %}
 
 

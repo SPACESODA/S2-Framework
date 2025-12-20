@@ -7,7 +7,7 @@ icon: copyright
 
 **S2 Framework** ([https://s2-framework.webflow.io](https://s2-framework.webflow.io))
 
-S2 Framework (and its official Cloneable on Webflow and GitHub) by The S2 Framework Team, Anthony C., SPACESODA, HYPE STUDIO is marked with Creative Commons CC0 1.0 Universal ([https://creativecommons.org/publicdomain/zero/1.0](https://creativecommons.org/publicdomain/zero/1.0)).
+S2 Framework (and its official Cloneable on Webflow and GitHub) by The S2 Framework Team, Anthony C, SPACESODA, HYPE STUDIO is marked with Creative Commons CC0 1.0 Universal ([https://creativecommons.org/publicdomain/zero/1.0](https://creativecommons.org/publicdomain/zero/1.0)).
 
 You can copy (clone) it, edit it, and use it freely for personal or commercial work, without the need for attribution or notification to the authors or contributors. No user may claim authorship or representation as the original creator or publisher of the S2 Framework, either in whole or in part.
 
