@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Dec 20 2025 03:43:19 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Dec 24 2025 03:24:07 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66615972a8e7a7a136e1874e" data-wf-site="66009eb8d493d5a53c3759bf">
 <head>
   <meta charset="utf-8">
@@ -34,13 +34,73 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="format-detection" content="telephone=no">
   <!--  Modal  -->
-  <!--  Move to global custom "Head code" if it is useful for the whole site.  -->
+  <!--  Move to global "Head code" if it is useful for the whole site.  -->
   <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.2.0/webflow/js/modal.min.js" defer=""></script>
+  <!--  Slider by using Swiper JS  -->
+  <!--  Move to global "Head code" if it is useful for the whole site.  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <!--  Common base styles for all sliders  -->
+  <style>
+      .swiper-pagination-bullet {
+        background-color: #fff;
+        opacity: 0.5;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #fff;
+        opacity: 1;
+      }
+    </style>
+  <!--  Common base settings for all sliders  -->
+  <script>
+      const swiperCommonOptions = {
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+        },
+        // Responsive
+        observer: true,
+        observeParents: true,
+        // Touch / Mobile Experience
+        threshold: 10, // Prevents accidental swipes when scrolling vertically
+        grabCursor: true,
+        // Swipe Sensitivity
+        longSwipesRatio: 0.15, // Trigger slide change after swiping only 15% of the width
+        resistanceRatio: 0.5, // Feeling of "resistance" when swiping at edges
+        // Optional: Enable switching slides by SCROLLING without clicking or dragging
+        // mousewheel: {
+        //    forceToAxis: true,
+        // }, 
+        // Disable Swiper's preloader to let browser follows img setting (works with lazy loading)
+        preloadImages: false,
+        // Navigation & Pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        // A11y
+        a11y: {
+          prevSlideMessage: 'Previous',
+          nextSlideMessage: 'Next',
+        },
+      };
+    </script>
   <!--  Accessible Accordion  -->
-  <!--  Move to global custom "Head code" if it is useful for the whole site.  -->
+  <!--  Move to global "Head code" if it is useful for the whole site.  -->
   <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.2.0/webflow/js/accessible-accordion.min.js" defer=""></script>
   <!--  BeerSlider  -->
-  <!--  Move to global custom "Head code" if it is useful for the whole site.  -->
+  <!--  Move to global "Head code" if it is useful for the whole site.  -->
   <script src="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.2.2/webflow/js/beerslider.min.js" defer=""></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SPACESODA/S2-Framework@3.2.2/webflow/css/beerslider.min.css">
   <style>
@@ -664,7 +724,7 @@ https://github.com/SPACESODA/S2-Framework/blob/main/webflow/css/colors.css
               position: fixed;
               inset: 0;
             }
-            /* == slider nav == */
+            /* == webflow slider nav == */
             .w-slider-nav.w-round>div {
               border-radius: 999rem;
               transition: background-color 600ms ease, width 200ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1114,6 +1174,9 @@ https://fontawesome.com/search?ic=free-collection
                 </a>
                 <a href="#modal" class="sg-side_sub-link w-inline-block">
                   <div>Modal</div>
+                </a>
+                <a href="#swiper-slider" class="sg-side_sub-link w-inline-block">
+                  <div>Swiper Slider</div>
                 </a>
                 <a href="#marquee" class="sg-side_sub-link w-inline-block">
                   <div>Marquee</div>
@@ -2209,6 +2272,92 @@ https://fontawesome.com/search?ic=free-collection
                 </div>
               </div>
             </section>
+            <section id="swiper-slider" class="section is-bottom-sm">
+              <div class="title-wrapper">
+                <div class="title-wrapper">
+                  <h2 class="h4">Swiper Slider</h2>
+                </div>
+                <div class="text-wrapper is-max-40rem">
+                  <p>Optimal base setup for <a href="https://swiperjs.com" target="_blank">Swiper</a> Sliders in Webflow with S2 Framework.</p>
+                </div>
+              </div>
+              <div class="s2-demo">
+                <div class="box-label">
+                  <div>Swiper Slider / 01, 02</div>
+                </div>
+                <div demo-expand="" class="s2-demo-box">
+                  <div gap="base" py="base" flex="col" class="container is-full">
+                    <div class="swiper-container is-01">
+                      <div class="swiper swiper-01">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                          <div class="swiper-slide"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                          <div class="swiper-slide"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="code w-embed w-script"><!--  Custom settigns for slider expample 01  -->
+                      <script>
+                          document.addEventListener('DOMContentLoaded', function() {
+                            new Swiper('.is-01 .swiper', {
+                              ...swiperCommonOptions,
+                            });
+                          });
+                        </script>
+                    </div>
+                    <div class="swiper-container is-02">
+                      <div data-swiper="02" class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide is-has-radius"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                          <div class="swiper-slide is-has-radius"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                          <div class="swiper-slide is-has-radius"><img src="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 500w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 800w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1pawel-czerwinski-bN8UPda2xFY-unsplash.avif 1080w, ../images/pawel-czerwinski-bN8UPda2xFY-unsplash_1.avif 1920w" alt="blue waves" class="full-cover"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="code w-embed w-script"><!--  Custom settigns for slider expample 02  -->
+                      <script>
+                          document.addEventListener('DOMContentLoaded', function() {
+                            new Swiper('.is-02 .swiper', {
+                              ...swiperCommonOptions,
+                              speed: 1000,
+                              effect: 'coverflow',
+                              coverflowEffect: {
+                                rotate: 50,
+                                stretch: 0,
+                                depth: 100,
+                                modifier: 1,
+                                slideShadows: true,
+                              },
+                            });
+                          });
+                        </script>
+                    </div>
+                  </div>
+                  <div class="s2-demo-expand-button w-embed">
+                    <div class="icon" events="none" icon="expand"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37 5C37 3.89543 36.1046 3 35 3H25C23.8954 3 23 3.89543 23 5C23 6.10457 23.8954 7 25 7H30.1712L21.9188 15.2525C21.1377 16.0335 21.1377 17.2998 21.9188 18.0809C22.6998 18.8619 23.9662 18.8619 24.7472 18.0809L33 9.8281V15C33 16.1046 33.8954 17 35 17C36.1046 17 37 16.1046 37 15V5Z" fill="currentColor"></path>
+                        <path d="M7 25C7 23.8954 6.10457 23 5 23C3.89543 23 3 23.8954 3 25V34.9998V34.9998C3 35.0071 3.00004 35.0145 3.00012 35.0218C3.00265 35.2593 3.04658 35.4868 3.12503 35.6976C3.22209 35.959 3.37568 36.2043 3.58579 36.4144C3.82319 36.6518 4.10544 36.817 4.40526 36.9101C4.50755 36.9419 4.61336 36.9657 4.72195 36.9808C4.82265 36.9949 4.92421 37.0013 5.02569 37H15C16.1046 37 17 36.1046 17 35C17 33.8954 16.1046 33 15 33H9.82859L18.0809 24.7477C18.8619 23.9667 18.8619 22.7003 18.0809 21.9193C17.2998 21.1382 16.0335 21.1382 15.2525 21.9193L7 30.1717V25Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div class="icon" events="none" icon="close" style="display: none;"><svg width="100%" height="100%" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.667 23.4191C18.667 22.3145 17.7716 21.4191 16.667 21.4191H6.66699C5.56242 21.4191 4.66699 22.3145 4.66699 23.4191C4.66699 24.5237 5.56242 25.4191 6.66699 25.4191H11.8382L3.58579 33.6716C2.80474 34.4526 2.80474 35.719 3.58579 36.5C4.36684 37.281 5.63317 37.281 6.41421 36.5L14.667 28.2472V33.4191C14.667 34.5237 15.5624 35.4191 16.667 35.4191C17.7716 35.4191 18.667 34.5237 18.667 33.4191V23.4191Z" fill="currentColor"></path>
+                        <path d="M25.4174 6.6665C25.4174 5.56193 24.5219 4.6665 23.4174 4.6665C22.3128 4.6665 21.4174 5.56193 21.4174 6.6665V16.6663C21.4174 16.6736 21.4174 16.681 21.4175 16.6883C21.42 16.9258 21.4639 17.1533 21.5424 17.3641C21.6395 17.6255 21.793 17.8708 22.0031 18.0809C22.2405 18.3183 22.5228 18.4835 22.8226 18.5766C22.9249 18.6084 23.0307 18.6322 23.1393 18.6473C23.24 18.6614 23.3416 18.6678 23.4431 18.6665H33.4174C34.5219 18.6665 35.4174 17.7711 35.4174 16.6665C35.4174 15.5619 34.5219 14.6665 33.4174 14.6665H28.2459L36.4982 6.41421C37.2793 5.63317 37.2793 4.36684 36.4982 3.58579C35.7172 2.80474 34.4509 2.80474 33.6698 3.58579L25.4174 11.8382V6.6665Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+              <div mt="1" class="message is-note">
+                <div class="text-sm">💡 Swiper Sliders share a common base configuration. You can find the custom code in the head code of this page.</div>
+              </div>
+              <div mt="1" class="message is-note">
+                <div class="text-sm">💡 Each slider requires its own additional script, which can be found directly after it.</div>
+              </div>
+            </section>
             <section id="marquee" class="section is-bottom-sm">
               <div class="title-wrapper">
                 <div class="title-wrapper">
@@ -2303,10 +2452,10 @@ https://fontawesome.com/search?ic=free-collection
                 </div>
               </div>
               <div mt="1" class="message is-note">
-                <div class="text-sm">💡 Some simple custom CSS is required in the pure CSS version. It is already included in the Global Code.</div>
+                <div class="text-sm">💡 Some custom CSS is required for the pure CSS version. It is already included in the <span class="tag-label is-element">CSS Animations</span> within <span class="tag-label is-component">Global Code</span>.</div>
               </div>
               <div mt="1" class="message is-note">
-                <div class="text-sm">💡 The script required for the Repeat Elements function can be found in the footer code of this page.</div>
+                <div class="text-sm">💡 The required JS script for the &quot;Repeat Elements&quot; function can be found in the footer code of this page.</div>
               </div>
             </section>
             <section id="before-after" class="section is-bottom-sm">
@@ -3463,7 +3612,7 @@ https://fontawesome.com/search?ic=free-collection
                   </div>
                   <div style="gap: 1.75rem;" class="u-vflex-stretch-top">
                     <div data-preview-thumbnails="https://s2-framework.pages.dev/assets/demo/plyr/240p.vtt" class="player-wrapper">
-                      <p class="h6">HTML5 Video (A) - Multiple resolutions + Autoplay + Muted + Loop</p><video controls="" playsinline="true" preload="metadata" crossorigin="anonymous" data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-autoplay="true" muted="" loop="" class="plyr-player">
+                      <p class="h6">HTML5 Video (A) - Quality options + Captions + Autoplay + Muted + Loop</p><video controls="" playsinline="true" preload="metadata" crossorigin="anonymous" data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-autoplay="true" muted="" loop="" class="plyr-player">
                         <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
                         <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
                         <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt">
