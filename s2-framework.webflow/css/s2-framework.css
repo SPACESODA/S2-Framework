@@ -6926,7 +6926,7 @@ figcaption {
 
 .swiper-container.is-01 {
   aspect-ratio: 16 / 9;
-  max-width: 600px;
+  max-width: 560px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -6935,7 +6935,7 @@ figcaption {
 .swiper-container.is-02 {
   aspect-ratio: 16 / 9;
   box-shadow: none;
-  max-width: 600px;
+  max-width: 560px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -7466,6 +7466,10 @@ figcaption {
     padding-top: 10vw;
     padding-bottom: 0;
     inset-inline-start: -20vw;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    display: none !important;
   }
 }
 
